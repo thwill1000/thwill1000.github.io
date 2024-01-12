@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:21:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	MORSE.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFhkU8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TU9SU0UuQkFTPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzozNiBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEVuY29kZSBhbmQgRGVjb2RlLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz48cHJlPg0KMTAwICdTQU1QTEUgUFJPR1JBTSBUTyBERU1PTlNUUkFURSBUSEUgTUFYSU1JVEUNCjEwNSAnTW9yc2UgY29kZSAtIE1PUlNFLkJBUyAyMDEwMTIxMSBWZXIgMSYjNTg7MDAgUmVnIEdhdWNpDQoxMTAgJw0KMTE1ICdBIGRhc2ggPSAzIGRvdHMuDQoxMjAgJ1RoZSBzcGFjZSBiZXR3ZWVuIHRoZSBzaWduYWxzIGZvcm1pbmcgdGhlIHNhbWUgbGV0dGVyIGlzIGVxdWFsIHRvIDEgZG90DQoxMjUgJ1RoZSBzcGFjZSBiZXR3ZWVuIDIgbGV0dGVycyBpcyBlcXVhbCB0byAzIGRvdHMNCjEzMCAnVGhlIHNwYWNlIGJldHdlZW4gMiB3b3JkcyBpcyBlcXVhbCB0byA3IGRvdHMNCjEzNSAnQ2hhbmdlIGZyZXEgdG8gY2hhbmdlIGZyZXF1ZW5jeSAoSHopIG9mIHRoZSBzb3VuZA0KMTQwICdDaGFuZ2UgZGl0IHRvIGNoYW5nZSB0aGUgdG9uZSBzcGFjaW5nDQoxNDUgZnJlcSA9IDIwMDAgJiM1ODsgZGl0ID0gNDAgJiM1ODsgZGFoID0gZGl0JiM0MjszICYjNTg7IFdPUkRkZWxheSA9IGRpdCYjNDI7MyAmIzU4OyBMSU5FZGVsYXkgPSBkaXQmIzQyOzcNCjE1MCAnDQoxNTUgRElNIG1vcnNlJCgxMjIpDQoxNjAgRk9SIEEgPSAzMiBUTyAxMjINCjE2NSAgICBSRUFEIG1vcnNlJChBKQ0KMTcwIE5FWFQgQQ0KMTc1ICcNCjE4MCBDTFMNCjE4NSBQUklOVA0KMTkwIFBSSU5UJiM1ODtQUklOVCAiSWxsZWdhbCBjaGFyYWN0ZXJzIGFyZSBpZ25vcmVkLiIgJiM1ODtQUklOVA0KMTk1IFBSSU5UICJDVFJMK0MgdG8gZXhpdCINCjIwMCBQUklOVCYjNTg7UFJJTlQgIlR5cGUgYSBtZXNzYWdlIGFuZCBzZWUgaXQgYXBwZWFyIGFzIE1vcnNlIENvZGUuIiAmIzU4O1BSSU5UDQoyMDUgSU5QVVQgIldoYXQgaXMgeW91ciBtZXNzYWdlICI7IG1lc3NhZ2UkDQoyMTAgUFJJTlQNCjIxNSAnDQoyMjAgTCA9IExFTihtZXNzYWdlJCkgICAgICAgICAgICAgICAgICAgICAgICAgICAnTCBlcXVhbHMgdGhlIG51bWJlciBvZiBjaGFyYWN0ZXIgaW4gdGhlIG1lc3NhZ2UNCjIyNSAnDQoyMzAgRk9SIGNoYXIgPSAxIFRPIEwgICAgICAgICAgICAgICAgICAgICAgICAgICAnTG9vcCBMIHRpbWVzDQoyMzUgICBjaCQgPSBtb3JzZSQoQVNDKE1JRCQobWVzc2FnZSQsY2hhciwxKSkpICAnZW50ZXIgdGhlIHZhbHVlIG9mIHRoZSByZWFkIGNoYXJhY3RlciBmcm9tIG1vcnNlJCBpbnRvIGNociQNCjI0MCAnDQoyNDUgICBGT1IgZGl0ZGFoID0gMSBUTyBMRU4oY2gkKSAgICAgICAgICAgICAgICAnTG9vcCBmb3IgdGhlIG51bWJlciBvZiBkb3RzIGFuZCBkYXNoZXMgaW4gbW9yc2UkDQoyNTAgICAgIElGIE1JRCQoY2gkLCBkaXRkYWgsIDEpID0gIiAiIFRIRU4gICAgICAnaWYgYSBzcGFjZSBpcyBlbmNvdW50ZXJlZCBwcmludCBhIHNwYWNlIGFuZCBwYXVzZSBmb3IgV09SRGRlbGF5DQoyNTUgICAgICAgUFJJTlQgIiAiOw0KMjYwICAgICAgIFBBVVNFIFdPUkRkZWxheQ0KMjY1ICAgICBFTFNFDQoyNzAgICAgICAgSUYgTUlEJChjaCQsIGRpdGRhaCwgMSkgPSAiLiIgVEhFTiAgICAnaWYgYSBkb3QgaXMgZW5jb3VudGVyZWQgcHJpbnQgYSBkaXQgc291bmQgYSBkaXQgYW5kIHBhdXNlIGZvciBsZW5ndGggb2YgYSBkaXQgKyBXT1JEZGVsYXkNCjI3NSAgICAgICAgIFBSSU5UICIuIjsNCjI4MCAgICAgICAgIFNPVU5EIGZyZXEsIGRpdA0KMjg1ICAgICAgICAgUElOKDApID0gMQ0KMjkwICAgICAgICAgUEFVU0UgZGl0DQoyOTUgICAgICAgICBQSU4oMCkgPSAwDQozMDAgICAgICAgICBQQVVTRSBXT1JEZGVsYXkNCjMwNSAgICAgICBFTFNFDQozMTAgICAgICAgICBQUklOVCAiLSI7ICAgICAgICAgICAgICAgICAgICAgICAgICAnb3RoZXJ3aXNlIGl0IGlzIGEgZGFoIHByaW50IGEgZGFoIHNvdW5kIGEgZGFoIGFuZCBwYXVzZSBmb3IgbGVuZ3RoIG9mIGEgZGFoICsgV09SRGRlbGF5DQozMTUgICAgICAgICBTT1VORCBmcmVxLCBkYWgNCjMyMCAgICAgICAgIFBJTigwKSA9IDENCjMyNSAgICAgICAgIFBBVVNFIGRhaA0KMzMwICAgICAgICAgUElOKDApID0gMA0KMzM1ICAgICAgICAgUEFVU0UgV09SRGRlbGF5DQozNDAgICAgICAgRU5ESUYNCjM0NSAgICAgRU5ESUYNCjM1MCAgIE5FWFQgZGl0ZGFoDQozNTUgUFJJTlQgIiAiOw0KMzYwIE5FWFQgY2hhciAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJ2xvb3AgdW50aWwgYWxsIE1vcnNlIGl0ZW1zIGZvciBjdXJyZW50IGlucHV0IGFyZSBkb25lDQozNjUgJw0KMzcwIFBSSU5UICIgICAiOw0KMzc1IFBBVVNFIExJTkVkZWxheSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJ1BhdXNlIGZvciB0aGUgbGVuZ2h0IG9mIFdzcGMNCjM4MCAnDQozODUgUFJJTlQgJiM1ODsgUFJJTlQNCjM5MCBJTlBVVCAiR28gYWdhaW4gKFkvTikiOyBaJCYjNTg7IElGIFVDQVNFJChMRUZUJChaJCwgMSkpPSJZIiBUSEVOIDE5NQ0KMzk1IEVORA0KNDAwICcNCjQwNSAnDQo0MTAgJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KNDE1ICAgIERBVEEgICAgIiAiICAgICAgJyAgICAgIHNwYWNlICAgMzIgICAgICANCjQyMCAgICBEQVRBICAgICIiICAgICAgICcgICAgICAhICAgICAgIDMzICAgICAgDQo0MjUgICAgREFUQSAgICAuLS4uLS4gICAnICAgICAgIiAgICAgICAzNCAgICAgIFF1b3RhdGlvbg0KNDMwICAgIERBVEEgICAgIiIgICAgICAgJyAgICAgICYjMzU7ICAgICAgIDM1ICAgICAgDQo0MzUgICAgREFUQSAgICAiIiAgICAgICAnICAgICAgJCAgICAgICAzNiAgICAgIA0KNDQwICAgIERBVEEgICAgIiIgICAgICAgJyAgICAgICUgICAgICAgMzcgICAgICANCjQ0NSAgICBEQVRBICAgICIiICAgICAgICcgICAgICAmYW1wOyAgICAgICAzOCAgICAgIA0KNDUwICAgIERBVEEgICAgLiYjNDU7JiM0NTsmIzQ1OyYjNDU7LiAgICcgICAgICAnICAgICAgIDM5ICAgICAgQXBvc3Ryb3BoeQ0KNDU1ICAgIERBVEEgICAgLS4mIzQ1OyYjNDU7Li0gICAnICAgICAgKCAgICAgICA0MCAgICAgIEJyYWNrZXQNCjQ2MCAgICBEQVRBICAgIC0uJiM0NTsmIzQ1Oy4tICAgJyAgICAgICkgICAgICAgNDEgICAgICBCcmFja2V0DQo0NjUgICAgREFUQSAgICAiIiAgICAgICAnICAgICAgJiM0MjsgICAgICAgNDIgICAgICANCjQ3MCAgICBEQVRBICAgICIiICAgICAgICcgICAgICArICAgICAgIDQzICAgICAgDQo0NzUgICAgREFUQSAgICAmIzQ1OyYjNDU7Li4mIzQ1OyYjNDU7ICAgJyAgICAgICwgICAgICAgNDQgICAgICBDb21tYQ0KNDgwICAgIERBVEEgICAgLS4uLi4tICAgJyAgICAgIC0gICAgICAgNDUgICAgICBIeXBoZW4NCjQ4NSAgICBEQVRBICAgIC4tLi0uLSAgICcgICAgICAuICAgICAgIDQ2ICAgICAgRnVsbCBTdG9wDQo0OTAgICAgREFUQSAgICAtLi4tLiAgICAnICAgICAgLyAgICAgICA0NyAgICAgIFNsYXNoDQo0OTUgICAgREFUQSAgICAmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0gICAgJyAgICAgIDAgICAgICAgNDggICAgICANCjUwMCAgICBEQVRBICAgIC4mIzQ1OyYjNDU7JiM0NTsmIzQ1OyAgICAnICAgICAgMSAgICAgICA0OSAgICAgIA0KNTA1ICAgIERBVEEgICAgLi4mIzQ1OyYjNDU7LSAgICAnICAgICAgMiAgICAgICA1MCAgICAgIA0KNTEwICAgIERBVEEgICAgLi4uJiM0NTsmIzQ1OyAgICAnICAgICAgMyAgICAgICA1MSAgICAgIA0KNTE1ICAgIERBVEEgICAgLi4uLi0gICAgJyAgICAgIDQgICAgICAgNTIgICAgICANCjUyMCAgICBEQVRBICAgIC4uLi4uICAgICcgICAgICA1ICAgICAgIDUzICAgICAgDQo1MjUgICAgREFUQSAgICAtLi4uLiAgICAnICAgICAgNiAgICAgICA1NCAgICAgIA0KNTMwICAgIERBVEEgICAgJiM0NTsmIzQ1Oy4uLiAgICAnICAgICAgNyAgICAgICA1NSAgICAgIA0KNTM1ICAgIERBVEEgICAgJiM0NTsmIzQ1Oy0uLiAgICAnICAgICAgOCAgICAgICA1NiAgICAgIA0KNTQwICAgIERBVEEgICAgJiM0NTsmIzQ1OyYjNDU7JiM0NTsuICAgICcgICAgICA5ICAgICAgIDU3ICAgICAgDQo1NDUgICAgREFUQSAgICAmIzQ1OyYjNDU7LS4uLiAgICcgICAgICAmIzU4OyAgICAgICA1OCAgICAgIENvbG9uDQo1NTAgICAgREFUQSAgICAiIiAgICAgICAnICAgICAgOyAgICAgICA1OSAgICAgIA0KNTU1ICAgIERBVEEgICAgIiIgICAgICAgJyAgICAgICZsdDsgICAgICAgNjAgICAgICANCjU2MCAgICBEQVRBICAgIC0uLi4tICAgICcgICAgICA9ICAgICAgIDYxICAgICAgRXF1YWwNCjU2NSAgICBEQVRBICAgICIiICAgICAgICcgICAgICAmZ3Q7ICAgICAgIDYyICAgICAgDQo1NzAgICAgREFUQSAgICAuLiYjNDU7JiM0NTsuLiAgICcgICAgICA/ICAgICAgIDYzICAgICAgUXVlc3Rpb24NCjU3NSAgICBEQVRBICAgIC4mIzQ1OyYjNDU7Li0uICAgJyAgICAgIEAgICAgICAgNjQgICAgICBBVA0KNTgwICAgIERBVEEgICAgLi0gICAgICAgJyAgICAgIEEgICAgICAgNjUgICAgICANCjU4NSAgICBEQVRBICAgIC0uLi4gICAgICcgICAgICBCICAgICAgIDY2ICAgICAgDQo1OTAgICAgREFUQSAgICAtLi0uICAgICAnICAgICAgQyAgICAgICA2NyAgICAgIA0KNTk1ICAgIERBVEEgICAgLS4uICAgICAgJyAgICAgIEQgICAgICAgNjggICAgICANCjYwMCAgICBEQVRBICAgIC4gICAgICAgICcgICAgICBFICAgICAgIDY5ICAgICAgDQo2MDUgICAgREFUQSAgICAuLi0uICAgICAnICAgICAgRiAgICAgICA3MCAgICAgIA0KNjEwICAgIERBVEEgICAgJiM0NTsmIzQ1Oy4gICAgICAnICAgICAgRyAgICAgICA3MSAgICAgIA0KNjE1ICAgIERBVEEgICAgLi4uLiAgICAgJyAgICAgIEggICAgICAgNzIgICAgICANCjYyMCAgICBEQVRBICAgIC4uICAgICAgICcgICAgICBJICAgICAgIDczICAgICAgDQo2MjUgICAgREFUQSAgICAuJiM0NTsmIzQ1Oy0gICAgICcgICAgICBKICAgICAgIDc0ICAgICAgDQo2MzAgICAgREFUQSAgICAtLi0gICAgICAnICAgICAgSyAgICAgICA3NSAgICAgIA0KNjM1ICAgIERBVEEgICAgLi0uLiAgICAgJyAgICAgIEwgICAgICAgNzYgICAgICANCjY0MCAgICBEQVRBICAgICYjNDU7JiM0NTsgICAgICAgJyAgICAgIE0gICAgICAgNzcgICAgICANCjY0NSAgICBEQVRBICAgIC0uICAgICAgICcgICAgICBOICAgICAgIDc4ICAgICAgDQo2NTAgICAgREFUQSAgICAmIzQ1OyYjNDU7LSAgICAgICcgICAgICBPICAgICAgIDc5ICAgICAgDQo2NTUgICAgREFUQSAgICAuJiM0NTsmIzQ1Oy4gICAgICcgICAgICBQICAgICAgIDgwICAgICAgDQo2NjAgICAgREFUQSAgICAmIzQ1OyYjNDU7Li0gICAgICcgICAgICBRICAgICAgIDgxICAgICAgDQo2NjUgICAgREFUQSAgICAuLS4gICAgICAnICAgICAgUiAgICAgICA4MiAgICAgIA0KNjcwICAgIERBVEEgICAgLi4uICAgICAgJyAgICAgIFMgICAgICAgODMgICAgICANCjY3NSAgICBEQVRBICAgIC0gICAgICAgICcgICAgICBUICAgICAgIDg0ICAgICAgDQo2ODAgICAgREFUQSAgICAuLi0gICAgICAnICAgICAgVSAgICAgICA4NSAgICAgIA0KNjg1ICAgIERBVEEgICAgLi4uLSAgICAgJyAgICAgIFYgICAgICAgODYgICAgICANCjY5MCAgICBEQVRBICAgIC4mIzQ1OyYjNDU7ICAgICAgJyAgICAgIHcgICAgICAgODcgICAgICANCjY5NSAgICBEQVRBICAgIC0uLi0gICAgICcgICAgICBYICAgICAgIDg4ICAgICAgDQo3MDAgICAgREFUQSAgICAtLiYjNDU7JiM0NTsgICAgICcgICAgICBZICAgICAgIDg5ICAgICAgDQo3MDUgICAgREFUQSAgICAmIzQ1OyYjNDU7Li4gICAgICcgICAgICBaICAgICAgIDkwICAgICAgDQo3MTAgICAgREFUQSAgICAiIiAgICAgICAnICAgICAgJiM5MTsgICAgICAgOTEgICAgICANCjcxNSAgICBEQVRBICAgICIiICAgICAgICcgICAgICBcICAgICAgIDkyICAgICAgDQo3MjAgICAgREFUQSAgICAiIiAgICAgICAnICAgICAgJiM5MzsgICAgICAgOTMgICAgICANCjcyNSAgICBEQVRBICAgICIiICAgICAgICcgICAgICBeICAgICAgIDk0ICAgICAgDQo3MzAgICAgREFUQSAgICAiIiAgICAgICAnICAgICAgXyAgICAgICA5NSAgICAgIA0KNzM1ICAgIERBVEEgICAgIiIgICAgICAgJyAgICAgIGAgICAgICAgOTYgICAgICANCjc0MCAgICBEQVRBICAgIC4tICAgICAgICcgICAgICBhICAgICAgIDk3ICAgICAgDQo3NDUgICAgREFUQSAgICAtLi4uICAgICAnICAgICAgYiAgICAgICA5OCAgICAgIA0KNzUwICAgIERBVEEgICAgLS4tLiAgICAgJyAgICAgIGMgICAgICAgOTkgICAgICANCjc1NSAgICBEQVRBICAgIC0uLiAgICAgICcgICAgICBkICAgICAgIDEwMCAgICAgDQo3NjAgICAgREFUQSAgICAuICAgICAgICAnICAgICAgZSAgICAgICAxMDEgICAgIA0KNzY1ICAgIERBVEEgICAgLi4tLiAgICAgJyAgICAgIGYgICAgICAgMTAyICAgICANCjc3MCAgICBEQVRBICAgICYjNDU7JiM0NTsuICAgICAgJyAgICAgIGcgICAgICAgMTAzICAgICANCjc3NSAgICBEQVRBICAgIC4uLi4gICAgICcgICAgICBoICAgICAgIDEwNCAgICAgDQo3ODAgICAgREFUQSAgICAuLiAgICAgICAnICAgICAgaSAgICAgICAxMDUgICAgIA0KNzg1ICAgIERBVEEgICAgLiYjNDU7JiM0NTstICAgICAnICAgICAgaiAgICAgICAxMDYgICAgIA0KNzkwICAgIERBVEEgICAgLS4tICAgICAgJyAgICAgIGsgICAgICAgMTA3ICAgICANCjc5NSAgICBEQVRBICAgIC4tLi4gICAgICcgICAgICBsICAgICAgIDEwOCAgICAgDQo4MDAgICAgREFUQSAgICAmIzQ1OyYjNDU7ICAgICAgICcgICAgICBtICAgICAgIDEwOSAgICAgDQo4MDUgICAgREFUQSAgICAtLiAgICAgICAnICAgICAgbiAgICAgICAxMTAgICAgIA0KODEwICAgIERBVEEgICAgJiM0NTsmIzQ1Oy0gICAgICAnICAgICAgbyAgICAgICAxMTEgICAgIA0KODE1ICAgIERBVEEgICAgLiYjNDU7JiM0NTsuICAgICAnICAgICAgcCAgICAgICAxMTIgICAgIA0KODIwICAgIERBVEEgICAgJiM0NTsmIzQ1Oy4tICAgICAnICAgICAgcSAgICAgICAxMTMgICAgIA0KODI1ICAgIERBVEEgICAgLi0uICAgICAgJyAgICAgIHIgICAgICAgMTE0ICAgICANCjgzMCAgICBEQVRBICAgIC4uLiAgICAgICcgICAgICBzICAgICAgIDExNSAgICAgDQo4MzUgICAgREFUQSAgICAtICAgICAgICAnICAgICAgdCAgICAgICAxMTYgICAgIA0KODQwICAgIERBVEEgICAgLi4tICAgICAgJyAgICAgIHUgICAgICAgMTE3ICAgICANCjg0NSAgICBEQVRBICAgIC4uLi0gICAgICcgICAgICB2ICAgICAgIDExOCAgICAgDQo4NTAgICAgREFUQSAgICAuJiM0NTsmIzQ1OyAgICAgICcgICAgICB3ICAgICAgIDExOSAgICAgDQo4NTUgICAgREFUQSAgICAtLi4tICAgICAnICAgICAgeCAgICAgICAxMjAgICAgIA0KODYwICAgIERBVEEgICAgLS4mIzQ1OyYjNDU7ICAgICAnICAgICAgeSAgICAgICAxMjEgICAgIA0KODY1ICAgIERBVEEgICAgJiM0NTsmIzQ1Oy4uICAgICAnICAgICAgeiAgICAgICAxMjIgICAgIA0KDQo8L3ByZT5kZI7F9wb2XM6pstoNpALpNcGZFqrB" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">MORSE.BAS</h1><small>Modified on 2016/12/23 23:36 by Administrator &mdash; Categorized as: Encode and Decode, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+100 'SAMPLE PROGRAM TO DEMONSTRATE THE MAXIMITE
+105 'Morse code - MORSE.BAS 20101211 Ver 1&#58;00 Reg Gauci
+110 '
+115 'A dash = 3 dots.
+120 'The space between the signals forming the same letter is equal to 1 dot
+125 'The space between 2 letters is equal to 3 dots
+130 'The space between 2 words is equal to 7 dots
+135 'Change freq to change frequency (Hz) of the sound
+140 'Change dit to change the tone spacing
+145 freq = 2000 &#58; dit = 40 &#58; dah = dit&#42;3 &#58; WORDdelay = dit&#42;3 &#58; LINEdelay = dit&#42;7
+150 '
+155 DIM morse$(122)
+160 FOR A = 32 TO 122
+165    READ morse$(A)
+170 NEXT A
+175 '
+180 CLS
+185 PRINT
+190 PRINT&#58;PRINT "Illegal characters are ignored." &#58;PRINT
+195 PRINT "CTRL+C to exit"
+200 PRINT&#58;PRINT "Type a message and see it appear as Morse Code." &#58;PRINT
+205 INPUT "What is your message "; message$
+210 PRINT
+215 '
+220 L = LEN(message$)                           'L equals the number of character in the message
+225 '
+230 FOR char = 1 TO L                           'Loop L times
+235   ch$ = morse$(ASC(MID$(message$,char,1)))  'enter the value of the read character from morse$ into chr$
+240 '
+245   FOR ditdah = 1 TO LEN(ch$)                'Loop for the number of dots and dashes in morse$
+250     IF MID$(ch$, ditdah, 1) = " " THEN      'if a space is encountered print a space and pause for WORDdelay
+255       PRINT " ";
+260       PAUSE WORDdelay
+265     ELSE
+270       IF MID$(ch$, ditdah, 1) = "." THEN    'if a dot is encountered print a dit sound a dit and pause for length of a dit + WORDdelay
+275         PRINT ".";
+280         SOUND freq, dit
+285         PIN(0) = 1
+290         PAUSE dit
+295         PIN(0) = 0
+300         PAUSE WORDdelay
+305       ELSE
+310         PRINT "-";                          'otherwise it is a dah print a dah sound a dah and pause for length of a dah + WORDdelay
+315         SOUND freq, dah
+320         PIN(0) = 1
+325         PAUSE dah
+330         PIN(0) = 0
+335         PAUSE WORDdelay
+340       ENDIF
+345     ENDIF
+350   NEXT ditdah
+355 PRINT " ";
+360 NEXT char                                   'loop until all Morse items for current input are done
+365 '
+370 PRINT "   ";
+375 PAUSE LINEdelay                             'Pause for the lenght of Wspc
+380 '
+385 PRINT &#58; PRINT
+390 INPUT "Go again (Y/N)"; Z$&#58; IF UCASE$(LEFT$(Z$, 1))="Y" THEN 195
+395 END
+400 '
+405 '
+410 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+415    DATA    " "      '      space   32      
+420    DATA    ""       '      !       33      
+425    DATA    .-..-.   '      "       34      Quotation
+430    DATA    ""       '      &#35;       35      
+435    DATA    ""       '      $       36      
+440    DATA    ""       '      %       37      
+445    DATA    ""       '      &amp;       38      
+450    DATA    .&#45;&#45;&#45;&#45;.   '      '       39      Apostrophy
+455    DATA    -.&#45;&#45;.-   '      (       40      Bracket
+460    DATA    -.&#45;&#45;.-   '      )       41      Bracket
+465    DATA    ""       '      &#42;       42      
+470    DATA    ""       '      +       43      
+475    DATA    &#45;&#45;..&#45;&#45;   '      ,       44      Comma
+480    DATA    -....-   '      -       45      Hyphen
+485    DATA    .-.-.-   '      .       46      Full Stop
+490    DATA    -..-.    '      /       47      Slash
+495    DATA    &#45;&#45;&#45;&#45;-    '      0       48      
+500    DATA    .&#45;&#45;&#45;&#45;    '      1       49      
+505    DATA    ..&#45;&#45;-    '      2       50      
+510    DATA    ...&#45;&#45;    '      3       51      
+515    DATA    ....-    '      4       52      
+520    DATA    .....    '      5       53      
+525    DATA    -....    '      6       54      
+530    DATA    &#45;&#45;...    '      7       55      
+535    DATA    &#45;&#45;-..    '      8       56      
+540    DATA    &#45;&#45;&#45;&#45;.    '      9       57      
+545    DATA    &#45;&#45;-...   '      &#58;       58      Colon
+550    DATA    ""       '      ;       59      
+555    DATA    ""       '      &lt;       60      
+560    DATA    -...-    '      =       61      Equal
+565    DATA    ""       '      &gt;       62      
+570    DATA    ..&#45;&#45;..   '      ?       63      Question
+575    DATA    .&#45;&#45;.-.   '      @       64      AT
+580    DATA    .-       '      A       65      
+585    DATA    -...     '      B       66      
+590    DATA    -.-.     '      C       67      
+595    DATA    -..      '      D       68      
+600    DATA    .        '      E       69      
+605    DATA    ..-.     '      F       70      
+610    DATA    &#45;&#45;.      '      G       71      
+615    DATA    ....     '      H       72      
+620    DATA    ..       '      I       73      
+625    DATA    .&#45;&#45;-     '      J       74      
+630    DATA    -.-      '      K       75      
+635    DATA    .-..     '      L       76      
+640    DATA    &#45;&#45;       '      M       77      
+645    DATA    -.       '      N       78      
+650    DATA    &#45;&#45;-      '      O       79      
+655    DATA    .&#45;&#45;.     '      P       80      
+660    DATA    &#45;&#45;.-     '      Q       81      
+665    DATA    .-.      '      R       82      
+670    DATA    ...      '      S       83      
+675    DATA    -        '      T       84      
+680    DATA    ..-      '      U       85      
+685    DATA    ...-     '      V       86      
+690    DATA    .&#45;&#45;      '      w       87      
+695    DATA    -..-     '      X       88      
+700    DATA    -.&#45;&#45;     '      Y       89      
+705    DATA    &#45;&#45;..     '      Z       90      
+710    DATA    ""       '      &#91;       91      
+715    DATA    ""       '      \       92      
+720    DATA    ""       '      &#93;       93      
+725    DATA    ""       '      ^       94      
+730    DATA    ""       '      _       95      
+735    DATA    ""       '      `       96      
+740    DATA    .-       '      a       97      
+745    DATA    -...     '      b       98      
+750    DATA    -.-.     '      c       99      
+755    DATA    -..      '      d       100     
+760    DATA    .        '      e       101     
+765    DATA    ..-.     '      f       102     
+770    DATA    &#45;&#45;.      '      g       103     
+775    DATA    ....     '      h       104     
+780    DATA    ..       '      i       105     
+785    DATA    .&#45;&#45;-     '      j       106     
+790    DATA    -.-      '      k       107     
+795    DATA    .-..     '      l       108     
+800    DATA    &#45;&#45;       '      m       109     
+805    DATA    -.       '      n       110     
+810    DATA    &#45;&#45;-      '      o       111     
+815    DATA    .&#45;&#45;.     '      p       112     
+820    DATA    &#45;&#45;.-     '      q       113     
+825    DATA    .-.      '      r       114     
+830    DATA    ...      '      s       115     
+835    DATA    -        '      t       116     
+840    DATA    ..-      '      u       117     
+845    DATA    ...-     '      v       118     
+850    DATA    .&#45;&#45;      '      w       119     
+855    DATA    -..-     '      x       120     
+860    DATA    -.&#45;&#45;     '      y       121     
+865    DATA    &#45;&#45;..     '      z       122     
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:21:52 GMT -->
+</html>

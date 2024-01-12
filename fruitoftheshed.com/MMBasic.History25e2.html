@@ -1,0 +1,159 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Bit-Manipulation-Functions&Revision=00004 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:03:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Bit-Manipulation-Functions&amp;Revision=00004" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAUoUGFnZSBIaXN0b3J5OiBCaXQgTWFuaXB1bGF0aW9uIEZ1bmN0aW9uc2QCBQ8QZBAVBQE0ATMBMgExATAVBQE0ATMBMgExATAUKwMFZ2dnZ2dkZAIHDxBkEBUGB0N1cnJlbnQBNAEzATIBMQEwFQYHQ3VycmVudAE0ATMBMgExATAUKwMGZ2dnZ2dnZGQCCw8WAh8ABYsXPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+PGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLkJpdC1NYW5pcHVsYXRpb24tRnVuY3Rpb25zJmFtcDtSZXZpc2lvbj0wMDAwMyI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbjwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuQml0LU1hbmlwdWxhdGlvbi1GdW5jdGlvbnMiPkJhY2sgdG8gUGFnZSBIaXN0b3J5PC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuQml0LU1hbmlwdWxhdGlvbi1GdW5jdGlvbnMuYXNoeCI+Q3VycmVudCBSZXZpc2lvbjwvYT48L2I+PC9wPjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPjxoMyBjbGFzcz0ic2VwYXJhdG9yIj5QYWdlIFJldmlzaW9uOiAyMDIwLzA5LzIwIDEzOjA0PC9oMz48YnIgLz5UaGUgZm9sbG93aW5nIGZvdXIgZnVuY3Rpb25zIHByb3ZpZGUgU0VUdGluZywgUkVTZXR0aW5nIGFuZCBURVNUaW5nIG9mIGluZGl2aWR1YWwgYml0cyBvZiBhbiBpbnRlZ2VyIGV4cHJlc3Npb24gKGlkZWFsbHkgYSB2YXJpYWJsZSkuIEZsYWdFcSBzZXRzIGEgZmxhZyB0byB0aGUgdmFsdWUgc3BlY2lmaWVkIChpLmUuIG5vdCBtYW5kYXRpbmcgYSBzZXQgb3IgcmVzZXQpLiBBIG5vbi16ZXJvIHZhbHVlIGNvdW50cyBhcyAxLiBJZGVhbCBmb3Igc3RhdGUgbWFjaGluZSBhbmQgZXZlbnQgZHJpdmVuIGNvZGUuPGJyIC8+PGJyIC8+VGhpcyBtYWtlcyB1c2luZyBzaW5nbGUgYml0cyBhcyBmbGFncyBlYXN5IGFuZCBmYXIgbW9yZSBtZW1vcnkta2luZCB0aGFuIHVzaW5nIGludGVnZXIgdmFyaWFibGVzIGFzIGZsYWdzOyB3aGljaCB3YXN0ZXMgOCBieXRlcyBwZXIgZmxhZykuIFRoaXMgbWV0aG9kIGFsbG93cyB1cCB0byA2NCBmbGFncyB0byBiZSBtYWludGFpbmVkIHVzaW5nIGEgc2luZ2xlIGludGVnZXIgdmFyaWFibGUuIElmIENPTlNUIGlzIHVzZWQgdG8gZGVmaW5lIHRoZSBiaXRzIGl0IG1ha2VzIGZvciB2ZXJ5IHJlYWRhYmxlIGNvZGUuPGJyIC8+PGJyIC8+SW4gdGhlIGludGVyZXN0cyBvZiBzcGVlZCwgdGhlcmUgaXMgbm8gZXJyb3IgY2hlY2tpbmcgb24gdGhlIGJpdCB5b3UgbWFuaXB1bGF0ZS4gSWYgeW91IHRyeSBhbnl0aGluZyBvdXRzaWRlIHRoZSByYW5nZSAwIHRvIDYzLCB5b3UnbGwgZ2V0IHdlaXJkIHJlc3VsdHMgYXQgYmVzdC48YnIgLz48YnIgLz5Bc3N1bWVzIGEgZ2xvYmFsIGludGVnZXIgY2FsbGVkIEZMQUc8YnIgLz48YnIgLz48Yj5TeW50YXg8L2I+OjxiciAvPiAgICBGbGFnU2V0KGJpdCk8YnIgLz4gICAgRmxhZ1JlcyhiaXQpPGJyIC8+ICAgIC4uLiBGbGFnVGVzdChiaXQpPSAuLi48YnIgLz4gICAgRmxhZ0VxKGJpdCwgdmFsdWUpPGJyIC8+PGJyIC8+PGI+RXhhbXBsZTwvYj46PGJyIC8+ICAgIEZsYWdTZXQgT1VUUFVUX0ZPUk1BVDxiciAvPiAgICBGbGFnUmVzIFNEQ0FSRF9JTlNFUlRFRDxiciAvPiAgICBJRiBGbGFnVGVzdChQUklOVEVSX1JFQURZKT0wIFRIRU4gUFJJTlQgIlByaW50ZXIgaXMgbm90IHJlYWR5LiBTd2l0Y2ggT05MSU5FIGFuZCBwcmVzcyBFbnRlciI8YnIgLz4gICAgRmxhZ0VxIExlYXBGbGFnLElzTGVhcFllYXIoMjAxNyk8YnIgLz48YnIgLz48Yj5Db2RlPC9iPjo8YnIgLz5JbiB0aGlzIGNvZGUgcGFjaywgbm90ZSB0aGF0IHRoZSBJbnYoKSBmdW5jdGlvbiByZXBsaWNhdGVzIHRoZSBuYXRpdmUgZnVuY3Rpb24gb2YgdGhlIHNhbWUgbmFtZSBwcmVzZW50IGluIE1NQmFzaWMgb24gdGhlIENNTTIuIFRoaXMgd291bGQgbWFrZSB0aGUgRmxhZ1JlcygpIENNTTIgdmVyc2lvbiBzaG93biBhdCB0aGUgYm90dG9tIGNvbXBhdGlibGUgd2l0aCBNaWNyb01pdGUgTU1CYXNpYyBob3dldmVyIGl0IHJ1bnMgYWJvdXQgMzAlIHNsb3dlci48YnIgLz48YnIgLz48cHJlPg0KCSdwcmVhbWJsZQ0KCURpbSBJbnRlZ2VyIEZsYWcNCg0KCSdTZXQgYSBGbGFnDQoJU3ViIEZsYWdTZXQoYml0IEFzIEludGVnZXIpDQoJCUZMQUc9RkxBRyBPciAxJmx0OyZsdDtiaXQNCglFbmQgU3ViDQoNCgknQ2xlYXIgYSBmbGFnDQoJU3ViIEZsYWdSZXMoYml0IEFzIEludGVnZXIpDQoJCUxvY2FsIEludGVnZXIgeA0KCQl4PTEmbHQ7Jmx0O2JpdA0KCQlGTEFHPShGTEFHIE9yIHgpIFhvciB4DQoJRW5kIFN1Yg0KDQoJJ0VxdWF0ZSBhIGZsYWcgdG8gYSB2YWx1ZQ0KCVN1YiBGbGFnRXEoYml0IEFzIEludGVnZXIsdiBBcyBJbnRlZ2VyKQ0KCQlJZiB2IFRoZW4NCgkJCUZsYWdTZXQoYml0KQ0KCQlFbHNlDQoJCQlGbGFnUmVzKGJpdCkNCgkJRW5kaWYNCglFbmQgU3ViDQoNCgknVGVzdCBhIGZsYWcNCglGdW5jdGlvbiBGbGFnVGVzdChiaXQgQXMgSW50ZWdlcikgQXMgSW50ZWdlcg0KCQlGbGFnVGVzdD1BYnMoU2duKEZMQUcgQW5kIDEmbHQ7Jmx0O2JpdCkpDQoJRW5kIEZ1bmN0aW9uDQoNCgknQml0d2lzZSBJbnZlcnQNCgknRm9yIE1NQmFzaWNzIHdpdGhvdXQgbmF0aXZlIEludigpIEZ1bmN0aW9uDQoJRnVuY3Rpb24gSW52KGEgQXMgSW50ZWdlcikNCgkJSW52PWEgWG9yICZhbXA7aEZGRkZGRkZGRkZGRkZGRkYNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiPlZlcnNpb24gb2YgRmxhZ1JlcygpIGZvciBDTU0yIC4uLjwvYj48YnIgLz5MZXZlcmFnZXMgdGhlIG5hdGl2ZSBJbnYoKSBmdW5jdGlvbiBvZiBNTUJhc2ljIG9uIENNTTIgLSBzaW1wbGVyIGFuZCBhIGJpdCBmYXN0ZXIuIE1hbnkgdGhhbmtzIHRvIFR3b0ZpbmdlcnMgYW5kIFR1cmJvNDYgb2YgVEJTIGZvciBvcHRpbWl6YXRpb25zIGFuZCBhZGRpdGlvbmFsIHJvdXRpbmVzLjxiciAvPgk8cHJlPg0KCSdmb3IgQ01NMg0KCVN1YiBGbGFnUmVzKGJpdCBBcyBJbnRlZ2VyKQ0KCQlGTEFHPUZMQUcgQW5kIEludigxJmx0OyZsdDtiaXQpDQoJRW5kIFN1Yg0KPC9wcmU+PGJyIC8+ZGQrIorkhRRtQAy5A1vP6xOHGHLsKQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDQKdzZbPCgK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCbdF6VGESeKOi0GrlSXRKKpXEQy2" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Logina067.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Bit-Manipulation-Functions%26Revision%3d00004" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Bit Manipulation Functions</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.History2c98.html?Page=MMBasic.Bit-Manipulation-Functions&amp;Revision=00003">&laquo; Older Revision</a> - <a href="MMBasic.History54ec.html?Page=MMBasic.Bit-Manipulation-Functions">Back to Page History</a> - <a href="MMBasic.Bit-Manipulation-Functions.html">Current Revision</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2020/09/20 13:04</h3><br />The following four functions provide SETting, RESetting and TESTing of individual bits of an integer expression (ideally a variable). FlagEq sets a flag to the value specified (i.e. not mandating a set or reset). A non-zero value counts as 1. Ideal for state machine and event driven code.<br /><br />This makes using single bits as flags easy and far more memory-kind than using integer variables as flags; which wastes 8 bytes per flag). This method allows up to 64 flags to be maintained using a single integer variable. If CONST is used to define the bits it makes for very readable code.<br /><br />In the interests of speed, there is no error checking on the bit you manipulate. If you try anything outside the range 0 to 63, you'll get weird results at best.<br /><br />Assumes a global integer called FLAG<br /><br /><b>Syntax</b>:<br />    FlagSet(bit)<br />    FlagRes(bit)<br />    ... FlagTest(bit)= ...<br />    FlagEq(bit, value)<br /><br /><b>Example</b>:<br />    FlagSet OUTPUT_FORMAT<br />    FlagRes SDCARD_INSERTED<br />    IF FlagTest(PRINTER_READY)=0 THEN PRINT "Printer is not ready. Switch ONLINE and press Enter"<br />    FlagEq LeapFlag,IsLeapYear(2017)<br /><br /><b>Code</b>:<br />In this code pack, note that the Inv() function replicates the native function of the same name present in MMBasic on the CMM2. This would make the FlagRes() CMM2 version shown at the bottom compatible with MicroMite MMBasic however it runs about 30% slower.<br /><br /><pre>
+	'preamble
+	Dim Integer Flag
+
+	'Set a Flag
+	Sub FlagSet(bit As Integer)
+		FLAG=FLAG Or 1&lt;&lt;bit
+	End Sub
+
+	'Clear a flag
+	Sub FlagRes(bit As Integer)
+		Local Integer x
+		x=1&lt;&lt;bit
+		FLAG=(FLAG Or x) Xor x
+	End Sub
+
+	'Equate a flag to a value
+	Sub FlagEq(bit As Integer,v As Integer)
+		If v Then
+			FlagSet(bit)
+		Else
+			FlagRes(bit)
+		Endif
+	End Sub
+
+	'Test a flag
+	Function FlagTest(bit As Integer) As Integer
+		FlagTest=Abs(Sgn(FLAG And 1&lt;&lt;bit))
+	End Function
+
+	'Bitwise Invert
+	'For MMBasics without native Inv() Function
+	Function Inv(a As Integer)
+		Inv=a Xor &amp;hFFFFFFFFFFFFFFFF
+	End Function
+</pre><br /><b>Version of FlagRes() for CMM2 ...</b><br />Leverages the native Inv() function of MMBasic on CMM2 - simpler and a bit faster. Many thanks to TwoFingers and Turbo46 of TBS for optimizations and additional routines.<br />	<pre>
+	'for CMM2
+	Sub FlagRes(bit As Integer)
+		FLAG=FLAG And Inv(1&lt;&lt;bit)
+	End Sub
+</pre><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Bit-Manipulation-Functions&Revision=00004 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:03:22 GMT -->
+</html>

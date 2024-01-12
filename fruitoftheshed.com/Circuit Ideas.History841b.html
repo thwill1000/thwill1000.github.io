@@ -1,0 +1,113 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/Circuit Ideas.History.aspx?Page=Circuit%20Ideas.Really-Simple-Zero-Crossing-Detect&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:56:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=Circuit+Ideas&amp;Page=Circuit+Ideas.Really-Simple-Zero-Crossing-Detect&amp;Revision=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAUwUGFnZSBIaXN0b3J5OiBSZWFsbHkgU2ltcGxlIFplcm8gQ3Jvc3NpbmcgRGV0ZWN0ZAIFDxBkEBUCATEBMBUCATEBMBQrAwJnZ2RkAgcPEGQQFQMHQ3VycmVudAExATAVAwdDdXJyZW50ATEBMBQrAwNnZ2dkZAILDxYCHwAFqyE8dGFibGUgY2xhc3M9ImJveCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIj48dHI+PHRkPjxwIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij48Yj4mbGFxdW87IE9sZGVyIFJldmlzaW9uIC0gPGEgaHJlZj0iQ2lyY3VpdCBJZGVhcy5IaXN0b3J5LmFzcHg/UGFnZT1DaXJjdWl0JTIwSWRlYXMuUmVhbGx5LVNpbXBsZS1aZXJvLUNyb3NzaW5nLURldGVjdCI+QmFjayB0byBQYWdlIEhpc3Rvcnk8L2E+IC0gPGEgaHJlZj0iQ2lyY3VpdCBJZGVhcy5IaXN0b3J5LmFzcHg/UGFnZT1DaXJjdWl0JTIwSWRlYXMuUmVhbGx5LVNpbXBsZS1aZXJvLUNyb3NzaW5nLURldGVjdCZhbXA7UmV2aXNpb249MDAwMDEiPk5ld2VyIFJldmlzaW9uICZyYXF1bzs8L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAxNi8xMS8yOSAxNDoxODwvaDM+PGJyIC8+PGI+ISEhIFdBUk5JTkcsIFRISVMgQ0lSQ1VJVCBERUFMUyBXSVRIIFBPVEVOVElBTExZIExFVEhBTCBWT0xUQUdFUyAhISE8L2I+PGJyIC8+PGJyIC8+SWYgeW91IGRvbid0IGZlZWwgY29uZmlkZW50IGluIGRvaW5nIHRoaXMsIGJlc3QgYXZvaWQgdHJ5aW5nIHVubGVzcyB5b3UgaGF2ZSBhIGxvdyBwb3dlciBBQyBzb3VyY2UgKGEgdHJhbnNmb3JtZXIsIHNpZ25hbCBnZW5lcmF0b3IgZXRjLi4uKS4gWW91IHdpbGwgbmVlZCB0byBsb3dlciB0aGUgdmFsdWUgb2YgdGhlIGlucHV0IHJlc2lzdG9yIGFjY29yZGluZ2x5LjxiciAvPjxiciAvPlplcm8gY3Jvc3NpbmcgZGV0ZWN0IGNpcmN1aXRzIGFyZSB1c2VkIHRvIGluZGljYXRlIHRoZSBwb2ludCBhdCB3aGljaCBhbiBBQyBzaWduYWwgc3dpbmdzIGZyb20gcG9zaXRpdmUgdG8gbmVnYXRpdmUgc3dpbmdpbmcgdGhyb3VnaCBpdHMgemVybyB2b2x0IHBvaW50LjxiciAvPjxiciAvPlRoaXMgbWlnaHQgYmUgdG8gYWxsb3cgdGhlIHN3aXRjaGluZyBvZiBjdXJyZW50IG9yIGF1ZGlvIGF0IGEgbmljZSBwbGFjZSB0byBwcmV2ZW50IGludGVyZmVyZW5jZSBvciBjdXJyZW50IHN1cmdlcyBldGMuPGJyIC8+PGJyIC8+VGhlc2UgYXJlIG15IHRob3VnaHRzIG9uIGEgcmVhbGx5IHNpbXBsZSBaQ0QgY2lyY3VpdCB3aGljaCBJIGdvdCBkb3duIHRvIHRocmVlIGNvbXBvbmVudHMhIEkgdXNlZCBhIGR1YWwgb3B0by1jb3VwbGVyIHdpdGggMi41S3YgaXNvbGF0aW9uLCBhIGJpZyByZXNpc3RvciB0byBkcml2ZSBpdHMgTEVEcyB2aWEgdGhlIG1haW5zIGFuZCB0aGVuIHBhcmFsbGVsZWQgdGhlIHRyYW5zaXN0b3Igb3V0cHV0cy4gUmVtZW1iZXIgTWFpbnMgaXMgdXN1YWxseSBnaXZlbiBhcyBSTVMgd2hpY2ggbWVhbnMgeW91J2xsIG5lZWQgdG8gZGl2aWRlIGJ5IDAuNzA3MSB0byBnZXQgdGhlIHBlYWsgdm9sdGFnZSB5b3UgY2FuIGV4cGVjdCBvbiB0aGUgaW5wdXQuIEluIHRoZSBVSywgTWFpbnMgaXMgMjQwdiBSTVMgd2hpY2ggZ2l2ZXMgYWJvdXQgMzQwdiBwZWFrLiBUaGUgbWFpbiByZXNpc3RvciBpcyAxNTBLIHdoaWNoIGdpdmVzIGFib3V0IDIuMm1BIG1heGltdW0gYXQgMzQwdi4gQnV0IHRoZSBwb3dlciBkaXNzaXBhdGVkIGFjcm9zcyBpdCBpcyBhYm91dCAwLjc3Vy4gZm9yIGxvbmcgdGVybSB1c2UgeW91IHNob3VsZCBiZSBsb29raW5nIGF0IGEgMVdhdHQgcmVzaXN0b3IgaGVyZS4gSSBkaWRuJ3QgaGF2ZSBhIDFXIGRldmljZSBzbyBmb3IgdGhlIHNha2Ugb2YgdGhlIHRlc3QgYW5kIGFzIGl0IHdhcyBvbmx5IGZvciBhIGZldyBtaW51dGVzIEkgdXNlZCBhIDAuNVcgcmVzaXN0b3IuIEl0IGRvZXMgZ2V0IG5vdGljYWJseSB3YXJtIGR1cmluZyAxMCBtaW51dGVzIG9mIHVzZSBhdCBtYWlucyBwb3dlciBzbyBteSBmZWFycyBhcmUganVzdGlmaWVkIGhlcmUgLSBET04nVCBURVNUIFRISVMgV0lUSCBUSEUgUE9XRVIgT04hISE8YnIgLz48YnIgLz5Gb3IgdGhlIGxhdGVyIHRlc3RzIEkgb3BlcmF0ZWQgdGhpcyB3aXRoIDIwViBQLVAgYW5kIGl0IHdhcyBnb29kIHRvIDFLaHouLi4gdGhlIHB1bHNlcyB0ZW5kIHRvIGZsYXR0ZW4gb3V0IGEgbG90IGFib3ZlIHRoYXQuIElmIHlvdSB3YW50IGZhc3RlciBlZGdlcyBvbiB5b3VyIHB1bHNlLCB5b3UgY291bGQgcGxhY2UgdGhlIG91dHB1dCBvbnRvIHRoZSBiYXNlIG9mIGEgc21hbGwgdHJhbnNpc3RvciB3aGljaCB3b3VsZCB0aGVuIGZvcm0gYSBEYXJsaW5ndG9uIHBhaXIgd2l0aCB0aGUgdHdvIGluIHRoZSBvcHRvLWNvdXBsZXIuIFRoaXMgdHJhbnNpc3RvciB3b3VsZCAic2F0dXJhdGUiIGF0IGFib3V0IDAuNnYgd2hpY2ggd291bGQgIHNoYXJwZW4gdGhlIGVkZ2UgYW5kIG1ha2UgaXQgbXVjaCBtb3JlIHJlc3BvbnNpdmUgdG8gdGhlIGNoYW5naW5nIHZvbHRhZ2UgLSBJIGhhdmVuJ3QgdHJpZWQgdGhpcyB0aG91Z2ggYXMgSSB3YXMgbW9yZSBpbnRlcmVzdGVkIGluIGdldHRpbmcgYSB0aW55IGNvbXBvbmVudCBjb3VudC4gWW91IG1pZ2h0IGxpa2UgdHJ5L2NvbW1lbnQuLi4gQmVzdCBwdWxzZSBzaGFwaW5nIHdvdWxkIGJlIGFjaGlldmVkIHdpdGggYSBTY21pdHQgdHJpZ2dlciBkZXZpY2UsIGVpdGhlciBhbiBpbnZlcnRlciBvciBzaW1pbGFyIG9yIHN0cmFpZ2h0IGludG8gYSBTY2htaXR0IGlucHV0IG9uIGEgbWljcm8tY29udHJvbGxlci48YnIgLz48YnIgLz48YSBjbGFzcz0idW5rbm93bmxpbmsiIGhyZWY9IkNpcmN1aXQgSWRlYXMuLmFzaHgiIHRpdGxlPSJDaXJjdWl0IElkZWFzLiI+PC9hPjxpbWcgc3JjPSJHZXRGaWxlLmFzcHg/RmlsZT0vcGl4Mi90bHA1MjEtMi5qcGciIGFsdD0iSW1hZ2UiIC8+PGJyIC8+PGJyIC8+SGVyZSdzIHRoZSBjcmF6eSBzaW1wbGUgc2NoZW1hdGljOjxiciAvPjxiciAvPjxhIGNsYXNzPSJ1bmtub3dubGluayIgaHJlZj0iQ2lyY3VpdCBJZGVhcy4uYXNoeCIgdGl0bGU9IkNpcmN1aXQgSWRlYXMuIj48L2E+PGltZyBzcmM9IkdldEZpbGUuYXNweD9GaWxlPS9waXgyL3pjZC5qcGciIGFsdD0iSW1hZ2UiIC8+PGJyIC8+PGJyIC8+YW5kIGhlcmUgaXMgbXkgcXVpY2sga25vY2stdXAgb24gYSBicmVhZGJvYXJkPGJyIC8+PGJyIC8+PGEgY2xhc3M9InVua25vd25saW5rIiBocmVmPSJDaXJjdWl0IElkZWFzLi5hc2h4IiB0aXRsZT0iQ2lyY3VpdCBJZGVhcy4iPjwvYT48aW1nIHNyYz0iR2V0RmlsZS5hc3B4P0ZpbGU9L3BpeDIvYnJlYWRib2FyZF9zbWFsbC5qcGciIGFsdD0iSW1hZ2UiIC8+PGJyIC8+PGJyIC8+VGhpcyBwcm9kdWNlcyBhIG5pY2UgcHVsc2Ugb2YgODAwdVMgKFZjYz0zLjN2KSBhbmQgMW1TIChWY2M9NXYpIC0gbm90IGV4YWN0bHkgc3F1YXJlIGJ1dCBkZWZpbml0ZWx5IGdvb2QgZW5vdWdoIHRvIGJlIHNlZW4gYW5kIG5vdCBhIHRlcnJpYmx5IHNsb3cgcmlzZSB0aW1lLjxiciAvPjxiciAvPjxhIGNsYXNzPSJ1bmtub3dubGluayIgaHJlZj0iQ2lyY3VpdCBJZGVhcy4uYXNoeCIgdGl0bGU9IkNpcmN1aXQgSWRlYXMuIj48L2E+PGltZyBzcmM9IkdldEZpbGUuYXNweD9GaWxlPS9waXgyLzMzYV9zbWFsbC5qcGciIGFsdD0iSW1hZ2UiIC8+PGJyIC8+PGEgY2xhc3M9InVua25vd25saW5rIiBocmVmPSJDaXJjdWl0IElkZWFzLi5hc2h4IiB0aXRsZT0iQ2lyY3VpdCBJZGVhcy4iPjwvYT48aW1nIHNyYz0iR2V0RmlsZS5hc3B4P0ZpbGU9L3BpeDIvMzNiX3NtYWxsLmpwZyIgYWx0PSJJbWFnZSIgLz48YnIgLz48YSBjbGFzcz0idW5rbm93bmxpbmsiIGhyZWY9IkNpcmN1aXQgSWRlYXMuLmFzaHgiIHRpdGxlPSJDaXJjdWl0IElkZWFzLiI+PC9hPjxpbWcgc3JjPSJHZXRGaWxlLmFzcHg/RmlsZT0vcGl4Mi81YV9zbWFsbC5qcGciIGFsdD0iSW1hZ2UiIC8+PGJyIC8+PGJyIC8+YW5kIGhlcmUgaXMgYSBwaG90byBvZiB0aGUgQUMgd2F2ZWZvcm0gd2l0aCB0aGUgcHVsc2VzIGFkZGVkIHRvZ2V0aGVyIC0gSSBoYWQgdG8gZG8gaXQgbGlrZSB0aGlzIGJlY2F1c2UgbXkgY2FtZXJhIGV4cG9zdXJlIHdhcyB0b28gcXVpY2sgYW5kIHdvdWxkbid0IGNhcHR1cmUgYm90aCB0cmFjZXMuIFRoZSBwdWxzZSBlZGdlcyBzZWVtIHRvIGJlIGFyb3VuZCB0aGUgMnYgbWFyayAtIHdoaWNoIGlzIHRvIGJlIGV4cGVjdGVkIGZyb20gdGhlIG9wdG8tY291cGxlci48YnIgLz48YnIgLz48YSBjbGFzcz0idW5rbm93bmxpbmsiIGhyZWY9IkNpcmN1aXQgSWRlYXMuLmFzaHgiIHRpdGxlPSJDaXJjdWl0IElkZWFzLiI+PC9hPjxpbWcgc3JjPSJHZXRGaWxlLmFzcHg/RmlsZT0vcGl4Mi81Yl9zbWFsbC5qcGciIGFsdD0iSW1hZ2UiIC8+PGJyIC8+PGJyIC8+ZGSgT6GaauwU+5qnPSsjJpyJSmiC/Q==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwKEqvaJDwK9z/TSAwKiz/TSAwK3j57gBwLC5ta/BQLd5ta/BQL9yYWiCcfxt+razN9pnmzFe/zSHdJWYVCm" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="Circuit%20Ideas.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option selected="selected" value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="Circuit%20Ideas.Login5486.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dCircuit%20Ideas%26Page%3dCircuit%20Ideas.Really-Simple-Zero-Crossing-Detect%26Revision%3d0" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (Circuit Ideas)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="Circuit%20Ideas.MainPage.html" title="_Main Page">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Circuit%20Ideas.Simple-Serial-Console-Connectionea70.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="Circuit%20Ideas.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Login0182.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Login0982.html" title="Administration">Administration</a></li><li><a class="systemlink" href="Circuit%20Ideas.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Circuit%20Ideas.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Circuit%20Ideas.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SB9bffed0da8f946919883d085c50b776f() { document.location = 'Circuit Ideas.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SB9bffed0da8f946919883d085c50b776f').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SB9bffed0da8f946919883d085c50b776f" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SB9bffed0da8f946919883d085c50b776f(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SB9bffed0da8f946919883d085c50b776f(); return false;">&raquo;</a></big><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Really Simple Zero Crossing Detect</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b>&laquo; Older Revision - <a href="Circuit%20Ideas.History86ba.html?Page=Circuit%20Ideas.Really-Simple-Zero-Crossing-Detect">Back to Page History</a> - <a href="Circuit%20Ideas.Historyd7f9.html?Page=Circuit%20Ideas.Really-Simple-Zero-Crossing-Detect&amp;Revision=00001">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2016/11/29 14:18</h3><br /><b>!!! WARNING, THIS CIRCUIT DEALS WITH POTENTIALLY LETHAL VOLTAGES !!!</b><br /><br />If you don't feel confident in doing this, best avoid trying unless you have a low power AC source (a transformer, signal generator etc...). You will need to lower the value of the input resistor accordingly.<br /><br />Zero crossing detect circuits are used to indicate the point at which an AC signal swings from positive to negative swinging through its zero volt point.<br /><br />This might be to allow the switching of current or audio at a nice place to prevent interference or current surges etc.<br /><br />These are my thoughts on a really simple ZCD circuit which I got down to three components! I used a dual opto-coupler with 2.5Kv isolation, a big resistor to drive its LEDs via the mains and then paralleled the transistor outputs. Remember Mains is usually given as RMS which means you'll need to divide by 0.7071 to get the peak voltage you can expect on the input. In the UK, Mains is 240v RMS which gives about 340v peak. The main resistor is 150K which gives about 2.2mA maximum at 340v. But the power dissipated across it is about 0.77W. for long term use you should be looking at a 1Watt resistor here. I didn't have a 1W device so for the sake of the test and as it was only for a few minutes I used a 0.5W resistor. It does get noticably warm during 10 minutes of use at mains power so my fears are justified here - DON'T TEST THIS WITH THE POWER ON!!!<br /><br />For the later tests I operated this with 20V P-P and it was good to 1Khz... the pulses tend to flatten out a lot above that. If you want faster edges on your pulse, you could place the output onto the base of a small transistor which would then form a Darlington pair with the two in the opto-coupler. This transistor would "saturate" at about 0.6v which would  sharpen the edge and make it much more responsive to the changing voltage - I haven't tried this though as I was more interested in getting a tiny component count. You might like try/comment... Best pulse shaping would be achieved with a Scmitt trigger device, either an inverter or similar or straight into a Schmitt input on a micro-controller.<br /><br /><a class="unknownlink" href="Circuit%20Ideas..html" title="Circuit Ideas."></a><img src="Default.html?File=/pix2/tlp521-2.jpg" alt="Image" /><br /><br />Here's the crazy simple schematic:<br /><br /><a class="unknownlink" href="Circuit%20Ideas..html" title="Circuit Ideas."></a><img src="Default.html?File=/pix2/zcd.jpg" alt="Image" /><br /><br />and here is my quick knock-up on a breadboard<br /><br /><a class="unknownlink" href="Circuit%20Ideas..html" title="Circuit Ideas."></a><img src="Default.html?File=/pix2/breadboard_small.jpg" alt="Image" /><br /><br />This produces a nice pulse of 800uS (Vcc=3.3v) and 1mS (Vcc=5v) - not exactly square but definitely good enough to be seen and not a terribly slow rise time.<br /><br /><a class="unknownlink" href="Circuit%20Ideas..html" title="Circuit Ideas."></a><img src="Default.html?File=/pix2/33a_small.jpg" alt="Image" /><br /><a class="unknownlink" href="Circuit%20Ideas..html" title="Circuit Ideas."></a><img src="Default.html?File=/pix2/33b_small.jpg" alt="Image" /><br /><a class="unknownlink" href="Circuit%20Ideas..html" title="Circuit Ideas."></a><img src="Default.html?File=/pix2/5a_small.jpg" alt="Image" /><br /><br />and here is a photo of the AC waveform with the pulses added together - I had to do it like this because my camera exposure was too quick and wouldn't capture both traces. The pulse edges seem to be around the 2v mark - which is to be expected from the opto-coupler.<br /><br /><a class="unknownlink" href="Circuit%20Ideas..html" title="Circuit Ideas."></a><img src="Default.html?File=/pix2/5b_small.jpg" alt="Image" /><br /><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/Circuit Ideas.History.aspx?Page=Circuit%20Ideas.Really-Simple-Zero-Crossing-Detect&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:56:47 GMT -->
+</html>

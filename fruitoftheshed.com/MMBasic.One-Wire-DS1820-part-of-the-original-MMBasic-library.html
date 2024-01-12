@@ -1,0 +1,529 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:56:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	One-Wire DS1820 - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=One-Wire-DS1820-part-of-the-original-MMBasic-library&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Loginf97f.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dOne-Wire-DS1820-part-of-the-original-MMBasic-library%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyb5ba.html?Page=MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			One-Wire DS1820
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printb5ba.html?Page=MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:38
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesbcca.html?Cat=MMBasic.Environment" title="Environment">Environment</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f18a3bd63-4a2f-4c3c-b527-d71d5982dd81" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f18a3bd63-4a2f-4c3c-b527-d71d5982dd81');"><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd() Function (VB work-a-like)</a><a href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff() Function (VB work-a-like)</a><a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart() Function (VB work-a-like)</a></div><div id="f9cb5901f-ec59-4238-af48-8794b00dd681" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f9cb5901f-ec59-4238-af48-8794b00dd681');"><a href="MMBasic.Colour-Demos-part-of-the-original-MMBasic-library.html" title="Colour Demos">Colour Demos</a></div><div id="f969febe7-0a5f-415c-90a7-46932bc424ce" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f969febe7-0a5f-415c-90a7-46932bc424ce');"></div><div id="s83f3e732-7eae-460f-813c-52414c9aac8f" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s83f3e732-7eae-460f-813c-52414c9aac8f');"><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd() Function (VB work-a-like)</a><a href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff() Function (VB work-a-like)</a><a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart() Function (VB work-a-like)</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like)  (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's83f3e732-7eae-460f-813c-52414c9aac8f', this);" id="lnks83f3e732-7eae-460f-813c-52414c9aac8f" onmouseout="javascript:return __HideDropDown('s83f3e732-7eae-460f-813c-52414c9aac8f');">Now() Function (VB work-a-like)  (MMBasic)</a> &raquo; <a href="MMBasic.NUMBERS-BAS-part-of-the-original-MMBasic-library.html" title="NUMBERS.BAS (MMBasic)">NUMBERS.BAS (MMBasic)</a> &raquo; <b><a href="MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library.html" title="One-Wire DS1820 (MMBasic)">One-Wire DS1820 (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.MMX-time-of-the-seasons.html" title="MMX - time of the seasons (MMBasic)">MMX - time of the seasons (MMBasic)</a> &raquo; <a href="MMBasic.Modbus-CRC-uses-the-bit-by-bit-method.html" title="Modbus CRC uses the bit by bit method (MMBasic)">Modbus CRC uses the bit by bit method (MMBasic)</a> &raquo; <a href="MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed.html" title="Modbus CRC uses the table lookup method for speed (MMBasic)">Modbus CRC uses the table lookup method for speed (MMBasic)</a> &raquo; <a href="MMBasic.MOON-BAS-lunar-calendar-with-graphics-and-simple-GUI.html" title="MOON.BAS lunar calendar with graphics and simple GUI (MMBasic)">MOON.BAS lunar calendar with graphics and simple GUI (MMBasic)</a> &raquo; <a href="MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library.html" title="MORSE.BAS (MMBasic)">MORSE.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Multiple-LCD-panel-displays.html" title="Multiple LCD panel displays (MMBasic)">Multiple LCD panel displays (MMBasic)</a> &raquo; <a href="MMBasic.Music-demo.html" title="Music demo (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f9cb5901f-ec59-4238-af48-8794b00dd681', this);" id="lnkf9cb5901f-ec59-4238-af48-8794b00dd681" onmouseout="javascript:return __HideDropDown('f9cb5901f-ec59-4238-af48-8794b00dd681');">Music demo (MMBasic)</a> &raquo; <a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like)  (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f18a3bd63-4a2f-4c3c-b527-d71d5982dd81', this);" id="lnkf18a3bd63-4a2f-4c3c-b527-d71d5982dd81" onmouseout="javascript:return __HideDropDown('f18a3bd63-4a2f-4c3c-b527-d71d5982dd81');">Now() Function (VB work-a-like)  (MMBasic)</a> &raquo; <a href="MMBasic.NUMBERS-BAS-part-of-the-original-MMBasic-library.html" title="NUMBERS.BAS (MMBasic)">NUMBERS.BAS (MMBasic)</a> &raquo; <b><a href="MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library.html" title="One-Wire DS1820 (MMBasic)">One-Wire DS1820 (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+'1WDS1820.BAS     29 March 2012
+'By Ian Delaney
+
+PinNbr = 20
+
+GetTemp PinNbr, Temp, power$, device$, code$
+Print "The temperature is&#58;" format$(Temp,"% 1.3f"); " degrees C"
+print device$;code$;power$
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Subroutine to get the temperature from a Dallas DS18B20/DS18S22
+'    or DSS20/DS1820 externally or parasite powered via 1-wire protocol.
+' Reports temperature, device family, ROM Code and Power connection.
+' Only 1 device allowed on the cable.
+'                                                 Iandaus
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+Sub GetTemp (PinNbr, Value,power$,device$, code$)
+    Local T1, T2, t, a1,a2,a3,a4,a5,a6,a7,a8, device, presence, power
+    Local Countrem, T1C, TConv, T1t, T1t16, Value12, a,b,c,d,e,f,g,h
+
+    Tconv=750    'max time mS for temp conversion in parasite mode
+                 ' for slowest device
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+'   Check a device is present
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+    OWReset PinNbr,presence               ' reset
+    if presence = 0 then                  ' no device
+        temp = 999.99
+        device$ = "No device found!"
+        code$ = ""
+        power$ = ""
+        exit sub
+    endif
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   check whether power external or parasitic
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    OWReset PinNbr,presence
+    OWWrite PinNbr, 1,2,&amp;hcc, &amp;hb4
+    OWRead PinNbr,4,1,power
+    if power = 1 then 
+        power$ = " using External Power."
+    else
+        power$ = " using Parasitic Power."
+    endif
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   get ROM Code - useful if you want more than 1 device on wire
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    OWWrite PinNbr,1,1,&amp;h33			'read ROM code
+    OWRead PinNbr,0,8,a1,a2,a3,a4,a5,a6,a7,a8
+    code$ = " with ROM Code "+ str$(a1)+" "+str$(a2)+" "+str$(a3)+" "+str$(a4)+" "
+    code$ = code$ + str$(a5)+" "+str$(a6)+" "+str$(a7)+" "+str$(a8)
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   determine device family from code
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    if a1=16 then
+        device$ = "on DS1820/DS18S20"
+    elseif a1=34 then
+        device$ = "on DS18S22"    
+    elseif a1=40 then
+        device$ = "on DS18B20"
+    else
+        device$ = "Not known"    
+    endif
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   read temperature
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    owreset PinNbr                        ' reset before command (or use flag=9)
+    OWWrite PinNbr, 8, 2, &amp;hcc, &amp;h44      ' start conversion
+
+    'read external when bit goes hi, for parasitic just wait
+    If power = 0 Then
+        Pause Tconv
+    Else
+        t = Timer
+        Do
+            If Timer - t &gt; 1000 Then Error "Sensor not responding"
+            OWRead PinNbr, 4 , 1 , b            ' conversion done?
+        Loop Until b = 1
+    EndIf
+
+    'read temperature from scratchpad and convert to degrees C + or -
+    OWWrite PinNbr, 1, 2, &amp;hcc, &amp;hbe      ' command read data
+    OWRead PinNbr, 2, 2, T1, T2           ' get the data
+    OWReset PinNbr
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   calculate temp depending on device in use
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    'Need to analyse type of chip to calculate temp from T1 and T2
+    'T2 is MSB containing sign, T1 is LSB
+    if a1=34 or a1=40 then          'DS18S22 or DS18B20 is 12 bit 
+        If T2 And &amp;b1000 Then       'negative temp
+            'make 2s complement (1s complement+1)
+            T2 = (T2 xor &amp;b11111111)
+            T1 = (T1 xor &amp;b11111111)+1
+            if T1=1 then T2=T2+1        'add the carry if required
+            Value = ((T2 And &amp;b111) &#42; 256 + T1) / 16
+            Value = -Value
+        else                            'positive temp
+            Value = ((T2 And &amp;b111) &#42; 256 + T1) / 16
+        endif           
+    elseif a1=16 then                   'DS18S20 or DS1820 is 9bit or calc to 12bit
+        if T2 AND &amp;b10000000 then       'if MSB of T2=1 then negative
+            'Read 12bit resolution and adjust
+            'read scratchpad using matchrom to get Count Remaining @byte 7
+            OWWrite PinNbr,1,9,&amp;h55,a1,a2,a3,a4,a5,a6,a7,a8  'read from scratchpad
+            OWWrite PinNbr,0,1,&amp;hbe
+            OWRead PinNbr,0,8,a,b,c,d,e,f,g,h
+            COUNTREM=g                
+            'truncate 0.5deg value (or use integer division \)
+            T1t = T1 AND &amp;b11111110
+            T1t=T1t / 2                   'make whole degrees
+            'add compensation values read from scratchpad
+            T1t16=T1t&#42;16                  'make lsb 1/16 degree
+            Value12 = T1t16 -4 +(16 - COUNTREM)    'add 12 bit value
+            'take 2s complement
+            T1C = (Value12 XOR &amp;b11111111111) + 1 
+            Value = T1C/16                'make decimal value in degrees
+            Value = -Value
+        else                              'positive temp
+            Value = T1 / 2                '9bit value  
+            'Read 12bit resolution and adjust
+            'read scratchpad using matchrom
+            OWWrite PinNbr,1,9,&amp;h55,a1,a2,a3,a4,a5,a6,a7,a8  'read from scratchpad
+            OWWrite PinNbr,0,1,&amp;hbe
+            OWRead PinNbr,0,8,a,b,c,d,e,f,g,h
+            COUNTREM=g                
+            T1t = T1 AND &amp;b11111110      'truncate 0.5deg(or use integer division \)
+            Value = T1t/2
+            Value = Value - 0.25 + (16 - COUNTREM) /16   '12 bit value
+        endif    
+    endif
+End Sub
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:56:21 GMT -->
+</html>

@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.TEXTLOOK-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	TEXTLOOK.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.TEXTLOOK-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFuxQ8aDEgY2xhc3M9InBhZ2V0aXRsZSI+VEVYVExPT0suQkFTPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzo0NSBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEZpbGUgTWFuYWdlbWVudCwgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PGJyIC8+PHByZT4NCicgRHVtcCBhIHRleHQgZmlsZSB0byBzY3JlZW4sIHNob3dpbmcgYWxsIHByaW50YWJsZXMgYW5kIG5vbi1wcmludGFibGVzLg0KJyBOb24tcHJpbnRhYmxlcyBkZW5vdGVkIGJ5IHRoZWlyIEFTQ0lJIGNvZGVzDQonIEF1dGhvciYjNTg7IFJvZG5leSBFbnR3aXN0bGUgZnJvbSBhIFVuaXggaWRlYSBpbiB0aGUgMTk4MHMNCicNCklucHV0ICJFbnRlciBmaWxlbmFtZSYjNTg7ICIsZm5hbWUkICAnIER1bXAgdGhpcyBmaWxlDQpPcGVuIGZuYW1lJCBGb3IgaW5wdXQgQXMgJiMzNTsxDQpjaF9wZXJfbGluZT0xMiYjNTg7IGxpbmVzX3Blcl9wYWdlPTM1ICAnIFRvIGZpdCBzY3JlZW4gc2l6ZQ0KY291bnQ9MCYjNTg7bGluZV9ubz0xJiM1ODtjaF9jb3VudD0wICAgJyBJbml0aWF0ZSBjb3VudGVycw0KRm9udCAxLDEsMSYjNTg7UHJpbnQgRm9ybWF0JChjaF9jb3VudCsxLCIlNS4wZiIpOyYjNTg7Rm9udCAxLDEsMCAnTG9vayBhZnRlciBmaXJzdCBsaW5lDQpEbyAgJyBTZXF1ZW50aWFsbHkgcmVhZCBlbnRpcmUgZmlsZQ0KICBhJD1JbnB1dCQoMSwmIzM1OzEpICAgJyBSZWFkIGEgc2luZ2xlIEFTQ0lJIGNoYXJhY3RlciINCiAgSWYgKEFzYyhhJCkmZ3Q7MzIgQW5kIEFzYyhhJCkmbHQ7Jmd0OzEyNykgVGhlbiAgICAgJyBTZWxlY3QgcHJpbnRhYmxlcw0KICAgIFByaW50ICIgICAgICI7YSQ7DQogIEVsc2UNCiAgICBQcmludCAiICBcIjtGb3JtYXQkKEFzYyhhJCksIiUwMy4wZiIpOyAgICcgU2VsZWN0IG5vbi1wcmludGFibGVzDQogIEVuZElmDQogIGNvdW50PWNvdW50KzEmIzU4O2NoX2NvdW50PWNoX2NvdW50KzENCiAgSWYgY291bnQ9Y2hfcGVyX2xpbmUgVGhlbiAgICcgRW5kIG9mIGxpbmUNCiAgICBsaW5lX25vPWxpbmVfbm8rMQ0KICAgIEZvbnQgMSwxLDEmIzU4O1ByaW50IENociQoMTApO0NociQoMTMpO0Zvcm1hdCQoY2hfY291bnQrMSwiJTUuMGYiKTsmIzU4O0ZvbnQgMSwxLDANCiAgICBjb3VudD0wDQogIEVuZElmDQogIElmIGxpbmVfbm89bGluZXNfcGVyX3BhZ2UgVGhlbiAgICcgRW5kIG9mIHBhZ2UNCiAgICBGb250IDEsMSwxDQogICAgUHJpbnQgQ2hyJCgxMyk7IiAgUHJlc3Mgc3BhY2UgYmFyIGZvciBuZXh0IHBhZ2Ugb3IgJ3EnIHRvIGVuZCYjNTg7ICI7DQprZXkmIzU4OyAgICBEbyYjNTg7IGIkPUlua2V5JCYjNTg7IExvb3AgVW50aWwgYiQmbHQ7Jmd0OyIiICAnV2FpdCBmb3Iga2V5IHRvIGJlIHByZXNzZWQNCiAgICBJZiBiJD0icSIgT3IgYiQ9IlEiIFRoZW4gR29UbyBmaW5pc2gNCiAgICBJZiBiJCZsdDsmZ3Q7Q2hyJCgzMikgVGhlbiBHb1RvIGtleQ0KICAgIFByaW50IENociQoMTApO0NociQoMTApO0NociQoMTMpOyAgJyBtb3ZlIHRvIG5ldyBsaW5lDQogICAgUHJpbnQgRm9ybWF0JChjaF9jb3VudCsxLCIlNS4wZiIpOyAgJyBQcmludCBjaGFyYWN0ZXIgbnVtYmVyDQogICAgRm9udCAxLDEsMA0KICAgIGxpbmVfbm89MA0KICBFbmRJZg0KTG9vcCBVbnRpbCBFb2YoJiMzNTsxKQ0KZmluaXNoJiM1ODsgIENsb3NlICYjMzU7MQ0KDQo8L3ByZT5kZBu3G7sMlW+Bz3C5liPK0FU6rhiS" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">TEXTLOOK.BAS</h1><small>Modified on 2016/12/23 23:45 by Administrator &mdash; Categorized as: File Management, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><pre>
+' Dump a text file to screen, showing all printables and non-printables.
+' Non-printables denoted by their ASCII codes
+' Author&#58; Rodney Entwistle from a Unix idea in the 1980s
+'
+Input "Enter filename&#58; ",fname$  ' Dump this file
+Open fname$ For input As &#35;1
+ch_per_line=12&#58; lines_per_page=35  ' To fit screen size
+count=0&#58;line_no=1&#58;ch_count=0   ' Initiate counters
+Font 1,1,1&#58;Print Format$(ch_count+1,"%5.0f");&#58;Font 1,1,0 'Look after first line
+Do  ' Sequentially read entire file
+  a$=Input$(1,&#35;1)   ' Read a single ASCII character"
+  If (Asc(a$)&gt;32 And Asc(a$)&lt;&gt;127) Then     ' Select printables
+    Print "     ";a$;
+  Else
+    Print "  \";Format$(Asc(a$),"%03.0f");   ' Select non-printables
+  EndIf
+  count=count+1&#58;ch_count=ch_count+1
+  If count=ch_per_line Then   ' End of line
+    line_no=line_no+1
+    Font 1,1,1&#58;Print Chr$(10);Chr$(13);Format$(ch_count+1,"%5.0f");&#58;Font 1,1,0
+    count=0
+  EndIf
+  If line_no=lines_per_page Then   ' End of page
+    Font 1,1,1
+    Print Chr$(13);"  Press space bar for next page or 'q' to end&#58; ";
+key&#58;    Do&#58; b$=Inkey$&#58; Loop Until b$&lt;&gt;""  'Wait for key to be pressed
+    If b$="q" Or b$="Q" Then GoTo finish
+    If b$&lt;&gt;Chr$(32) Then GoTo key
+    Print Chr$(10);Chr$(10);Chr$(13);  ' move to new line
+    Print Format$(ch_count+1,"%5.0f");  ' Print character number
+    Font 1,1,0
+    line_no=0
+  EndIf
+Loop Until Eof(&#35;1)
+finish&#58;  Close &#35;1
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.TEXTLOOK-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:01 GMT -->
+</html>

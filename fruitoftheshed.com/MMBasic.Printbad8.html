@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Radius-of-an-Arc-or-Segment by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Radius of an Arc or Segment - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Radius-of-an-Arc-or-Segment" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFugc8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UmFkaXVzIG9mIGFuIEFyYyBvciBTZWdtZW50PC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxOS8xMC8yMiAxMjozOCBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogR3JhcGhpY3MsIE1hdGhzPC9zbWFsbD48YnIgLz48YnIgLz5UaGUgcmFkaXVzIG9mIGFuIGFyYyBvciBzZWdtZW50IGlzIHRoZSByYWRpdXMgb2YgdGhlIGNpcmNsZSBvZiB3aGljaCBpdCBpcyBhIHBhcnQuIDxiciAvPjxiciAvPlRoZSBzZWdtZW50IGxlbmd0aCBXIGlzIHRoZSBiYXNlIG9mIHRoZSBzZWdtZW50IGUuZy4gYSBzdHJhaWdodCBsaW5lIGJldHdlZW4gdHdvIHBvaW50cyBvbiB0aGUgY2lyY3VtZmVyZW5jZS4JPGJyIC8+PGJyIC8+VGhlIHNlZ21lbnQgaGVpZ2h0IEggaXMgdGhlIGRpc3RhbmNlIGZyb20gaGFsZndheSBhbG9uZyB0aGUgYmFzZSAoYXQgcmlnaHQgYW5nbGUgdG8gaXQpIHRvIHRoZSBjaXJjdW1mZXJlbmNlLjxiciAvPjxiciAvPlRoZSBmb3JtdWxhIGJlbG93IGNhbGN1bGF0ZXMgdGhlIHJhZGl1cyBvZiB0aGUgY2lyY2xlIGZvciB3aGljaCB0aGUgc2VnbWVudCBmb3JtcyBwYXJ0IG9mIGl0cyBjaXJjdW1mZXJlbmNlLjxiciAvPjxiciAvPnIgPSBILzIgKyBXPHN1cD4yPC9zdXA+IC8gOEg8YnIgLz48YnIgLz48YnIgLz48YSBjbGFzcz0idW5rbm93bmxpbmsiIGhyZWY9Ik1NQmFzaWMuLmFzaHgiIHRpdGxlPSJNTUJhc2ljLiI+PC9hPjxpbWcgc3JjPSJHZXRGaWxlLmFzcHg/RmlsZT0vUmFkaXVzT2ZTZWdtZW50Mi5wbmciIGFsdD0iSW1hZ2UiIC8+PGJyIC8+PGJyIC8+PHByZT4NCglEaW0gRmxvYXQgcixXLEgNCglJbnB1dCAiU2VnbWVudCBsZW5ndGggIixXDQoJSW5wdXQgIlNlZ21lbnQgaGVpZ2h0ICIsSA0KCXI9SC8yKygoV14yKS8oOCYjNDI7SCkpDQoJUHJpbnQgIlJhZGl1cyBvZiBjaXJjbGUgIjtyDQo8L3ByZT5kZI+Umwe8sftI2PDgpFug2VsHZ4KG" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Radius of an Arc or Segment</h1><small>Modified on 2019/10/22 12:38 by CaptainBoing &mdash; Categorized as: Graphics, Maths</small><br /><br />The radius of an arc or segment is the radius of the circle of which it is a part. <br /><br />The segment length W is the base of the segment e.g. a straight line between two points on the circumference.	<br /><br />The segment height H is the distance from halfway along the base (at right angle to it) to the circumference.<br /><br />The formula below calculates the radius of the circle for which the segment forms part of its circumference.<br /><br />r = H/2 + W<sup>2</sup> / 8H<br /><br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="RadiusOfSegment297d2.png?File=/RadiusOfSegment2.png" alt="Image" /><br /><br /><pre>
+	Dim Float r,W,H
+	Input "Segment length ",W
+	Input "Segment height ",H
+	r=H/2+((W^2)/(8&#42;H))
+	Print "Radius of circle ";r
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Radius-of-an-Arc-or-Segment by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:55 GMT -->
+</html>

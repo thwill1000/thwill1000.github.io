@@ -1,0 +1,1033 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Invaders-part-of-the-original-MMBasic-library.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Invaders - Fruit Of The Shed
+</title><meta name="keywords" content="arcade" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Invaders-part-of-the-original-MMBasic-library&amp;NS=MMBasic&amp;HL=mmbasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBL0BR2V0RmlsZS5hc3B4P0ZpbGU9aW52YWRlci56aXAmYW1wO0FzU3RyZWFtQXR0YWNobWVudD0xJmFtcDtQcm92aWRlcj1TY3Jld1R1cm4uV2lraS5GaWxlc1N0b3JhZ2VQcm92aWRlciZhbXA7SXNQYWdlQXR0YWNobWVudD0xJmFtcDtQYWdlPU1NQmFzaWMuSW52YWRlcnMtcGFydC1vZi10aGUtb3JpZ2luYWwtTU1CYXNpYy1saWJyYXJ5CERvd25sb2FkC2ludmFkZXIuemlwBjEwMTUgQmRkqwcSwiL+igIQ1ewzJobISxF6E9c=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login783a.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dInvaders-part-of-the-original-MMBasic-library%26NS%3dMMBasic%26HL%3dmmbasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Invaders-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyd667.html?Page=MMBasic.Invaders-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Invaders
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printd667.html?Page=MMBasic.Invaders-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:32
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages0dbd.html?Cat=MMBasic.Games" title="Games">Games</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f13714239-d5b6-4377-91f5-46311bc395cd" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f13714239-d5b6-4377-91f5-46311bc395cd');"></div><div id="ff9dd81b5-23bd-4886-b983-57527621e3cc" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ff9dd81b5-23bd-4886-b983-57527621e3cc');"></div><div id="fca261f6d-df71-4db4-ab08-4b8228abdce3" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fca261f6d-df71-4db4-ab08-4b8228abdce3');"></div><div id="f2e2816ac-27cd-46d9-a413-e9ec1bee80da" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f2e2816ac-27cd-46d9-a413-e9ec1bee80da');"></div><div id="fc2f4007e-0e96-43ed-b1ca-e005e4e500f4" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fc2f4007e-0e96-43ed-b1ca-e005e4e500f4');"></div><div id="fdef570fb-f16c-432c-a1f2-fc8c6fb78ead" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fdef570fb-f16c-432c-a1f2-fc8c6fb78ead');"></div><div id="sc1313205-1102-434f-9f68-3de3b3016343" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sc1313205-1102-434f-9f68-3de3b3016343');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Sprite-demo-Arcade-part-of-the-original-MMBasic-library.html" title="Sprite demo: Arcade (MMBasic)">Sprite demo: Arcade (MMBasic)</a> &raquo; <a href="MMBasic.Micromite-SMS-Text-Gateway.html" title="SMS (Text) Gateway with MicroMite  (MMBasic)">SMS (Text) Gateway with MicroMite  (MMBasic)</a> &raquo; <b><a href="MMBasic.Invaders-part-of-the-original-MMBasic-library.html" title="Invaders (MMBasic)">Invaders (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="Circuit%20Ideas.7490-The-forgotten-divider.html" title="7490 The forgotten counter/divider  (Circuit Ideas)">7490 The forgotten counter/divider  (Circuit Ideas)</a> &raquo; <a href="Platform%20Agnostic.Antenna-Length-Calculator.html" title="Antenna Length Calculator (Platform Agnostic)">Antenna Length Calculator (Platform Agnostic)</a> &raquo; <a href="Platform%20Agnostic.Cell-Battery-Internal-Resistance-Calculator.html" title="Cell/Battery Internal Resistance Calculator (Platform Agnostic)">Cell/Battery Internal Resistance Calculator (Platform Agnostic)</a> &raquo; <a href="MMBasic.Backpack-Tracker-curve-tracer.html" title="Backpack Tracker curve tracer (MMBasic)">Backpack Tracker curve tracer (MMBasic)</a> &raquo; <a href="MMBasic.Measuring-RMS-algorythm-using-MMBasic.html" title="Measuring RMS (algorythm) using MMBasic (MMBasic)">Measuring RMS (algorythm) using MMBasic (MMBasic)</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).Image-sprite-and-font-formats.html" title="Image, sprite, and font formats (Colour MaxiMite 2 (CMM2))">Image, sprite, and font formats (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).Old-firmware-announcements.html" title="Old firmware announcements (Colour MaxiMite 2 (CMM2))">Old firmware announcements (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="MMBasic.Sprite-demo-Arcade-part-of-the-original-MMBasic-library.html" title="Sprite demo: Arcade (MMBasic)">Sprite demo: Arcade (MMBasic)</a> &raquo; <a href="MMBasic.Micromite-SMS-Text-Gateway.html" title="SMS (Text) Gateway with MicroMite  (MMBasic)">SMS (Text) Gateway with MicroMite  (MMBasic)</a> &raquo; <b><a href="MMBasic.Invaders-part-of-the-original-MMBasic-library.html" title="Invaders (MMBasic)">Invaders (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />This is a version of the Space Invaders game for the Maximite.  It was written by Fabrice Muller (France).<br /><br />To play, unzip all the files into a directory on your SD card, change into the directory and then run the file INVADERS.BAS.<br /><br />Space Bar   = The fire button<br />Left Arrow  = Move your gun to the left<br />Right Arrow = Move your gun to the right<br />CTRL-C      = Quit<br /><br />This must be run using MMBasic 3.0A as it relies on some advanced features of this version to control the invaders.<br /><br />It looks best if played on a composite PAL monitor but it will also run fine on a VGA monitor.<br /><br /><b>INVADERS.BAS</b><br /><pre>
+ 'Space Invaders for the Maximite
+Option base 1
+Clear
+ 'Initialise variables
+Dim FireCoord(2)
+Dim OldFireCoord(2)
+NbCols = 11
+NbInvFire = 5
+SprWide = 16
+MinX = 0 &#58; MaxX = 120
+Dim Invaders(5,NbCols)
+Dim InvCols(NbCols)
+Dim InvFireCoord(20,2)
+Dim InvFireOld(20,2)
+Dim InvLine(5)
+Dim InvErase(5)
+Dim InvLine$(5)
+Dim InvChar$(5,2)
+Dim InvScore(5)
+InvScore(1) = 30
+InvScore(2) = 30
+InvScore(3) = 20
+InvScore(4) = 20
+InvScore(5) = 10
+InvMiScore = 100
+Mistery = 117
+Canon = 118
+CanonExp1 = 119
+CanonExp2 = 120
+Dx = -2
+InvInterval = 200
+InvMiInterval = 200
+InvMiSpeed = 20
+InvFireTimer = 25
+InvFireSpeed = 25
+FireSpeed = 5
+MisteryOn = 0
+Score = 0
+Lives = 3
+Level = 0
+NextLevel = 1
+InvaderX = 16
+InvaderY = 40
+OriginMaxY = 70
+InvMaxY = OriginMaxY
+MisteryX = 280
+OldMisteryX = MisteryX
+OldInvaderX = InvaderX
+OldInvaderY = InvaderY
+CanonX = 100
+CanonY = 180
+OldCanonX = CanonX
+OldCanonY = CanonY
+Fire = 0
+InvHitB = 0
+Cycle = 0
+ 'Get the Invaders font (16 x 13 pixels)
+Font Load "invader.fnt" As &#35;6
+ 'Get the start Screen font (8 x 8 pixels)
+Font Load "invmenu.fnt" As &#35;7
+ 'Setting the joystick pins
+ 'PIN 13 = LEFT
+SetPin 13,2
+ 'PIN 14 = RIGHT
+SetPin 14,2
+ 'PIN 15 = Fire Button 1
+SetPin 15,2
+ 'We start here
+Cls
+GoSub StartScreen
+Randomize Timer
+Pause 500
+Cls
+Timer = 0
+Counter1 = 0
+Counter2 = 0
+Counter3 = 0
+Counter4 = 0
+Counter5 = 0
+Counter6 = 0
+RedrawInvaders = 1
+ 'General game loop
+Do While 1
+ 'check if we draw a new level
+ If NextLevel = 1 Then GoSub DrawNextLevel
+ 'check if we have to move the Invaders
+ If Counter1 &gt;= InvInterval Then
+  Sound 300,50
+  Timer = 0
+  GoSub MoveInvaders
+  RedrawInvaders = 1
+  If Cycle = 0 Then Cycle = 1 Else Cycle = 0
+ EndIf
+ 'check if we redraw the Invaders fire
+ 'at new positions
+ If Counter2 &gt;= InvFireSpeed Then
+  Counter2 = 0
+  GoSub InvFireShow
+ EndIf
+ 'Check if one of the invader can fire
+ If Counter3 &gt;= InvFireTimer Then
+  Counter3 = 0
+  GoSub InvNewFire
+ EndIf
+ 'Check if we activate the Mistery Ship
+ If (Counter4 &gt;= InvMiInterval) And (MisteryOn = 0) Then
+  MisteryOn = 1
+ EndIf
+ 'Check if we show the Mistery Ship
+ If (MisteryOn = 1) And (Counter6 &gt;= InvMiSpeed) Then
+  Counter6 = 0
+  GoSub MoveMistery
+ EndIf
+ char = Asc(Inkey$)
+ 'check if we move the Canon to Left
+ If (char = 130) Then
+  OldCanonX = CanonX
+  CanonX = CanonX - 2
+  If CanonX &lt; 0 Then CanonX = 0
+ EndIf
+ 'check if we move the Canon to Right
+ If (char = 131) Then
+  OldCanonX = CanonX
+  CanonX = CanonX + 2
+  If CanonX &gt; 285 Then CanonX = 285
+ EndIf
+ 'check if we Fire
+ If (char = 32) And (Fire = 0) Then
+  GoSub CanonFire
+ EndIf
+ 'check if we kill a Invaders
+ If (Fire = 1) And (Counter5 &gt;= FireSpeed) Then
+  Counter5 = 0
+  OldFireCoord(1) = FireCoord(1)
+  OldFireCoord(2) = FireCoord(2)
+  FireCoord(2) = FireCoord(2) - 5
+  If (FireCoord(2) &lt;= ActMaxY) Then GoSub CheckKill
+  GoSub CanonHitBunker
+  If FireCoord(2) &lt; 0 Then
+   Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+   Fire = 0
+  EndIf
+ EndIf
+ 'Actualize all Counters
+ Counter1 = Timer
+ Counter2 = Counter2 + 1
+ Counter3 = Counter3 + 1
+ Counter4 = Counter4 + 1
+ Counter5 = Counter5 + 1
+ Counter6 = Counter6 + 1
+ GoSub Redraw
+Loop
+ 'Draw a new level and set the variables
+DrawNextLevel&#58;
+Level = Level + 1
+If Level = 10 Then GoTo YouWin
+InvInterval = 200 - ((Level - 1) &#42; 10)
+If InvInterval &lt; 40 Then InvInterval = 40
+InvFireTimer = 20 - ((Level - 1) &#42; 2)
+If InvFireTimer &lt; 10 Then InvFireTimer = 10
+InvaderX = 16
+InvaderY = 21
+CanonX = 100
+CanonY = 180
+Fire = 0
+ 'Set the Invaders
+For a = 1 To 5
+ For b = 1 To NbCols
+  Invaders(a , b) = 1
+ Next b
+Next a
+For a = 1 To NbInvFire
+ InvFireCoord(a,1) = -1
+ InvFireCoord(a,2) = -1
+Next a
+For a = 1 To 5
+ InvLine(a) = NbCols
+ InvErase(a) = 1
+ InvChar$(a , 1) = "c"
+ InvChar$(a , 1) = "a"
+ InvChar$(a , 1) = "b"
+ InvChar$(a , 1) = "e"
+ InvChar$(a , 1) = "f"
+ InvChar$(a , 2) = "d"
+ InvChar$(a , 2) = "b"
+ InvChar$(a , 2) = "a"
+ InvChar$(a , 2) = "f"
+ InvChar$(a , 2) = "e"
+Next a
+InvMaxY = OriginMaxY
+MinX = 0 &#58; MaxX = 120
+NbInvFire = 5 + (Level - 1)
+InvFireTimer = 25 - ((Level - 1) &#42; 2)
+InvFireSpeed = 25 - (Level - 1)
+ 'Draw the Level
+Cls
+GoSub ShowBunker
+GoSub Redraw
+NextLevel = 0
+Return
+MoveInvaders&#58;
+OldInvaderX = InvaderX
+OldInvaderY = InvaderY
+InvaderX = InvaderX + Dx
+If InvaderX &lt; MinX Then
+ InvaderX = MinX
+ OldInvaderY = InvaderY
+ InvaderY = InvaderY + 5
+ InvInterval = InvInterval - 10
+ If InvInterval &lt; 40 Then InvInterval = 40
+ Dx = Abs(Dx)
+EndIf
+If InvaderX &gt; MaxX Then
+ InvaderX = MaxX
+ OldInvaderY = InvaderY
+ InvaderY = InvaderY + 5
+ InvInterval = InvInterval - 10
+ If InvInterval &lt; 40 Then InvInterval = 40
+ Dx = -Dx
+EndIf
+If InvaderY &gt;= InvMaxY Then
+ GoTo GameOver
+EndIf
+Return
+MoveMistery&#58;
+OldMisteryX = MisteryX
+MisteryX = MisteryX - 3
+If MisteryX &lt; 0 Then
+ Line (OldMisteryX , 0) - (OldMisteryX + 16, 20) , 0,BF
+ MisteryOn = 0
+ Counter4 = 0
+ MisteryX = 280
+EndIf
+Return
+Redraw&#58;
+ 'Draw the Invaders
+Font &#35;6
+If RedrawInvaders = 1 Then
+ For a = 1 To 5
+  InvLine$(a) = ""
+ Next a
+ If Cycle = 0 Then
+  For a = 1 To 5
+   For b = 1 To NbCols
+    If Invaders(a , b) &lt;&gt; 121 Then
+     InvLine$(a) = InvLine$(a) + InvChar$(a , 1)
+    Else
+     InvLine$(a) = InvLine$(a) + Chr$(121)
+    EndIf
+   Next b
+  Next a
+ Else
+  For a = 1 To 5
+   For b = 1 To NbCols
+    If Invaders(a , b) &lt;&gt; 121 Then
+     InvLine$(a) = InvLine$(a) + InvChar$(a , 2)
+    Else
+     InvLine$(a) = InvLine$(a) + Chr$(121)
+    EndIf
+   Next b
+  Next a
+ EndIf
+ For a = 1 To 5
+  If InvLine(a) &lt;&gt; 0 Then
+   oy1 = OldInvaderY + ((a - 1) &#42; 20)
+   oy2 = OldInvaderY + ((a - 1) &#42; 20) + 13
+   oy3 = InvaderY + ((a - 1) &#42; 20)
+   Line (OldInvaderX , oy1) - (OldInvaderX + (16 &#42; NbCols) , oy2),0,BF
+   Print @(InvaderX , oy3) InvLine$(a)
+   ActMaxY = oy2
+  EndIf
+ Next a
+ RedrawInvaders = 0
+EndIf
+ 'Draw the Canon
+Line (OldCanonX , OldCanonY) - (OldCanonX + 16, OldCanonY + 13) , 0,BF
+Print @(CanonX , CanonY) Chr$(Canon)
+ 'Draw the Mistery Ship
+If MisteryOn = 1 Then
+ Line (OldMisteryX , 0) - (OldMisteryX + 16, 20) , 0,BF
+ Print @(MisteryX , 0) Chr$(Mistery)
+EndIf
+ 'Draw the Canon Fire
+If Fire = 1 Then
+  Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+  Line (FireCoord(1) , FireCoord(2)) - (FireCoord(1) , FireCoord(2) - 3),1
+EndIf
+ 'Draw Lives , Score and Level
+Font &#35;1
+Print @(1,200) "Lives = "; Lives
+Print @(100,200) "Score = "; Score
+Print @(200,200) "Level = "; Level
+Return
+InvNewFire&#58;
+a = 1
+ValidFire = 0
+Do While a &lt;= NbInvFire
+ If InvFireCoord(a,1) = -1 And InvFireCoord(a,2) = -1 Then
+  x = Int(Rnd &#42; 10) + 1
+  y = Int(Rnd &#42; 4) + 1
+  If Invaders(y , x) &lt;&gt; 121 Then ValidFire = 1
+  If ValidFire = 1 Then
+   InvFireCoord(a,1) = InvaderX + ((x - 1) &#42; 16) + 8
+   InvFireCoord(a,2) = InvaderY + (y &#42; 20)
+   InvFireOld(a,1) = InvFireCoord(a,1)
+   InvFireOld(a,2) = InvFireCoord(a,2)
+   a = NbInvFire + 1
+  EndIf
+ EndIf
+ a = a + 1
+Loop
+Return
+InvFireShow&#58;
+a = 1
+Do While a &lt;= NbInvFire
+ Dead = 0
+ InvHitB = 0
+ If InvFireCoord(a,1) &lt;&gt; -1 And InvFireCoord(a,2) &lt;&gt; -1 Then
+  InvFireOld(a,1) = InvFireCoord(a,1)
+  InvFireOld(a,2) = InvFireCoord(a,2)
+  InvFireCoord(a,2) = InvFireCoord(a,2) + 5
+  x = InvFireCoord(a,1) &#58; y = InvFireCoord(a,2)
+  Line (InvFireOld(a,1) , InvFireOld(a,2)) - (InvFireOld(a,1) , InvFireOld(a,2) + 3),0
+  Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),1
+  GoSub CheckDead
+  If Dead = 1 Then
+   Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),0
+   InvFireCoord(a,1) = -1
+   InvFireCoord(a,2) = -1
+   Dead = 0
+  EndIf
+  GoSub InvHitBunker
+  If y &gt; (CanonY + 3) Then
+   Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),0
+   InvFireCoord(a,1) = -1
+   InvFireCoord(a,2) = -1
+  EndIf
+ EndIf
+ a = a + 1
+Loop
+Return
+CanonFire&#58;
+Fire = 1
+FireCoord(1) = CanonX + 8
+FireCoord(2) = CanonY
+OldFireCoord(1) = FireCoord(1)
+OldFireCoord(2) = FireCoord(2)
+GoSub beepFire
+Return
+CheckKill&#58;
+If (FireCoord(1) &gt;= InvaderX) And (FireCoord(1) &lt;= (InvaderX + 175)) Then
+ FireColumn = Int((FireCoord(1) - InvaderX) / 16) + 1
+ If ((FireCoord(2) - 3) &gt;= InvaderY) And ((FireCoord(2) - 3) &lt;= (InvaderY + 93)) Then
+  FireLine = Int((FireCoord(2) - 3 - InvaderY) / 20) + 1
+  If Invaders(FireLine , FireColumn) &lt;&gt; 121 Then
+   Invaders(FireLine , FireColumn) = 121
+   Score = Score + InvScore(FireLine)
+   Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+   Fire = 0
+   GoSub beepKillInv
+   GoSub CheckLevel
+  EndIf
+ EndIf
+EndIf
+If MisteryOn = 1 Then
+ x1 = MisteryX
+ x2 = MisteryX + 16
+ y1 = 0
+ y2 = 13
+ If FireCoord(1) &gt;= x1 And FireCoord(1) &lt;= x2 And FireCoord(2) &gt;= y1 And FireCoord(2) &lt;= y2 Then
+  Score = Score + InvMiScore + Int(Rnd &#42; 100) + 100
+  Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+  Line (OldMisteryX , 0) - (OldMisteryX + 16, 20) , 0,BF
+  Fire = 0
+  MisteryOn = 0
+  Counter4 = 0
+  MisteryX = 280
+  GoSub beepKillMis
+ EndIf
+EndIf
+Return
+CheckDead&#58;
+If (x &gt;= CanonX) And (x &lt;= (CanonX + 16)) And (y &gt;= CanonY) And (y &lt;= (CanonY + 13)) Then
+ Font &#35;6
+ 'We loose one Canon
+ Locate CanonX , CanonY &#58; Print Chr$(119)
+ Sound 800,200
+ Pause 300
+ Sound 600,200
+ Pause 300
+ Locate CanonX , CanonY &#58; Print Chr$(120)
+ Sound 300,200
+ Pause 500
+ Lives = Lives - 1
+ Sound 500,200
+ Pause 200
+ Locate CanonX , CanonY &#58; Print Chr$(121)
+ Dead = 1
+ 'Check if we loose the game
+ If Lives = 0 Then GoTo GameOver
+Else
+ Dead = 0
+EndIf
+Return
+CanonHitBunker&#58;
+If (FireCoord(2) &gt;= 160) And (FireCoord(2) &lt;= 179) Then
+ ax = FireCoord(1) &#58; ay = FireCoord(2)
+ If Pixel(ax , ay + 1) &lt;&gt; 0 Then
+  Sound 1200,50
+  For b = 1 To 10
+   x = FireCoord(1) + ( Int(Rnd &#42; 10) - 5)
+   y = FireCoord(2) + ( Int(Rnd &#42; 10) - 5)
+   Pixel(x , y) = 0
+  Next b
+  Line (ax - 2 , ay - 2) - (ax + 2 , ay + 2) , 0 , BF
+  Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+  Fire = 0
+ EndIf
+EndIf
+Return
+InvHitBunker&#58;
+ 'Check if Invaders hit the bunkers
+If (y &gt;= 160) And (y &lt;= 179) Then
+ If Pixel(x , y - 1) &lt;&gt; 0 Then
+  'Invaders hit the bunkers
+   Sound 1200,50
+   For b = 1 To 10
+    x1 = x + ( Int(Rnd &#42; 10) - 5)
+    y1 = y + ( Int(Rnd &#42; 10) - 5)
+    Pixel(x1 , y1) = 0
+   Next b
+   Line (x - 2 , y - 2) - (x + 2 , y + 2) , 0 , BF
+   Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),0
+   InvFireCoord(a,1) = -1
+   InvFireCoord(a,2) = -1
+ EndIf
+EndIf
+Return
+ShowBunker&#58;
+ 'Show the 4 bunkers
+For a = 1 To 4
+ Line (a &#42; 60 , 160) - (a &#42; 60 + 30 , 179) , 1 , BF
+ Line (a &#42; 60 + 10, 175) - (a &#42; 60 + 20 , 180) , 0 , BF
+Next a
+Return
+beepKillInv&#58;
+Sound 1200,50
+Return
+beepKillMis&#58;
+Sound 1100,50
+Pause 50
+Sound 1300,50
+Pause 50
+Sound 1200,50
+Pause 50
+Sound 1400,50
+Return
+beepFire&#58;
+Sound 1000,50
+Return
+CheckLevel&#58;
+ 'Here we look if we killed all Invaders
+For l = 1 To 5
+ InvLine(l) = 0
+Next l
+For l = 1 To NbCols
+ InvCols(l) = 0
+Next l
+For l = 1 To 5
+ For m = 1 To NbCols
+  If Invaders (l , m) &lt;&gt; 121 Then
+   InvLine(l) = InvLine(l) + 1
+   InvCols(m) = InvCols(m) + 1
+  EndIf
+ Next m
+Next l
+If InvLine(1) = 0 And InvLine(2) = 0 And InvLine(3) = 0 And InvLine(4) = 0 And InvLine(5) = 0 Then
+ 'We finish the Level
+ NextLevel = 1
+EndIf
+For l = 1 To 5
+ If (InvLine(l) = 0) And (InvErase(l) &lt;&gt; 0) Then
+  InvErase(l) = 0
+  Line (OldInvaderX , OldInvaderY + (( l - 1) &#42; 20)) - (OldInvaderX + (16 &#42; NbCols) , OldInvaderY + (( l - 1) &#42; 20) + 13),0,BF
+ EndIf
+Next l
+If InvLine(5) = 0 Then InvMaxY = OriginMaxY + 20
+If (InvLine(4) = 0) And (InvLine(5) = 0) Then InvMaxY = OriginMaxY + 40
+If (InvLine(3) = 0) And (InvLine(4) = 0) Then InvMaxY = OriginMaxY + 60
+If (InvLine(2) = 0) And (InvLine(3) = 0) Then InvMaxY = OriginMaxY + 80
+For l = 1 To NbCols
+ If InvCols(l) = 0 Then
+  MinX = 0 - (SprWide &#42; l)
+ Else
+  l = NbCols + 1
+ EndIf
+Next l
+For l = NbCols To 1 Step - 1
+ If InvCols(l) = 0 Then
+  MaxX = 120 + (SprWide &#42; (NbCols - l))
+ Else
+  l = 0
+ EndIf
+Next l
+Return
+ 'You loose the game
+GameOver&#58;
+Font &#35;1
+Cls
+Print @(120,100) "G A M E - O V E R"
+Pause 5000
+Run
+ 'You win the game at Level 10
+YouWin&#58;
+Font &#35;1
+Cls
+Print @(120,100) "Y O U - W I N"
+Pause 5000
+Run
+ 'Start Screen
+StartScreen&#58;
+Cls
+Font &#35;1
+Print @(140,50) "PLA"
+Font &#35;7
+Print @(159,50) "Y"
+Font &#35;1
+Print @(120,70) "SPACE  INVADERS"
+Print @(100,90) "&#42;SCORE ADVANCE TABLE&#42;"
+Font &#35;6
+Print @(115,105) Chr$(117)
+Font &#35;1
+Print @(132,108) "=?  MYSTERY"
+Font &#35;6
+Print @(115,125) "c"
+Font &#35;1
+Print @(132,128) "=30  POINTS"
+Font &#35;6
+Print @(115,145) "a"
+Font &#35;1
+Print @(132,148) "=20  POINTS"
+Font &#35;6
+Print @(115,165) "e"
+Font &#35;1
+Print @(132,168) "=10  POINTS"
+Print @(110,200) "PRESS FIRE TO START"
+Cnt = 0
+Animate = 0
+AnimX = 290
+OldAnimX = AnimX
+Spr = 90
+Do While (Inkey$ = "")
+ Cnt = Cnt + 1
+ If (Cnt &gt; 3000) And (Animate = 0) Then
+  Animate = 1
+  Font &#35;7
+ EndIf
+ If Animate = 1 Then
+  'Go to the reversed 'Y'
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 12
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Print @(AnimX , 50) Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX - 1
+  If AnimX &lt;= 167 Then
+   Animate = 2
+   OldAnimX = OldAnimX - 8
+   AnimX = AnimX - 8
+  EndIf
+ EndIf
+ If Animate = 2 Then
+  'Take the reversed 'Y' away
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  Font &#35;7
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 22
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Locate AnimX , 50 &#58; Print "Y"; Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX + 1
+  If AnimX &gt;= 282 Then Animate = 3
+ EndIf
+ If Animate = 3 Then
+  'Put the good 'Y' in place
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 22
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Font &#35;1
+  Print @(AnimX , 50) "Y";
+  Font &#35;7
+  Print @(AnimX + 8 , 50) Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX - 1
+  If AnimX &lt;= 158 Then
+   Animate = 4
+   OldAnimX = OldAnimX + 8
+   AnimX = AnimX + 8
+  EndIf
+ EndIf
+ If Animate = 4 Then
+  'Invader go away alone
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 12
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Print @(AnimX , 50) Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX + 1
+  If AnimX &gt;= 290 Then
+   Animate = 5
+   Line (AnimX - 1 , 50) - (AnimX + 12, 61) , 0 , BF
+  EndIf
+ EndIf
+ If Cnt &gt; 4000 Then Cnt = 0
+Loop
+Return
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='invader1115.zip?File=invader.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Invaders-part-of-the-original-MMBasic-library' title="Download">invader.zip</a></td>
+			<td>1015 B</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Invaders-part-of-the-original-MMBasic-library.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:29 GMT -->
+</html>

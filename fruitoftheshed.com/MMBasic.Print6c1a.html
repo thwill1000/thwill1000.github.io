@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.ALPHA-COUNT-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:08:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Alpha Count - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.ALPHA-COUNT-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFk3Q8aDEgY2xhc3M9InBhZ2V0aXRsZSI+QWxwaGEgQ291bnQ8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzIzIDIzOjE2IGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogU3RyaW5ncywgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PHByZT4NCg0KICAgICAgICcgQUxQSEEgQ09VTlQgUFJPR1JBTU1FDQogICAgICAgJyBUaGlzIGNvdW50cyB0aGUgZnJlcXVlbmN5IG9mIGVhY2ggYWxwaGFiZXRpYyBjaGFyYWN0ZXIgaW4gYSB0ZXh0IGRvY3VtZW50DQogICAgICAgJyBhbmQgdGhlIGZyZXF1ZW5jeSBvZiBkb3VibGUgbGV0dGVycy4NCiAgICAgICAnIENvdW50cyBhcmUgb3V0cHV0IHRvIGEgQ1NWIGZpbGUgd2hpY2ggY2FuIGJlIHJlYWQgYnkgRXhjZWwgYW5kIE9wZW4gT2ZmaWNlIENhbGMuDQogICAgICAgJyBJZiB0aGUgaW5wdXQgY291bnQgZmlsZSBpcyBvdmVyd3JpdHRlbiBhcyBvdXRwdXQsIGNvdW50cyBjYW4gYmUgYWNjdW11bGF0ZWQgZnJvbSBzZXZlcmFsIHRleHQgZG9jdW1lbnRzLg0KICAgICAgICcgT24gY29tcGxldGlvbiBpdCBkcmF3cyBncmFwaHMgb2YgdGhlIHBlcmNlbnRhZ2Ugb2YgZWFjaCBsZXR0ZXIgYW5kIGRvdWJsZSBsZXR0ZXIuDQogICAgIERpbSBMZXR0ZXJDb3VudHMoMjYpDQogICAgIERpbSBPTERDb3VudHMoMjYpDQogICAgIERpbSBOZXdDb3VudHMoMjYpDQogICAgIERpbSBEYmxMZXR0ZXJDb3VudHMoMjYpDQogICAgIERpbSBPbGREYmxDb3VudHMoMjYpDQogICAgIERpbSBOZXdEYmxDb3VudHMoMjYpDQogICAgIERpbSBhKDI2KQ0KICAgICBEaW0gcExpbmUkKDQpDQoNCidNYWlubGluZQ0KICAgICBHb1N1YiBJbml0aWFsaXNlICAgICAgICAnIEluaXRpYWxpc2UNCiAgICAgVGltZXI9MA0KICAgICBHb1N1YiBMZXR0ZXJDb3VudHMgICAgICAnIEFjY3VtdWxhdGUgbGV0dGVyIGNvdW50cyBmcm9tIGlucHV0IHRleHQgZmlsZQ0KICAgICBGb3IgaSA9IDEgVG8gMjYgICAgICAgICAnIGNoZWNrIHRoYXQgdGV4dCBmaWxlIGNvbnRhaW5zIHNvbWUgbGV0dGVycw0KICAgICAgIGF0b3QgPSBhdG90ICsgTGV0dGVyQ291bnRzKGkpDQogICAgIE5leHQNCiAgICAgSWYgYXRvdCA9IDAgVGhlbg0KICAgICAgIFByaW50DQogICAgICAgUHJpbnQgVHh0RmlsZU5hbWUkICIgY29udGFpbnMgbm8gYWxwaGFiZXRpYyBjaGFyYWN0ZXJzLiINCiAgICAgRWxzZQ0KICAgICAgIEdvU3ViIEFkZE5ld1RvT2xkQ291bnRzICcgQWRkIG5ldyBjb3VudHMgdG8gb2xkDQogICAgICAgR29TdWIgUHJpbnRHcmFwaHMgICAgICAgJyBQcmludCBhY2N1bXVsYXRlZCBjb3VudHMgZ3JhcGhpY2FsbHkNCiAgICAgICBHb1N1YiBXcml0ZUNvdW50cyAgICAgICAnIFdyaXRlIG91dCBjc3YgZmlsZSB3aXRoIGFjY3VtdWxhdGVkIGNvdW50cw0KICAgICBFbmRJZg0KICAgICBQcmludCBUaW1lcg0KICAgICBHb1RvIFdpbmRVcCAgICAgICAgICAgICAnIENsb3NlIGZpbGVzIGFuZCBleGl0DQoNCkluaXRpYWxpc2UmIzU4Ow0KICAgICAgICcgSW50aWFsaXNlIHZhbHVlcyBpbiBjYXNlIHRoZSByb3V0aW5lIGlzIHJlcnVuDQogICAgIENscw0KICAgICBGb3IgaSA9IDEgVG8gMjYNCiAgICAgICBMZXR0ZXJDb3VudHMoaSkgPSAwDQogICAgICAgRGJsTGV0dGVyQ291bnRzKGkpID0gMA0KICAgICBOZXh0DQogICAgIExhc3RDaGFyJCA9ICIiDQogICAgIFByaW50IEAoNDIsMCkgIkFMUEhBTlVNLkJBUyBDb3VudHMgb2NjdXJyZW5jZXMgb2YgZWFjaCBsZXR0ZXIgYW5kIGRvdWJsZSBsZXR0ZXIiDQogICAgIFByaW50IEAoMjQsMTIpICJpbiBhbiBpbnB1dCB0ZXh0IGZpbGUsIGdyYXBocyB0aGUgY291bnRzIGFuZCB3cml0ZXMgdGhlbSB0byBhIENTViBmaWxlLiINCiAgICAgUHJpbnQgQCg0MiwyNCkgIlRleHQgZmlsZSBjb3VudHMgd2lsbCBiZSBhZGRlZCB0byB0aG9zZSBmcm9tIGFuIGlucHV0IC5DU1YgZmlsZS4iDQogICAgIFByaW50DQoNCkdldElucHV0VGV4dEZpbGVOYW1lJiM1ODsNCiAgICAgICAnIEFzayBmb3IgaW5wdXQgdGV4dCBmaWxlIG5hbWUgLSBSZXBseSAnRXhpdCcgc3RvcHMgdGhlIHByb2dyYW0NCiAgICAgICAnIElmIGZpbGVuYW1lIGRvZXNuJ3QgaGF2ZSBhbiBleHRlbnNpb24sIC5UWFQgaXMgYXNzdW1lZA0KDQogICAgIElucHV0ICJJbnB1dCB0ZXh0IGZpbGVuYW1lICgudHh0IGFzc3VtZWQpIC0gJ0V4aXQgICcgdG8gZXhpdCYjNTg7ICIsIFR4dEZpbGVOYW1lJA0KICAgICBJZiBMQ2FzZSQoVHh0RmlsZU5hbWUkKSA9ICJleGl0IiBUaGVuIEdvVG8gV2luZFVwDQogICAgICAgJyBJRiBmaWxlIG5hbWUgZG9lc24ndCBoYXZlIGFuIGV4dGVuc2lvbiwgYWRkIC50eHQNCiAgICAgSWYgSW5zdHIoMSwgVHh0RmlsZU5hbWUkLCAiLiIpID0gMCBUaGVuIFR4dEZpbGVOYW1lJCA9IFR4dEZpbGVOYW1lJCArICIudHh0Ig0KICAgICBPcHRpb24gZXJyb3IgY29udGludWUNCiAgICAgT3BlbiBUeHRGaWxlTmFtZSQgRm9yIElOUFVUIEFzICYjMzU7MQ0KICAgICBJZiBNTS5FcnJubyAmbHQ7Jmd0OyAwIFRoZW4NCiAgICAgICBQcmludCBUeHRGaWxlTmFtZSQgIiBkb2Vzbid0IGV4aXN0Ig0KICAgICAgIFByaW50DQogICAgICAgR29UbyBHZXRJbnB1dFRleHRGaWxlTmFtZQ0KICAgICBFbmRJZg0KICAgICBPcHRpb24gZXJyb3IgYWJvcnQNCg0KR2V0T2xkQ291bnRGaWxlTmFtZSYjNTg7DQogICAgICAgJyBHZXQgdGhlIG9sZCBjb3VudCBmaWxlIG5hbWVzIC0gUmVwbHkgJ05vbmUnIGlmIHRoZXJlIGlzbid0IG9uZQ0KICAgICAgICcgSWYgZmlsZW5hbWUgZG9lc24ndCBoYXZlIGFuIGV4dGVuc2lvbiwgLkNTViBpcyBhc3N1bWVkDQoNCiAgICAgSW5wdXQgIk9sZCBjb3VudCBmaWxlIG5hbWUgKC5jc3YgYXNzdW1lZCkgLSAnbm9uZSAgJyBpZiBub25lJiM1ODsgIiwgT2xkQ291bnRGaWxlTmFtZSQNCiAgICAgSWYgTENhc2UkKE9sZENvdW50RmlsZU5hbWUkKSA9ICJub25lIiBUaGVuIEdvVG8gR2V0TmV3Q291bnRGaWxlTmFtZQ0KICAgICBJZiBMQ2FzZSQoT2xkQ291bnRGaWxlTmFtZSQpID0gImV4aXQiIFRoZW4gR29UbyBXaW5kVXANCiAgICAgICAnIElGIGZpbGUgbmFtZSBkb2Vzbid0IGhhdmUgYW4gZXh0ZW5zaW9uLCBhZGQgLkNTVg0KICAgICBJZiBJbnN0cigxLCBPbGRDb3VudEZpbGVOYW1lJCwgIi4iKSA9IDAgVGhlbiBPbGRDb3VudEZpbGVOYW1lJCA9IE9sZENvdW50RmlsZU5hbWUkICsgIi5jc3YiDQogICAgIE9wdGlvbiBlcnJvciBjb250aW51ZQ0KICAgICBPcGVuIE9sZENvdW50RmlsZU5hbWUkIEZvciBpbnB1dCBBcyAmIzM1OzINCiAgICAgSWYgTU0uRXJybm8gJmx0OyZndDsgMCBUaGVuDQogICAgICAgUHJpbnQgT2xkQ291bnRGaWxlTmFtZSQgIiBkb2Vzbid0IGV4aXN0LiBFbnRlciAnbm9uZScsICdleGl0ICAnIG9yIGFub3RoZXIgZmlsZSINCiAgICAgICBQcmludA0KICAgICAgIEdvVG8gR2V0T2xkQ291bnRGaWxlTmFtZQ0KICAgICBFbmRJZg0KICAgICBPcHRpb24gZXJyb3IgYWJvcnQNCiAgICAgICAnIExvYWQgY291bnRzIGZyb20gT2xkIENvdW50IEZpbGUNCiAgICAgR29TdWIgTG9hZE9sZENvdW50cw0KDQpHZXROZXdDb3VudEZpbGVOYW1lJiM1ODsNCiAgICAgICAnIENyZWF0ZSBhIG5ldyBvdXRwdXQgY291bnQgZmlsZSAtIFJlcGx5ICdFeGl0JyBzdG9wcyB0aGUgcHJvZ3JhbQ0KICAgICAgICcgSWYgYSBmaWxlbmFtZSBleHRlbnNpb24gaXMgbm90IHByb3ZpZGVkLCAuQ1NWIGlzIGFwcGVuZGVkDQogICAgICAgJyBJZiB0aGlzIGZpbGVuYW1lIGlzIHNhbWUgYXMgaW5wdXQgY291bnQgZmlsZW5hbWUsIGNoZWNrIHRoYXQgaXQgaXMgT0sgdG8gb3ZlcndyaXRlDQoNCiAgICAgSW5wdXQgIk5ldyBjb3VudCBmaWxlIG5hbWUgKC5jc3YgYXNzdW1lZCkgLSAnRXhpdCAgJyB0byBleGl0JiM1ODsgIiwgTmV3Q291bnRGaWxlTmFtZSQNCiAgICAgSWYgTENhc2UkKE5ld0NvdW50RmlsZU5hbWUkKSA9ICJleGl0IiBUaGVuIEdvVG8gV2luZFVwDQogICAgIElmIEluc3RyKDEsIE5ld0NvdW50RmlsZU5hbWUkLCAiLiIpID0gMCBUaGVuIE5ld0NvdW50RmlsZU5hbWUkID0gTmV3Q291bnRGaWxlTmFtZSQgKyAiLmNzdiINCiAgICAgICAnIElmIG9sZCBmaWxlIGV4aXN0cywgYXNrIGlmIGl0IHNob3VsZCBiZSByZXBsYWNlZC4gSWYgbm90LCBnZXQgYW5vdGhlciBmaWxlbmFtZQ0KICAgICBPcHRpb24gZXJyb3IgY29udGludWUNCiAgICAgT3BlbiBOZXdDb3VudEZpbGVOYW1lJCBGb3IgaW5wdXQgQXMgJiMzNTszDQogICAgIElmIE1NLkVycm5vID0gMCBUaGVuDQogICAgICAgUHJpbnQgIk9LIHRvIG92ZXJ3cml0ZSAiK09sZENvdW50RmlsZU5hbWUkKyIgWS9OIjsmIzU4O0lucHV0ICIiOyBSZXBseSQNCiAgICAgICBJZiBMQ2FzZSQoTGVmdCQoUmVwbHkkLDEpKSAmbHQ7Jmd0OyAieSIgVGhlbg0KICAgICAgICAgUHJpbnQNCiAgICAgICAgIEdvVG8gR2V0TmV3Q291bnRGaWxlTmFtZQ0KICAgICAgIEVuZElmDQogICAgICAgQ2xvc2UgJiMzNTszDQogICAgIEVuZElmDQogICAgIE9wdGlvbiBlcnJvciBhYm9ydA0KICAgICAgICcgRG9uJ3Qgb3BlbiBpdCB1bnRpbCB0aGUgb2xkIGNvdW50cyBoYXZlIGJlZW4gcmVhZCBpbiBjYXNlIHRoZSBvbGQgY291bnQgZmlsZSBpcyB0byBiZSBvdmVyd3JpdHRlbg0KICAgICBSZXR1cm4NCg0KTGV0dGVyQ291bnRzJiM1ODsNCiAgICAgICAnIFJlYWQgY2hhcmFjdGVycyBvbmUgYnkgb25lIGZyb20gdGhlIHRleHQgaW5wdXQgZmlsZSBhbmQgY29udmVydCB0byBsb3dlciBjYXNlDQogICAgICAgJyBTZXQgc3RhcnQgcG9zaXRpb24gb2YgdGhlIHByb2dyZXNzIGxpbmUgKHdoaWNoIHdpbGwgc2hvdyB0aGF0IHNvbWV0aGluZyBpcyBoYXBwZW5pbmcpDQoNCiAgICAgeCA9IDIwJiM1ODsgeSA9IDEyMA0KICAgICBEbyBXaGlsZSBOb3QgRW9mKDEpDQogICAgICAgICAnIFNhdmUgcHJldmlvdXMgY2hhcmFjdGVyIHRvIGNvbXBhcmUgd2l0aCBuZXh0IHRvIGFjY3VtdWxhdGUgZG91YmxlIGNoYXJhY3RlciBjb3VudA0KICAgICAgIExhc3RDaGFyJCA9IE5leHRDaGFyJA0KICAgICAgICAgJyBHZXQgbmV4dCBjaGFyYWN0ZXINCiAgICAgICBOZXh0Q2hhciQgPSBJbnB1dCQoMSwgJiMzNTsxKQ0KICAgICAgICAgJyBJZiB1cHBlciBjYXNlIGNoYXJhY3RlciwgY29udmVydCB0byBsb3dlciBjYXNlDQogICAgICAgTmV4dENoYXIkID0gTENhc2UkKE5leHRDaGFyJCkNCiAgICAgICAgICcgSWYgYSBsZXR0ZXIsIGFjY3VtdWxhdGUgdG90YWxzIGZvciB0aGF0IGxldHRlciwgZWxzZSBpZ25vcmUgaXQNCiAgICAgICBJZiBOZXh0Q2hhciQgJmd0Oz0gImEiIEFuZCBOZXh0Q2hhciQgJmx0Oz0gInoiIFRoZW4NCiAgICAgICAgIEdvU3ViIEFjY3VtdWxhdGVDb3VudHMNCiAgICAgICBFbmRJZg0KICAgICAgICAgJyBwZXJpb2RpY2FsbHkgc2hvdyBwcm9ncmVzcw0KICAgICAgIElmIENoYXJDb3VudCAmZ3Q7IDUwMCBUaGVuDQogICAgICAgICBHb1N1YiBQcmludFByb2dyZXNzTGluZQ0KICAgICAgICAgQ2hhckNvdW50ID0gMA0KICAgICAgIEVsc2UNCiAgICAgICAgIGNoYXJDb3VudCA9IENoYXJDb3VudCArIDENCiAgICAgICBFbmRJZg0KICAgICBMb29wDQogICAgIENsb3NlICYjMzU7MQ0KICAgICBSZXR1cm4NCg0KUHJpbnRQcm9ncmVzc0xpbmUmIzU4Ow0KICAgICAgICcgUHJpbnQgYSBwcm9ncmVzcyBsaW5lIHRvIHNob3cgdGhhdCBzb21ldGhpbmcgaXMgaGFwcGVuaW5nIGV2ZXJ5IDUwMHRoIGNoYXJhY3RlciByZWFkDQogICAgICAgJyBwcmludHMgYW5vdGhlciBkb3QgYW5kIGFsc28gdG9nZ2xlcyB0aGUgTU0gUG93ZXIgTEVEDQoNCiAgICAgSWYgUHJvZ3Jlc3NEb3RzICZsdDsgNzAgVGhlbg0KICAgICAgIFByb2dyZXNzRG90cyA9IFByb2dyZXNzRG90cyArIDENCiAgICAgICBQcm9ncmVzc0xpbmUkID0gUHJvZ3Jlc3NMaW5lJCArICIuIg0KICAgICAgIFByaW50IEAoeCx5KSBQcm9ncmVzc0xpbmUkDQogICAgICAgICAnIFRvZ2dsZSB0aGUgcG93ZXIgTEVEIG9uIGFuZCBvZmYNCiAgICAgICBQaW4oMCkgPSBQcm9ncmVzc0RvdHMgTW9kIDINCiAgICAgRWxzZQ0KICAgICAgIFByaW50IEAoeCx5KSBTcGFjZSQoNzApDQogICAgICAgUHJvZ3Jlc3NEb3RzID0gMA0KICAgICAgIFByb2dyZXNzTGluZSQgPSAiIg0KICAgICBFbmRJZg0KICAgICBSZXR1cm4NCg0KQWNjdW11bGF0ZUNvdW50cyYjNTg7DQogICAgICAgJyBBY2N1bXVsYXRlIGNvdW50cyBvZiBlYWNoIGxldHRlciBhbmQgZG91YmxlIGxldHRlcnMuDQoNCiAgICAgaSA9IEFzYyhOZXh0Q2hhciQpIC0gOTYgICAnIE5vdGUmIzU4OyBBU0MoImEiKSA9IDk3DQogICAgIExldHRlckNvdW50cyhpKSA9IExldHRlckNvdW50cyhpKSArIDENCiAgICAgICAnIElmIHNhbWUgYXMgbGFzdCBsZXR0ZXIsIGFjY3VtdWxhdGUgZG91YmxlIGxldHRlciBjb3VudA0KICAgICBJZiBOZXh0Q2hhciQgPSBMYXN0Q2hhciQgVGhlbiBEYmxMZXR0ZXJDb3VudHMoaSkgPSBEYmxMZXR0ZXJDb3VudHMoaSkgKyAxDQogICAgIFJldHVybg0KDQpBZGROZXdUb09sZENvdW50cyYjNTg7DQogICAgICAgJyBBZGQgbmV3IGNvdW50cyB0byBvbGQNCg0KICAgICBGb3IgaSA9IDEgVG8gMjYNCiAgICAgICBOZXdDb3VudHMoaSkgPSBPbGRDb3VudHMoaSkgKyBMZXR0ZXJDb3VudHMoaSkNCiAgICAgICBOZXdEYmxDb3VudHMoaSkgPSBPbGREYmxDb3VudHMoaSkgKyBEYmxMZXR0ZXJDb3VudHMoaSkNCiAgICAgTmV4dA0KICAgICBSZXR1cm4NCg0KUHJpbnRHcmFwaHMmIzU4Ow0KICAgICAgICcgUHJpbnQgdGhlIDIgZ3JhcGhzIC0gUHJvcG9ydGlvbiBvZiBzaW5nbGUgbGV0dGVycyBhbmQgZG91YmxlIGxldHRlcnMNCiAgICAgICAnIERvIHRoaXMgdHdpY2U7DQogICAgICAgJyAgIDFzdCBmb3IgY3VycmVudCB0ZXh0IGZpbGUgYW5kIHRoZW4NCiAgICAgICAnICAgaWYgdGhlcmUgd2FzIGFuIGlucHV0IC5DU1YgZmlsZSwgZm9yIHRoZSBhY2N1bXVsYXRlZCBjb3VudHMNCg0KICAgICAgICdDb21tb24gZ3JhcGggcGFyYW1ldGVycw0KICAgICBiYXJzID0gMjYgICAgJyBudW1iZXIgb2YgYmFycyBpbiB0aGUgZ3JhcGgNCiAgICAgeHNjYWxlID0gMSAgICdVc2UgZnVsbCBzY3JlZW4gd2lkdGggb2YgNDgwIHBpeGVscw0KICAgICB5U2NhbGUgPSAwLjUgJ1VzZSBoYWxmIHNjcmVlbiBoZWlnaHQgb2YgNDMyLzIgPSAyMTYgcGl4ZWxzDQogICAgICAgJyBzZXQgZW5kcyBvZiB4IGF4aXMsIGFsbG93aW5nIHNwYWNlIHRvIHRoZSBsZWZ0IG9mIHRoZSBncmFwaCBmb3Igc2NhbGUNCiAgICAgeG9yaWcgPSA1JiM0Mjs2ICAgICAgICAgJyBJbmRlbnQgeSBheGlzIDUgY2hhcmFjdGVycw0KICAgICB4bWF4ICA9IDQ4MCYjNDI7eFNjYWxlICAnIGVuZCBvZiB4IGF4aXMNCiAgICAgICAnIHNldCBlbmRzIG9mIHkgYXhpcywgYWxsb3dpbmcgc3BhY2UgYWJvdmUgYW5kIGJlbG93IGdyYXBoDQogICAgICAgJyBmb3IgdGl0bGUgJmFtcDsgeCBzY2FsZQ0KICAgICB5VG9wU3BhY2UgPSAyJiM0MjsxMiAgICAnIDIgbGluZXMNCiAgICAgeUJvdFNwYWNlID0gMiYjNDI7MTIgICAgJyAyIGxpbmVzDQoNCiAgICAgICAnIEdldCB5IHZhbHVlcyBmb3Igc2luZ2xlIGxldHRlcnMgaW4gdGhlIGlucHV0IHRleHQgZmlsZQ0KICAgICBhdG90ID0gMA0KICAgICBGb3IgaSA9IDEgVG8gYmFycw0KICAgICAgIGEoaSkgPSBMZXR0ZXJDb3VudHMoaSkNCiAgICAgICBhdG90ID0gYXRvdCArYShpKQ0KICAgICBOZXh0DQogICAgICAgJyBQcmludCB0aGUgZ3JhcGggaW4gdG9wIGhhbGYgb2Ygc2NyZWVuDQogICAgIENscw0KICAgICBUaXRsZSQgPSAiUGVyY2VudCBvZiBzaW5nbGUgbGV0dGVycyBpbiAiICsgVHh0RmlsZU5hbWUkDQogICAgIEdvU3ViIFNldHVwU2luZ2xlTGV0dGVyR3JhcGhQYXJtcw0KICAgICBHb1N1YiBQcmludEFHcmFwaA0KDQogICAgICAgJyBHZXQgeSB2YWx1ZXMgZm9yIGRvdWJsZSBsZXR0ZXJzIGluIHRoZSBpbnB1dCB0ZXh0IGZpbGUNCiAgICAgYXRvdCA9IDANCiAgICAgRm9yIGkgPSAxIFRvIGJhcnMNCiAgICAgICBhKGkpID0gRGJsTGV0dGVyQ291bnRzKGkpDQogICAgICAgYXRvdCA9IGF0b3QgK2EoaSkNCiAgICAgTmV4dA0KDQogICAgIElmIGF0b3QgJmd0OyAwIFRoZW4NCiAgICAgICAgICcgUHJpbnQgdGhlIGdyYXBoIGluIGJvdHRvbSBoYWxmIG9mIHNjcmVlbiAoeW9mZnNldCBzZXRzIGJvdHRvbSBoYWxmKQ0KICAgICAgIFRpdGxlJCA9ICJQZXJjZW50IG9mIGRvdWJsZSBsZXR0ZXJzIGluICIgKyBUeHRGaWxlTmFtZSQNCiAgICAgICBHb1N1YiBTZXR1cERvdWJsZUxldHRlckdyYXBoUGFybXMNCiAgICAgICBHb1N1YiBQcmludEFHcmFwaA0KICAgICBFbHNlDQogICAgICAgUHJpbnQNCiAgICAgICBQcmludCAiVGhlcmUgYXJlIG5vIGRvdWJsZSBsZXR0ZXJzIGluIHRoZSB0ZXh0IGZpbGUuIg0KICAgICAgIFByaW50DQogICAgIEVuZElmDQoNCiAgICAgICAnIElmIHRoZSBpbnB1dCAuQ1NWIGZpbGUgd2FzIG92ZXJ3cml0dGVuLCB0aGVuIHJlcGVhdCB0aGUgZ3JhcGhzIGZvciBhY2N1bXVsYXRlZCB0b3RhbHMNCiAgICAgICAnIG90aGVyd2lzZSB3ZSBhcmUgZmluaXNoZWQNCiAgICAgSWYgTmV3Q291bnRGaWxlTmFtZSQgPSBPbGRDb3VudEZpbGVOYW1lJCBUaGVuDQogICAgICAgUHJpbnQgIlByZXNzIEEgdG8gc2VlIGFjY3VtdWxhdGVkIHBlcmNlbnRhZ2VzOyBBbnkgb3RoZXIgdG8gZXhpdCI7DQogICAgICAgRG8NCiAgICAgICAgIFJlcGx5JCA9IElua2V5JA0KICAgICAgIExvb3AgVW50aWwgUmVwbHkkICZsdDsmZ3Q7ICIiDQogICAgICAgSWYgTENhc2UkKFJlcGx5JCkgJmx0OyZndDsgImEiIFRoZW4NCiAgICAgICAgIFJldHVybg0KICAgICAgIEVuZElmDQogICAgIEVsc2UNCiAgICAgICBFbmQNCiAgICAgRW5kSWYNCg0KICAgICAgICcgR2V0IHkgdmFsdWVzIGZvciBzaW5nbGUgbGV0dGVycyBpbiB0aGUgYWNjdW11bGF0ZWQgY291bnRzIGZpbGUNCiAgICAgYXRvdCA9IDANCiAgICAgRm9yIGkgPSAxIFRvIGJhcnMNCiAgICAgICBhKGkpID0gTmV3Q291bnRzKGkpDQogICAgICAgYXRvdCA9IGF0b3QgK2EoaSkNCiAgICAgTmV4dA0KICAgICAgICcgUHJpbnQgdGhlIGdyYXBoIGluIHRvcCBoYWxmIG9mIHNjcmVlbg0KICAgICBDbHMNCiAgICAgVGl0bGUkID0gIlBlcmNlbnQgb2Ygc2luZ2xlIGxldHRlcnMgaW4gIiArIE5ld0NvdW50RmlsZU5hbWUkDQogICAgIEdvU3ViIFNldHVwU2luZ2xlTGV0dGVyR3JhcGhQYXJtcw0KICAgICBHb1N1YiBQcmludEFHcmFwaA0KDQogICAgICAgJyBHZXQgeSB2YWx1ZXMgZm9yIGRvdWJsZSBsZXR0ZXJzIGluIHRoZSBhY2N1bXVsYXRlZCBjb3VudHMgZmlsZQ0KICAgICBhdG90ID0gMA0KICAgICBGb3IgaSA9IDEgVG8gYmFycw0KICAgICAgIGEoaSkgPSBOZXdEYmxDb3VudHMoaSkNCiAgICAgICBhdG90ID0gYXRvdCArYShpKQ0KICAgICBOZXh0DQoNCiAgICAgSWYgYXRvdCAmZ3Q7IDAgVGhlbg0KICAgICAgICAgJyBQcmludCB0aGUgZ3JhcGggaW4gYm90dG9tIGhhbGYgb2Ygc2NyZWVuICh5b2Zmc2V0IHNldHMgYm90dG9tIGhhbGYpDQogICAgICAgVGl0bGUkID0gIlBlcmNlbnQgb2YgZG91YmxlIGxldHRlcnMgaW4gIiArIE5ld0NvdW50RmlsZU5hbWUkDQogICAgICAgR29TdWIgU2V0dXBEb3VibGVMZXR0ZXJHcmFwaFBhcm1zDQogICAgICAgR29TdWIgUHJpbnRBR3JhcGgNCiAgICAgRWxzZQ0KICAgICAgIFByaW50DQogICAgICAgUHJpbnQgIlRoZXJlIGFyZSBubyBkb3VibGUgbGV0dGVyIGluIHRoZSBhY3VtdWxhdGVkIGNvdW50cyBmaWxlLiINCiAgICAgICBQcmludA0KICAgICBFbmRJZg0KDQogICAgIFByaW50ICJQcmVzcyBBIHRvIHNlZSB0aGUgZmlyc3QgZ3JhcGggYWdhaW47IGFueSBvdGhlciB0byBleGl0IjsNCiAgICAgRG8NCiAgICAgICBSZXBseSQgPSBJbmtleSQNCiAgICAgTG9vcCBVbnRpbCBSZXBseSQgJmx0OyZndDsgIiINCiAgICAgSWYgTENhc2UkKFJlcGx5JCkgPSAiYSIgVGhlbg0KICAgICAgIEdvVG8gUHJpbnRHcmFwaHMNCiAgICAgRW5kSWYNCg0KICAgICBSZXR1cm4NCg0KU2V0dXBTaW5nbGVMZXR0ZXJHcmFwaFBhcm1zJiM1ODsNCiAgICAgeW9yaWcgPSA0MzImIzQyO3lTY2FsZSAtIHlUb3BTcGFjZSAtIHlCb3RTcGFjZQ0KICAgICB5bWF4ICA9IHlUb3BTcGFjZSAgICcgdG9wIG9mIHkgYXhpcw0KDQogICAgIFJldHVybg0KDQpTZXR1cERvdWJsZUxldHRlckdyYXBoUGFybXMmIzU4Ow0KICAgICB5T2Zmc2V0ID0gNDMyLzINCiAgICAgeW9yaWcgPSA0MzImIzQyO3lzY2FsZSAtIHlUb3BTcGFjZSAtIHlCb3RTcGFjZSArIHlPZmZzZXQNCiAgICAgeW1heCAgPSB5VG9wU3BhY2UgKyB5T2Zmc2V0ICAnIHRvcCBvZiB5IGF4aXMNCg0KICAgICBSZXR1cm4NCg0KUHJpbnRBR3JhcGgmIzU4Ow0KICAgICAgJyBQcmludHMgYSBncmFwaCBhdCBwcmVzZXQgcG9pbnRzDQogICAgICAnIE5vcm1hbGlzZSBhbGwgdGhlIHZhbHVlcyB0byBwZXJjZW50IG9mIHRvdGFsIGxldHRlcnMgcmVhZA0KICAgICBIaVkgPSAwDQogICAgIEZvciBpID0gMSBUbyBiYXJzDQogICAgICAgYShpKSA9IGEoaSkgLyBhdG90ICYjNDI7IDEwMA0KICAgICAgIElmIGEoaSkgJmd0OyBIaVkgVGhlbiBIaVkgPSBhKGkpDQogICAgIE5leHQNCg0KICAgICAgICcgU2V0IHRvcCBvZiB5IGF4aXMgdG8gaGlnaGVzdCB2YWx1ZSBvZiB5ICsgMTAlIGFuZCByb3VuZCB1cA0KICAgICBIaVkgPSBIaVkmIzQyOzEuMQ0KICAgICBIaVkgPSBDaW50KEhpWS81KSYjNDI7NQ0KDQogICAgICAgJyBTZXQgb3JpZ2luIGZvciB0aGUgZ3JhcGggYW5kIHRoZSBzY2FsZQ0KICAgICAgICcgTm9ybWFsIGZvbnQgY2hhcnMgb2NjdXB5IDZ4MTIgcGl4ZWxzIGdpdmluZyAzNiBsaW5lcyBvZiA4MCBjaGFycyBlYWNoDQogICAgICAgJyBDYWxjIE5vIG9mIHBpeGVsIHBlciBkYXRhIHVuaXQNCiAgICAgeFVuaXQgPSAoeG1heC14b3JpZykvYmFycw0KICAgICB5VW5pdCA9ICh5bWF4LXlvcmlnKS9IaVkNCg0KICAgICAgICcgRHJhdyBBeGVzDQogICAgIExpbmUgKFhvcmlnLHltYXgpLShYb3JpZyx5b3JpZykNCiAgICAgTGluZSAoWG9yaWcseW9yaWcpLSh4bWF4LHlvcmlnKQ0KDQogICAgICAgJyBEcmF3IHRpY2sgbWFya3Mgb24geSBheGlzIGFuZCBwcmludCB0aWNrIHZhbHVlcw0KICAgICB0aWNrbWtzID0gNSAgICcgSW50KEhpWS8xMCsuNSkNCiAgICAgeXRpY2tzcGFjZSA9ICh5T3JpZy15bWF4KS90aWNrbWtzDQogICAgIEZvciBpID0gMCBUbyB0aWNrbWtzLTENCiAgICAgICBMaW5lICh4T3JpZyx5bWF4K2kmIzQyO3l0aWNrc3BhY2UpIC0gKHhPcmlnKzUseW1heCtpJiM0Mjt5dGlja3NwYWNlKQ0KICAgICAgIFByaW50IEAoMCx5bWF4K2kmIzQyO3l0aWNrc3BhY2UtNikgSGl5LWkmIzQyO0hpeS90aWNrbWtzDQogICAgIE5leHQNCg0KICAgICAgICcgUHJpbnQgdGl0bGUsIGNlbnRyZWQNCiAgICAgICAnIFRpdGxlIGNoYXJzIGFyZSA2IHB4IHdpZGUNCiAgICAgUHJpbnQgQCgoeG1heC14T3JpZykvMi1MZW4oVGl0bGUkKSYjNDI7Ni8yLHltYXgtMTIpIFRpdGxlJA0KDQogICAgICAgJyBQcmludCBhbHBoYWJldCBiZWxvdyB4IGF4aXMgYW5kIHBlcmNlbnRhZ2VzIGJlbG93IHRoYXQNCiAgICAgUHJpbnQgQCgxMix5T3JpZysyNCkgIiUiDQogICAgIGJhcnNwYWNlID0gRml4KCh4bWF4LXhPcmlnaW4pLyhiYXJzKzEpKQ0KICAgICBGb3IgaSA9IDAgVG8gYmFycy0xDQogICAgICAgUHJpbnQgQCh4T3JpZytiYXJzcGFjZSYjNDI7aSs4LCB5T3JpZysxMikgQ2hyJChpKzErNjQpDQogICAgICAgUHJpbnQgQCh4T3JpZytiYXJTcGFjZSYjNDI7aSsyLCB5T3JpZysyNCkgSW50KGEoaSsxKSswLjUpDQogICAgIE5leHQNCg0KICAgICAgICcgUHJpbnQgZ3JhcGggYmFycw0KICAgICBGb3IgaSA9IDEgVG8gYmFycw0KICAgICAgIHgxID0geE9yaWcrYmFyc3BhY2UmIzQyOyhpLTEpKzYNCiAgICAgICB5MSA9IHlPcmlnDQogICAgICAgeDIgPSB4MStiYXJzcGFjZS8yDQogICAgICAgeTIgPSB5T3JpZy1hKGkpJiM0MjsoeW9yaWcteW1heCkvSGl5DQogICAgICAgTGluZSAoeDEseTEpLSh4Mix5MiksMSxCRg0KICAgICBOZXh0DQoNCiAgICAgUmV0dXJuDQoNCkxvYWRPbGRDb3VudHMmIzU4Ow0KICAgICAgICAnIFN1YnJvdXRpbmUmIzU4OyBMb2FkIGNvdW50cyBmcm9tIG9sZCBjb3VudHMgZmlsZQ0KICAgICAgICAnIEJlaW5nIGEgLkNTViBmaWxlLCBjb25jYXRlbmF0ZSBudW1lcmljIGNoYXJhY3RlcnMNCiAgICAgICAgJyB1bnRpbCBhIGNvbW1hIGlzIGZvdW5kIHRoZW4NCiAgICAgICAgJyBsb2FkIHRoZSByZXN1bHRpbmcgbnVtYmVyIGludG8gdGhlIGFycmF5Lg0KDQogICAgICBEbyBXaGlsZSBOb3QgRW9mKDIpDQogICAgICAgICAgJyBGaXJzdCBsaW5lIGNvbnRhaW5zIHNpbmdsZSBsZXR0ZXIgY291bnRzDQogICAgICAgIExpbmUgSW5wdXQgJiMzNTsyLCBDb3VudHMkDQogICAgICAgIFN0YXJ0UG9zID0gMQ0KICAgICAgICBMZXR0ZXJObyA9IDENCiAgICAgICAgRG8NCiAgICAgICAgICBDb21tYVBvcyA9IEluc3RyKFN0YXJ0UG9zLENvdW50cyQsIiwiKQ0KICAgICAgICAgIE9sZENvdW50cyhMZXR0ZXJObykgPSBWYWwoTWlkJChDb3VudHMkLFN0YXJ0UG9zLENvbW1hUG9zLVN0YXJ0UG9zKSkNCiAgICAgICAgICBMZXR0ZXJObyA9IExldHRlck5vICsgMQ0KICAgICAgICAgIFN0YXJ0UG9zID0gQ29tbWFQb3MgKyAxDQogICAgICAgIExvb3AgVW50aWwgU3RhcnRQb3MgJmd0Oz0gTGVuKENvdW50cyQpDQoNCiAgICAgICAgICAnIFNlY29uZCBsaW5lIGNvbnRhaW5zIGRvdWJsZSBsZXR0ZXIgY291bnRzDQogICAgICAgIExpbmUgSW5wdXQgJiMzNTsyLCBDb3VudHMkDQogICAgICAgIFN0YXJ0UG9zID0gMQ0KICAgICAgICBMZXR0ZXJObyA9IDENCiAgICAgICAgRG8NCiAgICAgICAgICBDb21tYVBvcyA9IEluc3RyKFN0YXJ0UG9zLENvdW50cyQsIiwiKQ0KICAgICAgICAgIE9sZERibENvdW50cyhMZXR0ZXJObykgPSBWYWwoTWlkJChDb3VudHMkLFN0YXJ0UG9zLENvbW1hUG9zLVN0YXJ0UG9zKSkNCiAgICAgICAgICBMZXR0ZXJObyA9IExldHRlck5vICsgMQ0KICAgICAgICAgIFN0YXJ0UG9zID0gQ29tbWFQb3MgKyAxDQogICAgICAgIExvb3AgVW50aWwgU3RhcnRQb3MgJmd0Oz0gTGVuKENvdW50cyQpDQogICAgICBMb29wDQogICAgICBDbG9zZSAmIzM1OzINCiAgICAgIFJldHVybg0KDQpXcml0ZUNvdW50cyYjNTg7DQogICAgICAgICcgU3Vicm91dGluZSYjNTg7IFdyaXRlIG5ldyBjb3VudHMgdG8gb3V0cHV0IGFzIC5DU1YgZmlsZQ0KICAgICAgICAnIElmIHRoZSBmaWxlIGV4aXN0cywgZGVsZXRlIGl0DQogICAgICAgICcgV3JpdGVzIDIgbGluZXMgb2YgY29tbWEtc2VwYXJhdGVkIG51bWJlcnMNCiAgICAgICAgJyAgIDFzdCBsaW5lIGNvbnRhaW5zIHRoZSBjb3VudHMgb2YgZWFjaCBhbHBoYWJldGljIGNoYXJhY3Rlcg0KICAgICAgICAnICAgMm5kIGxpbmUsIGNvdW50cyBvZiBlYWNoIGRvdWJsZSBhbHBoYWJldGljIGNoYXJhY3Rlcg0KDQogICAgICBPcGVuIE5ld0NvdW50RmlsZU5hbWUkIEZvciBPVVRQVVQgQXMgJiMzNTszDQogICAgICBGb3IgaSA9IDEgVG8gMjYNCiAgICAgICAgUHJpbnQgJiMzNTszLCBGb3JtYXQkKE5ld0NvdW50cyhpKSwiJTBnIikgIiwiOw0KICAgICAgTmV4dA0KICAgICAgUHJpbnQgJiMzNTszDQogICAgICBGb3IgaSA9IDEgVG8gMjYNCiAgICAgICAgUHJpbnQgJiMzNTszLCBGb3JtYXQkKE5ld0RibENvdW50cyhpKSwiJTBnIikgIiwiOw0KICAgICAgTmV4dA0KICAgICAgQ2xvc2UgJiMzNTszDQogICAgICBSZXR1cm4NCg0KV2luZFVwJiM1ODsNCiAgICAgICAnIEV4aXQgdGhlIHByb2dyYW0gYWZ0ZXIgcmVzdG9yaW5nIG5vcm1hbCBlcnJvciBoYW5kbGluZw0KICAgICAgT3B0aW9uIGVycm9yIGNvbnRpbnVlDQogICAgICBQcmludCBUaW1lcg0KICAgICAgRW5kDQoNCjwvcHJlPmRkOR4sLBMhbSwMSy+nm2ozmv/NVIY=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Alpha Count</h1><small>Modified on 2016/12/23 23:16 by Administrator &mdash; Categorized as: Strings, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+
+       ' ALPHA COUNT PROGRAMME
+       ' This counts the frequency of each alphabetic character in a text document
+       ' and the frequency of double letters.
+       ' Counts are output to a CSV file which can be read by Excel and Open Office Calc.
+       ' If the input count file is overwritten as output, counts can be accumulated from several text documents.
+       ' On completion it draws graphs of the percentage of each letter and double letter.
+     Dim LetterCounts(26)
+     Dim OLDCounts(26)
+     Dim NewCounts(26)
+     Dim DblLetterCounts(26)
+     Dim OldDblCounts(26)
+     Dim NewDblCounts(26)
+     Dim a(26)
+     Dim pLine$(4)
+
+'Mainline
+     GoSub Initialise        ' Initialise
+     Timer=0
+     GoSub LetterCounts      ' Accumulate letter counts from input text file
+     For i = 1 To 26         ' check that text file contains some letters
+       atot = atot + LetterCounts(i)
+     Next
+     If atot = 0 Then
+       Print
+       Print TxtFileName$ " contains no alphabetic characters."
+     Else
+       GoSub AddNewToOldCounts ' Add new counts to old
+       GoSub PrintGraphs       ' Print accumulated counts graphically
+       GoSub WriteCounts       ' Write out csv file with accumulated counts
+     EndIf
+     Print Timer
+     GoTo WindUp             ' Close files and exit
+
+Initialise&#58;
+       ' Intialise values in case the routine is rerun
+     Cls
+     For i = 1 To 26
+       LetterCounts(i) = 0
+       DblLetterCounts(i) = 0
+     Next
+     LastChar$ = ""
+     Print @(42,0) "ALPHANUM.BAS Counts occurrences of each letter and double letter"
+     Print @(24,12) "in an input text file, graphs the counts and writes them to a CSV file."
+     Print @(42,24) "Text file counts will be added to those from an input .CSV file."
+     Print
+
+GetInputTextFileName&#58;
+       ' Ask for input text file name - Reply 'Exit' stops the program
+       ' If filename doesn't have an extension, .TXT is assumed
+
+     Input "Input text filename (.txt assumed) - 'Exit  ' to exit&#58; ", TxtFileName$
+     If LCase$(TxtFileName$) = "exit" Then GoTo WindUp
+       ' IF file name doesn't have an extension, add .txt
+     If Instr(1, TxtFileName$, ".") = 0 Then TxtFileName$ = TxtFileName$ + ".txt"
+     Option error continue
+     Open TxtFileName$ For INPUT As &#35;1
+     If MM.Errno &lt;&gt; 0 Then
+       Print TxtFileName$ " doesn't exist"
+       Print
+       GoTo GetInputTextFileName
+     EndIf
+     Option error abort
+
+GetOldCountFileName&#58;
+       ' Get the old count file names - Reply 'None' if there isn't one
+       ' If filename doesn't have an extension, .CSV is assumed
+
+     Input "Old count file name (.csv assumed) - 'none  ' if none&#58; ", OldCountFileName$
+     If LCase$(OldCountFileName$) = "none" Then GoTo GetNewCountFileName
+     If LCase$(OldCountFileName$) = "exit" Then GoTo WindUp
+       ' IF file name doesn't have an extension, add .CSV
+     If Instr(1, OldCountFileName$, ".") = 0 Then OldCountFileName$ = OldCountFileName$ + ".csv"
+     Option error continue
+     Open OldCountFileName$ For input As &#35;2
+     If MM.Errno &lt;&gt; 0 Then
+       Print OldCountFileName$ " doesn't exist. Enter 'none', 'exit  ' or another file"
+       Print
+       GoTo GetOldCountFileName
+     EndIf
+     Option error abort
+       ' Load counts from Old Count File
+     GoSub LoadOldCounts
+
+GetNewCountFileName&#58;
+       ' Create a new output count file - Reply 'Exit' stops the program
+       ' If a filename extension is not provided, .CSV is appended
+       ' If this filename is same as input count filename, check that it is OK to overwrite
+
+     Input "New count file name (.csv assumed) - 'Exit  ' to exit&#58; ", NewCountFileName$
+     If LCase$(NewCountFileName$) = "exit" Then GoTo WindUp
+     If Instr(1, NewCountFileName$, ".") = 0 Then NewCountFileName$ = NewCountFileName$ + ".csv"
+       ' If old file exists, ask if it should be replaced. If not, get another filename
+     Option error continue
+     Open NewCountFileName$ For input As &#35;3
+     If MM.Errno = 0 Then
+       Print "OK to overwrite "+OldCountFileName$+" Y/N";&#58;Input ""; Reply$
+       If LCase$(Left$(Reply$,1)) &lt;&gt; "y" Then
+         Print
+         GoTo GetNewCountFileName
+       EndIf
+       Close &#35;3
+     EndIf
+     Option error abort
+       ' Don't open it until the old counts have been read in case the old count file is to be overwritten
+     Return
+
+LetterCounts&#58;
+       ' Read characters one by one from the text input file and convert to lower case
+       ' Set start position of the progress line (which will show that something is happening)
+
+     x = 20&#58; y = 120
+     Do While Not Eof(1)
+         ' Save previous character to compare with next to accumulate double character count
+       LastChar$ = NextChar$
+         ' Get next character
+       NextChar$ = Input$(1, &#35;1)
+         ' If upper case character, convert to lower case
+       NextChar$ = LCase$(NextChar$)
+         ' If a letter, accumulate totals for that letter, else ignore it
+       If NextChar$ &gt;= "a" And NextChar$ &lt;= "z" Then
+         GoSub AccumulateCounts
+       EndIf
+         ' periodically show progress
+       If CharCount &gt; 500 Then
+         GoSub PrintProgressLine
+         CharCount = 0
+       Else
+         charCount = CharCount + 1
+       EndIf
+     Loop
+     Close &#35;1
+     Return
+
+PrintProgressLine&#58;
+       ' Print a progress line to show that something is happening every 500th character read
+       ' prints another dot and also toggles the MM Power LED
+
+     If ProgressDots &lt; 70 Then
+       ProgressDots = ProgressDots + 1
+       ProgressLine$ = ProgressLine$ + "."
+       Print @(x,y) ProgressLine$
+         ' Toggle the power LED on and off
+       Pin(0) = ProgressDots Mod 2
+     Else
+       Print @(x,y) Space$(70)
+       ProgressDots = 0
+       ProgressLine$ = ""
+     EndIf
+     Return
+
+AccumulateCounts&#58;
+       ' Accumulate counts of each letter and double letters.
+
+     i = Asc(NextChar$) - 96   ' Note&#58; ASC("a") = 97
+     LetterCounts(i) = LetterCounts(i) + 1
+       ' If same as last letter, accumulate double letter count
+     If NextChar$ = LastChar$ Then DblLetterCounts(i) = DblLetterCounts(i) + 1
+     Return
+
+AddNewToOldCounts&#58;
+       ' Add new counts to old
+
+     For i = 1 To 26
+       NewCounts(i) = OldCounts(i) + LetterCounts(i)
+       NewDblCounts(i) = OldDblCounts(i) + DblLetterCounts(i)
+     Next
+     Return
+
+PrintGraphs&#58;
+       ' Print the 2 graphs - Proportion of single letters and double letters
+       ' Do this twice;
+       '   1st for current text file and then
+       '   if there was an input .CSV file, for the accumulated counts
+
+       'Common graph parameters
+     bars = 26    ' number of bars in the graph
+     xscale = 1   'Use full screen width of 480 pixels
+     yScale = 0.5 'Use half screen height of 432/2 = 216 pixels
+       ' set ends of x axis, allowing space to the left of the graph for scale
+     xorig = 5&#42;6         ' Indent y axis 5 characters
+     xmax  = 480&#42;xScale  ' end of x axis
+       ' set ends of y axis, allowing space above and below graph
+       ' for title &amp; x scale
+     yTopSpace = 2&#42;12    ' 2 lines
+     yBotSpace = 2&#42;12    ' 2 lines
+
+       ' Get y values for single letters in the input text file
+     atot = 0
+     For i = 1 To bars
+       a(i) = LetterCounts(i)
+       atot = atot +a(i)
+     Next
+       ' Print the graph in top half of screen
+     Cls
+     Title$ = "Percent of single letters in " + TxtFileName$
+     GoSub SetupSingleLetterGraphParms
+     GoSub PrintAGraph
+
+       ' Get y values for double letters in the input text file
+     atot = 0
+     For i = 1 To bars
+       a(i) = DblLetterCounts(i)
+       atot = atot +a(i)
+     Next
+
+     If atot &gt; 0 Then
+         ' Print the graph in bottom half of screen (yoffset sets bottom half)
+       Title$ = "Percent of double letters in " + TxtFileName$
+       GoSub SetupDoubleLetterGraphParms
+       GoSub PrintAGraph
+     Else
+       Print
+       Print "There are no double letters in the text file."
+       Print
+     EndIf
+
+       ' If the input .CSV file was overwritten, then repeat the graphs for accumulated totals
+       ' otherwise we are finished
+     If NewCountFileName$ = OldCountFileName$ Then
+       Print "Press A to see accumulated percentages; Any other to exit";
+       Do
+         Reply$ = Inkey$
+       Loop Until Reply$ &lt;&gt; ""
+       If LCase$(Reply$) &lt;&gt; "a" Then
+         Return
+       EndIf
+     Else
+       End
+     EndIf
+
+       ' Get y values for single letters in the accumulated counts file
+     atot = 0
+     For i = 1 To bars
+       a(i) = NewCounts(i)
+       atot = atot +a(i)
+     Next
+       ' Print the graph in top half of screen
+     Cls
+     Title$ = "Percent of single letters in " + NewCountFileName$
+     GoSub SetupSingleLetterGraphParms
+     GoSub PrintAGraph
+
+       ' Get y values for double letters in the accumulated counts file
+     atot = 0
+     For i = 1 To bars
+       a(i) = NewDblCounts(i)
+       atot = atot +a(i)
+     Next
+
+     If atot &gt; 0 Then
+         ' Print the graph in bottom half of screen (yoffset sets bottom half)
+       Title$ = "Percent of double letters in " + NewCountFileName$
+       GoSub SetupDoubleLetterGraphParms
+       GoSub PrintAGraph
+     Else
+       Print
+       Print "There are no double letter in the acumulated counts file."
+       Print
+     EndIf
+
+     Print "Press A to see the first graph again; any other to exit";
+     Do
+       Reply$ = Inkey$
+     Loop Until Reply$ &lt;&gt; ""
+     If LCase$(Reply$) = "a" Then
+       GoTo PrintGraphs
+     EndIf
+
+     Return
+
+SetupSingleLetterGraphParms&#58;
+     yorig = 432&#42;yScale - yTopSpace - yBotSpace
+     ymax  = yTopSpace   ' top of y axis
+
+     Return
+
+SetupDoubleLetterGraphParms&#58;
+     yOffset = 432/2
+     yorig = 432&#42;yscale - yTopSpace - yBotSpace + yOffset
+     ymax  = yTopSpace + yOffset  ' top of y axis
+
+     Return
+
+PrintAGraph&#58;
+      ' Prints a graph at preset points
+      ' Normalise all the values to percent of total letters read
+     HiY = 0
+     For i = 1 To bars
+       a(i) = a(i) / atot &#42; 100
+       If a(i) &gt; HiY Then HiY = a(i)
+     Next
+
+       ' Set top of y axis to highest value of y + 10% and round up
+     HiY = HiY&#42;1.1
+     HiY = Cint(HiY/5)&#42;5
+
+       ' Set origin for the graph and the scale
+       ' Normal font chars occupy 6x12 pixels giving 36 lines of 80 chars each
+       ' Calc No of pixel per data unit
+     xUnit = (xmax-xorig)/bars
+     yUnit = (ymax-yorig)/HiY
+
+       ' Draw Axes
+     Line (Xorig,ymax)-(Xorig,yorig)
+     Line (Xorig,yorig)-(xmax,yorig)
+
+       ' Draw tick marks on y axis and print tick values
+     tickmks = 5   ' Int(HiY/10+.5)
+     ytickspace = (yOrig-ymax)/tickmks
+     For i = 0 To tickmks-1
+       Line (xOrig,ymax+i&#42;ytickspace) - (xOrig+5,ymax+i&#42;ytickspace)
+       Print @(0,ymax+i&#42;ytickspace-6) Hiy-i&#42;Hiy/tickmks
+     Next
+
+       ' Print title, centred
+       ' Title chars are 6 px wide
+     Print @((xmax-xOrig)/2-Len(Title$)&#42;6/2,ymax-12) Title$
+
+       ' Print alphabet below x axis and percentages below that
+     Print @(12,yOrig+24) "%"
+     barspace = Fix((xmax-xOrigin)/(bars+1))
+     For i = 0 To bars-1
+       Print @(xOrig+barspace&#42;i+8, yOrig+12) Chr$(i+1+64)
+       Print @(xOrig+barSpace&#42;i+2, yOrig+24) Int(a(i+1)+0.5)
+     Next
+
+       ' Print graph bars
+     For i = 1 To bars
+       x1 = xOrig+barspace&#42;(i-1)+6
+       y1 = yOrig
+       x2 = x1+barspace/2
+       y2 = yOrig-a(i)&#42;(yorig-ymax)/Hiy
+       Line (x1,y1)-(x2,y2),1,BF
+     Next
+
+     Return
+
+LoadOldCounts&#58;
+        ' Subroutine&#58; Load counts from old counts file
+        ' Being a .CSV file, concatenate numeric characters
+        ' until a comma is found then
+        ' load the resulting number into the array.
+
+      Do While Not Eof(2)
+          ' First line contains single letter counts
+        Line Input &#35;2, Counts$
+        StartPos = 1
+        LetterNo = 1
+        Do
+          CommaPos = Instr(StartPos,Counts$,",")
+          OldCounts(LetterNo) = Val(Mid$(Counts$,StartPos,CommaPos-StartPos))
+          LetterNo = LetterNo + 1
+          StartPos = CommaPos + 1
+        Loop Until StartPos &gt;= Len(Counts$)
+
+          ' Second line contains double letter counts
+        Line Input &#35;2, Counts$
+        StartPos = 1
+        LetterNo = 1
+        Do
+          CommaPos = Instr(StartPos,Counts$,",")
+          OldDblCounts(LetterNo) = Val(Mid$(Counts$,StartPos,CommaPos-StartPos))
+          LetterNo = LetterNo + 1
+          StartPos = CommaPos + 1
+        Loop Until StartPos &gt;= Len(Counts$)
+      Loop
+      Close &#35;2
+      Return
+
+WriteCounts&#58;
+        ' Subroutine&#58; Write new counts to output as .CSV file
+        ' If the file exists, delete it
+        ' Writes 2 lines of comma-separated numbers
+        '   1st line contains the counts of each alphabetic character
+        '   2nd line, counts of each double alphabetic character
+
+      Open NewCountFileName$ For OUTPUT As &#35;3
+      For i = 1 To 26
+        Print &#35;3, Format$(NewCounts(i),"%0g") ",";
+      Next
+      Print &#35;3
+      For i = 1 To 26
+        Print &#35;3, Format$(NewDblCounts(i),"%0g") ",";
+      Next
+      Close &#35;3
+      Return
+
+WindUp&#58;
+       ' Exit the program after restoring normal error handling
+      Option error continue
+      Print Timer
+      End
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.ALPHA-COUNT-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:08:22 GMT -->
+</html>

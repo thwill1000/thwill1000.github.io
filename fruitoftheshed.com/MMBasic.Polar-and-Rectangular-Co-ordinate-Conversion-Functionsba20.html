@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions.ashx?HL= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Polar and Rectangular Co-ordinate Conversion Functions - Fruit Of The Shed
+</title><meta name="keywords" content="rectangular, polar, co-ordinates" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Polar-and-Rectangular-Co-ordinate-Conversion-Functions&amp;NS=MMBasic&amp;HL=" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login0804.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dPolar-and-Rectangular-Co-ordinate-Conversion-Functions%26NS%3dMMBasic%26HL%3d" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyc384.html?Page=MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Polar and Rectangular Co-ordinate Conversion Functions
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printc384.html?Page=MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2020/01/03 16:57
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages834c.html?Cat=MMBasic.Encode%20and%20Decode" title="Encode and Decode">Encode and Decode</a>, <a href="MMBasic.AllPageseb16.html?Cat=MMBasic.Graphics" title="Graphics">Graphics</a>, <a href="MMBasic.AllPagesd44d.html?Cat=MMBasic.Maths" title="Maths">Maths</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f0c712537-f7ae-4f9b-8d7a-ed8b18d6672a" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f0c712537-f7ae-4f9b-8d7a-ed8b18d6672a');"></div><div id="feb604b55-77ca-43e0-99c3-a07954a1b931" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('feb604b55-77ca-43e0-99c3-a07954a1b931');"><a href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTrim Functions (VB work-a-like)</a><a href="MMBasic.LTrim-RTrim-cFunctions.html" title="LTrim RTrim CFunctions">LTrim RTrim CFunctions</a><a href="MMBasic.String-editing-on-screen-for-VT-compatible-Terminals.html" title="String editing on-screen for VT compatible Terminals">String editing on-screen for VT compatible Terminals</a></div><div id="fe08ba3e6-bc2a-4f14-98e8-78f647f31d2c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fe08ba3e6-bc2a-4f14-98e8-78f647f31d2c');"><a href="MMBasic.ByREF-ByVAL-VB-work-a-like.html" title="ByREF & ByVAL - (VB work-a-like)">ByREF & ByVAL - (VB work-a-like)</a><a href="MMBasic.Field-Function-cField.html" title="Field Function cField$">Field Function cField$</a></div><div id="fa0906993-4287-468e-a7ea-028504b9851c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fa0906993-4287-468e-a7ea-028504b9851c');"></div><div id="s943f6788-db4e-4634-8789-0b81ba4d7ea0" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s943f6788-db4e-4634-8789-0b81ba4d7ea0');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Maze-bas-part-of-the-original-MMBasic-library.html" title="Maze.bas (MMBasic)">Maze.bas (MMBasic)</a> &raquo; <a href="MMBasic.INA219-Current-Sensor.html" title="INA219 Current Sensor (MMBasic)">INA219 Current Sensor (MMBasic)</a> &raquo; <b><a href="MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions.html" title="Polar and Rectangular Co-ordinate Conversion Functions (MMBasic)">Polar and Rectangular Co-ordinate Conversion Functions (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.REVERSE-BAS-part-of-the-original-MMBasic-library.html" title="REVERSE.BAS (MMBasic)">REVERSE.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Vehicle-Reversing-Assistant.html" title="Vehicle Reversing Assistant (MMBasic)">Vehicle Reversing Assistant (MMBasic)</a> &raquo; <a href="MMBasic.VB%20Work-a-like%20SPLIT%20Function.html" title="SPLIT Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fe08ba3e6-bc2a-4f14-98e8-78f647f31d2c', this);" id="lnkfe08ba3e6-bc2a-4f14-98e8-78f647f31d2c" onmouseout="javascript:return __HideDropDown('fe08ba3e6-bc2a-4f14-98e8-78f647f31d2c');">SPLIT Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.Base64-Mime-Encode-and-Decode-Functions.html" title="Base64 Mime Encode and Decode Functions (MMBasic)">Base64 Mime Encode and Decode Functions (MMBasic)</a> &raquo; <a href="MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc.html" title="VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'feb604b55-77ca-43e0-99c3-a07954a1b931', this);" id="lnkfeb604b55-77ca-43e0-99c3-a07954a1b931" onmouseout="javascript:return __HideDropDown('feb604b55-77ca-43e0-99c3-a07954a1b931');">VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a> &raquo; <a href="MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library.html" title="SPLIT subroutine (MMBasic)">SPLIT subroutine (MMBasic)</a> &raquo; <a href="MMBasic.Maze-bas-part-of-the-original-MMBasic-library.html" title="Maze.bas (MMBasic)">Maze.bas (MMBasic)</a> &raquo; <a href="MMBasic.INA219-Current-Sensor.html" title="INA219 Current Sensor (MMBasic)">INA219 Current Sensor (MMBasic)</a> &raquo; <b><a href="MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions.html" title="Polar and Rectangular Co-ordinate Conversion Functions (MMBasic)">Polar and Rectangular Co-ordinate Conversion Functions (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		Any point on a conventional, flat plane may be expressed in one of two ways:<br /><ol><br /><li>A set of "Rectangular" (or Cartesian, planar) co-ordinates - these take the familiar form of a horizontal X axis bisected by a vertical Y axis. The origin is usually the point where the two lines cross at the zero value of both X & Y. This is a typical computer screen layout, graph paper etc...</li><br /><li>A set of "Polar" co-ordinates which consist of an angle (Theta θ) and a radius. Any point on that plane is then expressed as a direction and distance to "travel".<br /></li></ol><br />Both reach the same conclusion.<br /><br />All co-ordinate systems require an origin - a point of reference. This could be a specific point on the plane -Absolute, or starting from another point which can be different every time -Relative. For the illustration below, we will consider the origin to be the absolute point at which the two axes bisect - 0,0 in rectangular terms.<br /><br />Consider the point 1,1. Moving one point along both axes would arrive at that desired point, but you could also decide an angle and distance ; these polar co-ordinates would be 45 degrees and 1.4142 units. Both would determine the same point. If you trace a line from the origin to this point, it would be a diagonal line stretching in a "North-Easterly" direction for one "square".<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="image002a4ef4.gif?File=/MMBasic/image002a.gif" alt="Image" /><br /><br />The following two functions (actually SUBs because they return more than one value) convert between these two systems. The third argument in each is an option that indicates whether the angles are expressed in Radians (0) or Degrees (non-zero).<br /><br /><b>Syntax:</b><br /> Polar (X,Y&#0091;,opt&#0093;)  - the output will be in the two global variables Th and R<br /><br /> Rect (Theta,radius&#0091;,opt&#0093;)  - the output will be in the two global variables X and Y<br /><br /><b>Examples:</b><br /> Polar 10,27,1 : Print Th,R<br /> > 20.3231         28.7924<br /><br /> Rect 20.3,28.7,1 : Print X,Y<br /> > 9.95705         26.9174<br /><br /><br /><pre>
+'Preamble
+
+	CONST Deg2Rad=360/(2&#42;Pi)
+	Dim Float Th,R,X,Y	
+
+
+	Sub Polar(x As Float,y As Float,opt As Integer) ' opt 0 = radians, Not 0=degrees
+		If y=0 Then y=1e-6		'eliminates div zero errors
+
+		R=SQR(X&#42;X+Y&#42;Y)
+		
+		Th=Atn(X/Y)
+		If Y&lt;0 Then
+			Th=Th+Pi
+		ElseIf X&lt;0 Then 
+			Th=Th+2&#42;Pi
+		EndIf
+		
+		If opt then 
+			Th=Th&#42;Deg2Rad
+		EndIf
+		'here Th and R contain the polar co-ordinates
+	End Sub
+	
+
+	Sub Rect(Th As Float,R As Float,opt As Integer) ' opt 0 = radians, Not 0=degrees
+		If opt then 
+			Th=Th/Deg2Rad
+		EndIf
+		
+		Y=R&#42;(Cos(Th))
+		X=R&#42;(Sin(Th))
+		'here X and Y contain the rectangular co-ordinates
+	End Sub
+</pre><br /><br /><br /><br /><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions.ashx?HL= by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:55 GMT -->
+</html>

@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MOON-BAS-lunar-calendar-with-graphics-and-simple-GUI by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:21:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	MOON.BAS lunar calendar with graphics and simple GUI - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.MOON-BAS-lunar-calendar-with-graphics-and-simple-GUI" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFl0Y8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TU9PTi5CQVMgbHVuYXIgY2FsZW5kYXIgd2l0aCBncmFwaGljcyBhbmQgc2ltcGxlIEdVSTwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTgvMDMvMDQgMjI6NTggYnkgcmF2ZSAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBBc3Ryb25vbXksIERhdGVzLCBUaW1lIGFuZCBDbG9ja3MsIEVsZWN0cm9uaWNzPC9zbWFsbD48YnIgLz48YnIgLz5UaGlzIHByb2dyYW0gZGlzcGxheXMgdGhlIG1vb24gcGhhc2UgZm9yIGFueSBjYWxlbmRhciBkYXRlIChhZnRlciAxNTgyIHNpbmNlIGl0IGRvZXMgbm90IHVzZSBhIEp1bGlhbiBjYWxlbmRhciBjb3JyZWN0aW9uKS48YnIgLz48YnIgLz5UaGUgcHJvZ3JhbSBoYXMgYSBzaW1wbGUgaW50ZXJhY3RpdmUgR1VJIHdpdGggdGhyZWUgd2luZG93cy4gWW91IGNhbiBlbnRlciBhIGRhdGUgYW5kIG5hdmlnYXRlIGJhY2svZm9ydGggdGhyb3VnaCB0aGUgbHVuYXIgY2FsZW5kYXIuPGJyIC8+PGJyIC8+VGhlIHN0YXJyeSBuaWdodCBpcyBhbmltYXRlZCB3aXRoIGEgc2ltcGxlIHRyaWNrIHVzaW5nIGEgUFJORyB3aXRoIHR3byBzZWVkIGNvdW50ZXJzLCBvbmUgdGhhdCBydW5zIGFoZWFkIG9mIHRoZSBvdGhlciB3aGVyZSB0aGUgZmlyc3QgdHVybnMgYSByYW5kb20gc3RhciBvbiBhbmQgdGhlIG90aGVyIHRoYXQgcnVucyBiZWhpbmQgdHVybnMgYSBzdGFyIG9mZi4gT3RoZXIgcm91dGluZXMgdGhhdCBjYW4gYmUgdXNlZnVsIGFyZSB0aGUgcm91bmRlZCBib3ggZHJhd2luZyBhbmQgZGF0ZSBjb252ZXJzaW9uIHJvdXRpbmVzLjxiciAvPjxiciAvPlRoZSBjb2RlIGlzIHdyaXR0ZW4gZm9yIHRoZSBNYXhpbWl0ZSBhbmQgQ29sb3VyIE1heGltaXRlIGFuZCBjYW4gYmUgcnVuIGluIGFueSBjb2xvciBtb2RlLCB0aGUgd2luZG93cyBhbmQgZ3JhcGhpY3MgYWRqdXN0LjxiciAvPjxiciAvPlRoaXMgaXMgZnJlZXdhcmUuPGJyIC8+PGJyIC8+RW5qb3khPGJyIC8+PGJyIC8+PHByZT4nIE1PT04uQkFTIHYxLjANCicgRGlzcGxheXMgdGhlIG1vb24gcGhhc2UgZm9yIGFueSBkYXRlIGFmdGVyIDE1ODINCicgRm9yIE1heGltaXRlIGFuZCBDb2xvdXIgTWF4aW1pdGUNCicgVGhpcyBpcyBmcmVld2FyZQ0KJyBSb2JlcnQgdmFuIEVuZ2VsZW4sIDIwMTgNCg0KJyBmZXRjaCBjdXJyZW50IGRhdGUNCmQkID0gREFURSQNCg0KQ0xTDQpGT05UIDEsMSwwDQpQUk5HLnNlZWQocHJuMSkNCm1heHN0YXJzID0gODANCnN0YXRlID0gMA0KDQonIENNTSYjNTg7IHVzZSBjb2xvciB3aXRoIHRoZSBjdXJyZW50IHJlc29sdXRpb24gYW5kIGRlZmluZSBiYWNrZ3JvdW5kIGNvbG9yIGJnDQpiZyA9IDANCklGIE1NLkRFVklDRSQgPSAiQ29sb3VyIE1heGltaXRlIiBUSEVOIENPTE9SIDcmIzU4OyBiZyA9IDENCncgPSBNTS5IUkVTJiM1ODsgaCA9IE1NLlZSRVMNCg0KJyBzZXQgd2luZG93IHNpemVzDQp3MiA9IHcvNCYjNTg7IHczID0gdy13MiYjNTg7IGgxID0gaC82JiM1ODsgaDIgPSBoLWgxDQoNCkRPICcgbG9vcCB1bnRpbCBxdWl0DQoNCiAgJyBkcmF3IHdpbmRvd3MNCiAgRHJhd0JveCAxLDEsdy0yLGgxLTIsNywwLDgNCiAgRHJhd0JveCAxLGgxKzEsdzItMixoMi0yLDcsYmcsOA0KICBEcmF3Qm94IHcyKzEsaDErMSx3My0yLGgyLTIsNywwLDgNCiAgUFJJTlQgQCg4LDgpICJXZWxjb21lIHRvIHRoZSBsdW5hciBjYWxlbmRhciINCiAgUFJJTlQgQCg4LDIwKSAiRGF0ZSYjNTg7ICI7DQogIFBSSU5UIFdlZWtEYXkkKGQkKTsiICI7TW9udGgkKGQkKTsiICI7RGF5JChkJCk7IiwgIjtSSUdIVCQoZCQsNCkNCg0KICAnIGNvbXB1dGUgcGhhc2UNCiAgZCA9IERheXMoZCQpKzE5DQogIHAgPSBkLzI5LjUzMDU4OA0KICBwID0gcC1JTlQocCkNCiAgcGhhc2UgPSA0JiM0MjtwDQoNCiAgJyBkaXNwbGF5IG1vb24gcGhhc2UNCiAgQ2VudGVyVGl0bGUgMCxoMSs4LHcyLGJnLE1vb25QaGFzZSQocGhhc2UpDQogIERyYXdNb29uIHcyXDIsaDErdzIsdzJcMyw3LGJnLHBoYXNlDQogIENlbnRlclRpdGxlIDAsaDErdzIrdzJcMysyMCx3MixiZywiVmlldyBmcm9tIEVhcnRoIg0KICBEcmF3RWFydGhNb29uU3VuIHcyK3czXDItaDJcNCxoMStoMlwyLGgyXDE2LHBoYXNlDQoNCiAgJyB1c2UgYSBQUk5HIHNlcXVlbmNlIHRvIHR3aW5rbGUgdGhlIG5pZ2h0IHNreSwgbm8gYXJyYXkgbmVlZGVkDQogIHN0YXJzID0gMA0KICBwcm4yID0gcHJuMQ0KDQogIERPICcgbG9vcCB1bnRpbCBzY3JlZW4gdXBkYXRlIG5lZWRlZA0KDQogICAgRE8gJyBsb29wIHVudGlsIGtleSBwcmVzcw0KDQogICAgICAnIHR1cm4gYSBzdGFyIG9uDQogICAgICB4ID0gdzIrMysocHJuMSBNT0QgKHczLTUpKQ0KICAgICAgUFJORy51cGRhdGUgcHJuMQ0KICAgICAgeSA9IGgxKzMrKHBybjEgTU9EIChoMi01KSkNCiAgICAgIFBSTkcudXBkYXRlIHBybjENCiAgICAgIElGIHgreSBBTkQgNyBUSEVODQogICAgICAgIFBJWEVMKHgseSkgPSAtMQ0KICAgICAgRUxTRQ0KICAgICAgICBMSU5FICh4LTEseSktKHgrMSx5KSwtMQ0KICAgICAgICBMSU5FICh4LHktMSktKHgseSsxKSwtMQ0KICAgICAgRU5ESUYNCg0KICAgICAgJyB0dXJuIGEgc3RhciBvZmYgd2hlbiBtYXhzdGFycyBwYWludGVkDQogICAgICBJRiBzdGFycyA9IG1heHN0YXJzIFRIRU4NCiAgICAgICAgUEFVU0UgMjAwDQogICAgICAgIHggPSB3MiszKyhwcm4yIE1PRCAodzMtNSkpDQogICAgICAgIFBSTkcudXBkYXRlIHBybjINCiAgICAgICAgeSA9IGgxKzMrKHBybjIgTU9EIChoMi01KSkNCiAgICAgICAgUFJORy51cGRhdGUgcHJuMg0KICAgICAgICBJRiB4K3kgQU5EIDcgVEhFTg0KICAgICAgICAgIFBJWEVMKHgseSkgPSAtMQ0KICAgICAgICBFTFNFDQogICAgICAgICAgTElORSAoeC0xLHkpLSh4KzEseSksLTENCiAgICAgICAgICBMSU5FICh4LHktMSktKHgseSsxKSwtMQ0KICAgICAgICBFTkRJRg0KICAgICAgRUxTRQ0KICAgICAgICBzdGFycyA9IHN0YXJzKzENCiAgICAgIEVORElGDQoNCiAgICAgIGtleSA9IEFTQyhJTktFWSQpDQoNCiAgICBMT09QIFVOVElMIGtleQ0KDQogICAgSUYga2V5ID0gMjcgT1Iga2V5ID0gQVNDKCJxIikgT1Iga2V5ID0gQVNDKCJRIikgVEhFTiBFTkQNCg0KICAgIElGIHN0YXRlICZsdDs9IDEgVEhFTg0KDQogICAgICBJRiBrZXkgPSBBU0MoImQiKSBPUiBrZXkgPSBBU0MoIkQiKSBUSEVODQogICAgICAgIFBSSU5UIEAoOCwyMCkgIkVudGVyIGRhdGUmIzU4OyBERC1NTS1ZWVlZICAgICAgICAgICAgIjsNCiAgICAgICAgZCQgPSAiIg0KICAgICAgICBzdGF0ZSA9IDINCiAgICAgIEVMU0VJRiBrZXkgPSBBU0MoIm4iKSBPUiBrZXkgPSBBU0MoIk4iKSBUSEVODQogICAgICAgIE5leHREYXkgZCQNCiAgICAgICAgc3RhdGUgPSAwDQogICAgICBFTFNFSUYga2V5ID0gQVNDKCJwIikgT1Iga2V5ID0gQVNDKCJQIikgVEhFTg0KICAgICAgICBQcmV2RGF5IGQkDQogICAgICAgIHN0YXRlID0gMA0KICAgICAgRUxTRUlGIGtleSA9IEFTQygicyIpIE9SIGtleSA9IEFTQygiUyIpIFRIRU4NCiAgICAgICAgU0FWRUJNUCAiTU9PTkRVTVAuQk1QIg0KICAgICAgICBzdGF0ZSA9IDANCiAgICAgIEVMU0UNCiAgICAgICAgUFJJTlQgQCg4LDIwKSAicSl1aXQgZClhdGUgbilleHQgcClyZXYgcylhdmUgICAgICINCiAgICAgICAgc3RhdGUgPSAxDQogICAgICBFTkRJRg0KDQogICAgRUxTRUlGIGtleSAmZ3Q7PSBBU0MoIjAiKSBBTkQga2V5ICZsdDs9IEFTQygiOSIpIFRIRU4NCg0KICAgICAgZCQgPSBkJCtDSFIkKGtleSkNCiAgICAgIHN0YXRlID0gc3RhdGUrMQ0KICAgICAgSUYgc3RhdGUgPSA0IFRIRU4gZCQgPSBkJCsiLSImIzU4OyBzdGF0ZSA9IDUNCiAgICAgIElGIHN0YXRlID0gNyBUSEVOIGQkID0gZCQrIi0iJiM1ODsgc3RhdGUgPSA4DQogICAgICBJRiBzdGF0ZSA9IDEyIFRIRU4gc3RhdGUgPSAwDQogICAgICBGT05UIDEsMSwxJiM1ODsgUFJJTlQgQCg4MCwyMCkgZCQmIzU4OyBGT05UIDEsMSwwDQoNCiAgICBFTkRJRg0KDQogIExPT1AgVU5USUwgc3RhdGUgPSAwDQoNCkxPT1ANCg0KJyBzZWVkIHRoZSBQUk5HDQpTVUIgUFJORy5zZWVkKHBybikNCiAgcHJuID0gVElNRVINCkVORCBTVUINCg0KJyB1cGRhdGUgUFJORyB1c2luZyBMZWhtZXIgTENHDQpTVUIgUFJORy51cGRhdGUocHJuKQ0KICBMT0NBTCBrDQogIGsgPSBwcm5cMTI3NzczDQogIHBybiA9IDE2ODA3JiM0MjsocHJuLTEyNzc3MyYjNDI7ayktMjgzNiYjNDI7aw0KICBJRiBwcm4gJmx0Oz0gMCBUSEVOIHBybiA9IHBybismYW1wO2g3RkZGRkZGRg0KRU5EIFNVQg0KDQonIHB1dCBhIHRpdGxlIHQkIGF0ICh4LHkpIGNlbnRlcmVkIGF0IHdpZHRoIHcgYmFja2dyb3VuZCBiDQpTVUIgQ2VudGVyVGl0bGUoeCx5LHcsYix0JCkNCiAgTE9DQUwgaSxqLGssbg0KICBuID0gTEVOKHQkKQ0KICBJRiA2JiM0MjtuICZsdDsgdyBUSEVODQogICAgUFJJTlQgQCh4K3dcMi0zJiM0MjtuLHkpIENIUiQoMTkyK2IpO3QkO0NIUiQoMTkyKQ0KICBFTFNFDQogICAgaSA9IDEmIzU4OyBrID0gMA0KICAgIERPDQogICAgICBqID0gSU5TVFIoaSx0JCwiICIpDQogICAgICBJRiBqID0gMCBUSEVOIGogPSBuKzENCiAgICAgIFBSSU5UIEAoeCt3XDItMyYjNDI7KGotaSkseStrKSBDSFIkKDE5MitiKTtNSUQkKHQkLGksai1pKTtDSFIkKDE5MikNCiAgICAgIGkgPSBqKzEmIzU4OyBrID0gaysxMg0KICAgIExPT1AgVU5USUwgaSAmZ3Q7IG4NCiAgRU5ESUYNCkVORCBTVUINCg0KJyBkcmF3IHJvdW5kZWQgYm94IGF0IHgseSB0byB4K3cseStoIGNvbG9yIGMgYmFja2dyb3VuZCBiIGNvcm5lciByYWRpdXMgcg0KU1VCIERyYXdCb3goeCx5LHcsaCxjLGIscikNCiAgSUYgciAmZ3Q7IDAgVEhFTg0KICAgIENJUkNMRSAoeCtyLHkrcikscixiLEYNCiAgICBDSVJDTEUgKHgrcix5K3IpLHIsYw0KICAgIENJUkNMRSAoeCt3LXIseStyKSxyLGIsRg0KICAgIENJUkNMRSAoeCt3LXIseStyKSxyLGMNCiAgICBDSVJDTEUgKHgrdy1yLHkraC1yKSxyLGIsRg0KICAgIENJUkNMRSAoeCt3LXIseStoLXIpLHIsYw0KICAgIENJUkNMRSAoeCtyLHkraC1yKSxyLGIsRg0KICAgIENJUkNMRSAoeCtyLHkraC1yKSxyLGMNCiAgICBMSU5FICh4K3IseSktKHgrdy1yLHkraCksYixCRg0KICAgIExJTkUgKHgseStyKS0oeCt3LHkraC1yKSxiLEJGDQogICAgTElORSAoeCtyLHkpLSh4K3ctcix5KSxjDQogICAgTElORSAoeCt3LHkrciktKHgrdyx5K2gtciksYw0KICAgIExJTkUgKHgrcix5K2gpLSh4K3ctcix5K2gpLGMNCiAgICBMSU5FICh4LHkrciktKHgseStoLXIpLGMNCiAgRUxTRQ0KICAgIExJTkUgKHgseSktKHgrdyx5K2gpLGIsQkYNCiAgICBMSU5FICh4LHkpLSh4K3cseStoKSxjLEINCiAgRU5ESUYNCkVORCBTVUINCg0KJyByZXR1cm5zIHRoZSBtb29uIHBoYXNlIGZvciBwaGFzZSAwJmx0Oz1wJmx0Oz00DQpGVU5DVElPTiBNb29uUGhhc2UkKHApDQogIElGIHAgJmx0OyAwLjEgVEhFTg0KICAgIE1vb25QaGFzZSQgPSAiTmV3Ig0KICBFTFNFSUYgcCAmbHQ7IDAuOSBUSEVODQogICAgTW9vblBoYXNlJCA9ICJXYXhpbmcgQ3Jlc2NlbnQiDQogIEVMU0VJRiBwICZsdDsgMS4xIFRIRU4NCiAgICBNb29uUGhhc2UkID0gIkZpcnN0IFF1YXJ0ZXIiDQogIEVMU0VJRiBwICZsdDsgMS45IFRIRU4NCiAgICBNb29uUGhhc2UkID0gIldheGluZyBHaWJib3VzIg0KICBFTFNFSUYgcCAmbHQ7IDIuMSBUSEVODQogICAgTW9vblBoYXNlJCA9ICJGdWxsIg0KICBFTFNFSUYgcCAmbHQ7IDIuOSBUSEVODQogICAgTW9vblBoYXNlJCA9ICJXYW5pbmcgR2liYm91cyINCiAgRUxTRUlGIHAgJmx0OyAzLjEgVEhFTg0KICAgIE1vb25QaGFzZSQgPSAiVGhpcmQgUXVhcnRlciINCiAgRUxTRUlGIHAgJmx0OyAzLjkgVEhFTg0KICAgIE1vb25QaGFzZSQgPSAiV2FuaW5nIENyZXNjZW50Ig0KICBFTFNFDQogICAgTW9vblBoYXNlJCA9ICJOZXciDQogIEVORElGDQpFTkQgRlVOQ1RJT04NCg0KJyBkcmF3IGEgbW9vbiBhdCAoeCx5KSB3aXRoIHJhZGl1cyByIGNvbG9yIGMgYmFja2dyb3VuZCBiIGFuZCBwaGFzZSAwJmx0Oz1wJmx0Oz00DQpTVUIgRHJhd01vb24oeCx5LHIsYyxiLHApDQogIExPQ0FMIGQxLGQyDQogIGQxID0gLjgzMyYjNDI7U0lOKChwLTEpJiM0MjtQSS8yKQ0KICBkMiA9IC44MzMmIzQyO1NJTigoMS1wKSYjNDI7UEkvMikNCiAgQ0lSQ0xFICh4LHkpLHIsYywuODMzLEYNCiAgSUYgcCAmbHQ7IDEgVEhFTg0KICAgIExJTkUgKHgtcix5LXIpLSh4LTEseStyKSxiLEJGDQogICAgQ0lSQ0xFICh4LHkpLHIsYixkMixGDQogIEVMU0VJRiBwICZsdDsgMiBUSEVODQogICAgTElORSAoeC1yLHktciktKHgtMSx5K3IpLGIsQkYNCiAgICBDSVJDTEUgKHgseSkscixjLGQxLEYNCiAgRUxTRUlGIHAgJmx0OyAzIFRIRU4NCiAgICBMSU5FICh4KzEseS1yKS0oeCtyLHkrciksYixCRg0KICAgIENJUkNMRSAoeCx5KSxyLGMsZDIsRg0KICBFTFNFDQogICAgTElORSAoeCsxLHktciktKHgrcix5K3IpLGIsQkYNCiAgICBDSVJDTEUgKHgseSkscixiLGQxLEYNCiAgRU5ESUYNCkVORCBTVUINCg0KJyBkcmF3IGVhcnRoLCBzdW4gYW5kIG1vb24gYXQgKHgseSkgd2l0aCByYWRpdXMgciBhbmQgcGhhc2UgMCZsdDs9cCZsdDs9NA0KU1VCIERyYXdFYXJ0aE1vb25TdW4oeCx5LHIscCkNCiAgTE9DQUwgZDEsZDINCiAgZDEgPSA0JiM0MjtyJiM0MjtDT1MocCYjNDI7UEkvMikmIzQyOy44MzMNCiAgZDIgPSAtNCYjNDI7ciYjNDI7U0lOKHAmIzQyO1BJLzIpDQogIENJUkNMRSAoeCx5KSw0JiM0MjtyLDEsLjgzMw0KICBDSVJDTEUgKHgrOCYjNDI7cix5KSxyLDYsLjgzMyxGDQogIENJUkNMRSAoeCx5KSxyLDEsLjgzMyxGDQogIENJUkNMRSAoeCx5LXIvMyksci80LDIsMixGDQogIENJUkNMRSAoeC1yLzYseStyLzQpLHIvMywyLEYNCiAgQ0lSQ0xFICh4LHktcityLzEyKSxyLzEyLDcsMS41LEYNCiAgQ0lSQ0xFICh4LHkrci1yLzEwKSxyLzEwLDcsMixGDQogIExJTkUgKHgtcix5LXIpLSh4LTEseStyKSwwLEJGDQogIENJUkNMRSAoeCtkMSx5K2QyKSxyLzQsNywuODMzLEYNCiAgTElORSAoeCtkMS1yLzQseStkMi1yLzQpLSh4K2QxLTEseStkMityLzQpLDAsQkYNCkVORCBTVUINCg0KJyByZXR1cm4gZGF5cyBzaW5jZSAwMS0wMS0wMDAxIHdpdGhvdXQgSnVsaWFuIGNhbGVuZGFyIGNvcnJlY3Rpb24NCkZVTkNUSU9OIERheXMoZCQpDQogIExPQ0FMIGQsbSx5LGENCiAgZCA9IFZBTChNSUQkKGQkLDEsMikpDQogIG0gPSBWQUwoTUlEJChkJCw0LDIpKQ0KICB5ID0gVkFMKE1JRCQoZCQsNyw0KSkNCiAgYSA9IElOVCgoMTQtbSkvMTIpDQogIG0gPSBtKzEyJiM0MjthDQogIHkgPSB5LWENCiAgRGF5cyA9IDM2NSYjNDI7eStJTlQoeS80KS1JTlQoeS8xMDApK0lOVCh5LzQwMCkrSU5UKCgxNTMmIzQyO20tNDU3KS81KStkLTMwNg0KRU5EIEZVTkNUSU9ODQoNCicgcmV0dXJuIHRoZSB3ZWVrZGF5IG9mIHRoZSBnaXZlbiBkYXRlDQpGVU5DVElPTiBXZWVrRGF5JChkJCkNCiAgTE9DQUwgZCx3JA0KICBkID0gNyYjNDI7KERheXMoZCQpIE1PRCA3KSsxDQogIHckID0gIlN1biAgICBNb24gICAgVHVlcyAgIFdlZG5lcyBUaHVycyAgRnJpICAgIFNhdHVyICINCiAgV2Vla0RheSQgPSBNSUQkKHckLGQsSU5TVFIoZCx3JCwiICIpLWQpKyJkYXkiDQpFTkQgRlVOQ1RJT04NCg0KJyByZXR1cm4gdGhlIGRheSBvZiB0aGUgbW9udGggb2YgdGhlIGdpdmVuIGRhdGUNCkZVTkNUSU9OIERheSQoZCQpDQogIExPQ0FMIHoNCiAgeiA9IEFTQyhkJCk9NDgNCiAgRGF5JCA9IE1JRCQoZCQsMSt6LDIteikNCkVORCBGVU5DVElPTg0KDQonIHJldHVybiB0aGUgbW9udGggb2YgdGhlIGdpdmVuIGRhdGUNCkZVTkNUSU9OIE1vbnRoJChkJCkNCiAgTE9DQUwgbSxtJA0KICBtID0gMTAmIzQyO1ZBTChNSUQkKGQkLDQsMikpLTkNCiAgbSQgPSAiSmFudWFyeSAgIEZlYnJ1YXJ5ICBNYXJjaCAgICAgQXByaWwgICAgIE1heSAgICAgICBKdW5lICAgICAgIg0KICBtJCA9IG0kKyJKdWx5ICAgICAgQXVndXN0ICAgIFNlcHRlbWJlciBPY3RvYmVyICAgTm92ZW1iZXIgIERlY2VtYmVyICINCiAgTW9udGgkID0gTUlEJChtJCxtLElOU1RSKG0sbSQsIiAiKS1tKQ0KRU5EIEZVTkNUSU9ODQoNCicgdXBkYXRlIGRhdGUgZCQgdG8gbmV4dCBkYXkNClNVQiBOZXh0RGF5KGQkKQ0KICBMT0NBTCBkLG0seSxhDQogIGQgPSBWQUwoTUlEJChkJCwxLDIpKSsxDQogIG0gPSBWQUwoTUlEJChkJCw0LDIpKQ0KICB5ID0gVkFMKE1JRCQoZCQsNyw0KSkNCiAgYSA9IHkgTU9EIDQgPSAwIEFORCAoeSBNT0QgMTAwICZsdDsmZ3Q7IDAgT1IgeSBNT0QgNDAwID0gMCkNCiAgSUYgZCAmZ3Q7IDMxIE9SICgobSsobSZndDs3KSkgTU9EIDIgPSAwIEFORCBkICZndDsgMzApIE9SIChtID0gMiBBTkQgZCAmZ3Q7IDI4K2EpIFRIRU4NCiAgICBkID0gMSYjNTg7IG0gPSBtKzEmIzU4OyBJRiBtICZndDsgMTIgVEhFTiBtID0gMSYjNTg7IHkgPSB5KzENCiAgRU5ESUYNCiAgZCQgPSBGT1JNQVQkKGQsIiUwMmciKSsiLSIrRk9STUFUJChtLCIlMDJnIikrIi0iK0ZPUk1BVCQoeSwiJTA0ZyIpDQpFTkQgU1VCDQoNCicgdXBkYXRlIGRhdGUgZCQgdG8gcHJldmlvdXMgZGF5DQpTVUIgUHJldkRheShkJCkNCiAgTE9DQUwgZCxtLHksYQ0KICBkID0gVkFMKE1JRCQoZCQsMSwyKSktMQ0KICBtID0gVkFMKE1JRCQoZCQsNCwyKSkNCiAgeSA9IFZBTChNSUQkKGQkLDcsNCkpDQogIGEgPSB5IE1PRCA0ID0gMCBBTkQgKHkgTU9EIDEwMCAmbHQ7Jmd0OyAwIE9SIHkgTU9EIDQwMCA9IDApDQogIElGIGQgJmx0OyAxIFRIRU4NCiAgICBtID0gbS0xJiM1ODsgSUYgbSAmbHQ7IDEgVEhFTiBtID0gMTImIzU4OyB5ID0geS0xDQogICAgZCA9IDMxLSgobSsobSZndDs3KSkgTU9EIDIgPSAwKQ0KICAgIElGIG0gPSAyIFRIRU4gZCA9IDI4K2ENCiAgRU5ESUYNCiAgZCQgPSBGT1JNQVQkKGQsIiUwMmciKSsiLSIrRk9STUFUJChtLCIlMDJnIikrIi0iK0ZPUk1BVCQoeSwiJTA0ZyIpDQpFTkQgU1VCPC9wcmU+ZGSyEYCyPH+ujGQBcPvCUvivMb4FCQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">MOON.BAS lunar calendar with graphics and simple GUI</h1><small>Modified on 2018/03/04 22:58 by rave &mdash; Categorized as: Astronomy, Dates, Time and Clocks, Electronics</small><br /><br />This program displays the moon phase for any calendar date (after 1582 since it does not use a Julian calendar correction).<br /><br />The program has a simple interactive GUI with three windows. You can enter a date and navigate back/forth through the lunar calendar.<br /><br />The starry night is animated with a simple trick using a PRNG with two seed counters, one that runs ahead of the other where the first turns a random star on and the other that runs behind turns a star off. Other routines that can be useful are the rounded box drawing and date conversion routines.<br /><br />The code is written for the Maximite and Colour Maximite and can be run in any color mode, the windows and graphics adjust.<br /><br />This is freeware.<br /><br />Enjoy!<br /><br /><pre>' MOON.BAS v1.0
+' Displays the moon phase for any date after 1582
+' For Maximite and Colour Maximite
+' This is freeware
+' Robert van Engelen, 2018
+
+' fetch current date
+d$ = DATE$
+
+CLS
+FONT 1,1,0
+PRNG.seed(prn1)
+maxstars = 80
+state = 0
+
+' CMM&#58; use color with the current resolution and define background color bg
+bg = 0
+IF MM.DEVICE$ = "Colour Maximite" THEN COLOR 7&#58; bg = 1
+w = MM.HRES&#58; h = MM.VRES
+
+' set window sizes
+w2 = w/4&#58; w3 = w-w2&#58; h1 = h/6&#58; h2 = h-h1
+
+DO ' loop until quit
+
+  ' draw windows
+  DrawBox 1,1,w-2,h1-2,7,0,8
+  DrawBox 1,h1+1,w2-2,h2-2,7,bg,8
+  DrawBox w2+1,h1+1,w3-2,h2-2,7,0,8
+  PRINT @(8,8) "Welcome to the lunar calendar"
+  PRINT @(8,20) "Date&#58; ";
+  PRINT WeekDay$(d$);" ";Month$(d$);" ";Day$(d$);", ";RIGHT$(d$,4)
+
+  ' compute phase
+  d = Days(d$)+19
+  p = d/29.530588
+  p = p-INT(p)
+  phase = 4&#42;p
+
+  ' display moon phase
+  CenterTitle 0,h1+8,w2,bg,MoonPhase$(phase)
+  DrawMoon w2\2,h1+w2,w2\3,7,bg,phase
+  CenterTitle 0,h1+w2+w2\3+20,w2,bg,"View from Earth"
+  DrawEarthMoonSun w2+w3\2-h2\4,h1+h2\2,h2\16,phase
+
+  ' use a PRNG sequence to twinkle the night sky, no array needed
+  stars = 0
+  prn2 = prn1
+
+  DO ' loop until screen update needed
+
+    DO ' loop until key press
+
+      ' turn a star on
+      x = w2+3+(prn1 MOD (w3-5))
+      PRNG.update prn1
+      y = h1+3+(prn1 MOD (h2-5))
+      PRNG.update prn1
+      IF x+y AND 7 THEN
+        PIXEL(x,y) = -1
+      ELSE
+        LINE (x-1,y)-(x+1,y),-1
+        LINE (x,y-1)-(x,y+1),-1
+      ENDIF
+
+      ' turn a star off when maxstars painted
+      IF stars = maxstars THEN
+        PAUSE 200
+        x = w2+3+(prn2 MOD (w3-5))
+        PRNG.update prn2
+        y = h1+3+(prn2 MOD (h2-5))
+        PRNG.update prn2
+        IF x+y AND 7 THEN
+          PIXEL(x,y) = -1
+        ELSE
+          LINE (x-1,y)-(x+1,y),-1
+          LINE (x,y-1)-(x,y+1),-1
+        ENDIF
+      ELSE
+        stars = stars+1
+      ENDIF
+
+      key = ASC(INKEY$)
+
+    LOOP UNTIL key
+
+    IF key = 27 OR key = ASC("q") OR key = ASC("Q") THEN END
+
+    IF state &lt;= 1 THEN
+
+      IF key = ASC("d") OR key = ASC("D") THEN
+        PRINT @(8,20) "Enter date&#58; DD-MM-YYYY            ";
+        d$ = ""
+        state = 2
+      ELSEIF key = ASC("n") OR key = ASC("N") THEN
+        NextDay d$
+        state = 0
+      ELSEIF key = ASC("p") OR key = ASC("P") THEN
+        PrevDay d$
+        state = 0
+      ELSEIF key = ASC("s") OR key = ASC("S") THEN
+        SAVEBMP "MOONDUMP.BMP"
+        state = 0
+      ELSE
+        PRINT @(8,20) "q)uit d)ate n)ext p)rev s)ave     "
+        state = 1
+      ENDIF
+
+    ELSEIF key &gt;= ASC("0") AND key &lt;= ASC("9") THEN
+
+      d$ = d$+CHR$(key)
+      state = state+1
+      IF state = 4 THEN d$ = d$+"-"&#58; state = 5
+      IF state = 7 THEN d$ = d$+"-"&#58; state = 8
+      IF state = 12 THEN state = 0
+      FONT 1,1,1&#58; PRINT @(80,20) d$&#58; FONT 1,1,0
+
+    ENDIF
+
+  LOOP UNTIL state = 0
+
+LOOP
+
+' seed the PRNG
+SUB PRNG.seed(prn)
+  prn = TIMER
+END SUB
+
+' update PRNG using Lehmer LCG
+SUB PRNG.update(prn)
+  LOCAL k
+  k = prn\127773
+  prn = 16807&#42;(prn-127773&#42;k)-2836&#42;k
+  IF prn &lt;= 0 THEN prn = prn+&amp;h7FFFFFFF
+END SUB
+
+' put a title t$ at (x,y) centered at width w background b
+SUB CenterTitle(x,y,w,b,t$)
+  LOCAL i,j,k,n
+  n = LEN(t$)
+  IF 6&#42;n &lt; w THEN
+    PRINT @(x+w\2-3&#42;n,y) CHR$(192+b);t$;CHR$(192)
+  ELSE
+    i = 1&#58; k = 0
+    DO
+      j = INSTR(i,t$," ")
+      IF j = 0 THEN j = n+1
+      PRINT @(x+w\2-3&#42;(j-i),y+k) CHR$(192+b);MID$(t$,i,j-i);CHR$(192)
+      i = j+1&#58; k = k+12
+    LOOP UNTIL i &gt; n
+  ENDIF
+END SUB
+
+' draw rounded box at x,y to x+w,y+h color c background b corner radius r
+SUB DrawBox(x,y,w,h,c,b,r)
+  IF r &gt; 0 THEN
+    CIRCLE (x+r,y+r),r,b,F
+    CIRCLE (x+r,y+r),r,c
+    CIRCLE (x+w-r,y+r),r,b,F
+    CIRCLE (x+w-r,y+r),r,c
+    CIRCLE (x+w-r,y+h-r),r,b,F
+    CIRCLE (x+w-r,y+h-r),r,c
+    CIRCLE (x+r,y+h-r),r,b,F
+    CIRCLE (x+r,y+h-r),r,c
+    LINE (x+r,y)-(x+w-r,y+h),b,BF
+    LINE (x,y+r)-(x+w,y+h-r),b,BF
+    LINE (x+r,y)-(x+w-r,y),c
+    LINE (x+w,y+r)-(x+w,y+h-r),c
+    LINE (x+r,y+h)-(x+w-r,y+h),c
+    LINE (x,y+r)-(x,y+h-r),c
+  ELSE
+    LINE (x,y)-(x+w,y+h),b,BF
+    LINE (x,y)-(x+w,y+h),c,B
+  ENDIF
+END SUB
+
+' returns the moon phase for phase 0&lt;=p&lt;=4
+FUNCTION MoonPhase$(p)
+  IF p &lt; 0.1 THEN
+    MoonPhase$ = "New"
+  ELSEIF p &lt; 0.9 THEN
+    MoonPhase$ = "Waxing Crescent"
+  ELSEIF p &lt; 1.1 THEN
+    MoonPhase$ = "First Quarter"
+  ELSEIF p &lt; 1.9 THEN
+    MoonPhase$ = "Waxing Gibbous"
+  ELSEIF p &lt; 2.1 THEN
+    MoonPhase$ = "Full"
+  ELSEIF p &lt; 2.9 THEN
+    MoonPhase$ = "Waning Gibbous"
+  ELSEIF p &lt; 3.1 THEN
+    MoonPhase$ = "Third Quarter"
+  ELSEIF p &lt; 3.9 THEN
+    MoonPhase$ = "Waning Crescent"
+  ELSE
+    MoonPhase$ = "New"
+  ENDIF
+END FUNCTION
+
+' draw a moon at (x,y) with radius r color c background b and phase 0&lt;=p&lt;=4
+SUB DrawMoon(x,y,r,c,b,p)
+  LOCAL d1,d2
+  d1 = .833&#42;SIN((p-1)&#42;PI/2)
+  d2 = .833&#42;SIN((1-p)&#42;PI/2)
+  CIRCLE (x,y),r,c,.833,F
+  IF p &lt; 1 THEN
+    LINE (x-r,y-r)-(x-1,y+r),b,BF
+    CIRCLE (x,y),r,b,d2,F
+  ELSEIF p &lt; 2 THEN
+    LINE (x-r,y-r)-(x-1,y+r),b,BF
+    CIRCLE (x,y),r,c,d1,F
+  ELSEIF p &lt; 3 THEN
+    LINE (x+1,y-r)-(x+r,y+r),b,BF
+    CIRCLE (x,y),r,c,d2,F
+  ELSE
+    LINE (x+1,y-r)-(x+r,y+r),b,BF
+    CIRCLE (x,y),r,b,d1,F
+  ENDIF
+END SUB
+
+' draw earth, sun and moon at (x,y) with radius r and phase 0&lt;=p&lt;=4
+SUB DrawEarthMoonSun(x,y,r,p)
+  LOCAL d1,d2
+  d1 = 4&#42;r&#42;COS(p&#42;PI/2)&#42;.833
+  d2 = -4&#42;r&#42;SIN(p&#42;PI/2)
+  CIRCLE (x,y),4&#42;r,1,.833
+  CIRCLE (x+8&#42;r,y),r,6,.833,F
+  CIRCLE (x,y),r,1,.833,F
+  CIRCLE (x,y-r/3),r/4,2,2,F
+  CIRCLE (x-r/6,y+r/4),r/3,2,F
+  CIRCLE (x,y-r+r/12),r/12,7,1.5,F
+  CIRCLE (x,y+r-r/10),r/10,7,2,F
+  LINE (x-r,y-r)-(x-1,y+r),0,BF
+  CIRCLE (x+d1,y+d2),r/4,7,.833,F
+  LINE (x+d1-r/4,y+d2-r/4)-(x+d1-1,y+d2+r/4),0,BF
+END SUB
+
+' return days since 01-01-0001 without Julian calendar correction
+FUNCTION Days(d$)
+  LOCAL d,m,y,a
+  d = VAL(MID$(d$,1,2))
+  m = VAL(MID$(d$,4,2))
+  y = VAL(MID$(d$,7,4))
+  a = INT((14-m)/12)
+  m = m+12&#42;a
+  y = y-a
+  Days = 365&#42;y+INT(y/4)-INT(y/100)+INT(y/400)+INT((153&#42;m-457)/5)+d-306
+END FUNCTION
+
+' return the weekday of the given date
+FUNCTION WeekDay$(d$)
+  LOCAL d,w$
+  d = 7&#42;(Days(d$) MOD 7)+1
+  w$ = "Sun    Mon    Tues   Wednes Thurs  Fri    Satur "
+  WeekDay$ = MID$(w$,d,INSTR(d,w$," ")-d)+"day"
+END FUNCTION
+
+' return the day of the month of the given date
+FUNCTION Day$(d$)
+  LOCAL z
+  z = ASC(d$)=48
+  Day$ = MID$(d$,1+z,2-z)
+END FUNCTION
+
+' return the month of the given date
+FUNCTION Month$(d$)
+  LOCAL m,m$
+  m = 10&#42;VAL(MID$(d$,4,2))-9
+  m$ = "January   February  March     April     May       June      "
+  m$ = m$+"July      August    September October   November  December "
+  Month$ = MID$(m$,m,INSTR(m,m$," ")-m)
+END FUNCTION
+
+' update date d$ to next day
+SUB NextDay(d$)
+  LOCAL d,m,y,a
+  d = VAL(MID$(d$,1,2))+1
+  m = VAL(MID$(d$,4,2))
+  y = VAL(MID$(d$,7,4))
+  a = y MOD 4 = 0 AND (y MOD 100 &lt;&gt; 0 OR y MOD 400 = 0)
+  IF d &gt; 31 OR ((m+(m&gt;7)) MOD 2 = 0 AND d &gt; 30) OR (m = 2 AND d &gt; 28+a) THEN
+    d = 1&#58; m = m+1&#58; IF m &gt; 12 THEN m = 1&#58; y = y+1
+  ENDIF
+  d$ = FORMAT$(d,"%02g")+"-"+FORMAT$(m,"%02g")+"-"+FORMAT$(y,"%04g")
+END SUB
+
+' update date d$ to previous day
+SUB PrevDay(d$)
+  LOCAL d,m,y,a
+  d = VAL(MID$(d$,1,2))-1
+  m = VAL(MID$(d$,4,2))
+  y = VAL(MID$(d$,7,4))
+  a = y MOD 4 = 0 AND (y MOD 100 &lt;&gt; 0 OR y MOD 400 = 0)
+  IF d &lt; 1 THEN
+    m = m-1&#58; IF m &lt; 1 THEN m = 12&#58; y = y-1
+    d = 31-((m+(m&gt;7)) MOD 2 = 0)
+    IF m = 2 THEN d = 28+a
+  ENDIF
+  d$ = FORMAT$(d,"%02g")+"-"+FORMAT$(m,"%02g")+"-"+FORMAT$(y,"%04g")
+END SUB</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MOON-BAS-lunar-calendar-with-graphics-and-simple-GUI by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:21:49 GMT -->
+</html>

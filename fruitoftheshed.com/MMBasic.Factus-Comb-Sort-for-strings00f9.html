@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Factus-Comb-Sort-for-strings.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:44:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Comb Sort for strings - Fruit Of The Shed
+</title><meta name="keywords" content="sort" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Factus-Comb-Sort-for-strings&amp;NS=MMBasic&amp;NoRedirect=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login589b.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dFactus-Comb-Sort-for-strings%26NS%3dMMBasic%26NoRedirect%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Factus-Comb-Sort-for-strings266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History1a8e.html?Page=MMBasic.Factus-Comb-Sort-for-strings">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Comb Sort for strings
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print1a8e.html?Page=MMBasic.Factus-Comb-Sort-for-strings" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2017/08/13 20:38
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesb06f.html?Cat=MMBasic.Arrays" title="Arrays">Arrays</a>, <a href="MMBasic.AllPages4663.html?Cat=MMBasic.Sort" title="Sort">Sort</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f4964701d-0be1-41ab-98f0-20475edc1244" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f4964701d-0be1-41ab-98f0-20475edc1244');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="f930f655e-17a3-4d02-ac0d-c56aece47f0a" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f930f655e-17a3-4d02-ac0d-c56aece47f0a');"><a href="MMBasic.Sprite-demo-Lander-part-of-the-original-MMBasic-library.html" title="Sprite demo: Lander">Sprite demo: Lander</a></div><div id="ff948ed67-17f7-46db-933e-f406d57dcdfb" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ff948ed67-17f7-46db-933e-f406d57dcdfb');"><a href="Colour%20MaxiMite%202%20(CMM2).Example-games-and-other-programs.html" title="Example games and other programs for the CMM2">Example games and other programs for the CMM2</a><a href="Colour%20MaxiMite%202%20(CMM2).Efficient-code-for-the-CMM2.html" title="Efficient code for the CMM2">Efficient code for the CMM2</a><a href="Colour%20MaxiMite%202%20(CMM2).Converting-older-MMBASIC-programs.html" title="Converting older MMBASIC programs">Converting older MMBASIC programs</a><a href="Colour%20MaxiMite%202%20(CMM2).CMM2-Keyboard-compatibility.html" title="CMM2 Keyboard compatibility">CMM2 Keyboard compatibility</a></div><div id="s38135fcd-81df-4a2e-ab6c-a54053efb404" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s38135fcd-81df-4a2e-ab6c-a54053efb404');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).CMM2-Keyboard-compatibility.html" title="CMM2 Keyboard compatibility (Colour MaxiMite 2 (CMM2))">CMM2 Keyboard compatibility (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="MMBasic.ColourMM-Sprites-test-part-of-the-original-MMBasic-library.html" title="ColourMM Sprites test (MMBasic)">ColourMM Sprites test (MMBasic)</a> &raquo; <b><a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's38135fcd-81df-4a2e-ab6c-a54053efb404', this);" id="lnks38135fcd-81df-4a2e-ab6c-a54053efb404" onmouseout="javascript:return __HideDropDown('s38135fcd-81df-4a2e-ab6c-a54053efb404');">Comb Sort for strings (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.COILWIND-part-of-the-original-MMBasic-library.html" title="COILWIND (MMBasic)">COILWIND (MMBasic)</a> &raquo; <a href="MMBasic.Colour-Demos-part-of-the-original-MMBasic-library.html" title="Colour Demos (MMBasic)">Colour Demos (MMBasic)</a> &raquo; <a href="MMBasic.Colour-Maximite-2.html" title="Colour Maximite 2 (MMBasic)">Colour Maximite 2 (MMBasic)</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).MainPage.html" title="Main Page (Colour MaxiMite 2 (CMM2))" onmouseover="javascript:return __ShowDropDown(event, 'ff948ed67-17f7-46db-933e-f406d57dcdfb', this);" id="lnkff948ed67-17f7-46db-933e-f406d57dcdfb" onmouseout="javascript:return __HideDropDown('ff948ed67-17f7-46db-933e-f406d57dcdfb');">Main Page (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).Example-games-and-other-programs.html" title="Example games and other programs for the CMM2 (Colour MaxiMite 2 (CMM2))" onmouseover="javascript:return __ShowDropDown(event, 'f930f655e-17a3-4d02-ac0d-c56aece47f0a', this);" id="lnkf930f655e-17a3-4d02-ac0d-c56aece47f0a" onmouseout="javascript:return __HideDropDown('f930f655e-17a3-4d02-ac0d-c56aece47f0a');">Example games and other programs for the CMM2 (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).Efficient-code-for-the-CMM2.html" title="Efficient code for the CMM2 (Colour MaxiMite 2 (CMM2))">Efficient code for the CMM2 (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).Converting-older-MMBASIC-programs.html" title="Converting older MMBASIC programs (Colour MaxiMite 2 (CMM2))">Converting older MMBASIC programs (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="Colour%20MaxiMite%202%20(CMM2).CMM2-Keyboard-compatibility.html" title="CMM2 Keyboard compatibility (Colour MaxiMite 2 (CMM2))">CMM2 Keyboard compatibility (Colour MaxiMite 2 (CMM2))</a> &raquo; <a href="MMBasic.ColourMM-Sprites-test-part-of-the-original-MMBasic-library.html" title="ColourMM Sprites test (MMBasic)">ColourMM Sprites test (MMBasic)</a> &raquo; <b><a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f4964701d-0be1-41ab-98f0-20475edc1244', this);" id="lnkf4964701d-0be1-41ab-98f0-20475edc1244" onmouseout="javascript:return __HideDropDown('f4964701d-0be1-41ab-98f0-20475edc1244');">Comb Sort for strings (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		A fast sort routine. This scored best overall in a <a class="pagelink" href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">comparison test</a> of MMBasic sorts (but the CSub routines are at least 3x faster).<br /><br />originally published <a class="externallink" href="http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&amp;TPN=3" title="http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&TPN=3" target="_blank">http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&TPN=3</a> and tweaked slightly for MMBasic syntax<br /><br />One advantage of a purely MMBasic sort is it can be modified e.g. to sort an array but to maintain index links in another, so as you swap compared elements of the array, you swap their index references too.<br /><br /><b>Credit</b>: twofingers<br /><br /><pre>
+' Comb Sort
+' an optimized (8/2017 by twofingers@TBS) version of aCombSort for strings.
+' It sorts the array S$() and needs the number of elements to sort (STop)
+' Usage&#58; CombSort STop
+'
+' It takes 330ms (or less) for an array of 100 elements
+' System&#58; MM2/48MHz/MMBasic 5.04.05
+'
+Sub CombSort(STop)
+Local string M$
+Local integer i, h, T=1, F=0, sw
+Local float Gap=STop, Shrink=1.3
+
+Do While Gap&gt;1 Or Sw
+  Gap=Int(Gap/Shrink)
+  If Gap&lt;1 Then Gap=1
+  i=1&#58;Sw=F
+  For h=i+Gap To STop
+    If S$(i)&gt;S$(h) Then
+       M$=S$(i)&#58;S$(i)=S$(h)&#58;S$(h)=M$&#58;Sw=T
+    EndIf
+    i=i+1
+  Next
+Loop
+End Sub
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Factus-Comb-Sort-for-strings.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:44:16 GMT -->
+</html>

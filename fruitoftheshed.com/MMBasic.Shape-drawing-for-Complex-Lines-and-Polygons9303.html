@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Shape drawing for Complex Lines and Polygons - Fruit Of The Shed
+</title><meta name="keywords" content="Shape, polygon" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Shape-drawing-for-Complex-Lines-and-Polygons&amp;NS=MMBasic&amp;HL=mmbasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login52db.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dShape-drawing-for-Complex-Lines-and-Polygons%26NS%3dMMBasic%26HL%3dmmbasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History1fec.html?Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Shape drawing for Complex Lines and Polygons
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print1fec.html?Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2019/05/24 13:22
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesb06f.html?Cat=MMBasic.Arrays" title="Arrays">Arrays</a>, <a href="MMBasic.AllPageseb16.html?Cat=MMBasic.Graphics" title="Graphics">Graphics</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fc94b7e74-1f2a-42f3-9e1a-435237b87287" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fc94b7e74-1f2a-42f3-9e1a-435237b87287');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="f03cea439-2f43-411d-996d-94aae4bd54a7" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f03cea439-2f43-411d-996d-94aae4bd54a7');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="f2edb4dc1-8963-4881-8581-312a9fe59c99" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f2edb4dc1-8963-4881-8581-312a9fe59c99');"></div><div id="f101c688a-d191-4e18-ac97-85ed37ad004d" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f101c688a-d191-4e18-ac97-85ed37ad004d');"><a href="MMBasic.Ultra-Compact-Logging-with-Flash-Storage-on-small-MicroMites.html" title="Ultra-Compact Logging with Flash Storage on small MicroMites">Ultra-Compact Logging with Flash Storage on small MicroMites</a></div><div id="f89e8ba57-85b5-416f-8bf4-2b99c244b049" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f89e8ba57-85b5-416f-8bf4-2b99c244b049');"></div><div id="s345d45af-1a5b-40de-9a6d-afb914263961" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s345d45af-1a5b-40de-9a6d-afb914263961');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="sc297a527-1d09-4a60-b8ea-0b4fca415146" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sc297a527-1d09-4a60-b8ea-0b4fca415146');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a> &raquo; <a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'sc297a527-1d09-4a60-b8ea-0b4fca415146', this);" id="lnksc297a527-1d09-4a60-b8ea-0b4fca415146" onmouseout="javascript:return __HideDropDown('sc297a527-1d09-4a60-b8ea-0b4fca415146');">Comb Sort for strings (MMBasic)</a> &raquo; <b><a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's345d45af-1a5b-40de-9a6d-afb914263961', this);" id="lnks345d45af-1a5b-40de-9a6d-afb914263961" onmouseout="javascript:return __HideDropDown('s345d45af-1a5b-40de-9a6d-afb914263961');">Shape drawing for Complex Lines and Polygons (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Maxifont-bas-part-of-the-original-MMBasic-library.html" title="Maxifont.bas (MMBasic)">Maxifont.bas (MMBasic)</a> &raquo; <a href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic (MMBasic)">Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic (MMBasic)</a> &raquo; <a href="MMBasic.Hi-IQ-Solitaire-part-of-the-original-MMBasic-library.html" title="Hi-IQ (Solitaire) (MMBasic)">Hi-IQ (Solitaire) (MMBasic)</a> &raquo; <a href="MMBasic.Measuring-RMS-algorythm-using-MMBasic.html" title="Measuring RMS (algorythm) using MMBasic (MMBasic)">Measuring RMS (algorythm) using MMBasic (MMBasic)</a> &raquo; <a href="MMBasic.Colour-Demos-part-of-the-original-MMBasic-library.html" title="Colour Demos (MMBasic)">Colour Demos (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories.html" title="MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f101c688a-d191-4e18-ac97-85ed37ad004d', this);" id="lnkf101c688a-d191-4e18-ac97-85ed37ad004d" onmouseout="javascript:return __HideDropDown('f101c688a-d191-4e18-ac97-85ed37ad004d');">MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)</a> &raquo; <a href="MMBasic.A-Simple-GUI-pack.html" title="A Simple GUI pack (MMBasic)">A Simple GUI pack (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a> &raquo; <a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f03cea439-2f43-411d-996d-94aae4bd54a7', this);" id="lnkf03cea439-2f43-411d-996d-94aae4bd54a7" onmouseout="javascript:return __HideDropDown('f03cea439-2f43-411d-996d-94aae4bd54a7');">Comb Sort for strings (MMBasic)</a> &raquo; <b><a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fc94b7e74-1f2a-42f3-9e1a-435237b87287', this);" id="lnkfc94b7e74-1f2a-42f3-9e1a-435237b87287" onmouseout="javascript:return __HideDropDown('fc94b7e74-1f2a-42f3-9e1a-435237b87287');">Shape drawing for Complex Lines and Polygons (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		The MMX and ST variants of MMBasic implement a Polygon command that takes a set of points in two integer arrays and draws an outline of the area with the option to fill the interior.<br /><br />The following is inspired by this command but includes an option to draw the data as either a line or a polygon. There is no option to fill the enclosed area.<br /><br />As written below, the routines use the Cartesian drawing commands (see dependencies) to provide co-ordinate 0,0 in the bottom left of the display. It is an easy enough job to replace the relevant drawing commands with the native ones of MMBasic.<br /><br />An offset can be specified for the Draw command thus allowing the Shape data to be placed using relative coordinates. Scaling could easily be added but I have avoided it for now because it would slow things down with a (probably largely) un-necessary calculation.<br /><br />This is a pure MMBasic set of routines and thus will work on any MMBasic platform.<br /><br /><b>Dependencies</b><br /><a class="pagelink" target="_blank" href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a><br /><br /><b>Preamble</b><br />The  commands assume that arrays are dimensioned from zero (not 1)<br /><pre>
+	Option Base 0
+</pre><br /><br /><b>Example</b><br /><code>'preamble<br /> Option Base 0<br /><br /> CLS<br /><br /> Const Gxm=MM.HRes-1,Gym=MM.VRes-1 'screen dimensions follow LCDPANEL settings<br /> Dim Integer tx,ty,otx,oty,Gx,Gy,n,p 'Gx and Gy are the current native co-ordinates<br />Do<br /><br /> For p=0 To 320<br /> Colour 0<br /> Move p,0:DrawR 0,240<br /><br /> Shape.New(10)<br /> For n=1 To 10<br />  Shape.Vertex(Rnd*Gxm,Rnd*Gym) ' some random scribble<br /> Next<br /><br /> Colour RGB(White)<br /> <br /> Shape.Draw(n,n,0) ' 0= the last point isn't connected to the first -  a complex line<br /><br /> Shape.New(4) ' a 50 pixel square<br /> Shape.Vertex(0,0)<br /> Shape.Vertex(0,50)<br /> Shape.Vertex(50,50)<br /> Shape.Vertex(50,0)<br /><br /> Colour RGB(Red)<br /> For n=1 To 20 ' 20 random squares<br />  Shape.Draw(Rnd*(Gxm-50),Rnd*(Gym-50),1) ' 1= the last point is connected to the first, enclosing the area (polygon)<br /> Next<br /><br />Next<br />Loop<br /></code><br /><br /><br /><b>The Code</b><br /><pre>
+'Clear the shape stack and pointers in readiness for a new shape.
+ Sub Shape.New(Points As Integer)
+  On Error Skip 2
+  Erase Sh
+  Dim Integer ShPtr
+  Dim Integer Sh(1,Points-1) '0,n is X, 1,n is Y
+  ShPtr=0
+ End Sub
+
+'Add a new vertex (corner) to the shape stack
+'Care must be taken not to add more vertices than were specified in Shape.New
+ Sub Shape.Vertex(x As Integer,y As Integer)
+  Sh(0,ShPtr)=x&#58;Sh(1,ShPtr)=y
+  ShPtr=ShPtr+1
+ End Sub
+
+'Draw the shape. If opt is non-zero, the shape is closed by drawing between the first and last vertices to produce a polygon
+'The shape stack is preserved and so can be re-used.
+'X/Y offset is added to the shape vertices allowing the shape to be drawn in multiple locations with the same data.
+ Sub Shape.Draw(xOffset As Integer,yOffset As Integer,Opt As Integer)
+  Local n As Integer
+  Move xOffset+Sh(0,0),yOffset+Sh(1,0)
+  For n=1 To ShPtr-1
+   Draw xOffset+Sh(0,n),yOffset+Sh(1,n)
+  Next
+  If Opt Then Draw xOffset+Sh(0,0),yOffset+Sh(1,0)
+ End Sub
+</pre><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:31 GMT -->
+</html>

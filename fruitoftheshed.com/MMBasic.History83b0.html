@@ -1,0 +1,196 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Regular-Expression-Function&Revision=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:52:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Regular-Expression-Function&amp;Revision=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAUpUGFnZSBIaXN0b3J5OiBSZWd1bGFyIEV4cHJlc3Npb24gRnVuY3Rpb25kAgUPEGQQFQIBMQEwFQIBMQEwFCsDAmdnZGQCBw8QZBAVAwdDdXJyZW50ATEBMBUDB0N1cnJlbnQBMQEwFCsDA2dnZ2RkAgsPFgIfAAX4JDx0YWJsZSBjbGFzcz0iYm94IiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQ+PHAgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPjxiPjxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5SZWd1bGFyLUV4cHJlc3Npb24tRnVuY3Rpb24mYW1wO1JldmlzaW9uPTAwMDAwIj4mbGFxdW87IE9sZGVyIFJldmlzaW9uPC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5SZWd1bGFyLUV4cHJlc3Npb24tRnVuY3Rpb24iPkJhY2sgdG8gUGFnZSBIaXN0b3J5PC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuUmVndWxhci1FeHByZXNzaW9uLUZ1bmN0aW9uLmFzaHgiPkN1cnJlbnQgUmV2aXNpb248L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAxOC8xMC8xNSAxNDoxMDwvaDM+PGJyIC8+VGhlIGZvbGxvd2luZyBpcyB0aGUgPGEgY2xhc3M9ImV4dGVybmFsbGluayIgaHJlZj0iaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVndWxhcl9leHByZXNzaW9uIiB0aXRsZT0iUmVndWxhciBFeHByZXNzaW9uIiB0YXJnZXQ9Il9ibGFuayI+UmVndWxhciBFeHByZXNzaW9uPC9hPiBNYXRjaCBmdW5jdGlvbiBsaWZ0ZWQgZnJvbSB1c2VyIFJhdmUncyA8YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLk1NVU5JWC1VTklYLWxpa2UtY29tbWFuZHMtY2F0LWRpci1ncmVwLW1vcmUuYXNoeCIgdGl0bGU9Ik1NVU5JWCAtIFVOSVgtbGlrZSBjb21tYW5kczogY2F0IGRpciBncmVwIG1vcmUiPk1NVU5JWCAtIFVOSVgtbGlrZSBjb21tYW5kczwvYT4gR1JFUCByb3V0aW5lLiBUaGF0IGluIHR1cm4gdXNlZCBSb2IgUGlrZSdzIGFsZ29yaXRobS4gSXQgaXMgcmVhc29uYWJseSBmYXN0IGFuZCBicmluZ3MgYSBwb3dlcmZ1bCBmZWF0dXJlIHRvIE1NQmFzaWMuIEl0IGlzIG5vdCBhIGZ1bGwtYmxvb2RlZCByZWdleHAgZnVuY3Rpb24gYnV0IGNhdGNoZXMgdGhlIGZvbGxvd2luZyAgZnVuY3Rpb25hbGl0eTo8YnIgLz48YnIgLz4gICAuICAgICBtYXRjaGVzIGFueSBzaW5nbGUgY2hhcmFjdGVyPGJyIC8+ICAgJiMwMDkxO2FiYyYjMDA5MzsgbWF0Y2hlcyBhIG9yIGIgb3IgYzxiciAvPiAgID8gICAgIG1hdGNoZXMgemVybyBvciBvbmUgb2YgdGhlIHByZXZpb3VzIGNoYXJhY3RlciA8YnIgLz4gICAqICAgICBtYXRjaGVzIHplcm8gb3IgbW9yZSBvZiB0aGUgcHJldmlvdXMgY2hhcmFjdGVyIGUuZy4gQSogaXMgYW55IG51bWJlciBvZiBBJ3M8YnIgLz4gICArICAgICBtYXRjaGVzIG9uZSBvciBtb3JlIG9mIHRoZSBwcmV2aW91cyBjaGFyYWN0ZXIgPGJyIC8+ICAgXiAgICAgbWF0Y2hlcyBiZWdpbiBvZiB0ZXh0IGUuZy4gXkEgbWVhbnMgdGhlIHN0cmluZyBtdXN0IHN0YXJ0IHdpdGggQTxiciAvPiAgICQgICAgIG1hdGNoZXMgZW5kIG9mIHRleHQgZS5nLiBBJCBtZWFucyB0aGUgc3RyaW5nIG11c3QgZW5kIHdpdGggQTxiciAvPiAgIFwgICAgIEZvbGxvd2luZyBjaGFyYWN0ZXIgdG8gYmUgbWF0Y2hlZCBsaXRlcmFsbHkuIGUuZy4gXD8gbWF0Y2hlcyA/LCBcXCBtYXRjaGVzIFwgZXRjLjxiciAvPjxiciAvPkkgZXh0cmFjdGVkIHRoZSBSZWdFeHAgZnVuY3Rpb24gc28gdGhhdCBpdCBjb3VsZCBiZSB1c2VkIGFzIGEgZ2VuZXJhbCBmdW5jdGlvbiB0byBjb21wYXJlIGlmIGEgc3RyaW5nICJsb29rcyBsaWtlIi4uLjxiciAvPjxiciAvPjxiPk5vdGVzOjwvYj48YnIgLz48dWw+PGxpPkl0IGlzIGNhc2Ugc2Vuc2l0aXZlLjwvbGk+PGxpPk5vdCBhIGNvbXBsZXRlIHNldCBvZiBleHByZXNzaW9ucywgYnV0IHdoYXQgdGhlcmUgaXMgd2lsbCBjb3ZlciA5MCUgb2YgcmVxdWlyZW1lbnRzPC9saT48bGk+UmVjdXJzaXZlIG1hdGNoaW5nIGlzIG5vdCBzdXBwb3J0ZWQsIGUuZy4gPGNvZGU+JiMwMDkxO2hjJiMwMDkzOz9hdCA8L2NvZGU+IG1hdGNoaW5nICJhdCIsICJoYXQiLCBhbmQgImNhdCIgd2lsbCBub3Qgd29yayBjb3JyZWN0bHkuPC9saT48bGk+UmVnRXhwIHJldHVybnMgYSBub24temVybyBvbiBhIG1hdGNoIChpdCBtaWdodCBub3QgYmUgMSkuPGJyIC8+PC9saT48L3VsPjxiciAvPjxiPlN5bnRheDo8L2I+PGJyIC8+PVJlZ0V4cChSZWd1bGFyRXhwcmVzc2lvblN0cmluZyQsTXlTdHJpbmckKTxiciAvPjxiciAvPjxiPkV4YW1wbGU6PC9iPiAgc2ltcGxlIG1hdGNoIGZvciBhIHN0cmluZyB0aGF0ICJsb29rcyBsaWtlIiBpdCA8aT5taWdodCA8L2k+YmUgYSB0aW1lLiBSZWdFeHAgaXMgdXNlZCBoZXJlIHRvIGRldGVybWluZSB0aGUgImxvb2sgYW5kIGZlZWwiIG9mIHRoZSB0ZXN0ZWQgc3RyaW5nIC0gdGhlIGFjdHVhbCB2YWx1ZXMgcmVtYWluIHRvIGJlIGNoZWNrZWQuIFNlZSA8YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuSXNEYXRlLWFuZC1Jc1RpbWUtZnVuY3Rpb25zLVZCLVdvcmstQS1MaWtlLmFzaHgiIHRpdGxlPSJJc0RhdGUgYW5kIElzVGltZSBmdW5jdGlvbnMgKFZCIFdvcmstQS1MaWtlKSI+SXNUaW1lPC9hPiBmb3IgYSBjb21wbGV0ZSBzb2x1dGlvbi48YnIgLz5QcmludCBSZWdFeHAoIl4mIzAwOTE7MDEyJiMwMDkzOyYjMDA5MTswMTIzNDU2Nzg5JiMwMDkzOzomIzAwOTE7MDEyMzQ1JiMwMDkzOyYjMDA5MTswMTIzNDU2Nzg5JiMwMDkzOyQiLCIxMDo1NSIpIDxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczo8L2I+PGJyIC8+Tm9uZTxiciAvPjxiciAvPjxwcmU+DQoJRnVuY3Rpb24gUmVnRXhwKHJlZ2V4JCx0ZXh0JCkgJyBjYXNlIHNlbnNpdGl2ZQ0KCQlMb2NhbCBzLG4sbSxmDQoJCW49TGVuKHJlZ2V4JCkmIzU4O209TGVuKHRleHQkKQ0KCQlSZWdFeHA9MA0KCQlJZiBNaWQkKHJlZ2V4JCwxLDEpPSJeIiBUaGVuDQoJCQlNYXRjaEhlcmUgcmVnZXgkLHRleHQkLDIsMSxuLG0sZg0KCQkJUmVnRXhwPWYNCgkJRWxzZQ0KCQkJRm9yIHM9MSBUbyBtDQoJCQkJTWF0Y2hIZXJlIHJlZ2V4JCx0ZXh0JCwxLHMsbixtLGYNCgkJCQlJZiBmIFRoZW4gUmVnRXhwPXMmIzU4OyBFeGl0IEZvcg0KCQkJTmV4dA0KCQlFbmRJZg0KCUVuZCBGdW5jdGlvbg0KDQoJU3ViIE1hdGNoSGVyZShyZWdleCQsdGV4dCQscixzLG4sbSxmKQ0KCQlMb2NhbCBpDQoJCURvIFdoaWxlIHIgJmx0Oz0gbg0KCQkJSWYgTWlkJChyZWdleCQscik9IiQiIFRoZW4gZj1zJmd0O20mIzU4OyBFeGl0IFN1Yg0KCQkJSWYgTWlkJChyZWdleCQsciwxKT0iJiM5MTsiIFRoZW4NCgkJCQlpPUluc3RyKHIrMixyZWdleCQsIiYjOTM7IikNCgkJCQlJZiBpIFRoZW4gaT1pKzEgRWxzZSBpPXIrMQ0KCQkJRWxzZUlmIE1pZCQocmVnZXgkLHIsMSk9IlwiIFRoZW4NCgkJCQlpPXIrMg0KCQkJCUVsc2UNCgkJCQlpPXIrMQ0KCQkJRW5kSWYNCgkJCUlmIE1pZCQocmVnZXgkLGksMSk9IiYjNDI7IiBUaGVuDQoJCQkJTWF0Y2hTdGFyIHJlZ2V4JCx0ZXh0JCxyLGkscyxuLG0sZg0KCQkJCUV4aXQgU3ViDQoJCQlFbmRJZg0KCQkJSWYgTWlkJChyZWdleCQsaSwxKT0iPyIgVGhlbg0KCQkJCU1hdGNoT3B0aW9uYWwgcmVnZXgkLHRleHQkLHIsaSxzLG4sbSxmDQoJCQkJRXhpdCBTdWINCgkJCUVuZElmDQoJCQlJZiBzJmd0O20gVGhlbiBmPTAmIzU4OyBFeGl0IFN1Yg0KCQkJaT1yDQoJCQlNYXRjaENoYXIgcmVnZXgkLHRleHQkLHIscyxmDQoJCQlJZiBOb3QgZiBUaGVuIEV4aXQgU3ViDQoJCQlJZiBNaWQkKHJlZ2V4JCxyKzEsMSk9IisiIFRoZW4NCgkJCQlNYXRjaFN0YXIgcmVnZXgkLHRleHQkLGkscisxLHMrMSxuLG0sZg0KCQkJCUV4aXQgU3ViDQoJCQlFbmRJZg0KCQkJcj1yKzEmIzU4OyBzPXMrMQ0KCQlMb29wDQoJCWY9MQ0KCUVuZCBTdWINCg0KCVN1YiBNYXRjaFN0YXIocmVnZXgkLHRleHQkLHIsaSxzLG4sbSxmKQ0KCQlEbw0KCQkJTWF0Y2hIZXJlIHJlZ2V4JCx0ZXh0JCxpKzEsKHMpLG4sbSxmDQoJCQlJZiBmIG9yIHMmZ3Q7bSBUaGVuIEV4aXQgU3ViDQoJCQlNYXRjaENoYXIgcmVnZXgkLHRleHQkLChyKSxzLGYNCgkJCUlmIE5vdCBmIFRoZW4gRXhpdCBTdWINCgkJCXM9cysxDQoJCUxvb3ANCglFbmQgU3ViDQoNCglTdWIgTWF0Y2hPcHRpb25hbChyZWdleCQsdGV4dCQscixpLHMsbixtLGYpDQoJCU1hdGNoSGVyZSByZWdleCQsdGV4dCQsaSsxLChzKSxuLG0sZg0KCQlJZiBmIG9yIHMmZ3Q7bSBUaGVuIEV4aXQgU3ViDQoJCU1hdGNoQ2hhciByZWdleCQsdGV4dCQsKHIpLHMsZg0KCQlJZiBOb3QgZiBUaGVuIEV4aXQgU3ViDQoJCU1hdGNoSGVyZSByZWdleCQsdGV4dCQsaSsxLHMrMSxuLG0sZg0KCUVuZCBTdWINCg0KCVN1YiBNYXRjaENoYXIocmVnZXgkLHRleHQkLHIscyxmKQ0KCQlMb2NhbCBpLGoNCgkJZj1NaWQkKHJlZ2V4JCxyLDEpPSIuIg0KCQlJZiBmIFRoZW4gRXhpdCBTdWINCgkJSWYgTWlkJChyZWdleCQsciwxKT0iJiM5MTsiIFRoZW4NCgkJCWk9SW5zdHIocisyLHJlZ2V4JCwiJiM5MzsiKQ0KCQkJSWYgaSBUaGVuDQoJCQkJaj1JbnN0cihyKzEscmVnZXgkLE1pZCQodGV4dCQscywxKSkNCgkJCQlmPWomZ3Q7MCBBbmQgaiZsdDtpJiM1ODtyPWkNCgkJCQlFeGl0IFN1Yg0KCQkJRW5kSWYNCgkJRWxzZUlmIE1pZCQocmVnZXgkLHIsMSk9Q2hyJCg5MikgVGhlbg0KCQkJcj1yKzENCgkJRW5kSWYNCgkJZj1NaWQkKHJlZ2V4JCxyLDEpPU1pZCQodGV4dCQscywxKQ0KCUVuZCBTdWINCjwvcHJlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPmRk/Y0XAWerdel31Pr4NPvEVxi/n4c=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwKX0+OiBwK9z/TSAwKiz/TSAwK3j57gBwLC5ta/BQLd5ta/BQL9yYWiCcfF7SKJr1Ynn0SzhyyJ2MCS9zoE" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login8d5c.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Regular-Expression-Function%26Revision%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Regular Expression Function</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.History9d3a.html?Page=MMBasic.Regular-Expression-Function&amp;Revision=00000">&laquo; Older Revision</a> - <a href="MMBasic.History8be1.html?Page=MMBasic.Regular-Expression-Function">Back to Page History</a> - <a href="MMBasic.Regular-Expression-Function.html">Current Revision</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/10/15 14:10</h3><br />The following is the <a class="externallink" href="https://en.wikipedia.org/wiki/Regular_expression" title="Regular Expression" target="_blank">Regular Expression</a> Match function lifted from user Rave's <a class="pagelink" target="_blank" href="MMBasic.MMUNIX-UNIX-like-commands-cat-dir-grep-more.html" title="MMUNIX - UNIX-like commands: cat dir grep more">MMUNIX - UNIX-like commands</a> GREP routine. That in turn used Rob Pike's algorithm. It is reasonably fast and brings a powerful feature to MMBasic. It is not a full-blooded regexp function but catches the following  functionality:<br /><br />   .     matches any single character<br />   &#0091;abc&#0093; matches a or b or c<br />   ?     matches zero or one of the previous character <br />   *     matches zero or more of the previous character e.g. A* is any number of A's<br />   +     matches one or more of the previous character <br />   ^     matches begin of text e.g. ^A means the string must start with A<br />   $     matches end of text e.g. A$ means the string must end with A<br />   \     Following character to be matched literally. e.g. \? matches ?, \\ matches \ etc.<br /><br />I extracted the RegExp function so that it could be used as a general function to compare if a string "looks like"...<br /><br /><b>Notes:</b><br /><ul><li>It is case sensitive.</li><li>Not a complete set of expressions, but what there is will cover 90% of requirements</li><li>Recursive matching is not supported, e.g. <code>&#0091;hc&#0093;?at </code> matching "at", "hat", and "cat" will not work correctly.</li><li>RegExp returns a non-zero on a match (it might not be 1).<br /></li></ul><br /><b>Syntax:</b><br />=RegExp(RegularExpressionString$,MyString$)<br /><br /><b>Example:</b>  simple match for a string that "looks like" it <i>might </i>be a time. RegExp is used here to determine the "look and feel" of the tested string - the actual values remain to be checked. See <a class="pagelink" href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsTime</a> for a complete solution.<br />Print RegExp("^&#0091;012&#0093;&#0091;0123456789&#0093;:&#0091;012345&#0093;&#0091;0123456789&#0093;$","10:55") <br /><br /><b>Dependencies:</b><br />None<br /><br /><pre>
+	Function RegExp(regex$,text$) ' case sensitive
+		Local s,n,m,f
+		n=Len(regex$)&#58;m=Len(text$)
+		RegExp=0
+		If Mid$(regex$,1,1)="^" Then
+			MatchHere regex$,text$,2,1,n,m,f
+			RegExp=f
+		Else
+			For s=1 To m
+				MatchHere regex$,text$,1,s,n,m,f
+				If f Then RegExp=s&#58; Exit For
+			Next
+		EndIf
+	End Function
+
+	Sub MatchHere(regex$,text$,r,s,n,m,f)
+		Local i
+		Do While r &lt;= n
+			If Mid$(regex$,r)="$" Then f=s&gt;m&#58; Exit Sub
+			If Mid$(regex$,r,1)="&#91;" Then
+				i=Instr(r+2,regex$,"&#93;")
+				If i Then i=i+1 Else i=r+1
+			ElseIf Mid$(regex$,r,1)="\" Then
+				i=r+2
+				Else
+				i=r+1
+			EndIf
+			If Mid$(regex$,i,1)="&#42;" Then
+				MatchStar regex$,text$,r,i,s,n,m,f
+				Exit Sub
+			EndIf
+			If Mid$(regex$,i,1)="?" Then
+				MatchOptional regex$,text$,r,i,s,n,m,f
+				Exit Sub
+			EndIf
+			If s&gt;m Then f=0&#58; Exit Sub
+			i=r
+			MatchChar regex$,text$,r,s,f
+			If Not f Then Exit Sub
+			If Mid$(regex$,r+1,1)="+" Then
+				MatchStar regex$,text$,i,r+1,s+1,n,m,f
+				Exit Sub
+			EndIf
+			r=r+1&#58; s=s+1
+		Loop
+		f=1
+	End Sub
+
+	Sub MatchStar(regex$,text$,r,i,s,n,m,f)
+		Do
+			MatchHere regex$,text$,i+1,(s),n,m,f
+			If f or s&gt;m Then Exit Sub
+			MatchChar regex$,text$,(r),s,f
+			If Not f Then Exit Sub
+			s=s+1
+		Loop
+	End Sub
+
+	Sub MatchOptional(regex$,text$,r,i,s,n,m,f)
+		MatchHere regex$,text$,i+1,(s),n,m,f
+		If f or s&gt;m Then Exit Sub
+		MatchChar regex$,text$,(r),s,f
+		If Not f Then Exit Sub
+		MatchHere regex$,text$,i+1,s+1,n,m,f
+	End Sub
+
+	Sub MatchChar(regex$,text$,r,s,f)
+		Local i,j
+		f=Mid$(regex$,r,1)="."
+		If f Then Exit Sub
+		If Mid$(regex$,r,1)="&#91;" Then
+			i=Instr(r+2,regex$,"&#93;")
+			If i Then
+				j=Instr(r+1,regex$,Mid$(text$,s,1))
+				f=j&gt;0 And j&lt;i&#58;r=i
+				Exit Sub
+			EndIf
+		ElseIf Mid$(regex$,r,1)=Chr$(92) Then
+			r=r+1
+		EndIf
+		f=Mid$(regex$,r,1)=Mid$(text$,s,1)
+	End Sub
+</pre><br /><br /><br /><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Regular-Expression-Function&Revision=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:52:52 GMT -->
+</html>

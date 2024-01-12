@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Now-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:03 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Now() Function (VB work-a-like)  - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Now-Function-VB-work-a-like" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFiRU8aDEgY2xhc3M9InBhZ2V0aXRsZSI+Tm93KCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKSA8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIwLzA5LzE2IDA4OjA4IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBEYXRlcywgVGltZSBhbmQgQ2xvY2tzLCBFbmNvZGUgYW5kIERlY29kZSwgUHJvZ3JhbSBGbG93PC9zbWFsbD48YnIgLz48YnIgLz5Nb2Rlcm4gbGFuZ3VhZ2VzIGhhdmUgZXh0ZW5kZWQgZGF0YSB0eXBlcyBiZXlvbmQgc2ltcGxlIHN0cmluZ3Mgb3IgbnVtZXJpYy4gVkIgaGFzIGEgdGltZSBkYXRhdHlwZSB3aGljaCBhbGxvd3MgYWRkaXRpb24sIHN1YnRyYWN0aW9uLCB3ZWVrZGF5LCBtb250aCBhbmQgZm9ybWF0dGluZyBhbGwgd2l0aCBkYXRlcyBhcyBpZiB0aGV5IHdlcmUgbnVtYmVycyBpbiB0aGUgY29udmVudGlvbmFsIHNlbnNlLjxiciAvPjxiciAvPlZCJ3MgTm93KCkgZnVuY3Rpb24gcmV0dXJucyB0aGUgY3VycmVudCBzeXN0ZW0gdGltZSBpbiBhIGRhdGUtdHlwZSBmb3JtYXQgYnV0IGlmIHlvdSBhc3NpZ24gaXQgdG8gYSBzdHJpbmcgb3Igc2ltcGx5ICJwcmludCIgaXQsIGl0IGlzIGNvbnZlcnRlZCBpbnRvICBERC9NTS9ZWVlZIEhIOk1NOlNTIHdoaWNoIGlzIGFyZ3VhYmx5IHRoZSBtb3N0IHVzZWZ1bCBmb3JtYXQgdG8gZGVmYXVsdCB0by48YnIgLz48YnIgLz5BbHRob3VnaCBNTUJhc2ljIGNhbid0IGhvcGUgdG8gc3VwcG9ydCB0aGUgZGlmZmVyZW50IGRhdGF0eXBlcyBvZiBtb2Rlcm4gbGFuZ3VhZ2VzLCB0aGUgTm93KCkgZnVuY3Rpb24gaXMgcmVhbGx5IHVzZWZ1bCBpbnN0ZWFkIG9mIGhhdmluZyB0byBjb25zdHJ1Y3QgaXQgZWFjaCB0aW1lLiBUaGlzIGZ1bmN0aW9uIGRvZXMgdGhhdCAtIE9LLCBpdCBpc24ndCByb2NrZXQgc2NpZW5jZSB0byBjb25jYXRlbmF0ZSB0aGUgREFURSQgYW5kIFRJTUUkIGJ1dCBpdCByZWR1Y2VzIHByb2dyYW0gc2l6ZSBhbmQsIEkgdGhpbmssIG1ha2VzIHByb2dyYW0gZmxvdyBlYXNpZXIgdG8gcmVhZC4gPGJyIC8+PGJyIC8+Tm93KCkgc3VwcG9ydHMgYW4gb3B0aW9uYWwgZGF0ZS1mb3JtYXQgcGFyYW1ldGVyLiBUaGUgZGVmYXVsdCBpcyB6ZXJvIHdoaWNoIHJlc3VsdHMgaW4gdGhlIGRhdGUgZm9sbG93aW5nIHRoZSBzeXN0ZW0gZm9ybWF0IG9mIERELU1NLVlZWVkuIElmIG9wdCBpcyBub24temVybywgdGhlIGRhdGEgcGFydCBmb2xsb3dzIHRoZSA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwczovL3d3dy5pc28ub3JnL2lzby04NjAxLWRhdGUtYW5kLXRpbWUtZm9ybWF0Lmh0bWwiIHRpdGxlPSJJU084NjAxIiB0YXJnZXQ9Il9ibGFuayI+SVNPODYwMTwvYT5mb3JtYXQgb2YgWVlZWS1NTS1ERC4gVGhlIG91dHB1dCBzdHJpbmcgZnJvbSBOb3coKSBjYW4gYmUgcGFzc2VkIGRpcmVjdGx5IHRvIHRoZSA8YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLlVuaXhUaW1lLW9yLUVwb2NoLVRpbWUuYXNoeCIgdGl0bGU9IlVuaXhUaW1lIG9yIEVwb2NoIFRpbWUiPlVuaXhUaW1lPC9hPiBmdW5jdGlvbiAtIGJlIHN1cmUgdG8gbWFpbnRhaW4gdGhlIGRhdGUgZm9ybWF0IG9wdGlvbiBhY3Jvc3MgdGhlIHR3byAoYXBwbGllcyB0byBIdW1hblRpbWUgYWxzbykuPGJyIC8+PGJyIC8+PGJyIC8+PGI+U3ludGF4OjwvYj48YnIgLz4gTm93KCYjMDA5MTtvcHQmIzAwOTM7KTxiciAvPjxiciAvPjxiPkV4YW1wbGVzOjwvYj48YnIgLz54JD1Ob3coKSAnIHNhbWUgYXM8YnIgLz54JD1Ob3coMCk8YnIgLz48YnIgLz5QcmludCBOb3coMSk7IiBzeXN0ZW0gc3RhcnR1cCI8YnIgLz48YnIgLz5JZiBEYXlsaWdodChOb3coKSkgVGhlbiAuLi48YnIgLz48YnIgLz5QcmludCMzLFVuaXh0aW1lKE5vdygpKSsiIHN5c3RlbSBoYWx0ZWQiPGJyIC8+PGJyIC8+PGI+Q29kZTo8L2I+PGJyIC8+PHByZT4NCglGdW5jdGlvbiBOb3cob3B0IGFzIEludGVnZXIpIGFzIHN0cmluZw0KCQlMb2NhbCBhJA0KDQoJCURvICcgZW5zdXJlIHRoZSBkYXRlL3RpbWUgZG9lc24ndCBjaGFuZ2Ugd2hpbGUgd2UgYXJlIHByb2Nlc3NpbmcNCgkJCWEkPURhdGUkKyIgIitUaW1lJA0KCQkJTm93PURhdGUkKyIgIitUaW1lJA0KCQlMb29wIFdoaWxlIGEkJmx0OyZndDtOb3cNCg0KCQlJZiBvcHQmbHQ7Jmd0OzAgdGhlbg0KCQkJTm93PU1pZCQoYSQsNyw0KStNaWQkKGEkLDMsNCkrTGVmdCQoYSQsMikrTWlkJChhJCwxMSkNCgkJRW5kSWYNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiPlNlZSBBbHNvPC9iPjo8YnIgLz48YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuRGF0ZUFkZC1GdW5jdGlvbi1WQi13b3JrLWEtbGlrZS5hc2h4IiB0aXRsZT0iRGF0ZUFkZCgpIEZ1bmN0aW9uIChWQiB3b3JrLWEtbGlrZSkiPkRhdGVBZGQoKTwvYT48YnIgLz48YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuRGF0ZURpZmYtRnVuY3Rpb24tVkItd29yay1hLWxpa2UuYXNoeCIgdGl0bGU9IkRhdGVEaWZmKCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKSI+RGF0ZURpZmYoKTwvYT48YnIgLz48YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuRGF0ZVBhcnQtRnVuY3Rpb24tVkItd29yay1hLWxpa2UuYXNoeCIgdGl0bGU9IkRhdGVQYXJ0KCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKSI+RGF0ZVBhcnQoKTwvYT48YnIgLz5kZIDHQ9pjOl82QcNzyn9L7wl2TcRl" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Now() Function (VB work-a-like) </h1><small>Modified on 2020/09/16 08:08 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks, Encode and Decode, Program Flow</small><br /><br />Modern languages have extended data types beyond simple strings or numeric. VB has a time datatype which allows addition, subtraction, weekday, month and formatting all with dates as if they were numbers in the conventional sense.<br /><br />VB's Now() function returns the current system time in a date-type format but if you assign it to a string or simply "print" it, it is converted into  DD/MM/YYYY HH:MM:SS which is arguably the most useful format to default to.<br /><br />Although MMBasic can't hope to support the different datatypes of modern languages, the Now() function is really useful instead of having to construct it each time. This function does that - OK, it isn't rocket science to concatenate the DATE$ and TIME$ but it reduces program size and, I think, makes program flow easier to read. <br /><br />Now() supports an optional date-format parameter. The default is zero which results in the date following the system format of DD-MM-YYYY. If opt is non-zero, the data part follows the <a class="externallink" href="https://www.iso.org/iso-8601-date-and-time-format.html" title="ISO8601" target="_blank">ISO8601</a>format of YYYY-MM-DD. The output string from Now() can be passed directly to the <a class="pagelink" target="_blank" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a> function - be sure to maintain the date format option across the two (applies to HumanTime also).<br /><br /><br /><b>Syntax:</b><br /> Now(&#0091;opt&#0093;)<br /><br /><b>Examples:</b><br />x$=Now() ' same as<br />x$=Now(0)<br /><br />Print Now(1);" system startup"<br /><br />If Daylight(Now()) Then ...<br /><br />Print#3,Unixtime(Now())+" system halted"<br /><br /><b>Code:</b><br /><pre>
+	Function Now(opt as Integer) as string
+		Local a$
+
+		Do ' ensure the date/time doesn't change while we are processing
+			a$=Date$+" "+Time$
+			Now=Date$+" "+Time$
+		Loop While a$&lt;&gt;Now
+
+		If opt&lt;&gt;0 then
+			Now=Mid$(a$,7,4)+Mid$(a$,3,4)+Left$(a$,2)+Mid$(a$,11)
+		EndIf
+	End Function
+</pre><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd()</a><br /><a class="pagelink" href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff()</a><br /><a class="pagelink" href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart()</a><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Now-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:03 GMT -->
+</html>

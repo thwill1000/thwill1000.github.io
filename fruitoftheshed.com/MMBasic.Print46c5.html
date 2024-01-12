@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.URL-ENCODE-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	URL ENCODE Function - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.URL-ENCODE-Function" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFpgg8aDEgY2xhc3M9InBhZ2V0aXRsZSI+VVJMIEVOQ09ERSBGdW5jdGlvbjwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMTcgMTk6NTMgYnkgQ2FwdGFpbkJvaW5nICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEVuY29kZSBhbmQgRGVjb2RlLCBOZXR3b3JrLCBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz5FbmNvZGVzIGEgc3RyaW5nIHNvIHRoYXQgaXQgaXMgYWNjZXB0YWJsZSBhcyB0aGUgYXJndW1lbnQgcGFydCBvZiBhIFVSTC4gRW5jb2RpbmcgaXMgdXNlZCB3aGVuIHBhc3NpbmcgYSBzdHJpbmcgdG8gYSB3ZWIgc2VydmVyIHRvIGF2b2lkIGl0IGJlaW5nIGNvbmZ1c2VkIHdpdGggdGhlIFVSTCBpdHNlbGYuIEl0IGlzIG5vcm1hbGx5IHVzZWQgd2hlbiB0aGUgYnJvd3NlciBzZW5kcyBmb3JtIGRhdGEgdG8gYSB3ZWIgc2VydmVyIGFzIHBhcnQgb2YgdGhlIFVSSSAtIHdoZW4gdGhlIGZvcm0gdXNlcyB0aGUgR0VUIG1ldGhvZCBhbmQgdGhlIGFyZ3VtZW50cyBhcHBlYXIgYXMgcGFydCBvZiB0aGUgd2ViIGFkZHJlc3MuPGJyIC8+PGJyIC8+PGI+U3ludGF4PC9iPjo8YnIgLz5VUkxFbmNvZGUkKGV4cHJlc3Npb24pPGJyIC8+PGJyIC8+PGI+RXhhbXBsZTwvYj46PGJyIC8+QXJnJD1VUkxFbmNvZGUkKE15QXJnJCk8YnIgLz48YnIgLz48Yj5Db2RlPC9iPjo8YnIgLz48cHJlPg0KRlVOQ1RJT04gVVJMRW5jb2RlJChYJCkNCiAgTE9DQUwgU1RSSU5HIEExJA0KICBMT0NBTCBJTlRFR0VSIEMsSA0KICBGT1IgQz0xIFRPIExFTihYJCkNCiAgICBIID0gQVNDKE1JRCQoWCQsIEMsIDEpKQ0KICAgIElGIEg9MzIgVEhFTg0KICAgICAgQTEkID0gQTEkICsgIisiDQogICAgRUxTRUlGIChIJmd0Oz00OCBBTkQgSCZsdDs9NTcpIE9SIChIJmd0Oz02NSBBTkQgSCZsdDs9OTApIE9SIChIJmd0Oz05NyBBTkQgSCZsdDs9MTIyKSBUSEVODQogICAgICBBMSQgPSBBMSQgKyBDSFIkKEgpDQogICAgRUxTRQ0KICAgICAgQTEkID0gQTEkICsgIiUiICsgSEVYJChILDIpDQogICAgRU5EIElGDQogIE5FWFQNCiAgVVJMRW5jb2RlJCA9IEExJA0KRU5EIEZVTkNUSU9ODQo8L3ByZT5kZJXjkpvSvfs5g3Yl/4S0zFrCeR6A" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">URL ENCODE Function</h1><small>Modified on 2016/12/17 19:53 by CaptainBoing &mdash; Categorized as: Encode and Decode, Network, Strings</small><br /><br />Encodes a string so that it is acceptable as the argument part of a URL. Encoding is used when passing a string to a web server to avoid it being confused with the URL itself. It is normally used when the browser sends form data to a web server as part of the URI - when the form uses the GET method and the arguments appear as part of the web address.<br /><br /><b>Syntax</b>:<br />URLEncode$(expression)<br /><br /><b>Example</b>:<br />Arg$=URLEncode$(MyArg$)<br /><br /><b>Code</b>:<br /><pre>
+FUNCTION URLEncode$(X$)
+  LOCAL STRING A1$
+  LOCAL INTEGER C,H
+  FOR C=1 TO LEN(X$)
+    H = ASC(MID$(X$, C, 1))
+    IF H=32 THEN
+      A1$ = A1$ + "+"
+    ELSEIF (H&gt;=48 AND H&lt;=57) OR (H&gt;=65 AND H&lt;=90) OR (H&gt;=97 AND H&lt;=122) THEN
+      A1$ = A1$ + CHR$(H)
+    ELSE
+      A1$ = A1$ + "%" + HEX$(H,2)
+    END IF
+  NEXT
+  URLEncode$ = A1$
+END FUNCTION
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.URL-ENCODE-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:33 GMT -->
+</html>

@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Regular-Expression-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Regular Expression Function - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Regular-Expression-Function" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFqSQ8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UmVndWxhciBFeHByZXNzaW9uIEZ1bmN0aW9uPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxOS8wNC8wNSAxMzo1NCBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogU3RyaW5nczwvc21hbGw+PGJyIC8+PGJyIC8+VGhlIGZvbGxvd2luZyBpcyB0aGUgPGEgY2xhc3M9ImV4dGVybmFsbGluayIgaHJlZj0iaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUmVndWxhcl9leHByZXNzaW9uIiB0aXRsZT0iUmVndWxhciBFeHByZXNzaW9uIiB0YXJnZXQ9Il9ibGFuayI+UmVndWxhciBFeHByZXNzaW9uPC9hPiBNYXRjaCBmdW5jdGlvbiBsaWZ0ZWQgZnJvbSB1c2VyIFJhdmUncyA8YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLk1NVU5JWC1VTklYLWxpa2UtY29tbWFuZHMtY2F0LWRpci1ncmVwLW1vcmUuYXNoeCIgdGl0bGU9Ik1NVU5JWCAtIFVOSVgtbGlrZSBjb21tYW5kczogY2F0IGRpciBncmVwIG1vcmUiPk1NVU5JWCAtIFVOSVgtbGlrZSBjb21tYW5kczwvYT4gR1JFUCByb3V0aW5lLiBUaGF0IGluIHR1cm4gdXNlZCBSb2IgUGlrZSdzIGFsZ29yaXRobS4gSXQgaXMgcmVhc29uYWJseSBmYXN0IGFuZCBicmluZ3MgYSBwb3dlcmZ1bCBmZWF0dXJlIHRvIE1NQmFzaWMuIEl0IGlzIG5vdCBhIGZ1bGwtYmxvb2RlZCByZWdleHAgZnVuY3Rpb24gYnV0IGNhdGNoZXMgdGhlIGZvbGxvd2luZyAgZnVuY3Rpb25hbGl0eTo8YnIgLz48YnIgLz4gICAuICAgICBtYXRjaGVzIGFueSBzaW5nbGUgY2hhcmFjdGVyPGJyIC8+ICAgJiMwMDkxO2FiYyYjMDA5MzsgbWF0Y2hlcyBhIG9yIGIgb3IgYzxiciAvPiAgID8gICAgIG1hdGNoZXMgemVybyBvciBvbmUgb2YgdGhlIHByZXZpb3VzIGNoYXJhY3RlciA8YnIgLz4gICAqICAgICBtYXRjaGVzIHplcm8gb3IgbW9yZSBvZiB0aGUgcHJldmlvdXMgY2hhcmFjdGVyIGUuZy4gQSogaXMgYW55IG51bWJlciBvZiBBJ3M8YnIgLz4gICArICAgICBtYXRjaGVzIG9uZSBvciBtb3JlIG9mIHRoZSBwcmV2aW91cyBjaGFyYWN0ZXIgPGJyIC8+ICAgXiAgICAgbWF0Y2hlcyBiZWdpbiBvZiB0ZXh0IGUuZy4gXkEgbWVhbnMgdGhlIHN0cmluZyBtdXN0IHN0YXJ0IHdpdGggQTxiciAvPiAgICQgICAgIG1hdGNoZXMgZW5kIG9mIHRleHQgZS5nLiBBJCBtZWFucyB0aGUgc3RyaW5nIG11c3QgZW5kIHdpdGggQTxiciAvPiAgIFwgICAgIEZvbGxvd2luZyBjaGFyYWN0ZXIgdG8gYmUgbWF0Y2hlZCBsaXRlcmFsbHkuIGUuZy4gXD8gbWF0Y2hlcyA/LCBcXCBtYXRjaGVzIFwgZXRjLjxiciAvPjxiciAvPkkgZXh0cmFjdGVkIHRoZSBSZWdFeHAgZnVuY3Rpb24gc28gdGhhdCBpdCBjb3VsZCBiZSB1c2VkIGFzIGEgZ2VuZXJhbCBmdW5jdGlvbiB0byBjb21wYXJlIGlmIGEgc3RyaW5nICJsb29rcyBsaWtlIi4uLjxiciAvPjxiciAvPjxiPk5vdGVzOjwvYj48YnIgLz48dWw+PGxpPkl0IGlzIGNhc2Ugc2Vuc2l0aXZlLjwvbGk+PGxpPk5vdCBhIGNvbXBsZXRlIHNldCBvZiBleHByZXNzaW9ucywgYnV0IHdoYXQgdGhlcmUgaXMgd2lsbCBjb3ZlciA5MCUgb2YgcmVxdWlyZW1lbnRzPC9saT48bGk+UmVjdXJzaXZlIG1hdGNoaW5nIGlzIG5vdCBzdXBwb3J0ZWQsIGUuZy4gPGNvZGU+JiMwMDkxO2hjJiMwMDkzOz9hdCA8L2NvZGU+IG1hdGNoaW5nICJhdCIsICJoYXQiLCBhbmQgImNhdCIgd2lsbCBub3Qgd29yayBjb3JyZWN0bHkuPC9saT48bGk+UmVnRXhwIHJldHVybnMgYSBub24temVybyBvbiBhIG1hdGNoIChpdCBtaWdodCBub3QgYmUgMSkuPGJyIC8+PC9saT48L3VsPjxiciAvPjxiPlN5bnRheDo8L2I+PGJyIC8+PVJlZ0V4cChSZWd1bGFyRXhwcmVzc2lvblN0cmluZyQsTXlTdHJpbmckKTxiciAvPjxiciAvPjxiPkV4YW1wbGU6PC9iPiAgc2ltcGxlIG1hdGNoIGZvciBhIHN0cmluZyB0aGF0ICJsb29rcyBsaWtlIiBpdCA8aT5taWdodCA8L2k+YmUgYSB0aW1lLiBSZWdFeHAgaXMgdXNlZCBoZXJlIHRvIGRldGVybWluZSB0aGUgImxvb2sgYW5kIGZlZWwiIG9mIHRoZSB0ZXN0ZWQgc3RyaW5nIC0gdGhlIGFjdHVhbCB2YWx1ZXMgcmVtYWluIHRvIGJlIGNoZWNrZWQuIFNlZSA8YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuSXNEYXRlLWFuZC1Jc1RpbWUtZnVuY3Rpb25zLVZCLVdvcmstQS1MaWtlLmFzaHgiIHRpdGxlPSJJc0RhdGUgYW5kIElzVGltZSBmdW5jdGlvbnMgKFZCIFdvcmstQS1MaWtlKSI+SXNUaW1lPC9hPiBmb3IgYSBjb21wbGV0ZSBzb2x1dGlvbi48YnIgLz5QcmludCBSZWdFeHAoIl4mIzAwOTE7MDEyJiMwMDkzOyYjMDA5MTswMTIzNDU2Nzg5JiMwMDkzOzomIzAwOTE7MDEyMzQ1JiMwMDkzOyYjMDA5MTswMTIzNDU2Nzg5JiMwMDkzOyQiLCIxMDo1NSIpIDxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczo8L2I+PGJyIC8+Tm9uZTxiciAvPjxiciAvPjxwcmU+DQoJRnVuY3Rpb24gUmVnRXhwKHJlZ2V4JCx0ZXh0JCkgJyBjYXNlIHNlbnNpdGl2ZQ0KCQlMb2NhbCBJbnRlZ2VyIHMsbixtLGYNCgkJbj1MZW4ocmVnZXgkKSYjNTg7bT1MZW4odGV4dCQpDQoJCVJlZ0V4cD0wDQoJCUlmIE1pZCQocmVnZXgkLDEsMSk9Il4iIFRoZW4NCgkJCU1hdGNoSGVyZSByZWdleCQsdGV4dCQsMiwxLG4sbSxmDQoJCQlSZWdFeHA9Zg0KCQlFbHNlDQoJCQlGb3Igcz0xIFRvIG0NCgkJCQlNYXRjaEhlcmUgcmVnZXgkLHRleHQkLDEscyxuLG0sZg0KCQkJCUlmIGYgVGhlbiBSZWdFeHA9cyYjNTg7IEV4aXQgRm9yDQoJCQlOZXh0DQoJCUVuZElmDQoJRW5kIEZ1bmN0aW9uDQoNCglTdWIgTWF0Y2hIZXJlKHJlZ2V4JCx0ZXh0JCxyIEFzIEludGVnZXIscyBBcyBJbnRlZ2VyLG4gQXMgSW50ZWdlcixtIEFzIEludGVnZXIsZiBBcyBJbnRlZ2VyKQ0KCQlMb2NhbCBJbnRlZ2VyIGkNCgkJRG8gV2hpbGUgciAmbHQ7PSBuDQoJCQlJZiBNaWQkKHJlZ2V4JCxyKT0iJCIgVGhlbiBmPXMmZ3Q7bSYjNTg7IEV4aXQgU3ViDQoJCQlJZiBNaWQkKHJlZ2V4JCxyLDEpPSImIzkxOyIgVGhlbg0KCQkJCWk9SW5zdHIocisyLHJlZ2V4JCwiJiM5MzsiKQ0KCQkJCUlmIGkgVGhlbiBpPWkrMSBFbHNlIGk9cisxDQoJCQlFbHNlSWYgTWlkJChyZWdleCQsciwxKT0iXCIgVGhlbg0KCQkJCWk9cisyDQoJCQkJRWxzZQ0KCQkJCWk9cisxDQoJCQlFbmRJZg0KCQkJSWYgTWlkJChyZWdleCQsaSwxKT0iJiM0MjsiIFRoZW4NCgkJCQlNYXRjaFN0YXIgcmVnZXgkLHRleHQkLHIsaSxzLG4sbSxmDQoJCQkJRXhpdCBTdWINCgkJCUVuZElmDQoJCQlJZiBNaWQkKHJlZ2V4JCxpLDEpPSI/IiBUaGVuDQoJCQkJTWF0Y2hPcHRpb25hbCByZWdleCQsdGV4dCQscixpLHMsbixtLGYNCgkJCQlFeGl0IFN1Yg0KCQkJRW5kSWYNCgkJCUlmIHMmZ3Q7bSBUaGVuIGY9MCYjNTg7IEV4aXQgU3ViDQoJCQlpPXINCgkJCU1hdGNoQ2hhciByZWdleCQsdGV4dCQscixzLGYNCgkJCUlmIE5vdCBmIFRoZW4gRXhpdCBTdWINCgkJCUlmIE1pZCQocmVnZXgkLHIrMSwxKT0iKyIgVGhlbg0KCQkJCU1hdGNoU3RhciByZWdleCQsdGV4dCQsaSxyKzEscysxLG4sbSxmDQoJCQkJRXhpdCBTdWINCgkJCUVuZElmDQoJCQlyPXIrMSYjNTg7cz1zKzENCgkJTG9vcA0KCQlmPTENCglFbmQgU3ViDQoNCglTdWIgTWF0Y2hTdGFyKHJlZ2V4JCx0ZXh0JCxyIEFzIEludGVnZXIsaSBBcyBJbnRlZ2VyLHMgQXMgSW50ZWdlcixuIEFzIEludGVnZXIsbSBBcyBJbnRlZ2VyLGYgQXMgSW50ZWdlcikNCgkJRG8NCgkJCU1hdGNoSGVyZSByZWdleCQsdGV4dCQsaSsxLChzKSxuLG0sZg0KCQkJSWYgZiBvciBzJmd0O20gVGhlbiBFeGl0IFN1Yg0KCQkJTWF0Y2hDaGFyIHJlZ2V4JCx0ZXh0JCwocikscyxmDQoJCQlJZiBOb3QgZiBUaGVuIEV4aXQgU3ViDQoJCQlzPXMrMQ0KCQlMb29wDQoJRW5kIFN1Yg0KDQoJU3ViIE1hdGNoT3B0aW9uYWwocmVnZXgkLHRleHQkLHIgQXMgSW50ZWdlcixpIEFzIEludGVnZXIscyBBcyBJbnRlZ2VyLG4gQXMgSW50ZWdlcixtIEFzIEludGVnZXIsZiBBcyBJbnRlZ2VyKQ0KCQlNYXRjaEhlcmUgcmVnZXgkLHRleHQkLGkrMSwocyksbixtLGYNCgkJSWYgZiBvciBzJmd0O20gVGhlbiBFeGl0IFN1Yg0KCQlNYXRjaENoYXIgcmVnZXgkLHRleHQkLChyKSxzLGYNCgkJSWYgTm90IGYgVGhlbiBFeGl0IFN1Yg0KCQlNYXRjaEhlcmUgcmVnZXgkLHRleHQkLGkrMSxzKzEsbixtLGYNCglFbmQgU3ViDQoNCglTdWIgTWF0Y2hDaGFyKHJlZ2V4JCx0ZXh0JCxyIEFzIEludGVnZXIscyBBcyBJbnRlZ2VyLGYgQXMgSW50ZWdlcikNCgkJTG9jYWwgSW50ZWdlciBpLGoNCgkJZj1NaWQkKHJlZ2V4JCxyLDEpPSIuIg0KCQlJZiBmIFRoZW4gRXhpdCBTdWINCgkJSWYgTWlkJChyZWdleCQsciwxKT0iJiM5MTsiIFRoZW4NCgkJCWk9SW5zdHIocisyLHJlZ2V4JCwiJiM5MzsiKQ0KCQkJSWYgaSBUaGVuDQoJCQkJaj1JbnN0cihyKzEscmVnZXgkLE1pZCQodGV4dCQscywxKSkNCgkJCQlmPWomZ3Q7MCBBbmQgaiZsdDtpJiM1ODtyPWkNCgkJCQlFeGl0IFN1Yg0KCQkJRW5kSWYNCgkJRWxzZUlmIE1pZCQocmVnZXgkLHIsMSk9Q2hyJCg5MikgVGhlbg0KCQkJcj1yKzENCgkJRW5kSWYNCgkJZj1NaWQkKHJlZ2V4JCxyLDEpPU1pZCQodGV4dCQscywxKQ0KCUVuZCBTdWINCjwvcHJlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPmRkkqK9no2BcrGvqVXqNaqhNydgD8s=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Regular Expression Function</h1><small>Modified on 2019/04/05 13:54 by CaptainBoing &mdash; Categorized as: Strings</small><br /><br />The following is the <a class="externallink" href="https://en.wikipedia.org/wiki/Regular_expression" title="Regular Expression" target="_blank">Regular Expression</a> Match function lifted from user Rave's <a class="pagelink" target="_blank" href="MMBasic.MMUNIX-UNIX-like-commands-cat-dir-grep-more.html" title="MMUNIX - UNIX-like commands: cat dir grep more">MMUNIX - UNIX-like commands</a> GREP routine. That in turn used Rob Pike's algorithm. It is reasonably fast and brings a powerful feature to MMBasic. It is not a full-blooded regexp function but catches the following  functionality:<br /><br />   .     matches any single character<br />   &#0091;abc&#0093; matches a or b or c<br />   ?     matches zero or one of the previous character <br />   *     matches zero or more of the previous character e.g. A* is any number of A's<br />   +     matches one or more of the previous character <br />   ^     matches begin of text e.g. ^A means the string must start with A<br />   $     matches end of text e.g. A$ means the string must end with A<br />   \     Following character to be matched literally. e.g. \? matches ?, \\ matches \ etc.<br /><br />I extracted the RegExp function so that it could be used as a general function to compare if a string "looks like"...<br /><br /><b>Notes:</b><br /><ul><li>It is case sensitive.</li><li>Not a complete set of expressions, but what there is will cover 90% of requirements</li><li>Recursive matching is not supported, e.g. <code>&#0091;hc&#0093;?at </code> matching "at", "hat", and "cat" will not work correctly.</li><li>RegExp returns a non-zero on a match (it might not be 1).<br /></li></ul><br /><b>Syntax:</b><br />=RegExp(RegularExpressionString$,MyString$)<br /><br /><b>Example:</b>  simple match for a string that "looks like" it <i>might </i>be a time. RegExp is used here to determine the "look and feel" of the tested string - the actual values remain to be checked. See <a class="pagelink" href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsTime</a> for a complete solution.<br />Print RegExp("^&#0091;012&#0093;&#0091;0123456789&#0093;:&#0091;012345&#0093;&#0091;0123456789&#0093;$","10:55") <br /><br /><b>Dependencies:</b><br />None<br /><br /><pre>
+	Function RegExp(regex$,text$) ' case sensitive
+		Local Integer s,n,m,f
+		n=Len(regex$)&#58;m=Len(text$)
+		RegExp=0
+		If Mid$(regex$,1,1)="^" Then
+			MatchHere regex$,text$,2,1,n,m,f
+			RegExp=f
+		Else
+			For s=1 To m
+				MatchHere regex$,text$,1,s,n,m,f
+				If f Then RegExp=s&#58; Exit For
+			Next
+		EndIf
+	End Function
+
+	Sub MatchHere(regex$,text$,r As Integer,s As Integer,n As Integer,m As Integer,f As Integer)
+		Local Integer i
+		Do While r &lt;= n
+			If Mid$(regex$,r)="$" Then f=s&gt;m&#58; Exit Sub
+			If Mid$(regex$,r,1)="&#91;" Then
+				i=Instr(r+2,regex$,"&#93;")
+				If i Then i=i+1 Else i=r+1
+			ElseIf Mid$(regex$,r,1)="\" Then
+				i=r+2
+				Else
+				i=r+1
+			EndIf
+			If Mid$(regex$,i,1)="&#42;" Then
+				MatchStar regex$,text$,r,i,s,n,m,f
+				Exit Sub
+			EndIf
+			If Mid$(regex$,i,1)="?" Then
+				MatchOptional regex$,text$,r,i,s,n,m,f
+				Exit Sub
+			EndIf
+			If s&gt;m Then f=0&#58; Exit Sub
+			i=r
+			MatchChar regex$,text$,r,s,f
+			If Not f Then Exit Sub
+			If Mid$(regex$,r+1,1)="+" Then
+				MatchStar regex$,text$,i,r+1,s+1,n,m,f
+				Exit Sub
+			EndIf
+			r=r+1&#58;s=s+1
+		Loop
+		f=1
+	End Sub
+
+	Sub MatchStar(regex$,text$,r As Integer,i As Integer,s As Integer,n As Integer,m As Integer,f As Integer)
+		Do
+			MatchHere regex$,text$,i+1,(s),n,m,f
+			If f or s&gt;m Then Exit Sub
+			MatchChar regex$,text$,(r),s,f
+			If Not f Then Exit Sub
+			s=s+1
+		Loop
+	End Sub
+
+	Sub MatchOptional(regex$,text$,r As Integer,i As Integer,s As Integer,n As Integer,m As Integer,f As Integer)
+		MatchHere regex$,text$,i+1,(s),n,m,f
+		If f or s&gt;m Then Exit Sub
+		MatchChar regex$,text$,(r),s,f
+		If Not f Then Exit Sub
+		MatchHere regex$,text$,i+1,s+1,n,m,f
+	End Sub
+
+	Sub MatchChar(regex$,text$,r As Integer,s As Integer,f As Integer)
+		Local Integer i,j
+		f=Mid$(regex$,r,1)="."
+		If f Then Exit Sub
+		If Mid$(regex$,r,1)="&#91;" Then
+			i=Instr(r+2,regex$,"&#93;")
+			If i Then
+				j=Instr(r+1,regex$,Mid$(text$,s,1))
+				f=j&gt;0 And j&lt;i&#58;r=i
+				Exit Sub
+			EndIf
+		ElseIf Mid$(regex$,r,1)=Chr$(92) Then
+			r=r+1
+		EndIf
+		f=Mid$(regex$,r,1)=Mid$(text$,s,1)
+	End Sub
+</pre><br /><br /><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Regular-Expression-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:11 GMT -->
+</html>

@@ -1,0 +1,91 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	IsDate and IsTime functions (VB Work-A-Like) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFjR08aDEgY2xhc3M9InBhZ2V0aXRsZSI+SXNEYXRlIGFuZCBJc1RpbWUgZnVuY3Rpb25zIChWQiBXb3JrLUEtTGlrZSk8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIxLzExLzI3IDE1OjA5IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBEYXRlcywgVGltZSBhbmQgQ2xvY2tzLCBNYXRocywgU3RyaW5nczwvc21hbGw+PGJyIC8+PGJyIC8+VGhlIGZvbGxvd2luZyBhcmUgdHdvIGZ1bmN0aW9ucyB0byB2YWxpZGF0ZSBkYXRlcyBhbmQgdGltZXMuIDxiciAvPjxiciAvPkluc3BpcmVkIGJ5IHRoZSBWQiBmdW5jdGlvbnMgb2YgdGhlIHNhbWUgbmFtZS48YnIgLz48YnIgLz5PZnRlbiB3aGVuIGEgdXNlciBpcyBhc2tlZCB0byBlbnRlciBlaXRoZXIsIHRoZXJlIGlzIHF1aXRlIGEgYml0IG9mIGNvZGUgdG8gbWFrZSBzdXJlIHRoYXQgd2hhdCB0aGV5IGVudGVyZWQgbWFrZXMgc2Vuc2UuIFRoZXNlIGZ1bmN0aW9ucyBjaGVjayBib3RoIHRoZSBmb3JtYXQgYW5kIHZhbHVlcyBhbmQgcmV0dXJuIGEgYm9vbGVhbiAoYWN0dWFsbHkgYW4gaW50ZWdlcikgb2YgMCAgaWYgdGhlIHN0cmluZyBpcyBub3QgYSBEYXRlL1RpbWUuIE5vbiB6ZXJvIGluZGljYXRlcyB0aGUgc3RyaW5nIGlzIHZhbGlkLjxiciAvPjxiciAvPkVhcmxpZXIgdmVyc2lvbnMgb2YgdGhlc2UgZnVuY3Rpb25zIHVzZWQgUmVndWxhciBFeHByZXNzaW9ucyB0byBtYXRjaCB0aGUgImxvb2sgJiBmZWVsIiBvZiB0aW1lIGFuZCBkYXRlIHN0cmluZ3MuIFRoaXMgbWFkZSB0aGluZ3MgdmVyeSBlYXN5IGJ1dCBSZWdFeHBzIGFyZSBub3RvcmlvdXNseSBjb21wdXRlLWhlYXZ5LiBQcmV2aW91cyB2ZXJzaW9ucyB3ZXJlIHF1aXRlIHNsb3cgYW5kIGhhZCB0aGUgaHVnZSBjb2RlIG92ZXJoZWFkIG9mIHRoZSBSZWdFeHAgbW9kdWxlLiBJZiB5b3Ugd2VyZSBvbmx5IHVzaW5nIFJlZ0V4cHMgZm9yIElzRGF0ZS9Jc1RpbWUgd2FzIGRpZmZpY3VsdCB0byBqdXN0aWZ5IHRoZSBleHRyYSAySyBvZiBwcm9ncmFtLiA8YnIgLz48YnIgLz5UaGUgdmVyc2lvbnMgcHJlc2VudGVkIGJlbG93LCBkaXNwZW5zZSB3aXRoIHRoZSBSZWdFeHBzLiBDb25zZXF1ZW50bHkgdGhleSBhcmUgYSBiaXQgbG9uZ2VyIHRoYW4gdGhlIG9yaWdpbmFscyAobm90IGluY2x1ZGluZyB0aGUgUmVnRXhwIG1vZHVsZSkgYnV0IHRvdGFsIGNvZGUgZm9vdHByaW50IGlzIG11Y2gtcmVkdWNlZCBhbmQgdGhleSBhcmUgbm93IHZlcnkgcXVpY2sgLSBhYm91dCBzZXZlbiB0aW1lcyBmYXN0ZXIuIDxiciAvPjxiciAvPkNoZWNrIHRoZSBoaXN0b3J5IG9mIHRoaXMgYXJ0aWNsZSBpZiB5b3UgYXJlIGN1cmlvdXMgYWJvdXQgdGhlIHZlcnNpb25zIHVzaW5nIFJlZ0V4cHMuPGJyIC8+PGJyIC8+PGI+Tm90ZXMgSXNEYXRlOjwvYj48YnIgLz48dWw+PGxpPk9ubHkgc3VwcG9ydHMgVUsvQVVTIHRpbWUgZm9ybWF0cyBvZiBkZC9tbS95eXl5PC9saT48bGk+VGhlIGRlbGltaXRlciBtYXkgYmUgZWl0aGVyIC8gb3IgLSBlLmcuIGRkLW1tLXl5eXkgb3IgZGQvbW0veXl5eSBpcyBmaW5lLjxiciAvPjwvbGk+PC91bD48YnIgLz48Yj5Ob3RlcyBJc1RpbWU6PC9iPjxiciAvPjx1bD48bGk+VGltZXMgbXVzdCBiZSBmb3JtYXR0ZWQgYXMgaGg6bW06c3M8YnIgLz48L2xpPjwvdWw+PGJyIC8+PGI+U3ludGF4OjwvYj48YnIgLz49SXNUaW1lKFRpbWVTdHIkKTxiciAvPj1Jc0RhdGUoRGF0ZVN0ciQpPGJyIC8+PGJyIC8+PGI+RXhhbXBsZXM6PC9iPjxiciAvPklmIE5vdCBJc0RhdGUoZHQkKSBUaGVuIEV4aXQgU3ViPGJyIC8+Q2hlY2tib3g9SXNUaW1lKEEkKTxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczo8L2I+PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLklzTGVhcFllYXItRnVuY3Rpb24tdG8tZGV0ZXJtaW5lLWlmLXRoZS1naXZlbi15ZWFyLWlzLWEtTGVhcC1ZZWFyLW9uLXRoZS1HcmVnb3JpYW4td2VzdGVybi1jYWxlbmRhci5hc2h4IiB0aXRsZT0iSXNMZWFwWWVhciBGdW5jdGlvbiB0byBkZXRlcm1pbmUgaWYgdGhlIGdpdmVuIHllYXIgaXMgYSBMZWFwIFllYXIgb24gdGhlIEdyZWdvcmlhbiAod2VzdGVybikgY2FsZW5kYXIiPklzTGVhcFllYXIgRnVuY3Rpb248L2E+PGJyIC8+PGJyIC8+PHByZT4NCglGdW5jdGlvbiBJc1RpbWUoYSQpIEFzIEludGVnZXINCgkJTG9jYWwgZCQNCgkJTG9jYWwgSW50ZWdlciB4LHoNCgkJSXNUaW1lPTANCgkJSWYgTGVuKGEkKT04IFRoZW4NCgkJCWQkPU1pZCQoYSQsMywxKQ0KCQkJSWYgZCQ9IiYjNTg7IiBUaGVuIA0KCQkJCWQkPU1pZCQoYSQsNiwxKQ0KCQkJCUlmIGQkPSImIzU4OyIgVGhlbg0KCQkJCQknaGVyZSBhJD0/PyYjNTg7Pz8mIzU4Oz8/DQoJCQkJCUZvciB4PTEgVG8gOA0KCQkJCQkJSWYgeD0zIG9yIHg9NiBUaGVuDQoJCQkJCQlFbHNlDQoJCQkJCQkJej1Bc2MoTWlkJChhJCx4LDEpKQ0KCQkJCQkJCUlmIHombHQ7JmFtcDtoMzAgT3IgeiZndDsmYW1wO2gzOSBUaGVuIEV4aXQgRnVuY3Rpb24NCgkJCQkJCUVuZElmDQoJCQkJCU5leHQNCgkJCQkJSWYgVmFsKExlZnQkKGEkLDIpKSZsdDsyNCBUaGVuDQoJCQkJCQlJZiBWYWwoTWlkJChhJCw0LDIpKSZsdDs2MCBUaGVuDQoJCQkJCQkJSWYgVmFsKFJpZ2h0JChhJCwyKSkmbHQ7NjAgVGhlbg0KCQkJCQkJCQlJc1RpbWU9MQ0KCQkJCQkJCUVuZElmDQoJCQkJCQlFbmRJZg0KCQkJCQlFbmRJZgkJCQkNCgkJCQlFbmRJZg0KCQkJRW5kSWYNCgkJRW5kSWYNCglFbmQgRnVuY3Rpb24NCg0KCUZ1bmN0aW9uIElzRGF0ZShhJCkgQXMgSW50ZWdlcg0KCQlMb2NhbCBkJA0KCQlMb2NhbCBJbnRlZ2VyIHgseg0KCQlJc0RhdGU9MA0KCQlJZiBMZW4oYSQpPTEwIFRoZW4NCgkJCWQkPU1pZCQoYSQsMywxKQ0KCQkJSWYgZCQ9Ii0iIE9yIGQkPSIvIiBUaGVuDQoJCQkJZCQ9TWlkJChhJCw2LDEpDQoJCQkJSWYgZCQ9Ii0iIE9yIGQkPSIvIiBUaGVuDQoJCQkJCSdoZXJlIGEkPT8/Lz8/Lz8/Pz8NCgkJCQkJRm9yIHg9MSBUbyAxMA0KCQkJCQkJSWYgeD0zIE9yIHg9NiBUaGVuDQoJCQkJCQlFbHNlDQoJCQkJCQkJej1Bc2MoTWlkJChhJCx4LDEpKQ0KCQkJCQkJCUlmIHombHQ7JmFtcDtoMzAgT3IgeiZndDsmYW1wO2gzOSBUaGVuIEV4aXQgRnVuY3Rpb24NCgkJCQkJCUVuZElmDQoJCQkJCU5leHQNCgkJCQkJeD1WYWwoTGVmdCQoYSQsMikpJiM1ODt6PVZhbChNaWQkKGEkLDQsMikpDQoJCQkJCUlmIHgmbHQ7MSBUaGVuIEV4aXQgRnVuY3Rpb24NCgkJCQkJU2VsZWN0IENhc2Ugeg0KCQkJCQkJQ2FzZSAxLDMsNSw3LDgsMTAsMTINCgkJCQkJCQlJZiB4Jmd0OzMxIFRoZW4gRXhpdCBGdW5jdGlvbg0KCQkJCQkJQ2FzZSA0LDYsOSwxMQ0KCQkJCQkJCUlmIHgmZ3Q7MzAgVGhlbiBFeGl0IEZ1bmN0aW9uDQoJCQkJCQlDYXNlIDINCgkJCQkJCQlJZiB4Jmd0OzI4K0lzTGVhcFllYXIoVmFsKFJpZ2h0JChhJCw0KSkpIFRoZW4gRXhpdCBGdW5jdGlvbg0KCQkJCQkJQ2FzZSBFbHNlDQoJCQkJCQkJRXhpdCBGdW5jdGlvbg0KCQkJCQlFbmQgU2VsZWN0DQoJCQkJCUlzRGF0ZT0xDQoJCQkJRW5kSWYNCgkJCUVuZElmDQoJCUVuZElmDQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz5UaGVyZSBhcmUgc2V2ZXJhbCBvcHRpbWl6YXRpb25zIHBvc3NpYmxlIG9uIHRoZSBhYm92ZSBjb2RlIHRoYXQgaGF2ZSBiZWVuIG9taXR0ZWQgaW4gdGhlIGludGVyZXN0cyBvZiBsZWdpYmlsaXR5LjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPmRkMHE3y2MqTP7Y0IMB4zJepkyoLuk=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">IsDate and IsTime functions (VB Work-A-Like)</h1><small>Modified on 2021/11/27 15:09 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks, Maths, Strings</small><br /><br />The following are two functions to validate dates and times. <br /><br />Inspired by the VB functions of the same name.<br /><br />Often when a user is asked to enter either, there is quite a bit of code to make sure that what they entered makes sense. These functions check both the format and values and return a boolean (actually an integer) of 0  if the string is not a Date/Time. Non zero indicates the string is valid.<br /><br />Earlier versions of these functions used Regular Expressions to match the "look & feel" of time and date strings. This made things very easy but RegExps are notoriously compute-heavy. Previous versions were quite slow and had the huge code overhead of the RegExp module. If you were only using RegExps for IsDate/IsTime was difficult to justify the extra 2K of program. <br /><br />The versions presented below, dispense with the RegExps. Consequently they are a bit longer than the originals (not including the RegExp module) but total code footprint is much-reduced and they are now very quick - about seven times faster. <br /><br />Check the history of this article if you are curious about the versions using RegExps.<br /><br /><b>Notes IsDate:</b><br /><ul><li>Only supports UK/AUS time formats of dd/mm/yyyy</li><li>The delimiter may be either / or - e.g. dd-mm-yyyy or dd/mm/yyyy is fine.<br /></li></ul><br /><b>Notes IsTime:</b><br /><ul><li>Times must be formatted as hh:mm:ss<br /></li></ul><br /><b>Syntax:</b><br />=IsTime(TimeStr$)<br />=IsDate(DateStr$)<br /><br /><b>Examples:</b><br />If Not IsDate(dt$) Then Exit Sub<br />Checkbox=IsTime(A$)<br /><br /><b>Dependencies:</b><br /><a class="pagelink" href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function</a><br /><br /><pre>
+	Function IsTime(a$) As Integer
+		Local d$
+		Local Integer x,z
+		IsTime=0
+		If Len(a$)=8 Then
+			d$=Mid$(a$,3,1)
+			If d$="&#58;" Then 
+				d$=Mid$(a$,6,1)
+				If d$="&#58;" Then
+					'here a$=??&#58;??&#58;??
+					For x=1 To 8
+						If x=3 or x=6 Then
+						Else
+							z=Asc(Mid$(a$,x,1))
+							If z&lt;&amp;h30 Or z&gt;&amp;h39 Then Exit Function
+						EndIf
+					Next
+					If Val(Left$(a$,2))&lt;24 Then
+						If Val(Mid$(a$,4,2))&lt;60 Then
+							If Val(Right$(a$,2))&lt;60 Then
+								IsTime=1
+							EndIf
+						EndIf
+					EndIf				
+				EndIf
+			EndIf
+		EndIf
+	End Function
+
+	Function IsDate(a$) As Integer
+		Local d$
+		Local Integer x,z
+		IsDate=0
+		If Len(a$)=10 Then
+			d$=Mid$(a$,3,1)
+			If d$="-" Or d$="/" Then
+				d$=Mid$(a$,6,1)
+				If d$="-" Or d$="/" Then
+					'here a$=??/??/????
+					For x=1 To 10
+						If x=3 Or x=6 Then
+						Else
+							z=Asc(Mid$(a$,x,1))
+							If z&lt;&amp;h30 Or z&gt;&amp;h39 Then Exit Function
+						EndIf
+					Next
+					x=Val(Left$(a$,2))&#58;z=Val(Mid$(a$,4,2))
+					If x&lt;1 Then Exit Function
+					Select Case z
+						Case 1,3,5,7,8,10,12
+							If x&gt;31 Then Exit Function
+						Case 4,6,9,11
+							If x&gt;30 Then Exit Function
+						Case 2
+							If x&gt;28+IsLeapYear(Val(Right$(a$,4))) Then Exit Function
+						Case Else
+							Exit Function
+					End Select
+					IsDate=1
+				EndIf
+			EndIf
+		EndIf
+	End Function
+</pre><br />There are several optimizations possible on the above code that have been omitted in the interests of legibility.<br /><br /><br /><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:12 GMT -->
+</html>

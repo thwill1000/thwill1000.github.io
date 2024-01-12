@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Constrain-function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Constrain() function - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Constrain-function" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFogk8aDEgY2xhc3M9InBhZ2V0aXRsZSI+Q29uc3RyYWluKCkgZnVuY3Rpb248L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE5LzAzLzMwIDIzOjMzIGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogQ29udHJvbCwgTWF0aHM8L3NtYWxsPjxiciAvPjxiciAvPkZ1bmN0aW9uIHRvIGVuc3VyZSBhIHZhbHVlIGV4aXN0cyB3aXRoaW4gc3BlY2lmaWMgYm91bmRhcmllcy48YnIgLz48YnIgLz5UaGUgZm9sbG93aW5nIGlzIGEgZnVuY3Rpb24gZm9yIHJldHVybmluZyBhIG51bWVyaWNhbCB2YWx1ZSBjb25zdHJhaW5lZCB0byBhIGdpdmVuIHJhbmdlOjxiciAvPjxiciAvPjxjb2RlPmxvd2VybGltaXQ8PW48PVVwcGVyTGltaXQ8L2NvZGU+PGJyIC8+PGJyIC8+SWYgdGhlIHZhbHVlIGlzIGxlc3MgdGhhbiB0aGUgbG93ZXIgbGltaXQsIHRoZSBsb3dlciBsaW1pdCB3aWxsIGJlIHJldHVybmVkLiBMaWtld2lzZSBpZiB0aGUgdmFsdWUgaXMgZ3JlYXRlciB0aGFuIHRoZSB1cHBlciBsaW1pdCwgdGhlIHVwcGVyIGxpbWl0IHdpbGwgYmUgcmV0dXJuZWQuIElmIHRoZSB2YWx1ZSByZXNpZGVzIGJldHdlZW4gdGhlIHR3bywgaXQgd2lsbCBiZSByZXR1cm5lZCBpbnRhY3QuIDxiciAvPjxiciAvPkEgc2ltaWxhciBmdW5jdGlvbiBleGlzdHMgaW4gb3RoZXIgbGFuZ3VhZ2VzIGJ1dCBhcyBzaG93biBiZWxvdywgaXQgaXMgZWFzaWx5IGZhYnJpY2F0ZWQgdXNpbmcgdGhlIGluYnVpbHQgcHJpbWl0aXZlcyBvZiBNTUJhc2ljLjxiciAvPjxiciAvPkFzIHdyaXR0ZW4gYmVsb3csIGl0IG9ubHkgd29ya3Mgd2l0aCBpbnRlZ2Vycy4gSWYgeW91ciBuZWVkcyByZXF1aXJlIGl0LCBhZGp1c3QgYXMgbmVjZXNzYXJ5IGZvciBGbG9hdHMgZXRjLjxiciAvPjxiciAvPjxiPlN5bnRheDo8L2I+PGJyIC8+PUNvbnN0cmFpbihUZXN0VmFsdWUsTG93ZXJMaW1pdCxVcHBlckxpbWl0KTxiciAvPjxiciAvPjxiPkV4YW1wbGU6PC9iPjxiciAvPng9Q29uc3RyYWluKFRyaWdnZXJUZW1wLDcsMTApPGJyIC8+PGJyIC8+PHByZT4NCiAgICBGdW5jdGlvbiBDb25zdHJhaW4odiBBcyBJbnRlZ2VyLExsaW0gQXMgSW50ZWdlciwgVWxpbSBBcyBJbnRlZ2VyKSBBcyBJbnRlZ2VyDQogICAgICAgIENvbnN0cmFpbj1NaW4oTWF4KHYsTGxpbSApLFVsaW0gKQ0KICAgIEVuZCBGdW5jdGlvbg0KPC9wcmU+PGJyIC8+ZGQ9I8Pfah2SOVpXyUR5CrpN3QRLBA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Constrain() function</h1><small>Modified on 2019/03/30 23:33 by Administrator &mdash; Categorized as: Control, Maths</small><br /><br />Function to ensure a value exists within specific boundaries.<br /><br />The following is a function for returning a numerical value constrained to a given range:<br /><br /><code>lowerlimit<=n<=UpperLimit</code><br /><br />If the value is less than the lower limit, the lower limit will be returned. Likewise if the value is greater than the upper limit, the upper limit will be returned. If the value resides between the two, it will be returned intact. <br /><br />A similar function exists in other languages but as shown below, it is easily fabricated using the inbuilt primitives of MMBasic.<br /><br />As written below, it only works with integers. If your needs require it, adjust as necessary for Floats etc.<br /><br /><b>Syntax:</b><br />=Constrain(TestValue,LowerLimit,UpperLimit)<br /><br /><b>Example:</b><br />x=Constrain(TriggerTemp,7,10)<br /><br /><pre>
+    Function Constrain(v As Integer,Llim As Integer, Ulim As Integer) As Integer
+        Constrain=Min(Max(v,Llim ),Ulim )
+    End Function
+</pre><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Constrain-function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:02 GMT -->
+</html>

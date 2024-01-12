@@ -1,0 +1,711 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:50:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	MMBasic code-pack to Read and Write Winbond Flash Memories - Fruit Of The Shed
+</title><meta name="keywords" content="flash, memory, winbond, logging" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories&amp;NS=MMBasic&amp;NoRedirect=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Logine0b6.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dMMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories%26NS%3dMMBasic%26NoRedirect%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History75a6.html?Page=MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			MMBasic code-pack to Read and Write Winbond Flash Memories
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print75a6.html?Page=MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2021/10/25 12:42
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages62d4.html?Cat=MMBasic.ARMMite" title="ARMMite">ARMMite</a>, <a href="MMBasic.AllPages5ce5.html?Cat=MMBasic.Electronics" title="Electronics">Electronics</a>, <a href="MMBasic.AllPages1451.html?Cat=MMBasic.File%20Management" title="File Management">File Management</a>, <a href="MMBasic.AllPagesdfd3.html?Cat=MMBasic.Filesystem" title="Filesystem">Filesystem</a>, <a href="MMBasic.AllPages9386.html?Cat=MMBasic.Hardware" title="Hardware">Hardware</a>, <a href="MMBasic.AllPages554c.html?Cat=MMBasic.Memory" title="Memory">Memory</a>, <a href="MMBasic.AllPages02cd.html?Cat=MMBasic.MMX" title="MMX">MMX</a>, <a href="MMBasic.AllPages0409.html?Cat=MMBasic.Program%20Management" title="Program Management">Program Management</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f258a0398-bae5-42a8-ba82-03350237c545" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f258a0398-bae5-42a8-ba82-03350237c545');"><a href="MMBasic.Ultra-Compact-Logging-with-Flash-Storage-on-small-MicroMites.html" title="Ultra-Compact Logging with Flash Storage on small MicroMites">Ultra-Compact Logging with Flash Storage on small MicroMites</a></div><div id="fb4d82a75-deff-468c-a4f5-dd7a03b56d1f" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fb4d82a75-deff-468c-a4f5-dd7a03b56d1f');"></div><div id="s66763509-8e9a-4f92-a6ab-22f3d62056f7" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s66763509-8e9a-4f92-a6ab-22f3d62056f7');"><a href="MMBasic.Ultra-Compact-Logging-with-Flash-Storage-on-small-MicroMites.html" title="Ultra-Compact Logging with Flash Storage on small MicroMites">Ultra-Compact Logging with Flash Storage on small MicroMites</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.MM-Event-part-of-the-original-MMBasic-library.html" title="MM_Event (MMBasic)">MM_Event (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List.html" title="MMBasic - Create/Manipulate Stack, Queue or List (MMBasic)">MMBasic - Create/Manipulate Stack, Queue or List (MMBasic)</a> &raquo; <b><a href="MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories.html" title="MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's66763509-8e9a-4f92-a6ab-22f3d62056f7', this);" id="lnks66763509-8e9a-4f92-a6ab-22f3d62056f7" onmouseout="javascript:return __HideDropDown('s66763509-8e9a-4f92-a6ab-22f3d62056f7');">MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Maxifont-bas-part-of-the-original-MMBasic-library.html" title="Maxifont.bas (MMBasic)">Maxifont.bas (MMBasic)</a> &raquo; <a href="MMBasic.MaxiTrek-part-of-the-original-MMBasic-library.html" title="MaxiTrek (MMBasic)">MaxiTrek (MMBasic)</a> &raquo; <a href="MMBasic.MaxMan-part-of-the-original-MMBasic-library.html" title="MaxMan (MMBasic)">MaxMan (MMBasic)</a> &raquo; <a href="MMBasic.Maze-bas-part-of-the-original-MMBasic-library.html" title="Maze.bas (MMBasic)">Maze.bas (MMBasic)</a> &raquo; <a href="MMBasic.Measuring-RMS-algorythm-using-MMBasic.html" title="Measuring RMS (algorythm) using MMBasic (MMBasic)">Measuring RMS (algorythm) using MMBasic (MMBasic)</a> &raquo; <a href="MMBasic.Micromite-eXtreme-Manual.html" title="Micromite eXtreme 5.4.05 Manual and Firmware (MMBasic)">Micromite eXtreme 5.4.05 Manual and Firmware (MMBasic)</a> &raquo; <a href="MMBasic.Midd-Function-to-replace-a-section-of-a-string-works-like-VB-statement-Mid.html" title="Midd$ Function to replace a section of a string, works like VB statement Mid$()= (MMBasic)">Midd$ Function to replace a section of a string, works like VB statement Mid$()= (MMBasic)</a> &raquo; <a href="MMBasic.MM-Event-part-of-the-original-MMBasic-library.html" title="MM_Event (MMBasic)">MM_Event (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List.html" title="MMBasic - Create/Manipulate Stack, Queue or List (MMBasic)">MMBasic - Create/Manipulate Stack, Queue or List (MMBasic)</a> &raquo; <b><a href="MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories.html" title="MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f258a0398-bae5-42a8-ba82-03350237c545', this);" id="lnkf258a0398-bae5-42a8-ba82-03350237c545" onmouseout="javascript:return __HideDropDown('f258a0398-bae5-42a8-ba82-03350237c545');">MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		Winbond flash memories provide an excellent method of storing up to 16MB of data in a tiny SPI driven chip. At around $0.50 each (varies) these offer an amazing storage/price density and are used in many devices to store configuration and firmware. Throwing out some old electronics? Check the board - there is likely a Flash memory that can be recovered and re-used.<br /><br />SPI is very much faster and easier to drive than I<sup>2</sup>C. The routines here work flawlessly at 20MHz and were inspired by work MatherP published on the BackShed here <a class="externallink" href="https://www.thebackshed.com/forum/ViewTopic.php?TID=8492" title="https://www.thebackshed.com/forum/ViewTopic.php?TID=8492" target="_blank">https://www.thebackshed.com/forum/ViewTopic.php?TID=8492</a><br /><br />That work used CSubs to access the Flash and whereas they are very quick, they exclude users of the bigger 'Mite platforms - the MMX and ST's Arm base processors - the H7/F4 platforms. The routines below are a purely MMBasic solution and so can be used on any MMBasic platform supporting the SPI bus.<br /><br />The approach with the code here is comparable to a sequential file. Data is written using one function and read back with another. When data is exhausted a marker, CHR$(255), is reached. This is analagous with the EOF character of disk filing systems. This code provides a simple system of strings in, strings out. It handles just this - what you actually store is your own decision. Using a structured logging method e.g. <a class="pagelink" href="MMBasic.Ultra-Compact-Logging-with-Flash-Storage-on-small-MicroMites.html" title="Ultra-Compact Logging with Flash Storage on small MicroMites">Ultra-Compact Logging with Flash Storage on small MicroMites</a> it would be possible to log continuously at one second intervals for eight days straight on a 4MB chip. With arbitrary strings of average length 50 bytes, in excess of 83,000 lines could be stored. <i>During research for this software pack, some solutions were found where a single string occupies an entire page with corresponding wastage or "slack space". If such a method were employed, a 1MB flash could store just 4096 strings(!).</i><br /><br /><h1 class="separator">Organisation of Strings in Memory<a class="headeranchor" id="Organisation_of_Strings_in_Memory_0" href="#Organisation_of_Strings_in_Memory_0" title="Link to this Section">&#0182;</a></h1>The Flash technology provides continuous reading starting from a single 24 bit address. Once latched, the address increments with each read and so the entire memory could be rapidly read out with only a single address setup - at 20MHz this could be little more than 400nS per <u>byte</u>! <br /><br />Writing the device is more involved. Internally, Flash memory is arranged into pages of 256 bytes. When writing, you can only do so within a given page and although you have to latch a full 24 bit address, the top 16 bits are fixed so only the bottom 8 bits can be worked with - you are locked into a page. Attempts to write beyond simply roll the bottom eight bits of the address back to zero and over-write what was already in that page. Note also that because of the way flash memory is constructed, only zero bits can be written. You cannot set a previously zero bit to one without formatting. This is why a formatted chip has all locations sets to 255 (0FFh). When writing a byte to any given location, the result stored is a logical AND of the original value and the value you wrote. So supposing you wish to write 55h: If the memory is 0FFh, FF AND 55 = 55... all good, but now suppose you want to write 0AAh in that same location afterwards; 55 AND AA = 0. So you can see the data becomes unreliable unless you are writing in formatted cells. Any Random access writing you might try needs to be aware of this. Grey beards may remember burning EPROMS years back. It was the same approach there and fast programmers would read out an EPROM then AND it with your target code to see if it could be burned in without having to erase the EPROM beforehand. Similar thing really.<br /><br />The write routine takes care of paging making the process transparent to the user. You can see from the grab below that a string (red box) traverses a page boundary with no problem - the two bytes in the yellow boxes are the last and first bytes in different pages (00FFh = page 0 and 0100h = page 1) but it's all handled by the write function. This means the entire memory is available for use. <br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="wbpages1046.png?File=/MMBasic/wbpages.png" alt="Image" /><br /><br />The below diagram shows the structure of strings in memory in more detail - each cell represents a byte in Flash. Here the string "IIIII" is stored as the first and only string in the memory<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="flash_stringstore03d8.png?File=/flash_stringstore.png" alt="Image" /><br />Strings may be 0 to 255 characters long and different length strings can be freely mixed in memory but must conform to the following rules for any one character:<br /><ul><br /><li>CHR$(0) - Forbidden. This is the string delimiter byte used for organising the stored strings.</li><br /><li>CHR$(1) to CHR$(254) - May be freely used within your strings.</li><br /><li>CHR$(255) - Forbidden. All Flash memory locations are set to 255 during a format. The location of the start of blank memory (where data may be safely stored) is determined from the first such byte. </li><br /></ul><br />The initialization routine (WB.Init) performs several useful and vital functions:<br /><ul><br /><li> It identifies the type of Flash attached (if any) and sets the maximum address variable WB.Top to the last available memory location.</li><br /><li> It rapidly determines the first unused byte in the memory (more on this later) and sets the WB.WRptr variable so as not to trample on previously stored data</li><br /></ul><br /><br /><h1 class="separator">Method<a class="headeranchor" id="Method_1" href="#Method_1" title="Link to this Section">&#0182;</a></h1>There are two address pointers, one for read and another for write. This permits an easy access method where the memory can be read and written simultaneously with no special measures. In normal use, the pointers are of no concern and any program will use the WB.WRstr() and WB.RDstr$() routines.<br /><br />Writing:<br />An erased Flash has all locations set to 255 so it follows the first such byte (lowest address) is the first place we can write data without trampling on earlier data (now it is clear why CHR$(255) is prohibited in strings). NOTE: Brand new Flash chips are not necessarily in an erased state and should be formatted first for reliable use - unless the garbage is of some curiosity value.<br /><br />WB.WRptr points to the first such memory location i.e. the position new data can be reliably stored. Flash memories retain data for up to 20 years and with such large capacities, it is highly likely that data will be aggregated over power-cycles. At initialization, WB.WRPtr is ascertained by a rapid successive approximation algorithm that will return the first 255 byte in around 80mS on a 4MB chip with 48MHz MicroMite. This happens each time WB.Init is called - you can do this as often as you like but once at the start of your program is usual.<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="flashpointers1857e.png?File=/flashpointers1.png" alt="Image" /><br /><br />Reading:<br />Each byte is read from memory and built up in a string until a 0 is read whence the string is returned (the 0 does not form part of that string). The read pointer, WB.RDptr, is incremented to keep track of where reading occurs and will always point to the start of the next string to be read, thus you can continually read from the memory with successive calls to WB.ReadStr$. If an attempt is made to read past valid data, CHR$(255) is returned by WB.ReadStr$ and WB.RDptr is not incremented (because no string was read). When additional data is written, the next read will return the new data and so on... <br /><br />Thus, WB.RDptr will happily trot along behind WB.WRPtr but never pass it. It is entirely normal for the two pointers to have the same value - when you have read out all the data. This can be used as an end-of-file (EOF) indication if you prefer.<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="flashpointers210f7.png?File=/flashpointers2.png" alt="Image" /><br /><br /><h1 class="separator">Global Variables<a class="headeranchor" id="Global_Variables_2" href="#Global_Variables_2" title="Link to this Section">&#0182;</a></h1>Integer <b>WB.RDptr</b><br />The pointer for the next string READ operation<br /><br />Integer <b>WB.WRptr</b><br />The pointer for the next string WRITE operation<br /><br />Integer <b>WB.ID</b><br />The JEDEC identifier of the Flash - the manufacturer and 2 byte device ID.<br /><br />String <b>WB$</b><br />A human friendly version of the ID e.g. W25Q32 etc.<br /><br />Integer <b>WB.Top</b><br />The top-most available memory location<br /><br /><h1 class="separator">The Routines<a class="headeranchor" id="The_Routines_3" href="#The_Routines_3" title="Link to this Section">&#0182;</a></h1><b>WB.Init</b><br />Discover what type of Flash and Initialise the internal pointers.<br /><br /><b>WB.Format</b><br />Erase the entire Flash; sets all memory locations to contain 0FFh - does an initialization afterwards to reset all the pointers. New Flash chips should be formatted before use as they may contain random data that may confuse WB.Init and return dubious usage figures.<br /><br /><b>=WB.Stat1RD()</b><br /><b>=WB.Stat2RD()</b><br /><b>=WB.Stat3RD()</b><br />Read the three status registers.<br /><br /><b>WB.WaitBusy</b><br />Wait for the Flash to become idle. Beware, a format can take several seconds depending on the Flash capacity. If you are using WATCHDOG in your code, you may need to put one in here so your code doesn't restart on long waits.<br /><br /><b>=WB.TestBusy()</b><br />Check if the Flash is busy without waiting.<br /><br /><b>=WB.Peek(address)</b><br />Peek a byte at the given address in Flash. Flash is erased to FF so when we peek the next address after a string we can tell if we are at EOF.<br /><br /><b>=WB.ReadStr$()</b><br />Read a string from the current read pointer and increment the pointer. Returns Chr$(255) if we are at the end of the data.<br /><br /><b>=WB.WriteStr(a$)</b><br />Write a string to the current write pointer and increment the pointer. Returns a zero if successful and 1 if the write would exceed available free space.<br /><br /><br />Support routines - unlikely to be useful in your code:<br /><br /><b>WB.Addr(address)</b><br />Latch a three byte address in the Flash.<br /><br /><b>WB.WREnable(0|1)</b><br />Enable/Disable write function.<br /><br /><b>WB.SetPage</b><br />Set up the page address for a pending write operation.<br /><br /><br /><h1 class="separator">Example<a class="headeranchor" id="Example_4" href="#Example_4" title="Link to this Section">&#0182;</a></h1><pre>
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+' your setup code goes  here
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+Init&#58;
+	CPU 48
+	'Option Autorun On
+	'Option Baudrate 9600
+	Option Explicit
+	Option Base 0
+
+	Const Ver$="0.20 of 24-NOV-2019"
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+'The only config you should need to do&#58;
+'change the following to the CS pin for the Flash memory
+	Const WB.CS=23
+'change the following to the SPI channel where your Flash chip is (it's usually OK to leave it open
+'so long as nothing else is competing and closes it after use - e.g. LCD panels)
+	SPI Open 20000000,0,8'20MHz, mode 0, 8 bits... seems happy at 20MHz but drop this down if you get probs
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+
+'mandatory variables in your program&#58;
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+	Dim Integer WB.RDptr,WB.WRptr,WB.Top,WB.ID,x,n
+	Dim WB$
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+	
+
+
+
+
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+' your program goes  here
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+
+
+'A little demonstration code...
+
+	x=WB.Init()	'single function id's the device, sets mem size and finds first usable address
+			'your code should check WB.Top after this call. if no Flash found or couldn't be identified, WB.Top=-1
+	If x&lt;&gt;0 Then
+		Print"Flash chip not recognized&#58; ";Hex$(x,6)
+		End
+	EndIf
+
+	Dim y$
+	Dim Integer m
+
+	Print"Found ";WB$;" (";Hex$(WB.ID,6);")"
+	Print"memory size is";(WB.Top+1)/1024;"KB (0-"+Hex$(WB.Top)+")"
+	Print"First blank address is ";Hex$(WB.WRptr);"h"
+
+	Input"Format before testing (Y/N)?",y$
+	If y$="y" then
+		Print "Formatting..."
+		WB.Format
+		Print"First blank address is ";Hex$(WB.WRptr);"h"
+	EndIf
+
+	Randomize Timer ' delete this line on MMX/Arm etc
+
+'write some random strings to Flash with timings
+	Print
+	Print"","WR Time"
+	Print"&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+
+	For n=1 To 10
+		Print n,
+		Timer=0&#58;x=WB.WriteStr(Date$+" "+Time$+" "+String$(65,48+Rnd&#42;70))&#58;Print Timer;"mS"
+	Next
+
+'read back the strings - demonstrates chr$(255) if attempting to read
+	Print&#58;Print"Reading back all strings..."
+	Print"Addr","Time","Data"
+	Print"&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+	Do
+		Print Hex$(WB.RDptr,4);"h",
+		Timer=0&#58;y$=WB.ReadStr$()&#58;Print Timer,y$
+	Loop While y$&lt;&gt;Chr$(255)
+
+	For n=0 To 1023 Step 16
+		y$=""
+		Print Hex$(n,4);"  ";
+		For m=0 To 15
+			x=WB.Peek(n+m)
+			Print Hex$(x,2);"  ";
+			If x&lt;32 Or x&gt;126 Then x=&amp;h2e
+			y$=y$+Chr$(x)
+		Next
+		Print y$
+	Next
+
+	Input"Format the Flash (Y/N)?",y$
+	y$=UCase$(y$)
+	If y$="Y" Then
+		Print"wait a moment"
+		timer=0&#58;WB.Format&#58;Print timer;"mS"
+	EndIf
+
+	End
+</pre><br />The routines are fairly brisk and numerous testing/adjustment phases have resulted in some tricks to make them as fast as possible. The Write function was a bottle-neck and has been re-written. It is now very quick and because of the SPI Bulk Write methods available, paradoxically, writes substantially out-perform reads by about a factor of 3 worst case (255 character strings) at ~20mS Vs ~70mS. With 3 character strings, Reads take around 5mS and Writes are still around the 20mS mark.<br /><br />Here are some timings for sequential reads & writes on a 48MHz '170 with 24MHz SPI bus.<br /><br />Random 254 char strings (worst case)<br /><code><br />old write method:<br /><hr><br /> 1       89mS<br /> 2       97mS<br /> 3       97mS<br /> 4       96mS<br /> 5       97mS<br /> 6       96mS<br /> 7       96mS<br /> 8       97mS<br /> 9       96mS<br /> 10      97mS<br /> <br /> <br />new write method:<br /><hr><br /> 1       11mS<br /> 2       19mS<br /> 3       19mS<br /> 4       19mS<br /> 5       20mS<br /> 6       19mS<br /> 7       19mS<br /> 8       19mS<br /> 9       19mS<br /> 10      20mS<br /></code><br /><br />Read 254 character string<br /><code><br /><hr><br />    73mS    <br />    72mS     <br />    72mS     <br />    71mS     <br />    72mS     <br />    72mS     <br />    72mS     <br />    72mS<br /></code><br />Read 3 character string<br /><code><br /><hr>  <br />    5mS      <br />    5mS      <br />    4mS      <br />    5mS      <br />    5mS      <br />    5mS      <br />    5mS      <br />    4mS      <br />    5mS      <br /></code><br /><br /><h1 class="separator">The Code<a class="headeranchor" id="The_Code_5" href="#The_Code_5" title="Link to this Section">&#0182;</a></h1><pre>
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+'Flash Subs &amp; Functions
+
+'Discover the attached flash memory and initialize all the pointers and stuff
+'sets up the CS pin and opens the SPI channel
+'returns 0 if the chip is IDed with all the variables correctly set up.
+'else returns the ID read from the chip = &amp;FFFFFF is open bus (no chip)
+	Function WB.Init() As Integer
+		Local Integer n
+		WB.Top=-1&#58;WB.WRptr=-1
+		'identify the Flash ram by reading the JEDEC ID and setting some key values
+		Pin(WB.CS)=0
+			x=SPI(&amp;h9F)
+			WB.ID=65536&#42;SPI(0)+256&#42;SPI(0)+SPI(0)
+		Pin(WB.CS)=1
+		'if your device is not listed or comes up unknown, you'll have to determine the correct ID
+		'from the device PDF and add it below. Good news is, it looks like all the Winbond W25&#42; are
+		'4KB sectors and 256B page size so the code &#42;should&#42; work without any changes - no guarantees
+		'only known problem is the code assumes a 24 bit address which breaks for &gt;16MB devices and maybe
+		'others which might only provide a 16 bit address - haven't looked at the PDF.
+		'The Winbond product selector shows these chips but I couldn't find PDFs for them&#58;
+		'W25Q02JV	256MB
+		'W25Q01JV	128MB
+
+		Select Case WB.ID
+			'&#42;&#42;&#42; Tested
+			Case &amp;hEF4018&#58;WB.Top=16384&#58;WB$="W25Q128"'16MB
+			Case &amp;hEF4017&#58;WB.Top=8192&#58;WB$="W25Q64"'8MB
+			Case &amp;hEF4016&#58;WB.Top=4096&#58;WB$="W25Q32"'4MB
+			Case &amp;hEF4015&#58;WB.Top=2048&#58;WB$="W25Q16"'2MB
+			Case &amp;hEF4014&#58;WB.Top=1024&#58;WB$="W25Q80"'1MB
+			'&#42;&#42;&#42; UnTested
+			Case &amp;hEF4020&#58;WB.Top=65536&#58;WB.Top=16384&#58;WB$="W25Q512"'64MB - With these two devices, the code should work as they default to 
+			Case &amp;hEF4019&#58;WB.Top=32768&#58;WB.Top=16384&#58;WB$="W25Q256"'32MB - 3 byte addresses but you'll only be able to use the bottom 16MB. 
+										'May support the higher capacities later if there is a demand.
+			Case &amp;hEF4013&#58;WB.Top=512&#58;WB$="W25Q40"'512KB
+			Case &amp;hEF5012&#58;WB.Top=256&#58;WB$="W25Q20"'256KB
+			Case &amp;hEF6011&#58;WB.Top=128&#58;WB$="W25Q10"'128KB
+			Case &amp;hEF3010&#58;WB.Top=64&#58;WB$="W25X05"'64KB
+			'Case &amp;hBF2642&#58;WB.Top=4096&#58;WB$="SST26VF032"'Microchip 4MB pin and code compatible - needs work on global enable
+			Case Else
+				SPI Close&#58;WB.Top=-1&#58;WB.Init=WB.ID&#58;Exit Function'can't identify
+		End Select
+
+		WB.Top=(WB.Top&#42;1024)-1'set the top memory location
+
+'find the first (=lowest address with) FF byte
+		If WB.Peek(0)=255 Then WB.WRptr=0&#58;WB.RDptr=0&#58;Exit Function'blank Flash; early bath
+'otherwise find by successive approximation - very fast, searches 4MB in 80mS
+		WB.WRptr=(WB.Top+1)\2&#58;n=WB.WRptr\2'start at the middle and go in smaller and smaller halves
+		Do
+			If WB.Peek(WB.WRptr)=255 Then
+				WB.WRptr=WB.WRptr-n'still in void so go down by half the remainder
+			Else
+				WB.WRptr=WB.WRptr+n'we are in the strings so go up by half the remainder
+			EndIf
+			If n&lt;&gt;1 Then n=n\2'smaller and smaller halves
+		Loop Until WB.Peek(WB.WRptr)=255 And WB.Peek(WB.WRptr-1)&lt;&gt;255'is the byte before the FF !FF? if so, we are done
+	End Function
+
+'set or clear flash write enable flag
+	Sub WB.WREnable(a As Integer)
+		If WB.Top=-1 Then Exit Sub
+		Local Integer x
+		Pin(WB.CS)=0
+			If a=0 Then
+				x=SPI(4)
+			Else
+				x=SPI(6)
+			EndIf
+		Pin(WB.CS)=1
+		WB.WaitBusy
+	End Sub
+
+'wait while Flash is busy
+	Sub WB.WaitBusy
+		If WB.Top=-1 Then Exit Sub
+		Do While WB.TestBusy()
+		'you might want to put a WATCHDOG here. Long operations could break your program
+		Loop
+	End Sub
+
+'test BUSY flag in STAT1
+	Function WB.TestBusy() As Integer
+		If WB.Top=-1 Then Exit Function
+		WB.TestBusy=(WB.Stat1RD() And 1)
+	End Function
+
+	Function WB.Stat1RD() As Integer
+		If WB.Top=-1 Then Exit Function
+		Local Integer x
+		Pin(WB.CS)=0
+			x=SPI(5)
+			WB.Stat1RD=SPI(0)
+		Pin(WB.CS)=1
+	End Function
+
+	Function WB.Stat2RD() As Integer
+		If WB.Top=-1 Then Exit Function
+		Local Integer x
+		Pin(WB.CS)=0
+			x=SPI(&amp;h35)
+			WB.Stat2RD=SPI(0)
+		Pin(WB.CS)=1
+	End Function
+
+	Function WB.Stat3RD() As Integer
+		If WB.Top=-1 Then Exit Function
+		Local Integer x
+		Pin(WB.CS)=0
+			x=SPI(&amp;h15)
+			WB.Stat3RD=SPI(0)
+		Pin(WB.CS)=1
+	End Function
+
+'send a 3 byte address to Flash
+	Sub WB.Addr(a As Integer)
+		If WB.Top=-1 Then Exit Sub
+		Local Integer x
+		x=SPI((a&gt;&gt;16) And 255)
+		x=SPI((a&gt;&gt;8) And 255)
+		x=SPI(a And 255)
+	End Sub
+
+'set the address for page writing
+	Sub WB.SetPage
+		If WB.Top=-1 Then Exit Sub
+		Local Integer x
+		Pin(WB.CS)=1
+		WB.WaitBusy
+		WB.WREnable 1
+		WB.WaitBusy
+		Pin(WB.CS)=0
+		x=SPI(2)
+		WB.Addr WB.WRptr'setup the address
+	End Sub
+
+'erase the entire chip - Beware; can take several seconds
+	Sub WB.Format()
+		If WB.Top=-1 Then Exit Sub
+		Local Integer x
+		WB.WREnable 1
+		WB.WaitBusy
+		Pin(WB.CS)=0
+			x=SPI(&amp;h60)'start the erase - will take some time
+		Pin(WB.CS)=1
+		WB.WaitBusy
+		x=WB.Init()
+	End Sub
+
+'Peek any address in Flash
+	Function WB.Peek(a As Integer) As Integer
+		If WB.Top=-1 Then Exit Function
+		Local Integer x
+		Pin(WB.CS)=0
+			x=SPI(3)'read at the given address
+			WB.Addr a
+			WB.Peek=SPI(0)'grab one byte
+		Pin(WB.CS)=1
+	End Function
+
+'Read a string from the Read Address using the global WB.RDptr variable
+	Function WB.ReadStr$()
+		If WB.Top=-1 Then Exit Function
+		Local Integer x,z
+		Local a$
+		WB.WaitBusy'wait for the Flash to be idle
+		Pin(WB.CS)=0
+		x=SPI(3)
+		WB.Addr WB.RDptr
+		For z=1 to 256'stream the data from Flash into a$, 256 covers max length+chr$(0), we bail early if needed
+			x=SPI(0)'get the character
+			Select case x
+				Case 0 'break out on the delimiter
+					Poke Var a$,0,z-1
+					WB.RDptr=WB.RDptr+Len(a$)+1'bump the address along by the number of bytes we read +1 for the delimiter
+					Exit For
+				Case 255 'break out on EOF, should never happen
+					WB.RDptr=WB.RDptr+Len(a$)
+					a$=Chr$(x)'single char?
+					Exit For
+				Case Else
+					Poke Var a$,z,x
+			End select
+		Next
+		Pin(WB.CS)=1
+		WB.ReadStr$=a$
+	End Function
+
+'write a string to the next available position. Return 0 if successful
+	Function WB.WriteStr(a$) As Integer
+		If WB.Top=-1 Then WB.WriteStr=1&#58;Exit Function
+		Local Integer n,x
+		n=Len(a$)+1
+		If WB.WRptr+n&gt;WB.Top Then WB.WriteStr=1&#58;Exit Function
+		x=256-(WB.WRPtr Mod 256)' remaining space in this page
+		WB.SetPage
+		If n&lt;=x Then 'will fit in current page
+			SPI Write n-1,a$
+			x=SPI(0)
+			Pin(WB.CS)=1
+			WB.WrPtr=WB.WrPtr+n
+		Else 'have to split across pages
+			'first half
+			Local l$
+			l$=Left$(a$,x)
+			SPI Write len(l$),l$
+			Pin(WB.CS)=1
+			WB.WrPtr=WB.WrPtr+x
+			'second half
+			l$=Mid$(a$,x+1)+Chr$(0)
+			x=Len(l$)
+			WB.SetPage
+			SPI Write x,l$
+			Pin(WB.CS)=1
+			WB.WrPtr=WB.WrPtr+x
+		EndIf
+	End Function
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+</pre><br /><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:50:42 GMT -->
+</html>

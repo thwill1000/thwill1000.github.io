@@ -1,0 +1,822 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Sort-algorithms-A-comparison.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Sort algorithms - A comparison - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Sort-algorithms-A-comparison&amp;NS=MMBasic&amp;NoRedirect=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCBBYIAgEPZBYCZg8VBK4BR2V0RmlsZS5hc3B4P0ZpbGU9RmxvYXRTb3J0LnBkZiZhbXA7QXNTdHJlYW1BdHRhY2htZW50PTEmYW1wO1Byb3ZpZGVyPVNjcmV3VHVybi5XaWtpLkZpbGVzU3RvcmFnZVByb3ZpZGVyJmFtcDtJc1BhZ2VBdHRhY2htZW50PTEmYW1wO1BhZ2U9TU1CYXNpYy5Tb3J0LWFsZ29yaXRobXMtQS1jb21wYXJpc29uCERvd25sb2FkDUZsb2F0U29ydC5wZGYIMTIuMTMgS0JkAgIPZBYCZg8VBLABR2V0RmlsZS5hc3B4P0ZpbGU9SW50ZWdlclNvcnQucGRmJmFtcDtBc1N0cmVhbUF0dGFjaG1lbnQ9MSZhbXA7UHJvdmlkZXI9U2NyZXdUdXJuLldpa2kuRmlsZXNTdG9yYWdlUHJvdmlkZXImYW1wO0lzUGFnZUF0dGFjaG1lbnQ9MSZhbXA7UGFnZT1NTUJhc2ljLlNvcnQtYWxnb3JpdGhtcy1BLWNvbXBhcmlzb24IRG93bmxvYWQPSW50ZWdlclNvcnQucGRmCDEyLjk2IEtCZAIDD2QWAmYPFQSsAUdldEZpbGUuYXNweD9GaWxlPXNvcnRvZmYuemlwJmFtcDtBc1N0cmVhbUF0dGFjaG1lbnQ9MSZhbXA7UHJvdmlkZXI9U2NyZXdUdXJuLldpa2kuRmlsZXNTdG9yYWdlUHJvdmlkZXImYW1wO0lzUGFnZUF0dGFjaG1lbnQ9MSZhbXA7UGFnZT1NTUJhc2ljLlNvcnQtYWxnb3JpdGhtcy1BLWNvbXBhcmlzb24IRG93bmxvYWQLc29ydG9mZi56aXAINTcuMjUgS0JkAgQPZBYCZg8VBK8BR2V0RmlsZS5hc3B4P0ZpbGU9U3RyaW5nU29ydC5wZGYmYW1wO0FzU3RyZWFtQXR0YWNobWVudD0xJmFtcDtQcm92aWRlcj1TY3Jld1R1cm4uV2lraS5GaWxlc1N0b3JhZ2VQcm92aWRlciZhbXA7SXNQYWdlQXR0YWNobWVudD0xJmFtcDtQYWdlPU1NQmFzaWMuU29ydC1hbGdvcml0aG1zLUEtY29tcGFyaXNvbghEb3dubG9hZA5TdHJpbmdTb3J0LnBkZggxMy4zMyBLQmRk5YjUkJjGYTpUdV93Np8WxSXmTsM=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login89b2.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dSort-algorithms-A-comparison%26NS%3dMMBasic%26NoRedirect%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Sort-algorithms-A-comparison266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History6a20.html?Page=MMBasic.Sort-algorithms-A-comparison">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Sort algorithms - A comparison
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print6a20.html?Page=MMBasic.Sort-algorithms-A-comparison" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2017/08/13 20:33
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesb06f.html?Cat=MMBasic.Arrays" title="Arrays">Arrays</a>, <a href="MMBasic.AllPages554c.html?Cat=MMBasic.Memory" title="Memory">Memory</a>, <a href="MMBasic.AllPages4663.html?Cat=MMBasic.Sort" title="Sort">Sort</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="ffa7cbbf4-64c2-4357-8491-d7684ea5d7d3" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ffa7cbbf4-64c2-4357-8491-d7684ea5d7d3');"><a href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic">Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic</a><a href="MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library.html" title="Bubble Sort">Bubble Sort</a><a href="MMBasic.Shell-Sort.html" title="Shell Sort">Shell Sort</a><a href="MMBasic.CR2-Sort-The-Fastest-Search.html" title="Cube Root of Two Sort - fast sort">Cube Root of Two Sort - fast sort</a><a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings">Comb Sort for strings</a></div><div id="f3e775b2f-c614-4c64-9444-62a7d71da239" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f3e775b2f-c614-4c64-9444-62a7d71da239');"><a href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a></div><div id="f99b49ed4-31ac-4943-9d7c-4e9adc8ccd83" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f99b49ed4-31ac-4943-9d7c-4e9adc8ccd83');"></div><div id="f33c0642d-bdbb-4a75-8083-87b19ee3b2ec" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f33c0642d-bdbb-4a75-8083-87b19ee3b2ec');"><a href="MMBasic.RC4-Encryption-and-Decryption-Functions.html" title="RC4 Encryption and Decryption Functions">RC4 Encryption and Decryption Functions</a><a href="MMBasic.Base64-Mime-Encode-and-Decode-Functions.html" title="Base64 Mime Encode and Decode Functions">Base64 Mime Encode and Decode Functions</a></div><div id="f0f32edb1-da91-4e9d-bcdc-2529c30ef1d3" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f0f32edb1-da91-4e9d-bcdc-2529c30ef1d3');"></div><div id="sbea63ce2-5ec4-42ce-b8dc-dc84e415a4b0" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sbea63ce2-5ec4-42ce-b8dc-dc84e415a4b0');"><a href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic">Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic</a><a href="MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library.html" title="Bubble Sort">Bubble Sort</a><a href="MMBasic.Shell-Sort.html" title="Shell Sort">Shell Sort</a><a href="MMBasic.CR2-Sort-The-Fastest-Search.html" title="Cube Root of Two Sort - fast sort">Cube Root of Two Sort - fast sort</a><a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings">Comb Sort for strings</a></div><div id="s57e78c9d-fb4f-4770-a086-edbdedb86cb2" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s57e78c9d-fb4f-4770-a086-edbdedb86cb2');"><a href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a></div><div id="s016a9c81-84a1-4457-9ad6-42fa60dad82c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s016a9c81-84a1-4457-9ad6-42fa60dad82c');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Micromite-SMS-Text-Gateway.html" title="SMS (Text) Gateway with MicroMite  (MMBasic)">SMS (Text) Gateway with MicroMite  (MMBasic)</a> &raquo; <a href="MMBasic.Some-Hints-Tips-for-writing-efficient-code.html" title="Some Hints & Tips for writing efficient code. (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's57e78c9d-fb4f-4770-a086-edbdedb86cb2', this);" id="lnks57e78c9d-fb4f-4770-a086-edbdedb86cb2" onmouseout="javascript:return __HideDropDown('s57e78c9d-fb4f-4770-a086-edbdedb86cb2');">Some Hints & Tips for writing efficient code. (MMBasic)</a> &raquo; <b><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'sbea63ce2-5ec4-42ce-b8dc-dc84e415a4b0', this);" id="lnksbea63ce2-5ec4-42ce-b8dc-dc84e415a4b0" onmouseout="javascript:return __HideDropDown('sbea63ce2-5ec4-42ce-b8dc-dc84e415a4b0');">Sort algorithms - A comparison (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers.html" title="SHIFT or ROTATE an array of integers (MMBasic)">SHIFT or ROTATE an array of integers (MMBasic)</a> &raquo; <a href="MMBasic.Short-range-radio-network-not-WiFi-SLAVE-module-Uses-cheapie-433MHz-modules-or-HC-12.html" title="Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)">Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)</a> &raquo; <a href="MMBasic.Sign-Extend-an-Integer.html" title="Sign Extend an Integer (MMBasic)">Sign Extend an Integer (MMBasic)</a> &raquo; <a href="MMBasic.Simple-Decimal-to-BCD-conversion-function.html" title="Simple Decimal to BCD conversion function (MMBasic)">Simple Decimal to BCD conversion function (MMBasic)</a> &raquo; <a href="MMBasic.Simple-Encryption.html" title="Simple Encryption (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f33c0642d-bdbb-4a75-8083-87b19ee3b2ec', this);" id="lnkf33c0642d-bdbb-4a75-8083-87b19ee3b2ec" onmouseout="javascript:return __HideDropDown('f33c0642d-bdbb-4a75-8083-87b19ee3b2ec');">Simple Encryption (MMBasic)</a> &raquo; <a href="MMBasic.sinput-String-input-with-edit-functions.html" title="sinput - String input, with edit functions (MMBasic)">sinput - String input, with edit functions (MMBasic)</a> &raquo; <a href="MMBasic.Small-Strings-part-of-the-original-MMBasic-library.html" title="Small Strings (MMBasic)">Small Strings (MMBasic)</a> &raquo; <a href="MMBasic.Micromite-SMS-Text-Gateway.html" title="SMS (Text) Gateway with MicroMite  (MMBasic)">SMS (Text) Gateway with MicroMite  (MMBasic)</a> &raquo; <a href="MMBasic.Some-Hints-Tips-for-writing-efficient-code.html" title="Some Hints & Tips for writing efficient code. (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f3e775b2f-c614-4c64-9444-62a7d71da239', this);" id="lnkf3e775b2f-c614-4c64-9444-62a7d71da239" onmouseout="javascript:return __HideDropDown('f3e775b2f-c614-4c64-9444-62a7d71da239');">Some Hints & Tips for writing efficient code. (MMBasic)</a> &raquo; <b><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'ffa7cbbf4-64c2-4357-8491-d7684ea5d7d3', this);" id="lnkffa7cbbf4-64c2-4357-8491-d7684ea5d7d3" onmouseout="javascript:return __HideDropDown('ffa7cbbf4-64c2-4357-8491-d7684ea5d7d3');">Sort algorithms - A comparison (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		Sort routines are varied and have different qualities - Probably the most desirable are ease/compactness of coding and speed. <br /><br /><b>Note</b>. This article and the referenced MMBasic sort routines are really academic on the Micromite MkII. <a class="pagelink" href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic">CSubs</a> for sorting the relevant data-type are included in the MMBasic download and attached top right and these should be used for single dimension arrays on the MX platform. Counterpart routines are not yet available for the MMX.<br /><br />Discussions have raged for decades over which is the "best" and the reasons for the camps can be as varied as the sort methods. One thing is almost universally agreed: The Bubble sort is the slowest and generally to be avoided unless there is no alternative.<br /><br />Here is a comparison of four routines that you will find in this library (in order of overall speed, slowest first):<br />    *<a class="pagelink" target="_blank" href="MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library.html" title="Bubble Sort">Bubble Sort</a><br />    *<a class="pagelink" target="_blank" href="MMBasic.Shell-Sort.html" title="Shell Sort">Shell Sort</a><br />    *<a class="pagelink" target="_blank" href="MMBasic.CR2-Sort-The-Fastest-Search.html" title="Cube Root of Two Sort - fast sort">Cube Root of Two Sort</a><br />    *<a class="pagelink" target="_blank" href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings">Comb Sort</a><br /><br />The data used in this comparison is in the program DATA statements, the results are in the Attached CSV file along with an Excel spreadsheet with the graph. The graph is reproduced below but it is large to provide a trade off with scale Vs resolution. <br /><br />Enjoy.<br /><br /><b>Note</b>: The drop-off in Bubble sort timings is due to the sort being abandoned over 100 items.<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="sortofff742.png?File=/MMBasic/sortoff.png" alt="Image" /><br /><br /><br /><b>The code:</b><br /><pre>
+
+  Option base 0
+  
+  cpu 48
+  
+  Dim xx,yy,t As integer
+
+  xx=1000
+  
+  Dim SP$(xx) length 20
+  
+  print "Times in mS for the below sorts"
+  Print "No.","BBL","Shell","CR2","COMB"
+  print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+
+  For yy = 5 To xx
+  
+    print yy;",";
+	
+    if yy&lt;=100 then
+		InitSP yy&#58;Timer=0
+		BblSort yy
+		t=Timer&#58;Print t;",";
+	else
+		Print "0,";
+	end if
+	
+	InitSP yy&#58;Timer=0
+    ShellSort yy
+    t=Timer&#58;Print t;",";
+	
+    InitSP yy&#58;Timer=0
+    CR2Sort yy
+    t=Timer&#58;Print t;",";
+	
+	InitSP yy&#58;Timer=0
+    CombSort yy
+    t=Timer&#58;Print t;",";
+
+    Print
+  Next
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' comb sort
+
+Sub CombSort(SPTop)
+Local string M$
+Local integer i, h, T=1, F=0, sw
+Local float Gap=SPTop, Shrink=1.3
+
+Do While Gap&gt;1 Or Sw
+  Gap=Int(Gap/Shrink)
+  If Gap&lt;1 Then Gap=1
+  i=1&#58;Sw=F
+  For h=i+Gap To SPTop
+    If SP$(i)&gt;SP$(h) Then
+       M$=SP$(i)&#58;SP$(i)=SP$(h)&#58;SP$(h)=M$&#58;Sw=T
+    EndIf
+    i=i+1
+  Next
+Loop
+End Sub
+
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Cube Root of Two Sort
+
+  Sub CR2SORT(SPtop)
+    Local INTEGER i,x,b
+    Local FLOAT p,y
+    Local STRING a$
+    p=1.2599211&#58; x=2&#58; b=1&#58; y=SPtop\2
+
+    While y&gt;2&#58; y=y/p&#58; Wend
+
+    While x&gt;1
+      y=y&#42;p
+      x=SPtop\y
+      For i=0 To SPtop-x
+        If SP$(b+i)&gt;SP$(x+i) Then a$=SP$(b+i)&#58;SP$(b+i)=SP$(x+i)&#58;SP$(x+i)=a$ 'SWAP SP$(b+i),SP$(x+i)
+      Next
+    Wend
+  End Sub
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Shell Sort
+
+  sub ShellSort(SPTop)
+    local integer i,j
+	local float k
+	local string a$
+    k = int(SPTop / 2)
+    WHILE k &gt; 0
+        for i = 1 to SPTop
+            j = i
+            a$ = SP$(i)
+            WHILE (j &gt;= k+1 and SP$(abs(j-k)) &gt; a$)
+				SP$(j) = SP$(j-k)
+				j = j - k
+            wend
+            SP$(j) = a$
+        next 
+        IF k = 2 THEN
+          k = 1
+        ELSE
+          k = int(k &#42; 0.454545)  ' 5/11
+        end if
+    WEND
+  end sub
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Bubble Sort
+
+  Sub BblSort(SPTop)
+    '   SP$() is the array to be sorted
+    '   SPTop is the number of elements in the array
+    Local integer Flips,n
+    Local string a$
+    Flips = 1
+    Do
+      Flips = 0
+      For n=0 To SPTop-1
+        ' took out SWAP A$(n),A$(n+1) as it added 50% to the time
+        If SP$(n) &gt; SP$(n+1) Then a$=SP$(n)&#58;SP$(n)=SP$(n+1)&#58;SP$(n+1)=a$&#58;Flips = 1
+      Next
+    Loop While Flips = 1
+  End Sub
+  
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Initialise the data-set
+
+  Sub InitSP (x)
+    Local integer n
+    Restore
+    For n=0 To x&#58;Read SP$(n)&#58;Next
+  End Sub
+
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+    Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+</pre><br />Here is  comparison between just the CR2 and Comb sorts with a larger array of 2200 items - with trend lines.<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="monstertf7e9.png?File=/monstert.png" alt="Image" /><br /><br />... and finally a comparison of Peter Mather's CSub StringSort (included as part of the MMBasic for MX170 download) versus the Comb with a thousand items. This illustrates the speed advantage of Machine code over interpreted MMBasic for comparable tasks. Even though the CSub is a bubble sort, the advantages of the machine code are obvious. Interestingly, note the characteristic "surges" in the sort times due to the algorithm and the "sweet-spot" of items versus time.<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="sortSubVsComb4517.png?File=/MMBasic/sortSubVsComb.png" alt="Image" /><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='FloatSorte2aa.pdf?File=FloatSort.pdf&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Sort-algorithms-A-comparison' title="Download">FloatSort.pdf</a></td>
+			<td>12.13 KB</td>
+		</tr>
+	
+		<tr class="tablerowalternate">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='IntegerSort091b.pdf?File=IntegerSort.pdf&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Sort-algorithms-A-comparison' title="Download">IntegerSort.pdf</a></td>
+			<td>12.96 KB</td>
+		</tr>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='sortoff6ed8.zip?File=sortoff.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Sort-algorithms-A-comparison' title="Download">sortoff.zip</a></td>
+			<td>57.25 KB</td>
+		</tr>
+	
+		<tr class="tablerowalternate">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='StringSort9fab.pdf?File=StringSort.pdf&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Sort-algorithms-A-comparison' title="Download">StringSort.pdf</a></td>
+			<td>13.33 KB</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Sort-algorithms-A-comparison.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:44 GMT -->
+</html>

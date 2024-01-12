@@ -1,0 +1,53 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Factus-Comb-Sort-for-strings by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Comb Sort for strings - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Factus-Comb-Sort-for-strings" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF/Aw8aDEgY2xhc3M9InBhZ2V0aXRsZSI+Q29tYiBTb3J0IGZvciBzdHJpbmdzPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNy8wOC8xMyAyMDozOCBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogQXJyYXlzLCBTb3J0LCBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz5BIGZhc3Qgc29ydCByb3V0aW5lLiBUaGlzIHNjb3JlZCBiZXN0IG92ZXJhbGwgaW4gYSA8YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuU29ydC1hbGdvcml0aG1zLUEtY29tcGFyaXNvbi5hc2h4IiB0aXRsZT0iU29ydCBhbGdvcml0aG1zIC0gQSBjb21wYXJpc29uIj5jb21wYXJpc29uIHRlc3Q8L2E+IG9mIE1NQmFzaWMgc29ydHMgKGJ1dCB0aGUgQ1N1YiByb3V0aW5lcyBhcmUgYXQgbGVhc3QgM3ggZmFzdGVyKS48YnIgLz48YnIgLz5vcmlnaW5hbGx5IHB1Ymxpc2hlZCA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTczMTEmYW1wO1RQTj0zIiB0aXRsZT0iaHR0cDovL3d3dy50aGViYWNrc2hlZC5jb20vZm9ydW0vZm9ydW1fcG9zdHMuYXNwP1RJRD03MzExJlRQTj0zIiB0YXJnZXQ9Il9ibGFuayI+aHR0cDovL3d3dy50aGViYWNrc2hlZC5jb20vZm9ydW0vZm9ydW1fcG9zdHMuYXNwP1RJRD03MzExJlRQTj0zPC9hPiBhbmQgdHdlYWtlZCBzbGlnaHRseSBmb3IgTU1CYXNpYyBzeW50YXg8YnIgLz48YnIgLz5PbmUgYWR2YW50YWdlIG9mIGEgcHVyZWx5IE1NQmFzaWMgc29ydCBpcyBpdCBjYW4gYmUgbW9kaWZpZWQgZS5nLiB0byBzb3J0IGFuIGFycmF5IGJ1dCB0byBtYWludGFpbiBpbmRleCBsaW5rcyBpbiBhbm90aGVyLCBzbyBhcyB5b3Ugc3dhcCBjb21wYXJlZCBlbGVtZW50cyBvZiB0aGUgYXJyYXksIHlvdSBzd2FwIHRoZWlyIGluZGV4IHJlZmVyZW5jZXMgdG9vLjxiciAvPjxiciAvPjxiPkNyZWRpdDwvYj46IHR3b2ZpbmdlcnM8YnIgLz48YnIgLz48cHJlPg0KJyBDb21iIFNvcnQNCicgYW4gb3B0aW1pemVkICg4LzIwMTcgYnkgdHdvZmluZ2Vyc0BUQlMpIHZlcnNpb24gb2YgYUNvbWJTb3J0IGZvciBzdHJpbmdzLg0KJyBJdCBzb3J0cyB0aGUgYXJyYXkgUyQoKSBhbmQgbmVlZHMgdGhlIG51bWJlciBvZiBlbGVtZW50cyB0byBzb3J0IChTVG9wKQ0KJyBVc2FnZSYjNTg7IENvbWJTb3J0IFNUb3ANCicNCicgSXQgdGFrZXMgMzMwbXMgKG9yIGxlc3MpIGZvciBhbiBhcnJheSBvZiAxMDAgZWxlbWVudHMNCicgU3lzdGVtJiM1ODsgTU0yLzQ4TUh6L01NQmFzaWMgNS4wNC4wNQ0KJw0KU3ViIENvbWJTb3J0KFNUb3ApDQpMb2NhbCBzdHJpbmcgTSQNCkxvY2FsIGludGVnZXIgaSwgaCwgVD0xLCBGPTAsIHN3DQpMb2NhbCBmbG9hdCBHYXA9U1RvcCwgU2hyaW5rPTEuMw0KDQpEbyBXaGlsZSBHYXAmZ3Q7MSBPciBTdw0KICBHYXA9SW50KEdhcC9TaHJpbmspDQogIElmIEdhcCZsdDsxIFRoZW4gR2FwPTENCiAgaT0xJiM1ODtTdz1GDQogIEZvciBoPWkrR2FwIFRvIFNUb3ANCiAgICBJZiBTJChpKSZndDtTJChoKSBUaGVuDQogICAgICAgTSQ9UyQoaSkmIzU4O1MkKGkpPVMkKGgpJiM1ODtTJChoKT1NJCYjNTg7U3c9VA0KICAgIEVuZElmDQogICAgaT1pKzENCiAgTmV4dA0KTG9vcA0KRW5kIFN1Yg0KPC9wcmU+ZGSD0iei4JcRLzURd3veQpwAr0CTGA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Comb Sort for strings</h1><small>Modified on 2017/08/13 20:38 by CaptainBoing &mdash; Categorized as: Arrays, Sort, Strings</small><br /><br />A fast sort routine. This scored best overall in a <a class="pagelink" href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">comparison test</a> of MMBasic sorts (but the CSub routines are at least 3x faster).<br /><br />originally published <a class="externallink" href="http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&amp;TPN=3" title="http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&TPN=3" target="_blank">http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&TPN=3</a> and tweaked slightly for MMBasic syntax<br /><br />One advantage of a purely MMBasic sort is it can be modified e.g. to sort an array but to maintain index links in another, so as you swap compared elements of the array, you swap their index references too.<br /><br /><b>Credit</b>: twofingers<br /><br /><pre>
+' Comb Sort
+' an optimized (8/2017 by twofingers@TBS) version of aCombSort for strings.
+' It sorts the array S$() and needs the number of elements to sort (STop)
+' Usage&#58; CombSort STop
+'
+' It takes 330ms (or less) for an array of 100 elements
+' System&#58; MM2/48MHz/MMBasic 5.04.05
+'
+Sub CombSort(STop)
+Local string M$
+Local integer i, h, T=1, F=0, sw
+Local float Gap=STop, Shrink=1.3
+
+Do While Gap&gt;1 Or Sw
+  Gap=Int(Gap/Shrink)
+  If Gap&lt;1 Then Gap=1
+  i=1&#58;Sw=F
+  For h=i+Gap To STop
+    If S$(i)&gt;S$(h) Then
+       M$=S$(i)&#58;S$(i)=S$(h)&#58;S$(h)=M$&#58;Sw=T
+    EndIf
+    i=i+1
+  Next
+Loop
+End Sub
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Factus-Comb-Sort-for-strings by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:52 GMT -->
+</html>

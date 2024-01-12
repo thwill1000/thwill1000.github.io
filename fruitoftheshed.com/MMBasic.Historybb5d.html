@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:08:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like&amp;Revision=00001" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAU6UGFnZSBIaXN0b3J5OiBJc0RhdGUgYW5kIElzVGltZSBmdW5jdGlvbnMgKFZCIFdvcmstQS1MaWtlKWQCBQ8QZBAVBQE0ATMBMgExATAVBQE0ATMBMgExATAUKwMFZ2dnZ2dkZAIHDxBkEBUGB0N1cnJlbnQBNAEzATIBMQEwFQYHQ3VycmVudAE0ATMBMgExATAUKwMGZ2dnZ2dnZGQCCw8WAh8ABcwbPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+PGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLklzRGF0ZS1hbmQtSXNUaW1lLWZ1bmN0aW9ucy1WQi1Xb3JrLUEtTGlrZSZhbXA7UmV2aXNpb249MDAwMDAiPiZsYXF1bzsgT2xkZXIgUmV2aXNpb248L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLklzRGF0ZS1hbmQtSXNUaW1lLWZ1bmN0aW9ucy1WQi1Xb3JrLUEtTGlrZSI+QmFjayB0byBQYWdlIEhpc3Rvcnk8L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLklzRGF0ZS1hbmQtSXNUaW1lLWZ1bmN0aW9ucy1WQi1Xb3JrLUEtTGlrZSZhbXA7UmV2aXNpb249MDAwMDIiPk5ld2VyIFJldmlzaW9uICZyYXF1bzs8L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAxOC8wOS8yNSAxODozNTwvaDM+PGJyIC8+VGhlIGZvbGxvd2luZyBhcmUgdHdvIGZ1bmN0aW9ucyB0byB2YWxpZGF0ZSBkYXRlcyBhbmQgdGltZXMuIDxiciAvPjxiciAvPkluc3BpcmVkIGJ5IHRoZSBWQiBmdW5jdGlvbnMgb2YgdGhlIHNhbWUgbmFtZS48YnIgLz48YnIgLz5PZnRlbiB3aGVuIGEgdXNlciBpcyBhc2tlZCB0byBlbnRlciBlaXRoZXIsIHRoZXJlIGlzIHF1aXRlIGEgYml0IG9mIGNvZGUgdG8gbWFrZSBzdXJlIHRoYXQgd2hhdCB0aGV5IGVudGVyZWQgbWFrZXMgc2Vuc2UuIFRoZXNlIGZ1bmN0aW9ucyBwcm92aWRlIGEgY29tcGFjdCBjaGVjayBvbiBib3RoIHRoZSBmb3JtYXQgYW5kIHZhbHVlcyBhbmQgcmV0dXJuIGEgYm9vbGVhbiAoYWN0dWFsbHkgYW4gaW50ZWdlcikgb2YgMCAgaWYgdGhlIHN0cmluZyBpcyBub3QgYSBEYXRlL1RpbWUuIE5vbiB6ZXJvIGluZGljYXRlcyB0aGUgc3RyaW5nIGlzIHZhbGlkLjxiciAvPjxiciAvPjxiciAvPjxiPk5vdGVzIElzRGF0ZTo8L2I+PGJyIC8+PHVsPjxsaT5TdXBwb3J0cyBib3RoIFVLL0FVUyB0aW1lIGZvcm1hdHMgb2YgZGQvbW0veXl5eSBvciBpbnRlcm5hdGlvbmFsIHNvcnQgZm9ybWF0IG9mIHl5eXkvbW0vZGQ8L2xpPjxsaT5JZiBvcHQgaXMgemVybyBvciBhYnNlbnQgZm9yIElzRGF0ZSwgc3lzdGVtIGRlZmF1bHQgZm9ybWF0IGlzIGFzc3VtZWQsIGlmIG9wdCBpcyBub24temVybywgaW50ZXJuYXRpb25hbCBmb3JtYXQgaXMgYXNzdW1lZC48L2xpPjxsaT5UaGUgZGVsaW1pdGVyIG1heSBiZSBlaXRoZXIgLyBvciAtIGUuZy4gZGQtbW0teXl5eSBvciBkZC9tbS95eXl5IGlzIGZpbmUuPGJyIC8+PC9saT48L3VsPjxiciAvPjxiPk5vdGVzIElzVGltZTo8L2I+PGJyIC8+PHVsPjxsaT5UaW1lcyBtdXN0IGJlIGZvcm1hdHRlZCBhcyBoaDptbSAobm8gc2Vjb25kcyBhbGxvd2VkIGJ1dCB5b3UgY291bGQgZWFzaWx5IHR3ZWFrIGl0KTxiciAvPjwvbGk+PC91bD48YnIgLz48YnIgLz48Yj5TeW50YXg6PC9iPjxiciAvPj1Jc1RpbWUoVGltZVN0ciQpPGJyIC8+PUlzRGF0ZShEYXRlU3RyJCwmIzAwOTE7b3B0JiMwMDkzOyk8YnIgLz48YnIgLz48Yj5FeGFtcGxlczo8L2I+PGJyIC8+SWYgTm90IElzRGF0ZShkdCQsMSkgdGhlbiBleGl0IFN1YjxiciAvPkNoZWNrYm94PUlzdGltZShBJCk8YnIgLz48YnIgLz48Yj5EZXBlbmRlbmNpZXM6PC9iPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5Jc0xlYXBZZWFyLUZ1bmN0aW9uLXRvLWRldGVybWluZS1pZi10aGUtZ2l2ZW4teWVhci1pcy1hLUxlYXAtWWVhci1vbi10aGUtR3JlZ29yaWFuLXdlc3Rlcm4tY2FsZW5kYXIuYXNoeCIgdGl0bGU9IklzTGVhcFllYXIgRnVuY3Rpb24gdG8gZGV0ZXJtaW5lIGlmIHRoZSBnaXZlbiB5ZWFyIGlzIGEgTGVhcCBZZWFyIG9uIHRoZSBHcmVnb3JpYW4gKHdlc3Rlcm4pIGNhbGVuZGFyIj5Jc0xlYXBZZWFyIEZ1bmN0aW9uPC9hPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5SZWd1bGFyLUV4cHJlc3Npb24tRnVuY3Rpb24uYXNoeCIgdGl0bGU9IlJlZ3VsYXIgRXhwcmVzc2lvbiBGdW5jdGlvbiI+UmVndWxhciBFeHByZXNzaW9uIEZ1bmN0aW9uPC9hPjxiciAvPjxiciAvPjxwcmU+DQogRnVuY3Rpb24gSXNUaW1lKHQkKSBBcyBJbnRlZ2VyICcgdGltZXMgbXVzdCBiZSBoaCYjNTg7bW0mIzU4O3NzDQoJSXNUaW1lPTANCglJZiBNYXRjaCgiXiYjOTE7MDEyJiM5MzsmIzkxOzAxMjM0NTY3ODkmIzkzOyYjNTg7JiM5MTswMTIzNDUmIzkzOyYjOTE7MDEyMzQ1Njc4OSYjOTM7JiM1ODsmIzkxOzAxMjM0NSYjOTM7JiM5MTswMTIzNDU2Nzg5JiM5MzskIix0JCkgVGhlbg0KCQlJZiBWYWwoTGVmdCQodCQsMikpJmx0OzI0IFRoZW4NCgkJCUlmIFZhbChNaWQkKHQkLDQsMikpJmx0OzYwIFRoZW4NCgkJCQlJZiBWYWwoUmlnaHQkKHQkLDIpKSZsdDs2MCBUaGVuDQoJCQkJCUlzVGltZT0xDQoJCQkJRW5kSWYNCgkJCUVuZElmDQoJCUVuZElmDQoJRW5kSWYNCiBFbmQgRnVuY3Rpb24NCiANCg0KDQoNCiAgRnVuY3Rpb24gSXNEYXRlKHQkLG9wdCBBcyBJbnRlZ2VyKSBBcyBJbnRlZ2VyDQoJTG9jYWwgSW50ZWdlciBkLG0seQ0KCUlzRGF0ZT0wDQoJSWYgb3B0PTAgdGhlbg0KCQlJZiBNYXRjaCgiXiYjOTE7MDEyMyYjOTM7JiM5MTswMTIzNDU2Nzg5JiM5MzsmIzkxOy98LSYjOTM7JiM5MTswMSYjOTM7JiM5MTswMTIzNDU2Nzg5JiM5MzsmIzkxOy98LSYjOTM7JiM5MTsxMiYjOTM7JiM5MTswMTIzNDU2Nzg5JiM5MzsmIzkxOzAxMjM0NTY3ODkmIzkzOyYjOTE7MDEyMzQ1Njc4OSYjOTM7JCIsdCQpPTAgVGhlbiBFeGl0IEZ1bmN0aW9uDQoJCWQ9VmFsKExlZnQkKHQkLDIpKQ0KCQltPVZhbChNaWQkKHQkLDQsMikpDQoJCXk9VmFsKFJpZ2h0JCh0JCw0KSkNCglFbHNlDQoJCUlmIE1hdGNoKCJeJiM5MTsxMiYjOTM7JiM5MTswMTIzNDU2Nzg5JiM5MzsmIzkxOzAxMjM0NTY3ODkmIzkzOyYjOTE7MDEyMzQ1Njc4OSYjOTM7JiM5MTsvfC0mIzkzOyYjOTE7MDEmIzkzOyYjOTE7MDEyMzQ1Njc4OSYjOTM7JiM5MTsvfC0mIzkzOyYjOTE7MDEyMyYjOTM7JiM5MTswMTIzNDU2Nzg5JiM5MzskIix0JCk9MCBUaGVuIEV4aXQgRnVuY3Rpb24NCgkJZD1WYWwoUmlnaHQkKHQkLDIpKQ0KCQltPVZhbChNaWQkKHQkLDYsMikpDQoJCXk9VmFsKExlZnQkKHQkLDQpKQ0KCUVuZElmDQoNCglTZWxlY3QgQ2FzZSBtDQoJCUNhc2UgMSwzLDUsNyw4LDEwLDEyDQoJCQlpZiBkJmx0OzEgb3IgZCZndDszMSBUaGVuIEV4aXQgRnVuY3Rpb24NCgkJQ2FzZSA0LDYsOSwxMQ0KCQkJaWYgZCZsdDsxIG9yIGQmZ3Q7MzAgVGhlbiBFeGl0IEZ1bmN0aW9uDQoJCUNhc2UgMg0KCQkJaWYgZCZsdDsxIG9yIGQmZ3Q7MjgrSXNMZWFwWWVhcih5KSBUaGVuIEV4aXQgRnVuY3Rpb24NCglFbmQgU2VsZWN0DQoJSXNEYXRlPTENCiBFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPjxiciAvPmRk+pNnqVpAqfHf4xsA1jYv1QhGDis=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDQLhzs+JAwK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCZcMmXMj1ApURkO7aILxgBcA5qNZ" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login5b23.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like%26Revision%3d00001" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: IsDate and IsTime functions (VB Work-A-Like)</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.Historyc9b8.html?Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like&amp;Revision=00000">&laquo; Older Revision</a> - <a href="MMBasic.History1cc5.html?Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like">Back to Page History</a> - <a href="MMBasic.History955e.html?Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like&amp;Revision=00002">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/09/25 18:35</h3><br />The following are two functions to validate dates and times. <br /><br />Inspired by the VB functions of the same name.<br /><br />Often when a user is asked to enter either, there is quite a bit of code to make sure that what they entered makes sense. These functions provide a compact check on both the format and values and return a boolean (actually an integer) of 0  if the string is not a Date/Time. Non zero indicates the string is valid.<br /><br /><br /><b>Notes IsDate:</b><br /><ul><li>Supports both UK/AUS time formats of dd/mm/yyyy or international sort format of yyyy/mm/dd</li><li>If opt is zero or absent for IsDate, system default format is assumed, if opt is non-zero, international format is assumed.</li><li>The delimiter may be either / or - e.g. dd-mm-yyyy or dd/mm/yyyy is fine.<br /></li></ul><br /><b>Notes IsTime:</b><br /><ul><li>Times must be formatted as hh:mm (no seconds allowed but you could easily tweak it)<br /></li></ul><br /><br /><b>Syntax:</b><br />=IsTime(TimeStr$)<br />=IsDate(DateStr$,&#0091;opt&#0093;)<br /><br /><b>Examples:</b><br />If Not IsDate(dt$,1) then exit Sub<br />Checkbox=Istime(A$)<br /><br /><b>Dependencies:</b><br /><a class="pagelink" href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function</a><br /><a class="pagelink" href="MMBasic.Regular-Expression-Function.html" title="Regular Expression Function">Regular Expression Function</a><br /><br /><pre>
+ Function IsTime(t$) As Integer ' times must be hh&#58;mm&#58;ss
+	IsTime=0
+	If Match("^&#91;012&#93;&#91;0123456789&#93;&#58;&#91;012345&#93;&#91;0123456789&#93;&#58;&#91;012345&#93;&#91;0123456789&#93;$",t$) Then
+		If Val(Left$(t$,2))&lt;24 Then
+			If Val(Mid$(t$,4,2))&lt;60 Then
+				If Val(Right$(t$,2))&lt;60 Then
+					IsTime=1
+				EndIf
+			EndIf
+		EndIf
+	EndIf
+ End Function
+ 
+
+
+
+  Function IsDate(t$,opt As Integer) As Integer
+	Local Integer d,m,y
+	IsDate=0
+	If opt=0 then
+		If Match("^&#91;0123&#93;&#91;0123456789&#93;&#91;/|-&#93;&#91;01&#93;&#91;0123456789&#93;&#91;/|-&#93;&#91;12&#93;&#91;0123456789&#93;&#91;0123456789&#93;&#91;0123456789&#93;$",t$)=0 Then Exit Function
+		d=Val(Left$(t$,2))
+		m=Val(Mid$(t$,4,2))
+		y=Val(Right$(t$,4))
+	Else
+		If Match("^&#91;12&#93;&#91;0123456789&#93;&#91;0123456789&#93;&#91;0123456789&#93;&#91;/|-&#93;&#91;01&#93;&#91;0123456789&#93;&#91;/|-&#93;&#91;0123&#93;&#91;0123456789&#93;$",t$)=0 Then Exit Function
+		d=Val(Right$(t$,2))
+		m=Val(Mid$(t$,6,2))
+		y=Val(Left$(t$,4))
+	EndIf
+
+	Select Case m
+		Case 1,3,5,7,8,10,12
+			if d&lt;1 or d&gt;31 Then Exit Function
+		Case 4,6,9,11
+			if d&lt;1 or d&gt;30 Then Exit Function
+		Case 2
+			if d&lt;1 or d&gt;28+IsLeapYear(y) Then Exit Function
+	End Select
+	IsDate=1
+ End Function
+</pre><br /><br /><br /><br /><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:08:51 GMT -->
+</html>

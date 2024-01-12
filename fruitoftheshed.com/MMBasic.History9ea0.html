@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&Revision=00000 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:10:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=00000" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAVUUGFnZSBIaXN0b3J5OiBMaW5lIGVkaXRvciBmb3IgaW50ZXJhY3RpdmUgZWRpdGluZyBvZiB0ZXh0IGxpbmVzL3BhZ2VzIC0gTElORUVESVQuQkFTZAIFDxBkEBULAjEwATkBOAE3ATYBNQE0ATMBMgExATAVCwIxMAE5ATgBNwE2ATUBNAEzATIBMQEwFCsDC2dnZ2dnZ2dnZ2dnZGQCBw8QZBAVDAdDdXJyZW50AjEwATkBOAE3ATYBNQE0ATMBMgExATAVDAdDdXJyZW50AjEwATkBOAE3ATYBNQE0ATMBMgExATAUKwMMZ2dnZ2dnZ2dnZ2dnZGQCCw8WAh8ABfotPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5MaW5lLWVkaXRvci1mb3ItaW50ZXJhY3RpdmUtZWRpdGluZy1vZi10ZXh0LWxpbmVzLXBhZ2VzLUxJTkVFRElULUJBUyI+QmFjayB0byBQYWdlIEhpc3Rvcnk8L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLkxpbmUtZWRpdG9yLWZvci1pbnRlcmFjdGl2ZS1lZGl0aW5nLW9mLXRleHQtbGluZXMtcGFnZXMtTElORUVESVQtQkFTJmFtcDtSZXZpc2lvbj0wMDAwMSI+TmV3ZXIgUmV2aXNpb24gJnJhcXVvOzwvYT48L2I+PC9wPjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPjxoMyBjbGFzcz0ic2VwYXJhdG9yIj5QYWdlIFJldmlzaW9uOiAyMDE4LzAzLzIzIDE1OjMyPC9oMz48YnIgLz5UaGUgTGluZUVkaXQgZnVuY3Rpb24gZGVmaW5lZCBpbiB0aGUgYXR0YWNoZWQgTElORUVESVQuQkFTIGlzIGFuIE1NQmFzaWMgNC41IGZ1bmN0aW9uIHRvIGVkaXQgbGluZXMgb2YgdGV4dCBvciBldmVuIHBhZ2VzIG9mIHRleHQsIGFzIHRoZXNlIGZvdXIgZXhhbXBsZXMgZGVtb25zdHJhdGU6PGJyIC8+PGJyIC8+PHByZT4nIEVkaXQgYSBzdHJpbmcgdW50aWwgRU5URVIgd2l0aCBMaW5lRWRpdCYjNTg7DQonDQpTdWIgRXhhbXBsZTENCiAgYSQgPSAidGV4dCB0byBlZGl0Ig0KICBEbyYjNTg7IGsgPSBMaW5lRWRpdChhJCkmIzU4OyBMb29wIFVudGlsIGsgPSAxMyAnIHVudGlsIEVOVEVSDQpFbmQgU3ViPC9wcmU+PGJyIC8+PHByZT4nDQonIEVkaXQgYSBzdHJpbmcgdW50aWwgRU5URVIgb3IgRVNDIHdpdGggRVNDIHRvIHJlc3RvcmUgdGhlIG9sZCBzdHJpbmcgdmFsdWUmIzU4Ow0KJw0KU3ViIEV4YW1wbGUyDQogIGEkID0gInRleHQgdG8gZWRpdCINCiAgYiQgPSBhJCAnIHNhdmUgb2xkIHN0cmluZyB2YWx1ZQ0KICBEbyYjNTg7IGsgPSBMaW5lRWRpdChhJCkmIzU4OyBMb29wIFVudGlsIGsgPSAxMyBPciBrID0gMjcgJyB1bnRpbCBFTlRFUiBvciBFU0MNCiAgSWYgayA9IDI3IFRoZW4gJyBFU0MgcHJlc3NlZA0KICAgIFByaW50IGIkOw0KICAgIElmIExlbihhJCkgJmd0OyBMZW4oYiQpIFRoZW4gUHJpbnQgU3BhY2UkKExlbihhJCkgLSBMZW4oYiQpKTsNCiAgICBhJCA9IGIkICcgcmVzdG9yZSBvbGQgdmFsdWUgb24gRVNDDQogIEVuZElmDQpFbmQgU3ViPC9wcmU+PGJyIC8+PHByZT4nDQonIEludGVyYWN0aXZlIGVkaXRpbmcgb2YgMTAgbGluZXMgd2l0aCB1cC9kb3duIHNjcmVlbiBuYXZpZ2F0aW9uJiM1ODsNCicNClN1YiBFeGFtcGxlMw0KICBMb2NhbCBhJCgxMCkgbGVuZ3RoIDQwDQogIENscw0KICBQcmludCAiVGlueSBlZGl0IHwgRVNDIHRvIHF1aXQiDQogIEZvciByb3cgPSAxIFRvIDEwDQogICAgUHJpbnQgQCgwLDEyJiM0Mjtyb3cpIGEkKHJvdyk7VGFiKDExKTsifCINCiAgTmV4dCByb3cNCiAgcm93ID0gMSAgJyBmaXJzdCByb3cgdG8gZWRpdA0KICBjdXIgPSAwICAnIGN1cnNvciBhdCBiZWdpbiBvZiB0aGUgbGluZQ0KICBtYXggPSA0MCAnIG1heCBzaXplIG9mIGEkKCkNCiAgd2luID0gMTAgJyBlZGl0IGluIHdpbmRvdyBvZiAxMCBjaGFycw0KICBEbw0KICAgIFByaW50IEAoMCwxMiYjNDI7cm93KTsgJyBwbGFjZSBjdXJzb3Igd2hlcmUgd2Ugd2FudCB0byBlZGl0IHRoZSBsaW5lDQogICAgayA9IExpbmVFZGl0KGEkKHJvdyksIGN1ciwgLTEsIDQwLCAxMCkgJyAtMSYjNTg7IGdldCBuZXh0IGtleSBwcmVzcw0KICAgIElmIGsgPSAxMjggVGhlbg0KICAgICAgSWYgcm93ICZndDsgMSBUaGVuIHJvdyA9IHJvdyAtIDEgICcgVVAga2V5JiM1ODsgbW92ZSB1cA0KICAgIEVsc2VJZiBrID0gMTMgT3IgayA9IDEyOSBUaGVuDQogICAgICBJZiByb3cgJmx0OyAxMCBUaGVuIHJvdyA9IHJvdyArIDEgJyBET1dOIGtleSYjNTg7IG1vdmUgZG93bg0KICAgIEVuZElmDQogIExvb3AgVW50aWwgayA9IDI3ICcgdW50aWwgRVNDDQpFbmQgU3ViPC9wcmU+PGJyIC8+PHByZT4nDQonIEludGVyYWN0aXZlIGVkaXRpbmcgd2l0aCBzY3JlZW4gbmF2aWdhdGlvbiB3aGlsZSBjb250aW51b3VzbHkgdXBkYXRpbmcgdGhlIHNjcmVlbiB3aXRoIHRoZSBjdXJyZW50IHRpbWUmIzU4Ow0KJw0KU3ViIEV4YW1wbGU0DQogIExvY2FsIGEkKDEwKSBsZW5ndGggMTIwDQogIENscw0KICBQcmludCAiICAgICAgICAgfCBFZGl0b3IgfCBFU0MgdG8gcXVpdCINCiAgRm9yIHJvdyA9IDEgVG8gMTANCiAgICBQcmludCBAKDAsMTImIzQyO3JvdykgIiAgIjthJChyb3cpOw0KICBOZXh0IHJvdw0KICByb3cgPSAxICAnIGZpcnN0IHJvdyB0byBlZGl0DQogIGN1ciA9IDAgICcgY3Vyc29yIGF0IGJlZ2luIG9mIHRoZSBsaW5lDQogIG1heCA9IDQwICcgbWF4IHNpemUgb2YgYSQoKQ0KICB3aW4gPSAxMCAnIGVkaXQgaW4gd2luZG93IG9mIDEwIGNoYXJzDQogICcgc2hvdyBjdXJzb3INCiAgRm9udCAxLCwxJiM1ODsgUHJpbnQgQCgwLDEyJiM0Mjtyb3cpIE1pZCQoYSQocm93KSsiICIsIDEsIDEpO0NociQoOCk7JiM1ODsgRm9udCAxLCwwDQogIERvDQogICAgUHJpbnQgQCgwLDApIFRpbWUkOyAnIGNvbnRpbnVvdXNseSBzaG93IHRoZSBjdXJyZW50IHRpbWUNCiAgICBrID0gQXNjKElua2V5JCkNCiAgICBJZiBrIFRoZW4NCiAgICAgIFByaW50IEAoMCwxMiYjNDI7cm93KTsNCiAgICAgIGsgPSBMaW5lRWRpdChhJChyb3cpLCBjdXIsIGssIDEyMCwgTU0uSFJlcy82KSAnIHBhc3MgaW4ga2V5IHRvIGVkaXQgbGluZQ0KICAgICAgSWYgayA9IDEyOCBUaGVuICcgVVAga2V5JiM1ODsgbW92ZSB1cA0KICAgICAgICBJZiByb3cgJmd0OyAxIFRoZW4gcm93ID0gcm93IC0gMQ0KICAgICAgICBGb250IDEsLDEmIzU4OyBQcmludCBAKDAsMTImIzQyO3JvdykgTWlkJChhJChyb3cpKyIgIiwgMSwgMSk7Q2hyJCg4KTsmIzU4OyBGb250IDEsLDANCiAgICAgICAgY3VyID0gMA0KICAgICAgRWxzZUlmIGsgPSAxMyBPciBrID0gMTI5IFRoZW4gJyBET1dOIGtleSYjNTg7IG1vdmUgZG93bg0KICAgICAgICBJZiByb3cgJmx0OyAxMCBUaGVuIHJvdyA9IHJvdyArIDENCiAgICAgICAgRm9udCAxLCwxJiM1ODsgUHJpbnQgQCgwLDEyJiM0Mjtyb3cpIE1pZCQoYSQocm93KSsiICIsIDEsIDEpO0NociQoOCk7JiM1ODsgRm9udCAxLCwwDQogICAgICAgIGN1ciA9IDANCiAgICAgIEVuZElmDQogICAgRW5kSWYNCiAgTG9vcCBVbnRpbCBrID0gMjcgJyB1bnRpbCBFU0MNCkVuZCBTdWI8L3ByZT48YnIgLz5Tb3VyY2UgY29kZSBvZiBMaW5lRWRpdDo8YnIgLz48YnIgLz48cHJlPkZ1bmN0aW9uIExpbmVFZGl0KGEkLCBjdXIsIGtleSwgbWF4LCB3aW4pDQogIExvY2FsIHgsIHksIHNpemUsIGZyb20sIGRvbmUNCiAgeCA9IE1NLkhQb3MmIzU4OyB5ID0gTU0uVlBvcw0KICBJZiBtYXggJmx0Oz0gMCBUaGVuIG1heCA9IDI1NQ0KICBJZiB3aW4gJmx0Oz0gMCBUaGVuIHdpbiA9IDI1NQ0KICBzaXplID0gTGVuKGEkKQ0KICBJZiBjdXIgJmx0OyAwIFRoZW4NCiAgICBjdXIgPSAwDQogIEVsc2VJZiBjdXIgJmd0OyBzaXplIFRoZW4NCiAgICBjdXIgPSBzaXplDQogIEVuZElmDQogIGRvbmUgPSBrZXkNCiAgRG8NCiAgICBJZiBrZXkgJmd0Oz0gMzIgQW5kIGtleSAmbHQ7IDEyNyBUaGVuDQogICAgICBJZiBzaXplICZsdDsgbWF4IFRoZW4NCiAgICAgICAgYSQgPSBMZWZ0JChhJCwgY3VyKSArIENociQoa2V5KSArIE1pZCQoYSQsIGN1ciArIDEpDQogICAgICAgIGN1ciA9IGN1ciArIDENCiAgICAgICAgc2l6ZSA9IHNpemUgKyAxDQogICAgICBFbmRJZg0KICAgIEVsc2VJZiBrZXkgPSA4IFRoZW4NCiAgICAgIElmIGN1ciAmZ3Q7IDAgVGhlbg0KICAgICAgICBjdXIgPSBjdXIgLSAxDQogICAgICAgIGEkID0gTGVmdCQoYSQsIGN1cikgKyBNaWQkKGEkLCBjdXIgKyAyKQ0KICAgICAgICBzaXplID0gc2l6ZSAtIDENCiAgICAgIEVuZElmDQogICAgRWxzZUlmIGtleSA9IDEyNyBUaGVuDQogICAgICBJZiBjdXIgJmx0OyBzaXplIFRoZW4NCiAgICAgICAgYSQgPSBMZWZ0JChhJCwgY3VyKSArIE1pZCQoYSQsIGN1ciArIDIpDQogICAgICAgIHNpemUgPSBzaXplIC0gMQ0KICAgICAgRW5kSWYNCiAgICBFbHNlSWYga2V5ID0gMTMwIFRoZW4NCiAgICAgIElmIGN1ciAmZ3Q7IDAgVGhlbiBjdXIgPSBjdXIgLSAxDQogICAgRWxzZUlmIGtleSA9IDEzMSBUaGVuDQogICAgICBJZiBjdXIgJmx0OyBzaXplIFRoZW4gY3VyID0gY3VyICsgMQ0KICAgIEVsc2VJZiBrZXkgPSAxMzQgVGhlbg0KICAgICAgY3VyID0gMA0KICAgIEVsc2VJZiBrZXkgPSAxMzUgVGhlbg0KICAgICAgY3VyID0gc2l6ZQ0KICAgIEVsc2VJZiBrZXkgJmd0OyAwIFRoZW4NCiAgICAgICcgZG9uZSBlZGl0aW5nLCBzbyBwcmludCBhIGNsZWFuIGxpbmUNCiAgICAgIFByaW50IEAoeCx5KSBMZWZ0JChhJCwgd2luKTsNCiAgICAgICcgcmVtb3ZlIHRoZSBjdXJzb3IgZnJvbSB0aGUgZW5kIG9mIHRoZSBsaW5lDQogICAgICBJZiBjdXIgPSBzaXplIEFuZCBzaXplICZsdDsgd2luIFRoZW4gUHJpbnQgIiAiOw0KICAgICAgRXhpdA0KICAgIEVuZElmDQogICAgJyBjdXJzb3IgY2Fubm90IG1vdmUgYmV5b25kIHN0cmluZyBtYXggbGVuZ3RoDQogICAgSWYgY3VyICZndDs9IG1heCBUaGVuIGN1ciA9IG1heCAtIDENCiAgICAnIGN1cnNvciBpcyBvZmZzZXQgZnJvbSB3aW5kb3cgc3RhcnQNCiAgICBJZiBjdXIgJmd0Oz0gd2luIFRoZW4gZnJvbSA9IGN1ciAtIHdpbiArIDIgRWxzZSBmcm9tID0gMQ0KICAgIElmIGN1ciA9IHNpemUgVGhlbg0KICAgICAgJyBwcmludCB0aGUgbGluZSBjb25zdHJhaW5lZCB0byB0aGUgd2luZG93IHNpemUNCiAgICAgIFByaW50IEAoeCx5KSBNaWQkKGEkLCBmcm9tKTsNCiAgICAgICcgcHV0IHRoZSBjdXJzb3IgYXQgdGhlIGVuZA0KICAgICAgRm9udCAxLCwxJiM1ODsgUHJpbnQgIiAiOyYjNTg7IEZvbnQgMSwsMA0KICAgICAgJyBCQUNLU1BBQ0UgbWF5IHJlcXVpcmUgcmVtb3ZpbmcgdGhlIGN1cnNvciBmcm9tIHRoZSBlbmQgb2YgdGhlIGxpbmUNCiAgICAgIElmIGtleSA9IDggVGhlbg0KICAgICAgICBJZiBjdXIgKyAxICZsdDsgd2luIEFuZCBzaXplICZsdDsgd2luIFRoZW4gUHJpbnQgIiAiOw0KICAgICAgRW5kSWYNCiAgICBFbHNlDQogICAgICAnIHByaW50IHRoZSBsaW5lIGNvbnN0cmFpbmVkIHRvIHdpbmRvdyBzaXplDQogICAgICBQcmludCBAKHgseSkgTWlkJChhJCwgZnJvbSwgY3VyIC0gZnJvbSArIDEpOw0KICAgICAgJyBpbnZlcnQgY2hhcmFjdGVyIGF0IHRoZSBjdXJzb3INCiAgICAgIEZvbnQgMSwsMSYjNTg7IFByaW50IE1pZCQoYSQsIGN1ciArIDEsIDEpOyYjNTg7IEZvbnQgMSwsMA0KICAgICAgJyBwcmludCB0aGUgcmVzdCBvZiB0aGUgbGluZQ0KICAgICAgUHJpbnQgTWlkJChhJCwgY3VyICsgMiwgd2luIC0gY3VyICsgZnJvbSAtIDIpOw0KICAgICAgSWYgY3VyICZsdDsgd2luIEFuZCBzaXplICZsdDsgd2luIFRoZW4gUHJpbnQgIiAiOw0KICAgIEVuZElmDQogICAgJyBpZiB0aGlzIGlzIGEgbm9uLWJsb2NraW5nIGNhbGwgdGhlbiBleGl0DQogICAgSWYgZG9uZSAmZ3Q7IDAgVGhlbiBFeGl0DQogICAgJyB3YWl0IG9uIGtleSBwcmVzcw0KICAgIERvJiM1ODsga2V5ID0gQXNjKElua2V5JCkmIzU4OyBMb29wIFVudGlsIGtleQ0KICBMb29wIFVudGlsIGRvbmUgJmd0OyAwDQogICcgbW92ZSBjdXJzb3IgYmFjayB0byB0aGUgc3RhcnQgb2YgdGhlIGxpbmUgYmVmb3JlIHJldHVybmluZw0KICBQcmludCBAKHgseSk7DQogIExpbmVFZGl0ID0ga2V5DQpFbmQgRnVuY3Rpb248L3ByZT48YnIgLz5kZDmP+kO7rDnQ0Ff6hOcAqy38layq" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWGQLDg+j2CQK9z7TRAwKlz/TSAwKqz/TSAwK7z/TSAwK4z/TSAwK5z/TSAwK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLC5pa8BQLa5ta/BQLV5ta/BQLE5ta/BQLH5ta/BQLG5ta/BQLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCVcTKm7mgiCom6hXTFwCbgpcWojc" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login46d2.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS%26Revision%3d00000" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="10">10</option>
+	<option value="9">9</option>
+	<option value="8">8</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="10">10</option>
+	<option value="9">9</option>
+	<option value="8">8</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b>&laquo; Older Revision - <a href="MMBasic.Historycf01.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS">Back to Page History</a> - <a href="MMBasic.History349b-2.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=00001">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/03/23 15:32</h3><br />The LineEdit function defined in the attached LINEEDIT.BAS is an MMBasic 4.5 function to edit lines of text or even pages of text, as these four examples demonstrate:<br /><br /><pre>' Edit a string until ENTER with LineEdit&#58;
+'
+Sub Example1
+  a$ = "text to edit"
+  Do&#58; k = LineEdit(a$)&#58; Loop Until k = 13 ' until ENTER
+End Sub</pre><br /><pre>'
+' Edit a string until ENTER or ESC with ESC to restore the old string value&#58;
+'
+Sub Example2
+  a$ = "text to edit"
+  b$ = a$ ' save old string value
+  Do&#58; k = LineEdit(a$)&#58; Loop Until k = 13 Or k = 27 ' until ENTER or ESC
+  If k = 27 Then ' ESC pressed
+    Print b$;
+    If Len(a$) &gt; Len(b$) Then Print Space$(Len(a$) - Len(b$));
+    a$ = b$ ' restore old value on ESC
+  EndIf
+End Sub</pre><br /><pre>'
+' Interactive editing of 10 lines with up/down screen navigation&#58;
+'
+Sub Example3
+  Local a$(10) length 40
+  Cls
+  Print "Tiny edit | ESC to quit"
+  For row = 1 To 10
+    Print @(0,12&#42;row) a$(row);Tab(11);"|"
+  Next row
+  row = 1  ' first row to edit
+  cur = 0  ' cursor at begin of the line
+  max = 40 ' max size of a$()
+  win = 10 ' edit in window of 10 chars
+  Do
+    Print @(0,12&#42;row); ' place cursor where we want to edit the line
+    k = LineEdit(a$(row), cur, -1, 40, 10) ' -1&#58; get next key press
+    If k = 128 Then
+      If row &gt; 1 Then row = row - 1  ' UP key&#58; move up
+    ElseIf k = 13 Or k = 129 Then
+      If row &lt; 10 Then row = row + 1 ' DOWN key&#58; move down
+    EndIf
+  Loop Until k = 27 ' until ESC
+End Sub</pre><br /><pre>'
+' Interactive editing with screen navigation while continuously updating the screen with the current time&#58;
+'
+Sub Example4
+  Local a$(10) length 120
+  Cls
+  Print "         | Editor | ESC to quit"
+  For row = 1 To 10
+    Print @(0,12&#42;row) "  ";a$(row);
+  Next row
+  row = 1  ' first row to edit
+  cur = 0  ' cursor at begin of the line
+  max = 40 ' max size of a$()
+  win = 10 ' edit in window of 10 chars
+  ' show cursor
+  Font 1,,1&#58; Print @(0,12&#42;row) Mid$(a$(row)+" ", 1, 1);Chr$(8);&#58; Font 1,,0
+  Do
+    Print @(0,0) Time$; ' continuously show the current time
+    k = Asc(Inkey$)
+    If k Then
+      Print @(0,12&#42;row);
+      k = LineEdit(a$(row), cur, k, 120, MM.HRes/6) ' pass in key to edit line
+      If k = 128 Then ' UP key&#58; move up
+        If row &gt; 1 Then row = row - 1
+        Font 1,,1&#58; Print @(0,12&#42;row) Mid$(a$(row)+" ", 1, 1);Chr$(8);&#58; Font 1,,0
+        cur = 0
+      ElseIf k = 13 Or k = 129 Then ' DOWN key&#58; move down
+        If row &lt; 10 Then row = row + 1
+        Font 1,,1&#58; Print @(0,12&#42;row) Mid$(a$(row)+" ", 1, 1);Chr$(8);&#58; Font 1,,0
+        cur = 0
+      EndIf
+    EndIf
+  Loop Until k = 27 ' until ESC
+End Sub</pre><br />Source code of LineEdit:<br /><br /><pre>Function LineEdit(a$, cur, key, max, win)
+  Local x, y, size, from, done
+  x = MM.HPos&#58; y = MM.VPos
+  If max &lt;= 0 Then max = 255
+  If win &lt;= 0 Then win = 255
+  size = Len(a$)
+  If cur &lt; 0 Then
+    cur = 0
+  ElseIf cur &gt; size Then
+    cur = size
+  EndIf
+  done = key
+  Do
+    If key &gt;= 32 And key &lt; 127 Then
+      If size &lt; max Then
+        a$ = Left$(a$, cur) + Chr$(key) + Mid$(a$, cur + 1)
+        cur = cur + 1
+        size = size + 1
+      EndIf
+    ElseIf key = 8 Then
+      If cur &gt; 0 Then
+        cur = cur - 1
+        a$ = Left$(a$, cur) + Mid$(a$, cur + 2)
+        size = size - 1
+      EndIf
+    ElseIf key = 127 Then
+      If cur &lt; size Then
+        a$ = Left$(a$, cur) + Mid$(a$, cur + 2)
+        size = size - 1
+      EndIf
+    ElseIf key = 130 Then
+      If cur &gt; 0 Then cur = cur - 1
+    ElseIf key = 131 Then
+      If cur &lt; size Then cur = cur + 1
+    ElseIf key = 134 Then
+      cur = 0
+    ElseIf key = 135 Then
+      cur = size
+    ElseIf key &gt; 0 Then
+      ' done editing, so print a clean line
+      Print @(x,y) Left$(a$, win);
+      ' remove the cursor from the end of the line
+      If cur = size And size &lt; win Then Print " ";
+      Exit
+    EndIf
+    ' cursor cannot move beyond string max length
+    If cur &gt;= max Then cur = max - 1
+    ' cursor is offset from window start
+    If cur &gt;= win Then from = cur - win + 2 Else from = 1
+    If cur = size Then
+      ' print the line constrained to the window size
+      Print @(x,y) Mid$(a$, from);
+      ' put the cursor at the end
+      Font 1,,1&#58; Print " ";&#58; Font 1,,0
+      ' BACKSPACE may require removing the cursor from the end of the line
+      If key = 8 Then
+        If cur + 1 &lt; win And size &lt; win Then Print " ";
+      EndIf
+    Else
+      ' print the line constrained to window size
+      Print @(x,y) Mid$(a$, from, cur - from + 1);
+      ' invert character at the cursor
+      Font 1,,1&#58; Print Mid$(a$, cur + 1, 1);&#58; Font 1,,0
+      ' print the rest of the line
+      Print Mid$(a$, cur + 2, win - cur + from - 2);
+      If cur &lt; win And size &lt; win Then Print " ";
+    EndIf
+    ' if this is a non-blocking call then exit
+    If done &gt; 0 Then Exit
+    ' wait on key press
+    Do&#58; key = Asc(Inkey$)&#58; Loop Until key
+  Loop Until done &gt; 0
+  ' move cursor back to the start of the line before returning
+  Print @(x,y);
+  LineEdit = key
+End Function</pre><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&Revision=00000 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:10:58 GMT -->
+</html>

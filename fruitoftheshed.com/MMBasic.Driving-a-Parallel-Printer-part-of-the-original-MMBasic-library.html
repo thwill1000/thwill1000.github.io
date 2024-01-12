@@ -1,0 +1,606 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:49:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Driving a Parallel Printer - Fruit Of The Shed
+</title><meta name="keywords" content="centronics, parallel" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Logind4b5.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dDriving-a-Parallel-Printer-part-of-the-original-MMBasic-library%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History0f5f.html?Page=MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Driving a Parallel Printer
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print0f5f.html?Page=MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:27
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagese076.html?Cat=MMBasic.Control" title="Control">Control</a>, <a href="MMBasic.AllPages9386.html?Cat=MMBasic.Hardware" title="Hardware">Hardware</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fcab95ad2-4673-4b3a-9bd4-ad50f60bbdb2" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fcab95ad2-4673-4b3a-9bd4-ad50f60bbdb2');"><a href="MMBasic.Compact-Quick-Day-Of-Week-function-with-historical-capability.html" title="Compact Quick Day Of Week function with historical capability">Compact Quick Day Of Week function with historical capability</a></div><div id="f1eef044b-6957-48ee-b203-7b8e79412a19" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f1eef044b-6957-48ee-b203-7b8e79412a19');"><a href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd() Function (VB work-a-like)</a><a href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff() Function (VB work-a-like)</a><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Division-practice-for-6-year-olds-part-of-the-original-MMBasic-library.html" title="Division practice for 6 year olds (MMBasic)">Division practice for 6 year olds (MMBasic)</a> &raquo; <a href="MMBasic.Driver-for-Microchip-MCP4xxx-digital-potentiometers-part-of-the-original-MMBasic-library.html" title="Driver for Microchip MCP4xxx digital potentiometers (MMBasic)">Driver for Microchip MCP4xxx digital potentiometers (MMBasic)</a> &raquo; <b><a href="MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library.html" title="Driving a Parallel Printer (MMBasic)">Driving a Parallel Printer (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f1eef044b-6957-48ee-b203-7b8e79412a19', this);" id="lnkf1eef044b-6957-48ee-b203-7b8e79412a19" onmouseout="javascript:return __HideDropDown('f1eef044b-6957-48ee-b203-7b8e79412a19');">DatePart() Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.Day-of-the-week-for-any-date-part-of-the-original-MMBasic-library.html" title="Day of the week for any date (MMBasic)">Day of the week for any date (MMBasic)</a> &raquo; <a href="MMBasic.Day-of-the-Week-from-DATE-as-day-name.html" title="Day of the Week from DATE$ as day name (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fcab95ad2-4673-4b3a-9bd4-ad50f60bbdb2', this);" id="lnkfcab95ad2-4673-4b3a-9bd4-ad50f60bbdb2" onmouseout="javascript:return __HideDropDown('fcab95ad2-4673-4b3a-9bd4-ad50f60bbdb2');">Day of the Week from DATE$ as day name (MMBasic)</a> &raquo; <a href="MMBasic.DigiClock-part-of-the-original-MMBasic-library.html" title="DCF77 DigiClock (MMBasic)">DCF77 DigiClock (MMBasic)</a> &raquo; <a href="MMBasic.Deeply-Recursive-Ackermann-Function-with-Memoization.html" title="Deeply Recursive Ackermann Function with Memoization (MMBasic)">Deeply Recursive Ackermann Function with Memoization (MMBasic)</a> &raquo; <a href="MMBasic.Determining-the-Number-of-Pins-on-the-Platform.html" title="Determining the Number of Pins on the Platform (MMBasic)">Determining the Number of Pins on the Platform (MMBasic)</a> &raquo; <a href="MMBasic.Dewpoint-and-Heat-Index-from-DHT22-temperature-and-Humidity-sensor.html" title="Dewpoint and Heat Index from DHT22 temperature and Humidity sensor (MMBasic)">Dewpoint and Heat Index from DHT22 temperature and Humidity sensor (MMBasic)</a> &raquo; <a href="MMBasic.Division-practice-for-6-year-olds-part-of-the-original-MMBasic-library.html" title="Division practice for 6 year olds (MMBasic)">Division practice for 6 year olds (MMBasic)</a> &raquo; <a href="MMBasic.Driver-for-Microchip-MCP4xxx-digital-potentiometers-part-of-the-original-MMBasic-library.html" title="Driver for Microchip MCP4xxx digital potentiometers (MMBasic)">Driver for Microchip MCP4xxx digital potentiometers (MMBasic)</a> &raquo; <b><a href="MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library.html" title="Driving a Parallel Printer (MMBasic)">Driving a Parallel Printer (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><b>Printer.bas</b><br /><pre>
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+'DOT-MATRIX PRINTER ROUTINE
+
+'Concept by CircuitGizmos with BUSY line suggestions by robert.rozee
+'of TBS forums - Thanks guys!
+
+'FULL INFORMATION THREAD CAN BE FOUND HERE&#58;
+'http&#58;//www.thebackshed.com/forum/forum_posts.asp?TID=6520&amp;PN=0&amp;TPN=1
+
+'Version 1.0 - Initial submission to library.
+
+'Works with B/W MM, Colour MM, and MicroMite.
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+
+'This routine was developed out of CircuitGizmos orignal idea to use a
+'dot-matrix printer within MMBasic.  I have refined the routine, and
+'incorporated ideas from others and make use of the BUSY line from the
+'printer to ensure that data is clocked to the printer correctly, so that
+'no incorrect printouts result of sending data to the printer faster than
+'the printer can deal with it.
+
+'Any data you want printed, is sent to the subroutine in P$.  The sub will
+'clock the data to the printer making use of the BUSY line, and then return
+'to the main program.
+
+'I am using port D for this, but you could use other pins.
+'IT IS VITAL that you select 5v tolerant pins for your printer control
+'port, as the parallel-printer standard is that all data lines are idle-high
+'at 5v, and if you connect these to any MM 3v3 pins, you will kill the MM chip.
+
+'YOU HAVE BEEN WARNED!
+
+'In my example, I am using port D2-D13 for the printer interface.
+'D2-D9 is the 8-bit parallel data bus(data 0 through data 7), D10 is
+'the STROBE line, and D11 is the RESET line used to reset the printer when
+'you first run the code.  D12 is the BUSY line, and D13 is the PAPER OUT line
+'which is not currently used in this version of the code(but will be later).
+
+'What happens with the use of the BUSY line, is that the code sends a byte to
+'the printer, then waits for the printer itself to signal that it is NOT busy
+'(in other words, that it is ready for another byte of data), then it clocks
+'another byte to the printer.  Only once the full message has been sent, and
+'then you send the printer a CR(decimal 13), does the printer actually print
+'out what has been clocked into its data buffer up to that point.
+
+'Different printers have different data buffer sizes, so you will need to
+'check this with your specific printer if your messages are expected to be
+'long.  Most printers can accept up to 80 bytes(characters) without any
+'kind of buffer overrun.  
+
+'As for the circuit, you should put a 100-ohm resistor in series with ALL
+'data and control pins in use, to limit the current into or out of the
+'MM port.  There is no need for any kind of pull-up on the printer-port
+'as this is taken care of by the printer electronics.
+
+'It is important that you set the port to open-collector outputs(xx,9), 
+'as this along with the 100R resistors, limits the current on any one
+'printer line.
+
+'Useage is simple&#58; Call PRINTER(P$), where P$ is the text you want the
+'printer to print out.  Generally speaking, the routine returns within
+'250ms for a standard 80 character line, but if timing is important, then
+'you will need to check this aspect BEFORE using this routine.
+
+'Grogster @ The Backshed Forums - 08/06/2014, 8&#58;52PM
+
+
+
+'&#61;&#61;&#61;&#61;&#61; PUT THIS AT THE START OF YOUR CODE, TO INITIALIZE THE PRINTER &#61;&#61;&#61;&#61;&#61;
+
+setpin D2,9&#58;setpin D3,9&#58;setpin D4,9&#58;setpin D5,9&#58;setpin D6,9
+setpin D7,9&#58;setpin D8,9&#58;setpin D9,9&#58;setpin D10,9&#58;pin(D10)=1
+setpin D11,9&#58;setpin D12,2&#58;setpin D13,2&#58;port(D2,8)=1
+pin(D11)=1&#58;pause 1&#58;pulse D11,1&#58;pause 1
+
+
+' &#123;MAIN CODE HERE&#125;
+
+
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+'PRINTER SUBROUTINE CODE
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+
+sub PRINTER (P$)
+  PO$=P$ + chr$(10)
+  for X=1 to len(PO$)
+    do&#58;loop until pin(D12)=0
+    C$=mid$(PO$,X,1)
+    port(D2,8)=asc(C$)
+    pause 1&#58;pulse D10,1
+  next
+end sub  
+</pre><br /><b>printer2.bas</b><br /><pre>
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+'DOT-MATRIX PRINTER ROUTINE 
+
+'Concept by CircuitGizmos with BUSY line suggestions by robert.rozee 
+'of TBS forums - Thanks guys! 
+
+'FULL INFORMATION THREAD CAN BE FOUND HERE&#58; 
+ 'http&#58;//www.thebackshed.com/forum/forum_posts.asp?TID=6520&amp;P N=0&amp;TPN=1 
+
+'Version 1.0 - Initial submission to library.
+'Version 1.1 - Description text rewrite by robert.rozee
+'              Add BUSY timeout.  Add Paper-Out timeout.
+
+'Works with B/W MM and Colour MM.  Not "Officially" supported on the MicroMite. 
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+
+'This routine was developed out of CircuitGizmos orignal idea to use a 
+'dot-matrix printer within MMBasic.  I have refined the routine, 
+'incorporating ideas from others and make use of the BUSY line from the 
+'printer to ensure that data is clocked to the printer only when it is 
+'not busy - this ensures no incorrect printouts result from sending data 
+'to the printer faster than the printer can deal with it. 
+
+'Any data you want printed is sent to the subroutine in P$.  The sub will 
+'clock the data to the printer making use of the BUSY line, and then return 
+'to the main program.  NOTE&#58; the subroutine will loop forever while the 
+'printer remains BUSY, so if this is likely to happen (an example is if the 
+'paper runs out) it would be a good idea to add some sort of timeout to the 
+'do&#58;loop part of the code and suitable error reporting. 
+
+'I am using port D for this, but you could use other pins. 
+'IT IS VITAL that you select 5v tolerant pins for any pins that the printer 
+'will be driving itself - BUSY and PAPER OUT.  the parallel-printer standard is 
+'that all data lines sourced from the printer are idle-high at 5v, and if you 
+'connect these directly to any MM 3v3 pins, you will kill the MM chip.  For 
+'output pins (data 0..7, STROBE, RESET) things becomes more complicated.  if 5v 
+'tolerant pins are used with open-collector outputs there is no issue, but this 
+'is not guaranteed to drive every printer (however, it should be ok with most). 
+'if pins are not driven as open collector, there is the possibility of current 
+'flowing back through the MM's internal protection diodes lifting Vcc above  
+'3v3.  in this case consider using a level-shifting buffer. 
+
+'it is recommended that 100R resistors be placed in series with all line (both 
+'input and output) as an extra layer of protection. 
+'YOU HAVE BEEN WARNED! 
+
+'In my example, I am using port D2-D13 for the printer interface. 
+'D2-D9 is the 8-bit parallel data bus (data 0 through data 7), D10 is 
+'the STROBE line, and D11 is the RESET line used to reset the printer when 
+'you first run the code.  D12 is the BUSY line, and D13 is the PAPER OUT line 
+'which is not currently used in this version of the code (but may be later). 
+
+'What happens with the use of the BUSY line, is that the code waits for the 
+'printer to signal that it is NOT busy (in other words, that it is ready for 
+'another byte of data) BEFORE each byte is sent.  When exactly characters are 
+'printed depends upon the printer and its buffer size.  Some printers may print 
+'characters as they arrive, some may buffer a one or two, some may buffer a 
+'whole line or more and only print when a CR or LF is received.   
+
+'As for the circuit, you should put a 100-ohm resistor in series with ALL 
+'data and control pins in use, to limit any current into or out of the 
+'MM port.  There is no need for any kind of pull-up on the printer-port 
+'as this is taken care of by the printer electronics. While the IEEE1284 
+'specifications say driven lines need to be able to sink AND source up to 
+'14mA, the input current is usually just a TTL load with something like 
+'10k pullups within the printer. 
+
+'//////////////// 
+'It is important that you set the port to open-collector outputs(xx,9),  
+'as this along with the 100R resistors, limits the current on any one 
+'printer line. 
+'//////////////// (not a solution with a micromite) 
+
+'Usage is simple&#58; Call PRINTER(P$,T,CR,LF), where P$ is the text you want the 
+'printer to print out, and T is the timeout in ms when the sub will end if the
+'printer has been delayed too long.  CR is 1 if you want a CR added to P$, LF is
+'1 if you want a LF added to P$.  Generally speaking, the routine returns within 
+'250ms for a standard 80 character line, but if timing is important, then 
+'you will need to check this aspect BEFORE using this routine.
+'DO NOT ignore any arguments - you must supply the relevant data.
+
+
+'Grogster @ The Backshed Forums.
+'08/06/2014, 8&#58;52PM(V 1.0)
+'18/06/2014, 7&#58;01PM(V 1.1)
+
+
+
+'&#61;&#61;&#61;&#61;&#61; PUT THIS AT THE START OF YOUR CODE, TO INITIALIZE THE PRINTER &#61;&#61;&#61;&#61;&#61; 
+
+setpin D2,9&#58; setpin D3,9&#58; setpin D4,9&#58; setpin D5,9 
+setpin D6,9&#58; setpin D7,9&#58; setpin D8,9&#58; setpin D9,9 
+port(D2,8)=1 pin(D10)=1&#58; setpin D10,9 
+
+pin(D11)=1&#58; setpin D11,9&#58; pause 1&#58;pulse D11,1&#58;pause 1      ' reset printer 
+
+setpin D12,2&#58; setpin D13,2      ' these are inputs and must be 5v tolerant 
+
+
+' &#123;MAIN CODE HERE&#125; 
+
+
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+'PRINTER SUBROUTINE CODE 
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+
+sub PRINTER (P$,T,CR,LF) 
+  Y=0&#58;TOE=0&#58;POE=0&#58;T=T&#42;2&#58;PO$=P$
+  If CR=1 and LF=0 then PO$=P$ + chr$(13)
+  If CR=0 and LF=1 then PO$=P$ + chr$(10)
+  If CR=1 and LF=1 then PO$=P$ + chr$(13) + chr$(10)
+  for X=1 to len(PO$) 
+    do
+      pause 0.5
+      Y=Y+1
+    loop until pin(D12)=0 or Y=T or pin(D13)=1
+    If Y=T then TOE=1&#58;exit sub 'Check TOE once the sub ends, to see if there was a TimeOut Error.
+    If pin(D13)=1 then POE=1&#58;exit sub 'Check POE once the sub ends, to see if there was a PaperOut Error.
+    C$=mid$(PO$,X,1) 
+    port(D2,8)=asc(C$) 
+    pause 1&#58;pulse D10,1&#58;Y=0
+  next 
+end sub   
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:49:28 GMT -->
+</html>

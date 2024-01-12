@@ -1,0 +1,96 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	uFormat$() and StrE$() provide flexible formatting of numeric values - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFpiY8aDEgY2xhc3M9InBhZ2V0aXRsZSI+dUZvcm1hdCQoKSBhbmQgU3RyRSQoKSBwcm92aWRlIGZsZXhpYmxlIGZvcm1hdHRpbmcgb2YgbnVtZXJpYyB2YWx1ZXM8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE4LzEyLzE0IDEzOjA3IGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogQ29udHJvbCwgRW5jb2RlIGFuZCBEZWNvZGUsIEVudmlyb25tZW50LCBNYXRoczwvc21hbGw+PGJyIC8+PGJyIC8+U29tZSBsYW5ndWFnZXMgcHJvdmlkZSB0aGUgRk9STUFUJCgpIGZ1bmN0aW9uIC0gaW5kZWVkIHRoaXMgZmVhdHVyZXMgaW4gTU1CYXNpYyBmb3IgdGhlIE1heGlNaXRlIGJ1dCBoYXMgYmVlbiBkcm9wcGVkIGZyb20gdmVyc2lvbnMgaW50ZW5kZWQgZm9yIHRoZSBNaWNyb01pdGUgKFY0LjUgb253YXJkKS4gSXQgY2FuIGJlIGFuIGludGVuc2l2ZSBmdW5jdGlvbiBmb3Igc29tZSBvZnRlbiBxdWl0ZSBmcmluZ2UgZnVuY3Rpb25zLiBBIGZ1bGx5IGZsZWRnZWQgdmVyc2lvbiBpcyBkb2N1bWVudGVkIDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHBzOi8vZG9jcy5taWNyb3NvZnQuY29tL2VuLXVzL29mZmljZS92YmEvbGFuZ3VhZ2UvcmVmZXJlbmNlL3VzZXItaW50ZXJmYWNlLWhlbHAvZm9ybWF0LWZ1bmN0aW9uLXZpc3VhbC1iYXNpYy1mb3ItYXBwbGljYXRpb25zIiB0aXRsZT0iaGVyZSIgdGFyZ2V0PSJfYmxhbmsiPmhlcmU8L2E+LiBJIHRoaW5rIHlvdSdsbCBhZ3JlZSBpdCBpcyBhIGxvdCBvZiB3b3JrIGZvciBvZnRlbiBsaXR0bGUgcGF5YmFjay4uLiBmaW5lIG9uIFBDJ3Mgd2l0aCBtdWx0aS1naWdhYnl0ZSBtZW1vcmllcyBidXQgbm90IHJlYWxseSB3b3J0aCB0aGUgZmxhc2ggaW4gY29uZmluZWQgc3lzdGVtcyB3aGVuIHRoZSBmdW5jdGlvbiBpcyByYXJlbHkgdXNlZC48YnIgLz48YnIgLz5JbiBNTUJhc2ljLCB0aGUgU1RSJCgpIGZ1bmN0aW9uIGRvZXMgcHJvdmlkZSBhIGxvdCBvZiB0aGUgbnVtZXJpY2FsIGZvcm1hdHRpbmcgYnV0IHN0aWxsIG1pc3NlcyBhIGNvdXBsZSBvZiB0eXBlcyBhaW1lZCBzcGVjaWZpY2FsbHkgYXQgZW5naW5lZXJpbmcgdGFza3MuPGJyIC8+PGJyIC8+QmVsb3cgYXJlIHR3byBmdW5jdGlvbnMgdGhhdCBwcm92aWRlIHRoZSBtb3N0IGNvbW1vbiBmb3JtYXR0aW5nIG9wdGlvbnMgZm9yIGRlY2ltYWwgbnVtYmVycywgYWxsb3dpbmcgbnVtZXJpYyB2YWx1ZXMgdG8gYmUgcmV0dXJuZWQgKGFzIGEgc3RyaW5nKSBjb3JyZWN0bHkgZm9ybWF0dGVkLiBCb3RoIGZ1bmN0aW9ucyBhcmUgcmVwcm9kdWNlZCBoZXJlIGNvdXJ0ZXN5IG9mIFRoZSBCYWNrIFNoZWQgdXNlcjsgVGFzc3lKaW0gYW5kIHRoZSBvcmlnaW5hbCB0aHJlYWRzIGNhbiBiZSBmb3VuZCA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTY5NzkiIHRpdGxlPSJoZXJlIiB0YXJnZXQ9Il9ibGFuayI+aGVyZTwvYT4gYW5kIDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHBzOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTkzMjkmYW1wO1BOPTEmYW1wO1RQTj02IiB0aXRsZT0iaGVyZSIgdGFyZ2V0PSJfYmxhbmsiPmhlcmU8L2E+LjxiciAvPjxiciAvPjxoMSBjbGFzcz0ic2VwYXJhdG9yIj4gPC9oMT48YnIgLz48Yj51Rm9ybWF0JCgpPC9iPjxiciAvPlRoaXMgZnVuY3Rpb24gZm9ybWF0cyBhIHZhbHVlIHRvIHRoZSBuZWFyZXN0IG51bWJlciBvZiBkZWNpbWFsIHBsYWNlcyByZXF1aXJlZC4gSXQgd2lsbCByb3VuZCB0aGUgbnVtYmVyIHVwIG9yIGRvd24gdG8gZG8gdGhpcyBpLmUuIGlmIHlvdSBhc2sgZm9yIHRoZSB2YWx1ZSA1OTAwIHJvdW5kZWQgdG8gdGhlIG5lYXJlc3QgdGhvdXNhbmQgKG5lZ2F0aXZlIG9wdGlvbikgdGhlIHJldHVybmVkIHZhbHVlIHdpbGwgYmUgNjAwMCBhbmQgc28gb24uPGJyIC8+PGJyIC8+PGI+RXhhbXBsZSBDb2RlPC9iPjxiciAvPjxwcmU+DQoJRm9yIHAgPSAtMyBUTyAzDQoJCVByaW50IHVGb3JtYXQkKDYyNTguOTkwODc2LHApDQoJTmV4dCBwDQo8L3ByZT48YnIgLz5UaGUgb3V0cHV0IGlsbHVzdHJhdGVzIHRoZSBhY3Rpb24gb2YgdGhlIGZvcm1hdHRpbmcgb3B0aW9uOjxiciAvPjxiciAvPjxjb2RlPjYwMDA8YnIgLz42MzAwPGJyIC8+NjI2MDxiciAvPjYyNTk8YnIgLz42MjU5LjA8YnIgLz42MjU4Ljk5PGJyIC8+NjI1OC45OTE8YnIgLz48L2NvZGU+PGJyIC8+PGJyIC8+PGJyIC8+PGI+RGVwZW5kZW5jaWVzPC9iPjxiciAvPk5vbmUuPGJyIC8+PGJyIC8+PHByZT4NCicgVGhlIGZ1bmN0aW9uDQoJRnVuY3Rpb24gdUZvcm1hdCQoeCxwKQ0KCQknIGdpdmVuIGEgbnVtYmVyICh4KSBhbmQgdGhlIHJlcXVpcmVkIG51bWJlciBvZiBkZWNpbWFsIHBsYWNlcyAocCkNCgkJJyByZXR1cm5zIGZvcm1hdHRlZCBzdHJpbmcuIE5lZ2F0aXZlIGFuZCB6ZXJvIHAgaXMgcGVybWl0dGVkDQoJCUxvY2FsIGYkDQoJCWYkPVN0ciQoQ2ludCh4JiM0MjsxMF5wKSkNCgkJSWYgTGVuKGYkKSZsdDs9cCBUaGVuDQoJCQlmJD1TdHJpbmckKHArMS1MZW4oZiQpLCAiMCIpK2YkDQoJCUVuZElmDQoJCUlmIHAmZ3Q7MCBUaGVuDQoJCQl1Rm9ybWF0JD1MZWZ0JChmJCxMZW4oZiQpLXApKyIuIitSaWdodCQoZiQscCkNCgkJRWxzZUlmIHAgPSAwIFRoZW4NCgkJCXVGb3JtYXQkPWYkDQoJCUVsc2UNCgkJCXVGb3JtYXQkPWYkK1N0cmluZyQoQWJzKHApLCIwIikNCgkJRW5kSWYNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiciAvPjxoMSBjbGFzcz0ic2VwYXJhdG9yIj4gPC9oMT48YnIgLz48Yj5TdHJFJCgpPC9iPjxiciAvPklzIGFuIGVuaGFuY2VkIGZvcm0gb2YgdGhlIFNUUiQoKSBmdW5jdGlvbiB0aGF0IHJldHVybnMgYSBudW1lcmljIHZhbHVlIHVzaW5nIHNjaWVudGlmaWMvZW5naW5lZXJpbmcgbm90YXRpb24gLSB0aGF0IGlzIGEgdmFsdWUgYW5kIGV4cG9uZW50LiBFbmdpbmVlcmluZyBub3RhdGlvbiBncm91cHMgbnVtYmVyIGJ5IHRob3VzYW5kcyBlLmcuIDEwMCwwMDAgd2lsbCBiZSByZXR1cm5lZCBhcyAxMDBlKzMgd2hlcmVhcyBpbiBzY2llbnRpZmljIG5vdGF0aW9uLCB0aGUgc2FtZSB2YWx1ZSB3b3VsZCBiZSByZXR1cm4gYXMgMWUrNSwgYWx3YXlzIHJlZHVjaW5nIHRoZSB2YWx1ZSB0byBiZXR3ZWVuIDAgYW5kIDkuOTk5OSZyYXF1bzs8YnIgLz48YnIgLz48Yj5FeGFtcGxlIENvZGU8L2I+PGJyIC8+PHByZT4NCg0KCXE9LjAwMDAwMQ0KCQlQcmludCBTdHJFJChxLDEsMSksLFN0ckUkKHEsNSwwKQ0KCXE9LjAwMDENCgkJUHJpbnQgU3RyRSQocSwyLDEpLCxTdHJFJChxLDUsMCkNCglxPS4wMQ0KCQlQcmludCBTdHJFJChxLDMsMSksLFN0ckUkKHEsNSwwKQ0KCXE9LjQ1NQ0KCQlQcmludCBTdHJFJChxLDQsMSksLFN0ckUkKHEsNSwwKQ0KCXE9MA0KCQlQcmludCBTdHJFJChxLDQsMSksLFN0ckUkKHEsNSwwKQ0KCXE9MQ0KCQlQcmludCBTdHJFJChxLDUsMSksLFN0ckUkKHEsNSwwKQ0KCXE9Nzc0OA0KCQlQcmludCBTdHJFJChxLDYsMSksLFN0ckUkKHEsNSwtMSkNCglxPTEwMDAwMA0KCQlQcmludCBTdHJFJChxLDcsMSksLFN0ckUkKHEsNSwtMSkNCglxPTIyMDAwMDANCgkJUHJpbnQgU3RyRSQocSw4LDEpLCxTdHJFJChxLDUsMCkNCjwvcHJlPjxiciAvPkFnYWluLCB0aGUgb3V0cHV0IGlsbHVzdHJhdGVzIHRoZSBhY3Rpb24gb2YgdGhlIGZvcm1hdHRpbmcgb3B0aW9ucyAobm90ZSBhbHNvIGhvdyB0aGUgZm9ybWF0dGluZyBjYW4gZXhwb3NlIHRoZSBsaW1pdGF0aW9ucyBvZiBzaW5nbGUgcHJlY2lzaW9uIEZsb2F0aW5nIFBvaW50IG1hdGhzKTo8YnIgLz48YnIgLz48Y29kZT4xLjBlLTYJCTEuMDAwMDBlLTY8YnIgLz4gMTAwLjAwZS02CQkxLjAwMDAwZS00PGJyIC8+IDEwLjAwMGUtMwkJMS4wMDAwMGUtMjxiciAvPiA0NTUuMDAwMGUtMwkJNC41NTAwMGUtMTxiciAvPiAwLjAwMDAJCQkwLjAwMDAwPGJyIC8+IDEuMDAwMDBlMAkJMS4wMDAwMGUwPGJyIC8+IDcuNzQ4MDAwZTMJCTcuNzQ4MDBlMzxiciAvPiA5OS45OTk5OTIzZTMJCTEwMC4wMDAwMGUzPGJyIC8+IDIuMjAwMDAwMDRlNgkJMi4yMDAwMGU2PGJyIC8+PC9jb2RlPjxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczwvYj48YnIgLz5Ob25lLjxiciAvPjxiciAvPjxiciAvPjxwcmU+DQonIHRoZSBmdW5jdGlvbg0KCUZ1bmN0aW9uIHN0ckUkKG14LHAsZW5nKQ0KCQknIG14ID0gbnVtYmVyIHRvIGZvcm1hdA0KCQknIHAgPSBudW1iZXIgb2YgZGVjaW1hbCBwbGFjZXMNCgkJJyBpZiBlbmcgaXMgbm90IHplcm8sIHVzZSBlbmdpbmVlcmluZyBub3RhdGlvbiANCgkJTG9jYWwgc24kDQoJCUxvY2FsIEZsb2F0IHgscHgNCgkJc24kPSIgIg0KCQl4PW14DQoJCUlmIHgmbHQ7MCBUaGVuDQoJCQlzbiQ9Ii0iDQoJCQl4PXgmIzQyOy0xDQoJCUVuZElmDQoJCUlmIHgmbHQ7Jmd0OzAgVGhlbiAgJyB6ZXJvIGlzIGEgc3BlY2lhbCBjYXNlDQoJCQlweD1JbnQoTG9nKHgpL0xvZygxMCkpDQoJCQlJZiBlbmcmbHQ7Jmd0OzAgVGhlbiAnIGVuZ2luZWVyaW5nIG5vdGF0aW9uIC0gbXVsdGlwbGVzIG9mIDMNCgkJCQlweD1JbnQocHgvMykmIzQyOzMNCgkJCUVuZElmDQoJCQl4PXgmIzQyOygxMF4tcHgpDQoJCQlzdHJFJD1zbiQrU3RyJCh4LDAscCkrImUiDQoJCQknIGlmIFNnbihJbnQocHgpKSZsdDsmZ3Q7LTEgVGhlbiBzdHJFJD1zdHJFJCsiKyIgICcgdW4tUkVNIHRoaXMgbGluZSB0byBmb3JjZSB0aGUgZXhwb25lbnQgc2lnbiBlLmcuIDFlKzYgaW5zdGVhZCBvZiAxZTYNCgkJCXN0ckUkPXN0cmUkK1N0ciQoSW50KHB4KSkNCgkJRWxzZQ0KCQkJc3RyRSQ9c24kK1N0ciQoeCwwLFApDQoJCUVuZElmDQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48YnIgLz5kZLzVdbcRuNwoOPhi5UVFPIfm/NfE" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">uFormat$() and StrE$() provide flexible formatting of numeric values</h1><small>Modified on 2018/12/14 13:07 by Administrator &mdash; Categorized as: Control, Encode and Decode, Environment, Maths</small><br /><br />Some languages provide the FORMAT$() function - indeed this features in MMBasic for the MaxiMite but has been dropped from versions intended for the MicroMite (V4.5 onward). It can be an intensive function for some often quite fringe functions. A fully fledged version is documented <a class="externallink" href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/format-function-visual-basic-for-applications" title="here" target="_blank">here</a>. I think you'll agree it is a lot of work for often little payback... fine on PC's with multi-gigabyte memories but not really worth the flash in confined systems when the function is rarely used.<br /><br />In MMBasic, the STR$() function does provide a lot of the numerical formatting but still misses a couple of types aimed specifically at engineering tasks.<br /><br />Below are two functions that provide the most common formatting options for decimal numbers, allowing numeric values to be returned (as a string) correctly formatted. Both functions are reproduced here courtesy of The Back Shed user; TassyJim and the original threads can be found <a class="externallink" href="http://www.thebackshed.com/forum/forum_posts.asp?TID=6979" title="here" target="_blank">here</a> and <a class="externallink" href="https://www.thebackshed.com/forum/forum_posts.asp?TID=9329&amp;PN=1&amp;TPN=6" title="here" target="_blank">here</a>.<br /><br /><h1 class="separator"> </h1><br /><b>uFormat$()</b><br />This function formats a value to the nearest number of decimal places required. It will round the number up or down to do this i.e. if you ask for the value 5900 rounded to the nearest thousand (negative option) the returned value will be 6000 and so on.<br /><br /><b>Example Code</b><br /><pre>
+	For p = -3 TO 3
+		Print uFormat$(6258.990876,p)
+	Next p
+</pre><br />The output illustrates the action of the formatting option:<br /><br /><code>6000<br />6300<br />6260<br />6259<br />6259.0<br />6258.99<br />6258.991<br /></code><br /><br /><br /><b>Dependencies</b><br />None.<br /><br /><pre>
+' The function
+	Function uFormat$(x,p)
+		' given a number (x) and the required number of decimal places (p)
+		' returns formatted string. Negative and zero p is permitted
+		Local f$
+		f$=Str$(Cint(x&#42;10^p))
+		If Len(f$)&lt;=p Then
+			f$=String$(p+1-Len(f$), "0")+f$
+		EndIf
+		If p&gt;0 Then
+			uFormat$=Left$(f$,Len(f$)-p)+"."+Right$(f$,p)
+		ElseIf p = 0 Then
+			uFormat$=f$
+		Else
+			uFormat$=f$+String$(Abs(p),"0")
+		EndIf
+	End Function
+</pre><br /><br /><h1 class="separator"> </h1><br /><b>StrE$()</b><br />Is an enhanced form of the STR$() function that returns a numeric value using scientific/engineering notation - that is a value and exponent. Engineering notation groups number by thousands e.g. 100,000 will be returned as 100e+3 whereas in scientific notation, the same value would be return as 1e+5, always reducing the value to between 0 and 9.9999&raquo;<br /><br /><b>Example Code</b><br /><pre>
+
+	q=.000001
+		Print StrE$(q,1,1),,StrE$(q,5,0)
+	q=.0001
+		Print StrE$(q,2,1),,StrE$(q,5,0)
+	q=.01
+		Print StrE$(q,3,1),,StrE$(q,5,0)
+	q=.455
+		Print StrE$(q,4,1),,StrE$(q,5,0)
+	q=0
+		Print StrE$(q,4,1),,StrE$(q,5,0)
+	q=1
+		Print StrE$(q,5,1),,StrE$(q,5,0)
+	q=7748
+		Print StrE$(q,6,1),,StrE$(q,5,-1)
+	q=100000
+		Print StrE$(q,7,1),,StrE$(q,5,-1)
+	q=2200000
+		Print StrE$(q,8,1),,StrE$(q,5,0)
+</pre><br />Again, the output illustrates the action of the formatting options (note also how the formatting can expose the limitations of single precision Floating Point maths):<br /><br /><code>1.0e-6		1.00000e-6<br /> 100.00e-6		1.00000e-4<br /> 10.000e-3		1.00000e-2<br /> 455.0000e-3		4.55000e-1<br /> 0.0000			0.00000<br /> 1.00000e0		1.00000e0<br /> 7.748000e3		7.74800e3<br /> 99.9999923e3		100.00000e3<br /> 2.20000004e6		2.20000e6<br /></code><br /><br /><b>Dependencies</b><br />None.<br /><br /><br /><pre>
+' the function
+	Function strE$(mx,p,eng)
+		' mx = number to format
+		' p = number of decimal places
+		' if eng is not zero, use engineering notation 
+		Local sn$
+		Local Float x,px
+		sn$=" "
+		x=mx
+		If x&lt;0 Then
+			sn$="-"
+			x=x&#42;-1
+		EndIf
+		If x&lt;&gt;0 Then  ' zero is a special case
+			px=Int(Log(x)/Log(10))
+			If eng&lt;&gt;0 Then ' engineering notation - multiples of 3
+				px=Int(px/3)&#42;3
+			EndIf
+			x=x&#42;(10^-px)
+			strE$=sn$+Str$(x,0,p)+"e"
+			' if Sgn(Int(px))&lt;&gt;-1 Then strE$=strE$+"+"  ' un-REM this line to force the exponent sign e.g. 1e+6 instead of 1e6
+			strE$=stre$+Str$(Int(px))
+		Else
+			strE$=sn$+Str$(x,0,P)
+		EndIf
+	End Function
+</pre><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:19 GMT -->
+</html>

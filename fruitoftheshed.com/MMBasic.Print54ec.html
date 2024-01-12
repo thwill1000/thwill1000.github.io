@@ -1,0 +1,65 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Bit-Manipulation-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:13:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Bit Manipulation Functions - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Bit-Manipulation-Functions" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF8BQ8aDEgY2xhc3M9InBhZ2V0aXRsZSI+Qml0IE1hbmlwdWxhdGlvbiBGdW5jdGlvbnM8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIwLzA5LzIxIDE0OjMzIGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBNYXRocywgUHJvZ3JhbSBGbG93LCBTdGF0ZSBNYWNoaW5lPC9zbWFsbD48YnIgLz48YnIgLz5UaGUgZm9sbG93aW5nIGZvdXIgZnVuY3Rpb25zIHByb3ZpZGUgU0VUdGluZywgUkVTZXR0aW5nIGFuZCBURVNUaW5nIG9mIGluZGl2aWR1YWwgYml0cyBvZiBhbiBpbnRlZ2VyIGV4cHJlc3Npb24gKGlkZWFsbHkgYSB2YXJpYWJsZSkuIEZsYWdFcSBzZXRzIGEgZmxhZyB0byB0aGUgdmFsdWUgc3BlY2lmaWVkIChpLmUuIG5vdCBtYW5kYXRpbmcgYSBzZXQgb3IgcmVzZXQpLiBBIG5vbi16ZXJvIHZhbHVlIGNvdW50cyBhcyAxLiBJZGVhbCBmb3Igc3RhdGUgbWFjaGluZSBhbmQgZXZlbnQgZHJpdmVuIGNvZGUuPGJyIC8+PGJyIC8+VGhpcyBtYWtlcyB1c2luZyBzaW5nbGUgYml0cyBhcyBmbGFncyBlYXN5IGFuZCBmYXIgbW9yZSBtZW1vcnkta2luZCB0aGFuIHVzaW5nIGludGVnZXIgdmFyaWFibGVzIGFzIGZsYWdzOyB3aGljaCB3YXN0ZXMgOCBieXRlcyBwZXIgZmxhZykuIFRoaXMgbWV0aG9kIGFsbG93cyB1cCB0byA2NCBmbGFncyB0byBiZSBtYWludGFpbmVkIHVzaW5nIGEgc2luZ2xlIGludGVnZXIgdmFyaWFibGUuIElmIENPTlNUIGlzIHVzZWQgdG8gZGVmaW5lIHRoZSBiaXRzIGl0IG1ha2VzIGZvciB2ZXJ5IHJlYWRhYmxlIGNvZGUuPGJyIC8+PGJyIC8+SW4gdGhlIGludGVyZXN0cyBvZiBzcGVlZCwgdGhlcmUgaXMgbm8gZXJyb3IgY2hlY2tpbmcgb24gdGhlIGJpdCB5b3UgbWFuaXB1bGF0ZS4gSWYgeW91IHRyeSBhbnl0aGluZyBvdXRzaWRlIHRoZSByYW5nZSAwIHRvIDYzLCB5b3UnbGwgZ2V0IHdlaXJkIHJlc3VsdHMgYXQgYmVzdC48YnIgLz48YnIgLz5Bc3N1bWVzIGEgZ2xvYmFsIGludGVnZXIgY2FsbGVkIEZMQUc8YnIgLz48YnIgLz48Yj5TeW50YXg8L2I+OjxiciAvPiAgICBGbGFnU2V0IGJpdDxiciAvPiAgICBGbGFnUmVzIGJpdDxiciAvPiAgICBGbGFnRXEgYml0LHZhbHVlPGJyIC8+ICAgID1GbGFnVGVzdChiaXQpPGJyIC8+PGJyIC8+PGI+RXhhbXBsZTwvYj46PGJyIC8+ICAgIEZsYWdTZXQgMTc8YnIgLz4gICAgRmxhZ1JlcyBTRENBUkRfSU5TRVJURUQ8YnIgLz4gICAgSUYgRmxhZ1Rlc3QoUFJJTlRFUl9SRUFEWSk9MCBUSEVOIFBSSU5UICJQcmludGVyIGlzIG5vdCByZWFkeS4gU3dpdGNoIE9OTElORSBhbmQgcHJlc3MgRW50ZXIiPGJyIC8+ICAgIEZsYWdFcSBMZWFwRmxhZyxJc0xlYXBZZWFyKDIwMTcpPGJyIC8+PGJyIC8+PGI+Q29kZTwvYj46PGJyIC8+SW4gdGhpcyBjb2RlIHBhY2ssIG5vdGUgdGhhdCB0aGUgSW52KCkgZnVuY3Rpb24gcmVwbGljYXRlcyB0aGUgbmF0aXZlIGZ1bmN0aW9uIG9mIHRoZSBzYW1lIG5hbWUgcHJlc2VudCBpbiBNTUJhc2ljIG9uIHRoZSBDTU0yLiBXaXRoIHRoaXMgZnVuY3Rpb24sIHRoZSBGbGFnUmVzKCkgQ01NMiB2ZXJzaW9uIHNob3duIGF0IHRoZSBib3R0b20gaXMgY29tcGF0aWJsZSB3aXRoIE1pY3JvTWl0ZSBNTUJhc2ljIGJ1dCBydW5zIGFib3V0IDMwJSBzbG93ZXIgdGhhbiB0aGUgdmVyc2lvbiBpbW1lZGlhdGVseSBiZWxvdy48YnIgLz48YnIgLz48cHJlPg0KCSdwcmVhbWJsZQ0KCURpbSBJbnRlZ2VyIEZsYWcNCg0KCSdTZXQgYSBGbGFnDQoJU3ViIEZsYWdTZXQoYml0IEFzIEludGVnZXIpDQoJCUZMQUc9RkxBRyBPciAxJmx0OyZsdDtiaXQNCglFbmQgU3ViDQoNCgknQ2xlYXIgYSBmbGFnDQoJU3ViIEZsYWdSZXMoYml0IEFzIEludGVnZXIpDQoJCUZMQUc9KEZMQUcgT3IgMSZsdDsmbHQ7Yml0KSBYb3IgMSZsdDsmbHQ7Yml0DQoJRW5kIFN1Yg0KDQoJJ0VxdWF0ZSBhIGZsYWcgdG8gYSB2YWx1ZQ0KCVN1YiBGbGFnRXEoYml0IEFzIEludGVnZXIsdiBBcyBJbnRlZ2VyKQ0KCQlJZiB2IFRoZW4NCgkJCUZsYWdTZXQoYml0KQ0KCQlFbHNlDQoJCQlGbGFnUmVzKGJpdCkNCgkJRW5kaWYNCglFbmQgU3ViDQoNCgknVGVzdCBhIGZsYWcNCglGdW5jdGlvbiBGbGFnVGVzdChiaXQgQXMgSW50ZWdlcikgQXMgSW50ZWdlcg0KCQlGbGFnVGVzdD1BYnMoU2duKEZMQUcgQW5kIDEmbHQ7Jmx0O2JpdCkpDQoJRW5kIEZ1bmN0aW9uDQoNCgknQml0d2lzZSBJbnZlcnQsIGxvZ2ljYWwgTk9UDQoJJ0ZvciBNTUJhc2ljcyB3aXRob3V0IG5hdGl2ZSBJbnYoKSBGdW5jdGlvbg0KCUZ1bmN0aW9uIEludihhIEFzIEludGVnZXIpDQoJCUludj1hIFhvciAmYW1wO2hGRkZGRkZGRkZGRkZGRkZGDQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48Yj5WZXJzaW9uIG9mIEZsYWdSZXMoKSBmb3IgQ01NMiAuLi48L2I+PGJyIC8+TGV2ZXJhZ2VzIHRoZSBuYXRpdmUgSW52KCkgZnVuY3Rpb24gb2YgTU1CYXNpYyBvbiBDTU0yIC0gc2ltcGxlciBhbmQgYSBiaXQgZmFzdGVyLiBNYW55IHRoYW5rcyB0byBUd29GaW5nZXJzIGFuZCBUdXJibzQ2IG9mIFRCUyBmb3Igb3B0aW1pemF0aW9ucyBhbmQgYWRkaXRpb25hbCByb3V0aW5lcy48YnIgLz4JPHByZT4NCgknZm9yIENNTTINCglTdWIgRmxhZ1JlcyhiaXQgQXMgSW50ZWdlcikNCgkJRkxBRz1GTEFHIEFuZCBJbnYoMSZsdDsmbHQ7Yml0KQ0KCUVuZCBTdWINCjwvcHJlPjxiciAvPmRk6dRLIBqLClU0qrbmsV013fD+o0k=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Bit Manipulation Functions</h1><small>Modified on 2020/09/21 14:33 by CaptainBoing &mdash; Categorized as: Maths, Program Flow, State Machine</small><br /><br />The following four functions provide SETting, RESetting and TESTing of individual bits of an integer expression (ideally a variable). FlagEq sets a flag to the value specified (i.e. not mandating a set or reset). A non-zero value counts as 1. Ideal for state machine and event driven code.<br /><br />This makes using single bits as flags easy and far more memory-kind than using integer variables as flags; which wastes 8 bytes per flag). This method allows up to 64 flags to be maintained using a single integer variable. If CONST is used to define the bits it makes for very readable code.<br /><br />In the interests of speed, there is no error checking on the bit you manipulate. If you try anything outside the range 0 to 63, you'll get weird results at best.<br /><br />Assumes a global integer called FLAG<br /><br /><b>Syntax</b>:<br />    FlagSet bit<br />    FlagRes bit<br />    FlagEq bit,value<br />    =FlagTest(bit)<br /><br /><b>Example</b>:<br />    FlagSet 17<br />    FlagRes SDCARD_INSERTED<br />    IF FlagTest(PRINTER_READY)=0 THEN PRINT "Printer is not ready. Switch ONLINE and press Enter"<br />    FlagEq LeapFlag,IsLeapYear(2017)<br /><br /><b>Code</b>:<br />In this code pack, note that the Inv() function replicates the native function of the same name present in MMBasic on the CMM2. With this function, the FlagRes() CMM2 version shown at the bottom is compatible with MicroMite MMBasic but runs about 30% slower than the version immediately below.<br /><br /><pre>
+	'preamble
+	Dim Integer Flag
+
+	'Set a Flag
+	Sub FlagSet(bit As Integer)
+		FLAG=FLAG Or 1&lt;&lt;bit
+	End Sub
+
+	'Clear a flag
+	Sub FlagRes(bit As Integer)
+		FLAG=(FLAG Or 1&lt;&lt;bit) Xor 1&lt;&lt;bit
+	End Sub
+
+	'Equate a flag to a value
+	Sub FlagEq(bit As Integer,v As Integer)
+		If v Then
+			FlagSet(bit)
+		Else
+			FlagRes(bit)
+		Endif
+	End Sub
+
+	'Test a flag
+	Function FlagTest(bit As Integer) As Integer
+		FlagTest=Abs(Sgn(FLAG And 1&lt;&lt;bit))
+	End Function
+
+	'Bitwise Invert, logical NOT
+	'For MMBasics without native Inv() Function
+	Function Inv(a As Integer)
+		Inv=a Xor &amp;hFFFFFFFFFFFFFFFF
+	End Function
+</pre><br /><b>Version of FlagRes() for CMM2 ...</b><br />Leverages the native Inv() function of MMBasic on CMM2 - simpler and a bit faster. Many thanks to TwoFingers and Turbo46 of TBS for optimizations and additional routines.<br />	<pre>
+	'for CMM2
+	Sub FlagRes(bit As Integer)
+		FLAG=FLAG And Inv(1&lt;&lt;bit)
+	End Sub
+</pre><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Bit-Manipulation-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:13:58 GMT -->
+</html>

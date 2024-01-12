@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.IsNumeric-Function-VB-Work-A-Like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	IsNumeric Function (VB Work-A-Like) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.IsNumeric-Function-VB-Work-A-Like" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFgRg8aDEgY2xhc3M9InBhZ2V0aXRsZSI+SXNOdW1lcmljIEZ1bmN0aW9uIChWQiBXb3JrLUEtTGlrZSk8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIxLzAyLzA3IDE4OjM2IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBDb25zb2xlLCBNYXRocywgU3RyaW5nczwvc21hbGw+PGJyIC8+PGJyIC8+VGhpcyBmdW5jdGlvbiBpcyBpbnNwaXJlZCBieSB0aGUgVkIgZnVuY3Rpb24gb2YgdGhlIHNhbWUgbmFtZS4gSXQgaXMgc21hbGxlciBpbiBzY29wZSBpbiB0aGF0IG9ubHkgc2ltcGxlIG51bWVyaWMgbm90YXRpb24gaXMgc3VwcG9ydGVkLiBJdCB3aWxsIHRlc3QgdmFsaWRpdHkgZm9yIGJvdGggaW50ZWdlciAob3B0PTAgb3IgYWJzZW50KSBhbmQgZGVjaW1hbCBudW1iZXIgc3RyaW5ncyAob3B0PD4wKS48YnIgLz48YnIgLz5JdCBpcyBpbnRlbmRlZCBmb3IgdXNlIHdoZXJlIGFuIGFyYml0cmFyeSBpbnB1dCBtdXN0IGJlIGZvcmNlZCBpbnRvIG51bWVyaWMgY29tcGxpYW5jZS4gSXQgZG9lcyBub3Qgc2FuaXRpemUgdGhlIHN0cmluZyAob3V0IG9mIHNjb3BlIGZvciBhIHNtYWxsIGJ1aWxkaW5nIGJsb2NrKSwgcmF0aGVyIHByb3ZpZGluZyBhbiBpbmRpY2F0aW9uIGlmIHRoZSBhcmd1bWVudCBpcy9ub3QgY29tcGxpYW50LjxiciAvPjxiciAvPjxiPlVzYWdlOjwvYj48YnIgLz49SXNOdW1lcmljKE15U3RyaW5nLE9wdGlvbik8YnIgLz48YnIgLz48Yj5FeGFtcGxlczo8L2I+PGJyIC8+eD1Jc051bWVyaWMoIjM0NSIpPGJyIC8+SWYgTm90IElzTnVtZXJpYyhhJCwxKSBUaGVuIFByaW50ICJOb3QgYSBOdW1iZXIiPGJyIC8+PGJyIC8+PGI+Q2F2ZWF0czo8L2I+PGJyIC8+VGhlIHN0cmluZyBjYW5ub3QgYmUgYmxhbmsgIiI8YnIgLz5ObyBzdXBwb3J0IGZvciBzY2llbnRpZmljIG5vdGF0aW9uIGUuZy4gMS43OEUrMzQ8YnIgLz5UaGUgRnVuY3Rpb24gdGVzdHMgdGhlIGlucHV0IHN0cmluZyBmb3IgbnVtZXJpYyBjb21wbGlhbmNlLCBpdCBkb2VzIG5vdCBndWFyYW50ZWUgY29udmVyc2lvbiB0byBhbnkgbnVtZXJpYyBkYXRhLXR5cGUsIGkuZS4gVmFsKCkuPGJyIC8+V2hpdGUgc3BhY2UgbXVzdCBiZSBwcmUtdHJpbW1lZCBhcyByZXF1aXJlZC48YnIgLz48YnIgLz48Yj5EZXBlbmRlbmNpZXM6PC9iPjxiciAvPk5vbmU8YnIgLz48YnIgLz48Yj5UaGUgQ29kZTo8L2I+PGJyIC8+PHByZT4NCidUZXN0IGEgc3RyaW5nIGFzIG51bWVyaWMuIG9wdD0xIGFsbG93cyBkZWNpbWFscw0KCUZ1bmN0aW9uIElzTnVtZXJpYyhhJCxvcHQgQXMgSW50ZWdlcikgQXMgSW50ZWdlcg0KCQlJZiBhJD0iIiBUaGVuIEV4aXQgRnVuY3Rpb24NCgkJTG9jYWwgSW50ZWdlciBuLERvdHMNCgkJTG9jYWwgcSQsYyQNCgkJSWYgb3B0IFRoZW4gcSQ9IiAwMTIzNDU2Nzg5LiIgRWxzZSBxJD0iIDAxMjM0NTY3ODkiDQoJCUZvciBuPTEgVG8gTGVuKGEkKQ0KCQkJYyQ9TWlkJChhJCxuLDEpDQoJCQlJZiBJbnN0cihxJCxjJCkmbHQ7MiBUaGVuIEV4aXQgRnVuY3Rpb24NCgkJCURvdHM9RG90cysoYyQ9Ii4iKQ0KCQlOZXh0DQoJCUlzTnVtZXJpYz0oRG90cyZsdDs9MSkNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPlRoZSBmb2xsb3dpbmcgaXMgYW4gYWx0ZXJuYXRpdmUgZnVuY3Rpb24gdGhhdCB1c2VzIHJlZ3VsYXIgZXhwcmVzc2lvbnMgdG8gcGVyZm9ybSBhbiBpZGVudGljYWwgZnVuY3Rpb24uIFRoZSBvdmVyaGVhZCBvZiB0aGUgcmVnZXhwIHBhcnNlciBpcyBjb25zaWRlcmFibGUgYW5kIHRoaXMgdmVyc2lvbiBpcyBwcm9iYWJseSBiZXN0IGF2b2lkZWQgdW5sZXNzIHlvdSBhcmUgdXNpbmcgcmVndWxhciBleHByZXNzaW9ucyBlbHNld2hlcmUgaW4geW91ciBjb2RlLjxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczo8L2I+PGJyIC8+UmVndWxhciBleHByZXNzaW9ucy4gPGJyIC8+PGJyIC8+PGI+Q2F2ZWF0czo8L2I+PGJyIC8+TXVjaCBzbWFsbGVyIGZ1bmN0aW9uIGJ1dCBzbG93ZXIgZXhlY3V0aW9uIGR1ZSB0byBvdmVyaGVhZCBvZiByZWd1bGFyIGV4cHJlc3Npb25zLiBBIGdvb2QgY29tcGFuaW9uIGlmIHlvdSBhcmUgYWxyZWFkeSB1c2luZyByZWdleHBzIChJc0RhdGUvSXNUaW1lKSBpbiB5b3VyIGNvZGU8YnIgLz48YnIgLz48Yj5UaGUgQ29kZTo8L2I+PGJyIC8+PHByZT4NCidUZXN0IGEgc3RyaW5nIGFzIG51bWVyaWMgdXNpbmcgcmVndWxhciBleHByZXNzaW9ucy4gb3B0PTEgYWxsb3dzIGRlY2ltYWxzDQoJRnVuY3Rpb24gSXNOdW1lcmljKGEkLG9wdCBBcyBJbnRlZ2VyKSBBcyBJbnRlZ2VyDQoJCUlmIGEkPSIiIFRoZW4gRXhpdCBGdW5jdGlvbg0KCQlMb2NhbCBxJA0KCQlJZiBvcHQgVGhlbiBxJD0iXiYjOTE7MDEyMzQ1Njc4OSYjOTM7JiM0MjtcLj8mIzkxOzAxMjM0NTY3ODkmIzkzOyYjNDI7JCIgRWxzZSBxJD0iXiYjOTE7MDEyMzQ1Njc4OSYjOTM7JiM0MjskIg0KCQlJc051bWVyaWM9UmVnRXhwKHEkLGEkKQ0KCUVuZCBGdW5jdGlvbg0KPC9wcmU+PGJyIC8+PGI+U2VlIEFsc286PC9iPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Ik1NQmFzaWMuVkItV29yay1hLWxpa2UtTFRyaW0tYW5kLVJUUklNLUZ1bmN0aW9ucy5hc2h4IiB0aXRsZT0iTFRyaW0gYW5kIFJUcmltIEZ1bmN0aW9ucyAoVkIgd29yay1hLWxpa2UpIj5MVHJpbSBhbmQgUlRyaW0gRnVuY3Rpb25zIChWQiB3b3JrLWEtbGlrZSk8L2E+PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5SZWd1bGFyLUV4cHJlc3Npb24tRnVuY3Rpb24uYXNoeCIgdGl0bGU9IlJlZ3VsYXIgRXhwcmVzc2lvbiBGdW5jdGlvbiI+UmVndWxhciBFeHByZXNzaW9uIEZ1bmN0aW9uPC9hPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Ik1NQmFzaWMuSXNEYXRlLWFuZC1Jc1RpbWUtZnVuY3Rpb25zLVZCLVdvcmstQS1MaWtlLmFzaHgiIHRpdGxlPSJJc0RhdGUgYW5kIElzVGltZSBmdW5jdGlvbnMgKFZCIFdvcmstQS1MaWtlKSI+SXNEYXRlIGFuZCBJc1RpbWUgZnVuY3Rpb25zIChWQiBXb3JrLUEtTGlrZSk8L2E+PGJyIC8+ZGQpYuir9Nrb21PUSx0eVgIBJ6gprw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">IsNumeric Function (VB Work-A-Like)</h1><small>Modified on 2021/02/07 18:36 by CaptainBoing &mdash; Categorized as: Console, Maths, Strings</small><br /><br />This function is inspired by the VB function of the same name. It is smaller in scope in that only simple numeric notation is supported. It will test validity for both integer (opt=0 or absent) and decimal number strings (opt<>0).<br /><br />It is intended for use where an arbitrary input must be forced into numeric compliance. It does not sanitize the string (out of scope for a small building block), rather providing an indication if the argument is/not compliant.<br /><br /><b>Usage:</b><br />=IsNumeric(MyString,Option)<br /><br /><b>Examples:</b><br />x=IsNumeric("345")<br />If Not IsNumeric(a$,1) Then Print "Not a Number"<br /><br /><b>Caveats:</b><br />The string cannot be blank ""<br />No support for scientific notation e.g. 1.78E+34<br />The Function tests the input string for numeric compliance, it does not guarantee conversion to any numeric data-type, i.e. Val().<br />White space must be pre-trimmed as required.<br /><br /><b>Dependencies:</b><br />None<br /><br /><b>The Code:</b><br /><pre>
+'Test a string as numeric. opt=1 allows decimals
+	Function IsNumeric(a$,opt As Integer) As Integer
+		If a$="" Then Exit Function
+		Local Integer n,Dots
+		Local q$,c$
+		If opt Then q$=" 0123456789." Else q$=" 0123456789"
+		For n=1 To Len(a$)
+			c$=Mid$(a$,n,1)
+			If Instr(q$,c$)&lt;2 Then Exit Function
+			Dots=Dots+(c$=".")
+		Next
+		IsNumeric=(Dots&lt;=1)
+	End Function
+</pre><br />The following is an alternative function that uses regular expressions to perform an identical function. The overhead of the regexp parser is considerable and this version is probably best avoided unless you are using regular expressions elsewhere in your code.<br /><br /><b>Dependencies:</b><br />Regular expressions. <br /><br /><b>Caveats:</b><br />Much smaller function but slower execution due to overhead of regular expressions. A good companion if you are already using regexps (IsDate/IsTime) in your code<br /><br /><b>The Code:</b><br /><pre>
+'Test a string as numeric using regular expressions. opt=1 allows decimals
+	Function IsNumeric(a$,opt As Integer) As Integer
+		If a$="" Then Exit Function
+		Local q$
+		If opt Then q$="^&#91;0123456789&#93;&#42;\.?&#91;0123456789&#93;&#42;$" Else q$="^&#91;0123456789&#93;&#42;$"
+		IsNumeric=RegExp(q$,a$)
+	End Function
+</pre><br /><b>See Also:</b><br /><a class="pagelink" target="_blank" href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTrim Functions (VB work-a-like)</a><br /><a class="pagelink" target="_blank" href="MMBasic.Regular-Expression-Function.html" title="Regular Expression Function">Regular Expression Function</a><br /><a class="pagelink" target="_blank" href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.IsNumeric-Function-VB-Work-A-Like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:20 GMT -->
+</html>

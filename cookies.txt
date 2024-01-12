@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+fruitoftheshed.com	TRUE	/	FALSE	1999999999	ASP.NET_SessionId	3s34yr45lgut3245syytta55
+fruitoftheshed.com	TRUE	/	FALSE	1999999999	ScrewTurnWikiBreadcrumbs3	B=MMBasic.UnixTime-or-Epoch-Time|MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions|MMBasic.IsNumeric-Function-VB-Work-A-Like|MMBasic.command-to-print-text-files-on-screen-part-of-the-original-MMBasic-library|MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons|MMBasic.SHIFT-or-ROTATE-an-array-of-integers|MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number|MMBasic.Quick-and-Dirty-Daylight-Indicator|MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores|MMBasic.Now-Function-VB-work-a-like
+

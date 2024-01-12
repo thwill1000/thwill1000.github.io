@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFhSo8aDEgY2xhc3M9InBhZ2V0aXRsZSI+VlQgQ29uc29sZSBQYWNrLiBTY3JlZW4gUG9zaXRpb25pbmcsIFNhbmUgS2V5IFNjYW5uaW5nIEFuZCBhIFN0cmluZyBFZGl0aW5nIFJvdXRpbmU8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIxLzExLzE0IDA4OjM3IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBDb25zb2xlLCBDb250cm9sLCBHcmFwaGljcywgTENEIFBhbmVscywgUHJvZ3JhbSBGbG93LCBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz5Ob3QgYWxsIHByb2plY3RzIHJlcXVpcmUgYW4gTENEIHBhbmVsIGJ1dCBhIHNpbXBsZSBjb25zb2xlIGNvbm5lY3Rpb24gY2FuIG9mdGVuIGJlbmVmaXQgZnJvbSBhIGJpdCBtb3JlIHRoYW4gYSBkdW1iIHNjcm9sbGluZyBkaXNwbGF5LjxiciAvPjxiciAvPlRoZSBmb2xsb3dpbmcgU3VicyBhbmQgRnVuY3Rpb25zIHByb3ZpZGUgZnVuY3Rpb25hbGl0eSBzaW1pbGFyIHRvIHRoYXQgZm91bmQgb24gcGVyc29uYWwgY29tcHV0ZXJzIHByZXZhbGVudCBpbiB0aGUgODBzLiBDb25zb2xlIGRpc3BsYXlzIGNhbiBiZSBtYWRlIHF1aXRlIHBsZWFzYW50IHdpdGggdGhpcyBvdXRwdXQgYW5kIGhhcmsgYmFjayB0byB0aGUgY2hhcmFjdGVyIGJhc2VkIHNjcmVlbnMgb2YgZWFybHkgUENzLiA8YnIgLz48YnIgLz5BdCgpIC0gU2NyZWVuIHBvc2l0aW9uaW5nIHVzZXMgdGhlICJBdCIgZnVuY3Rpb24gZm9yIGN1cnNvciBwb3NpdGlvbmluZy4gSXQgdXNlcyBsZXNzIHByb2dyYW0gc3BhY2UgYW5kIGlzIGFyZ3VhYmx5IG1vcmUgaW50dWl0aXZlIHRoYW4gYSBzdGFuZC1hbG9uZSBMT0NBVEUgY29tbWFuZC4gTm90ZSB0aGF0IGJlY2F1c2UgaXQgcHJvZHVjZXMgYSBzdHJpbmcsIHN0cmljdGx5IGEgOyBvciArIHNob3VsZCBiZSB1c2VkIHdoZW4gcHJpbnRpbmcgZm9sbG93aW5nIG91dHB1dCwgYnV0IGJlY2F1c2Ugb2YgYSBxdWlyayBpbiBob3cgbGluZXMgYXJlIHBhcnNlZCB3aGVuIHByaW50aW5nLCBpdCBjYW4gYmUgb21pdHRlZCByZXN1bHRpbmcgaW4gdGhlIHBsZWFzaW5nLjxwcmU+UHJpbnQgQXQoMTAsMTApICJmcmVkIjwvcHJlPjxiciAvPlZUS2V5JCgpIC0gS2V5IFNjYW5uaW5nIGZvciBub24tQVNDSUkga2V5cyAoRnVuY3Rpb24ga2V5cywgSG9tZSwgUGFnZVVwIGV0Yy4pIGlzIGEgcmVhbCBwYWluIGluIHRoZSBuZWNrLiBUaGUgRnVuY3Rpb24gVlRLZXkkKCkgY2FuIGJlIHVzZWQgdG8gcmVwbGFjZSBJbmtleSQgYW5kIHdpbGwgcmV0dXJuIGVpdGhlciB0aGUgQVNDSUkgdmFsdWUgb2YgdGhlIGtleSBwcmVzc2VkIG9yIGEgcHJlZGljdGFibGUgdGhyZWUtbGV0dGVyIHRva2VuIGZvciBhbnkgb2YgdGhlIHNwZWNpYWwga2V5cy4gPGJyIC8+PGJyIC8+WW91ciBjb25zb2xlIGVtdWxhdG9yIG11c3Qgc3VwcG9ydCBBTlNJIHNjcmVlbi9rZXlib2FyZCBjb2RlcyAtIHVzdWFsbHkgZGVmaW5lZCBhcyBWVDUyLCBWVDEwMCBldGMuIGVtdWxhdGlvbi4gUGVyc29uYWxseSBJIHVzZSBQdVRUWS48YnIgLz48YnIgLz48Yj5EZXBlbmRhbmNpZXM8L2I+PGJyIC8+PHVsPjxiciAvPjxsaT5PcHRpb24gQmFzZSAwPC9saT48YnIgLz48bGk+UmVxdWlyZXMgdGhlIDxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5WQi1Xb3JrLWEtbGlrZS1MVHJpbS1hbmQtUlRSSU0tRnVuY3Rpb25zLmFzaHgiIHRpdGxlPSJMVHJpbSBhbmQgUlRyaW0gRnVuY3Rpb25zIChWQiB3b3JrLWEtbGlrZSkiPkxUcmltIGFuZCBSVFJJTSBGdW5jdGlvbnMgKFZCIHdvcmstYS1saWtlKTwvYT4gb3IgdGhlIGVxdWl2YWxlbnQgPGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLkxUcmltLVJUcmltLWNGdW5jdGlvbnMuYXNoeCIgdGl0bGU9IkxUcmltIFJUcmltIENGdW5jdGlvbnMiPkxUcmltIFJUcmltIENGdW5jdGlvbnM8L2E+IChub3RlIHRoaXMgbGF0dGVyIGRvZXMgbm90IHRyZWF0IFRBQnMgYXMgd2hpdGUtc3BhY2UgYW5kIHNvIGFyZSBub3QgdHJpbW1lZCkuPC9saT48YnIgLz48L3VsPjxiciAvPjxiPkV4YW1wbGUgVXNhZ2U8L2I+PGJyIC8+PHByZT4NCglPcHRpb24gQmFzZSAwDQoJSW5pdFZUS2V5cw0KCQ0KTWFpbiYjNTg7JyBqdXN0IHNvbWV0aGluZyB0byBkZW1vbnN0cmF0ZSB1c2FnZQ0KDQoJQ2xyICcgY2xlYXIgdGhlIHNjcmVlbg0KDQoJRm9yIG49MSBUbyAyNSAnIHByaW50IG91dCBhIGRpYWdvbmFsIGxpbmUgb2YgbnVtYmVycw0KCQlQcmludCBBdChuLG4pO1N0ciQobikNCglOZXh0DQoNCglXaW5kb3cgNiwxMCAnIGRlZmluZSAgd2luZG93DQoJRm9yIG49MSBUbyAyNSAnIGRlbW9uc3RyYXRlIHRoZSBjb250YWluZWQgYXJlYSBvZiB0aGUgc2NyZWVuDQoJCVByaW50IG4NCglOZXh0DQoJDQoJV2luZG93IDEsMjUNCgkNCglDbHINCgkNCglhJD1TdHJFZGl0JCgiRnJlZCIsMTAsMTAsNjApDQoJDQoJPyBBdCgxLDEpO2EkDQo8L3ByZT48YnIgLz48Yj5UaGUgQ29kZTwvYj48YnIgLz48cHJlPg0KDQoJRnVuY3Rpb24gQXQodiBBcyBJbnRlZ2VyLGggQXMgSW50ZWdlcikgQXMgU3RyaW5nDQoJCUF0PUNociQoMjcpKyImIzkxOyIrU3RyJCh2KSsiOyIrU3RyJChoKSsiSCINCglFbmQgRnVuY3Rpb24NCg0KCVN1YiBDbHINCgkJV2luZG93IDEsMjUnIHJlZGVmaW5lIHRoZSB3aG9sZSBzY3JlZW4NCgkJUHJpbnQgQ2hyJCgyNykrIiYjOTE7MkoiOw0KCUVuZCBTdWINCg0KCVN1YiBXaW5kb3coUHQgQXMgSW50ZWdlciwgUGIgQXMgSW50ZWdlcikNCgknZGVmaW5lcyBhIHdpbmRvdyBmcm9tIGxpbmUgdCB0byBsaW5lIGIgYW5kIHBvc2l0aW9ucyB0aGUgY3Vyc29yIGluIHRoZSBzdGFydCBvZiBpdA0KCSdDbHIgYW5kIEF0IHN0aWxsIHdvcmsgb24gdGhlIHdob2xlIHNjcmVlbi4gT25seSB3aGVuIHNjcm9sbGluZyAob3IgQ1JMRikgZW50ZXJlcyB0aGUNCgknd2luZG93IGRvZXMgaXQgY2FwdHVyZSB0aGUgY3Vyc29yLiBOb3RlIDAmbHQ7UHQmbHQ7UGIgaXMgZW5mb3JjZWQgYnkgdGhlIGNvbnNvbGUgZW11bGF0b3INCgkJUHJpbnQgQ2hyJCgyNykrIiYjOTE7IitTdHIkKFB0KSsiOyIrU3RyJChQYikrInIiK0F0KFB0LDEpOw0KCUVuZCBTdWINCgkNCglGdW5jdGlvbiBWVEtleSQoKSAnIHJlcGxhY2VzIElua2V5JCBhbmQgd2lsbCByZXR1cm4gdGhlIGNoYXJhY3RlciBwcmVzc2VkIG9yIHRoZSBzcGVjaWFsIHRva2VuIF94eA0KCQlMb2NhbCBhJA0KCQlWVEtleSQ9SW5rZXkkDQoJCVBhdXNlIDI1ICcgZ2l2ZSB0aGUgcmVtYWluaW5nIHNlcXVlbmNlIChpZiBhbnkpIHRpbWUgdG8gYXJyaXZlLiBBbnkgbGVzcyB0aGFuIDI1IGNhbiBnaXZlIG1pcy1yZWFkcyBvZiBleHBhbmRlZCB0b2tlbnMNCgkJRG8NCgkJCWEkPUlua2V5JCYjNTg7SWYgYSQ9IiIgVGhlbiBFeGl0IERvICcganVtcCBvdXQgd2hlbiB3ZSBhcmUgc2Nhbm5pbmcgIiINCgkJCVZUS2V5JD1WVEtleSQrYSQgJyBidWlsZCB1cCB0aGUgY2hhcmFjdGVyIGNvZGVzDQoJCUxvb3AJCQ0KCQlJZiBMZW4oVlRLZXkkKSZndDsxIFRoZW4gVlRLZXkkPUV4cGFuZEtleShWVEtleSQpDQoJRW5kIEZ1bmN0aW9uDQoJDQoJRnVuY3Rpb24gRXhwYW5kS2V5KGMkKSBBcyBTdHJpbmcnIGNhbGxlZCBmcm9tIFZUS2V5JA0KCQlMb2NhbCBuDQoJCUZvciBuPTAgVG8gS2N0DQoJCQlJZiBLQ29kZSQobik9YyQgVGhlbiBFeHBhbmRLZXk9S1RrbiQobikmIzU4O0V4aXQgRnVuY3Rpb24NCgkJTmV4dA0KCQlFeHBhbmRLZXk9IiINCglFbmQgRnVuY3Rpb24NCg0KCVN1YiBJbml0VlRLZXlzDQoJCURpbSBJbnRlZ2VyIEtjdA0KCQlMb2NhbCB4JA0KCQlMb2NhbCBJbnRlZ2VyIHENCktleURhdGEmIzU4Ow0KCQknICZsdDtlc2MmZ3Q7ICYjOTE7DQoJCURhdGEgMjcsOTEsNjgsMCwiX0xUIg0KCQlEYXRhIDI3LDkxLDY3LDAsIl9SVCINCgkJRGF0YSAyNyw5MSw2NSwwLCJfVVAiDQoJCURhdGEgMjcsOTEsNjYsMCwiX0ROIg0KCQlEYXRhIDI3LDkxLDQ5LDEyNiwwLCJfSE0iDQoJCURhdGEgMjcsOTEsNTAsMTI2LDAsIl9JTiINCgkJRGF0YSAyNyw5MSw1MSwxMjYsMCwiX0RMIg0KCQlEYXRhIDI3LDkxLDUyLDEyNiwwLCJfRUQiDQoJCURhdGEgMjcsOTEsNTMsMTI2LDAsIl9QVSINCgkJRGF0YSAyNyw5MSw1NCwxMjYsMCwiX1BEIg0KCQlEYXRhIDI3LDkxLDU1LDEyNiwwLCJfSE0iDQoJCURhdGEgMjcsOTEsNTYsMTI2LDAsIl9FRCINCgkJRGF0YSAyNyw5MSw0OSw0OSwxMjYsMCwiX0YxIg0KCQlEYXRhIDI3LDkxLDQ5LDUwLDEyNiwwLCJfRjIiDQoJCURhdGEgMjcsOTEsNDksNTEsMTI2LDAsIl9GMyINCgkJRGF0YSAyNyw5MSw0OSw1MiwxMjYsMCwiX0Y0Ig0KCQlEYXRhIDI3LDkxLDQ5LDUzLDEyNiwwLCJfRjUiDQoJCURhdGEgMjcsOTEsNDksNTUsMTI2LDAsIl9GNiINCgkJRGF0YSAyNyw5MSw0OSw1NiwxMjYsMCwiX0Y3Ig0KCQlEYXRhIDI3LDkxLDQ5LDU3LDEyNiwwLCJfRjgiDQoJCURhdGEgMjcsOTEsNTAsNDgsMTI2LDAsIl9GOSINCgkJRGF0YSAyNyw5MSw1MCw0OSwxMjYsMCwiX0ZBIg0KCQlEYXRhIDI3LDkxLDUwLDUxLDEyNiwwLCJfRkIiDQoJCURhdGEgMjcsOTEsNTAsNTIsMTI2LDAsIl9GQyINCgkJRGF0YSAyNTUJCQ0KDQoJCVJlc3RvcmUgS2V5RGF0YSAnZGV0ZXJtaW5lIHNpemUgb2YgdGhlIGtleSB0YWJsZQ0KCQlEbw0KCQkJUmVhZCBxDQoJCQlJZiBxPTI1NSBUaGVuIEV4aXQgRG8NCgkJCUlmIHE9MCBUaGVuIEtjdD1LY3QrMSYjNTg7UmVhZCB4JA0KCQlMb29wDQoNCgkJRGltIEtDb2RlJChLY3QtMSkgTGVuZ3RoIDUNCgkJRGltIEtUa24kKEtjdC0xKSBMZW5ndGggMw0KDQoJCVJlc3RvcmUgS2V5RGF0YQ0KCQlLY3Q9MA0KCQlEbw0KCQkJUmVhZCBxDQoJCQlJZiBxPTI1NSBUaGVuIEtjdD1LY3QtMSYjNTg7RXhpdCBEbyAnIGFkanVzdCBLY3QgdG8gcG9pbnQgYXQgdG9wIG9mIGtleSBhcnJheQ0KCQkJSWYgcT0wIFRoZW4NCgkJCQlSZWFkIEtUa24kKEtjdCkNCgkJCQlLY3Q9S2N0KzENCgkJCUVsc2UNCgkJCQlLQ29kZSQoS2N0KT1LQ29kZSQoS2N0KStDaHIkKHEpDQoJCQlFbmRJZg0KCQlMb29wDQoNCgkJJ0hlcmUgS0NvZGUkKG4pIGlzIHRoZSBrZXkgc2VxdWVuY2VzIHdlIGdldCBmcm9tIHRoZSBrZXlwcmVzcw0KCQknICAgICBLVGtuJChuKSAgaXMgdGhlIHNob3J0aGFuZCBjb2RlIG5hbWUgX3h4DQoJRW5kIFN1Yg0KPC9wcmU+PGJyIC8+PGI+U2VlIEFsc288L2I+OjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5TdHJpbmctZWRpdGluZy1vbi1zY3JlZW4tZm9yLVZULWNvbXBhdGlibGUtVGVybWluYWxzLmFzaHgiIHRpdGxlPSJTdHJpbmcgZWRpdGluZyBvbi1zY3JlZW4gZm9yIFZUIGNvbXBhdGlibGUgVGVybWluYWxzIj5TdHJpbmcgZWRpdGluZyBvbi1zY3JlZW4gZm9yIFZUIGNvbXBhdGlibGUgVGVybWluYWxzPC9hPmRkuSmzOapV3t7tysCBCHEVvVc5rUg=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine</h1><small>Modified on 2021/11/14 08:37 by CaptainBoing &mdash; Categorized as: Console, Control, Graphics, LCD Panels, Program Flow, Strings</small><br /><br />Not all projects require an LCD panel but a simple console connection can often benefit from a bit more than a dumb scrolling display.<br /><br />The following Subs and Functions provide functionality similar to that found on personal computers prevalent in the 80s. Console displays can be made quite pleasant with this output and hark back to the character based screens of early PCs. <br /><br />At() - Screen positioning uses the "At" function for cursor positioning. It uses less program space and is arguably more intuitive than a stand-alone LOCATE command. Note that because it produces a string, strictly a ; or + should be used when printing following output, but because of a quirk in how lines are parsed when printing, it can be omitted resulting in the pleasing.<pre>Print At(10,10) "fred"</pre><br />VTKey$() - Key Scanning for non-ASCII keys (Function keys, Home, PageUp etc.) is a real pain in the neck. The Function VTKey$() can be used to replace Inkey$ and will return either the ASCII value of the key pressed or a predictable three-letter token for any of the special keys. <br /><br />Your console emulator must support ANSI screen/keyboard codes - usually defined as VT52, VT100 etc. emulation. Personally I use PuTTY.<br /><br /><b>Dependancies</b><br /><ul><br /><li>Option Base 0</li><br /><li>Requires the <a class="pagelink" href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTRIM Functions (VB work-a-like)</a> or the equivalent <a class="pagelink" href="MMBasic.LTrim-RTrim-cFunctions.html" title="LTrim RTrim CFunctions">LTrim RTrim CFunctions</a> (note this latter does not treat TABs as white-space and so are not trimmed).</li><br /></ul><br /><b>Example Usage</b><br /><pre>
+	Option Base 0
+	InitVTKeys
+	
+Main&#58;' just something to demonstrate usage
+
+	Clr ' clear the screen
+
+	For n=1 To 25 ' print out a diagonal line of numbers
+		Print At(n,n);Str$(n)
+	Next
+
+	Window 6,10 ' define  window
+	For n=1 To 25 ' demonstrate the contained area of the screen
+		Print n
+	Next
+	
+	Window 1,25
+	
+	Clr
+	
+	a$=StrEdit$("Fred",10,10,60)
+	
+	? At(1,1);a$
+</pre><br /><b>The Code</b><br /><pre>
+
+	Function At(v As Integer,h As Integer) As String
+		At=Chr$(27)+"&#91;"+Str$(v)+";"+Str$(h)+"H"
+	End Function
+
+	Sub Clr
+		Window 1,25' redefine the whole screen
+		Print Chr$(27)+"&#91;2J";
+	End Sub
+
+	Sub Window(Pt As Integer, Pb As Integer)
+	'defines a window from line t to line b and positions the cursor in the start of it
+	'Clr and At still work on the whole screen. Only when scrolling (or CRLF) enteres the
+	'window does it capture the cursor. Note 0&lt;Pt&lt;Pb is enforced by the console emulator
+		Print Chr$(27)+"&#91;"+Str$(Pt)+";"+Str$(Pb)+"r"+At(Pt,1);
+	End Sub
+	
+	Function VTKey$() ' replaces Inkey$ and will return the character pressed or the special token _xx
+		Local a$
+		VTKey$=Inkey$
+		Pause 25 ' give the remaining sequence (if any) time to arrive. Any less than 25 can give mis-reads of expanded tokens
+		Do
+			a$=Inkey$&#58;If a$="" Then Exit Do ' jump out when we are scanning ""
+			VTKey$=VTKey$+a$ ' build up the character codes
+		Loop		
+		If Len(VTKey$)&gt;1 Then VTKey$=ExpandKey(VTKey$)
+	End Function
+	
+	Function ExpandKey(c$) As String' called from VTKey$
+		Local n
+		For n=0 To Kct
+			If KCode$(n)=c$ Then ExpandKey=KTkn$(n)&#58;Exit Function
+		Next
+		ExpandKey=""
+	End Function
+
+	Sub InitVTKeys
+		Dim Integer Kct
+		Local x$
+		Local Integer q
+KeyData&#58;
+		' &lt;esc&gt; &#91;
+		Data 27,91,68,0,"_LT"
+		Data 27,91,67,0,"_RT"
+		Data 27,91,65,0,"_UP"
+		Data 27,91,66,0,"_DN"
+		Data 27,91,49,126,0,"_HM"
+		Data 27,91,50,126,0,"_IN"
+		Data 27,91,51,126,0,"_DL"
+		Data 27,91,52,126,0,"_ED"
+		Data 27,91,53,126,0,"_PU"
+		Data 27,91,54,126,0,"_PD"
+		Data 27,91,55,126,0,"_HM"
+		Data 27,91,56,126,0,"_ED"
+		Data 27,91,49,49,126,0,"_F1"
+		Data 27,91,49,50,126,0,"_F2"
+		Data 27,91,49,51,126,0,"_F3"
+		Data 27,91,49,52,126,0,"_F4"
+		Data 27,91,49,53,126,0,"_F5"
+		Data 27,91,49,55,126,0,"_F6"
+		Data 27,91,49,56,126,0,"_F7"
+		Data 27,91,49,57,126,0,"_F8"
+		Data 27,91,50,48,126,0,"_F9"
+		Data 27,91,50,49,126,0,"_FA"
+		Data 27,91,50,51,126,0,"_FB"
+		Data 27,91,50,52,126,0,"_FC"
+		Data 255		
+
+		Restore KeyData 'determine size of the key table
+		Do
+			Read q
+			If q=255 Then Exit Do
+			If q=0 Then Kct=Kct+1&#58;Read x$
+		Loop
+
+		Dim KCode$(Kct-1) Length 5
+		Dim KTkn$(Kct-1) Length 3
+
+		Restore KeyData
+		Kct=0
+		Do
+			Read q
+			If q=255 Then Kct=Kct-1&#58;Exit Do ' adjust Kct to point at top of key array
+			If q=0 Then
+				Read KTkn$(Kct)
+				Kct=Kct+1
+			Else
+				KCode$(Kct)=KCode$(Kct)+Chr$(q)
+			EndIf
+		Loop
+
+		'Here KCode$(n) is the key sequences we get from the keypress
+		'     KTkn$(n)  is the shorthand code name _xx
+	End Sub
+</pre><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.String-editing-on-screen-for-VT-compatible-Terminals.html" title="String editing on-screen for VT compatible Terminals">String editing on-screen for VT compatible Terminals</a>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:45 GMT -->
+</html>

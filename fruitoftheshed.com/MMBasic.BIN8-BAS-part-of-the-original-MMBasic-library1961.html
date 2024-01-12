@@ -1,0 +1,444 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library.ashx?HL=mmbasic,display by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	BIN8.BAS - Fruit Of The Shed
+</title><meta name="keywords" content="rotate, binary, shift, bit manipulation" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=BIN8-BAS-part-of-the-original-MMBasic-library&amp;NS=MMBasic&amp;HL=mmbasic%2cdisplay" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Loginb4f6.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dBIN8-BAS-part-of-the-original-MMBasic-library%26NS%3dMMBasic%26HL%3dmmbasic%2cdisplay" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historya69f.html?Page=MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			BIN8.BAS
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printa69f.html?Page=MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:21
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesd44d.html?Cat=MMBasic.Maths" title="Maths">Maths</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f54c5bc24-d91a-49dd-a114-21a7d279a804" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f54c5bc24-d91a-49dd-a114-21a7d279a804');"></div><div id="f7d78904a-30b8-4104-b846-8a7d88c8ec24" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f7d78904a-30b8-4104-b846-8a7d88c8ec24');"></div><div id="s854538e2-54b2-4522-acc9-e90727b44353" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s854538e2-54b2-4522-acc9-e90727b44353');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Driving-LCD-with-i2c-interface-part-of-the-original-MMBasic-library.html" title="Driving LCD with i2c interface (MMBasic)">Driving LCD with i2c interface (MMBasic)</a> &raquo; <a href="MMBasic.Multiple-LCD-panel-displays.html" title="Multiple LCD panel displays (MMBasic)">Multiple LCD panel displays (MMBasic)</a> &raquo; <b><a href="MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library.html" title="BIN8.BAS (MMBasic)">BIN8.BAS (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.LCD%20Panel%20list.html" title="LCD Panels Summary (MMBasic)">LCD Panels Summary (MMBasic)</a> &raquo; <a href="MMBasic.Backpack-Tracker-curve-tracer.html" title="Backpack Tracker curve tracer (MMBasic)">Backpack Tracker curve tracer (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-Source-Compression-Utility-CRUNCH-bas-v2-4-part-of-the-original-MMBasic-library.html" title="MMBasic Source Compression Utility (MMBasic)">MMBasic Source Compression Utility (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-from-MMBasic-part-of-the-original-MMBasic-library.html" title="Driving LCD from MMBasic (MMBasic)">Driving LCD from MMBasic (MMBasic)</a> &raquo; <a href="MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library.html" title="TOWERS of HANOI (MMBasic)">TOWERS of HANOI (MMBasic)</a> &raquo; <a href="MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.html" title="RENUM.BAS (MMBasic)">RENUM.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-with-i2c-interface-part-of-the-original-MMBasic-library.html" title="Driving LCD with i2c interface (MMBasic)">Driving LCD with i2c interface (MMBasic)</a> &raquo; <a href="MMBasic.Multiple-LCD-panel-displays.html" title="Multiple LCD panel displays (MMBasic)">Multiple LCD panel displays (MMBasic)</a> &raquo; <b><a href="MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library.html" title="BIN8.BAS (MMBasic)">BIN8.BAS (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2>Although MMBasic contains a function to return a binary string of any length from an argument, this module is interesting because it contains a number of useful function beyond simple conversion.<br /><br /><h1 class="separator"> </h1><br />BIN8.BAS ReadMe - crackerjack, March 2012<br /><br />The BIN8.BAS "library" of byte-wide bit manipulation functions makes use of MMBasic 3.2's extremely powerful user-defined function capabilities. The library is 8-bit oriented, but could easily be adapted for 16-bit usage if required.<br /><br />User-defined functions, combined with MMBasic 3.2's Ctrl-F feature in the full-screen editor enable the programmer to re-use libraries of proven, tested code and together, these features are a boon to the productivity of an MMBasic programmer.<br /><br />Ctrl-F inserts text from a nominated file at the current line of the cursor in the editor.<br /><br />It is important to note that the calling convention in MMBasic for both functions and sub's (let's call them collectively "routines"), is ByRef (by reference). This means that the *address* of the actual variable is passed to the routine, and as such, changing the value of the passed-in variable in the routine, will change the value of the variable outside of the routine (i.e. the variable as referenced within the routine, is not a copy of the variable outside of the routine). This can have far-reaching (and sometimes unexpected consequences), so be aware of this and make use of the "Local" statement to define variables with a scope local to the routine into which the passed-in variable's value can be transferred if necessary.<br /><br />The functions in this library are generally self-explanatory, but each is summarised below along with any tips, tricks or traps. Where applicable, functions call a utility function (CheckByte), which will fail with an Error if the value passed-in is outside the value range of 0 to 255.<br /><br /><br /><h1 class="separator"> </h1><b>GetBit </b><br /><br />Allows for determining the value (0 or 1) of any given bit in a byte. The function's return value is the binary value of the bit in the byte. Possibly useful when interfacing to other devices via SPI, I2C, etc.<br /><br /><pre>
+Function GetBit(byte_in, bit)
+  ' Return the value (0/1) of a specified bit in a given byte
+  CheckByte(byte_in)
+  If bit &lt; 0 Or bit &gt; 7 Then Error "Invalid bit value"
+  GetBit = (byte_in And (2 ^ bit)) &gt; 0
+End Function
+</pre><br /><br /><h1 class="separator"> </h1><b>SetBit </b><br /><br />SetBit is not a function, but a user-defined Sub. SetBit does not actually return a value, but instead sets the specified bit in the byte of the provided variable. Possibly useful when interfacing to other devices, etc.<br /><br /><pre>
+Sub SetBit(byte_in, bit)
+  ' Sets the given bit of a given byte
+  ' Note&#58; &#42;&#42;PassByRef&#42;&#42; - The passed in variable's value is changed
+  CheckByte(byte_in)
+  If bit &lt; 0 Or bit &gt; 7 Then Error "Invalid bit value"
+  byte_in = byte_in Or (2 ^ bit)
+End Sub
+</pre><br /><h1 class="separator"> </h1><b>Invert</b><br /><br />Invert sets bits in a byte to their binary opposite (or<br />complement), i.e. if a bit is 0, it is set to 1; if 1, then it is set to<br />0. The function returns a value with bits inverse to the byte which was<br />passed-in. Possibly useful in ones & twos-complement arithmetic.<br /><br /><pre>
+Function Invert(byte_in)
+  'Inverts bits in the byte
+  CheckByte(byte_in)
+  Invert = byte_in Xor &amp;hFF
+End Function
+</pre><br /><h1 class="separator"> </h1><b>ShiftL </b><br /><br />Left shifts the bits in the byte by the given number of<br />positions. Bits to the left of bit 7 are discarded (arithmetic shift). The function returns the left-shifted byte value. Useful for a<br />variety of operations.<br /><br /><pre>
+Function ShiftL(byte_in, shift)
+  ' Logically shifts bits left by given quantity
+  CheckByte(byte_in)
+  If shift &lt; 1 Or shift &gt; 7 Then Error "Invalid shift value"
+  ShiftL = ((byte_in &#42; 2 ^ shift) And &amp;hFF)
+End Function
+</pre><br /><b>ShiftR </b><br /><h1 class="separator"> </h1>Right shifts the bits in the byte by the given number of<br />positions. Bits to the right of bit 0 (?) are discarded (arithmetic shift). The function returns the right-shifted byte value. Useful<br />for a variety of operations.<br /><br /><pre>
+Function ShiftR(byte_in, shift)
+  ' Logically shifts bits right by given quantity
+  CheckByte(byte_in)
+  If shift &lt; 1 Or shift &gt; 7 Then Error "Invalid shift value"
+  ShiftR = (byte_in \ 2 ^ shift)
+End Function
+</pre><br /><h1 class="separator"> </h1><b>RotL </b><br /><br />Rotates the bits left-wise through the byte by the given number of positions (logical, or circular shift). The function returns the left-rotated byte value.<br /><br /><pre>
+Function RotL(byte_in, rot)
+  ' Rotates (circular shift) bits left by given quantity
+  CheckByte(byte_in)
+  If rot &lt; 1 Or rot &gt; 7 Then Error "Invalid rotate value"
+  RotL = ((byte_in &#42; 2 ^ rot) + ((byte_in &#42; 2 ^ rot)\&amp;h100)) And &amp;hFF
+End Function
+</pre><br /><h1 class="separator"> </h1><b>RotR </b><br /><br />Rotates the bits right-wise through the byte by the given number of positions (logical, or circular shift). The function returns the right-rotated byte value.<br /><br /><pre>
+Function RotR(byte_in, rot)
+  ' Rotates (circular shift) bits right by given quantity
+  CheckByte(byte_in)
+  RotR = RotL(byte_in, (8 - rot))
+End Function
+</pre><br /><br />These two "utility" functions exist:<br /><br /><h1 class="separator"> </h1><b>Bin8$ </b><br /><br />This function returns a string containing the bit values of the byte passed-in, padded to 8 characters. e.g. the statement<br /><code><br />Bin8$(2)<br /></code><br />will print the following line to the display: 00000010 It is similar to the existing Bin$ function in MMBasic but left-padded with zero's.<br /><br /><pre>
+Function Bin8$(byte_in)
+ Bin8$ = Right$(String$(8,"0")+Bin$(byte_in),8)
+End Function
+</pre><br /><h1 class="separator"> </h1><b>CheckByte </b><br /><br />This function raises an error if the value passed-in is<br />outside of the range 0 -> 255. While this function is used by a number of<br />functions within the library, it may be useful in it's own right.<br /><br /><pre>
+Sub CheckByte(byte_in)
+  If byte_in &lt; 0 Or byte_in &gt; 255 Then Error "Value not in range"
+End Sub
+</pre><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library.ashx?HL=mmbasic,display by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:41 GMT -->
+</html>

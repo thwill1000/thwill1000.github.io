@@ -1,0 +1,145 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:20:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	MMBasic - Create/Manipulate Stack, Queue or List - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFpyk8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TU1CYXNpYyAtIENyZWF0ZS9NYW5pcHVsYXRlIFN0YWNrLCBRdWV1ZSBvciBMaXN0PC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNy8wOC8wMyAxMTo0MiBieSBEb3VnICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IE1lbW9yeSwgUHJvZ3JhbSBGbG93LCBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz48cHJlPlN0YWNrLCBRdWV1ZSBhbmQgTGlzdCBSb3V0aW5lcyBmb3IgU3RyaW5ncyBhbmQgTnVtZXJpYyB2YWx1ZXMNCiYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOw0KQ29kZSBpcyBpbmNsdWRlZCBpbiB0aGUgemlwcGVkIGF0dGFjaG1lbnQNCg0KU3RyaW5nIE9wZXJhdGlvbnMNCiYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KDQpTLlNUQUNLLkNSRUFURSBzdHJpbmckLHdpZHRoDQoNCkNyZWF0ZSBhIHN0cmluZyBhcyBhIGhvbGRlciBmb3IgbXVsdGlwbGUgc3Vic3RyaW5ncyBvZiB3aWR0aCBjaGFyYWN0ZXJzIGxvbmcgZm9yIHVzZSBhcyBhIExhc3QgDQpJbiwgRmlyc3QgT3V0IChMSUZPKSBzdGFjay4gTWF4aW11bSBudW1iZXIgb2Ygc3Vic3RyaW5ncyBpcyB3aWR0aCB4IG51bWJlciBvZiBzdWJzdHJpbmdzID0mbHQ7IDI1MC4gDQpFZy4gbWF4IDI1IG9mIDEwIGNoYXJhY3RlciBsb25ncyBzdHJpbmdzLiBTdHJpbmdzIG9mIGxlc3MgdGhhbiB3aWR0aCBhcmUgcmlnaHQganVzdGlmaWVkIGFuZCANCnBhZGRlZCB3aXRoIHNwYWNlcy4NCg0KUm91dGluZSByZXR1cm5zIHdpdGggc3RyaW5nJCBzZXQgdXAgYXMgdGhlIGhvbGRlciB3aXRoIHRoZSB3aWR0aCBpbiBjaGFyYWN0ZXIgcG9zaXRpb25zIA0KMSBhbmQgMiAobWF4aW11bSA5OSkgYW5kIGEgcG9pbnRlciB0byB0aGUgYm90dG9tIG9mIHRoZSBzdGFjayArIDEgaW4gcG9zaXRpb25zIDMsIDQgYW5kIDUuDQoNCg0KUy5TVEFDSy5QVVNIIHN0cmluZyQsZGF0YSQNCg0KUHVzaCBkYXRhJCBvbnRvIHN0YWNrIHN0cmluZyQuIElmIGRhdGEkIGlzIHNob3J0ZXIgdGhhbiB3aWR0aCwgZGF0YSQgaXMgcmlnaHQganVzdGlmaWVkIGFuZCANCnBhZGRlZCB3aXRoIHNwYWNlcy4NCg0KDQpTLlNUQUNLLlBPUCQoc3RyaW5nJCkNCg0KRnVuY3Rpb24gdG8gcG9wIHRoZSB0b3Agc3Vic3RyaW5nIG9mZiB0aGUgc3RhY2sgc3RyaW5nJC4NCg0KQWxsIHN0cmluZyBzdGFjayBvcGVyYXRpb25zIGFyZSBjaGVja2VkIGZvciBvdmVyZmxvdywgdW5kZXJmbG93IG9yIHN1YnN0cmluZ3MgdG9vIHdpZGUuDQoNClF1ZXVlIE9wZXJhdGlvbnMNCiYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQoNClMuUVVFVUUuQ1JFQVRFIHN0cmluZyQsd2lkdGgNCg0KQ3JlYXRlIGEgc3RyaW5nIGFzIGEgaG9sZGVyIGZvciBtdWx0aXBsZSBzdWJzdHJpbmdzIG9mIHdpZHRoIGNoYXJhY3RlcnMgbG9uZyBmb3IgdXNlIGFzIGEgDQpGaXJzdCBJbiwgRmlyc3QgT3V0IChGSUZPKSBxdWV1ZS4gTWF4aW11bSBudW1iZXIgb2Ygc3Vic3RyaW5ncyBpcyB3aWR0aCB4IG51bWJlciBvZiANCnN1YnN0cmluZ3MgPSZsdDsgMjUwLiBFZy4gbWF4IDI1IG9mIDEwIGNoYXJhY3RlciBsb25ncyBzdHJpbmdzLiBTdHJpbmdzIG9mIGxlc3MgdGhhbiB3aWR0aCANCmFyZSByaWdodCBqdXN0aWZpZWQgYW5kIHBhZGRlZCB3aXRoIHNwYWNlcy4NCg0KUm91dGluZSByZXR1cm5zIHdpdGggc3RyaW5nJCBzZXQgdXAgYXMgdGhlIGhvbGRlciB3aXRoIHRoZSB3aWR0aCBpbiBjaGFyYWN0ZXIgcG9zaXRpb25zIA0KMSBhbmQgMiAobWF4aW11bSA5OSkgYW5kIGEgcG9pbnRlciB0byB0aGUgYm90dG9tIG9mIHRoZSBzdGFjayArIDEgaW4gcG9zaXRpb25zIDMsIDQgYW5kIDUuDQoNClMuUVVFVUUuUFVTSCBzdHJpbmckLGRhdGEkDQoNClB1c2ggZGF0YSQgb250byBxdWV1ZSBzdHJpbmckLiBJZiBkYXRhJCBpcyBzaG9ydGVyIHRoYW4gd2lkdGgsIGRhdGEkIGlzIHJpZ2h0IGp1c3RpZmllZCBhbmQgDQpwYWRkZWQgd2l0aCBzcGFjZXMuDQoNClMuUVVFVUUuUFVMTCQoc3RyaW5nJCkNCg0KRnVuY3Rpb24gdG8gcG9wIHRoZSBib3R0b20gKGZpcnN0KSBzdWJzdHJpbmcgb2ZmIHRoZSBxdWV1ZSBzdHJpbmckLg0KQWxsIHN0cmluZyBxdWV1ZSBvcGVyYXRpb25zIGFyZSBjaGVja2VkIGZvciBvdmVyZmxvdywgdW5kZXJmbG93IG9yIHN1YnN0cmluZ3MgdG9vIHdpZGUuDQoNCkxpc3QgT3BlcmF0aW9ucw0KJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCg0KUy5MSVNULkNSRUFURSBzdHJpbmckLHdpZHRoDQoNCkNyZWF0ZSBhIHN0cmluZyBhcyBhIGhvbGRlciBmb3IgbXVsdGlwbGUgc3Vic3RyaW5ncyBvZiB3aWR0aCBjaGFyYWN0ZXJzIGxvbmcgZm9yIHVzZSBhcyBhIA0KcmFuZG9tIGFjY2VzcyBsaXN0LiBNYXhpbXVtIG51bWJlciBvZiBzdWJzdHJpbmdzIGlzIHdpZHRoIHggbnVtYmVyIG9mIHN1YnN0cmluZ3MgPSZsdDsgMjUwLiANCkVnLiBtYXggMjUgb2YgMTAgY2hhcmFjdGVyIGxvbmdzIHN0cmluZ3MuIFN0cmluZ3Mgb2YgbGVzcyB0aGFuIHdpZHRoIGFyZSByaWdodCBqdXN0aWZpZWQgDQphbmQgcGFkZGVkIHdpdGggc3BhY2VzLg0KDQpSb3V0aW5lIHJldHVybnMgd2l0aCBzdHJpbmckIHNldCB1cCBhcyB0aGUgaG9sZGVyIHdpdGggdGhlIHdpZHRoIGluIGNoYXJhY3RlciBwb3NpdGlvbnMgDQoxIGFuZCAyIChtYXhpbXVtIDk5KSBhbmQgYSBwb2ludGVyIHRvIHRoZSBib3R0b20gb2YgdGhlIGxpc3QgKyAxIGluIHBvc2l0aW9ucyAzLCA0IGFuZCA1Lg0KDQoNClMuTElTVC5BREQgc3RyaW5nJCxkYXRhJA0KDQpBZGQgZGF0YSQgb250byBsaXN0IHN0cmluZyQgYXQgdGhlIGJvdHRvbS4gSWYgZGF0YSQgaXMgc2hvcnRlciB0aGFuIHdpZHRoLCBkYXRhJCBpcyByaWdodA0KIGp1c3RpZmllZCBhbmQgcGFkZGVkIHdpdGggc3BhY2VzLg0KDQoNClMuTElTVC5GSUxMIHN0cmluZyQsZmlsZSQNCg0KQWRkIGRhdGEkIG9udG8gbGlzdCBzdHJpbmckIGF0IHRoZSBib3R0b20gZnJvbSB0ZXh0IGZpbGUgZmlsZSQuIFRleHQgZmlsZSBmaWxlJCBtdXN0IGhhdmUgDQplYWNoIGVudHJ5IG9mIGxlbmd0aCB3aWR0aCBvciBsZXNzIGFuZCB0ZXJtaW5hdGVkIHdpdGggQ1JMRi4gIENSTEYgaXMgc3RyaXBwZWQgcHJpb3IgdG8gDQpkYXRhJCBiZWluZyBhZGRlZCB0byBsaXN0LiBJZiBkYXRhJCBpcyBzaG9ydGVyIHRoYW4gd2lkdGgsIGRhdGEkIGlzIHJpZ2h0IGp1c3RpZmllZCBhbmQgDQpwYWRkZWQgd2l0aCBzcGFjZXMuDQoNCg0KUy5MSVNULkdFVCQoc3RyaW5nJCxpbmRleCkNCg0KRnVuY3Rpb24gdG8gcmV0dXJuIHRoZSBsaXN0IGVudHJ5IHBvaW50ZWQgdG8gYnkgaW5kZXguIFRoZSBsaXN0IGlzIG5vdCBtb2RpZmllZC4NCkFsbCBzdHJpbmcgbGlzdCBvcGVyYXRpb25zIGFyZSBjaGVja2VkIGZvciBvdmVyZmxvdyBvciBzdWJzdHJpbmdzIHRvbyB3aWRlLg0KDQomIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7DQoNCkNvbW1hbmRzIGZvciBudW1lcmljIG1hbmlwdWxhdGlvbiBpbiBhIHN0YWNrLg0KDQpOdW1lcmljIE9wZXJhdGlvbnMNCiYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Ow0KDQpOLlNUQUNLLkNSRUFURSBzdHJpbmckLHdpZHRoDQoNCkNyZWF0ZSBhIHN0cmluZyBhcyBhIGhvbGRlciBmb3IgbXVsdGlwbGUgc3Vic3RyaW5ncyBvZiBudW1lcmljIHZhcmlhYmxlcyBmb3IgdXNlIGFzIGEgDQpMYXN0IEluLCBGaXJzdCBPdXQgKExJRk8pIHN0YWNrLiBNYXhpbXVtIG51bWJlciBvZiBudW1lcmljIHZhbHVlcyBwdXNoZWQgb250byB0aGUgDQpzdGFjayBpcyA2Mi4NCg0KUm91dGluZSByZXR1cm5zIHdpdGggc3RyaW5nJCBzZXQgdXAgYXMgdGhlIGhvbGRlciB3aXRoIHRoZSB3aWR0aCBpbiBjaGFyYWN0ZXIgcG9zaXRpb25zDQogMSBhbmQgMiAoYWx3YXlzIDQpIGFuZCBhIHBvaW50ZXIgdG8gdGhlIGJvdHRvbSBvZiB0aGUgc3RhY2sgKyAxIGluIHBvc2l0aW9ucyAzLCA0IGFuZCA1Lg0KDQoNCk4uU1RBQ0suUFVTSCBzdHJpbmckLGRhdGENCg0KUHVzaCBudW1lcmljIGRhdGEgb250byBzdGFjayBzdHJpbmckLg0KDQoNCk4uU1RBQ0suUE9QKHN0cmluZyQpDQoNCkZ1bmN0aW9uIHRvIHBvcCB0aGUgdG9wIG51bWVyaWMgdmFsdWUgb2ZmIHRoZSBzdGFjayBzdHJpbmckLg0KDQoNCk4uU1RBQ0suQVZFUkFHRShzdHJpbmckKQ0KDQpGdW5jdGlvbiB0byByZXR1cm4gdGhlIGF2ZXJhZ2Ugb2YgYWxsIHRoZSBudW1lcmljYWwgdmFsdWVzIG9uIHRoZSBzdGFjay4NCkFsbCBvcGVyYXRpb25zIGFyZSBjaGVja2VkIGZvciBvdmVyZmxvdywgdW5kZXJmbG93IG9yIHN1YnN0cmluZ3MgdG9vIHdpZGUuDQoNCjwvcHJlPjxiciAvPkRvdWcgUGFua2h1cnN0ZGQJEEYK5ZtGjeDN82srKxIaMeoI6g==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">MMBasic - Create/Manipulate Stack, Queue or List</h1><small>Modified on 2017/08/03 11:42 by Doug &mdash; Categorized as: Memory, Program Flow, Strings</small><br /><br /><pre>Stack, Queue and List Routines for Strings and Numeric values
+&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+Code is included in the zipped attachment
+
+String Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+S.STACK.CREATE string$,width
+
+Create a string as a holder for multiple substrings of width characters long for use as a Last 
+In, First Out (LIFO) stack. Maximum number of substrings is width x number of substrings =&lt; 250. 
+Eg. max 25 of 10 character longs strings. Strings of less than width are right justified and 
+padded with spaces.
+
+Routine returns with string$ set up as the holder with the width in character positions 
+1 and 2 (maximum 99) and a pointer to the bottom of the stack + 1 in positions 3, 4 and 5.
+
+
+S.STACK.PUSH string$,data$
+
+Push data$ onto stack string$. If data$ is shorter than width, data$ is right justified and 
+padded with spaces.
+
+
+S.STACK.POP$(string$)
+
+Function to pop the top substring off the stack string$.
+
+All string stack operations are checked for overflow, underflow or substrings too wide.
+
+Queue Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+S.QUEUE.CREATE string$,width
+
+Create a string as a holder for multiple substrings of width characters long for use as a 
+First In, First Out (FIFO) queue. Maximum number of substrings is width x number of 
+substrings =&lt; 250. Eg. max 25 of 10 character longs strings. Strings of less than width 
+are right justified and padded with spaces.
+
+Routine returns with string$ set up as the holder with the width in character positions 
+1 and 2 (maximum 99) and a pointer to the bottom of the stack + 1 in positions 3, 4 and 5.
+
+S.QUEUE.PUSH string$,data$
+
+Push data$ onto queue string$. If data$ is shorter than width, data$ is right justified and 
+padded with spaces.
+
+S.QUEUE.PULL$(string$)
+
+Function to pop the bottom (first) substring off the queue string$.
+All string queue operations are checked for overflow, underflow or substrings too wide.
+
+List Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+S.LIST.CREATE string$,width
+
+Create a string as a holder for multiple substrings of width characters long for use as a 
+random access list. Maximum number of substrings is width x number of substrings =&lt; 250. 
+Eg. max 25 of 10 character longs strings. Strings of less than width are right justified 
+and padded with spaces.
+
+Routine returns with string$ set up as the holder with the width in character positions 
+1 and 2 (maximum 99) and a pointer to the bottom of the list + 1 in positions 3, 4 and 5.
+
+
+S.LIST.ADD string$,data$
+
+Add data$ onto list string$ at the bottom. If data$ is shorter than width, data$ is right
+ justified and padded with spaces.
+
+
+S.LIST.FILL string$,file$
+
+Add data$ onto list string$ at the bottom from text file file$. Text file file$ must have 
+each entry of length width or less and terminated with CRLF.  CRLF is stripped prior to 
+data$ being added to list. If data$ is shorter than width, data$ is right justified and 
+padded with spaces.
+
+
+S.LIST.GET$(string$,index)
+
+Function to return the list entry pointed to by index. The list is not modified.
+All string list operations are checked for overflow or substrings too wide.
+
+&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+
+Commands for numeric manipulation in a stack.
+
+Numeric Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+N.STACK.CREATE string$,width
+
+Create a string as a holder for multiple substrings of numeric variables for use as a 
+Last In, First Out (LIFO) stack. Maximum number of numeric values pushed onto the 
+stack is 62.
+
+Routine returns with string$ set up as the holder with the width in character positions
+ 1 and 2 (always 4) and a pointer to the bottom of the stack + 1 in positions 3, 4 and 5.
+
+
+N.STACK.PUSH string$,data
+
+Push numeric data onto stack string$.
+
+
+N.STACK.POP(string$)
+
+Function to pop the top numeric value off the stack string$.
+
+
+N.STACK.AVERAGE(string$)
+
+Function to return the average of all the numerical values on the stack.
+All operations are checked for overflow, underflow or substrings too wide.
+
+</pre><br />Doug Pankhurst
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:20:46 GMT -->
+</html>

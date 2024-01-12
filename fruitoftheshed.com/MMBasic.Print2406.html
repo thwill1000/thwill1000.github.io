@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.RTC-DOW-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	RTC-DOW.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.RTC-DOW-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFyR48aDEgY2xhc3M9InBhZ2V0aXRsZSI+UlRDLURPVy5CQVM8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzIzIDIzOjQwIGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogRGF0ZXMsIFRpbWUgYW5kIENsb2NrcywgRW5jb2RlIGFuZCBEZWNvZGUsIE1hdGhzLCBTdHJpbmdzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz5DYWxjdWxhdGVzIHRoZSBkYXkgb2YgdGhlIHdlZWsgZnJvbSBkYXRlPGJyIC8+PGJyIC8+PGI+UlRDLURPVy5CQVM8L2I+PGJyIC8+PHByZT4NCicmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOw0KJyAgICAgU0hPVyBOQU1FIE9GIERBWSBPRiBXRUVLIEZST00gVEhFIE1NIFJUQw0KJyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7DQonRnVuY3Rpb24gd3JpdHRlbiBieSBUQlMgZm9ydW0gbWVtYmVyIFRaQWR2YW50YWdlLg0KJ0FycmF5IGFuZCBSVEMgaGFuZGxpbmcgYnkgVEJTIGZvcnVtIG1lbWJlciBHcm9nc3Rlci4NCidEZXZlbG9wZWQgaW4gSmFudWFyeSAyMDE0LCBvbiBUaGUgQmFjayBTaGVkIEZvcnVtcy4NCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Ow0KDQonVGhpcyBjb2RlIHdpbGwgc2V0dXAgYW5kIGNhbGwgYSBmdW5jdGlvbiB0byBjYWxjdWxhdGUgdGhlIG5hbWUgb2YgdGhlIGRheQ0KJ29mIHRoZSB3ZWVrIGZyb20gdGhlIHNldHRpbmdzIG9mIHRoZSBSVEMgaW4gdGhlIE1NIG9yIE1NIGNsb25lLiAgVGhlIGZ1bmN0aW9uIHdhcw0KJ3dyaXR0ZW4gYnkgVFpBZHZhbnRhZ2Ugb24gdGhlIFRCUyhUaGUgQmFjayBTaGVkKSBmb3J1bXMsIGFuZCBpcyBhY2N1cmF0ZSBvdXQNCid0byB0aGUgeWVhciAyMzAwIGFuZCBiZXlvbmQuDQoNCidUaGUgYXJyYXkgaGFuZGxpbmcgd2FzIGFkZGVkIHRvIFRaQWR2YW50YWdlJ3Mgc291cmNlIGNvZGUgYnkgVEJTIG1lbWJlcg0KJ0dyb2dzdGVyLCBhbmQgdGhhdCBwYXJ0IG9mIHRoZSBjb2RlIHdvcmtzIG91dCB3aGF0IHRoZSBuYW1lIG9mIHRoZSBkYXkNCidpcyBiYXNlZCBvbiB0aGUgbnVtYmVyIHJldHVybmVkIGJ5IFRaQWR2YW50YWdlJ3MgY29kZS4NCg0KJ1RoZSBjb2RlIGNhbGN1bGF0ZXMgdGhlIHZhbHVlcyBmb3IgIlllYXIiLCAiTW9udGgiIGFuZCAiRGF5IiBmcm9tIHRoZQ0KJ2J1aWx0LWluIE1NIFJUQywgYnkgZXh0cmFjdGluZyB0aGUgbnVtYmVyIHJlZmVyZW5jZXMgZnJvbSBEQVRFJCBhbmQgc2F2aW5nDQondGhlIHJlc3VsdCBhcyBhIG51bWVyaWMgdmFsdWUgcmF0aGVyIHRoZW4gYSBzdHJpbmcuDQonVGhlc2UgdmFsdWVzIGFyZSB0aGVuIHBhc3NlZCB0byB0aGUgZnVuY3Rpb24sIHdoaWNoIGNhbGN1bGF0ZXMgd2hhdCBkYXkNCidvZiB0aGUgd2VlayBpdCBpcyBmcm9tIDAgdG8gNiwgd2l0aCAwIGJlaW5nIFN1bmRheSwgYW5kIDYgYmVpbmcgU2F0dXJkYXkuDQonQnkgcHJpbnRpbmcgRE9XJChEYXlPZldlZWsoWWVhciwgTW9udGgsIERheSkpLCB0aGUgYWN0dWFsIHByaW50ZWQgb3V0cHV0DQond2lsbCBiZSB0aGUgbmFtZSBvZiB0aGUgZGF5IG9mIHRoZSB3ZWVrIGFzIGRlY2lkZWQgYnkgdGhlIGZ1bmN0aW9uLiAgDQonVGhlIGZ1bmN0aW9uIGlzIGNhbGxlZCBhcyBwYXJ0IG9mIHRoZSBwcmludCBsaW5lLCBhbmQgc28gbG9uZyBhcyB0aGUgDQonY3VycmVudCBkYXRlIGlzIGNvcnJlY3QgaW4gdGhlIE1NIGNsb2NrLCB0aGVuIHRoZSBjdXJyZW50IGRheSBvZiB0aGUgd2Vlaw0KJ3dpbGwgYWxzbyBiZSBzaG93biBjb3JyZWN0bHkuDQoNCg0KZGltIERPVyQoNikgbGVuZ3RoIDkNCkRPVyQoMCk9IlN1bmRheSImIzU4O0RPVyQoMSk9Ik1vbmRheSImIzU4O0RPVyQoMik9IlR1ZXNkYXkiJiM1ODtET1ckKDMpPSAiV2VkbmVzZGF5Ig0KRE9XJCg0KT0iVGh1cnNkYXkiJiM1ODtET1ckKDUpPSJGcmlkYXkiJiM1ODtET1ckKDYpPSJTYXR1cmRheSINCg0KWWVhcj1WQUwoTUlEJChEQVRFJCw3LDQpKSYjNTg7TW9udGg9VkFMKE1JRCQoREFURSQsNCwyKSkmIzU4O0RheT1WQUwgKE1JRCQoREFURSQsMSwyKSkgDQpwcmludCBET1ckKERheU9mV2VlayhZZWFyLCBNb250aCwgRGF5KSkgDQoNCg0KZW5kIA0KDQoNCmZ1bmN0aW9uIERheU9mV2Vlayh5ZWFyLCBtb250aCwgZGF5KSAgDQogIGEgPSBpbnQoKDE0LW1vbnRoKS8xMikgIA0KICBtID0gbW9udGggKyAxMiYjNDI7YSAtIDIgIA0KICB5ID0geWVhciAtIGEgIA0KICBEYXlPZldlZWsgPSAoZGF5ICsgeSArIGludCh5LzQpLWludCh5LzEwMCkraW50KHkvNDAwKStpbnQoMzEmIzQyO20vMTIpKSBtb2QgNyAgDQplbmQgZnVuY3Rpb24gIA0KPC9wcmU+ZGR7SiQfQfkSPu9Ss//D+tp/msWSlg==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">RTC-DOW.BAS</h1><small>Modified on 2016/12/23 23:40 by Administrator &mdash; Categorized as: Dates, Time and Clocks, Encode and Decode, Maths, Strings, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />Calculates the day of the week from date<br /><br /><b>RTC-DOW.BAS</b><br /><pre>
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+'     SHOW NAME OF DAY OF WEEK FROM THE MM RTC
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+'Function written by TBS forum member TZAdvantage.
+'Array and RTC handling by TBS forum member Grogster.
+'Developed in January 2014, on The Back Shed Forums.
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+'This code will setup and call a function to calculate the name of the day
+'of the week from the settings of the RTC in the MM or MM clone.  The function was
+'written by TZAdvantage on the TBS(The Back Shed) forums, and is accurate out
+'to the year 2300 and beyond.
+
+'The array handling was added to TZAdvantage's source code by TBS member
+'Grogster, and that part of the code works out what the name of the day
+'is based on the number returned by TZAdvantage's code.
+
+'The code calculates the values for "Year", "Month" and "Day" from the
+'built-in MM RTC, by extracting the number references from DATE$ and saving
+'the result as a numeric value rather then a string.
+'These values are then passed to the function, which calculates what day
+'of the week it is from 0 to 6, with 0 being Sunday, and 6 being Saturday.
+'By printing DOW$(DayOfWeek(Year, Month, Day)), the actual printed output
+'will be the name of the day of the week as decided by the function.  
+'The function is called as part of the print line, and so long as the 
+'current date is correct in the MM clock, then the current day of the week
+'will also be shown correctly.
+
+
+dim DOW$(6) length 9
+DOW$(0)="Sunday"&#58;DOW$(1)="Monday"&#58;DOW$(2)="Tuesday"&#58;DOW$(3)= "Wednesday"
+DOW$(4)="Thursday"&#58;DOW$(5)="Friday"&#58;DOW$(6)="Saturday"
+
+Year=VAL(MID$(DATE$,7,4))&#58;Month=VAL(MID$(DATE$,4,2))&#58;Day=VAL (MID$(DATE$,1,2)) 
+print DOW$(DayOfWeek(Year, Month, Day)) 
+
+
+end 
+
+
+function DayOfWeek(year, month, day)  
+  a = int((14-month)/12)  
+  m = month + 12&#42;a - 2  
+  y = year - a  
+  DayOfWeek = (day + y + int(y/4)-int(y/100)+int(y/400)+int(31&#42;m/12)) mod 7  
+end function  
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.RTC-DOW-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:23 GMT -->
+</html>

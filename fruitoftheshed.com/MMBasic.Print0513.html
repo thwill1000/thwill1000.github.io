@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Midd-Function-to-replace-a-section-of-a-string-works-like-VB-statement-Mid by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:20:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Midd$ Function to replace a section of a string, works like VB statement Mid$()= - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Midd-Function-to-replace-a-section-of-a-string-works-like-VB-statement-Mid" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFog48aDEgY2xhc3M9InBhZ2V0aXRsZSI+TWlkZCQgRnVuY3Rpb24gdG8gcmVwbGFjZSBhIHNlY3Rpb24gb2YgYSBzdHJpbmcsIHdvcmtzIGxpa2UgVkIgc3RhdGVtZW50IE1pZCQoKT08L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIwLzA5LzEwIDE2OjM0IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz5TdHJpbmcgc2xpY2luZyAoZXh0cmFjdGluZyBwb3J0aW9ucyBvZiBhIHN0cmluZykgaXMga2V5IGZ1bmN0aW9uYWxpdHkgYW5kIG1vc3QgbGFuZ3VhZ2VzIGVtcGxveSBzb21lIGZvcm0gb2YgTGVmdCQsIE1pZCQsIFJpZ2h0JCB0byBkbyBzbyAtIGV2ZW4gdGhlIGh1bWJsZSBaWDgxLCBhbHRob3VnaCBub3QgdXNpbmcgc3BlY2lmaWMgZnVuY3Rpb25zIHByb3ZpZGVkIHN1cnByaXNpbmdseSBwb3dlcmZ1bCBzbGljaW5nLjxiciAvPjxiciAvPk1pZCQgY2FuIGJlIHVzZWQgdG8gZXh0cmFjdCBhbnkgcGFydCBvZiBhIHN0cmluZywgaW5kZWVkLCBMZWZ0JCgpICYgUmlnaHQkKCkgY291bGQgZXZlbiBiZSBjb25zaWduZWQgdG8gdGhlIHNjcmFwIGhlYXAgYW5kIHRoZWlyIGZ1bmN0aW9uYWxpdHkgZWFzaWx5IGFzc3VtZWQgYnkgTWlkJCgpLiBNb3N0IGFyZSBmYW1pbGlhciB3aXRoIHRoaXMgdXNlIGFzIGEgZnVuY3Rpb246PGJyIC8+PGNvZGU+eCQ9TWlkJChhJCwzLDQpPC9jb2RlPjxiciAvPjxiciAvPk1pY3Jvc29mdCBCYXNpY3MgZnJvbSBHV0Jhc2ljIG9ud2FyZHMgYWxzbyBpbXBsZW1lbnQgTWlkJCgpIGFzIGEgc3RhdGVtZW50IHRvIHJlcGxhY2UgYSBzZWN0aW9uIG9mIGEgc3RyaW5nPGJyIC8+PGNvZGU+TWlkJCh4JCwzJiMwMDkxOyxuJiMwMDkzOyk9YSQ8L2NvZGU+PGJyIC8+PGJyIC8+VGhpcyBsYXR0ZXIsIHN0YXRlbWVudCBmb3JtLCBhbHRob3VnaCBhYnNlbnQgaW4gTU1CYXNpYyBpcyBmYWlybHkgZWFzaWx5IHJlcHJvZHVjZWQgYW5kIHRoZSBGdW5jdGlvbiBzaG93biBiZWxvdyBkb2VzIGp1c3QgdGhpcy4gSXQgaXMgbm90IGVudGlyZWx5IGZhaXRoZnVsIGFzIGltcG9zaXRpb24gaXMgbm90IHN1cHBvcnRlZCBpbiBNTUJhc2ljICg8c3RhdGVtZW50Pj08YXJndW1lbnQ+KS4gQWxzbywgdGhlIG5hbWUgaGFzIHRvIGJlIHNsaWdodGx5IGRpZmZlcmVudCB0byBhdm9pZCBzeW50YXggZXJyb3JzIGV0YyBkdWUgdG8gPGNvZGU+TWlkIDwvY29kZT5iZWluZyBhIHJlc2VydmVkIHdvcmQuPGJyIC8+PGJyIC8+PGI+U3ludGF4PC9iPjo8YnIgLz4gICAgPW1pZGQkKHN0cmluZyxwb3NpdGlvbixzdHJpbmcpPGJyIC8+PGJyIC8+PGJyIC8+PGI+RXhhbXBsZXM8L2I+OjxiciAvPiAgICBhJD1taWRkJCh4JCw0LHQkKTxiciAvPiAgICBQcmludCBtaWRkJCgiVHJldm9yLDMsIkZSRUQiKTxiciAvPjxiciAvPjxiPkNvZGU8L2I+OjxiciAvPjxwcmU+DQogICAgJ0Z1bmN0aW9uIHRvIHJlcHJvZHVjZSBNaWQkKE15U3RyaW5nJCxwb3NpdGlvbixzdWJzdGl0dXRlJCk9DQogICAgRnVuY3Rpb24gTWlkZCQoYSQscCBBcyBJbnRlZ2VyLHMkKQ0KICAgICAgICBNaWRkJD1MZWZ0JChhJCxwLTEpK3MkK01pZCQoYSQscCtMZW4ocyQpKQ0KICAgIEVuZCBGdW5jdGlvbg0KPC9wcmU+PGJyIC8+PGI+RXhhbXBsZSBPdXRwdXQ8L2I+PGJyIC8+PGNvZGU+PGJyIC8+PiA/TWlkZCQoIlRyZXZvciIsMiwiUiIpPGJyIC8+VFJldm9yPGJyIC8+PGJyIC8+PiA/TWlkZCQoIlRyZXZvciIsMTIsIkZSRUQiKTxiciAvPlRyZXZvckZSRUQ8YnIgLz48YnIgLz4+ID9taWRkJCgidHJldm9yIiwzLCJ6eiIpPGJyIC8+dHJ6em9yPGJyIC8+PC9jb2RlPjxiciAvPjxiciAvPmRkNyQsOGH/L3ATQGTfG/N75bs3s/g=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Midd$ Function to replace a section of a string, works like VB statement Mid$()=</h1><small>Modified on 2020/09/10 16:34 by CaptainBoing &mdash; Categorized as: Strings</small><br /><br />String slicing (extracting portions of a string) is key functionality and most languages employ some form of Left$, Mid$, Right$ to do so - even the humble ZX81, although not using specific functions provided surprisingly powerful slicing.<br /><br />Mid$ can be used to extract any part of a string, indeed, Left$() & Right$() could even be consigned to the scrap heap and their functionality easily assumed by Mid$(). Most are familiar with this use as a function:<br /><code>x$=Mid$(a$,3,4)</code><br /><br />Microsoft Basics from GWBasic onwards also implement Mid$() as a statement to replace a section of a string<br /><code>Mid$(x$,3&#0091;,n&#0093;)=a$</code><br /><br />This latter, statement form, although absent in MMBasic is fairly easily reproduced and the Function shown below does just this. It is not entirely faithful as imposition is not supported in MMBasic (<statement>=<argument>). Also, the name has to be slightly different to avoid syntax errors etc due to <code>Mid </code>being a reserved word.<br /><br /><b>Syntax</b>:<br />    =midd$(string,position,string)<br /><br /><br /><b>Examples</b>:<br />    a$=midd$(x$,4,t$)<br />    Print midd$("Trevor,3,"FRED")<br /><br /><b>Code</b>:<br /><pre>
+    'Function to reproduce Mid$(MyString$,position,substitute$)=
+    Function Midd$(a$,p As Integer,s$)
+        Midd$=Left$(a$,p-1)+s$+Mid$(a$,p+Len(s$))
+    End Function
+</pre><br /><b>Example Output</b><br /><code><br />> ?Midd$("Trevor",2,"R")<br />TRevor<br /><br />> ?Midd$("Trevor",12,"FRED")<br />TrevorFRED<br /><br />> ?midd$("trevor",3,"zz")<br />trzzor<br /></code><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Midd-Function-to-replace-a-section-of-a-string-works-like-VB-statement-Mid by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:20:40 GMT -->
+</html>

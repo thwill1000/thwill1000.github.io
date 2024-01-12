@@ -1,0 +1,199 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driving-LCD-with-I2C-interface-using-a-Micromite-5-3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:16:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Driving LCD with I2C interface using a Micromite (&gt;5.3) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Driving-LCD-with-I2C-interface-using-a-Micromite-5-3" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFqVM8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RHJpdmluZyBMQ0Qgd2l0aCBJMkMgaW50ZXJmYWNlIHVzaW5nIGEgTWljcm9taXRlICgmZ3Q7NS4zKTwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTcvMDgvMTEgMjM6NTYgYnkgR29vZFRvR28hICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEVsZWN0cm9uaWNzLCBHcmFwaGljcywgaTJjPC9zbWFsbD48YnIgLz48YnIgLz5XaXRoIGxhdGVyIHZlcnNpb25zIG9mIE1NQmFzaWMgKD52NC41KSB0aGUgSTJjIGNvbW1hbmQgZm9ybWF0IGNoYW5nZWQuPGJyIC8+VGhlIHB1cnBvc2Ugb2YgdGhpcyByb3V0aW5lIGlzIHRvIGFsbG93IGEgTWljcm9taXRlIHRvIGRyaXZlIGEgY2hhcmFjdGVyIExDRCBkaXNwbGF5IChiYXNlZCBvbiB0aGUgSGl0YWNoaSBIRDQ0NzgpPGJyIC8+dGhhdCBoYXMgYSBjaGVhcCBhbmQgY2hlZXJmdWwgUENGODU3NCBJMmMgaW50ZXJmYWNlIGJvYXJkIGF0dGFjaGVkLiBUaGVzZSBib2FyZHMgY2FuIGJlIHBpY2tlZCB1cCBmb3IgYXJvdW5kICQxIEFVRCA8YnIgLz5vbiBhIHdlbGwga25vd24gYW5kIGxvdmVkIGF1Y3Rpb24gc2l0ZS48YnIgLz5UaGUgY29kZSBpcyBhbiBhZGFwdGF0aW9uIG9mIHRoZSBvcmlnaW5hbCBNYXhpbWl0ZSBjb2RlIGJ5IEpvaG4gR2VycmFyZC48YnIgLz5JIGhvcGUgeW91IGFsbCBmaW5kIGl0IHVzZWZ1bC48YnIgLz48YnIgLz5HVEchPGJyIC8+PGJyIC8+PHByZT4nICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KJyBSb3V0aW5lcyBmb3IgTWljcm9taXRlIHRvIGRyaXZlIHNlcmlhbCBJMkMgTENEDQonIFRlc3RlZCBvbiBFeHBsb3JlMjggTW9kdWxlIHJ1bm5pbmcgTU1CYXNpYyBWNS4zDQonIGJ5IEFuZHJldyBIdWZlci4gSnVuZSAyMDE3IChHVEchIFRCUyBGb3J1bXMpDQonJiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7DQonIE9yaWdpbmFsbHkgQWRhcHRlZCBmcm9tIGEgTWF4aW1pdGUgSTJDTENEIHByb2dyYW0gYnkgSm9obiBHZXJyYXJkDQonIE1vZGlmaWVkIHRvIHN1aXQgTWljcm9taXRlICZhbXA7IENoaW5lc2UgSTJDIExDRCBtb2R1bGUgYnkgSmltIFJvd2UuDQonIChkaWZmZXJlbnQgY29ubmVjdGlvbnMgZnJvbSBQQ0Y4NTc0IHRvIExDRCkNCicmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsNCiANCicgMyBzdWJzIGhhdmUgYmVlbiBjcmVhdGVkIHRvIG1ha2UgdXNpbmcgdGhlIHJvdXRpbmUgZWFzaWVyJiM1ODstDQoNCicgaW5pdExDRCAgICAgICAtIEluaXRpYWxpc2VzIHRoZSBMQ0QgQ29udHJvbGxlcg0KJyBDbGVhclNjcmVlbiAgIC0gQ2xlYXJzIHRoZSBkaXNwbGF5IGFuZCBzZXRzIGN1cnNvciB0byBsaW5lIDEgcG9zaXRpb24gMQ0KJyBEaXNwbGF5VGV4dCByb3csIGN1cnNvcnBvc2l0aW9uLCB0ZXh0JCAgLSB3aGljaCByb3cgdG8gb3V0cHV0IG9uLCByZXBvc2l0aW9ucyBjdXJzb3IgdG8gY3Vyc29ycG9zaXRpb24sIHRleHQgdG8gYmUgZGlzcGxheWVkDQoNCicgTm90ZSEgVGhlIGFwcHJvcHJpYXRlIExDRCBkZWxheXMgaGF2ZSBiZWVuIGluc2VydGVkIGluIHRoZSBjb2RlIGJ1dA0KJyBoYXZlIGJlZW4gY29tbWVudGVkIG91dCwgYXMgSSBmb3VuZCB0aGF0IHRoZXkgd2VyZW4ndCByZXF1aXJlZCBvbiB0aGUNCicgcGFydGljdWxhciAyMHg0IExDRCBJIHdhcyB1c2luZy4gSWYgeW91IGVuY291bnRlciB0cm91YmxlcywgdW5jb21tZW50DQonIHRoZSBsaW5lcyBhcyBuZWVkZWQgdG8gcmUtZW5hYmxlIHRoZSBkZWxheXMuDQoNCicgTENEIGZ1bmN0aW9ucyBvZiBQQ0Y4NTc0KEEpVCBJL08gYml0cyBQMCAtIFA3JiM1ODsNCg0KJyBOYW1lICAgICAgODU3NCBiaXQgIExDRCBmdW5jdGlvbg0KDQonIFJTICAgICAgICA9IFAwICAgICAgUmVnIHNlbGVjdCAocGluIDQpIDAgPSBDbWQgMSA9IERhdGENCicgUi9XYmFyICAgID0gUDEgICAgICBSL1ctYmFyIChwaW4gNSwgc2hvdWxkIGJlIDAgZm9yIHdyaXRpbmcpDQonIEVOICAgICAgICA9IFAyICAgICAgRU4gKHBpbiA2KSAwID0gSWRsZSwgMSA9IEFjdGl2ZQ0KJyBCTCAgICAgICAgPSBQMyAgICAgIEJhY2tsaWdodCBjb250cm9sIChRMSAmYW1wOyBMQ0QgcGluIDE2KQ0KJyBEQjQgICAgICAgPSBQNCAgICAgIERhdGEgTGluZSA0IChwaW4gMTEpDQonIERCNSAgICAgICA9IFA1ICAgICAgRGF0YSBMaW5lIDUgKHBpbiAxMikNCicgREI2ICAgICAgID0gUDYgICAgICBEYXRhIExpbmUgNiAocGluIDEzKQ0KJyBEQjcgICAgICAgPSBQNyAgICAgIERhdGEgTGluZSA3IChwaW4gMTQpDQonICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQoNCk9QVElPTiBBVVRPUlVOIE9ODQpPUFRJT04gRVhQTElDSVQNCm9wdGlvbiBkZWZhdWx0IGludGVnZXINCg0KJyBOb3RlISBEZXBlbmRpbmcgb24gdGhlIHR5cGUgb2YgSTJDIGV4cGFuZGVyIHVzZWQsIHRoZSBJMkMgYWRkcmVzcyBjYW4gYmUgZGlmZmVyZW50IQ0KJyBTZWxlY3QgYXBwcm9wcmlhdGUgb25lIG9yIGNyZWF0ZSBuZXcgb25lIGFjY29yZGluZ2x5JiM1ODstDQoNCkRJTSBBUyBMQ0RJMmNBZGRyID0gJmFtcDtIMjcgICcgUENGODU3NFQgSTJDIGFkZHJlc3MgQTIsQTEsQTA9MSAoJmFtcDtCMDEwMDExMTApIEFsbCBsaW5rcyBvdXQNCidkaW0gYXMgTENESTJjQWRkciA9ICZhbXA7SDNGICAnIFBDRjg1NzRBVCBJMkMgYWRkcmVzcyBBMixBMSxBMD0xICgmYW1wO0IwMTExMTExMCkgQWxsIGxpbmtzIG91dA0KDQonIG1hc2tzIGZvciBwcmVwYXJpbmcgSTJDIGJ5dGVzIGZvciB3cml0aW5nIHRvIDg1NzQgJmFtcDsgTENEDQpESU0gUlNDbWFzayA9ICZhbXA7QjAwMDAwMDAwICcgc2VsZWN0IGNtZCByZWdpc3RlciAoUlMgPSAwKQ0KRElNIFJTRG1hc2sgPSAmYW1wO0IwMDAwMDAwMSAnIG9yIGRhdGEgcmVnaXN0ZXIgKFJTID0gMSkNCkRJTSBFTm1hc2sgID0gJmFtcDtCMDAwMDAxMDAgJyBFbmFibGUgKGFjdGl2ZSA9IFAyIGhpZ2gpDQpESU0gQkxtYXNrICA9ICZhbXA7QjAwMDAxMDAwICcgVHVybiBvbiBiYWNrbGlnaHRpbmcgKFAzID0gMSkNCkRpbSBDTlQoNikgJyBhcnJheSB0byBzdG9yZSBMQ0QgY29uZmlnIGNvbW1hbmQgYnl0ZXMgDQpDTlQoMCkgPSAmYW1wO0IwMDExMDAxMSAgICcgJmFtcDtIMzMgJiM0NTsmIzQ1OyZndDsgOC1iaXQgLyA4LWJpdCBtb2RlIGluaXQNCkNOVCgxKSA9ICZhbXA7QjAwMTEwMDEwICAgJyAmYW1wO0gzMiAmIzQ1OyYjNDU7Jmd0OyA4LWJpdCAvIDQtYml0IG1vZGUNCkNOVCgyKSA9ICZhbXA7QjAwMTAxMDAwICAgJyAmYW1wO0gyOCAmIzQ1OyYjNDU7Jmd0OyA0LWJpdCBtb2RlLCAyIGxpbmVzLCA1eDcgcGl4ZWxzDQpDTlQoMykgPSAmYW1wO0IwMDAwMTAwMCAgICcgJmFtcDtIMDggJiM0NTsmIzQ1OyZndDsgZGlzcCBvZmYsIGN1cnNvciBvZmYsIG5vIGJsaW5rDQpDTlQoNCkgPSAmYW1wO0IwMDAwMDAwMSAgICcgJmFtcDtIMDEgJiM0NTsmIzQ1OyZndDsgY2xlYXIgc2NyZWVuLCByZXR1cm4gaG9tZSBjbWQNCkNOVCg1KSA9ICZhbXA7QjAwMDAwMTEwICAgJyAmYW1wO0gwNiAmIzQ1OyYjNDU7Jmd0OyBpbmNyZW1lbnQgY3Vyc29yLCBjdXJzb3IgbW92ZQ0KQ05UKDYpID0gJmFtcDtCMDAwMDExMDAgICAnICZhbXA7SDBDICYjNDU7JiM0NTsmZ3Q7IGRpc3Agb24sIGN1cnNvciBvZmYsIG5vIGJsaW5rDQpEaW0gRGVsYXkoNikgPSAoMC4xLCAwLjEsIDAuMDYsIDAuMDYsIDMsIDAuMDYsIDAuMDYpICAnIGFycmF5IHRvIHN0b3JlIExDRCBjb25maWcgY29tbWFuZCBieXRlIGRlbGF5IHRpbWVzDQpkaW0gbGluZTFob21lID0gJmFtcDtCMTAwMDAwMDAgICcgJmFtcDtIODAgJiM0NTsmIzQ1OyZndDsgUGxhY2UgY3Vyc29yIGF0IHN0YXJ0IG9mIGxpbmUgMQ0KRGltIGxpbmUyaG9tZSA9ICZhbXA7QjExMDAwMDAwICAnICZhbXA7SEMwICYjNDU7JiM0NTsmZ3Q7IFBsYWNlIGN1cnNvciBhdCBzdGFydCBvZiBsaW5lIDINCg0KUEFVU0UgMTAwICAgICAgICAnIHdhaXQgMTAwbXMgZm9yIExDRCB0byBzdGFiaWxpc2UgYWZ0ZXIgcG93ZXJ1cA0KSTJDIE9QRU4gMTAwLDEwMCAnIGVuYWJsZSBJMkMgKGJ1cyBzcGVlZCAxMDBrSHosIDEwMG1zIHRpbWVvdXQpDQpJbml0TENEICAgICAgICAgICcgaW5pdGlhbGlzZSB0aGUgTENEICsgY29udHJvbGxlcg0KDQonIG1haW4gcHJvZ3JhbSBsb29wIHN0YXJ0cyBoZXJlDQoNCicgVGhpcyBleGFtcGxlIHdhcyBkZXNpZ25lZCBmb3IgYSAyMHg0IExDRCBkaXNwbGF5IGFzIGEgdGVzdCByb3V0aW5lDQpETw0KICBDbGVhclNjcmVlbiANCiAgRGlzcGxheVRleHQgMSwgMCwgIjEyMzQ1Njc4OTAiDQogIERpc3BsYXlUZXh0IDIsIDAsICJHb29kVG9HbyEhIg0KICBEaXNwbGF5VGV4dCAzLCAwLCAiYWJjZGVmZ2hpaiINCiAgRGlzcGxheVRleHQgNCwgMTAsICJ6eXh3dnV0c3JxIg0KICBQQVVTRSAxMDAwDQogIERpc3BsYXlUZXh0IDEsIDEwLCAiMTIzNDU2Nzg5MCINCiAgRGlzcGxheVRleHQgMiwgMTAsICJHb29kVG9HbyEhIg0KICBEaXNwbGF5VGV4dCAzLCAxMCwgImFiY2RlZmdoaWoiDQogIERpc3BsYXlUZXh0IDQsIDAsICJ6eXh3dnV0c3JxIiAgDQogIHBhdXNlIDEwMDANCiAgRGlzcGxheVRleHQgMSwgMCwgIkdvb2RUb0dvISEiDQogIERpc3BsYXlUZXh0IDIsIDAsICIxMjM0NTY3ODkwIg0KICBEaXNwbGF5VGV4dCAzLCAwLCAiYWJjZGVmZ2hpaiINCiAgRGlzcGxheVRleHQgNCwgMTAsICJ6eXh3dnV0c3JxIg0KICBQQVVTRSAxMDAwDQogIERpc3BsYXlUZXh0IDEsIDEwLCAiR29vZFRvR28hISINCiAgRGlzcGxheVRleHQgMiwgMTAsICIxMjM0NTY3ODkwIg0KICBEaXNwbGF5VGV4dCAzLCAxMCwgImFiY2RlZmdoaWoiDQogIERpc3BsYXlUZXh0IDQsIDAsICJ6eXh3dnV0c3JxIiANCiAgcGF1c2UgMTAwMA0KIExPT1ANCg0KRU5EICcgZW5kIG9mIG1haW4gcGFydCBvZiBwcm9ncmFtLCBzdWJzIGZvbGxvdyANCg0KJyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCg0KJyBzdWJyb3V0aW5lIHRvIERpc3BsYXkgdGV4dCBvbiBMQ0QuDQpzdWIgRGlzcGxheVRleHQgcm93LCBjdXJzb3Jwb3NpdGlvbiwgdGV4dCQNCmxvY2FsIEkNCnNlbGVjdCBjYXNlIHJvdw0KICBjYXNlIDENCiAgc2VuZGNtZGJ5dGUgKGxpbmUxaG9tZSArIGN1cnNvcnBvc2l0aW9uKSAgICAgICdyb3cgMSBvbiAxNngyLCAyMHg0IExDRCBwYW5lbHMNCiAgY2FzZSAyDQogIHNlbmRjbWRieXRlIGxpbmUyaG9tZSArIGN1cnNvcnBvc2l0aW9uKSAgICAgICAncm93IDIgb24gMTZ4MiwgMjB4NCBMQ0QgcGFuZWxzDQogIGNhc2UgMw0KICBzZW5kY21kYnl0ZSAobGluZTFob21lICsgMjAgKyBjdXJzb3Jwb3NpdGlvbikgJ3JvdyAzIG9uIDIweDQgTENEIHBhbmVscw0KICBjYXNlIDQNCiAgc2VuZGNtZGJ5dGUgKGxpbmUyaG9tZSArIDIwICsgY3Vyc29ycG9zaXRpb24pICdyb3cgNCBvbiAyMHg0IExDRCBwYW5lbHMNCmVuZCBzZWxlY3QNCiAgRm9yIEkgPSAxIFRvIExlbih0ZXh0JCkNCiAgICBTZW5kRGF0YUJ5dGUgQVNDKE1pZCQodGV4dCQsIEksIDEpKQ0KICBOZXh0IEkNCmVuZCBzdWINCg0KJyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCg0KJyBzdWJyb3V0aW5lIHRvIGNsZWFyIExDRCBzY3JlZW4NCnN1YiBDbGVhclNjcmVlbg0KICAgIFNlbmRDbWRCeXRlIENOVCg0KQ0KICAgICdQQVVTRSAzICcgcGF1c2UgYXMgcGVyIGRhdGFzaGVldCBidXQgbWF5IG5vdCBiZSBuZWNlc3NhcnkgZHVlIHRvIGNvZGUgZGVsYXlzDQogIGVuZCBzdWINCg0KJyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCg0KJyAgc3Vicm91dGluZSB0byBpbml0aWFsaXNlIHRoZSBMQ0QNClNVQiBJbml0TENEDQpsb2NhbCBJDQogICAgRm9yIEkgPSAwIFRvIDYNCiAgICAgIFNlbmRDbWRCeXRlIENOVChJKQ0KICAgICAgJ1BBVVNFIERlbGF5KEkpICAnIHBhdXNlIGFzIHBlciBkYXRhc2hlZXQgYnV0IG1heSBub3QgYmUgbmVjZXNzYXJ5IGR1ZSB0byBjb2RlIGRlbGF5cw0KICAgIE5leHQNCkVORCBTVUINCg0KJyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCg0KJyBzdWJyb3V0aW5lIHRvIHNlbmQgYSBjb21tYW5kIGJ5dGUgKGFCeXRlKSB0byB0aGUgTENEIGNvbnRyb2xsZXINClNVQiBTZW5kQ21kQnl0ZSBhQnl0ZQ0KbG9jYWwgdGVtcCwgUlNiaXQNCiAgICBSU2JpdCA9IFJTQ21hc2sgICcgbWFrZSBzdXJlIHdlJ3JlIHNlbmRpbmcgdG8gY21kIHJlZyAoUlM9MCkNCiAgICAnIHRoZW4gcHJlcGFyZSB0aGUgbW9yZSBzaWduaWZpY2FudCBuaWJibGUNCiAgICB0ZW1wID0gKGFCeXRlIEFORCAmYW1wO0hGMCkgT3IgUlNiaXQgT1IgQkxtYXNrDQogICAgRGlyZWN0U2VuZCB0ZW1wICAnIGFuZCBzZW5kIGl0DQogICAgJyB0aGVuIHByZXBhcmUgdGhlIGxlc3Mgc2lnbmlmaWNhbnQgbmliYmxlDQogICAgdGVtcCA9ICgoYUJ5dGUgQU5EICZhbXA7SDBGKSAmbHQ7Jmx0OyA0KSBPciBSU2JpdCBPUiBCTG1hc2sNCiAgICBEaXJlY3RTZW5kIHRlbXAgICcgYW5kIGFsc28gc2VuZCBpdCAgDQpFTkQgU1VCDQoNCicgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstDQoNCicgc3Vicm91dGluZSB0byBzZW5kIGEgZGF0YSBieXRlIChhQnl0ZSkgdG8gdGhlIExDRCBjb250cm9sbGVyDQpTVUIgU2VuZERhdGFCeXRlIGFCeXRlDQpsb2NhbCB0ZW1wLCBSU2JpdA0KICAgIFJTYml0ID0gUlNEbWFzayAgJyBtYWtlIHN1cmUgd2UncmUgc2VuZGluZyB0byBkYXRhIHJlZyAoUlM9MSkNCiAgICAnIHRoZW4gcHJlcGFyZSB0aGUgbW9yZSBzaWduaWZpY2FudCBuaWJibGUgKGZyb20gYUJ5dGUpDQogICAgdGVtcCA9IChhQnl0ZSBBTkQgJmFtcDtCMDExMTAwMDApIE9yIFJTYml0IE9SIEJMbWFzaw0KICAgIERpcmVjdFNlbmQgdGVtcCAgJyBhbmQgc2VuZCBpdA0KICAgICcgdGhlbiBwcmVwYXJlIHRoZSBsZXNzIHNpZ25pZmljYW50IG5pYmJsZSAoZnJvbSBhQnl0ZSkNCiAgICB0ZW1wID0gKChhQnl0ZSBBTkQgJmFtcDtIMEYpICZsdDsmbHQ7IDQpIE9SIFJTYml0IE9SIEJMbWFzaw0KICAgIERpcmVjdFNlbmQgdGVtcCAgJyBhbmQgYWxzbyBzZW5kIGl0DQpFTkQgU1VCDQoNCicgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstDQoNCicgc3Vicm91dGluZSB0byBzZW5kIGEgbmliYmxlIChpbiB0ZW1wKSB0byB0aGUgTENEDQpTVUIgRGlyZWN0U2VuZCB0ZW1wDQogICAgdGVtcCA9IHRlbXAgWG9yIEVObWFzayAgICAgICAgICAgICcgbWFrZSBFTj0xDQogICAgSTJDIFdSSVRFIExDREkyQ0FkZHIsIDAsIDEsIHRlbXAgICcgc2VuZCBpdCB3aXRoIEVOPTENCiAgICAnUGF1c2UgMC4wMDQgICAgICAgICAgICAgICAgICAgICAgICcgcGF1c2UgZm9yIDR1cyBhcyBwZXIgUENGODU3NCBEYXRzaGVldCBidXQgbm90IG5lZWRlZCBkdWUgY29kZSBkZWxheXMNCiAgICB0ZW1wID0gdGVtcCBYb3IgRU5tYXNrICAgICAgICAgICAgJyBub3cgbWFrZSBFTj0wIGFnYWluDQogICAgSTJDIFdSSVRFIExDREkyQ0FkZHIsIDAsIDEsIHRlbXAgICcgYmVmb3JlIHNlbmRpbmcgYWdhaW4NCkVORCBTVUINCicgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTs8L3ByZT5kZHMr6iJnRyEMcVRSut/DYGWYGrGK" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Driving LCD with I2C interface using a Micromite (&gt;5.3)</h1><small>Modified on 2017/08/11 23:56 by GoodToGo! &mdash; Categorized as: Electronics, Graphics, i2c</small><br /><br />With later versions of MMBasic (>v4.5) the I2c command format changed.<br />The purpose of this routine is to allow a Micromite to drive a character LCD display (based on the Hitachi HD4478)<br />that has a cheap and cheerful PCF8574 I2c interface board attached. These boards can be picked up for around $1 AUD <br />on a well known and loved auction site.<br />The code is an adaptation of the original Maximite code by John Gerrard.<br />I hope you all find it useful.<br /><br />GTG!<br /><br /><pre>' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Routines for Micromite to drive serial I2C LCD
+' Tested on Explore28 Module running MMBasic V5.3
+' by Andrew Hufer. June 2017 (GTG! TBS Forums)
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+' Originally Adapted from a Maximite I2CLCD program by John Gerrard
+' Modified to suit Micromite &amp; Chinese I2C LCD module by Jim Rowe.
+' (different connections from PCF8574 to LCD)
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+ 
+' 3 subs have been created to make using the routine easier&#58;-
+
+' initLCD       - Initialises the LCD Controller
+' ClearScreen   - Clears the display and sets cursor to line 1 position 1
+' DisplayText row, cursorposition, text$  - which row to output on, repositions cursor to cursorposition, text to be displayed
+
+' Note! The appropriate LCD delays have been inserted in the code but
+' have been commented out, as I found that they weren't required on the
+' particular 20x4 LCD I was using. If you encounter troubles, uncomment
+' the lines as needed to re-enable the delays.
+
+' LCD functions of PCF8574(A)T I/O bits P0 - P7&#58;
+
+' Name      8574 bit  LCD function
+
+' RS        = P0      Reg select (pin 4) 0 = Cmd 1 = Data
+' R/Wbar    = P1      R/W-bar (pin 5, should be 0 for writing)
+' EN        = P2      EN (pin 6) 0 = Idle, 1 = Active
+' BL        = P3      Backlight control (Q1 &amp; LCD pin 16)
+' DB4       = P4      Data Line 4 (pin 11)
+' DB5       = P5      Data Line 5 (pin 12)
+' DB6       = P6      Data Line 6 (pin 13)
+' DB7       = P7      Data Line 7 (pin 14)
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+OPTION AUTORUN ON
+OPTION EXPLICIT
+option default integer
+
+' Note! Depending on the type of I2C expander used, the I2C address can be different!
+' Select appropriate one or create new one accordingly&#58;-
+
+DIM AS LCDI2cAddr = &amp;H27  ' PCF8574T I2C address A2,A1,A0=1 (&amp;B01001110) All links out
+'dim as LCDI2cAddr = &amp;H3F  ' PCF8574AT I2C address A2,A1,A0=1 (&amp;B01111110) All links out
+
+' masks for preparing I2C bytes for writing to 8574 &amp; LCD
+DIM RSCmask = &amp;B00000000 ' select cmd register (RS = 0)
+DIM RSDmask = &amp;B00000001 ' or data register (RS = 1)
+DIM ENmask  = &amp;B00000100 ' Enable (active = P2 high)
+DIM BLmask  = &amp;B00001000 ' Turn on backlighting (P3 = 1)
+Dim CNT(6) ' array to store LCD config command bytes 
+CNT(0) = &amp;B00110011   ' &amp;H33 &#45;&#45;&gt; 8-bit / 8-bit mode init
+CNT(1) = &amp;B00110010   ' &amp;H32 &#45;&#45;&gt; 8-bit / 4-bit mode
+CNT(2) = &amp;B00101000   ' &amp;H28 &#45;&#45;&gt; 4-bit mode, 2 lines, 5x7 pixels
+CNT(3) = &amp;B00001000   ' &amp;H08 &#45;&#45;&gt; disp off, cursor off, no blink
+CNT(4) = &amp;B00000001   ' &amp;H01 &#45;&#45;&gt; clear screen, return home cmd
+CNT(5) = &amp;B00000110   ' &amp;H06 &#45;&#45;&gt; increment cursor, cursor move
+CNT(6) = &amp;B00001100   ' &amp;H0C &#45;&#45;&gt; disp on, cursor off, no blink
+Dim Delay(6) = (0.1, 0.1, 0.06, 0.06, 3, 0.06, 0.06)  ' array to store LCD config command byte delay times
+dim line1home = &amp;B10000000  ' &amp;H80 &#45;&#45;&gt; Place cursor at start of line 1
+Dim line2home = &amp;B11000000  ' &amp;HC0 &#45;&#45;&gt; Place cursor at start of line 2
+
+PAUSE 100        ' wait 100ms for LCD to stabilise after powerup
+I2C OPEN 100,100 ' enable I2C (bus speed 100kHz, 100ms timeout)
+InitLCD          ' initialise the LCD + controller
+
+' main program loop starts here
+
+' This example was designed for a 20x4 LCD display as a test routine
+DO
+  ClearScreen 
+  DisplayText 1, 0, "1234567890"
+  DisplayText 2, 0, "GoodToGo!!"
+  DisplayText 3, 0, "abcdefghij"
+  DisplayText 4, 10, "zyxwvutsrq"
+  PAUSE 1000
+  DisplayText 1, 10, "1234567890"
+  DisplayText 2, 10, "GoodToGo!!"
+  DisplayText 3, 10, "abcdefghij"
+  DisplayText 4, 0, "zyxwvutsrq"  
+  pause 1000
+  DisplayText 1, 0, "GoodToGo!!"
+  DisplayText 2, 0, "1234567890"
+  DisplayText 3, 0, "abcdefghij"
+  DisplayText 4, 10, "zyxwvutsrq"
+  PAUSE 1000
+  DisplayText 1, 10, "GoodToGo!!"
+  DisplayText 2, 10, "1234567890"
+  DisplayText 3, 10, "abcdefghij"
+  DisplayText 4, 0, "zyxwvutsrq" 
+  pause 1000
+ LOOP
+
+END ' end of main part of program, subs follow 
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+' subroutine to Display text on LCD.
+sub DisplayText row, cursorposition, text$
+local I
+select case row
+  case 1
+  sendcmdbyte (line1home + cursorposition)      'row 1 on 16x2, 20x4 LCD panels
+  case 2
+  sendcmdbyte line2home + cursorposition)       'row 2 on 16x2, 20x4 LCD panels
+  case 3
+  sendcmdbyte (line1home + 20 + cursorposition) 'row 3 on 20x4 LCD panels
+  case 4
+  sendcmdbyte (line2home + 20 + cursorposition) 'row 4 on 20x4 LCD panels
+end select
+  For I = 1 To Len(text$)
+    SendDataByte ASC(Mid$(text$, I, 1))
+  Next I
+end sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+' subroutine to clear LCD screen
+sub ClearScreen
+    SendCmdByte CNT(4)
+    'PAUSE 3 ' pause as per datasheet but may not be necessary due to code delays
+  end sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+'  subroutine to initialise the LCD
+SUB InitLCD
+local I
+    For I = 0 To 6
+      SendCmdByte CNT(I)
+      'PAUSE Delay(I)  ' pause as per datasheet but may not be necessary due to code delays
+    Next
+END SUB
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+' subroutine to send a command byte (aByte) to the LCD controller
+SUB SendCmdByte aByte
+local temp, RSbit
+    RSbit = RSCmask  ' make sure we're sending to cmd reg (RS=0)
+    ' then prepare the more significant nibble
+    temp = (aByte AND &amp;HF0) Or RSbit OR BLmask
+    DirectSend temp  ' and send it
+    ' then prepare the less significant nibble
+    temp = ((aByte AND &amp;H0F) &lt;&lt; 4) Or RSbit OR BLmask
+    DirectSend temp  ' and also send it  
+END SUB
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+' subroutine to send a data byte (aByte) to the LCD controller
+SUB SendDataByte aByte
+local temp, RSbit
+    RSbit = RSDmask  ' make sure we're sending to data reg (RS=1)
+    ' then prepare the more significant nibble (from aByte)
+    temp = (aByte AND &amp;B01110000) Or RSbit OR BLmask
+    DirectSend temp  ' and send it
+    ' then prepare the less significant nibble (from aByte)
+    temp = ((aByte AND &amp;H0F) &lt;&lt; 4) OR RSbit OR BLmask
+    DirectSend temp  ' and also send it
+END SUB
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+' subroutine to send a nibble (in temp) to the LCD
+SUB DirectSend temp
+    temp = temp Xor ENmask            ' make EN=1
+    I2C WRITE LCDI2CAddr, 0, 1, temp  ' send it with EN=1
+    'Pause 0.004                       ' pause for 4us as per PCF8574 Datsheet but not needed due code delays
+    temp = temp Xor ENmask            ' now make EN=0 again
+    I2C WRITE LCDI2CAddr, 0, 1, temp  ' before sending again
+END SUB
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driving-LCD-with-I2C-interface-using-a-Micromite-5-3 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:16:02 GMT -->
+</html>

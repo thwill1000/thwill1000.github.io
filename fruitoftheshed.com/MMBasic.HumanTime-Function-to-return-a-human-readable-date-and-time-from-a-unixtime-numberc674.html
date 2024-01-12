@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:46:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	HumanTime() Function to return a human readable date and time from a unixtime number - Fruit Of The Shed
+</title><meta name="keywords" content="unixtime, human, unix, epoch" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Logina5fc.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dHumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History82fa.html?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			HumanTime() Function to return a human readable date and time from a unixtime number
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print82fa.html?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2018/12/14 13:10
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesdb1b.html?Cat=MMBasic.Dates%2c%20Time%20and%20Clocks" title="Dates, Time and Clocks">Dates, Time and Clocks</a>, <a href="MMBasic.AllPages834c.html?Cat=MMBasic.Encode%20and%20Decode" title="Encode and Decode">Encode and Decode</a>, <a href="MMBasic.AllPagesd44d.html?Cat=MMBasic.Maths" title="Maths">Maths</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="facee7f96-400d-44d1-8912-5a043dcb603c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('facee7f96-400d-44d1-8912-5a043dcb603c');"><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar</a><a href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$() - pad a number with leading zeroes</a></div><div id="fdc7c3855-0b0e-4813-94c4-5b71ccf32cc3" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fdc7c3855-0b0e-4813-94c4-5b71ccf32cc3');"></div><div id="ffa8e620c-dfe0-4c9f-9327-015e95eb2de6" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ffa8e620c-dfe0-4c9f-9327-015e95eb2de6');"><a href="MMBasic.VB%20Work-a-like%20SPLIT%20Function.html" title="SPLIT Function (VB work-a-like)">SPLIT Function (VB work-a-like)</a><a href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic">Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic</a></div><div id="s7946b31f-61e5-4c4c-9109-9efbfc21cf8f" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s7946b31f-61e5-4c4c-9109-9efbfc21cf8f');"><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar</a><a href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$() - pad a number with leading zeroes</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Hexadecimal-dump-of-a-file-to-the-screen-part-of-the-original-MMBasic-library.html" title="Hexadecimal dump of a file to the screen (MMBasic)">Hexadecimal dump of a file to the screen (MMBasic)</a> &raquo; <a href="MMBasic.Hi-IQ-Solitaire-part-of-the-original-MMBasic-library.html" title="Hi-IQ (Solitaire) (MMBasic)">Hi-IQ (Solitaire) (MMBasic)</a> &raquo; <b><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's7946b31f-61e5-4c4c-9109-9efbfc21cf8f', this);" id="lnks7946b31f-61e5-4c4c-9109-9efbfc21cf8f" onmouseout="javascript:return __HideDropDown('s7946b31f-61e5-4c4c-9109-9efbfc21cf8f');">HumanTime() Function to return a human readable date and time from a unixtime number (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.ESP8266-Module-with-HTTP-API.html" title="ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic) (MMBasic)">ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic) (MMBasic)</a> &raquo; <a href="MMBasic.Field-Function-cField.html" title="Field Function cField$ (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'ffa8e620c-dfe0-4c9f-9327-015e95eb2de6', this);" id="lnkffa8e620c-dfe0-4c9f-9327-015e95eb2de6" onmouseout="javascript:return __HideDropDown('ffa8e620c-dfe0-4c9f-9327-015e95eb2de6');">Field Function cField$ (MMBasic)</a> &raquo; <a href="MMBasic.Fireball.html" title="Fireball (MMBasic)">Fireball (MMBasic)</a> &raquo; <a href="MMBasic.GPS-simulator-part-of-the-original-MMBasic-library.html" title="GPS simulator (MMBasic)">GPS simulator (MMBasic)</a> &raquo; <a href="MMBasic.GRAPH-BAS-part-of-the-original-MMBasic-library.html" title="GRAPH.BAS (MMBasic)">GRAPH.BAS (MMBasic)</a> &raquo; <a href="MMBasic.HAMURABI-part-of-the-original-MMBasic-library.html" title="HAMURABI (MMBasic)">HAMURABI (MMBasic)</a> &raquo; <a href="MMBasic.Hearts-and-Bones-v1-0-part-of-the-original-MMBasic-library.html" title="Hearts and Bones v1.0 (MMBasic)">Hearts and Bones v1.0 (MMBasic)</a> &raquo; <a href="MMBasic.Hexadecimal-dump-of-a-file-to-the-screen-part-of-the-original-MMBasic-library.html" title="Hexadecimal dump of a file to the screen (MMBasic)">Hexadecimal dump of a file to the screen (MMBasic)</a> &raquo; <a href="MMBasic.Hi-IQ-Solitaire-part-of-the-original-MMBasic-library.html" title="Hi-IQ (Solitaire) (MMBasic)">Hi-IQ (Solitaire) (MMBasic)</a> &raquo; <b><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'facee7f96-400d-44d1-8912-5a043dcb603c', this);" id="lnkfacee7f96-400d-44d1-8912-5a043dcb603c" onmouseout="javascript:return __HideDropDown('facee7f96-400d-44d1-8912-5a043dcb603c');">HumanTime() Function to return a human readable date and time from a unixtime number (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		This function returns a string which is the combined date and time from the unixtime number provided. It is the counterpart of the <a class="pagelink" target="_blank" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a> function - Humantime() and Unixtime() translate each-others outputs.<br /><br />A format option formats the date part as follows:<br /><ul><li>DD-MM-YYYY when opt=0 or omitted (this matches DATE$)</li><li>YYYY-MM-DD when opt<>0 <br /></li></ul><br />The option can be omitted if required<br /><br /><b>Syntax:</b><br />HumanTime(ut&#0091;,option&#0093;)<br /><br /><b>Example Usage:</b><br /><code>Print HumanTime(ut_from_log,1)</code><br />or<br /><code>Print HumanTime(ut_my_birthday)</code><br /><br /><b>Dependencies:</b> The following functions must be included in your program for HumanTime() to work correctly...<br /><ul><li><a class="pagelink" target="_blank" href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function</a></li><li><a class="pagelink" target="_blank" href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$</a><br /></li></ul><br /><br /><pre>
+
+  Function HumanTime(UUT As Integer,opt As Integer) As String
+    ' take seconds since 1970-01-01 (unixtime) and converts to a human form date/time as
+    ' if opt=0 (or not specified) the format is dd-mm-yyyy hh&#58;mm&#58;ss" to match the format of DATE$
+    ' if opt&lt;&gt;0 the date part is returned as yyyy-mm-dd to aid sorting and avoid
+    Local integer d,m,s,y,z,UT
+    UT=UUT 'preserve original argument
+    If UT&lt;0 Then HumanTime$=""&#58;Exit Function
+    y=1970&#58;d=UT\86400&#58;s=UT Mod 86400
+    Do
+      z=365+IsLeapYear(y)
+      If d&gt;=z Then
+        d=d-z&#58;y=y+1
+      Else
+        Exit Do
+      EndIf
+    Loop
+    'here, Y is the current year and d the remaining days
+    m=1' start at january
+    ' days between the start of the year and the current month
+    Do
+      z=0
+      Select Case m
+        Case 1,3,5,7,8,10
+          If d&gt;=31 Then d=d-31&#58;z=1
+        Case 2
+          If IsLeapYear(y)Then
+            If d&gt;=29 Then d=d-29&#58;z=1
+          Else
+            If d&gt;=28 Then d=d-28&#58;z=1
+          EndIf
+        Case 4,6,9,11
+          If d&gt;=30 Then d=d-30&#58;z=1
+      End Select
+
+      If z=1 Then
+        m=m+1
+      Else
+        d=d+1&#58;Exit Do 'first day is 1 not 0
+      EndIf
+    Loop
+
+    If opt&lt;&gt;0 Then
+      HumanTime$=Str$(y)+"-"+ZPad$(m,2)+"-"+ZPad$(d,2)
+    Else
+      HumanTime$=ZPad$(d,2)+"-"+ZPad$(m,2)+"-"+Str$(y)
+    EndIf
+    y=s\3600&#58;s=s-y&#42;3600
+    m=s\60&#58;s=s-m&#42;60
+    HumanTime$=HumanTime$+" "+ZPad$(y,2)+"&#58;"+ZPad$(m,2)+"&#58;"+ZPad$(s,2)
+  End Function
+</pre><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime()</a><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:46:17 GMT -->
+</html>

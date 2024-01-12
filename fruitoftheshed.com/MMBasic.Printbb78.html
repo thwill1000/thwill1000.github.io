@@ -1,0 +1,154 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MMPREY-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:21:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	MMPREY.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.MMPREY-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFqTg8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TU1QUkVZLkJBUzwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6MzkgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBHYW1lcywgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PHByZT4NCjEwICYjNTg7IFJlbSAiUHJleSIgd2FzIHB1Ymxpc2hlZCBieSBQaGlsIENvaGVuIGluIEVUSSBtYWdhemluZSBTZXB0ZW1iZXIgMTk4Mi4NCjIwICYjNTg7IFJlbSBPcmlnaW5hbGx5IHdyaXR0ZW4gZm9yIHRoZSBBcHBsZSBJSS4NCjMwICYjNTg7IFJlbSBJbiB0aGUgc2FtZSB5ZWFyIEkgcG9ydGVkIGl0IHRvIHJ1biBvbiB0aGUgTWljcm9iZWUgY29tcHV0ZXIsDQo0MCAmIzU4OyBSZW0gYW5kIGFkZGVkIGEgZmV3IGZlYXR1cmVzIHVzaW5nIHRoZSBNaWNyb2JlZSdzIG1vcmUgYWR2YW5jZWQNCjUwICYjNTg7IFJlbSBncmFwaGljcyBjb21tYW5kcyBhbmQgc2NyZWVuIHJlc29sdXRpb24uDQo2MCAmIzU4OyBSZW0gSW4gMjAxMSwgMjkgeWVhcnMgbGF0ZXIsIEkgZm91bmQgdGhlIHNhbWUgRVRJIG1hZ2F6aW5lLCBhbmQNCjcwICYjNTg7IFJlbSBkZWNpZGVkIHRvIHJld2l0ZSBpdCBNTUJhc2ljIHRvIHJ1biBvbiB0aGUgTWF4aW1pdGUsIGp1c3QgZm9yIGZ1bi4NCjgwICYjNTg7IFJlbSBHbGVubiBMaXR0bGVmb3JkLiB3d3cudGhlYmFja3NoZWQuY29tDQo5MCAmIzU4OyBDbHMNCjEwMCAmIzU4OyBQcmludCBUYWIoMTApOyAiJiM0MjsmIzQyOyYjNDI7UHJleSYjNDI7JiM0MjsmIzQyOyIgJiM1ODsgUHJpbnQNCjExMCAmIzU4OyBQcmludCAiUHJleSBpcyBhIGxpZmUgc2ltdWxhdGlvbiBwcm9ncmFtLiBJdCBwbG90cyB0aGUgIg0KMTIwICYjNTg7IFByaW50ICJwb3B1bGF0aW9uIG51bWJlcnMgb2YgYSBwcmVkYXRvciwgbGlrZSBhIGZveCwgIg0KMTMwICYjNTg7IFByaW50ICJhbmQgYSBwcmV5LiINCjE1MCAmIzU4OyBQcmludCAiWW91IGZpcnN0IHNldCB1cCB0aGVpciBpbml0aWFsIGVudmlyb25tZW50LCB0byAiIiINCjE2MCAmIzU4OyBQcmludCAic2VlIGlmIGl0IGNhbiBzdXN0YWluIHN0YWJsZSBwb3B1bGF0aW9ucywgYW5kICINCjE3MCAmIzU4OyBQcmludCAidGhlbiBpbnRyb2R1Y2UgYSBjaGFuZ2Ugc29tZSB0aW1lIGR1cmluZyB0aGUiDQoxODAgJiM1ODsgUHJpbnQgIjEwIHllYXIgc2ltdWxhdGlvbi4gRm9yIGV4YW1wbGUsIHJlZHVjZSB0aGUgIg0KMTkwICYjNTg7IFByaW50ICJ0ZXJyaXRvcnksICggbGFuZCBjbGVhcmluZyApLCBpbmNyZWFzZSB0aGUiDQoyMDAgJiM1ODsgUHJpbnQgImZvb2QgeWllbGQgKCBwbGFudCBjYXJyb3RzICksIG9yIGN1bGwgdGhlIHByZXkiDQoyMTAgJiM1ODsgUHJpbnQgIndoZW4gdGhleSB0aHJlYXRlbiB5b3VyIGxhbmQgcHJvZHVjdGl2aXR5LiINCjIyMCAmIzU4OyBQcmludCAiVGhlIHByb2dyYW0gd2lsbCB0aGVuIHBsb3QgdGhlIGVmZmVjdCBvbiBwcmV5Ig0KMjMwICYjNTg7IFByaW50ICJhbmQgcHJlZGF0b3IgcG9wdWxhdGlvbnMuIiAmIzU4OyBQcmludA0KMjQwICYjNTg7IElucHV0ICJQcmVzcyBFTlRFUiB0byBjb250aW51ZSI7IGEkDQoyNTAgJiM1ODsgVFIgPSA1MDAmIzU4OyBQMSA9IDE4MCYjNTg7IFAyID0gNzUmIzU4OyBZRCA9IDE1DQoyNjAgJiM1ODsgTDE9MTAgJiM1ODsgTDI9MjAgJiM1ODsgQ1U9MQ0KMjcwICYjNTg7IENscw0KMjgwICYjNTg7IFByaW50ICImIzQyOyYjNDI7JiM0MjsgUHJleSAmIzQyOyYjNDI7JiM0MjsiICYjNTg7IFByaW50DQoyOTAgJiM1ODsgUHJpbnQgIk9wdGlvbiAgRGVzY3JpcHRpb24gICAgICAgICAgICAgICAgVmFsdWUiICYjNTg7IFByaW50DQozMDAgJiM1ODsgUHJpbnQgIiAgMSAgICBTaXplIG9mIHRlcnJpdG9yeSAgICAgICAgICAgIjsgVFINCjMxMCAmIzU4OyBQcmludCAiICAyICAgIFByZXkgUG9wdWxhdGlvbiAgICAgICAgICAgICAiOyBJbnQoUDEpDQozMjAgJiM1ODsgUHJpbnQgIiAgMyAgICBQcmVkYXRvciBQb3B1bGF0aW9uICAgICAgICAgIjsgSW50KFAyKQ0KMzMwICYjNTg7IFByaW50ICIgIDQgICAgRm9vZCB5aWVsZCBwZXIgdW5pdCBhcmVhICAgICI7IFlEDQozNDAgJiM1ODsgUHJpbnQgIiAgNSAgICBQcmV5IG5hdHVyYWwgbGlmZSBzcGFuICAgICAgIjsgTDENCjM1MCAmIzU4OyBQcmludCAiICA2ICAgIFByZWRhdG9yIG5hdHVyYWwgbGlmZSBzcGFuICAiOyBMMg0KMzYwICYjNTg7IFByaW50ICIgIDcgICAgUHJleSBDdWxsIExvc3NlcyAgICAgICAgICAgICI7IENVDQozNzAgJiM1ODsgUHJpbnQgIiAgOCAgICBEb25lLCBtb3ZlIHRvIG5leHQgc3RlcCINCjM4MCAmIzU4OyBQcmludCAiICA5ICAgIFJlc2V0IHRvIGRlZmF1bHRzIg0KMzkwICYjNTg7IFByaW50ICIgIFEgICAgUXVpdCINCjQwMCAmIzU4OyBQcmludA0KNDEwICYjNTg7IElucHV0ICJXaGljaCB3b3VsZCB5b3UgbGlrZSB0byBhbHRlciAiOyBBJA0KNDIwICYjNTg7IElmIGEkPSJRIiBPciBhJD0icSIgVGhlbiBHb1RvIDEyMDANCjQzMCAmIzU4OyBBPVZhbChhJCkgJiM1ODsgSWYgQSZndDs5IE9yIEEmbHQ7MSBUaGVuIEdvVG8gMjcwDQo0NDAgJiM1ODsgUHJpbnQNCjQ1MCAmIzU4OyBPbiBBIEdvVG8gNDYwLCA0NzAsIDQ4MCwgNDkwLCA1MDAsIDUxMCwgNTIwLCA1MzAsIDI1MCwgMTIwMA0KNDYwICYjNTg7IElucHV0ICJUZXJyaXRvcnkgU2l6ZSI7IFRSJiM1ODsgR29UbyAyNzANCjQ3MCAmIzU4OyBJbnB1dCAiUHJleSBQb3B1bGF0aW9uIjsgUDEmIzU4OyBHb1RvIDI3MA0KNDgwICYjNTg7IElucHV0ICJQcmVkYXRvciBQb3B1bGF0aW9uIjsgUDImIzU4OyBHb1RvIDI3MA0KNDkwICYjNTg7IElucHV0ICJGb29kIHllaWxkIHBlciB1bml0IGFyZWEiOyBZRCYjNTg7IEdvVG8gMjcwDQo1MDAgJiM1ODsgSW5wdXQgInByZXkgbmF0dXJhbCBsaWZlIHNwYW4iOyBMMSYjNTg7IEdvVG8gMjcwDQo1MTAgJiM1ODsgSW5wdXQgIlByZWRhdG9yIG5hdHVyYWwgbGlmZSBzcGFuIjsgTDImIzU4OyBHb1RvIDI3MA0KNTIwICYjNTg7IElucHV0ICJQcmV5IGN1bGwgbG9zc2VzIjsgQ1UmIzU4OyBHb1RvIDI3MA0KNTMwICYjNTg7IElucHV0ICJZZWFyIGZvciBjaGFuZ2UgKCAwLTEwICkiOyBZUg0KNTQwICYjNTg7IFlYPUludCgyMCYjNDI7WVIpDQo1NTAgJiM1ODsgSW5wdXQgIldoaWNoIHZhcmlhYmxlIHRvIGNoYW5nZSAoIDEtNyApIjsgVg0KNTYwICYjNTg7IElmIFYgJmd0OyA3IE9yIFYgJmx0OyAxIFRoZW4gR29UbyA1NTANCjU3MCAmIzU4OyBQcmludCAiVmFsdWUgdG8gYmUgc2V0IGF0IHllYXIgIjsgWVI7ICIgIjsNCjU4MCAmIzU4OyBJbnB1dCBWTA0KNTkwICYjNTg7IENscw0KNjAwICYjNTg7ICBMb2NhdGUgMTAsMCAmIzU4OyBQcmludCAiJiM0MjsmIzQyOyYjNDI7IFByZXkgJiM0MjsmIzQyOyYjNDI7Ig0KNjEwICYjNTg7IExpbmUgKDEwMCwwKS0oMzAwLDE1OSksMSwiQiINCjYyMCAmIzU4OyBGb3IgaT0xMDAgVG8gMzAwIFN0ZXAgMjANCjYzMCAmIzU4OyAgIExpbmUgKGksMTU5KS0oaSwxNjIpDQo2NDAgJiM1ODsgICBMb2NhdGUgaS0xMCwxNzAgJiM1ODsgUHJpbnQgKGktMTAwKS8yMA0KNjUwICYjNTg7IE5leHQgSQ0KNjYwICYjNTg7IExvY2F0ZSAwLDMwICYjNTg7IFByaW50ICJUZXJyaXRvcnkmIzU4OyI7DQo2NzAgJiM1ODsgTG9jYXRlIDAsNDUgJiM1ODsgUHJpbnQgIlByZXkgUG9wICYjNTg7IjsNCjY4MCAmIzU4OyBMb2NhdGUgMCw2MCAmIzU4OyBQcmludCAiUHJlZCBQb3AgJiM1ODsiOw0KNjkwICYjNTg7IExvY2F0ZSAwLDc1ICYjNTg7IFByaW50ICJZaWVsZCAgICAmIzU4OyI7DQo3MDAgJiM1ODsgTG9jYXRlIDAsOTAgJiM1ODsgUHJpbnQgIkN1bGwgICAgICYjNTg7IjsNCjcxMCAmIzU4OyBMb2NhdGUgMCwxMDUgJiM1ODsgUHJpbnQgIlByZWQgTGlmZSYjNTg7IjsNCjcyMCAmIzU4OyBMb2NhdGUgMCwxMjAgJiM1ODsgUHJpbnQgIlByZXkgTGlmZSYjNTg7IjsNCjczMCAmIzU4OyBMaW5lICgwLDE0OCktKDEyLDE0OCkgJiM1ODsgTG9jYXRlIDE1LDE0NSAmIzU4OyBQcmludCAiUHJleSI7DQo3NDAgJiM1ODsgRm9yIGk9MCBUbyAxMiBTdGVwIDIgJiM1ODsgTGluZSAoaSwxNjApLShpLDE1NykgJiM1ODsgTmV4dCBpICYjNTg7IExvY2F0ZSAxNSwxNTYgJiM1ODsgUHJpbnQgIlByZWRhdG9yIjsNCjc1MCAmIzU4OyBYID0gMA0KNzYwICYjNTg7IEtMID0gKFAxICYjNDI7IFAyKSAvIFRSDQo3NzAgJiM1ODsgRkQgPSBUUiAmIzQyOyBZRA0KNzgwICYjNTg7IElmIFAxID0gMCBUaGVuIEIxID0gMCYjNTg7IEdvVG8gODAwDQo3OTAgJiM1ODsgQjEgPSBGRCAvIFAxDQo4MDAgJiM1ODsgSWYgQjEgJmd0OyBQMSAvIDQgVGhlbiBCMSA9IFAxIC8gNA0KODEwICYjNTg7IEIyID0gMTAgJiM0MjsgS0wgLyBQMg0KODIwICYjNTg7IElmIEIyICZndDsgUDIgLyA0IFRoZW4gQjIgPSBQMiAvIDQNCjgzMCAmIzU4OyBNMSA9IChQMSAtIEIxKSAvIEwxDQo4NDAgJiM1ODsgTTIgPSAoUDIgLSBCMikgLyBMMg0KODUwICYjNTg7IFAxID0gUDEgLSBNMSAtIEtMICsgQjEgLSBDVQ0KODYwICYjNTg7IFAyID0gUDIgLSBNMiArIEIyDQo4NzAgJiM1ODsgSWYgUDEgJmx0OyAwIFRoZW4gUDEgPSAwDQo4ODAgJiM1ODsgSWYgUDIgJmx0OyAwIFRoZW4gUDIgPSAwDQo4OTAgJiM1ODsgWSA9IDE1OSAtICguNSAmIzQyOyBQMSkNCjkwMCAmIzU4OyBJZiBZICZsdDsgMCBUaGVuIFkgPSAwJiM1ODsgSWYgWSAmZ3Q7IDE1OSBUaGVuIFkgPSAxNTkNCjkxMCAmIzU4OyBJZiBYID0gMCBUaGVuIEdvVG8gOTMwDQo5MjAgJiM1ODsgTGluZSAoWCsxMDAgLSAxLCBPWSktKFgrMTAwLCBZKQ0KOTMwICYjNTg7IE9ZID0gWQ0KOTQwICYjNTg7IFkgPSAxNTkgLSAoLjggJiM0MjsgUDIpDQo5NTAgJiM1ODsgSWYgWSAmZ3Q7IDEgQW5kIFkgJmx0OyAxNTggQW5kIEludChYIC8gMikgPSBYIC8gMiBUaGVuIExpbmUgKFgrMTAwLCBZIC0gMSktKFgrMTAwLCBZICsgMSkNCjk2MCAmIzU4OyBYID0gWCArIDENCjk3MCAmIzU4OyBMb2NhdGUgNjAsMzAgJiM1ODsgUHJpbnQgVFI7ICIgIjsNCjk4MCAmIzU4OyBMb2NhdGUgNjAsNDUgJiM1ODsgUHJpbnQgSW50KFAxKTsgIiAiOw0KOTkwICYjNTg7IExvY2F0ZSA2MCw2MCAmIzU4OyBQcmludCBJbnQoUDIpOyAiICI7DQoxMDAwICYjNTg7IExvY2F0ZSA2MCw3NSAmIzU4OyBQcmludCBZRDsgIiAiOw0KMTAxMCAmIzU4OyBMb2NhdGUgNjAsOTAgJiM1ODsgUHJpbnQgQ1U7ICIgIg0KMTAyMCAmIzU4OyBMb2NhdGUgNjAsMTA1ICYjNTg7IFByaW50IEwxOyAiICI7DQoxMDMwICYjNTg7IExvY2F0ZSA2MCwxMjAgJiM1ODsgUHJpbnQgTDI7ICIgIjsNCjEwNDAgJiM1ODsgSWYgWCAmbHQ7Jmd0OyBZWCBUaGVuIEdvVG8gMTE2MA0KMTA1MCAmIzU4OyBMb2NhdGUgMCwxODcNCjEwNjAgJiM1ODsgUHJpbnQgIlllYXIgIjsgWVI7ICIgIjsNCjEwNzAgJiM1ODsgT24gViBHb1RvIDEwODAsIDEwOTAsIDExMDAsIDExMTAsIDExMjAsIDExMzAsIDExNDANCjEwODAgJiM1ODsgUHJpbnQgIlRlcnJpdG9yeSAiOyBUUjsgJiM1ODsgVFIgPSBWTCYjNTg7IEdvVG8gMTE1MA0KMTA5MCAmIzU4OyBQcmludCAiUHJleSBQb3AiOyBJbnQoUDEpOyAmIzU4OyBQMSA9IFZMJiM1ODsgR29UbyAxMTUwDQoxMTAwICYjNTg7IFByaW50ICJQcmVkIFBvcCAiOyBJbnQoUDIpOyAmIzU4OyBQMiA9IFZMJiM1ODsgR29UbyAxMTUwDQoxMTEwICYjNTg7IFByaW50ICJZaWVsZCAiOyBZRDsgJiM1ODsgWUQgPSBWTCYjNTg7IEdvVG8gMTE1MA0KMTEyMCAmIzU4OyBQcmludCAiUHJleSBMaWZlICI7IEwxOyAmIzU4OyBMMSA9IFZMJiM1ODsgR29UbyAxMTUwDQoxMTMwICYjNTg7IFByaW50ICJQcmVkIExpZmUgIjsgTDI7ICYjNTg7IEwyID0gVkwmIzU4OyBHb1RvIDExNTANCjExNDAgJiM1ODsgUHJpbnQgIkN1bGwgIjsgQ1U7ICYjNTg7IENVID0gVkwNCjExNTAgJiM1ODsgUHJpbnQgIiAtJmd0OyAiOyBWTDsgIiAgIjsNCjExNjAgJiM1ODsgUGF1c2UgNTANCjExNzAgJiM1ODsgSWYgWCAmbHQ7IDIwMCBUaGVuIEdvVG8gNzYwDQoxMTgwICYjNTg7IExvY2F0ZSAxNDAsMjAwICYjNTg7IElucHV0ICJQcmVzcyBFTlRFUiB0byBjb250aW51ZSAiOyBBJA0KMTE5MCAmIzU4OyBHb1RvIDI3MA0KMTIwMCAmIzU4OyBDbHMNCjEyMTAgJiM1ODsgUHJpbnQgJiM1ODsgUHJpbnQNCjEyMjAgJiM1ODsgUHJpbnQgVGFiKDIwKTsgIlRoYW5rcyBmb3IgcGxheWluZyINCjEyMzAgJiM1ODsgUHJpbnQNCjEyNDAgJiM1ODsgUHJpbnQgVGFiKDIwKTsgInd3dy50aGViYWNrc2hlZC5jb20iDQoxMjIwICYjNTg7IEVuZA0KJmd0Ow0KDQo8L3ByZT5kZAaEhIButZ72ErkXg7QW/02uBAYI" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">MMPREY.BAS</h1><small>Modified on 2016/12/23 23:39 by Administrator &mdash; Categorized as: Games, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+10 &#58; Rem "Prey" was published by Phil Cohen in ETI magazine September 1982.
+20 &#58; Rem Originally written for the Apple II.
+30 &#58; Rem In the same year I ported it to run on the Microbee computer,
+40 &#58; Rem and added a few features using the Microbee's more advanced
+50 &#58; Rem graphics commands and screen resolution.
+60 &#58; Rem In 2011, 29 years later, I found the same ETI magazine, and
+70 &#58; Rem decided to rewite it MMBasic to run on the Maximite, just for fun.
+80 &#58; Rem Glenn Littleford. www.thebackshed.com
+90 &#58; Cls
+100 &#58; Print Tab(10); "&#42;&#42;&#42;Prey&#42;&#42;&#42;" &#58; Print
+110 &#58; Print "Prey is a life simulation program. It plots the "
+120 &#58; Print "population numbers of a predator, like a fox, "
+130 &#58; Print "and a prey."
+150 &#58; Print "You first set up their initial environment, to """
+160 &#58; Print "see if it can sustain stable populations, and "
+170 &#58; Print "then introduce a change some time during the"
+180 &#58; Print "10 year simulation. For example, reduce the "
+190 &#58; Print "territory, ( land clearing ), increase the"
+200 &#58; Print "food yield ( plant carrots ), or cull the prey"
+210 &#58; Print "when they threaten your land productivity."
+220 &#58; Print "The program will then plot the effect on prey"
+230 &#58; Print "and predator populations." &#58; Print
+240 &#58; Input "Press ENTER to continue"; a$
+250 &#58; TR = 500&#58; P1 = 180&#58; P2 = 75&#58; YD = 15
+260 &#58; L1=10 &#58; L2=20 &#58; CU=1
+270 &#58; Cls
+280 &#58; Print "&#42;&#42;&#42; Prey &#42;&#42;&#42;" &#58; Print
+290 &#58; Print "Option  Description                Value" &#58; Print
+300 &#58; Print "  1    Size of territory           "; TR
+310 &#58; Print "  2    Prey Population             "; Int(P1)
+320 &#58; Print "  3    Predator Population         "; Int(P2)
+330 &#58; Print "  4    Food yield per unit area    "; YD
+340 &#58; Print "  5    Prey natural life span      "; L1
+350 &#58; Print "  6    Predator natural life span  "; L2
+360 &#58; Print "  7    Prey Cull Losses            "; CU
+370 &#58; Print "  8    Done, move to next step"
+380 &#58; Print "  9    Reset to defaults"
+390 &#58; Print "  Q    Quit"
+400 &#58; Print
+410 &#58; Input "Which would you like to alter "; A$
+420 &#58; If a$="Q" Or a$="q" Then GoTo 1200
+430 &#58; A=Val(a$) &#58; If A&gt;9 Or A&lt;1 Then GoTo 270
+440 &#58; Print
+450 &#58; On A GoTo 460, 470, 480, 490, 500, 510, 520, 530, 250, 1200
+460 &#58; Input "Territory Size"; TR&#58; GoTo 270
+470 &#58; Input "Prey Population"; P1&#58; GoTo 270
+480 &#58; Input "Predator Population"; P2&#58; GoTo 270
+490 &#58; Input "Food yeild per unit area"; YD&#58; GoTo 270
+500 &#58; Input "prey natural life span"; L1&#58; GoTo 270
+510 &#58; Input "Predator natural life span"; L2&#58; GoTo 270
+520 &#58; Input "Prey cull losses"; CU&#58; GoTo 270
+530 &#58; Input "Year for change ( 0-10 )"; YR
+540 &#58; YX=Int(20&#42;YR)
+550 &#58; Input "Which variable to change ( 1-7 )"; V
+560 &#58; If V &gt; 7 Or V &lt; 1 Then GoTo 550
+570 &#58; Print "Value to be set at year "; YR; " ";
+580 &#58; Input VL
+590 &#58; Cls
+600 &#58;  Locate 10,0 &#58; Print "&#42;&#42;&#42; Prey &#42;&#42;&#42;"
+610 &#58; Line (100,0)-(300,159),1,"B"
+620 &#58; For i=100 To 300 Step 20
+630 &#58;   Line (i,159)-(i,162)
+640 &#58;   Locate i-10,170 &#58; Print (i-100)/20
+650 &#58; Next I
+660 &#58; Locate 0,30 &#58; Print "Territory&#58;";
+670 &#58; Locate 0,45 &#58; Print "Prey Pop &#58;";
+680 &#58; Locate 0,60 &#58; Print "Pred Pop &#58;";
+690 &#58; Locate 0,75 &#58; Print "Yield    &#58;";
+700 &#58; Locate 0,90 &#58; Print "Cull     &#58;";
+710 &#58; Locate 0,105 &#58; Print "Pred Life&#58;";
+720 &#58; Locate 0,120 &#58; Print "Prey Life&#58;";
+730 &#58; Line (0,148)-(12,148) &#58; Locate 15,145 &#58; Print "Prey";
+740 &#58; For i=0 To 12 Step 2 &#58; Line (i,160)-(i,157) &#58; Next i &#58; Locate 15,156 &#58; Print "Predator";
+750 &#58; X = 0
+760 &#58; KL = (P1 &#42; P2) / TR
+770 &#58; FD = TR &#42; YD
+780 &#58; If P1 = 0 Then B1 = 0&#58; GoTo 800
+790 &#58; B1 = FD / P1
+800 &#58; If B1 &gt; P1 / 4 Then B1 = P1 / 4
+810 &#58; B2 = 10 &#42; KL / P2
+820 &#58; If B2 &gt; P2 / 4 Then B2 = P2 / 4
+830 &#58; M1 = (P1 - B1) / L1
+840 &#58; M2 = (P2 - B2) / L2
+850 &#58; P1 = P1 - M1 - KL + B1 - CU
+860 &#58; P2 = P2 - M2 + B2
+870 &#58; If P1 &lt; 0 Then P1 = 0
+880 &#58; If P2 &lt; 0 Then P2 = 0
+890 &#58; Y = 159 - (.5 &#42; P1)
+900 &#58; If Y &lt; 0 Then Y = 0&#58; If Y &gt; 159 Then Y = 159
+910 &#58; If X = 0 Then GoTo 930
+920 &#58; Line (X+100 - 1, OY)-(X+100, Y)
+930 &#58; OY = Y
+940 &#58; Y = 159 - (.8 &#42; P2)
+950 &#58; If Y &gt; 1 And Y &lt; 158 And Int(X / 2) = X / 2 Then Line (X+100, Y - 1)-(X+100, Y + 1)
+960 &#58; X = X + 1
+970 &#58; Locate 60,30 &#58; Print TR; " ";
+980 &#58; Locate 60,45 &#58; Print Int(P1); " ";
+990 &#58; Locate 60,60 &#58; Print Int(P2); " ";
+1000 &#58; Locate 60,75 &#58; Print YD; " ";
+1010 &#58; Locate 60,90 &#58; Print CU; " "
+1020 &#58; Locate 60,105 &#58; Print L1; " ";
+1030 &#58; Locate 60,120 &#58; Print L2; " ";
+1040 &#58; If X &lt;&gt; YX Then GoTo 1160
+1050 &#58; Locate 0,187
+1060 &#58; Print "Year "; YR; " ";
+1070 &#58; On V GoTo 1080, 1090, 1100, 1110, 1120, 1130, 1140
+1080 &#58; Print "Territory "; TR; &#58; TR = VL&#58; GoTo 1150
+1090 &#58; Print "Prey Pop"; Int(P1); &#58; P1 = VL&#58; GoTo 1150
+1100 &#58; Print "Pred Pop "; Int(P2); &#58; P2 = VL&#58; GoTo 1150
+1110 &#58; Print "Yield "; YD; &#58; YD = VL&#58; GoTo 1150
+1120 &#58; Print "Prey Life "; L1; &#58; L1 = VL&#58; GoTo 1150
+1130 &#58; Print "Pred Life "; L2; &#58; L2 = VL&#58; GoTo 1150
+1140 &#58; Print "Cull "; CU; &#58; CU = VL
+1150 &#58; Print " -&gt; "; VL; "  ";
+1160 &#58; Pause 50
+1170 &#58; If X &lt; 200 Then GoTo 760
+1180 &#58; Locate 140,200 &#58; Input "Press ENTER to continue "; A$
+1190 &#58; GoTo 270
+1200 &#58; Cls
+1210 &#58; Print &#58; Print
+1220 &#58; Print Tab(20); "Thanks for playing"
+1230 &#58; Print
+1240 &#58; Print Tab(20); "www.thebackshed.com"
+1220 &#58; End
+&gt;
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MMPREY-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:21:22 GMT -->
+</html>

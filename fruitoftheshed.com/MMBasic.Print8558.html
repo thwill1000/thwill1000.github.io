@@ -1,0 +1,488 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Sprite-demo-Arcade-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Sprite demo: Arcade - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Sprite-demo-Arcade-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFwWY8aDEgY2xhc3M9InBhZ2V0aXRsZSI+U3ByaXRlIGRlbW86IEFyY2FkZTwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6NDYgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBHYW1lcywgR3JhcGhpY3MsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogVGhlIHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPjxiPkFyY2FkZTwvYj46PGJyIC8+QXJjYWRlIGdhbWUgd2hlcmUgeW91IGhhdmUgdG8gc2hvb3QgZW5lbWllcyB1bnRpbCB5b3UgZGllIDMgdGltZXMuIEl0IHNob3dzIGhvdyB0byB1c2UgbXVsdGktc3ByaXRlIGVuZW1pZXMsIGF1ZGlvIG1vZHVsZXMgYXMgc291bmQgZWZmZWN0cyBhbmQgQURDIGlucHV0IGZvciBtb3ZpbmcgeW91ciBzaGlwIFJpZ2h0L0xlZnQgd2l0aCBhIHBvdGVudGlvbWV0ZXIgKyBhIEJ1dHRvbiB0byBmaXJlLjxiciAvPjxiciAvPjxiPkFSQ0FUU1QuQkFTPC9iPjo8YnIgLz48cHJlPg0KJ0FyY2FkZSBnYW1lIHRlc3QgZm9yIENvbG91ciBNYXhpbWl0ZSB2NC4wDQonRmFicmljZSBNdWxsZXIgMjAxMg0KJ0FsbCBtdXNpYyBtb2R1bGVzIGhhdmUgdG8gYmUgY29waWVkIHRvIGEmIzU4Ow0KJ1RoZSBzcHJpdGVzIGFyZSByZWFkIGZyb20gYiYjNTg7DQonSm95c3RpY2sgY29ubmVjdGlvbnMgYXJlICYjNTg7DQonUGluIDIgID0gMTBLb2htIFBvdGVudGlvbWV0ZXINCicNCicgICAgICAgICAgICAgICAgUGluIDINCicgICAgICAgICAgICAgICAgICB8DQonICAgICAgICAgICAgICAgICAgfA0KJyAgICAgICAgICAgICAgICAvICAgXA0KJyArM3YzICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7fCBvIHwmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyBHTkQNCicgICAgICAgICAgICAgICAgXCYjOTU7JiM5NTtfLw0KJw0KJyAgICAgICAgIDEwS29obSBQb3RlbnRpb21ldGVyDQonDQonDQonUGluIDE1ID0gQnV0dG9uIGNvbm5lY3RlZCB0byBHTkQgLCAxMEtvaG0gcHVsbHVwIHJlc2lzdG9yIHRvIHBpbiAxNQ0KJw0KJyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICYjOTU7JiM5NTt8JiM5NTsmIzk1Ow0KJw0KJyAgICAgICAgICAgICAgIDEwIEtvaG0gICAgICAgICAgICAgIHwgICB8DQonICszdjMgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0vXC9cL1wvXCYjNDU7JiM0NTsmIzQ1OyYjNDU7LXwmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstfCAgIHwmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7IEdORA0KJyAgICAgICAgICAgICAgICAgICAgICAgICAgICB8DQonICAgICAgICAgICAgICAgICAgICAgICAgICAgIHwgICAgICAgQnV0dG9uDQonICAgICAgICAgICAgICAgICAgICAgICAgICBQaW4gMTUNCicNCidBbGwgYXJyYXlzIHN0YXJ0IGF0IGluZGV4IDENCk9wdGlvbiBCYXNlIDENCidFcmFzZSBhbGwgdmFyaWFibGVzIHZhbHVlcyBmcm9tIG1lbW9yeQ0KQ2xlYXINCidMb2FkIHRoZSBTcHJpdGVzDQpEcml2ZSAiYiYjNTg7Ig0KU3ByaXRlIExvYWQgImFyY2FkZTAxLnNwciINCkRyaXZlICJhJiM1ODsiDQonQXJyYXlzIGRlY2xhcmF0aW9uDQpEaW0gU2hvb3RTcHIoNSkNCkRpbSBTaG93U2hvb3QoNSkNCkRpbSBTaG9vdFBvcyg1LDIpDQpEaW0gRW5uZW15U3ByKDEwKQ0KRGltIEVubmVteVBvcygxMCwyKQ0KRGltIEVubmVteVNob3coMTApDQpEaW0gRW5uZW15RGlyKDEwKQ0KRGltIEVubmVteVNwZWVkKDEwKQ0KRGltIEVubmVteUtpbGxlZCgxMCkNCkRpbSBFbm5lbXlTaG9vdFNwcigxMCkNCkRpbSBFbm5lbXlTaG9vdFBvcygxMCwyKQ0KRGltIEVubmVteVNob3dTaG9vdCgxMCkNCkRpbSBTcHJpdGVfdG9fU2hvdygyNikNCkRpbSBDeCgyNikNCkRpbSBDeSgyNikNCidNYWluIHNoaXAgc3ByaXRlIG51bWJlciBpcyAxDQpTaGlwU3ByID0gMQ0KJ0dsb2JhbCBWYXJpYWJsZXMgZGVjbGFyYXRpb24NCk1heF9TaG9vdCA9IDUNCk1heF9Fbm5lbXkgPSAxMA0KTWF4X0VubmVteV9TaG9vdCA9IDEwDQpNYXhfU3ByaXRlID0gMjYNClNob290X1NwZWVkID0gLTUNCkVubmVteV9TaG9vdF9TcGVlZCA9IDUNClNwcml0ZUZsaXAgPSAwDQpPdXRzaWRlWCA9IDANCk91dHNpZGVZID0gMA0KU2hpcFggPSAwDQpTaGlwWSA9IDANCkF1ZGlvX2lzX3BsYXlpbmcgPSAwDQpGaXJlID0gMA0KTGl2ZXMgPSAwDQpTY29yZSA9IDANCidKb3lzdGljayBkZWNsYXJhdGlvbg0KJ1BpbiAyIGFzIEFEQyBpbnB1dCBmb3IgYSAxMEtvaG0gcG90ZW50aW9tZXRlcg0KU2V0UGluIDIsMQ0KJ1BJTiAxNSA9IEZpcmUgQnV0dG9uIDENClNldFBpbiAxNSwyDQonSW5pdGlhbGlzZSB0aGUgc3ByaXRlcyBhbmQgc2NyZWVuDQpJbml0aWFsaXNlDQonR2VuZXJhbCBnYW1lIGxvb3ANCkRvIFdoaWxlIDENCiAnSGVyZSB3ZSBjaGVjayBpZiB3ZSBmaXJlIGV2ZXJ5IDMwMG1TDQogSWYgKFRpbWVyIE1vZCAyMDApICZndDs9IDEwMCBUaGVuDQogIGZpcmUgPSBDaGVja19GaXJlKDE1KQ0KICAnUHV0IGEgbmV3IGZpcmUgaWYgcG9zc2libGUNCiAgSWYgZmlyZSA9IDAgVGhlbiBQdXRfTmV3X0ZpcmUNCiBFbmRJZg0KICdIZXJlIHdlIG1vdmUgdGhlIFNoaXANCiBTaGlwWCA9IFBvdF9SZWFkKDIpDQogJ0hlcmUgd2UgbW92ZSBhbGwgRW5uZW15cw0KIE1vdmVfRW5uZW15DQogJ0hlcmUgd2UgbW92ZSB0aGUgU2hvb3RzIHdlIGhhdmUgZmlyZWQNCiBNb3ZlX1Nob290DQogJ0hlcmUgd2UgbW92ZSB0aGUgRW5uZW15cyBTaG9vdHMgdGhleSBoYXZlIGZpcmVkDQogTW92ZV9Fbm5lbXlfU2hvb3QNCiAnSGVyZSB3ZSBjaGVjayBpZiB3ZSBoYXZlIGtpbGwgYSBFbm5lbXkNCiBDaGVja19Fbm5lbXlfRGVhZA0KICdIZXJlIHdlIENoZWNrIGlmIHRoZSBFbm5lbXlzIGtpbGwgdXMNCiBDaGVja19QbGF5ZXJfRGVhZA0KICdXZSBSYW5kb20gdGhlIEVubmVteSBTaG9vdHMNCiBJZiBJbnQoUm5kICYjNDI7IDEwMCkgJmd0OyA4MCBUaGVuIFB1dF9OZXdfRW5lbm15X0ZpcmUNCiAnSGVyZSB3ZSByZWRyYXcgYWxsIFNwcml0ZXMgZXZlcnkgMTAwbVMNCiBTaG93X0FsbF9TcHJpdGVzDQogUHJpbnQgQCg2MCwwKSAiTGl2ZXMgJiM1ODsgIjtMaXZlczsiICINCiBQcmludCBAKDE1MCwwKSAiU2NvcmUgJiM1ODsgIjtTY29yZTsiICINCkxvb3ANCg0KU3ViIEluaXRpYWxpc2UNCiBMb2NhbCBhDQogJ1NldCBhbGwgdGhlIFNwcml0ZSBmaXJzdA0KIEZvciBhID0gMSBUbyBNYXhfU2hvb3QNCiAgJ1Nob290IFNwcml0ZXMgc3RhcnQgYXQgMg0KICBTaG9vdFNwcihhKSA9IGEgKyAxDQogIFNob3dTaG9vdChhKSA9IDANCiBOZXh0IGENCiBGb3IgYSA9IDEgVG8gTWF4X0VubmVteQ0KICAnRW5uZW15IFNwcml0ZXMgc3RhcnQgYXQgNw0KICBFbm5lbXlTcHIoYSkgPSBhICsgNg0KICAnRG9uJ3Qgc2hvdyB0aGUgZW5uZW15cyBub3cNCiAgRW5uZW15U2hvdyhhKSA9IDENCiAgJ1Jlc2V0IEVubmVteXMgRGlyZWN0aW9ucw0KICBFbm5lbXlEaXIoYSkgPSAwDQogICdSZXNldCB0aGUgRW5uZW15cyBTcGVlZA0KICBFbm5lbXlTcGVlZChhKSA9IDINCiAgJ1B1dCBhbGwgRW5uZW15IGFzIG5vdCBLaWxsZWQNCiAgRW5uZW15S2lsbGVkKGEpID0gMA0KIE5leHQgYQ0KIEZvciBhID0gMSBUbyBNYXhfRW5uZW15X1Nob290DQogICdFbm5lbXkgU2hvb3QgU3ByaXRlcyBzdGFydCBhdCAxNw0KICBFbm5lbXlTaG9vdFNwcihhKSA9IGEgKyAxNg0KICBFbm5lbXlTaG93U2hvb3QoYSkgPSAwDQogTmV4dCBhDQogU3ByaXRlRmxpcCA9IDANCiAnU2V0IExpdmVzIGFucyBTY29yZQ0KIExpdmVzID0gMw0KIFNjb3JlID0gMA0KICcgU2V0IHRoZSBncmFwaGljcyBtb2RlDQogTW9kZSA0DQogJ0VyYXNlIHRoZSBzY3JlZW4NCiBDbHMNCiAnV2FpdCBmb3IgYSBrZXkgdG8gc3RhcnQNCiBQcmludCBAKDgwICwgMTAwKSAiUHJlc3MgYSBrZXkgdG8gc3RhcnQiDQogRG8gV2hpbGUgSW5rZXkkID0gIiIgJiM1ODsgTG9vcA0KIENscw0KICdJbml0aWFsaXNlIHRoZSByYW5kb20gbnVtYmVyIGdlbmVyYXRvcg0KIFJhbmRvbWl6ZSBUaW1lcg0KICdQbGFjZSB0aGUgc2hpcA0KIFNoaXBYID0gUG90X1JlYWQoMikNCiBTaGlwWSA9IDE5OA0KICdTZXQgdGhlIEVubmVteXMgUG9zaXRpb25zIGFuZCBkaXJlY3Rpb25zDQogRm9yIGEgPSAxIFRvIE1heF9Fbm5lbXkNCiAgRW5uZW15UG9zKGEsMSkgPSBTZXRfRW5uZW15X1Bvc19YKDEpDQogIEVubmVteVBvcyhhLDIpID0gU2V0X0VubmVteV9Qb3NfWSgxKQ0KICBFbm5lbXlEaXIoYSkgICA9IFNldF9Fbm5lbXlfRGlyKDEpDQogIEVubmVteVNwZWVkKGEpID0gU2V0X0VubmVteV9TcGVlZCgxKQ0KIE5leHQgYQ0KIE91dHNpZGVYID0gLTIwDQogT3V0c2lkZVkgPSAtMjANCiBTdGFydF9BbGxfU3ByaXRlDQogJ1Jlc2V0IHRoZSB0aW1lciBmb3IgdGhlIGdhbWUgbG9vcA0KIFRpbWVyID0gMA0KRW5kIFN1Yg0KDQpTdWIgU3RhcnRfQWxsX1Nwcml0ZQ0KICdXZSBzdGFydCBhbGwgc3ByaXRlIGhlcmUgb3V0c2lkZSB0aGUgc2NyZWVuDQogJ2ZvciBub3QgaGF2ZSB0byBsb29rIGF0IG9uL29mZiBzdGF0dXMNCiAnVGhpcyBpbXByb3ZlIHRoZSBwZXJmb3JtYW5jZS4NCiAnU3ByaXRlIG9yZGVyJiM1ODsNCiAnU3ByaXRlIDENCiBTcHJpdGUgT24gU2hpcFNwcixPdXRzaWRlWCxPdXRzaWRlWQ0KICdTcHJpdGUgMiB0byA2DQogRm9yIGEgPSAxIFRvIE1heF9TaG9vdA0KICBTcHJpdGUgT24gU2hvb3RTcHIoYSksT3V0c2lkZVgsT3V0c2lkZVkNCiBOZXh0IGENCiAnU3ByaXRlIDcgdG8gMTYNCiBGb3IgYSA9IDEgVG8gTWF4X0VubmVteQ0KICBTcHJpdGUgT24gRW5uZW15U3ByKGEpLE91dHNpZGVYLE91dHNpZGVZDQogTmV4dCBhDQogJ1Nwcml0ZSAxNyB0byAyNg0KIEZvciBhID0gMSBUbyBNYXhfRW5uZW15X1Nob290DQogIFNwcml0ZSBPbiBFbm5lbXlTaG9vdFNwcihhKSxPdXRzaWRlWCxPdXRzaWRlWQ0KIE5leHQgYQ0KRW5kIFN1Yg0KDQpTdWIgU2hvd19BbGxfU3ByaXRlcw0KICdIZXJlIHdlIHNob3cgYWxsIHNwcml0ZSBpbiByZXNwZWN0aW5nIHRoZQ0KICdPcmRlciBuZWVkZWQgZm9yIHRoZSBTcHJpdGUgZnVuY3Rpb24NCiAnV2UgcmVjb3JkIHRoZSBTaGlwIGluZm8NCiBTcHJpdGVfdG9fU2hvdyhTaGlwU3ByKSA9IFNoaXBTcHINCiBDeChTaGlwU3ByKSA9IFNoaXBYDQogQ3koU2hpcFNwcikgPSBTaGlwWQ0KICdDaGVjayBpZiBTcHJpdGVzIGhhdmUgdG8gYmUgTW92ZWQgb3INCiAncHVzaGVkIG91dCBvZiB0aGUgc2NyZWVuDQogRm9yIGEgPSAxIFRvIE1heF9TaG9vdA0KICBJZiBTaG93U2hvb3QoYSkgPSAxIFRoZW4NCiAgIFNwcml0ZV90b19TaG93KFNob290U3ByKGEpKSA9IDENCiAgIEN4KFNob290U3ByKGEpKT1TaG9vdFBvcyhhLDEpDQogICBDeShTaG9vdFNwcihhKSk9U2hvb3RQb3MoYSwyKQ0KICBFbHNlDQogICBTcHJpdGVfdG9fU2hvdyhTaG9vdFNwcihhKSkgPSAwDQogICBDeChTaG9vdFNwcihhKSk9T3V0c2lkZVgNCiAgIEN5KFNob290U3ByKGEpKT1PdXRzaWRlWQ0KICBFbmRJZg0KIE5leHQgYQ0KIEZvciBhID0gMSBUbyBNYXhfRW5uZW15DQogIElmIEVubmVteVNob3coYSkgPSAxIFRoZW4NCiAgIFNwcml0ZV90b19TaG93KEVubmVteVNwcihhKSkgPSAxDQogICBDeChFbm5lbXlTcHIoYSkpPUVubmVteVBvcyhhLDEpDQogICBDeShFbm5lbXlTcHIoYSkpPUVubmVteVBvcyhhLDIpDQogIEVsc2UNCiAgIFNwcml0ZV90b19TaG93KEVubmVteVNwcihhKSkgPSAwDQogICBDeChFbm5lbXlTcHIoYSkpPU91dHNpZGVYDQogICBDeShFbm5lbXlTcHIoYSkpPU91dHNpZGVZDQogIEVuZElmDQogTmV4dCBhDQogRm9yIGEgPSAxIFRvIE1heF9Fbm5lbXlfU2hvb3QNCiAgSWYgRW5uZW15U2hvd1Nob290KGEpID0gMSBUaGVuDQogICBTcHJpdGVfdG9fU2hvdyhFbm5lbXlTaG9vdFNwcihhKSkgPSAxDQogICBDeChFbm5lbXlTaG9vdFNwcihhKSk9RW5uZW15U2hvb3RQb3MoYSwxKQ0KICAgQ3koRW5uZW15U2hvb3RTcHIoYSkpPUVubmVteVNob290UG9zKGEsMikNCiAgRWxzZQ0KICAgU3ByaXRlX3RvX1Nob3coRW5uZW15U2hvb3RTcHIoYSkpID0gMA0KICAgQ3goRW5uZW15U2hvb3RTcHIoYSkpPU91dHNpZGVYDQogICBDeShFbm5lbXlTaG9vdFNwcihhKSk9T3V0c2lkZVkNCiAgRW5kSWYNCiBOZXh0IGENCg0KIElmIFNwcml0ZUZsaXAgPSAwIFRoZW4NCiAgJ1Nwcml0ZXMgd2FzIGRyYXduIDFzdCB0byBsYXN0ICwgd2UgZXJhc2Ugb3IgbW92ZQ0KICAndGhlbiBMYXN0IHRvIDFzdA0KICAnRHJhd2luZyBPcmRlciB3YXMgJiM1ODsNCiAgJ1NoaXANCiAgJ1Nob290DQogICdFbm5lbXkNCiAgJ0VubmVteV9TaG9vdA0KICAnDQogICdIZXJlIHdlIG1vdmUgdGhlIFNwcml0ZSBvciBwdXQgdGhlbSBvdXQgb2YgdGhlIHNjcmVlbg0KICBGb3IgYSA9IE1heF9TcHJpdGUgVG8gMSBTdGVwIC0gMQ0KICAgU3ByaXRlIE9mZiBhDQogIE5leHQgYQ0KICBGb3IgYSA9IE1heF9TcHJpdGUgVG8gMSBTdGVwIC0gMQ0KICAgSWYgU3ByaXRlX3RvX1Nob3coYSkgPSAwIFRoZW4NCiAgICBTcHJpdGUgT24gYSxPdXRzaWRlWCxPdXRzaWRlWQ0KICAgRWxzZQ0KICAgIFNwcml0ZSBPbiBhLEN4KGEpLEN5KGEpDQogICBFbmRJZg0KICBOZXh0IGENCiAgU3ByaXRlRmxpcCA9IDENCiBFbHNlDQogICdTcHJpdGVzIHdhcyBkcmF3biBsYXN0IHRvIDFzdCAsIHdlIGVyYXNlIG9yIG1vdmUNCiAgJ3RoZW4gMXN0IHRvIGxhc3QNCiAgJ0RyYXdpbmcgT3JkZXIgd2FzICYjNTg7DQogICdFbm5lbXlfU2hvb3QNCiAgJ0VubmVteQ0KICAnU2hvb3QNCiAgJ1NoaXANCiAgJw0KICAnSGVyZSB3ZSBtb3ZlIHRoZSBTcHJpdGUgb3IgcHV0IHRoZW0gb3V0IG9mIHRoZSBzY3JlZW4NCiAgRm9yIGEgPSAxIFRvIE1heF9TcHJpdGUNCiAgICBTcHJpdGUgT2ZmIGENCiAgTmV4dCBhDQogIEZvciBhID0gMSBUbyBNYXhfU3ByaXRlDQogICBJZiBTcHJpdGVfdG9fU2hvdyhhKSA9IDAgVGhlbg0KICAgIFNwcml0ZSBPbiBhLE91dHNpZGVYLE91dHNpZGVZDQogICBFbHNlDQogICAgU3ByaXRlIE9uIGEsQ3goYSksQ3koYSkNCiAgIEVuZElmDQogIE5leHQgYQ0KICBTcHJpdGVGbGlwID0gMA0KIEVuZElmDQpFbmQgU3ViDQoNClN1YiBNb3ZlX0VubmVteQ0KICdNb3ZlIGFsbCBlbm5lbXkgU2hpcA0KIExvY2FsIGENCiBGb3IgYSA9IDEgVG8gTWF4X0VubmVteQ0KICBJZiBFbm5lbXlTaG93KGEpID0gMSBUaGVuDQogICBFbm5lbXlQb3MoYSwxKSA9IEVubmVteVBvcyhhLDEpICsgRW5uZW15RGlyKGEpDQogICAnV2UgbG9vayBpZiB0aGUgRW5uZW15IGJ1bXAgYXQgYSBzY3JlZW4gYm9yZGVyDQogICAnSWYgc28gLCB3ZSByZXZlcnNlIGhpcyBkaXJlY3Rpb24NCiAgIElmIEVubmVteVBvcyhhLDEpICZsdDsgMSBUaGVuIEVubmVteURpcihhKSA9IDENCiAgIElmIEVubmVteVBvcyhhLDEpICZndDsgTU0uSFJlcyAtIDE4IFRoZW4gRW5uZW15RGlyKGEpID0gLTENCiAgICdXZSBtYWRlIHRoZSBFbm5lbXkgZ28gZG93bg0KICAgRW5uZW15UG9zKGEsMikgPSBFbm5lbXlQb3MoYSwyKSArIEVubmVteVNwZWVkKGEpDQogICAnSWYgdGhlIGVubmVteSBnbyBvdXRzaWRlIHRoZSBzY3JlZW4gb3IgaWYgd2Uga2lsbA0KICAgJ3RoZW4gd2UgcHV0IGl0IGF0IG5ldyBwbGFjZQ0KICAgSWYgKEVubmVteVBvcyhhLDIpICZndDs9IChNTS5WUmVzIC0gNDApKSBPciAoRW5uZW15S2lsbGVkKGEpID0gMSkgVGhlbg0KICAgIEVubmVteVBvcyhhLDEpID0gU2V0X0VubmVteV9Qb3NfWCgxKQ0KICAgIEVubmVteVBvcyhhLDIpID0gU2V0X0VubmVteV9Qb3NfWSgxKQ0KICAgIEVubmVteURpcihhKSAgID0gU2V0X0VubmVteV9EaXIoMSkNCiAgIEVuZElmDQogICAnVXBkYXRlIHRoZSBzY29yZSBpZiB3ZSBraWxsIGEgRW5uZW15DQogICBJZiBFbm5lbXlLaWxsZWQoYSkgPSAxIFRoZW4NCiAgICBFbm5lbXlLaWxsZWQoYSkgPSAwDQogICAgICAgU2NvcmUgPSBTY29yZSArIDEwDQogICBFbmRJZg0KICBFbmRJZg0KIE5leHQgYQ0KRW5kIFN1Yg0KDQpTdWIgTW92ZV9TaG9vdA0KICdNb3ZlIHRoZSBwbGF5ZXIgc2hvb3RzDQogTG9jYWwgYQ0KIEZvciBhID0gMSBUbyBNYXhfU2hvb3QNCiAgSWYgU2hvd1Nob290KGEpID0gMSBUaGVuDQogICBTaG9vdFBvcyhhLDIpID0gU2hvb3RQb3MoYSwyKSArIFNob290X1NwZWVkDQogICAnSWYgdGhlIFNob290IGdvIG91dHNpZGUgdGhlIHNjcmVlbiB3ZSBwdXQgaXQNCiAgICdhcyBub3Qgc2hvd2VkDQogICBJZiBTaG9vdFBvcyhhLDIpICZsdDsgMTggVGhlbiBTaG93U2hvb3QoYSkgPSAwDQogIEVuZElmDQogTmV4dCBhDQpFbmQgU3ViDQoNClN1YiBNb3ZlX0VubmVteV9TaG9vdA0KICdNb3ZlIHRoZSBlbm5lbXlzIHNob290cw0KIExvY2FsIGENCiBGb3IgYSA9IDEgVG8gTWF4X0VubmVteV9TaG9vdA0KICBJZiBFbm5lbXlTaG93U2hvb3QoYSkgPSAxIFRoZW4NCiAgIEVubmVteVNob290UG9zKGEsMikgPSBFbm5lbXlTaG9vdFBvcyhhLDIpICsgRW5uZW15X1Nob290X1NwZWVkDQogICAnSWYgdGhlIFNob290IGdvIG91dHNpZGUgdGhlIHNjcmVlbiB3ZSBwdXQgaXQNCiAgICdhcyBub3Qgc2hvd2VkDQogICBJZiBFbm5lbXlTaG9vdFBvcyhhLDIpICZndDs9IE1NLlZSZXMgVGhlbiBFbm5lbXlTaG93U2hvb3QoYSkgPSAwDQogIEVuZElmDQogTmV4dCBhDQpFbmQgU3ViDQoNClN1YiBDaGVja19Fbm5lbXlfRGVhZA0KICdDaGVjayBpZiB3ZSBoYXZlIGtpbGwgb25lIG9mIHRoZSBFbm5lbXkNCiBMb2NhbCBhLGINCiBMb2NhbCBweCxweQ0KIEZvciBhID0gMSBUbyBNYXhfRW5uZW15DQogIHB4ID0gRW5uZW15UG9zKGEsMSkgKyAxNQ0KICBweSA9IEVubmVteVBvcyhhLDIpICsgMTUNCiAgRm9yIGIgPSAxIFRvIE1heF9TaG9vdA0KICAgSWYgU2hvd1Nob290KGIpID0gMSBUaGVuDQogICAgSWYgKFNob290UG9zKGIsMSkgJmd0Oz0gRW5uZW15UG9zKGEsMSkpIEFuZCAoU2hvb3RQb3MoYiwxKSAmbHQ7PSBweCkgVGhlbg0KICAgICAgICBJZiAoU2hvb3RQb3MoYiwyKSAmZ3Q7PSBFbm5lbXlQb3MoYSwyKSkgQW5kIChTaG9vdFBvcyhiLDIpICZsdDs9IHB5KSBUaGVuDQogICAgICAgICAnV2UgaGF2ZSBraWxsZWQgdGhpcyBlbm5lbXkNCiAgICAgICAgIEVubmVteUtpbGxlZChhKSA9IDENCiAgICAgICAgIFNjb3JlID0gU2NvcmUgKyAxMA0KICAgICAgICAgU2hvd1Nob290KGIpID0gMA0KICAgICAgICAgICAgICAgSWYgQXVkaW9faXNfcGxheWluZyA9IDEgVGhlbg0KICAgICAgICAgICAgICAgIFBsYXlNT0Qgc3RvcA0KICAgICAgICAgICAgICAgIFBsYXlNT0QgIkV4cGxvZGUubW9kIiAsIDYwMDANCiAgICAgICAgICAgICAgIEVsc2UNCiAgICAgICAgICAgICAgICBQbGF5TU9EICJFeHBsb2RlLm1vZCIgLCA2MDAwDQogICAgICAgICAgICAgICBFbmRJZg0KICAgICAgICAgRXhpdCBGb3INCiAgICAgICAgRW5kSWYNCiAgICAgICBFbmRJZg0KICAgRW5kSWYNCiAgTmV4dCBiDQogTmV4dCBhDQpFbmQgU3ViDQoNClN1YiBDaGVja19QbGF5ZXJfRGVhZA0KICdDaGVjayBpZiB0aGUgRW5uZW15cyBraWxsIHVzDQogTG9jYWwgYSxweCxweQ0KIHB4ID0gU2hpcFggKyAxNQ0KIHB5ID0gU2hpcFkgKyAxNQ0KIEZvciBhID0gMSBUbyBNYXhfRW5uZW15X1Nob290DQogIElmIEVubmVteVNob3dTaG9vdChhKSA9IDEgVGhlbg0KICAgSWYgKEVubmVteVNob290UG9zKGEsMSkgJmd0Oz0gU2hpcFgpIEFuZCAoRW5uZW15U2hvb3RQb3MoYSwxKSAmbHQ7PSBweCkgVGhlbg0KICAgIElmIChFbm5lbXlTaG9vdFBvcyhhLDIpICZndDs9IFNoaXBZKSBBbmQgKEVubmVteVNob290UG9zKGEsMikgJmx0Oz0gcHkpIFRoZW4NCiAgICAgJ1RoZSBFbm5lbXkgS2lsbCB1cyAhDQogICAgICcuLi4uLi4uLi4uLi4uLi4gdG8gY29udGludWUgLi4uLi4uLi4uLi4uDQogICAgIExpdmVzID0gTGl2ZXMgLSAxDQogICAgIElmIExpdmVzID0gMCBUaGVuDQogICAgICAgICBEcml2ZSAiYiYjNTg7Ig0KICAgICAgICAgUHJpbnQgQCgxMDAsODApICJHYW1lIE92ZXIiDQogICAgICAgICBQcmludCBAKDgwLDEyMCkgInByZXNzIGEga2V5IHRvIHJlc3RhcnQiDQogICAgICAgICBEbyBXaGlsZSBJbmtleSQgPSAiIiAmIzU4OyBMb29wDQogICAgICBFbmQNCiAgICAgRWxzZQ0KICAgICAgRXhpdCBTdWINCiAgICAgRW5kSWYNCiAgICBFbmRJZg0KICAgRW5kSWYNCiAgRW5kSWYNCiBOZXh0IGENCkVuZCBTdWINCg0KU3ViIFB1dF9OZXdfRmlyZQ0KICdIZXJlIHdlIGNoZWNrIGlmIHdlIGNhbiBhZGQgYSBuZXcgZmlyZQ0KIExvY2FsIGENCiAgRm9yIGEgPSAxIFRvIE1heF9TaG9vdA0KICAgSWYgU2hvd1Nob290KGEpID0gMCBUaGVuDQogICAgJ3dlIGNhbiBhZGQgYSBzaG9vdA0KICAgICdSZWNvcmQgdGhlIHRoZSBBY3R1YWwgU2hvdyBTaG9vdCBzdGF0dXMNCiAgICBTaG9vdFBvcyhhLDEpID0gU2hpcFggKyA2DQogICAgU2hvb3RQb3MoYSwyKSA9IFNoaXBZIC0gOA0KICAgIFNob3dTaG9vdChhKSA9IDENCiAgICAgICBJZiBBdWRpb19pc19wbGF5aW5nID0gMSBUaGVuDQogICAgICAgIFBsYXlNT0Qgc3RvcA0KICAgICAgICBQbGF5TU9EICJTaG9vdC5tb2QiICwgNjAwMA0KICAgICAgIEVsc2UNCiAgICAgICAgUGxheU1PRCAiU2hvb3QubW9kIiAsIDYwMDANCiAgICAgICBFbmRJZg0KICAgIEV4aXQgRm9yDQogICBFbmRJZg0KICBOZXh0IGENCkVuZCBTdWINCg0KU3ViIFB1dF9OZXdfRW5lbm15X0ZpcmUNCiAnSGVyZSB3ZSBjaGVjayBpZiB0aGUgRW5uZW15IGNhbiBhZGQgYSBuZXcgZmlyZQ0KIExvY2FsIGENCiBGb3IgYSA9IDEgVG8gTWF4X0VubmVteV9TaG9vdA0KICAgSWYgRW5uZW15U2hvd1Nob290KGEpID0gMCBUaGVuDQogICAgJ0VubmVteSBjYW4gYWRkIGEgc2hvb3QNCiAgICBFbm5lbXlTaG9vdFBvcyhhLDEpID0gRW5uZW15UG9zKGEsMSkgKyA2DQogICAgRW5uZW15U2hvb3RQb3MoYSwyKSA9IEVubmVteVBvcyhhLDIpICsgMTYNCiAgICBFbm5lbXlTaG93U2hvb3QoYSkgPSAxDQogICAgRXhpdCBGb3INCiAgIEVuZElmDQogTmV4dCBhDQpFbmQgU3ViDQoNCkZ1bmN0aW9uIFBvdF9SZWFkKEFEQ19QaW4pDQogJ1JlYWQgdGhlIHBvdGVudGlvbWV0ZXIgdmFsdWUgZm9yIHBsYWNlDQogJ3RoZSBYIGNvb3JkaW5hdGUgZnJvbSB0aGUgU2hpcA0KICdBRENfUGluIGlzIHRoZSBwaW4gbnVtYmVyIHdlIGhhdmUgZGVmaW5lIGZvciBBREMgaW5wdXQNCiBMb2NhbCBDYWxjUG90ICwgdG1wcG9zDQogQ2FsY1BvdCA9IDMgLyBNTS5IUmVzDQogdG1wcG9zID0gSW50KChQaW4oQURDX1BpbikgLTAuMSkgLyBDYWxjUG90KQ0KIElmIHRtcHBvcyAmZ3Q7IChNTS5IUmVzIC0gMTcpIFRoZW4gdG1wcG9zID0gTU0uSFJlcyAtIDE3DQogUG90X1JlYWQgPSB0bXBwb3MNCkVuZCBGdW5jdGlvbg0KDQpGdW5jdGlvbiBDaGVja19GaXJlKEZpcmVfQnV0dG9uKQ0KICdSZXR1cm4gdGhlIHZhbHVlIGZyb20gdGhlIEZpcmUgQnV0dG9uDQogJ0ZpcmVfQnV0dG9uIGlzIHRoZSBwaW4gbnVtYmVyIHdlIGhhdmUgZGVmaW5lIGFzIGZpcmUgYnV0dG9uDQogQ2hlY2tfRmlyZSA9IFBpbihGaXJlX0J1dHRvbikNCkVuZCBGdW5jdGlvbg0KDQpGdW5jdGlvbiBTZXRfRW5uZW15X0RpcihkdW1teSkNCiAnUmV0dXJuIC0xIG9yIDEgZm9yIHRoZSBFbm5lbXkgZGlyZWN0aW9uDQogTG9jYWwgYQ0KIGEgPSAwDQogIERvIFdoaWxlIGEgPSAwDQogICBJZiAoSW50KFJuZCAmIzQyOyAxMDApICsgMSApICZndDsgNTAgVGhlbg0KICAgIGEgPSAxDQogICBFbHNlDQogICAgYSA9IC0xDQogICBFbmRJZg0KICBMb29wDQogIFNldF9Fbm5lbXlfRGlyID0gYQ0KRW5kIEZ1bmN0aW9uDQoNCkZ1bmN0aW9uIFNldF9Fbm5lbXlfUG9zX1goZHVtbXkpDQogJ1NldCBFbm5lbXkgUG9zIFgNCiAgU2V0X0VubmVteV9Qb3NfWCA9IEludChSbmQgJiM0MjsgKE1NLkhSZXMgLSAzMCkpICsgMTUNCkVuZCBGdW5jdGlvbg0KDQpGdW5jdGlvbiBTZXRfRW5uZW15X1Bvc19ZKGR1bW15KQ0KICdTZXQgRW5uZW15IFBvcyBYDQogIFNldF9Fbm5lbXlfUG9zX1kgPSBJbnQoUm5kICYjNDI7IDMwKSArIDE1DQpFbmQgRnVuY3Rpb24NCg0KRnVuY3Rpb24gU2V0X0VubmVteV9TcGVlZChkdW1teSkNCiAnU2V0IHRoZSBFbm5lbXkgU3BlZWQgaW4gWQ0KIFNldF9Fbm5lbXlfU3BlZWQgPSBJbnQoUm5kICYjNDI7IDUpICsgMQ0KRW5kIEZ1bmN0aW9uDQoNCjwvcHJlPjxiciAvPmRkHTIRa+t9iz4NumEk3FzGS/aStsM=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Sprite demo: Arcade</h1><small>Modified on 2016/12/23 23:46 by Administrator &mdash; Categorized as: Games, Graphics, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required file(s) are available in the attachments tab (top right).<br /><br /><b>Arcade</b>:<br />Arcade game where you have to shoot enemies until you die 3 times. It shows how to use multi-sprite enemies, audio modules as sound effects and ADC input for moving your ship Right/Left with a potentiometer + a Button to fire.<br /><br /><b>ARCATST.BAS</b>:<br /><pre>
+'Arcade game test for Colour Maximite v4.0
+'Fabrice Muller 2012
+'All music modules have to be copied to a&#58;
+'The sprites are read from b&#58;
+'Joystick connections are &#58;
+'Pin 2  = 10Kohm Potentiometer
+'
+'                Pin 2
+'                  |
+'                  |
+'                /   \
+' +3v3 &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;| o |&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; GND
+'                \&#95;&#95;_/
+'
+'         10Kohm Potentiometer
+'
+'
+'Pin 15 = Button connected to GND , 10Kohm pullup resistor to pin 15
+'
+'                                    &#95;&#95;|&#95;&#95;
+'
+'               10 Kohm              |   |
+' +3v3 &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-/\/\/\/\&#45;&#45;&#45;&#45;-|&#45;&#45;&#45;&#45;&#45;&#45;-|   |&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; GND
+'                            |
+'                            |       Button
+'                          Pin 15
+'
+'All arrays start at index 1
+Option Base 1
+'Erase all variables values from memory
+Clear
+'Load the Sprites
+Drive "b&#58;"
+Sprite Load "arcade01.spr"
+Drive "a&#58;"
+'Arrays declaration
+Dim ShootSpr(5)
+Dim ShowShoot(5)
+Dim ShootPos(5,2)
+Dim EnnemySpr(10)
+Dim EnnemyPos(10,2)
+Dim EnnemyShow(10)
+Dim EnnemyDir(10)
+Dim EnnemySpeed(10)
+Dim EnnemyKilled(10)
+Dim EnnemyShootSpr(10)
+Dim EnnemyShootPos(10,2)
+Dim EnnemyShowShoot(10)
+Dim Sprite_to_Show(26)
+Dim Cx(26)
+Dim Cy(26)
+'Main ship sprite number is 1
+ShipSpr = 1
+'Global Variables declaration
+Max_Shoot = 5
+Max_Ennemy = 10
+Max_Ennemy_Shoot = 10
+Max_Sprite = 26
+Shoot_Speed = -5
+Ennemy_Shoot_Speed = 5
+SpriteFlip = 0
+OutsideX = 0
+OutsideY = 0
+ShipX = 0
+ShipY = 0
+Audio_is_playing = 0
+Fire = 0
+Lives = 0
+Score = 0
+'Joystick declaration
+'Pin 2 as ADC input for a 10Kohm potentiometer
+SetPin 2,1
+'PIN 15 = Fire Button 1
+SetPin 15,2
+'Initialise the sprites and screen
+Initialise
+'General game loop
+Do While 1
+ 'Here we check if we fire every 300mS
+ If (Timer Mod 200) &gt;= 100 Then
+  fire = Check_Fire(15)
+  'Put a new fire if possible
+  If fire = 0 Then Put_New_Fire
+ EndIf
+ 'Here we move the Ship
+ ShipX = Pot_Read(2)
+ 'Here we move all Ennemys
+ Move_Ennemy
+ 'Here we move the Shoots we have fired
+ Move_Shoot
+ 'Here we move the Ennemys Shoots they have fired
+ Move_Ennemy_Shoot
+ 'Here we check if we have kill a Ennemy
+ Check_Ennemy_Dead
+ 'Here we Check if the Ennemys kill us
+ Check_Player_Dead
+ 'We Random the Ennemy Shoots
+ If Int(Rnd &#42; 100) &gt; 80 Then Put_New_Enenmy_Fire
+ 'Here we redraw all Sprites every 100mS
+ Show_All_Sprites
+ Print @(60,0) "Lives &#58; ";Lives;" "
+ Print @(150,0) "Score &#58; ";Score;" "
+Loop
+
+Sub Initialise
+ Local a
+ 'Set all the Sprite first
+ For a = 1 To Max_Shoot
+  'Shoot Sprites start at 2
+  ShootSpr(a) = a + 1
+  ShowShoot(a) = 0
+ Next a
+ For a = 1 To Max_Ennemy
+  'Ennemy Sprites start at 7
+  EnnemySpr(a) = a + 6
+  'Don't show the ennemys now
+  EnnemyShow(a) = 1
+  'Reset Ennemys Directions
+  EnnemyDir(a) = 0
+  'Reset the Ennemys Speed
+  EnnemySpeed(a) = 2
+  'Put all Ennemy as not Killed
+  EnnemyKilled(a) = 0
+ Next a
+ For a = 1 To Max_Ennemy_Shoot
+  'Ennemy Shoot Sprites start at 17
+  EnnemyShootSpr(a) = a + 16
+  EnnemyShowShoot(a) = 0
+ Next a
+ SpriteFlip = 0
+ 'Set Lives ans Score
+ Lives = 3
+ Score = 0
+ ' Set the graphics mode
+ Mode 4
+ 'Erase the screen
+ Cls
+ 'Wait for a key to start
+ Print @(80 , 100) "Press a key to start"
+ Do While Inkey$ = "" &#58; Loop
+ Cls
+ 'Initialise the random number generator
+ Randomize Timer
+ 'Place the ship
+ ShipX = Pot_Read(2)
+ ShipY = 198
+ 'Set the Ennemys Positions and directions
+ For a = 1 To Max_Ennemy
+  EnnemyPos(a,1) = Set_Ennemy_Pos_X(1)
+  EnnemyPos(a,2) = Set_Ennemy_Pos_Y(1)
+  EnnemyDir(a)   = Set_Ennemy_Dir(1)
+  EnnemySpeed(a) = Set_Ennemy_Speed(1)
+ Next a
+ OutsideX = -20
+ OutsideY = -20
+ Start_All_Sprite
+ 'Reset the timer for the game loop
+ Timer = 0
+End Sub
+
+Sub Start_All_Sprite
+ 'We start all sprite here outside the screen
+ 'for not have to look at on/off status
+ 'This improve the performance.
+ 'Sprite order&#58;
+ 'Sprite 1
+ Sprite On ShipSpr,OutsideX,OutsideY
+ 'Sprite 2 to 6
+ For a = 1 To Max_Shoot
+  Sprite On ShootSpr(a),OutsideX,OutsideY
+ Next a
+ 'Sprite 7 to 16
+ For a = 1 To Max_Ennemy
+  Sprite On EnnemySpr(a),OutsideX,OutsideY
+ Next a
+ 'Sprite 17 to 26
+ For a = 1 To Max_Ennemy_Shoot
+  Sprite On EnnemyShootSpr(a),OutsideX,OutsideY
+ Next a
+End Sub
+
+Sub Show_All_Sprites
+ 'Here we show all sprite in respecting the
+ 'Order needed for the Sprite function
+ 'We record the Ship info
+ Sprite_to_Show(ShipSpr) = ShipSpr
+ Cx(ShipSpr) = ShipX
+ Cy(ShipSpr) = ShipY
+ 'Check if Sprites have to be Moved or
+ 'pushed out of the screen
+ For a = 1 To Max_Shoot
+  If ShowShoot(a) = 1 Then
+   Sprite_to_Show(ShootSpr(a)) = 1
+   Cx(ShootSpr(a))=ShootPos(a,1)
+   Cy(ShootSpr(a))=ShootPos(a,2)
+  Else
+   Sprite_to_Show(ShootSpr(a)) = 0
+   Cx(ShootSpr(a))=OutsideX
+   Cy(ShootSpr(a))=OutsideY
+  EndIf
+ Next a
+ For a = 1 To Max_Ennemy
+  If EnnemyShow(a) = 1 Then
+   Sprite_to_Show(EnnemySpr(a)) = 1
+   Cx(EnnemySpr(a))=EnnemyPos(a,1)
+   Cy(EnnemySpr(a))=EnnemyPos(a,2)
+  Else
+   Sprite_to_Show(EnnemySpr(a)) = 0
+   Cx(EnnemySpr(a))=OutsideX
+   Cy(EnnemySpr(a))=OutsideY
+  EndIf
+ Next a
+ For a = 1 To Max_Ennemy_Shoot
+  If EnnemyShowShoot(a) = 1 Then
+   Sprite_to_Show(EnnemyShootSpr(a)) = 1
+   Cx(EnnemyShootSpr(a))=EnnemyShootPos(a,1)
+   Cy(EnnemyShootSpr(a))=EnnemyShootPos(a,2)
+  Else
+   Sprite_to_Show(EnnemyShootSpr(a)) = 0
+   Cx(EnnemyShootSpr(a))=OutsideX
+   Cy(EnnemyShootSpr(a))=OutsideY
+  EndIf
+ Next a
+
+ If SpriteFlip = 0 Then
+  'Sprites was drawn 1st to last , we erase or move
+  'then Last to 1st
+  'Drawing Order was &#58;
+  'Ship
+  'Shoot
+  'Ennemy
+  'Ennemy_Shoot
+  '
+  'Here we move the Sprite or put them out of the screen
+  For a = Max_Sprite To 1 Step - 1
+   Sprite Off a
+  Next a
+  For a = Max_Sprite To 1 Step - 1
+   If Sprite_to_Show(a) = 0 Then
+    Sprite On a,OutsideX,OutsideY
+   Else
+    Sprite On a,Cx(a),Cy(a)
+   EndIf
+  Next a
+  SpriteFlip = 1
+ Else
+  'Sprites was drawn last to 1st , we erase or move
+  'then 1st to last
+  'Drawing Order was &#58;
+  'Ennemy_Shoot
+  'Ennemy
+  'Shoot
+  'Ship
+  '
+  'Here we move the Sprite or put them out of the screen
+  For a = 1 To Max_Sprite
+    Sprite Off a
+  Next a
+  For a = 1 To Max_Sprite
+   If Sprite_to_Show(a) = 0 Then
+    Sprite On a,OutsideX,OutsideY
+   Else
+    Sprite On a,Cx(a),Cy(a)
+   EndIf
+  Next a
+  SpriteFlip = 0
+ EndIf
+End Sub
+
+Sub Move_Ennemy
+ 'Move all ennemy Ship
+ Local a
+ For a = 1 To Max_Ennemy
+  If EnnemyShow(a) = 1 Then
+   EnnemyPos(a,1) = EnnemyPos(a,1) + EnnemyDir(a)
+   'We look if the Ennemy bump at a screen border
+   'If so , we reverse his direction
+   If EnnemyPos(a,1) &lt; 1 Then EnnemyDir(a) = 1
+   If EnnemyPos(a,1) &gt; MM.HRes - 18 Then EnnemyDir(a) = -1
+   'We made the Ennemy go down
+   EnnemyPos(a,2) = EnnemyPos(a,2) + EnnemySpeed(a)
+   'If the ennemy go outside the screen or if we kill
+   'then we put it at new place
+   If (EnnemyPos(a,2) &gt;= (MM.VRes - 40)) Or (EnnemyKilled(a) = 1) Then
+    EnnemyPos(a,1) = Set_Ennemy_Pos_X(1)
+    EnnemyPos(a,2) = Set_Ennemy_Pos_Y(1)
+    EnnemyDir(a)   = Set_Ennemy_Dir(1)
+   EndIf
+   'Update the score if we kill a Ennemy
+   If EnnemyKilled(a) = 1 Then
+    EnnemyKilled(a) = 0
+       Score = Score + 10
+   EndIf
+  EndIf
+ Next a
+End Sub
+
+Sub Move_Shoot
+ 'Move the player shoots
+ Local a
+ For a = 1 To Max_Shoot
+  If ShowShoot(a) = 1 Then
+   ShootPos(a,2) = ShootPos(a,2) + Shoot_Speed
+   'If the Shoot go outside the screen we put it
+   'as not showed
+   If ShootPos(a,2) &lt; 18 Then ShowShoot(a) = 0
+  EndIf
+ Next a
+End Sub
+
+Sub Move_Ennemy_Shoot
+ 'Move the ennemys shoots
+ Local a
+ For a = 1 To Max_Ennemy_Shoot
+  If EnnemyShowShoot(a) = 1 Then
+   EnnemyShootPos(a,2) = EnnemyShootPos(a,2) + Ennemy_Shoot_Speed
+   'If the Shoot go outside the screen we put it
+   'as not showed
+   If EnnemyShootPos(a,2) &gt;= MM.VRes Then EnnemyShowShoot(a) = 0
+  EndIf
+ Next a
+End Sub
+
+Sub Check_Ennemy_Dead
+ 'Check if we have kill one of the Ennemy
+ Local a,b
+ Local px,py
+ For a = 1 To Max_Ennemy
+  px = EnnemyPos(a,1) + 15
+  py = EnnemyPos(a,2) + 15
+  For b = 1 To Max_Shoot
+   If ShowShoot(b) = 1 Then
+    If (ShootPos(b,1) &gt;= EnnemyPos(a,1)) And (ShootPos(b,1) &lt;= px) Then
+        If (ShootPos(b,2) &gt;= EnnemyPos(a,2)) And (ShootPos(b,2) &lt;= py) Then
+         'We have killed this ennemy
+         EnnemyKilled(a) = 1
+         Score = Score + 10
+         ShowShoot(b) = 0
+               If Audio_is_playing = 1 Then
+                PlayMOD stop
+                PlayMOD "Explode.mod" , 6000
+               Else
+                PlayMOD "Explode.mod" , 6000
+               EndIf
+         Exit For
+        EndIf
+       EndIf
+   EndIf
+  Next b
+ Next a
+End Sub
+
+Sub Check_Player_Dead
+ 'Check if the Ennemys kill us
+ Local a,px,py
+ px = ShipX + 15
+ py = ShipY + 15
+ For a = 1 To Max_Ennemy_Shoot
+  If EnnemyShowShoot(a) = 1 Then
+   If (EnnemyShootPos(a,1) &gt;= ShipX) And (EnnemyShootPos(a,1) &lt;= px) Then
+    If (EnnemyShootPos(a,2) &gt;= ShipY) And (EnnemyShootPos(a,2) &lt;= py) Then
+     'The Ennemy Kill us !
+     '............... to continue ............
+     Lives = Lives - 1
+     If Lives = 0 Then
+         Drive "b&#58;"
+         Print @(100,80) "Game Over"
+         Print @(80,120) "press a key to restart"
+         Do While Inkey$ = "" &#58; Loop
+      End
+     Else
+      Exit Sub
+     EndIf
+    EndIf
+   EndIf
+  EndIf
+ Next a
+End Sub
+
+Sub Put_New_Fire
+ 'Here we check if we can add a new fire
+ Local a
+  For a = 1 To Max_Shoot
+   If ShowShoot(a) = 0 Then
+    'we can add a shoot
+    'Record the the Actual Show Shoot status
+    ShootPos(a,1) = ShipX + 6
+    ShootPos(a,2) = ShipY - 8
+    ShowShoot(a) = 1
+       If Audio_is_playing = 1 Then
+        PlayMOD stop
+        PlayMOD "Shoot.mod" , 6000
+       Else
+        PlayMOD "Shoot.mod" , 6000
+       EndIf
+    Exit For
+   EndIf
+  Next a
+End Sub
+
+Sub Put_New_Enenmy_Fire
+ 'Here we check if the Ennemy can add a new fire
+ Local a
+ For a = 1 To Max_Ennemy_Shoot
+   If EnnemyShowShoot(a) = 0 Then
+    'Ennemy can add a shoot
+    EnnemyShootPos(a,1) = EnnemyPos(a,1) + 6
+    EnnemyShootPos(a,2) = EnnemyPos(a,2) + 16
+    EnnemyShowShoot(a) = 1
+    Exit For
+   EndIf
+ Next a
+End Sub
+
+Function Pot_Read(ADC_Pin)
+ 'Read the potentiometer value for place
+ 'the X coordinate from the Ship
+ 'ADC_Pin is the pin number we have define for ADC input
+ Local CalcPot , tmppos
+ CalcPot = 3 / MM.HRes
+ tmppos = Int((Pin(ADC_Pin) -0.1) / CalcPot)
+ If tmppos &gt; (MM.HRes - 17) Then tmppos = MM.HRes - 17
+ Pot_Read = tmppos
+End Function
+
+Function Check_Fire(Fire_Button)
+ 'Return the value from the Fire Button
+ 'Fire_Button is the pin number we have define as fire button
+ Check_Fire = Pin(Fire_Button)
+End Function
+
+Function Set_Ennemy_Dir(dummy)
+ 'Return -1 or 1 for the Ennemy direction
+ Local a
+ a = 0
+  Do While a = 0
+   If (Int(Rnd &#42; 100) + 1 ) &gt; 50 Then
+    a = 1
+   Else
+    a = -1
+   EndIf
+  Loop
+  Set_Ennemy_Dir = a
+End Function
+
+Function Set_Ennemy_Pos_X(dummy)
+ 'Set Ennemy Pos X
+  Set_Ennemy_Pos_X = Int(Rnd &#42; (MM.HRes - 30)) + 15
+End Function
+
+Function Set_Ennemy_Pos_Y(dummy)
+ 'Set Ennemy Pos X
+  Set_Ennemy_Pos_Y = Int(Rnd &#42; 30) + 15
+End Function
+
+Function Set_Ennemy_Speed(dummy)
+ 'Set the Ennemy Speed in Y
+ Set_Ennemy_Speed = Int(Rnd &#42; 5) + 1
+End Function
+
+</pre><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Sprite-demo-Arcade-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:32 GMT -->
+</html>

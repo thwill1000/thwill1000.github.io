@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc&Revision=2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:54:54 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc&amp;Revision=2" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAVhUGFnZSBIaXN0b3J5OiBWVCBDb25zb2xlIFBhY2suIFNjcmVlbiBQb3NpdGlvbmluZywgU2FuZSBLZXkgU2Nhbm5pbmcgQW5kIGEgU3RyaW5nIEVkaXRpbmcgUm91dGluZWQCBQ8QZBAVBAEzATIBMQEwFQQBMwEyATEBMBQrAwRnZ2dnZGQCBw8QZBAVBQdDdXJyZW50ATMBMgExATAVBQdDdXJyZW50ATMBMgExATAUKwMFZ2dnZ2dkZAILDxYCHwAF4ik8dGFibGUgY2xhc3M9ImJveCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIj48dHI+PHRkPjxwIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij48Yj48YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuU2ltcGxlLXNjcmVlbi1Db250cm9sLWZvci1BTlNJLWJhc2VkLUNvbnNvbGVzLVZUMTAwLWV0YyZhbXA7UmV2aXNpb249MDAwMDEiPiZsYXF1bzsgT2xkZXIgUmV2aXNpb248L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLlNpbXBsZS1zY3JlZW4tQ29udHJvbC1mb3ItQU5TSS1iYXNlZC1Db25zb2xlcy1WVDEwMC1ldGMiPkJhY2sgdG8gUGFnZSBIaXN0b3J5PC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5TaW1wbGUtc2NyZWVuLUNvbnRyb2wtZm9yLUFOU0ktYmFzZWQtQ29uc29sZXMtVlQxMDAtZXRjJmFtcDtSZXZpc2lvbj0wMDAwMyI+TmV3ZXIgUmV2aXNpb24gJnJhcXVvOzwvYT48L2I+PC9wPjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPjxoMyBjbGFzcz0ic2VwYXJhdG9yIj5QYWdlIFJldmlzaW9uOiAyMDIwLzA3LzEzIDE3OjIxPC9oMz48YnIgLz5Ob3QgYWxsIHByb2plY3RzIHJlcXVpcmUgYW4gTENEIHBhbmVsIGJ1dCBhIHNpbXBsZSBjb25zb2xlIGNvbm5lY3Rpb24gY2FuIG9mdGVuIGJlbmVmaXQgZnJvbSBhIGJpdCBtb3JlIHRoYW4gYSBkdW1iIHNjcm9sbGluZyBkaXNwbGF5LjxiciAvPjxiciAvPlRoZSBmb2xsb3dpbmcgU3VicyBhbmQgRnVuY3Rpb25zIHByb3ZpZGUgZnVuY3Rpb25hbGl0eSBzaW1pbGFyIHRvIHRoYXQgZm91bmQgb24gcGVyc29uYWwgY29tcHV0ZXJzIHByZXZhbGVudCBpbiB0aGUgODBzLiBDb25zb2xlIGRpc3BsYXlzIGNhbiBiZSBtYWRlIHF1aXRlIHBsZWFzYW50IHdpdGggdGhpcyBvdXRwdXQgYW5kIGhhcmsgYmFjayB0byB0aGUgY2hhcmFjdGVyIGJhc2VkIHNjcmVlbnMgb2YgZWFybHkgUENzLiA8YnIgLz48YnIgLz5BdCgpIC0gU2NyZWVuIHBvc2l0aW9uaW5nIHVzZXMgdGhlICJBdCIgZnVuY3Rpb24gZm9yIGN1cnNvciBwb3NpdGlvbmluZy4gSXQgdXNlcyBsZXNzIHByb2dyYW0gc3BhY2UgYW5kIGlzIGFyZ3VhYmx5IG1vcmUgaW50dWl0aXZlIHRoYW4gYSBzdGFuZC1hbG9uZSBMT0NBVEUgY29tbWFuZC4gTm90ZSB0aGF0IGJlY2F1c2UgaXQgcHJvZHVjZXMgYSBzdHJpbmcsIGEgOyBvciArIG11c3QgYmUgdXNlZCB3aGVuIHByaW50aW5nIGZvbGxvd2luZyBvdXRwdXQuPGJyIC8+PGJyIC8+VlRLZXkkKCkgLSBLZXkgU2Nhbm5pbmcgZm9yIG5vbi1BU0NJSSBrZXlzIChGdW5jdGlvbiBrZXlzLCBIb21lLCBQYWdlVXAgZXRjLikgaXMgYSByZWFsIHBhaW4gaW4gdGhlIG5lY2suIFRoZSBGdW5jdGlvbiBWVEtleSQoKSBjYW4gYmUgdXNlZCB0byByZXBsYWNlIElua2V5JCBhbmQgd2lsbCByZXR1cm4gZWl0aGVyIHRoZSBBU0NJSSB2YWx1ZSBvZiB0aGUga2V5IHByZXNzZWQgb3IgYSBwcmVkaWN0YWJsZSB0aHJlZS1sZXR0ZXIgdG9rZW4gZm9yIGFueSBvZiB0aGUgc3BlY2lhbCBrZXlzLiA8YnIgLz48YnIgLz5Zb3VyIGNvbnNvbGUgZW11bGF0b3IgbXVzdCBzdXBwb3J0IEFOU0kgc2NyZWVuL2tleWJvYXJkIGNvZGVzIC0gdXN1YWxseSBkZWZpbmVkIGFzIFZUNTIsIFZUMTAwIGV0Yy4gZW11bGF0aW9uLiBQZXJzb25hbGx5IEkgdXNlIFB1VFRZLjxiciAvPjxiciAvPjxiPkRlcGVuZGFuY2llczwvYj48YnIgLz48dWw+PGJyIC8+PGxpPk9wdGlvbiBCYXNlIDA8L2xpPjxiciAvPjxsaT5SZXF1aXJlcyB0aGUgPGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLlZCLVdvcmstYS1saWtlLUxUcmltLWFuZC1SVFJJTS1GdW5jdGlvbnMuYXNoeCIgdGl0bGU9IkxUcmltIGFuZCBSVHJpbSBGdW5jdGlvbnMgKFZCIHdvcmstYS1saWtlKSI+TFRyaW0gYW5kIFJUUklNIEZ1bmN0aW9ucyAoVkIgd29yay1hLWxpa2UpPC9hPiBvciB0aGUgZXF1aXZhbGVudCA8YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuTFRyaW0tUlRyaW0tY0Z1bmN0aW9ucy5hc2h4IiB0aXRsZT0iTFRyaW0gUlRyaW0gQ0Z1bmN0aW9ucyI+TFRyaW0gUlRyaW0gQ0Z1bmN0aW9uczwvYT4gKG5vdGUgdGhpcyBsYXR0ZXIgZG9lcyBub3QgdHJlYXQgVEFCcyBhcyB3aGl0ZS1zcGFjZSBhbmQgc28gYXJlIG5vdCB0cmltbWVkKS48L2xpPjxiciAvPjwvdWw+PGJyIC8+PGI+RXhhbXBsZSBVc2FnZTwvYj48YnIgLz48cHJlPg0KCU9wdGlvbiBCYXNlIDANCglJbml0VlRLZXlzDQoJDQpNYWluJiM1ODsnIGp1c3Qgc29tZXRoaW5nIHRvIGRlbW9uc3RyYXRlIHVzYWdlDQoNCglDbHIgJyBjbGVhciB0aGUgc2NyZWVuDQoNCglGb3Igbj0xIFRvIDI1ICcgcHJpbnQgb3V0IGEgZGlhZ29uYWwgbGluZSBvZiBudW1iZXJzDQoJCVByaW50IEF0KG4sbik7U3RyJChuKQ0KCU5leHQNCg0KCVdpbmRvdyA2LDEwICcgZGVmaW5lICB3aW5kb3cNCglGb3Igbj0xIFRvIDI1ICcgZGVtb25zdHJhdGUgdGhlIGNvbnRhaW5lZCBhcmVhIG9mIHRoZSBzY3JlZW4NCgkJUHJpbnQgbg0KCU5leHQNCgkNCglXaW5kb3cgMSwyNQ0KCQ0KCUNscg0KCQ0KCWEkPVN0ckVkaXQkKCJGcmVkIiwxMCwxMCw2MCkNCgkNCgk/IEF0KDEsMSk7YSQNCjwvcHJlPjxiciAvPjxiPlRoZSBDb2RlPC9iPjxiciAvPjxwcmU+DQoNCglGdW5jdGlvbiBBdCh2IEFzIEludGVnZXIsaCBBcyBJbnRlZ2VyKSBBcyBTdHJpbmcNCgkJQXQ9Q2hyJCgyNykrIiYjOTE7IitTdHIkKHYpKyI7IitTdHIkKGgpKyJIIg0KCUVuZCBGdW5jdGlvbg0KDQoJU3ViIENscg0KCQlXaW5kb3cgMSwyNScgcmVkZWZpbmUgdGhlIHdob2xlIHNjcmVlbg0KCQlQcmludCBDaHIkKDI3KSsiJiM5MTsySiI7DQoJRW5kIFN1Yg0KDQoJU3ViIFdpbmRvdyhQdCBBcyBJbnRlZ2VyLCBQYiBBcyBJbnRlZ2VyKQ0KCSdkZWZpbmVzIGEgd2luZG93IGZyb20gbGluZSB0IHRvIGxpbmUgYiBhbmQgcG9zaXRpb25zIHRoZSBjdXJzb3IgaW4gdGhlIHN0YXJ0IG9mIGl0DQoJJ0NsciBhbmQgQXQgc3RpbGwgd29yayBvbiB0aGUgd2hvbGUgc2NyZWVuLiBPbmx5IHdoZW4gc2Nyb2xsaW5nIChvciBDUkxGKSBlbnRlcmVzIHRoZQ0KCSd3aW5kb3cgZG9lcyBpdCBjYXB0dXJlIHRoZSBjdXJzb3IuIE5vdGUgMCZsdDtQdCZsdDtQYiBpcyBlbmZvcmNlZCBieSB0aGUgY29uc29sZSBlbXVsYXRvcg0KCQlQcmludCBDaHIkKDI3KSsiJiM5MTsiK1N0ciQoUHQpKyI7IitTdHIkKFBiKSsiciIrQXQoUHQsMSk7DQoJRW5kIFN1Yg0KCQ0KCUZ1bmN0aW9uIFZUS2V5JCgpICcgcmVwbGFjZXMgSW5rZXkkIGFuZCB3aWxsIHJldHVybiB0aGUgY2hhcmFjdGVyIHByZXNzZWQgb3IgdGhlIHNwZWNpYWwgdG9rZW4gX3h4DQoJCUxvY2FsIGEkDQoJCVZUS2V5JD1JbmtleSQNCgkJUGF1c2UgMjUgJyBnaXZlIHRoZSByZW1haW5pbmcgc2VxdWVuY2UgKGlmIGFueSkgdGltZSB0byBhcnJpdmUuIEFueSBsZXNzIHRoYW4gMjUgY2FuIGdpdmUgbWlzLXJlYWRzIG9mIGV4cGFuZGVkIHRva2Vucw0KCQlEbw0KCQkJYSQ9SW5rZXkkJiM1ODtJZiBhJD0iIiBUaGVuIEV4aXQgRG8gJyBqdW1wIG91dCB3aGVuIHdlIGFyZSBzY2FubmluZyAiIg0KCQkJVlRLZXkkPVZUS2V5JCthJCAnIGJ1aWxkIHVwIHRoZSBjaGFyYWN0ZXIgY29kZXMNCgkJTG9vcAkJDQoJCUlmIExlbihWVEtleSQpJmd0OzEgVGhlbiBWVEtleSQ9RXhwYW5kS2V5KFZUS2V5JCkNCglFbmQgRnVuY3Rpb24NCgkNCglGdW5jdGlvbiBFeHBhbmRLZXkoYyQpIEFzIFN0cmluZycgY2FsbGVkIGZyb20gVlRLZXkkDQoJCUxvY2FsIG4NCgkJRm9yIG49MCBUbyBLY3QNCgkJCUlmIEtDb2RlJChuKT1jJCBUaGVuIEV4cGFuZEtleT1LVGtuJChuKSYjNTg7RXhpdCBGdW5jdGlvbg0KCQlOZXh0DQoJCUV4cGFuZEtleT0iIg0KCUVuZCBGdW5jdGlvbg0KDQoJU3ViIEluaXRWVEtleXMNCgkJRGltIEludGVnZXIgS2N0DQoJCUxvY2FsIHgkDQoJCUxvY2FsIEludGVnZXIgcQ0KS2V5RGF0YSYjNTg7DQoJCScgJmx0O2VzYyZndDsgJiM5MTsNCgkJRGF0YSAyNyw5MSw2OCwwLCJfTFQiDQoJCURhdGEgMjcsOTEsNjcsMCwiX1JUIg0KCQlEYXRhIDI3LDkxLDY1LDAsIl9VUCINCgkJRGF0YSAyNyw5MSw2NiwwLCJfRE4iDQoJCURhdGEgMjcsOTEsNDksMTI2LDAsIl9ITSINCgkJRGF0YSAyNyw5MSw1MCwxMjYsMCwiX0lOIg0KCQlEYXRhIDI3LDkxLDUxLDEyNiwwLCJfREwiDQoJCURhdGEgMjcsOTEsNTIsMTI2LDAsIl9FRCINCgkJRGF0YSAyNyw5MSw1MywxMjYsMCwiX1BVIg0KCQlEYXRhIDI3LDkxLDU0LDEyNiwwLCJfUEQiDQoJCURhdGEgMjcsOTEsNTUsMTI2LDAsIl9ITSINCgkJRGF0YSAyNyw5MSw1NiwxMjYsMCwiX0VEIg0KCQlEYXRhIDI3LDkxLDQ5LDQ5LDEyNiwwLCJfRjEiDQoJCURhdGEgMjcsOTEsNDksNTAsMTI2LDAsIl9GMiINCgkJRGF0YSAyNyw5MSw0OSw1MSwxMjYsMCwiX0YzIg0KCQlEYXRhIDI3LDkxLDQ5LDUyLDEyNiwwLCJfRjQiDQoJCURhdGEgMjcsOTEsNDksNTMsMTI2LDAsIl9GNSINCgkJRGF0YSAyNyw5MSw0OSw1NSwxMjYsMCwiX0Y2Ig0KCQlEYXRhIDI3LDkxLDQ5LDU2LDEyNiwwLCJfRjciDQoJCURhdGEgMjcsOTEsNDksNTcsMTI2LDAsIl9GOCINCgkJRGF0YSAyNyw5MSw1MCw0OCwxMjYsMCwiX0Y5Ig0KCQlEYXRhIDI3LDkxLDUwLDQ5LDEyNiwwLCJfRkEiDQoJCURhdGEgMjcsOTEsNTAsNTEsMTI2LDAsIl9GQiINCgkJRGF0YSAyNyw5MSw1MCw1MiwxMjYsMCwiX0ZDIg0KCQlEYXRhIDI1NQkJDQoNCgkJUmVzdG9yZSBLZXlEYXRhICdkZXRlcm1pbmUgc2l6ZSBvZiB0aGUga2V5IHRhYmxlDQoJCURvDQoJCQlSZWFkIHENCgkJCUlmIHE9MjU1IFRoZW4gRXhpdCBEbw0KCQkJSWYgcT0wIFRoZW4gS2N0PUtjdCsxJiM1ODtSZWFkIHgkDQoJCUxvb3ANCg0KCQlEaW0gS0NvZGUkKEtjdC0xKSBMZW5ndGggNQ0KCQlEaW0gS1RrbiQoS2N0LTEpIExlbmd0aCAzDQoNCgkJUmVzdG9yZSBLZXlEYXRhDQoJCUtjdD0wDQoJCURvDQoJCQlSZWFkIHENCgkJCUlmIHE9MjU1IFRoZW4gS2N0PUtjdC0xJiM1ODtFeGl0IERvICcgYWRqdXN0IEtjdCB0byBwb2ludCBhdCB0b3Agb2Yga2V5IGFycmF5DQoJCQlJZiBxPTAgVGhlbg0KCQkJCVJlYWQgS1RrbiQoS2N0KQ0KCQkJCUtjdD1LY3QrMQ0KCQkJRWxzZQ0KCQkJCUtDb2RlJChLY3QpPUtDb2RlJChLY3QpK0NociQocSkNCgkJCUVuZElmDQoJCUxvb3ANCg0KCQknSGVyZSBLQ29kZSQobikgaXMgdGhlIGtleSBzZXF1ZW5jZXMgd2UgZ2V0IGZyb20gdGhlIGtleXByZXNzDQoJCScgICAgIEtUa24kKG4pICBpcyB0aGUgc2hvcnRoYW5kIGNvZGUgbmFtZSBfeHgNCglFbmQgU3ViDQo8L3ByZT48YnIgLz5kZF+Ii8b25nNar79SD9vHVom7MeUQ" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCwL16ffgCAK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCcOcMvUs8zxAc5x07CXuFnhNRaIh" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login6908.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc%26Revision%3d2" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.History5cef.html?Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc&amp;Revision=00001">&laquo; Older Revision</a> - <a href="MMBasic.History693b.html?Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc">Back to Page History</a> - <a href="MMBasic.History45ff.html?Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc&amp;Revision=00003">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2020/07/13 17:21</h3><br />Not all projects require an LCD panel but a simple console connection can often benefit from a bit more than a dumb scrolling display.<br /><br />The following Subs and Functions provide functionality similar to that found on personal computers prevalent in the 80s. Console displays can be made quite pleasant with this output and hark back to the character based screens of early PCs. <br /><br />At() - Screen positioning uses the "At" function for cursor positioning. It uses less program space and is arguably more intuitive than a stand-alone LOCATE command. Note that because it produces a string, a ; or + must be used when printing following output.<br /><br />VTKey$() - Key Scanning for non-ASCII keys (Function keys, Home, PageUp etc.) is a real pain in the neck. The Function VTKey$() can be used to replace Inkey$ and will return either the ASCII value of the key pressed or a predictable three-letter token for any of the special keys. <br /><br />Your console emulator must support ANSI screen/keyboard codes - usually defined as VT52, VT100 etc. emulation. Personally I use PuTTY.<br /><br /><b>Dependancies</b><br /><ul><br /><li>Option Base 0</li><br /><li>Requires the <a class="pagelink" href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTRIM Functions (VB work-a-like)</a> or the equivalent <a class="pagelink" href="MMBasic.LTrim-RTrim-cFunctions.html" title="LTrim RTrim CFunctions">LTrim RTrim CFunctions</a> (note this latter does not treat TABs as white-space and so are not trimmed).</li><br /></ul><br /><b>Example Usage</b><br /><pre>
+	Option Base 0
+	InitVTKeys
+	
+Main&#58;' just something to demonstrate usage
+
+	Clr ' clear the screen
+
+	For n=1 To 25 ' print out a diagonal line of numbers
+		Print At(n,n);Str$(n)
+	Next
+
+	Window 6,10 ' define  window
+	For n=1 To 25 ' demonstrate the contained area of the screen
+		Print n
+	Next
+	
+	Window 1,25
+	
+	Clr
+	
+	a$=StrEdit$("Fred",10,10,60)
+	
+	? At(1,1);a$
+</pre><br /><b>The Code</b><br /><pre>
+
+	Function At(v As Integer,h As Integer) As String
+		At=Chr$(27)+"&#91;"+Str$(v)+";"+Str$(h)+"H"
+	End Function
+
+	Sub Clr
+		Window 1,25' redefine the whole screen
+		Print Chr$(27)+"&#91;2J";
+	End Sub
+
+	Sub Window(Pt As Integer, Pb As Integer)
+	'defines a window from line t to line b and positions the cursor in the start of it
+	'Clr and At still work on the whole screen. Only when scrolling (or CRLF) enteres the
+	'window does it capture the cursor. Note 0&lt;Pt&lt;Pb is enforced by the console emulator
+		Print Chr$(27)+"&#91;"+Str$(Pt)+";"+Str$(Pb)+"r"+At(Pt,1);
+	End Sub
+	
+	Function VTKey$() ' replaces Inkey$ and will return the character pressed or the special token _xx
+		Local a$
+		VTKey$=Inkey$
+		Pause 25 ' give the remaining sequence (if any) time to arrive. Any less than 25 can give mis-reads of expanded tokens
+		Do
+			a$=Inkey$&#58;If a$="" Then Exit Do ' jump out when we are scanning ""
+			VTKey$=VTKey$+a$ ' build up the character codes
+		Loop		
+		If Len(VTKey$)&gt;1 Then VTKey$=ExpandKey(VTKey$)
+	End Function
+	
+	Function ExpandKey(c$) As String' called from VTKey$
+		Local n
+		For n=0 To Kct
+			If KCode$(n)=c$ Then ExpandKey=KTkn$(n)&#58;Exit Function
+		Next
+		ExpandKey=""
+	End Function
+
+	Sub InitVTKeys
+		Dim Integer Kct
+		Local x$
+		Local Integer q
+KeyData&#58;
+		' &lt;esc&gt; &#91;
+		Data 27,91,68,0,"_LT"
+		Data 27,91,67,0,"_RT"
+		Data 27,91,65,0,"_UP"
+		Data 27,91,66,0,"_DN"
+		Data 27,91,49,126,0,"_HM"
+		Data 27,91,50,126,0,"_IN"
+		Data 27,91,51,126,0,"_DL"
+		Data 27,91,52,126,0,"_ED"
+		Data 27,91,53,126,0,"_PU"
+		Data 27,91,54,126,0,"_PD"
+		Data 27,91,55,126,0,"_HM"
+		Data 27,91,56,126,0,"_ED"
+		Data 27,91,49,49,126,0,"_F1"
+		Data 27,91,49,50,126,0,"_F2"
+		Data 27,91,49,51,126,0,"_F3"
+		Data 27,91,49,52,126,0,"_F4"
+		Data 27,91,49,53,126,0,"_F5"
+		Data 27,91,49,55,126,0,"_F6"
+		Data 27,91,49,56,126,0,"_F7"
+		Data 27,91,49,57,126,0,"_F8"
+		Data 27,91,50,48,126,0,"_F9"
+		Data 27,91,50,49,126,0,"_FA"
+		Data 27,91,50,51,126,0,"_FB"
+		Data 27,91,50,52,126,0,"_FC"
+		Data 255		
+
+		Restore KeyData 'determine size of the key table
+		Do
+			Read q
+			If q=255 Then Exit Do
+			If q=0 Then Kct=Kct+1&#58;Read x$
+		Loop
+
+		Dim KCode$(Kct-1) Length 5
+		Dim KTkn$(Kct-1) Length 3
+
+		Restore KeyData
+		Kct=0
+		Do
+			Read q
+			If q=255 Then Kct=Kct-1&#58;Exit Do ' adjust Kct to point at top of key array
+			If q=0 Then
+				Read KTkn$(Kct)
+				Kct=Kct+1
+			Else
+				KCode$(Kct)=KCode$(Kct)+Chr$(q)
+			EndIf
+		Loop
+
+		'Here KCode$(n) is the key sequences we get from the keypress
+		'     KTkn$(n)  is the shorthand code name _xx
+	End Sub
+</pre><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc&Revision=2 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:54:55 GMT -->
+</html>

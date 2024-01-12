@@ -1,0 +1,544 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:51:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	MORSE.BAS - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=MORSE-BAS-part-of-the-original-MMBasic-library&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Logine0cf.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dMORSE-BAS-part-of-the-original-MMBasic-library%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History1a17.html?Page=MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			MORSE.BAS
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print1a17.html?Page=MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:36
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages834c.html?Cat=MMBasic.Encode%20and%20Decode" title="Encode and Decode">Encode and Decode</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed.html" title="Modbus CRC uses the table lookup method for speed (MMBasic)">Modbus CRC uses the table lookup method for speed (MMBasic)</a> &raquo; <a href="MMBasic.MOON-BAS-lunar-calendar-with-graphics-and-simple-GUI.html" title="MOON.BAS lunar calendar with graphics and simple GUI (MMBasic)">MOON.BAS lunar calendar with graphics and simple GUI (MMBasic)</a> &raquo; <b><a href="MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library.html" title="MORSE.BAS (MMBasic)">MORSE.BAS (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.MMBasic-Source-Compression-Utility-CRUNCH-bas-v2-4-part-of-the-original-MMBasic-library.html" title="MMBasic Source Compression Utility (MMBasic)">MMBasic Source Compression Utility (MMBasic)</a> &raquo; <a href="MMBasic.CONNECT-FOUR-part-of-the-original-MMBasic-library.html" title="MMFOUR.BAS (Connect Four) (MMBasic)">MMFOUR.BAS (Connect Four) (MMBasic)</a> &raquo; <a href="MMBasic.MMPREY-BAS-part-of-the-original-MMBasic-library.html" title="MMPREY.BAS (MMBasic)">MMPREY.BAS (MMBasic)</a> &raquo; <a href="MMBasic.MMSudoku-part-of-the-original-MMBasic-library.html" title="MMSudoku (MMBasic)">MMSudoku (MMBasic)</a> &raquo; <a href="MMBasic.MMUNIX-UNIX-like-commands-cat-dir-grep-more.html" title="MMUNIX - UNIX-like commands: cat dir grep more (MMBasic)">MMUNIX - UNIX-like commands: cat dir grep more (MMBasic)</a> &raquo; <a href="MMBasic.MMX-time-of-the-seasons.html" title="MMX - time of the seasons (MMBasic)">MMX - time of the seasons (MMBasic)</a> &raquo; <a href="MMBasic.Modbus-CRC-uses-the-bit-by-bit-method.html" title="Modbus CRC uses the bit by bit method (MMBasic)">Modbus CRC uses the bit by bit method (MMBasic)</a> &raquo; <a href="MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed.html" title="Modbus CRC uses the table lookup method for speed (MMBasic)">Modbus CRC uses the table lookup method for speed (MMBasic)</a> &raquo; <a href="MMBasic.MOON-BAS-lunar-calendar-with-graphics-and-simple-GUI.html" title="MOON.BAS lunar calendar with graphics and simple GUI (MMBasic)">MOON.BAS lunar calendar with graphics and simple GUI (MMBasic)</a> &raquo; <b><a href="MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library.html" title="MORSE.BAS (MMBasic)">MORSE.BAS (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+100 'SAMPLE PROGRAM TO DEMONSTRATE THE MAXIMITE
+105 'Morse code - MORSE.BAS 20101211 Ver 1&#58;00 Reg Gauci
+110 '
+115 'A dash = 3 dots.
+120 'The space between the signals forming the same letter is equal to 1 dot
+125 'The space between 2 letters is equal to 3 dots
+130 'The space between 2 words is equal to 7 dots
+135 'Change freq to change frequency (Hz) of the sound
+140 'Change dit to change the tone spacing
+145 freq = 2000 &#58; dit = 40 &#58; dah = dit&#42;3 &#58; WORDdelay = dit&#42;3 &#58; LINEdelay = dit&#42;7
+150 '
+155 DIM morse$(122)
+160 FOR A = 32 TO 122
+165    READ morse$(A)
+170 NEXT A
+175 '
+180 CLS
+185 PRINT
+190 PRINT&#58;PRINT "Illegal characters are ignored." &#58;PRINT
+195 PRINT "CTRL+C to exit"
+200 PRINT&#58;PRINT "Type a message and see it appear as Morse Code." &#58;PRINT
+205 INPUT "What is your message "; message$
+210 PRINT
+215 '
+220 L = LEN(message$)                           'L equals the number of character in the message
+225 '
+230 FOR char = 1 TO L                           'Loop L times
+235   ch$ = morse$(ASC(MID$(message$,char,1)))  'enter the value of the read character from morse$ into chr$
+240 '
+245   FOR ditdah = 1 TO LEN(ch$)                'Loop for the number of dots and dashes in morse$
+250     IF MID$(ch$, ditdah, 1) = " " THEN      'if a space is encountered print a space and pause for WORDdelay
+255       PRINT " ";
+260       PAUSE WORDdelay
+265     ELSE
+270       IF MID$(ch$, ditdah, 1) = "." THEN    'if a dot is encountered print a dit sound a dit and pause for length of a dit + WORDdelay
+275         PRINT ".";
+280         SOUND freq, dit
+285         PIN(0) = 1
+290         PAUSE dit
+295         PIN(0) = 0
+300         PAUSE WORDdelay
+305       ELSE
+310         PRINT "-";                          'otherwise it is a dah print a dah sound a dah and pause for length of a dah + WORDdelay
+315         SOUND freq, dah
+320         PIN(0) = 1
+325         PAUSE dah
+330         PIN(0) = 0
+335         PAUSE WORDdelay
+340       ENDIF
+345     ENDIF
+350   NEXT ditdah
+355 PRINT " ";
+360 NEXT char                                   'loop until all Morse items for current input are done
+365 '
+370 PRINT "   ";
+375 PAUSE LINEdelay                             'Pause for the lenght of Wspc
+380 '
+385 PRINT &#58; PRINT
+390 INPUT "Go again (Y/N)"; Z$&#58; IF UCASE$(LEFT$(Z$, 1))="Y" THEN 195
+395 END
+400 '
+405 '
+410 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+415    DATA    " "      '      space   32      
+420    DATA    ""       '      !       33      
+425    DATA    .-..-.   '      "       34      Quotation
+430    DATA    ""       '      &#35;       35      
+435    DATA    ""       '      $       36      
+440    DATA    ""       '      %       37      
+445    DATA    ""       '      &amp;       38      
+450    DATA    .&#45;&#45;&#45;&#45;.   '      '       39      Apostrophy
+455    DATA    -.&#45;&#45;.-   '      (       40      Bracket
+460    DATA    -.&#45;&#45;.-   '      )       41      Bracket
+465    DATA    ""       '      &#42;       42      
+470    DATA    ""       '      +       43      
+475    DATA    &#45;&#45;..&#45;&#45;   '      ,       44      Comma
+480    DATA    -....-   '      -       45      Hyphen
+485    DATA    .-.-.-   '      .       46      Full Stop
+490    DATA    -..-.    '      /       47      Slash
+495    DATA    &#45;&#45;&#45;&#45;-    '      0       48      
+500    DATA    .&#45;&#45;&#45;&#45;    '      1       49      
+505    DATA    ..&#45;&#45;-    '      2       50      
+510    DATA    ...&#45;&#45;    '      3       51      
+515    DATA    ....-    '      4       52      
+520    DATA    .....    '      5       53      
+525    DATA    -....    '      6       54      
+530    DATA    &#45;&#45;...    '      7       55      
+535    DATA    &#45;&#45;-..    '      8       56      
+540    DATA    &#45;&#45;&#45;&#45;.    '      9       57      
+545    DATA    &#45;&#45;-...   '      &#58;       58      Colon
+550    DATA    ""       '      ;       59      
+555    DATA    ""       '      &lt;       60      
+560    DATA    -...-    '      =       61      Equal
+565    DATA    ""       '      &gt;       62      
+570    DATA    ..&#45;&#45;..   '      ?       63      Question
+575    DATA    .&#45;&#45;.-.   '      @       64      AT
+580    DATA    .-       '      A       65      
+585    DATA    -...     '      B       66      
+590    DATA    -.-.     '      C       67      
+595    DATA    -..      '      D       68      
+600    DATA    .        '      E       69      
+605    DATA    ..-.     '      F       70      
+610    DATA    &#45;&#45;.      '      G       71      
+615    DATA    ....     '      H       72      
+620    DATA    ..       '      I       73      
+625    DATA    .&#45;&#45;-     '      J       74      
+630    DATA    -.-      '      K       75      
+635    DATA    .-..     '      L       76      
+640    DATA    &#45;&#45;       '      M       77      
+645    DATA    -.       '      N       78      
+650    DATA    &#45;&#45;-      '      O       79      
+655    DATA    .&#45;&#45;.     '      P       80      
+660    DATA    &#45;&#45;.-     '      Q       81      
+665    DATA    .-.      '      R       82      
+670    DATA    ...      '      S       83      
+675    DATA    -        '      T       84      
+680    DATA    ..-      '      U       85      
+685    DATA    ...-     '      V       86      
+690    DATA    .&#45;&#45;      '      w       87      
+695    DATA    -..-     '      X       88      
+700    DATA    -.&#45;&#45;     '      Y       89      
+705    DATA    &#45;&#45;..     '      Z       90      
+710    DATA    ""       '      &#91;       91      
+715    DATA    ""       '      \       92      
+720    DATA    ""       '      &#93;       93      
+725    DATA    ""       '      ^       94      
+730    DATA    ""       '      _       95      
+735    DATA    ""       '      `       96      
+740    DATA    .-       '      a       97      
+745    DATA    -...     '      b       98      
+750    DATA    -.-.     '      c       99      
+755    DATA    -..      '      d       100     
+760    DATA    .        '      e       101     
+765    DATA    ..-.     '      f       102     
+770    DATA    &#45;&#45;.      '      g       103     
+775    DATA    ....     '      h       104     
+780    DATA    ..       '      i       105     
+785    DATA    .&#45;&#45;-     '      j       106     
+790    DATA    -.-      '      k       107     
+795    DATA    .-..     '      l       108     
+800    DATA    &#45;&#45;       '      m       109     
+805    DATA    -.       '      n       110     
+810    DATA    &#45;&#45;-      '      o       111     
+815    DATA    .&#45;&#45;.     '      p       112     
+820    DATA    &#45;&#45;.-     '      q       113     
+825    DATA    .-.      '      r       114     
+830    DATA    ...      '      s       115     
+835    DATA    -        '      t       116     
+840    DATA    ..-      '      u       117     
+845    DATA    ...-     '      v       118     
+850    DATA    .&#45;&#45;      '      w       119     
+855    DATA    -..-     '      x       120     
+860    DATA    -.&#45;&#45;     '      y       121     
+865    DATA    &#45;&#45;..     '      z       122     
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.MORSE-BAS-part-of-the-original-MMBasic-library.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:51:49 GMT -->
+</html>

@@ -1,0 +1,207 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.PWM-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	PWM.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.PWM-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFsEI8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UFdNLkJBUzwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6MzggYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBDb250cm9sLCBFbGVjdHJvbmljcywgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PHByZT4NCjUgVFc9MCYjNTg7VEQ9MCYjNTg7VEg9MCYjNTg7VE09MCYjNTg7VFM9MCYjNTg7VFQ9MCYjNTg7VGltZXI9MCAnIEluaXRpYWxpc2UgdGhlIGVsYXBzZWQgdGltZSB2YXJpYWJsZXMNCjEwICdpbml0aWFsaXNlIEkvTyBwaW5zDQoxNSB2b2x0cGluMSA9IDEgJ3NldCBhbmFsb2cgdm9sdGFnZSBpbnB1dCBwaW4gZm9yIG1haW4gYnVzIChjYW4gYmUgMSAtIDEwKQ0KMjAgdm9sdHBpbjIgPSAyICdzZXQgYW5hbG9nIHZvbHRhZ2UgaW5wdXQgcGluIGZvciA5ViByYWlsIChjYW4gYmUgMSAtIDEwKQ0KMjUgdm9sdHBpbjMgPSAzICdzZXQgYW5hbG9nIHZvbHRhZ2UgaW5wdXQgcGluIGZvciA1ViByYWlsIChjYW4gYmUgMSAtIDEwKQ0KMzAgcHdtcGluID0gOCAnc2V0IHRoZSBwd20gb3V0cHV0IHBpbiAoY2FuIGJlIDcgLSAxMCkNCjM1IGZyZXFwaW4xID0gMTQgJ3NldCB0aGUgZnJlcXVlbmN5IGlucHV0IHBpbiAoY2FuIGJlIDExIC0gMTQpDQo0MCBmcmVxID0gMTAwICdzZXQgaW5pdGlhbCBmcmVxdWVuY3kgdG8gMTAwSHogKGNhbiBiZSAxIC0gNTAwMCkNCjQ1IGR1dHkgPSA1MCAnc2V0IGluaXRpYWwgZHV0eSBjeWNsZSB0byA1MCUgKGNhbiBiZSAwIC0gMTAwIGluIGluY3JlbWVudHMgb2YgMSkNCjUwIG9mZnNldDEgPSAwICd1c2UgdG8gYWRqdXN0IGZvciBhbnkgb2Zmc2V0IGluIGFuYWxvZyBpbnB1dCBmb3IgbWFpbiBidXMNCjU1IG9mZnNldDIgPSAwICd1c2UgdG8gYWRqdXN0IGZvciBhbnkgb2Zmc2V0IGluIGFuYWxvZyBpbnB1dCBmb3IgOVYgcmFpbA0KNjAgb2Zmc2V0MyA9IDAgJ3VzZSB0byBhZGp1c3QgZm9yIGFueSBvZmZzZXQgaW4gYW5hbG9nIGlucHV0IGZvciA1ViByYWlsDQo2NSBjb2VmZmljaWVudDEgPSAyMCAndXNlIHRvIHNjYWxlIHRoZSBhbmFsb2cgaW5wdXQgZm9yIG1haW4gYnVzIChyYW5nZSAwIC0gNjYgKDIwICYjNDI7IDMuMykpDQo3MCBjb2VmZmljaWVudDIgPSA1ICd1c2UgdG8gc2NhbGUgdGhlIGFuYWxvZyBpbnB1dCBmb3IgOVYgcmFpbCAocmFuZ2UgMCAtIDE2LjUgKDUgJiM0MjsgMy4zKSkNCjc1IGNvZWZmaWNpZW50MyA9IDMgJ3VzZSB0byBzY2FsZSB0aGUgYW5hbG9nIGlucHV0IGZvciA1ViByYWlsIChyYW5nZSAwIC0gOS45ICgzICYjNDI7IDMuMykpDQo4MCB0aWNrX2F2ZyA9IDEwMCAnbnVtYmVyIG9mIGFuYWxvZyB2b2x0YWdlIHNhbXBsZXMgdG8gYXZlcmFnZSBlYWNoIHNlY29uZA0KODUgdGlja19mbGFnID0gMA0KOTAgdGlja19jbnQgPSAwDQo5NSBEaW0gdGlja19hcnJheTEodGlja19hdmcpDQoxMDAgRGltIHRpY2tfYXJyYXkyKHRpY2tfYXZnKQ0KMTA1IERpbSB0aWNrX2FycmF5Myh0aWNrX2F2ZykNCjExMCBTZXRQaW4gdm9sdHBpbjMsMSAnY29uZmlndXJlIHBpbiBmb3IgYW5hbG9nIGlucHV0DQoxMTUgU2V0UGluIHZvbHRwaW4yLDEgJ2NvbmZpZ3VyZSBwaW4gZm9yIGFuYWxvZyBpbnB1dA0KMTIwIFNldFBpbiB2b2x0cGluMSwxICdjb25maWd1cmUgcGluIGZvciBhbmFsb2cgaW5wdXQNCjEyNSBTZXRQaW4gZnJlcXBpbjEsMyAnY29uZmlndXJlIHBpbiBmb3IgZnJlcXVlbmN5IGlucHV0DQoxMzAgU2V0UGluIHB3bXBpbiwxMCxmcmVxLGR1dHkgJ2luaXRpYXRlIFBXTSBvdXRwdXQNCjEzNSBTZXRUaWNrIENpbnQoMTAwMC90aWNrX2F2ZyksMTEwMCAnc2V0IHRpY2sgaW50ZXJydXB0IGZvciB0aWNrX2F2ZyBwZXIgc2Vjb25kDQoxNDAgJ2luaXRpYWxpc2UgcHJpbnQgbG9jYXRpb25zDQoxNDUgbG9jTWFpbkJ1c3MgPSAxMg0KMTUwIGxvYzlWUmFpbCA9IDM2DQoxNTUgbG9jNVZSYWlsID0gNjANCjE2MCBsb2NSZXBGcmVxID0gODQNCjE2NSBsb2NSdW5GcmVxID0gMTA4DQoxNzAgbG9jUnVuRHV0eSA9IDEzMg0KMTc1IGxvY0VsYXBzZWQgPSAxNTYNCjE4MCBsb2NDbWRTdHJpbmcgPSAxODANCjE4NSBsb2NDbWRJbnB1dCA9IGxvY0NtZFN0cmluZyArIDEyDQoxOTAgZHV0eV9zdHIkID0gIkVudGVyIGR1dHkgY3ljbGUgKDAgLSAxMDAgZm9yIDAlIC0gMTAwJSksICdGJyB0byBjaGFuZ2UgZnJlcXVlbmN5IG9yICdRJyB0byBxdWl0Ig0KMTk1IGZyZXFfc3RyJCA9ICJFbnRlciBmcmVxdWVuY3kgKDEgLSA1MDAwIGZvciAxIC0gNWtIeiksICdEJyB0byBjaGFuZ2UgZHV0eSBjeWNsZSBvciAnUScgdG8gcXVpdCINCjIwMCBDbHMNCjIwNSB2b2x0MSA9IG9mZnNldDEgKyAoUGluKHZvbHRwaW4xKSAmIzQyOyBjb2VmZmljaWVudCkNCjIxMCB2b2x0MiA9IG9mZnNldDIgKyAoUGluKHZvbHRwaW4yKSAmIzQyOyBjb2VmZmljaWVudCkNCjIxNSB2b2x0MyA9IG9mZnNldDMgKyAoUGluKHZvbHRwaW4zKSAmIzQyOyBjb2VmZmljaWVudCkNCjIyMCBzdGF0ZSA9IDENCjIyNSBMb2NhdGUgMCxsb2NNYWluQnVzcyAmIzU4OyA/ICJNYWluIEJ1c3MgQSBWKyA9IjsNCjIzMCBMb2NhdGUgOTYsbG9jTWFpbkJ1c3MgJiM1ODsgPyBGb3JtYXQkKHZvbHQxLCIlIC4zZlYgIik7DQoyMzUgTG9jYXRlIDAsbG9jOVZSYWlsICYjNTg7ID8gIjkgVm9sdCBSYWlsIFYrID0iOw0KMjQwIExvY2F0ZSA5Nixsb2M5VlJhaWwgJiM1ODsgPyBGb3JtYXQkKHZvbHQyLCIlIC4zZlYgIik7DQoyNDUgTG9jYXRlIDAsbG9jNVZSYWlsICYjNTg7ID8gIjUgVm9sdCBSYWlsIFYrID0iOw0KMjUwIExvY2F0ZSA5Nixsb2M1VlJhaWwgJiM1ODsgPyBGb3JtYXQkKHZvbHQzLCIlIC4zZlYgIik7DQoyNTUgTG9jYXRlIDAsbG9jUmVwRnJlcSAmIzU4OyA/ICJSZXBvcnRlZCBmcmVxdWVuY3kgPSI7DQoyNjAgTG9jYXRlIDEyMCxsb2NSZXBGcmVxICYjNTg7ID8gRm9ybWF0JChQaW4oZnJlcXBpbjEpLCIlIC4wZkh6ICAgICIpOw0KMjY1IExvY2F0ZSAwLGxvY1J1bkZyZXEgJiM1ODsgPyAiUnVubmluZyBmcmVxdWVuY3kgPSI7DQoyNzAgTG9jYXRlIDExNCxsb2NSdW5GcmVxICYjNTg7ID8gZnJlcTsgIkh6ICI7DQoyNzUgTG9jYXRlIDAsbG9jUnVuRHV0eSAmIzU4OyA/ICJNYXJrIHNwYWNlIHJhdGlvID0iOw0KMjgwIExvY2F0ZSAxMDgsbG9jUnVuRHV0eSAmIzU4OyA/IGR1dHk7ICIlICI7DQoyODUgTG9jYXRlIDAsbG9jRWxhcHNlZCYjNTg7R29TdWIgMTAwMDAgJyBUaGlzIHdpbGwgcHJpbnQgdGhlIGVsYXBzZWQgdGltZQ0KMjkwIExvY2F0ZSAwLGxvY0NtZFN0cmluZyAmIzU4OyA/IGR1dHlfc3RyJA0KMjk1IERvIFdoaWxlIHN0YXRlICZndDsgMA0KMzAwICBHb1N1YiA1MDANCjMwNSAgSWYgc3RhdGUgPSAxIFRoZW4NCjMxMCAgIElmIG51bWJlciAmZ3Q7PSAwIEFuZCBudW1iZXIgJmx0Oz0gMTAwIFRoZW4NCjMxNSAgICBkdXR5ID0gbnVtYmVyICYjNTg7IFNldFBpbiBwd21waW4sMTAsZnJlcSxkdXR5DQozMjAgICBFbHNlDQozMjUgICAgR29TdWIgOTAwICYjNTg7ID8gbnVtYmVyOyAiIC0gSW52YWxpZCBkdXR5IGN5Y2xlISIgJiM1ODsgUGF1c2UoMTAwMCkgJiM1ODsgR29TdWIgOTAwDQozMzAgICBFbmRJZg0KMzM1ICBFbHNlSWYgc3RhdGUgPSAyIFRoZW4NCjM0MCAgIElmIG51bWJlciAmZ3Q7PSAxIEFuZCBudW1iZXIgJmx0Oz0gNTAwMCBUaGVuDQozNDUgICAgZnJlcSA9IG51bWJlciAmIzU4OyBTZXRQaW4gcHdtcGluLDEwLGZyZXEsZHV0eQ0KMzUwICAgRWxzZQ0KMzU1ICAgIEdvU3ViIDkwMCAmIzU4OyA/IG51bWJlcjsgIiAtIEludmFsaWQgZnJlcXVlbmN5ISIgJiM1ODsgUGF1c2UoMTAwMCkgJiM1ODsgR29TdWIgOTAwDQozNjAgICBFbmRJZg0KMzY1ICBFbmRJZg0KMzcwICBMb2NhdGUgOTYsbG9jTWFpbkJ1c3MgJiM1ODsgPyBGb3JtYXQkKHZvbHQxLCIlIC4zZlYgIik7DQozNzUgIExvY2F0ZSA5Nixsb2M5VlJhaWwgJiM1ODsgPyBGb3JtYXQkKHZvbHQyLCIlIC4zZlYgIikNCjM4MCAgTG9jYXRlIDk2LGxvYzVWUmFpbCAmIzU4OyA/IEZvcm1hdCQodm9sdDMsIiUgLjNmViAiKQ0KMzg1ICBMb2NhdGUgMTIwLGxvY1JlcEZyZXEgJiM1ODsgPyBGb3JtYXQkKFBpbihmcmVxcGluMSksIiUgLjBmSHogICAgIik7DQozOTAgIExvY2F0ZSAxMTQsbG9jUnVuRnJlcSAmIzU4OyA/IGZyZXE7ICJIeiAiOw0KMzk1ICBMb2NhdGUgMTA4LGxvY1J1bkR1dHkgJiM1ODsgPyBkdXR5OyAiJSAiOw0KNDAwICBMb2NhdGUgMCxsb2NFbGFwc2VkJiM1ODtHb1N1YiAxMDAwMCAnIFRoaXMgd2lsbCBwcmludCB0aGUgZWxhcHNlZCB0aW1lDQo0MDUgTG9vcA0KNDEwIFNldFBpbiB2b2x0cGluMywwDQo0MTUgU2V0UGluIHZvbHRwaW4yLDANCjQyMCBTZXRQaW4gdm9sdHBpbjEsMA0KNDI1IFNldFBpbiBmcmVxcGluMSwwDQo0MzAgU2V0UGluIHB3bXBpbiwwDQo0MzUgR29TdWIgOTAwDQo0NTkgRW5kDQo0OTkgJyBnZXQgbnVtYmVyIHJvdXRpbmUNCjUwMCBHb1N1YiA5MDANCjUwNSBEbyBXaGlsZSAxDQo1MTAgIElmIHRpY2tfZmxhZyA9IDEgVGhlbg0KNTE1ICAgdGlja19mbGFnID0gMA0KNTIwICAgTG9jYXRlIDk2LGxvY01haW5CdXNzICYjNTg7ID8gRm9ybWF0JCh2b2x0MSwiJSAuM2ZWICIpOw0KNTI1ICAgTG9jYXRlIDk2LGxvYzlWUmFpbCAmIzU4OyA/IEZvcm1hdCQodm9sdDIsIiUgLjNmViAiKTsNCjUzMCAgIExvY2F0ZSA5Nixsb2M1VlJhaWwgJiM1ODsgPyBGb3JtYXQkKHZvbHQzLCIlIC4zZlYgIik7DQo1MzUgICBMb2NhdGUgMTIwLGxvY1JlcEZyZXEgJiM1ODsgPyBGb3JtYXQkKFBpbihmcmVxcGluMSksIiUgLjBmSHogICAgIik7DQo1NDAgICBMb2NhdGUgMTE0LGxvY1J1bkZyZXEgJiM1ODsgPyBmcmVxOyAiSHogIjsNCjU0NSAgIExvY2F0ZSAxMDgsbG9jUnVuRHV0eSAmIzU4OyA/IGR1dHk7ICIlICI7DQo1NTAgICBMb2NhdGUgMCxsb2NFbGFwc2VkJiM1ODtHb1N1YiAxMDAwMCAnIFRoaXMgd2lsbCBwcmludCB0aGUgZWxhcHNlZCB0aW1lDQo1NTUgICBMb2NhdGUgTGVuKG51bXN0ciQpICYjNDI7IDYsbG9jQ21kSW5wdXQNCjU2MCAgRW5kSWYNCjU2NSAgaW5wa2V5JCA9IFVDYXNlJChJbmtleSQpDQo1NzAgIElmIGlucGtleSQgPSAiIiBUaGVuIEdvVG8gNTEwDQo1NzUgIElmIGlucGtleSQgPSAiUSIgVGhlbiBzdGF0ZSA9IC0xICYjNTg7IEV4aXQNCjU4MCAgSWYgaW5wa2V5JCA9ICJEIiBUaGVuDQo1ODUgICBMb2NhdGUgMCxsb2NDbWRTdHJpbmcNCjU5MCAgID8gZHV0eV9zdHIkDQo1OTUgICBzdGF0ZSA9IDENCjYwMCAgIEdvU3ViIDkwMA0KNjA1ICAgR29UbyA1MTANCjYxMCAgRW5kSWYNCjYxNSAgSWYgaW5wa2V5JCA9ICJGIiBUaGVuDQo2MjAgICBMb2NhdGUgMCxsb2NDbWRTdHJpbmcNCjYyNSAgID8gZnJlcV9zdHIkDQo2MzAgICBzdGF0ZSA9IDINCjYzNSAgIEdvU3ViIDkwMA0KNjQwICAgR29UbyA1MTANCjY0NSAgRW5kSWYNCjY1MCAgSWYgaW5wa2V5JCAmbHQ7ICIwIiBPciBpbnBrZXkkICZndDsgIjkiIFRoZW4NCjY1NSAgIG51bWxlbiA9IExlbihudW1zdHIkKQ0KNjYwICAgSWYgQXNjKGlucGtleSQpID0gMTMgVGhlbg0KNjY1ICAgIElmIG51bWxlbiA9IDAgVGhlbiBudW1iZXIgPSAtMSBFbHNlIG51bWJlciA9IFZhbChudW1zdHIkKQ0KNjcwICAgIEV4aXQNCjY3NSAgIEVsc2VJZiBBc2MoaW5wa2V5JCkgPSA4IFRoZW4NCjY4MCAgICBJZiBudW1sZW4gJmd0OyAwIFRoZW4NCjY4NSAgICAgSWYgbnVtbGVuICZsdDsmZ3Q7IDEgVGhlbiBudW1zdHIkID0gTGVmdCQobnVtc3RyJCwgbnVtbGVuIC0gMSkgRWxzZSBudW1zdHIkID0gIiINCjY5MCAgICAgY3NyID0gKG51bWxlbiAtIDEpICYjNDI7IDYNCjY5NSAgICAgTG9jYXRlIGNzcixsb2NDbWRJbnB1dCAmIzU4OyA/ICIgIjsgJiM1ODsgTG9jYXRlIGNzcixsb2NDbWRJbnB1dA0KNzAwICAgIEVuZElmDQo3MDUgICBFbmRJZg0KNzEwICBFbHNlDQo3MTUgICBudW1zdHIkID0gbnVtc3RyJCArIGlucGtleSQNCjcyMCAgID8gaW5wa2V5JDsNCjcyNSAgRW5kSWYNCjczMCBMb29wDQo3MzUgR29TdWIgOTAwDQo3OTkgUmV0dXJuDQo4OTkgJyBjbGVhciBpbnB1dA0KOTAwIG51bXN0ciQgPSAiIg0KOTEwIExvY2F0ZSAwLGxvY0NtZElucHV0DQo5MjAgPyBTcGFjZSQoODApDQo5MzAgTG9jYXRlIDAsbG9jQ21kSW5wdXQNCjk5OSBSZXR1cm4NCjEwOTkgJyBzZXR0aWNrIGludGVycnVwdCByb3V0aW5lDQoxMTAwIHRpY2tfY250ID0gdGlja19jbnQgKyAxDQoxMTEwIHRpY2tfYXJyYXkxKHRpY2tfY250KSA9IG9mZnNldDEgKyAoUGluKHZvbHRwaW4xKSAmIzQyOyBjb2VmZmljaWVudDEpDQoxMTIwIHRpY2tfYXJyYXkyKHRpY2tfY250KSA9IG9mZnNldDIgKyAoUGluKHZvbHRwaW4yKSAmIzQyOyBjb2VmZmljaWVudDIpDQoxMTMwIHRpY2tfYXJyYXkzKHRpY2tfY250KSA9IG9mZnNldDMgKyAoUGluKHZvbHRwaW4zKSAmIzQyOyBjb2VmZmljaWVudDMpDQoxMTQwIElmIHRpY2tfY250ICZsdDsmZ3Q7IHRpY2tfYXZnIFRoZW4gSVJldHVybg0KMTE1MCB2b2x0MSA9IDANCjExNjAgdm9sdDIgPSAwDQoxMTcwIHZvbHQzID0gMA0KMTE4MCBGb3IgaSA9IDEgVG8gdGlja19hdmcNCjExOTAgIHZvbHQxID0gdm9sdDEgKyB0aWNrX2FycmF5MShpKQ0KMTIwMCAgdm9sdDIgPSB2b2x0MiArIHRpY2tfYXJyYXkyKGkpDQoxMjEwICB2b2x0MyA9IHZvbHQzICsgdGlja19hcnJheTMoaSkNCjEyMjAgTmV4dCBpDQoxMjMwIHZvbHQxID0gdm9sdDEgLyB0aWNrX2F2Zw0KMTI0MCB2b2x0MiA9IHZvbHQyIC8gdGlja19hdmcNCjEyNTAgdm9sdDMgPSB2b2x0MyAvIHRpY2tfYXZnDQoxMjYwIHRpY2tfY250ID0gMA0KMTI3MCB0aWNrX2ZsYWcgPSAxDQoxMjk5IElSZXR1cm4NCjk5OTkgJyBFbGFwc2VkIHRpbWUgcm91dGluZSB0byB1cGRhdGUgdGhlIGVsYXBzZWQgdGltZSBhbmQgcHJpbnQgaXQNCjEwMDAwIFRDPVRpbWVyJiM1ODtUaW1lcj0wJiM1ODtUVD1UVCtUQw0KMTAwMTAgSWYgVFQmZ3Q7PTEwMDAgVGhlbiBUUz1UUysoVFRcMTAwMCkmIzU4O1RUPVRUIE1vZCAxMDAwDQoxMDAyMCBJZiBUUyZndDs9NjAgVGhlbiBUTT1UTSsoVFNcNjApJiM1ODtUUz1UUyBNb2QgNjANCjEwMDMwIElmIFRNJmd0Oz02MCBUaGVuIFRIPVRIKyhUTVw2MCkmIzU4O1RNPVRNIE1vZCA2MA0KMTAwNDAgSWYgVEgmZ3Q7PTI0IFRoZW4gVEQ9VEQrKFRIXDI0KSYjNTg7VEg9VEggTW9kIDI0DQoxMDA1MCBJZiBURCZndDs9NyBUaGVuIFRXPVRXKyhURFw3KSYjNTg7VEQ9VEQgTW9kIDcNCjEwMDYwIHBmbGFnPTAmIzU4Oz8gIkVsYXBzZWQgdGltZSYjNTg7IjsNCjEwMDcwIElmIFRXJmd0OzAgVGhlbiBwZmxhZz0xJiM1ODs/IFRXOyIgd2Vla3MsIjsNCjEwMDgwIElmIFREJmd0OzAgT3IgcGZsYWc9MSBUaGVuIHBmbGFnPTEmIzU4Oz8gVEQ7IiBkYXlzLCI7DQoxMDA5MCBJZiBUSCZndDswIE9yIHBmbGFnPTEgVGhlbiBwZmxhZz0xJiM1ODs/IFRIOyIgaG91cnMsIjsNCjEwMTAwIElmIFRNJmd0OzAgT3IgcGZsYWc9MSBUaGVuID8gVE07IiBtaW51dGVzLCI7DQoxMDExMCA/IEZvcm1hdCQoVFMsIiAlMS4wZi4iKTtGb3JtYXQkKFRULCIlMDMuMGYgc2Vjb25kcyAiKTsNCjEwMTIwIFJldHVybg0KDQo8L3ByZT48YnIgLz5kZCAUbgKogZI8KvuwK3EFOOWZ1e4r" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">PWM.BAS</h1><small>Modified on 2016/12/23 23:38 by Administrator &mdash; Categorized as: Control, Electronics, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+5 TW=0&#58;TD=0&#58;TH=0&#58;TM=0&#58;TS=0&#58;TT=0&#58;Timer=0 ' Initialise the elapsed time variables
+10 'initialise I/O pins
+15 voltpin1 = 1 'set analog voltage input pin for main bus (can be 1 - 10)
+20 voltpin2 = 2 'set analog voltage input pin for 9V rail (can be 1 - 10)
+25 voltpin3 = 3 'set analog voltage input pin for 5V rail (can be 1 - 10)
+30 pwmpin = 8 'set the pwm output pin (can be 7 - 10)
+35 freqpin1 = 14 'set the frequency input pin (can be 11 - 14)
+40 freq = 100 'set initial frequency to 100Hz (can be 1 - 5000)
+45 duty = 50 'set initial duty cycle to 50% (can be 0 - 100 in increments of 1)
+50 offset1 = 0 'use to adjust for any offset in analog input for main bus
+55 offset2 = 0 'use to adjust for any offset in analog input for 9V rail
+60 offset3 = 0 'use to adjust for any offset in analog input for 5V rail
+65 coefficient1 = 20 'use to scale the analog input for main bus (range 0 - 66 (20 &#42; 3.3))
+70 coefficient2 = 5 'use to scale the analog input for 9V rail (range 0 - 16.5 (5 &#42; 3.3))
+75 coefficient3 = 3 'use to scale the analog input for 5V rail (range 0 - 9.9 (3 &#42; 3.3))
+80 tick_avg = 100 'number of analog voltage samples to average each second
+85 tick_flag = 0
+90 tick_cnt = 0
+95 Dim tick_array1(tick_avg)
+100 Dim tick_array2(tick_avg)
+105 Dim tick_array3(tick_avg)
+110 SetPin voltpin3,1 'configure pin for analog input
+115 SetPin voltpin2,1 'configure pin for analog input
+120 SetPin voltpin1,1 'configure pin for analog input
+125 SetPin freqpin1,3 'configure pin for frequency input
+130 SetPin pwmpin,10,freq,duty 'initiate PWM output
+135 SetTick Cint(1000/tick_avg),1100 'set tick interrupt for tick_avg per second
+140 'initialise print locations
+145 locMainBuss = 12
+150 loc9VRail = 36
+155 loc5VRail = 60
+160 locRepFreq = 84
+165 locRunFreq = 108
+170 locRunDuty = 132
+175 locElapsed = 156
+180 locCmdString = 180
+185 locCmdInput = locCmdString + 12
+190 duty_str$ = "Enter duty cycle (0 - 100 for 0% - 100%), 'F' to change frequency or 'Q' to quit"
+195 freq_str$ = "Enter frequency (1 - 5000 for 1 - 5kHz), 'D' to change duty cycle or 'Q' to quit"
+200 Cls
+205 volt1 = offset1 + (Pin(voltpin1) &#42; coefficient)
+210 volt2 = offset2 + (Pin(voltpin2) &#42; coefficient)
+215 volt3 = offset3 + (Pin(voltpin3) &#42; coefficient)
+220 state = 1
+225 Locate 0,locMainBuss &#58; ? "Main Buss A V+ =";
+230 Locate 96,locMainBuss &#58; ? Format$(volt1,"% .3fV ");
+235 Locate 0,loc9VRail &#58; ? "9 Volt Rail V+ =";
+240 Locate 96,loc9VRail &#58; ? Format$(volt2,"% .3fV ");
+245 Locate 0,loc5VRail &#58; ? "5 Volt Rail V+ =";
+250 Locate 96,loc5VRail &#58; ? Format$(volt3,"% .3fV ");
+255 Locate 0,locRepFreq &#58; ? "Reported frequency =";
+260 Locate 120,locRepFreq &#58; ? Format$(Pin(freqpin1),"% .0fHz    ");
+265 Locate 0,locRunFreq &#58; ? "Running frequency =";
+270 Locate 114,locRunFreq &#58; ? freq; "Hz ";
+275 Locate 0,locRunDuty &#58; ? "Mark space ratio =";
+280 Locate 108,locRunDuty &#58; ? duty; "% ";
+285 Locate 0,locElapsed&#58;GoSub 10000 ' This will print the elapsed time
+290 Locate 0,locCmdString &#58; ? duty_str$
+295 Do While state &gt; 0
+300  GoSub 500
+305  If state = 1 Then
+310   If number &gt;= 0 And number &lt;= 100 Then
+315    duty = number &#58; SetPin pwmpin,10,freq,duty
+320   Else
+325    GoSub 900 &#58; ? number; " - Invalid duty cycle!" &#58; Pause(1000) &#58; GoSub 900
+330   EndIf
+335  ElseIf state = 2 Then
+340   If number &gt;= 1 And number &lt;= 5000 Then
+345    freq = number &#58; SetPin pwmpin,10,freq,duty
+350   Else
+355    GoSub 900 &#58; ? number; " - Invalid frequency!" &#58; Pause(1000) &#58; GoSub 900
+360   EndIf
+365  EndIf
+370  Locate 96,locMainBuss &#58; ? Format$(volt1,"% .3fV ");
+375  Locate 96,loc9VRail &#58; ? Format$(volt2,"% .3fV ")
+380  Locate 96,loc5VRail &#58; ? Format$(volt3,"% .3fV ")
+385  Locate 120,locRepFreq &#58; ? Format$(Pin(freqpin1),"% .0fHz    ");
+390  Locate 114,locRunFreq &#58; ? freq; "Hz ";
+395  Locate 108,locRunDuty &#58; ? duty; "% ";
+400  Locate 0,locElapsed&#58;GoSub 10000 ' This will print the elapsed time
+405 Loop
+410 SetPin voltpin3,0
+415 SetPin voltpin2,0
+420 SetPin voltpin1,0
+425 SetPin freqpin1,0
+430 SetPin pwmpin,0
+435 GoSub 900
+459 End
+499 ' get number routine
+500 GoSub 900
+505 Do While 1
+510  If tick_flag = 1 Then
+515   tick_flag = 0
+520   Locate 96,locMainBuss &#58; ? Format$(volt1,"% .3fV ");
+525   Locate 96,loc9VRail &#58; ? Format$(volt2,"% .3fV ");
+530   Locate 96,loc5VRail &#58; ? Format$(volt3,"% .3fV ");
+535   Locate 120,locRepFreq &#58; ? Format$(Pin(freqpin1),"% .0fHz    ");
+540   Locate 114,locRunFreq &#58; ? freq; "Hz ";
+545   Locate 108,locRunDuty &#58; ? duty; "% ";
+550   Locate 0,locElapsed&#58;GoSub 10000 ' This will print the elapsed time
+555   Locate Len(numstr$) &#42; 6,locCmdInput
+560  EndIf
+565  inpkey$ = UCase$(Inkey$)
+570  If inpkey$ = "" Then GoTo 510
+575  If inpkey$ = "Q" Then state = -1 &#58; Exit
+580  If inpkey$ = "D" Then
+585   Locate 0,locCmdString
+590   ? duty_str$
+595   state = 1
+600   GoSub 900
+605   GoTo 510
+610  EndIf
+615  If inpkey$ = "F" Then
+620   Locate 0,locCmdString
+625   ? freq_str$
+630   state = 2
+635   GoSub 900
+640   GoTo 510
+645  EndIf
+650  If inpkey$ &lt; "0" Or inpkey$ &gt; "9" Then
+655   numlen = Len(numstr$)
+660   If Asc(inpkey$) = 13 Then
+665    If numlen = 0 Then number = -1 Else number = Val(numstr$)
+670    Exit
+675   ElseIf Asc(inpkey$) = 8 Then
+680    If numlen &gt; 0 Then
+685     If numlen &lt;&gt; 1 Then numstr$ = Left$(numstr$, numlen - 1) Else numstr$ = ""
+690     csr = (numlen - 1) &#42; 6
+695     Locate csr,locCmdInput &#58; ? " "; &#58; Locate csr,locCmdInput
+700    EndIf
+705   EndIf
+710  Else
+715   numstr$ = numstr$ + inpkey$
+720   ? inpkey$;
+725  EndIf
+730 Loop
+735 GoSub 900
+799 Return
+899 ' clear input
+900 numstr$ = ""
+910 Locate 0,locCmdInput
+920 ? Space$(80)
+930 Locate 0,locCmdInput
+999 Return
+1099 ' settick interrupt routine
+1100 tick_cnt = tick_cnt + 1
+1110 tick_array1(tick_cnt) = offset1 + (Pin(voltpin1) &#42; coefficient1)
+1120 tick_array2(tick_cnt) = offset2 + (Pin(voltpin2) &#42; coefficient2)
+1130 tick_array3(tick_cnt) = offset3 + (Pin(voltpin3) &#42; coefficient3)
+1140 If tick_cnt &lt;&gt; tick_avg Then IReturn
+1150 volt1 = 0
+1160 volt2 = 0
+1170 volt3 = 0
+1180 For i = 1 To tick_avg
+1190  volt1 = volt1 + tick_array1(i)
+1200  volt2 = volt2 + tick_array2(i)
+1210  volt3 = volt3 + tick_array3(i)
+1220 Next i
+1230 volt1 = volt1 / tick_avg
+1240 volt2 = volt2 / tick_avg
+1250 volt3 = volt3 / tick_avg
+1260 tick_cnt = 0
+1270 tick_flag = 1
+1299 IReturn
+9999 ' Elapsed time routine to update the elapsed time and print it
+10000 TC=Timer&#58;Timer=0&#58;TT=TT+TC
+10010 If TT&gt;=1000 Then TS=TS+(TT\1000)&#58;TT=TT Mod 1000
+10020 If TS&gt;=60 Then TM=TM+(TS\60)&#58;TS=TS Mod 60
+10030 If TM&gt;=60 Then TH=TH+(TM\60)&#58;TM=TM Mod 60
+10040 If TH&gt;=24 Then TD=TD+(TH\24)&#58;TH=TH Mod 24
+10050 If TD&gt;=7 Then TW=TW+(TD\7)&#58;TD=TD Mod 7
+10060 pflag=0&#58;? "Elapsed time&#58;";
+10070 If TW&gt;0 Then pflag=1&#58;? TW;" weeks,";
+10080 If TD&gt;0 Or pflag=1 Then pflag=1&#58;? TD;" days,";
+10090 If TH&gt;0 Or pflag=1 Then pflag=1&#58;? TH;" hours,";
+10100 If TM&gt;0 Or pflag=1 Then ? TM;" minutes,";
+10110 ? Format$(TS," %1.0f.");Format$(TT,"%03.0f seconds ");
+10120 Return
+
+</pre><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.PWM-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:44 GMT -->
+</html>

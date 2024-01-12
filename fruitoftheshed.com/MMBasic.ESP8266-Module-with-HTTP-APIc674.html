@@ -1,0 +1,686 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.ESP8266-Module-with-HTTP-API.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:45:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic) - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=ESP8266-Module-with-HTTP-API&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login169b.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dESP8266-Module-with-HTTP-API%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.ESP8266-Module-with-HTTP-API266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyedd9.html?Page=MMBasic.ESP8266-Module-with-HTTP-API">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic)
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printedd9.html?Page=MMBasic.ESP8266-Module-with-HTTP-API" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:31
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesa19c.html?Cat=MMBasic.Network" title="Network">Network</a>, <a href="MMBasic.AllPages72b8.html?Cat=MMBasic.Wifi" title="Wifi">Wifi</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Eaten-Earth.html" title="Eaten Earth (MMBasic)">Eaten Earth (MMBasic)</a> &raquo; <a href="MMBasic.ENIGMA-Code-simulator-part-of-the-original-MMBasic-library.html" title="ENIGMA Code simulators (MMBasic)">ENIGMA Code simulators (MMBasic)</a> &raquo; <b><a href="MMBasic.ESP8266-Module-with-HTTP-API.html" title="ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic) (MMBasic)">ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic) (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library.html" title="Driving a Parallel Printer (MMBasic)">Driving a Parallel Printer (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-from-MMBasic-part-of-the-original-MMBasic-library.html" title="Driving LCD from MMBasic (MMBasic)">Driving LCD from MMBasic (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-with-i2c-interface-part-of-the-original-MMBasic-library.html" title="Driving LCD with i2c interface (MMBasic)">Driving LCD with i2c interface (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-with-I2C-interface-using-a-Micromite-5-3.html" title="Driving LCD with I2C interface using a Micromite (&gt;5.3) (MMBasic)">Driving LCD with I2C interface using a Micromite (&gt;5.3) (MMBasic)</a> &raquo; <a href="MMBasic.DS1307-Real-Time-Clock-part-of-the-original-MMBasic-library.html" title="DS1307 Real Time Clock (MMBasic)">DS1307 Real Time Clock (MMBasic)</a> &raquo; <a href="MMBasic.Dual-Function-Push-Button.html" title="Dual Function Push Button (MMBasic)">Dual Function Push Button (MMBasic)</a> &raquo; <a href="MMBasic.Dump-a-text-file-to-screen-part-of-the-original-MMBasic-library.html" title="Dump a text file to screen (MMBasic)">Dump a text file to screen (MMBasic)</a> &raquo; <a href="MMBasic.Eaten-Earth.html" title="Eaten Earth (MMBasic)">Eaten Earth (MMBasic)</a> &raquo; <a href="MMBasic.ENIGMA-Code-simulator-part-of-the-original-MMBasic-library.html" title="ENIGMA Code simulators (MMBasic)">ENIGMA Code simulators (MMBasic)</a> &raquo; <b><a href="MMBasic.ESP8266-Module-with-HTTP-API.html" title="ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic) (MMBasic)">ESP8266 WiFi Module with multi-session HTTP API (pure MMBasic) (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		This is a complete ESP8266 module that will connect to the WiFi of your choice and then accept connection inbound. No CFunctions or anything, purely handling a serial port and chopping up whatever comes through. It works really well and is fast. It handles multiple inbound connections - up to five at a time. It looks like a big deal but a lot of it is simply functions to make string handling easier (at the bottom).<br /><br />This might be for a MicroMite based web server or to allow you to set the MicroMite doing things. Here I don't write back HTML (API doesn't require it) but you could just as easily, you could ask for status on bits, analogue inputs. You could send Instructions for quite complex activities, your imagination is the limit.<br /><br />This is an extract (with changes) from my SMS Gateway. I connect in with a web page and issue commands via this collection to send text message from my website. This bit works perfect, all the time... (the M590 GSM module is more temperamental and I have some work to do before I can publish that bit).<br /><br />This is enough to get you going, you have to pick the bones apart of the main loop and understand what is happening but it is mainly just detecting the inbound connection and then using string slicing to pick apart the HTTP request to see what is being asked for.<br /><br />Here's a load of links I used when I was getting this working. Research loads!<br /><br /><a class="externallink" href="https://alselectro.wordpress.com/2015/05/13/wifi-module-esp8266-2-tcp-client-server-mode/" title="https://alselectro.wordpress.com/2015/05/13/wifi-module-esp8266-2-tcp-client-server-mode/" target="_blank">https://alselectro.wordpress.com/2015/05/13/wifi-module-esp8266-2-tcp-client-server-mode/</a><br /><a class="externallink" href="https://www.sparkfun.com/products/13678" title="https://www.sparkfun.com/products/13678" target="_blank">https://www.sparkfun.com/products/13678</a><br /><a class="externallink" href="http://www.instructables.com/id/Using-the-ESP8266-module/" title="http://www.instructables.com/id/Using-the-ESP8266-module/" target="_blank">http://www.instructables.com/id/Using-the-ESP8266-module/</a><br /><a class="externallink" href="http://www.instructables.com/id/Using-the-ESP8266-module/step3/Configuring-the-8266-Module/" title="http://www.instructables.com/id/Using-the-ESP8266-module/step3/Configuring-the-8266-Module/" target="_blank">http://www.instructables.com/id/Using-the-ESP8266-module/step3/Configuring-the-8266-Module/</a><br /><a class="externallink" href="http://www.instructables.com/id/How-to-Build-a-ESP8266-Web-Server/step7/Results/" title="http://www.instructables.com/id/How-to-Build-a-ESP8266-Web-Server/step7/Results/" target="_blank">http://www.instructables.com/id/How-to-Build-a-ESP8266-Web-Server/step7/Results/</a><br /><a class="externallink" href="https://github.com/esp8266/esp8266-wiki/wiki" title="https://github.com/esp8266/esp8266-wiki/wiki" target="_blank">https://github.com/esp8266/esp8266-wiki/wiki</a><br /><a class="externallink" href="http://www.esp8266.com/" title="http://www.esp8266.com/" target="_blank">http://www.esp8266.com/</a><br /><a class="externallink" href="http://dominicm.com/esp8266-send-receive-data/" title="http://dominicm.com/esp8266-send-receive-data/" target="_blank">http://dominicm.com/esp8266-send-receive-data/</a><br /><a class="externallink" href="https://www.youtube.com/watch?v=aqjx-85_hwg" title="https://www.youtube.com/watch?v=aqjx-85_hwg" target="_blank">https://www.youtube.com/watch?v=aqjx-85_hwg</a><br /><a class="externallink" href="https://cdn.sparkfun.com/datasheets/Wireless/WiFi/Command Doc.pdf" title="https://cdn.sparkfun.com/datasheets/Wireless/WiFi/Command%20Doc.pdf" target="_blank">https://cdn.sparkfun.com/datasheets/Wireless/WiFi/Command%20Doc.pdf</a><br /><a class="externallink" href="http://41j.com/blog/2015/01/esp8266-client-mode-connect-remote-host-simple-example/" title="http://41j.com/blog/2015/01/esp8266-client-mode-connect-remote-host-simple-example/" target="_blank">http://41j.com/blog/2015/01/esp8266-client-mode-connect-remote-host-simple-example/</a><br /><br /><br />Enjoy<br /><br /><br /><pre>
+
+'
+'ESP8266 Module. Andrew Henderson. October 2016
+'
+
+'Preamble
+	OPTION BASE 0
+
+	CONST LAN=2
+
+
+'S/W Init
+	DIM STRING A$,B$,D$
+	DIM STRING LNBuf$
+	DIM STRING LANRxLN$,LANTxLN$,TChr$ LENGTH 1
+	DIM INTEGER C,Z,TOFg,Chan,Conn(4),PingTMR,PingCtr,RL1TMR LANf
+	DIM FLOAT x
+
+	'Starting WLAN Interface
+
+	Open "COM2&#58;9600,1024" As &#35;LAN
+
+	ESP8266Reset
+
+
+Main&#58;
+
+
+
+        ' don't do this every time through the loop, set a timer for no more than 60second intervals &#123;
+        'Test Internet connectivity - you'll have to handle what to do if this is broken, there's nothing here for it.
+	A$=ESP8266Exec$("AT+PING="+PA,4000,0)   ' PA=Ping address. try to be nice here and set this to a DNS server from your ISP e.g. 100,200,111,222 or www.bbc.co.uk or something that won't mind you pinging them
+	IF A$="OK" THEN
+		'good
+		'...
+	ELSE
+		'internet down
+                '...
+	END IF
+        &#125;
+
+
+
+
+
+	'Web API parsing
+
+	LANRxLN$=GetIO$(LAN,1)
+	IF LANRxLN$="" OR LANRxLN$="T/O" THEN GOTO Main ' nothing waiting on the input
+
+	IF MID$(LANRxLN$,2,8)=",CONNECT" THEN ' ESP8266 provides the connect as an indication of HTTP input
+		Chan=VAL(LANRxLN$)
+		IF Chan&gt;=0 AND Chan&lt;=4 THEN
+			Conn(Chan)=1 
+                        PRINT "Inbound connect channel "+STR$(Chan)
+			'Inbound connect channel on  channel 0 - 5
+			GOTO IPEXIT
+		END IF
+	END IF
+
+	IF MID$(LANRxLN$,2,7)=",CLOSED" THEN ' ESP8266 provides the closed as an indication of HTTP channel closing
+                                             ' either coz it was explicit or it timed out
+		Chan=VAL(LANRxLN$)
+		IF Chan&gt;=0 AND Chan&lt;=4 THEN
+			IF Conn(Chan)=0 THEN A$=" Abnormally " ELSE A$=""
+			PRINT "Closed channel "+STR$(Chan) + A$
+			Conn(Chan)=0
+			GOTO IPEXIT
+		END IF
+	END IF
+
+	IF LEFT$(LANRxLN$,5)="+IPD," THEN
+		Chan=VAL(MID$(LANRxLN$,6,1))
+		IF Chan&gt;4 THEN GOTO IPDerrEXIT
+		IF Conn(Chan)&lt;&gt;1 THEN GOTO IPDerrEXIT 'channel not open
+
+		z=INSTR(LANRxLN$,"&#58;GET /&lt;my page, e.g. index.htm&gt;") ' +IPD,0,nnn&#58;GET /index.htm HTTP/1.1
+
+		do&#58;a$=GetIO$(LAN,2)&#58;loop until a$="Connection&#58; Keep-Alive" ' empty the rest of the envelope, this string is the last part of an HTTP connection header
+
+		IF z=&gt;8 AND Z&lt;=11 THEN ' checking for the position of the arguments in the string - your mileage will vary... simple sanity check
+			b$=MID$(LANRxLN$,z+13)
+			z=INSTR(b$," HTTP/")
+			IF z&lt;21 THEN GOTO IPDerrEXIT '... and again
+			b$=LEFT$(b$,z-1) ' remove the HTTP bit
+			b$=Replace$(b$,"+"," ")' + to spaces
+			args=Split(b$,"?") '  split the request arguments out
+			IF args &lt;3 THEN GOTO IPDerrEXIT ' your arguments might vary - I have two, the header + two arguments = 3 strings from the spilt
+			
+			FOR n=2 TO args 'args=1 is a dummy
+				SELECT CASE LEFT$(ucase$(SP$(n)),4) ' check for the name of the argument here and assign the value to a variable
+					CASE "VAR1="
+						var1$=LTrim$(RTrim$(MID$(sp$(n),5)))
+					CASE "VAR2="
+						var2$=LTrim$(RTrim$(MID$(sp$(n),5)))
+				END SELECT
+			NEXT
+			IF var1$="" OR var2$="" THEN GOTO IPDerrEXIT ' don't allow empty values - your mileage may vary
+			ERASE SP$
+			Msg$=URLDecode$(Msg$)
+
+                ' other api calls go here, I only have one in this application
+
+
+		END IF
+
+		GOTO IPDerrEXIT 'default action IF we don't find an API call
+
+	END IF
+
+
+	GOTO IPEXIT
+IPDerrEXIT&#58;
+	B$="ERROR&#58; Malformed request &#123;"+LANRxLN$+"&#125;"
+IPOKEXIT&#58;
+
+	PRINT &#35;LAN,"AT+CIPSENDEX="+STR$(Chan)+",255" ' send our response back to the requestor
+	PAUSE 100
+
+	PRINT&#35;LAN,B$+"\0"
+	PAUSE 100
+
+	PRINT&#35;LAN,"AT+CIPCLOSE="+STR$(Chan) ' then close the channel nicely
+	Conn(Chan)=0
+
+IPEXIT&#58;
+
+	GOTO Main
+
+	END
+
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; ESP8266 WiFi Modem SUBsys &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+	SUB ESP8266Reset
+		LOCAL STRING A$
+		LOCAL INTEGER N
+
+		PULSE LANRST,10                                ' whatever pin you have connected to the reset of the ESP8266
+		PAUSE 400
+
+		LANExec "ATE0",2,0
+		LANExec "AT+CWAUTOCONN=0",2,0                  ' turn off autoconnect while we initialise
+		LANExec "AT+CWMODE=1",2,0
+		LANExec "AT+CWQAP",4,0                         ' disconnect any existing WiFi connections
+		LANExec "AT+RFVDD",2,0
+		LANExec "AT+CWJAP="+AP+","+PW,10,1             ' AP= name of the network you want to join e.g. your WIFI SSID - and PW= it's password
+		LANExec "AT+CIPSTA="+IP+","+GW+","+MS,2,0      ' the IP and Gateway address for static IP addresses, rem this line for a static IP
+		LANExec "AT+CIFSR",2,0
+		LANExec "AT+CWAUTOCONN=1",2,0                  ' turn autoconnect back on so if the WiFi drops, the ESP8266 will self negotiate to get it back
+		LANExec "AT+CIPMUX=1",2,0
+		LANExec "AT+CIPSERVER=1,19090",2,0             ' turn on the server with the port you want your API to listen on, normally HTTP is 80 or sometimes 8080, here I listen on 19090... you can use anything from 1 - 65536 but as a guideline; avoid anything below 1000 if you are not using 80
+
+		LANTxLN$=""&#58;LANRxLN$=""                        ' buffers for receive and transmit
+
+		FOR N=0 TO 4&#58;Conn(N)=0&#58;NEXT                    ' clear the channel connection flags
+
+	END SUB
+
+
+
+
+	SUB LANExec(CM$,T,Suppress) 'temp - will go when we have better handling of the startup
+		LOCAL STRING A$
+		A$=ESP8266Exec$(CM$,T,Suppress)
+		IF Suppress&lt;2 THEN CLog A$,0
+	END SUB
+
+	FUNCTION ESP8266Exec$(Com$,TimeOut,Obf)
+		LOCAL STRING A$ LENGTH 1,LN$
+		LOCAL INTEGER C
+
+		PRINT &#35;LAN,Com$
+
+		DO
+			LN$=GetIO$(LAN,TimeOut)
+			IF LN$="T/O" THEN ESP8266Exec$="T/O"&#58;EXIT DO
+			IF LN$&lt;&gt;"" THEN
+				IF Obf&lt;2 THEN CLog "&#91;"+LN$+"&#93;",0
+				IF LN$="OK" OR LN$="&gt;" OR LN$="SEND OK" THEN ESP8266Exec$=LN$&#58;EXIT DO
+				IF INSTR(LN$,"ERROR") THEN ESP8266Exec$="ERROR &#91;"+LNBuf$+"&#93;"&#58;EXIT DO
+			END IF
+		LOOP
+
+	END FUNCTION
+
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+
+	FUNCTION GetIO$(io,TimeOut)
+		LOCAL STRING a$,b$
+		LOCAL INTEGER c
+
+		StartTOTimer TimeOut
+		DO
+			IF TOFg=1 THEN GetIO$="T/O"&#58;EXIT DO
+			IF LOC(&#35;io)&lt;&gt;0 THEN
+				A$=INPUT$(1,&#35;io)&#58;C=ASC(A$)
+				SELECT CASE C
+					CASE 13
+						GetIO$=b$&#58;EXIT DO
+					CASE 0 TO 31
+					CASE ELSE
+						IF LEN(b$)+LEN(a$)&lt;255 THEN b$=b$+a$ ELSE b$=a$
+				END SELECT
+			END IF
+		LOOP
+		ClearTOTimer
+	END FUNCTION
+
+
+	SUB FlushIO(stream)
+		LOCAL STRING A$
+		DO WHILE LOC(&#35;stream)&lt;&gt;0
+			PAUSE 50&#58;A$=INPUT$(LOC(&#35;stream),&#35;stream)&#58;PAUSE 50
+		LOOP
+	END SUB
+
+
+
+	FUNCTION Replace$(a$,b$,c$)
+		LOCAL INTEGER z
+		LOCAL STRING x$,y$
+		z=1
+		DO
+			z=INSTR(z,a$,b$)
+			IF z=0 THEN EXIT DO
+			x$=LEFT$(a$,z-1)&#58;y$=MID$(a$,z+LEN(b$))&#58;a$=x$+c$+y$&#58;z=LEN(x$)+LEN(c$)
+		LOOP
+		Replace$=a$
+	END FUNCTION
+
+
+	FUNCTION URLDecode$(a$)
+		LOCAL INTEGER z
+		LOCAL STRING b$,c$
+		z=1
+		DO
+			z=INSTR(z,a$,"%")
+			IF z=0 OR z=LEN(a$) THEN EXIT DO
+			b$=MID$(a$,z,3)&#58;c$=CHR$(VAL("&amp;h"+MID$(b$,2)))&#58;a$=Replace$(a$,b$,c$)
+		LOOP
+		URLDecode$=a$
+	END FUNCTION
+
+
+	FUNCTION LTrim$(a$)
+		LOCAL INTEGER m
+		FOR m=1 TO LEN(a$)
+			IF not(MID$(a$,m,1)=" " OR MID$(a$,m,1)=CHR$(9)) THEN LTrim$=MID$(a$,m)&#58;EXIT FUNCTION
+		NEXT
+		LTrim$=""
+	END FUNCTION
+
+
+	FUNCTION RTrim$(a$)
+		LOCAL INTEGER n
+		FOR n=LEN(a$) TO 1 STEP -1
+			IF not(MID$(a$,n,1)=" " OR MID$(a$,n,1)=CHR$(9)) THEN RTrim$=LEFT$(a$,n)&#58;EXIT FUNCTION
+		NEXT
+		RTrim$=""
+	END FUNCTION
+
+
+	FUNCTION Split(a$,b$)
+		LOCAL INTEGER z,n,m
+		ON ERROR SKIP
+		ERASE SP$
+		z=1&#58;n=0
+		DO
+			z=INSTR(z,a$,b$)
+			IF z=0 THEN
+				IF n=0 THEN
+					DIM SP$(1)&#58;SP$(1)=a$&#58;Split=1&#58;EXIT FUNCTION
+				ELSE
+					EXIT DO
+				END IF
+			ELSE
+				n=n+1&#58;z=z+LEN(b$)
+			END IF
+		LOOP
+
+		m=n+1&#58;n=1
+		DIM SP$(m)
+		DO
+			z=INSTR(1,a$,b$)
+			IF z=0 THEN
+				SP$(m)=a$&#58;EXIT DO
+			ELSE
+				SP$(n)=LEFT$(a$,z-1)&#58;a$=MID$(a$,z+LEN(b$))&#58;n=n+1
+			END IF
+		LOOP
+		Split=m
+	END FUNCTION
+
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.ESP8266-Module-with-HTTP-API.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:45:45 GMT -->
+</html>

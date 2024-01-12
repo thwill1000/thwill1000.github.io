@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.SHIFT-or-ROTATE-an-array-of-integers.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	SHIFT or ROTATE an array of integers - Fruit Of The Shed
+</title><meta name="keywords" content="shift, rotate, array, bitfield" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=SHIFT-or-ROTATE-an-array-of-integers&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login9688.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dSHIFT-or-ROTATE-an-array-of-integers%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyfbd7.html?Page=MMBasic.SHIFT-or-ROTATE-an-array-of-integers">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			SHIFT or ROTATE an array of integers
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printfbd7.html?Page=MMBasic.SHIFT-or-ROTATE-an-array-of-integers" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2020/07/01 09:23
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages834c.html?Cat=MMBasic.Encode%20and%20Decode" title="Encode and Decode">Encode and Decode</a>, <a href="MMBasic.AllPagesd44d.html?Cat=MMBasic.Maths" title="Maths">Maths</a>, <a href="MMBasic.AllPages554c.html?Cat=MMBasic.Memory" title="Memory">Memory</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f017de90d-3437-4a05-805c-f47a363e06d6" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f017de90d-3437-4a05-805c-f47a363e06d6');"></div><div id="f01b758f3-bb7f-4943-a961-fe32b2dec99a" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f01b758f3-bb7f-4943-a961-fe32b2dec99a');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="f45fffc1f-c932-4989-af7c-3855d7490a36" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f45fffc1f-c932-4989-af7c-3855d7490a36');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="f459f6505-383f-4b60-8fed-94e8af11b506" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f459f6505-383f-4b60-8fed-94e8af11b506');"><a href="MMBasic.MMUNIX-UNIX-like-commands-cat-dir-grep-more.html" title="MMUNIX - UNIX-like commands: cat dir grep more">MMUNIX - UNIX-like commands: cat dir grep more</a><a href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a></div><div id="s65b33616-e85f-494e-9104-cbcabd5bf0e0" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s65b33616-e85f-494e-9104-cbcabd5bf0e0');"></div><div id="s848ea339-dd6c-49d8-9aae-ccb54ee7d569" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s848ea339-dd6c-49d8-9aae-ccb54ee7d569');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="s6a5b83ee-dc74-480f-be7d-6fddc7c400a1" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s6a5b83ee-dc74-480f-be7d-6fddc7c400a1');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's6a5b83ee-dc74-480f-be7d-6fddc7c400a1', this);" id="lnks6a5b83ee-dc74-480f-be7d-6fddc7c400a1" onmouseout="javascript:return __HideDropDown('s6a5b83ee-dc74-480f-be7d-6fddc7c400a1');">Shape drawing for Complex Lines and Polygons (MMBasic)</a> &raquo; <a href="MMBasic.Shell-Sort.html" title="Shell Sort (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's848ea339-dd6c-49d8-9aae-ccb54ee7d569', this);" id="lnks848ea339-dd6c-49d8-9aae-ccb54ee7d569" onmouseout="javascript:return __HideDropDown('s848ea339-dd6c-49d8-9aae-ccb54ee7d569');">Shell Sort (MMBasic)</a> &raquo; <b><a href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers.html" title="SHIFT or ROTATE an array of integers (MMBasic)">SHIFT or ROTATE an array of integers (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Regular-Expression-Function.html" title="Regular Expression Function (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f459f6505-383f-4b60-8fed-94e8af11b506', this);" id="lnkf459f6505-383f-4b60-8fed-94e8af11b506" onmouseout="javascript:return __HideDropDown('f459f6505-383f-4b60-8fed-94e8af11b506');">Regular Expression Function (MMBasic)</a> &raquo; <a href="MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.html" title="RENUM.BAS (MMBasic)">RENUM.BAS (MMBasic)</a> &raquo; <a href="MMBasic.VB-Work-a-like-REPLACE-Function.html" title="REPLACE$ Function (VB work-a-like) (MMBasic)">REPLACE$ Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.REVERSE-BAS-part-of-the-original-MMBasic-library.html" title="REVERSE.BAS (MMBasic)">REVERSE.BAS (MMBasic)</a> &raquo; <a href="MMBasic.RTC-DOW-BAS-part-of-the-original-MMBasic-library.html" title="RTC-DOW.BAS (MMBasic)">RTC-DOW.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Sample-AUTORUN-BAS-file-part-of-the-original-MMBasic-library.html" title="Sample AUTORUN.BAS (MMBasic)">Sample AUTORUN.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack (MMBasic)">Sensible Cartesian Co-ordinate graphics pack (MMBasic)</a> &raquo; <a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f45fffc1f-c932-4989-af7c-3855d7490a36', this);" id="lnkf45fffc1f-c932-4989-af7c-3855d7490a36" onmouseout="javascript:return __HideDropDown('f45fffc1f-c932-4989-af7c-3855d7490a36');">Shape drawing for Complex Lines and Polygons (MMBasic)</a> &raquo; <a href="MMBasic.Shell-Sort.html" title="Shell Sort (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f01b758f3-bb7f-4943-a961-fe32b2dec99a', this);" id="lnkf01b758f3-bb7f-4943-a961-fe32b2dec99a" onmouseout="javascript:return __HideDropDown('f01b758f3-bb7f-4943-a961-fe32b2dec99a');">Shell Sort (MMBasic)</a> &raquo; <b><a href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers.html" title="SHIFT or ROTATE an array of integers (MMBasic)">SHIFT or ROTATE an array of integers (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		On occasion I have had the fairly niche requirement to shift an integer variable (64 bits) left or right but preserve whatever fell off the end. A larger version of the common shift/rotate instructions of CPUs - many of which have far more complicated types.<br /><br />My requirement was fairly simple, shift an integer and where the least significant bit (LSB), say, would normally be lost, preserve it and move it into the most significant bit (MSB) of the next.<br /><br />Consider the action of the Z80 instruction SRL (Shift Right Logical)<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="SRL9bc3.png?File=/MMBasic/SRL.png" alt="Image" /><br /><br />The byte in the register is bit-wise shifted right, a zero is shifted into the MSB and the LSB is moved into the carry flag. At its simplest I needed this functionality and its counter part the Shift Left Logical. Using combinations of these instructions it was possible to rotate/shift huge arrays of bytes using the carry to perpetuate the orphaned bit into the relevant place in the next byte. In my case, I was implementing a FIFO buffer, so I needed this same functionality across groups of integers.<br /><br />I opted on using an array as passing arbitrary variable names as the group is pretty much not-achievable. The functionality of BigSRR is similar to the Z80 instruction above but the shift ripples through the entire array resulting in the overall LSB or a zero moving into the overall MSB - probably best illustrated with the below graphic.<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="BigSRLdfd1.png?File=/MMBasic/BigSRL.png" alt="Image" /><br /><br />Shifting Left is the reverse action with the MSB or a zero moving into the right-most bit. <br /><br />Only three elements are shown above, there is no practical limit on the number of elements in reality but the more elements, the longer any shift. The number of bits also affects execution time as confessed below.<br /><br />As written below, the routines will allow a shift or rotate (depending on the value of the opt&#0091;ion&#0093; flag passed in). For now, they are supremely lazy, simply performing a 1 bit shift the number of times you request. i.e. if you shift the array 10 bits, it goes round the loop ten times. In that respect, I suppose they are faithful to the inspiration in that the Z80 didn't possess the <a class="externallink" href="https://en.wikipedia.org/wiki/Barrel_shifter" title="barrel shifter" target="_blank">barrel shifter</a> of more modern CPUs that can shift any number of bits in a single cycle. I wanted to be clever and calculate a "cookie cut" on each array member but then it gets tricky when you shift more than 63 bits... so for now it is lazy but reliable.<br /><br /><b>Dependencies:</b><br />None<br /><br /><b>Examples:</b><br />BigSRL(1)  Shift the entire array left 1 bit - same as BigSRL(1,0)<br />BigSRR(10,1)  Rotate the array right 10 bits. The ten bits that drop off the right hand end are shifted into the ten most significant bits<br /><br /><b>Some example code</b><br /><pre>	CPU 48
+
+	Option Base 0 ' necessary
+	
+' variables to be rotated need to be in an array as we can't pass the names of arbitrary variables.
+
+	Dim Integer Vars=3,x' Vars is the number of 64 bit integers in the array, change this as necessary
+	Dim Integer B(Vars) ' B() is the buffer for our integers to shift. Byte 0, bit 63 is MSB, Byte&#91;Vars&#93;, bit 0 is LSB
+	
+	
+	'some demonstration code
+	B(Vars)=1
+	?"In&#58;"
+	For x=0 To Vars
+		? Bin$(B(x),64)+" ";
+	Next
+	?&#58;?
+	
+	BigSRL(256,1)
+	
+	?"Out&#58;"
+	For x=0 To Vars
+		? Bin$(B(x),64)+" ";
+	Next
+	?
+	
+	BigSRR(253,1)
+	
+	?"Out&#58;"
+	For x=0 To Vars
+		? Bin$(B(x),64)+" ";
+	Next
+	?
+</pre>	<br />	<br /><b>The Subs</b><br /><pre>
+	'shift or rotate left B() bits. opt&#58; 0=Shift, 1=rotate
+	Sub BigSRL(bits as Integer,opt)
+		Local Integer m,n,c
+		For m=1 To bits
+			c=(B(0) And &amp;h8000000000000000)&lt;&gt;0
+			For n=0 To Vars
+				B(n)=B(n)&lt;&lt;1
+				If n&lt;Vars Then
+					If B(n+1) And &amp;h8000000000000000 Then ' &amp;B1000000000000000000000000000000000000000000000000000000000000000 63rd bit
+						B(n)=B(n) Or 1
+					EndIf
+				EndIf
+			Next
+			If opt Then B(Vars)=B(Vars) Or c
+		Next
+	End Sub
+	
+	'shift or rotate right B() bits. opt&#58; 0=Shift, 1=rotate
+	Sub BigSRR(bits as Integer,opt)
+		Local Integer m,n,c
+		For m=1 To bits
+			c=(B(Vars) And 1)&#42;&amp;h8000000000000000
+			For n=Vars To 0 Step-1
+				B(n)=B(n)&gt;&gt;1
+				If n Then
+					If B(n-1) And 1 Then
+						B(n)=B(n) Or &amp;h8000000000000000
+					EndIf
+				EndIf
+			Next
+			If opt Then B(0)=B(0) Or c
+		Next				
+	End Sub
+</pre>	<br />	<br />	
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.SHIFT-or-ROTATE-an-array-of-integers.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:11 GMT -->
+</html>

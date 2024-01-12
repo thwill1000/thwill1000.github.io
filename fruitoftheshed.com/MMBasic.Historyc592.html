@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:36:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores&amp;Revision=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAVWUGFnZSBIaXN0b3J5OiBBRlRFUiwgRVZFUlksIEFULCBSRU1BSU4gRmxleGlibGUgU3RhdGUgTWFjaGluZSBUaW1lcnMgdXNpbmcgU2VtYXBob3Jlcy5kAgUPEGQQFQcBNgE1ATQBMwEyATEBMBUHATYBNQE0ATMBMgExATAUKwMHZ2dnZ2dnZ2RkAgcPEGQQFQgHQ3VycmVudAE2ATUBNAEzATIBMQEwFQgHQ3VycmVudAE2ATUBNAEzATIBMQEwFCsDCGdnZ2dnZ2dnZGQCCw8WAh8ABYxRPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5BRlRFUi1FVkVSWS1SRU1BSU4tRmxleGlibGUtU3RhdGUtTWFjaGluZS1UaW1lcnMtdXNpbmctU2VtYXBob3JlcyI+QmFjayB0byBQYWdlIEhpc3Rvcnk8L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLkFGVEVSLUVWRVJZLVJFTUFJTi1GbGV4aWJsZS1TdGF0ZS1NYWNoaW5lLVRpbWVycy11c2luZy1TZW1hcGhvcmVzJmFtcDtSZXZpc2lvbj0wMDAwMSI+TmV3ZXIgUmV2aXNpb24gJnJhcXVvOzwvYT48L2I+PC9wPjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPjxoMyBjbGFzcz0ic2VwYXJhdG9yIj5QYWdlIFJldmlzaW9uOiAyMDE4LzEwLzI2IDEyOjA0PC9oMz48YnIgLz5BIDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0Zpbml0ZS1zdGF0ZV9tYWNoaW5lIiB0aXRsZT0iU3RhdGUgTWFjaGluZSIgdGFyZ2V0PSJfYmxhbmsiPlN0YXRlIE1hY2hpbmU8L2E+IGlzIGEgbWF0aGVtYXRpY2FsIGNvbmNlcHQgd2hlcmVieSBhIHN5c3RlbSBpcyBkcml2ZW4gYnkgc3RpbXVsaSBhbmQgaXRzIHN0YXRlIGFsdGVycyBieSByZWFjdGluZyB0byB0aGVtLiBUaGUgY29uZGl0aW9uIG9mIHRoZSBzdGltdWxpIGluZGljYXRlcyB0aGUgc3RhdGUgb2YgdGhlIHN5c3RlbSBhcyBhbnkgcG9pbnQgaW4gdGltZS4gPGJyIC8+PGJyIC8+SW4gY29tcHV0aW5nLCBzdGF0ZSBtYWNoaW5lIG1ldGhvZG9sb2d5IGlzIGVtcGxveWVkIHRvIGdldCBhd2F5IGZyb20gaGF2aW5nIGEgdHJhZGl0aW9uYWxseSB0aWdodGx5IGludGVybG9ja2VkIHN5c3RlbSBpbiBmYXZvdXIgb2Ygb25lIHRoYXQgaXMgb25seSBhY3RpdmUgd2hlbiBhIHN0aW11bHVzIGlzIHJlY2VpdmVkOyBDaGFuZ2luZyBpdHMgInN0YXRlIiBkZXBlbmRpbmcgb24gdGhvc2Ugc3RpbXVsaS4gU3RpbXVsaSBjb3VsZCBiZSBJL08gcGlucywgYSBzcGVjaWZpYyBzdHJpbmcgb3IgbW9yZSBvZnRlbiwgZmxhZ3MuIFN1Y2ggc3lzdGVtcyB0ZW5kIHRvIGJlIGxvb3NlLWNvdXBsZWQgdG8gaXRzIHRhc2tzIGFuZCB0aHVzIGVhc2llciB0byBwcm9ncmFtIGZvciBtdWx0aXBsZSBhY3Rpb25zLCBlYWNoIGJlaW5nIHNlbGYgY29udGFpbmVkIGluIHN1Yi1wcm9ncmFtcyBhbmQgdHJpZ2dlcmVkIGJ5IGl0cyBzdGltdWx1cy48YnIgLz48YnIgLz5UaGlzIGlzIGEgbWFqb3Igc3RlcCB0b3dhcmRzIGV2ZW50LWRyaXZlbiBwcm9ncmFtbWluZy4gRXZlbnQtZHJpdmVuIHByb2Nlc3NpbmcgY2FuIHByb3ZpZGUgYW4gYWxtb3N0IG11bHRpLXRhc2tpbmcgYXBwZWFyYW5jZSBpbiBtaWNyby1jb250cm9sbGVycyBhcyBzZWN0aW9ucyBvZiBjb2RlIGV4ZWN1dGUgYXN5bmNocm9ub3VzbHkgdG8gb3RoZXJzLCBzaWduYWxpbmcgYW5kIGludGVybG9ja2luZyB3aXRoIG90aGVyIHN1Yi1wcm9ncmFtcyBieSBzZXR0aW5nIG9yIGNsZWFyaW5nIGZsYWdzIC0gYSBwcm9jZXNzIGNhbGxlZCAic2VtYXBob3JlIi4gQWx0aG91Z2ggaXQgaXMgYSBmYWlybHktaXNoIG1vZGVybiBhcHByb2FjaCAocmVhbGx5IHN0YXJ0ZWQgdG8gdGFrZSBvZmYgYXJvdW5kIHRoZSBtaWQgOTBzKSB0byB3cml0aW5nIGdvb2QgcHJvZ3JhbXMsIHRoZSBwcm9jZXNzIG9mIHNlbWFwaG9yZSBieSB0d2Vha2luZyBmbGFncyBnb2VzIGJhY2sgdG8gdGhlIGVhcmxpZXN0IENQVXMsIHdoZW4gYW4gYWN0aW9uIHdvdWxkIGJlIHRha2VuIGFzIGEgcmVzdWx0IG9mIG9uZSBwcm9jZXNzIHNpZ25hbGluZyBhIHNwZWNpZmljIHN0YXRlIHdoaWNoIHJlc3VsdGVkIGluIGFub3RoZXIgcHJvY2VzcyBkb2luZyBzb21ldGhpbmcgYWJvdXQgaXQuIEFsbCBDUFVzIHN1cHBvcnQgc2VtYXBob3JlcywgaWYgb25seSB3aXRoIGEgemVybyBmbGFnIG9yIGNhcnJ5IGZsYWcgaW4gdGhlIHN0YXR1cyByZWdpc3Rlci4gVGhpcyB3YXMgd2FzIGEgZ29vZCB3YXkgdG8gc2lnbmFsIGZyb20gYSBvbmUgc2VjdGlvbiBvZiBjb2RlIHRvIGFub3RoZXIgdGhhdCBhIGRlY2lzaW9uIG5lZWRlZCB0byBiZSBtYWRlLjxiciAvPjxiciAvPlVzdWFsbHksIHRoZSBtYWluIHNlY3Rpb24gb2YgdGhlIHByb2dyYW0gZ29lcyByb3VuZCBpbiBhIGxvb3AgYXMgYmVmb3JlIGJ1dCBpbnN0ZWFkIG9mIHRha2luZyBhY3Rpb25zIGFzIHBhcnQgb2Ygb3IgaW4tbGluZSB3aXRoIHRoZSBtYWluIHRocmVhZCwgaXQgY2hlY2tzIHRoZSBzdGF0ZSBvZiBmbGFncyBvciBJL08gYW5kIGxhdW5jaGVzIG90aGVyIHByb2Nlc3NlcyB0byBkZWFsIHdpdGggaXQgYXMgYXBwcm9wcmlhdGUgZS5nLiB3aGVuIGEgZ2l2ZW4gZmxhZyBiZWNvbWVzIHNldCAob3Igd2hhdGV2ZXIgeW91IHdhbnQpLiBJbiBtb2Rlcm4gY29tcHV0ZXIgbGFuZ3VhZ2VzLCB0aGUgIm1haW4gbG9vcCIgd291bGQgYmUgYSBkb3JtYW50IHN0YXRlIGFuZCB0aGUgZXZlbnQgaGFuZGxlciB3b3VsZCB3YWtlIHlvdXIgcHJvZ3JhbSB3aGVuIHRoZSBzdGF0ZSBvZiB0aGUgc3RpbXVsaSBjaGFuZ2VkICh5b3UgZG9uJ3QgaGF2ZSB0byBnaXZlIHRoZSBDUFUgc29tZXRoaW5nIHRvIGRvIHdoaWxlIGl0IGlzIHdhaXRpbmcgZm9yIGEgc3RhdGUgY2hhbmdlKS4gVGhpcyBtYWtlcyBhbGwgb2YgdGhlIHJlc291cmNlcyAod2hpbGUgdGhlIENQVSBpc24ndCBidXN5KSBhdmFpbGFibGUgdG8gdGhlIHN5c3RlbSBmb3Igb3RoZXIgdGFza3MuIFdpdGggbWljcm8tY29udHJvbGxlcnMgeW91IGRvbid0IG9mdGVuIGhhdmUgYW4gT3BlcmF0aW5nIFN5c3RlbSB0byBoYW5kbGUgdGhlIENQVSB3aGVuIGl0IGlzIGlkbGUgLSB5b3UgY29udHJvbCB0aGUgQ1BVIGF0IGEgdmVyeSBsb3cgbGV2ZWwuPGJyIC8+PGJyIC8+U3RhdGUtbWFjaGluZSBjb2RlIGFsc28gbWFrZXMgZm9yIGVhc2lseSByZWFkYWJsZSBhbmQgbW9kaWZpYWJsZSBwcm9ncmFtcyBhcyBlYWNoIGFjdGlvbiBiZWNvbWVzIGEgdHJ1ZSBzdWItcHJvZ3JhbSBhbmQgeW91IGRvbid0IGhhdmUgdG8gd29ycnkgYWJvdXQgZGlzcnVwdGluZyBvdGhlciBzZWN0aW9ucyBvZiBjb2RlIHNvIGxvbmcgYXMgYW55IHN1YiBwcm9ncmFtIGhhbmRsZXMgaXRzIGlucHV0IHZhbHVlcyBhbmQgcHJvdmlkZXMgdGhlIGV4cGVjdGVkIG91dHB1dCB2YWx1ZXMuIEZsYWdzIGNhbiBiZSBzZXQgYnkgYW55IHNlY3Rpb24gb2YgY29kZSwgdHJpZ2dlcmluZyBhY3Rpdml0eSBmcm9tIGFueXdoZXJlIGluIHlvdXIgY29kZS4gPGJyIC8+PGJyIC8+RW5vdWdoIGludHJvZHVjdGlvbi9nZW5lcmFsaXphdGlvbiwgZG93biB0byB0aGUgbWVhdCBvZiB0aGlzIGFydGljbGUuLi4gQSBrZXkgcmVxdWlyZW1lbnQgb2YgYSBzdGF0ZSBtYWNoaW5lIGlzIHNlY3Rpb25zIG9mIGNvZGUgYmVpbmcgZXhlY3V0ZWQgdG8gYSBzY2hlZHVsZSBvciBhZnRlciBhIHBlcmlvZCBvZiB0aW1lLiBUaGUgZm9sbG93aW5nIHVzZXMgYW4gYXJyYXkgb2YgZmxhZ3MgYW5kIGNvdW50ZXJzIHRvIGtlZXAgdHJhY2sgb2YgKGluIHRoaXMgY2FzZSBidXQgZWFzaWx5IHR3ZWFrLWFibGUpIDEwIHRpbWVycywgIHdpdGggb3B0aW9uIGZvciB0aGVtIHRvIGJlIHNpbmdsZS1zaG90IG9yIHJlcGVhdGluZy4gVGhlIHRpbWVycyBjYW4gYmUgc3RvcHBlZCBvciB0ZW1wb3JhcmlseSBkaXNhYmxlZC4gVGhlIGJlbG93IFN1YiBhcmUgaW5zcGlyZWQgYnkgdGhlIExvY29tb3RpdmUgQmFzaWMgY29tbWFuZHMgb2YgdGhlIHNhbWUgbmFtZXMgYW5kIG1ha2UgZXhlY3V0aW5nIHNlY3Rpb25zIG9mIGNvZGUgYXN5bmNocm9ub3VzbHkgYSBicmVlemUuIE1NQmFzaWMgcHJvdmlkZXMgZm91ciB0aW1lcnMgYnV0IHRoZXkgZXhwZWN0IGEgc3ViIHByb2dyYW0gdG8gYmUgY2FsbGVkIGVhY2ggdGltZSBhbmQgdGhleSBoYXZlIHRvIGJlIGhhbmRsZWQgKGkuZS4gaWYgdGhleSBhcmUgb25lLXNob3QpIGJ5IHRoZSBjYWxsZWQgc3ViLiBUaGUgZm9sbG93aW5nIGNvZGUgdXNlcyBhIHNpbmdsZSBNTUJhc2ljIHRpbWVyIGJ1dCB0aGVuIGV4cGFuZHMgdGhpcyB0byBwcmFjdGljYWxseSB1bmxpbWl0ZWQgdGltZXJzIGFuZCByZWFsbHkgZWFzeSB0byBzZXQgb25lIHJ1bm5pbmcuIFRoZSBtYWluIGxvb3Agc2ltcGx5IGNoZWNrcyBmb3IgdGhlIHJlbGV2YW50IGZsYWcgYW5kIGNhbGxzIHRoZSBTdWItcHJvZ3JhbSBpZiBpdCBpcyBzZXQuPGJyIC8+PGJyIC8+PGI+UHJvczo8L2I+PGJyIC8+PHVsPjxsaT5FYXN5IHRvIGNvbmZpZ3VyZSBhIG9uZS1zaG90IHRpbWVyLjwvbGk+PGxpPkVhc3kgdG8gcmUtdXNlIHRpbWVycyBmb3IgZGlmZmVyZW50IHNlY3Rpb25zIG9mIGNvZGUuPC9saT48bGk+UmV0cmlldmUgdGhlIHJlbWFpbmluZyB0aW1lIG9uIGNhbmNlbGxpbmcgYSB0aW1lci48L2xpPjxsaT5ObyBuZWVkIHRvIHdvcnJ5IGFib3V0IGhhbmRsaW5nIFNFVFRJQ0sgLSBObyBkZWRpY2F0ZWQgU3ViIHRvIGhhbmRsZSBhbiBldmVudCAtIGp1c3QgZG8gaXQgaW5saW5lIHdoZW4gaXQgaXMgY29udmVuaWVudC48L2xpPjxsaT5HaXZlcyBtdWNoIGdyZWF0ZXIgc2NvcGUgZm9yIHRoZSBudW1iZXIgb2YgdGltZXJzLjwvbGk+PGxpPk11bHRpcGxlIHRpY2tzIG9mIHRoZSBzYW1lIGNvdW50ZXIgZ2l2ZSBvbmx5IGEgc2luZ2xlIGV2ZW50IC0gTm8gZXZlbnQgInN0b3JtcyIgZm9yIHNsb3ctcnVubmluZyBjb2RlLjwvbGk+PGxpPk1hbmFnZWFibGUgcHJvZ3JhbSBpbnRlcnJ1cHRpb24gLSBJdCBpcyB0b3RhbGx5IGRvd24gdG8gdGhlIHByb2dyYW0gZmxvdyAtIG5vdGhpbmcga2lja2luZyBvZmYgImJlaGluZCB5b3VyIGJhY2siLjwvbGk+PGxpPk5vIGltcGxpY2l0IHByaW9yaXR5IHRvIHRpbWVycywgaXQgaXMgZG93biB0byBob3cgdGhlIGZsYWdzIGdldCBjaGVja2VkLjxiciAvPjwvbGk+PC91bD48YnIgLz48Yj5Db25zOjwvYj48YnIgLz48dWw+PGxpPlRpbWVyIHJlc29sdXRpb24gaXMgbm90IGxpa2VseSB0byBiZSBhcyBnb29kIGFzIFNFVFRJQ0sgb24gc2xvdyBzeXN0ZW1zIC0gdmVyeSBzbWFsbCBkZWxheXMgYXJlIGxpa2VseSB0byBiZSBpbmFjY3VyYXRlLCBlLmcuIHdhaXRpbmcgb25lIHNlY29uZCB3aGVuIHRoZSBzZXJ2aWNlIHBlcmlvZCBpcyAxMDAwbVMuPGJyIC8+PC9saT48L3VsPjxiciAvPlRoZSBmb2xsb3dpbmcgcHJvdmlkZXMgYSBjb3JlIHRpbWVyIGhhbmRsZXIgYW5kIHRocmVlIFN1YnMgdG8gc2V0IHJlcGV0aXRpdmUgb3Igb25lLXNob3QgdGltZXJzIGFuZCBhIG1ldGhvZCB0byBzdG9wIGEgdGltZXIgKGFuZCByZXR1cm4gdGhlIHJlbWFpbmluZyBjb3VudCBiZWZvcmUgaXQgd2FzIHN0b3BwZWQpLjxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczo8L2I+PGJyIC8+PHVsPjxsaT48YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuQml0LU1hbmlwdWxhdGlvbi1GdW5jdGlvbnMuYXNoeCIgdGl0bGU9IkJpdCBNYW5pcHVsYXRpb24gRnVuY3Rpb25zIj5CaXQgTWFuaXB1bGF0aW9uIEZ1bmN0aW9uczwvYT4gIEJpdHMgMCAtIDkgaW4gdGhlIEZsYWdzIGZpZWxkIGNvcnJlc3BvbmQgdG8gdGltZXJzIDAtOS4uLiB0d2VhayBhcyBuZWNlc3NhcnkuIEJpdCAxMCBpcyB0aGUgZ2xvYmFsIHRpbWVyIGRpc2FibGUgYml0ICg9MSkuIEluIHRoZSBkaXNhYmxlZCBzdGF0ZSwgdGltZXJzIGFyZSBub3QgZGVjcmVtZW50ZWQgYW5kIGFueSB0aW1lIHNwZW50IGRpc2FibGVkIHdpbGwgYmUgZWZmZWN0aXZlbHkgYWRkZWQgdG8gcnVubmluZyB0aW1lcnMuIEUuZy4gaWYgYSB0aW1lciBpcyBkdWUgdG8gZXhwaXJlIGFmdGVyIDEwIHNlY29uZHMgYnV0IHNwZW5kcyBmaXZlIHNlY29uZHMgZGlzYWJsZWQsIHRoZSB0b3RhbCBkZWxheSB3aWxsIGJlIDE1IHNlY29uZHMuIERJL0VJIHNob3VsZCBiZSB1c2VkIHRvIHN0b3AgdGhlIHRpbWVycyB3aGVuIHNvbWUgY3JpdGljYWwgcHJvY2VzcyBpcyB0YWtpbmcgcGxhY2UgdG8gcHJldmVudCBzdGF0ZSBjaGFuZ2VzLjwvbGk+PGxpPlRocmVlIGdsb2JhbCB2YXJpYWJsZXMgYXJlIHJlcXVpcmVkLCB0d28gaW50ZWdlciBhcnJheXMgYW5kIGEgc2ltcGxlIGludGVnZXIgdG8gaG9sZCB0aGUgZmxhZ3MuPGJyIC8+PC9saT48L3VsPjxiciAvPjxiPlZhcmlhYmxlIERlc2NyaXB0aW9uczo8L2I+PGJyIC8+VE1SY3RyKCkgbWFpbnRhaW5zIHRoZSBjb3VudCBmb3IgYSBnaXZlbiB0aW1lcjxiciAvPlRNUmluaSgpaG9sZHMgdGhlIHRpbWVyIHR5cGUgYW5kIGl0cyBpbml0aWFsaXphdGlvbiB2YWx1ZS48YnIgLz48Y29kZT4gICAgLSBiaXRzIDAtNjEgc3RvcmUgdGhlIGluaXRpYWwgdmFsdWUgdmFsdWU8YnIgLz4gICAgLSBiaXRzIDYzJjYyIHN0b3JlIHRoZSBmb3JtYXQgb2YgdGhlIGNvdW50ZXI6PGJyIC8+ICAgICAgICAwPWRpc2FibGVkPGJyIC8+ICAgICAgICAxPShhY3R1YWxseSAweDQwMDAwMDAwMDAwMDAwMDApIGluZGljYXRlcyBhIG9uZSBzaG90ICJBRlRFUiB4IiB0eXBlIGNvdW50ZXI8YnIgLz4gICAgICAgIDI9KGFjdHVhbGx5IDB4ODAwMDAwMDAwMDAwMDAwMCkgaW5kaWNhdGVzIGEgcmVwZXRpdGl2ZSAiRVZFUlkgeCIgdHlwZSBjb3VudGVyPGJyIC8+PC9jb2RlPjxiciAvPkFzIHdyaXR0ZW4gYmVsb3csIGl0IHByb3ZpZGVzIDEwIHRpbWVycyB3aGljaCBzaG91bGQgYmUgbG9hZHMgZm9yIGp1c3QgYWJvdXQgYW55IHVzZSwgYnV0IHRoaXMgY2FuIGJlIHR3ZWFrZWQgYXMgeW91IHNlZSBmaXQuPGJyIC8+PGJyIC8+VGhlIENvcmVUTVIgbmVlZHMgdG8gYmUgc2V0IHJ1bm5pbmcgd2l0aCB0aGUgU0VUVElDSyBjb21tYW5kIC0gdGltZXIgY291bnRlciB2YWx1ZXMgYXJlIGEgbXVsdGlwbGUgb2YgdGhlIGludGVydmFsIHVzZWQgaGVyZS4gVHJ5IG5vdCB0byBiZSB0b28gYWdncmVzc2l2ZSB3aXRoIHNtYWxsL2Zhc3QgaW50ZXJ2YWxzIGJ1dCB0aGUgbGFyZ2VyIHRoZSBpbnRlcnZhbCB0aGUgZ3JlYXRlciB0aGUgbG9zcyBvZiByZXNvbHV0aW9uLiBGaW5kIHNvbWV0aGluZyB0aGF0IHdvcmtzIGZvciB5b3UgYnV0IHJlbWVtYmVyIHRvIGFkanVzdCB5b3VyIHRpbWVyIHZhbHVlcyBhY2NvcmRpbmdseSBlLmcuIGlmIHlvdSB3YW50IHRpY2tzIDEwIHRpbWVzIGEgc2Vjb25kLCB0aGUgc2V0aXRpY2sgbXVzdCBiZSBzZXQgdG8gMTAwIC0gYW5kIHRoZSB2YWx1ZXMgdXNlZCBpbiBBRlRFUiAmIEVWRVJZIHdvdWxkIG5lZWQgdG8gcmVmbGVjdCB0aGUgaW5jcmVhc2UgaW4gcmVzb2x1dGlvbiAtaW4gdGhlIGFib3ZlIGV4YW1wbGUgMSBzZWNvbmQgYmVjb21lcyAxMCBjb3VudHMgZXRjLjxiciAvPjxiciAvPjxiPkV4YW1wbGU6PC9iPjxiciAvPjxwcmU+DQpQcmVhbWJsZSYjNTg7DQoJT3B0aW9uIEJhc2UgMA0KDQoJRGltIEludGVnZXIgVE1SY3RyKDkpLFRNUmluaSg5KQ0KDQoJRmxhZ3M9MA0KCQ0KCVNFVFRJQ0sgMTAwMCxDb3JlVE1SLDQnIHNlcnZpY2UgdGltZXJzICBldmVyeSBzZWNvbmQNCg0KDQoNCg0KDQpNYWluJiM1ODsNCicgZXhhbXBsZSB1c2FnZSBmb3IgdGhlIG1haW4gbG9vcA0KJyBnaXZlcyB0aGUgdXNlciAxMCBzZWNvbmRzIHRvIGhpdCBhIGtleSAodXNpbmcgdGltZXIgMSkNCglQcmludCAiUXVpY2sgUHJlc3MgYSBrZXkhIg0KCQ0KCUFmdGVyIDEwLDEgJyAxMCBzZWNvbmRzIHVzaW5nIHRpbWVyIDENCglFdmVyeSAxICwyICcgY291bnQgMSBzZWNvbmQgaW50ZXJ2YWxzIHVzaW5nIHRpbWVyIDINCglFdmVyeSAyICwzICcgY291bnQgMiBzZWNvbmQgaW50ZXJ2YWxzIHVzaW5nIHRpbWVyIDMNCg0KCURvDQoJCWEkPUlua2V5JA0KCQlJZiBGbGFnVGVzdCgyKSBUaGVuIEZsYWdSZXMgMiYjNTg7UHJpbnQgIngiJyBvdXRwdXQgYW4geCB3aGlsZSB3ZSB3YWl0DQoJCUlmIEZsYWdUZXN0KDMpIFRoZW4gRmxhZ1JlcyAzJiM1ODtQcmludCAieSInIG91dHB1dCBhIHkgIHdoaWxlIHdlIHdhaXQNCglMb29wIFVudGlsIEZsYWdUZXN0KDEpIG9yIGEkJmx0OyZndDsiIg0KDQoJeD1SZW1haW4oMSknIHN0b3AgdGhlIHRpbWVyIGFuZCBnZXQgdGhlIHJlbWFpbmluZyB0aW1lDQoNCglJZiBGbGFnVGVzdCgxKSBUaGVuICcgdGhlIHRpbWVyIGV4cGlyZWQ/DQoJCVByaW50ICJUb28gbGF0ZSEiDQoNCglFbHNlICcgb3RoZXJ3aXNlIHNvbWVvbmUgcHJlc3NlZCBhIGtleQ0KCQlQcmludCAidGhhdCB3YXMgY2xvc2UuIFRoZXJlIHdhcyBvbmx5ICI7eDsiIHNlY29uZHMgbGVmdCEiDQoNCglFbmRJZg0KDQoJREkNCglGb3Igbj0xIFRvIDMmIzU4OyB4PVJlbWFpbihuKSYjNTg7IE5leHQNCglFSQ0KCQ0KCUVuZA0KDQoNCg0KDQonIFRoZSBzdWJzDQoJU1VCIENvcmVUTVIgJyBuZWVkcyB0byBydW4gb24gYSB0aWNrZXIgYXQgd2hhdGV2ZXIgaW50ZXJ2YWwgaXMgcmVxdWlyZWQgLSB0aGlzIGlzIGFsc28gdGhlIG11bHRpcGxlIG9mIHRpbWVyIGNvdW50cw0KCQlJZiBGbGFnVGVzdCgxMCkgVGhlbiBFeGl0IFN1Yg0KCQlMb2NhbCBJbnRlZ2VyIG4sZix2DQoJCUZvciBuPTAgVG8gOQ0KCQkJZj1UTVJpbmkobikgQW5kICZhbXA7aEMwMDAwMDAwMDAwMDAwMDAgJyBleHRyYWN0IHRoZSB0b3AgMiBiaXRzDQoJCQlTZWxlY3QgQ2FzZSBmDQoJCQkJQ2FzZSAwLCZhbXA7aEMwMDAwMDAwMDAwMDAwMDAgJ2Rpc2FibGVkIG9yIGludmFsaWQNCgkJCQkJRmxhZ1JlcyhuKQ0KCQkJCUNhc2UgJmFtcDtoNDAwMDAwMDAwMDAwMDAwMCcgQUZURVINCgkJCQkJSWYgVE1SY3RyKG4pJmd0OzAgdGhlbg0KCQkJCQkJVE1SY3RyKG4pPVRNUmN0cihuKS0xDQoJCQkJCQlJZiBUTVJjdHIobik9MCBUaGVuIEZsYWdTZXQobikgJyBpbmRpY2F0ZSB0aGUgdGltZXIgaGFzIGV4cGlyZWQNCgkJCQkJRW5kSWYNCgkJCQlDYXNlICZhbXA7aDgwMDAwMDAwMDAwMDAwMDAnIEVWRVJZDQoJCQkJCUlmIFRNUmN0cihuKSZndDswIHRoZW4NCgkJCQkJCVRNUmN0cihuKT1UTVJjdHIobiktMQ0KCQkJCQkJSWYgVE1SY3RyKG4pPTAgVGhlbg0KCQkJCQkJCUZsYWdTZXQobikgJyBpbmRpY2F0ZSB0aGUgdGltZXIgaGFzIGV4cGlyZWQNCgkJCQkJCQlUTVJjdHIobik9VE1SaW5pKG4pIEFuZCAmYW1wO2gzRkZGRkZGRkZGRkZGRkZGICcgcmVzZXQgdGhlIHRpbWVyDQoJCQkJCQlFbmRJZg0KCQkJCQlFbmRJZg0KCQkJRW5kIFNlbGVjdA0KDQoJCU5leHQNCglFTkQgU1VCDQoNCg0KCVN1YiBBZnRlcihJbnRlcnZhbCBBcyBJbnRlZ2VyLFRtciBBcyBJbnRlZ2VyKScgc3RhcnRzIGEgb25lLXNob3QgdGltZXINCgkJVE1SaW5pKFRtcik9SW50ZXJ2YWwgT1IgJmFtcDtoNDAwMDAwMDAwMDAwMDAwMCYjNTg7VE1SY3RyKFRtcik9SW50ZXJ2YWwgQW5kICZhbXA7aDNGRkZGRkZGRkZGRkZGRkYmIzU4O0ZsYWdSZXMoVG1yKQ0KCUVuZCBTdWINCg0KCVN1YiBFdmVyeShJbnRlcnZhbCBBcyBJbnRlZ2VyLFRtciBBcyBJbnRlZ2VyKScgc3RhcnRzIGEgcmVwZXRpdGl2ZSB0aW1lcg0KCQlUTVJpbmkoVG1yKT1JbnRlcnZhbCBPUiAmYW1wO2g4MDAwMDAwMDAwMDAwMDAwJiM1ODtUTVJjdHIoVG1yKT1JbnRlcnZhbCBBbmQgJmFtcDtoM0ZGRkZGRkZGRkZGRkZGRiYjNTg7RmxhZ1JlcyhUbXIpDQoJRW5kIFN1Yg0KDQoJRnVuY3Rpb24gUmVtYWluKFRtciBBcyBJbnRlZ2VyKSBBcyBJbnRlZ2VyJyBzdG9wcyBhIHRpbWVyIGFuZCByZXR1cm5zIHRoZSByZW1haW5pbmcgd2hvbGUgY291bnRzIGluIHRoZSBjb3VudGVyDQoJCVRNUmluaShUbXIpPVRNUmluaShUbXIpIEFuZCAmYW1wO2gzRkZGRkZGRkZGRkZGRkZGDQoJCVJlbWFpbj1UTVJjdHIoVG1yKQ0KCUVuZCBGdW5jdGlvbg0KDQoJU3ViIERJDQoJCUZsYWdTZXQgMTANCglFbmQgU3ViDQoNCglTdWIgRUkNCgkJRmxhZ1JlcyAxMA0KCUVuZCBTdWINCjwvcHJlPjxiciAvPkFsbCA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwOi8vd3d3LmNwY3dpa2kuZXUvaW5kZXgucGhwL0xvY29tb3RpdmVfQkFTSUMjQUZURVJfLkUyLjgwLkI5dGltZV9kZWxheS5FMi44MC5CQS41Qi4yQy5FMi44MC5COXRpbWVyX251bWJlci5FMi44MC5CQS41RF9HT1NVQl8uRTIuODAuQjlsaW5lX251bWJlci5FMi44MC5CQSIgdGl0bGU9InRoZSBmdW5jdGlvbnMiIHRhcmdldD0iX2JsYW5rIj50aGUgZnVuY3Rpb25zPC9hPiBhcmUgaW5zcGlyZWQgYnkgc29tZSBpbm5vdmF0aXZlIChmb3IgdGhlIHRpbWUpIG5hbWVzYWtlcyBpbiBMb2NvbW90aXZlIGJhc2ljIGFzIHVzZWQgb24gdGhlIEFtc3RyYWQgQ1BDIG9mIHRoZSAxOTgwcy4gVGhvc2UgaGVyZSBkbyBub3QgZGlyZWN0bHkgY2FsbCBhIFNVQiByYXRoZXIgdXNpbmcgc2VtYXBob3JlcyBhbmQgc3RhdGVzIGlzIG1vcmUgZmxleGlibGUuPGJyIC8+PGJyIC8+ZGQMdxYMFV53hL3IFakEvhLTTII5Cg==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWEQKhkdvQBAK4z/TSAwK5z/TSAwK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLH5ta/BQLG5ta/BQLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCR3kd7WPkInoHi5vhyaZIY20bI8F" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login49ba.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores%26Revision%3d0" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: AFTER, EVERY, AT, REMAIN Flexible State Machine Timers using Semaphores.</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b>&laquo; Older Revision - <a href="MMBasic.History0eb7.html?Page=MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores">Back to Page History</a> - <a href="MMBasic.Historye201.html?Page=MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores&amp;Revision=00001">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/10/26 12:04</h3><br />A <a class="externallink" href="https://en.wikipedia.org/wiki/Finite-state_machine" title="State Machine" target="_blank">State Machine</a> is a mathematical concept whereby a system is driven by stimuli and its state alters by reacting to them. The condition of the stimuli indicates the state of the system as any point in time. <br /><br />In computing, state machine methodology is employed to get away from having a traditionally tightly interlocked system in favour of one that is only active when a stimulus is received; Changing its "state" depending on those stimuli. Stimuli could be I/O pins, a specific string or more often, flags. Such systems tend to be loose-coupled to its tasks and thus easier to program for multiple actions, each being self contained in sub-programs and triggered by its stimulus.<br /><br />This is a major step towards event-driven programming. Event-driven processing can provide an almost multi-tasking appearance in micro-controllers as sections of code execute asynchronously to others, signaling and interlocking with other sub-programs by setting or clearing flags - a process called "semaphore". Although it is a fairly-ish modern approach (really started to take off around the mid 90s) to writing good programs, the process of semaphore by tweaking flags goes back to the earliest CPUs, when an action would be taken as a result of one process signaling a specific state which resulted in another process doing something about it. All CPUs support semaphores, if only with a zero flag or carry flag in the status register. This was was a good way to signal from a one section of code to another that a decision needed to be made.<br /><br />Usually, the main section of the program goes round in a loop as before but instead of taking actions as part of or in-line with the main thread, it checks the state of flags or I/O and launches other processes to deal with it as appropriate e.g. when a given flag becomes set (or whatever you want). In modern computer languages, the "main loop" would be a dormant state and the event handler would wake your program when the state of the stimuli changed (you don't have to give the CPU something to do while it is waiting for a state change). This makes all of the resources (while the CPU isn't busy) available to the system for other tasks. With micro-controllers you don't often have an Operating System to handle the CPU when it is idle - you control the CPU at a very low level.<br /><br />State-machine code also makes for easily readable and modifiable programs as each action becomes a true sub-program and you don't have to worry about disrupting other sections of code so long as any sub program handles its input values and provides the expected output values. Flags can be set by any section of code, triggering activity from anywhere in your code. <br /><br />Enough introduction/generalization, down to the meat of this article... A key requirement of a state machine is sections of code being executed to a schedule or after a period of time. The following uses an array of flags and counters to keep track of (in this case but easily tweak-able) 10 timers,  with option for them to be single-shot or repeating. The timers can be stopped or temporarily disabled. The below Sub are inspired by the Locomotive Basic commands of the same names and make executing sections of code asynchronously a breeze. MMBasic provides four timers but they expect a sub program to be called each time and they have to be handled (i.e. if they are one-shot) by the called sub. The following code uses a single MMBasic timer but then expands this to practically unlimited timers and really easy to set one running. The main loop simply checks for the relevant flag and calls the Sub-program if it is set.<br /><br /><b>Pros:</b><br /><ul><li>Easy to configure a one-shot timer.</li><li>Easy to re-use timers for different sections of code.</li><li>Retrieve the remaining time on cancelling a timer.</li><li>No need to worry about handling SETTICK - No dedicated Sub to handle an event - just do it inline when it is convenient.</li><li>Gives much greater scope for the number of timers.</li><li>Multiple ticks of the same counter give only a single event - No event "storms" for slow-running code.</li><li>Manageable program interruption - It is totally down to the program flow - nothing kicking off "behind your back".</li><li>No implicit priority to timers, it is down to how the flags get checked.<br /></li></ul><br /><b>Cons:</b><br /><ul><li>Timer resolution is not likely to be as good as SETTICK on slow systems - very small delays are likely to be inaccurate, e.g. waiting one second when the service period is 1000mS.<br /></li></ul><br />The following provides a core timer handler and three Subs to set repetitive or one-shot timers and a method to stop a timer (and return the remaining count before it was stopped).<br /><br /><b>Dependencies:</b><br /><ul><li><a class="pagelink" href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a>  Bits 0 - 9 in the Flags field correspond to timers 0-9... tweak as necessary. Bit 10 is the global timer disable bit (=1). In the disabled state, timers are not decremented and any time spent disabled will be effectively added to running timers. E.g. if a timer is due to expire after 10 seconds but spends five seconds disabled, the total delay will be 15 seconds. DI/EI should be used to stop the timers when some critical process is taking place to prevent state changes.</li><li>Three global variables are required, two integer arrays and a simple integer to hold the flags.<br /></li></ul><br /><b>Variable Descriptions:</b><br />TMRctr() maintains the count for a given timer<br />TMRini()holds the timer type and its initialization value.<br /><code>    - bits 0-61 store the initial value value<br />    - bits 63&62 store the format of the counter:<br />        0=disabled<br />        1=(actually 0x4000000000000000) indicates a one shot "AFTER x" type counter<br />        2=(actually 0x8000000000000000) indicates a repetitive "EVERY x" type counter<br /></code><br />As written below, it provides 10 timers which should be loads for just about any use, but this can be tweaked as you see fit.<br /><br />The CoreTMR needs to be set running with the SETTICK command - timer counter values are a multiple of the interval used here. Try not to be too aggressive with small/fast intervals but the larger the interval the greater the loss of resolution. Find something that works for you but remember to adjust your timer values accordingly e.g. if you want ticks 10 times a second, the setitick must be set to 100 - and the values used in AFTER & EVERY would need to reflect the increase in resolution -in the above example 1 second becomes 10 counts etc.<br /><br /><b>Example:</b><br /><pre>
+Preamble&#58;
+	Option Base 0
+
+	Dim Integer TMRctr(9),TMRini(9)
+
+	Flags=0
+	
+	SETTICK 1000,CoreTMR,4' service timers  every second
+
+
+
+
+
+Main&#58;
+' example usage for the main loop
+' gives the user 10 seconds to hit a key (using timer 1)
+	Print "Quick Press a key!"
+	
+	After 10,1 ' 10 seconds using timer 1
+	Every 1 ,2 ' count 1 second intervals using timer 2
+	Every 2 ,3 ' count 2 second intervals using timer 3
+
+	Do
+		a$=Inkey$
+		If FlagTest(2) Then FlagRes 2&#58;Print "x"' output an x while we wait
+		If FlagTest(3) Then FlagRes 3&#58;Print "y"' output a y  while we wait
+	Loop Until FlagTest(1) or a$&lt;&gt;""
+
+	x=Remain(1)' stop the timer and get the remaining time
+
+	If FlagTest(1) Then ' the timer expired?
+		Print "Too late!"
+
+	Else ' otherwise someone pressed a key
+		Print "that was close. There was only ";x;" seconds left!"
+
+	EndIf
+
+	DI
+	For n=1 To 3&#58; x=Remain(n)&#58; Next
+	EI
+	
+	End
+
+
+
+
+' The subs
+	SUB CoreTMR ' needs to run on a ticker at whatever interval is required - this is also the multiple of timer counts
+		If FlagTest(10) Then Exit Sub
+		Local Integer n,f,v
+		For n=0 To 9
+			f=TMRini(n) And &amp;hC000000000000000 ' extract the top 2 bits
+			Select Case f
+				Case 0,&amp;hC000000000000000 'disabled or invalid
+					FlagRes(n)
+				Case &amp;h4000000000000000' AFTER
+					If TMRctr(n)&gt;0 then
+						TMRctr(n)=TMRctr(n)-1
+						If TMRctr(n)=0 Then FlagSet(n) ' indicate the timer has expired
+					EndIf
+				Case &amp;h8000000000000000' EVERY
+					If TMRctr(n)&gt;0 then
+						TMRctr(n)=TMRctr(n)-1
+						If TMRctr(n)=0 Then
+							FlagSet(n) ' indicate the timer has expired
+							TMRctr(n)=TMRini(n) And &amp;h3FFFFFFFFFFFFFFF ' reset the timer
+						EndIf
+					EndIf
+			End Select
+
+		Next
+	END SUB
+
+
+	Sub After(Interval As Integer,Tmr As Integer)' starts a one-shot timer
+		TMRini(Tmr)=Interval OR &amp;h4000000000000000&#58;TMRctr(Tmr)=Interval And &amp;h3FFFFFFFFFFFFFFF&#58;FlagRes(Tmr)
+	End Sub
+
+	Sub Every(Interval As Integer,Tmr As Integer)' starts a repetitive timer
+		TMRini(Tmr)=Interval OR &amp;h8000000000000000&#58;TMRctr(Tmr)=Interval And &amp;h3FFFFFFFFFFFFFFF&#58;FlagRes(Tmr)
+	End Sub
+
+	Function Remain(Tmr As Integer) As Integer' stops a timer and returns the remaining whole counts in the counter
+		TMRini(Tmr)=TMRini(Tmr) And &amp;h3FFFFFFFFFFFFFFF
+		Remain=TMRctr(Tmr)
+	End Function
+
+	Sub DI
+		FlagSet 10
+	End Sub
+
+	Sub EI
+		FlagRes 10
+	End Sub
+</pre><br />All <a class="externallink" href="http://www.cpcwiki.eu/index.php/Locomotive_BASIC#AFTER_.E2.80.B9time_delay.E2.80.BA.5B.2C.E2.80.B9timer_number.E2.80.BA.5D_GOSUB_.E2.80.B9line_number.E2.80.BA" title="the functions" target="_blank">the functions</a> are inspired by some innovative (for the time) namesakes in Locomotive basic as used on the Amstrad CPC of the 1980s. Those here do not directly call a SUB rather using semaphores and states is more flexible.<br /><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:36:39 GMT -->
+</html>

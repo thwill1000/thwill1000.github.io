@@ -1,0 +1,70 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.julia-bas-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:26 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	julia.bas - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.julia-bas-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFrBY8aDEgY2xhc3M9InBhZ2V0aXRsZSI+anVsaWEuYmFzPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzozMyBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEdyYXBoaWNzLCBNYXRocywgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PHByZT4NCjEwMCAnSlVMSUEuQkFTIC0gRHJhd3MgSnVsaWEgc2V0IGZyYWN0YWwgaW1hZ2VzDQoxMDIgJ0J5IGxva2kgb24gdGhlIEJhY2sgU2hlZCAgIEF1ZyAyMDEyDQoxMDMgJ1NlZSB0b3BpYyAoTU0pIE1hbmRlbGJyb3QgJmFtcDsgSnVsaWEgc2V0IGZyYWN0YWxzDQoxMDUgJ1NwZWNpZnkgaW5pdGlhbCB2YWx1ZXMNCjEyMCBSZWFsT2Zmc2V0ID0gLTEuMzANCjEyNSBJbWFnaW5PZmZzZXQgPSAtMS4yMg0KMTI2ICcmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQyOw0KMTMwICdTZXQgdGhlIEp1bGlhIHNldCBjb25zdGFudCAmIzkxO2VnIEMgPSAtMS4yICsgMC44aSYjOTM7DQoxMzUgQ1JlYWxWYWwgPSAtMC43OCANCjE0MCBDSW1hZ1ZhbCA9IC0wLjIwDQoxNDEgJyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDI7DQoxNDUgTUFYSVQ9ODAgJ21heCBpdGVyYXRpb25zDQoxODAgUGl4ZWxXaWR0aCA9IE1NLkhSRVMNCjE4NSBQaXhlbEhlaWdodCA9IE1NLlZSRVMNCjE5MCBHQVAgPSBQaXhlbEhlaWdodCAvIFBpeGVsV2lkdGgNCjIwMCBTSVpFID0gMi41MA0KMjA1IFhEZWx0YSA9IFNJWkUgLyBQaXhlbFdpZHRoDQoyMTAgWURlbHRhID0gKFNJWkUgJiM0MjsgR0FQKSAvIFBpeGVsSGVpZ2h0DQoyMTUgQ0xTDQoyMjAgJ0xvb3AgcHJvY2Vzc2luZyAtIHZpc2l0IGV2ZXJ5IHBpeGVsDQoyMjUgRk9SIFggPSAwIFRPIChQaXhlbFdpZHRoIC0gMSkNCjIzMCAgIENYID0gWCAmIzQyOyBYZGVsdGEgKyBSZWFsT2Zmc2V0DQoyMzUgICBGT1IgWSA9IDAgVE8gKFBpeGVsSGVpZ2h0IC0gMSkNCjI0MCAgICAgQ1kgPSBZICYjNDI7IFlEZWx0YSArIEltYWdpbk9mZnNldA0KMjQ1ICAgICBaciA9IENYDQoyNTAgICAgIFppID0gQ1kNCjI1NSAgICAgQ09VTlQgPSAwDQoyNjAgICAgICdCZWdpbiBJdGVyYXRpb24gbG9vcCAgICAgIA0KMjY1ICAgICBETyBXSElMRSAoKCBDT1VOVCAmbHQ7PSBNQVhJVCApIEFORCAoKCBaciAmIzQyOyBaciArIFppICYjNDI7IFppICkgJmx0OyA0ICkpDQoyNzAgICAgICAgbmV3X1pyID0gWnIgJiM0MjsgWnIgLSBaaSAmIzQyOyBaaSArIENSZWFsVmFsIA0KMjc1ICAgICAgIG5ld19aaSA9IDIgJiM0MjsgWnIgJiM0MjsgWmkgKyBDSW1hZ1ZhbA0KMjgwICAgICAgIFpyID0gbmV3X1pyDQoyODUgICAgICAgWmkgPSBuZXdfWmkNCjI5MCAgICAgICBDT1VOVCA9IENPVU5UICsgMQ0KMjk1ICAgICBMT09QDQo0MTUgICAgIFBJWEVMKFgsWSkgPSBDT1VOVCBNT0QgMg0KNTAwICAgTkVYVCBZDQo1MTAgTkVYVCBYDQo1MjAgRE8NCjUzMCAgIGEkID0gSU5LRVkkDQo1NDAgTE9PUCBXSElMRSBhJCA9ICIiDQo2MDAgJ0VuZCBsaXN0aW5nIA0KPC9wcmU+ZGRPC9PMqzQOPvLbYifYNCb+0QVuaA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">julia.bas</h1><small>Modified on 2016/12/23 23:33 by Administrator &mdash; Categorized as: Graphics, Maths, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+100 'JULIA.BAS - Draws Julia set fractal images
+102 'By loki on the Back Shed   Aug 2012
+103 'See topic (MM) Mandelbrot &amp; Julia set fractals
+105 'Specify initial values
+120 RealOffset = -1.30
+125 ImaginOffset = -1.22
+126 '&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#42;
+130 'Set the Julia set constant &#91;eg C = -1.2 + 0.8i&#93;
+135 CRealVal = -0.78 
+140 CImagVal = -0.20
+141 '&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#42;
+145 MAXIT=80 'max iterations
+180 PixelWidth = MM.HRES
+185 PixelHeight = MM.VRES
+190 GAP = PixelHeight / PixelWidth
+200 SIZE = 2.50
+205 XDelta = SIZE / PixelWidth
+210 YDelta = (SIZE &#42; GAP) / PixelHeight
+215 CLS
+220 'Loop processing - visit every pixel
+225 FOR X = 0 TO (PixelWidth - 1)
+230   CX = X &#42; Xdelta + RealOffset
+235   FOR Y = 0 TO (PixelHeight - 1)
+240     CY = Y &#42; YDelta + ImaginOffset
+245     Zr = CX
+250     Zi = CY
+255     COUNT = 0
+260     'Begin Iteration loop      
+265     DO WHILE (( COUNT &lt;= MAXIT ) AND (( Zr &#42; Zr + Zi &#42; Zi ) &lt; 4 ))
+270       new_Zr = Zr &#42; Zr - Zi &#42; Zi + CRealVal 
+275       new_Zi = 2 &#42; Zr &#42; Zi + CImagVal
+280       Zr = new_Zr
+285       Zi = new_Zi
+290       COUNT = COUNT + 1
+295     LOOP
+415     PIXEL(X,Y) = COUNT MOD 2
+500   NEXT Y
+510 NEXT X
+520 DO
+530   a$ = INKEY$
+540 LOOP WHILE a$ = ""
+600 'End listing 
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.julia-bas-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:26 GMT -->
+</html>

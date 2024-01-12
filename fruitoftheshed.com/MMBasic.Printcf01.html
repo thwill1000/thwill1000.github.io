@@ -1,0 +1,212 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Line editor for interactive editing of text lines/pages - LINEEDIT.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF+TY8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TGluZSBlZGl0b3IgZm9yIGludGVyYWN0aXZlIGVkaXRpbmcgb2YgdGV4dCBsaW5lcy9wYWdlcyAtIExJTkVFRElULkJBUzwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTgvMDMvMjQgMDA6NTQgYnkgcmF2ZSAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBBcnJheXMsIFN0cmluZ3M8L3NtYWxsPjxiciAvPjxiciAvPlRoZSBMaW5lRWRpdCBmdW5jdGlvbiBkZWZpbmVkIGluIHRoZSBhdHRhY2hlZCBMSU5FRURJVC5CQVMgaXMgYW4gTU1CYXNpYyA0LjUgZnVuY3Rpb24gdG8gZWRpdCBsaW5lcyBvZiB0ZXh0IG9yIGV2ZW4gcGFnZXMgb2YgdGV4dCwgYXMgdGhlc2UgZml2ZSBleGFtcGxlcyBkZW1vbnN0cmF0ZTo8YnIgLz48YnIgLz48cHJlPicNCicgRWRpdCBhIHN0cmluZyB1bnRpbCBFTlRFUiB3aXRoIExpbmVFZGl0JiM1ODsNCicNClN1YiBFeGFtcGxlMQ0KICBhJCA9ICJ0ZXh0IHRvIGVkaXQiDQogIERvJiM1ODsgayA9IExpbmVFZGl0KGEkKSYjNTg7IExvb3AgVW50aWwgayA9IDEzICcgdW50aWwgRU5URVINCkVuZCBTdWI8L3ByZT48YnIgLz48cHJlPicNCicgRWRpdCBhIHN0cmluZyB1bnRpbCBFTlRFUiBvciBFU0Mgd2l0aCBFU0MgdG8gcmVzdG9yZSB0aGUgb2xkIHN0cmluZyB2YWx1ZSYjNTg7DQonDQpTdWIgRXhhbXBsZTINCiAgYSQgPSAidGV4dCB0byBlZGl0Ig0KICBiJCA9IGEkICcgc2F2ZSBvbGQgc3RyaW5nIHZhbHVlDQogIERvJiM1ODsgayA9IExpbmVFZGl0KGEkKSYjNTg7IExvb3AgVW50aWwgayA9IDEzIE9yIGsgPSAyNyAnIHVudGlsIEVOVEVSIG9yIEVTQw0KICBJZiBrID0gMjcgVGhlbiAnIEVTQyBwcmVzc2VkDQogICAgUHJpbnQgYiQ7DQogICAgSWYgTGVuKGEkKSAmZ3Q7IExlbihiJCkgVGhlbiBQcmludCBTcGFjZSQoTGVuKGEkKSAtIExlbihiJCkpOw0KICAgIGEkID0gYiQgJyByZXN0b3JlIG9sZCB2YWx1ZSBvbiBFU0MNCiAgRW5kSWYNCkVuZCBTdWI8L3ByZT48YnIgLz48cHJlPicNCicgSW50ZXJhY3RpdmUgZWRpdGluZyBvZiAxMCBsaW5lcyB3aXRoIHVwL2Rvd24gc2NyZWVuIG5hdmlnYXRpb24mIzU4Ow0KJw0KU3ViIEV4YW1wbGUzDQogIExvY2FsIGEkKDEwKSBsZW5ndGggNDANCiAgQ2xzDQogIFByaW50ICJUaW55IGVkaXQgfCBFU0MgdG8gcXVpdCINCiAgRm9yIHJvdyA9IDEgVG8gMTANCiAgICBQcmludCBAKDAsMTImIzQyO3JvdykgYSQocm93KTtUYWIoMTEpOyJ8Ig0KICBOZXh0IHJvdw0KICByb3cgPSAxICAnIGZpcnN0IHJvdyB0byBlZGl0DQogIGN1ciA9IDAgICcgY3Vyc29yIGF0IGJlZ2luIG9mIHRoZSBsaW5lDQogIG1heCA9IDQwICcgbWF4IHNpemUgb2YgYSQoKQ0KICB3aW4gPSAxMCAnIGVkaXQgaW4gd2luZG93IG9mIDEwIGNoYXJzDQogIERvDQogICAgUHJpbnQgQCgwLDEyJiM0Mjtyb3cpOyAnIHBsYWNlIGN1cnNvciB3aGVyZSB3ZSB3YW50IHRvIGVkaXQgdGhlIGxpbmUNCiAgICBrID0gTGluZUVkaXQoYSQocm93KSwgY3VyLCAtMSwgbWF4LCB3aW4pICcgLTEmIzU4OyBnZXQgbmV4dCBrZXkgcHJlc3MNCiAgICBJZiBrID0gMTI4IFRoZW4NCiAgICAgIElmIHJvdyAmZ3Q7IDEgVGhlbiByb3cgPSByb3cgLSAxICAnIFVQIGtleSYjNTg7IG1vdmUgdXANCiAgICBFbHNlSWYgayA9IDEzIE9yIGsgPSAxMjkgVGhlbg0KICAgICAgSWYgcm93ICZsdDsgMTAgVGhlbiByb3cgPSByb3cgKyAxICcgRE9XTiBrZXkmIzU4OyBtb3ZlIGRvd24NCiAgICBFbmRJZg0KICAgIFByaW50IEAoMCwxMzIpICJyb3cmIzU4OyI7cm93OyIgY29sJiM1ODsiO2N1cjsiIGtleSYjNTg7IjtrOyIgICI7DQogIExvb3AgVW50aWwgayA9IDI3ICcgdW50aWwgRVNDDQpFbmQgU3ViPC9wcmU+PGJyIC8+PHByZT4nDQonIEludGVyYWN0aXZlIGVkaXRpbmcgd2l0aCBzY3JlZW4gbmF2aWdhdGlvbiB3aGlsZSBjb250aW51b3VzbHkgdXBkYXRpbmcgdGhlIHNjcmVlbiB3aXRoIHRoZSBjdXJyZW50IHRpbWUmIzU4Ow0KJw0KU3ViIEV4YW1wbGU0DQogIExvY2FsIGEkKDEwKSBsZW5ndGggMTIwDQogIENscw0KICBQcmludCAiICAgICAgICAgfCBFZGl0b3IgfCBFU0MgdG8gcXVpdCINCiAgRm9yIHJvdyA9IDEgVG8gMTANCiAgICBQcmludCBAKDAsMTImIzQyO3JvdykgYSQocm93KTsNCiAgTmV4dCByb3cNCiAgcm93ID0gMSAgJyBmaXJzdCByb3cgdG8gZWRpdA0KICBjdXIgPSAwICAnIGN1cnNvciBhdCBiZWdpbiBvZiB0aGUgbGluZQ0KICBtYXggPSAxMjAgJyBtYXggc2l6ZSBvZiBhJCgpDQogIHdpbiA9IE1NLkhSZXMvNiAnIGVkaXQgaW4gd2luZG93IHVwIHRvIHdpbmRvdyB3aWR0aA0KICAnIHNob3cgY3Vyc29yDQogIEZvbnQgMSwsMSYjNTg7IFByaW50IEAoMCwxMiYjNDI7cm93KSBNaWQkKGEkKHJvdykrIiAiLCAxLCAxKTtDaHIkKDgpOyYjNTg7IEZvbnQgMSwsMA0KICBEbw0KICAgIFByaW50IEAoMCwwKSBUaW1lJDsgJyBjb250aW51b3VzbHkgc2hvdyB0aGUgY3VycmVudCB0aW1lDQogICAgayA9IEFzYyhJbmtleSQpDQogICAgSWYgayBUaGVuDQogICAgICBQcmludCBAKDAsMTImIzQyO3Jvdyk7DQogICAgICBrID0gTGluZUVkaXQoYSQocm93KSwgY3VyLCBrLCBtYXgsIHdpbikgJyBwYXNzIGluIGtleSB0byBlZGl0IGxpbmUNCiAgICAgIElmIGsgPSAxMjggVGhlbiAnIFVQIGtleSYjNTg7IG1vdmUgdXANCiAgICAgICAgSWYgcm93ICZndDsgMSBUaGVuIHJvdyA9IHJvdyAtIDENCiAgICAgICAgRm9udCAxLCwxJiM1ODsgUHJpbnQgQCgwLDEyJiM0Mjtyb3cpIE1pZCQoYSQocm93KSsiICIsIDEsIDEpO0NociQoOCk7JiM1ODsgRm9udCAxLCwwDQogICAgICAgIGN1ciA9IDANCiAgICAgIEVsc2VJZiBrID0gMTMgT3IgayA9IDEyOSBUaGVuICcgRE9XTiBrZXkmIzU4OyBtb3ZlIGRvd24NCiAgICAgICAgSWYgcm93ICZsdDsgMTAgVGhlbiByb3cgPSByb3cgKyAxDQogICAgICAgIEZvbnQgMSwsMSYjNTg7IFByaW50IEAoMCwxMiYjNDI7cm93KSBNaWQkKGEkKHJvdykrIiAiLCAxLCAxKTtDaHIkKDgpOyYjNTg7IEZvbnQgMSwsMA0KICAgICAgICBjdXIgPSAwDQogICAgICBFbmRJZg0KICAgIEVuZElmDQogIExvb3AgVW50aWwgayA9IDI3ICcgdW50aWwgRVNDDQpFbmQgU3ViPC9wcmU+PGJyIC8+PHByZT4nDQonIEVkaXQgYSBzdHJpbmcgb2YgZGlnaXRzLCBtYXNraW5nIGtleSBwcmVzc2VzIHRvIGRpZ2l0cw0KJw0KU3ViIEV4YW1wbGU1DQogIGEkID0gIjEyMzQiDQogIEZvbnQgMSwsMSYjNTg7IFByaW50IE1pZCQoYSQsIDEsIDEpOyYjNTg7IEZvbnQgMSwsMCYjNTg7IFByaW50IE1pZCQoYSQsIDIpO0NociQoMTMpOw0KICBEbw0KICAgIGsgPSBBc2MoSW5rZXkkKQ0KICAgIElmIGsgVGhlbg0KICAgICAgSWYgayAmbHQ7IDMyIE9yIGsgJmd0OyAxMjYgT3IgSW5zdHIoIjAxMjM0NTY3ODkiLCBDaHIkKGspKSBUaGVuDQogICAgICAgIGsgPSBMaW5lRWRpdChhJCwgY3VyLCBrKQ0KICAgICAgRW5kSWYNCiAgICBFbmRJZg0KICBMb29wIFVudGlsIGsgPSAxMyBPciBrID0gMjcgJyB1bnRpbCBFTlRFUiBvciBFU0MNCkVuZCBTdWINCjwvcHJlPjxiciAvPlNvdXJjZSBjb2RlIG9mIExpbmVFZGl0OjxiciAvPjxiciAvPjxwcmU+DQonIExpbmVFZGl0KGEkLCAmIzkxO2N1ciAmIzkxOywga2V5ICYjOTE7LCBtYXggJiM5MTssIHdpbiAmIzkzOyYjOTM7JiM5MzsmIzkzOykgZWRpdCBzdHJpbmcgYSQgYXQgcG9zaXRpb24gY3VyLA0KJyB1c2Uga2V5IHBhcmFtZXRlciAod2hlbiBwcm92aWRlZCkgdG8gbWFrZSB0aGUgbmV4dCBlZGl0IG9mIGEkIGFuZCB1cGRhdGUgY3VyLCBhbmQNCicgcmV0dXJuIG5ldyBrZXkgcHJlc3MsIG9yIGlmIGtleSBwcmVzcyBub3QgcHJvdmlkZWQgKHplcm8pIGtlZXAgZWRpdGluZyB1bnRpbA0KJyBFU0MsIEVOVEVSIG9yIHNwZWNpYWwga2V5IHN1Y2ggYXMgRjEsIFVQL0RPV04gZXRjLiB3aGVyZSBtYXggaXMgdGhlIG1heGltdW0NCicgc3RyaW5nIGxlbmd0aCBhbmQgd2luIGlzIHRoZSAid2luZG93IiBzaXplLiBVc2UgTEVGVC9SSUdIVC9IT01FL0VORCB0bw0KJyBuYXZpZ2F0ZSB0aGUgbGluZSwgQkFDS1NQQUNFL0RFTCB0byBkZWxldGUgYSBjaGFyYWN0ZXIuDQonDQonIFN1cHBvcnRzIHRocmVlIGVkaXRpbmcgbW9kZXMmIzU4OyBrZXk9MCAoZGVmYXVsdCkgZWRpdCB1bnRpbCBFTlRFUiBvciBvdGhlcg0KJyBzcGVjaWFsIGtleSwga2V5PS0xIHdhaXQgZm9yIGtleSBhbmQgbWFrZSBvbmUgZWRpdCwgcmV0dXJuaW5nIHRoZSBrZXkgdmFsdWUsDQonIGtleT1YIHRvIHBhc3MgYSBrZXkgcHJlc3MgdG8gTGluZUVkaXQgdG8gbWFrZSBvbmUgZWRpdCwgcmV0dXJuaW5nIHRoZSBrZXkNCicgdmFsdWUuDQonDQonIEN1cnNlciBwb3NpdGlvbiBjdXIgcGFyYW1ldGVyIGlzIHBhc3NlZCBpbiBhbmQgdXBkYXRlZCBieSBMaW5lRWRpdA0KJw0KJyBVc2UgdGhlIG1heCBwYXJhbWV0ZXIgd2hlbiB0aGUgc3RyaW5nIGhhcyBhIG1heGltdW0gbGVuZ3RoIHNtYWxsZXIgdGhhbiAyNTUNCicNCicgVG8gZWRpdCB3aXRoaW4gYSBzbWFsbGVyIHdpbmRvdywgdXNlIHRoZSB3aW4gcGFyYW1ldGVyDQonDQpGdW5jdGlvbiBMaW5lRWRpdChhJCwgY3VyLCBrZXksIG1heCwgd2luKQ0KICBMb2NhbCB4LCB5LCBzaXplLCBmcm9tLCBkb25lDQogIHggPSBNTS5IUG9zJiM1ODsgeSA9IE1NLlZQb3MNCiAgSWYgbWF4ICZsdDs9IDAgVGhlbiBtYXggPSAyNTUNCiAgSWYgd2luICZsdDs9IDAgVGhlbiB3aW4gPSAyNTUNCiAgc2l6ZSA9IExlbihhJCkNCiAgSWYgY3VyICZsdDsgMCBUaGVuDQogICAgY3VyID0gMA0KICBFbHNlSWYgY3VyICZndDsgc2l6ZSBUaGVuDQogICAgY3VyID0gc2l6ZQ0KICBFbmRJZg0KICBkb25lID0ga2V5DQogIERvDQogICAgSWYga2V5ICZndDs9IDMyIEFuZCBrZXkgJmx0OyAxMjcgVGhlbg0KICAgICAgSWYgc2l6ZSAmbHQ7IG1heCBUaGVuDQogICAgICAgIGEkID0gTGVmdCQoYSQsIGN1cikgKyBDaHIkKGtleSkgKyBNaWQkKGEkLCBjdXIgKyAxKQ0KICAgICAgICBjdXIgPSBjdXIgKyAxDQogICAgICAgIHNpemUgPSBzaXplICsgMQ0KICAgICAgRW5kSWYNCiAgICBFbHNlSWYga2V5ID0gOCBUaGVuDQogICAgICBJZiBjdXIgJmd0OyAwIFRoZW4NCiAgICAgICAgY3VyID0gY3VyIC0gMQ0KICAgICAgICBhJCA9IExlZnQkKGEkLCBjdXIpICsgTWlkJChhJCwgY3VyICsgMikNCiAgICAgICAgc2l6ZSA9IHNpemUgLSAxDQogICAgICBFbmRJZg0KICAgIEVsc2VJZiBrZXkgPSAxMjcgVGhlbg0KICAgICAgSWYgY3VyICZsdDsgc2l6ZSBUaGVuDQogICAgICAgIGEkID0gTGVmdCQoYSQsIGN1cikgKyBNaWQkKGEkLCBjdXIgKyAyKQ0KICAgICAgICBzaXplID0gc2l6ZSAtIDENCiAgICAgIEVuZElmDQogICAgRWxzZUlmIGtleSA9IDEzMCBUaGVuDQogICAgICBJZiBjdXIgJmd0OyAwIFRoZW4gY3VyID0gY3VyIC0gMQ0KICAgIEVsc2VJZiBrZXkgPSAxMzEgVGhlbg0KICAgICAgSWYgY3VyICZsdDsgc2l6ZSBUaGVuIGN1ciA9IGN1ciArIDENCiAgICBFbHNlSWYga2V5ID0gMTM0IFRoZW4NCiAgICAgIGN1ciA9IDANCiAgICBFbHNlSWYga2V5ID0gMTM1IFRoZW4NCiAgICAgIGN1ciA9IHNpemUNCiAgICBFbHNlSWYga2V5ICZndDsgMCBUaGVuDQogICAgICAnIGRvbmUgZWRpdGluZywgc28gcHJpbnQgYSBjbGVhbiBsaW5lDQogICAgICBQcmludCBAKHgseSkgTGVmdCQoYSQsIHdpbik7DQogICAgICAnIHJlbW92ZSB0aGUgY3Vyc29yIGZyb20gdGhlIGVuZCBvZiB0aGUgbGluZQ0KICAgICAgSWYgY3VyID0gc2l6ZSBBbmQgc2l6ZSAmbHQ7IHdpbiBUaGVuIFByaW50ICIgIjsNCiAgICAgIEV4aXQNCiAgICBFbmRJZg0KICAgICcgY3Vyc29yIGNhbm5vdCBtb3ZlIGJleW9uZCBzdHJpbmcgbWF4IGxlbmd0aA0KICAgIElmIGN1ciAmZ3Q7PSBtYXggVGhlbiBjdXIgPSBtYXggLSAxDQogICAgJyBjdXJzb3IgaXMgb2Zmc2V0IGZyb20gd2luZG93IHN0YXJ0DQogICAgSWYgY3VyICZndDs9IHdpbiBUaGVuIGZyb20gPSBjdXIgLSB3aW4gKyAyIEVsc2UgZnJvbSA9IDENCiAgICBJZiBjdXIgPSBzaXplIFRoZW4NCiAgICAgICcgcHJpbnQgdGhlIGxpbmUgY29uc3RyYWluZWQgdG8gdGhlIHdpbmRvdyBzaXplDQogICAgICBQcmludCBAKHgseSkgTWlkJChhJCwgZnJvbSk7DQogICAgICAnIHB1dCB0aGUgY3Vyc29yIGF0IHRoZSBlbmQNCiAgICAgIEZvbnQgMSwsMSYjNTg7IFByaW50ICIgIjsmIzU4OyBGb250IDEsLDANCiAgICAgICcgQkFDS1NQQUNFIG1heSByZXF1aXJlIHJlbW92aW5nIHRoZSBjdXJzb3IgZnJvbSB0aGUgZW5kIG9mIHRoZSBsaW5lDQogICAgICBJZiBrZXkgPSA4IFRoZW4NCiAgICAgICAgSWYgY3VyICsgMSAmbHQ7IHdpbiBBbmQgc2l6ZSAmbHQ7IHdpbiBUaGVuIFByaW50ICIgIjsNCiAgICAgIEVuZElmDQogICAgRWxzZQ0KICAgICAgJyBwcmludCB0aGUgbGluZSBjb25zdHJhaW5lZCB0byB3aW5kb3cgc2l6ZQ0KICAgICAgUHJpbnQgQCh4LHkpIE1pZCQoYSQsIGZyb20sIGN1ciAtIGZyb20gKyAxKTsNCiAgICAgICcgaW52ZXJ0IGNoYXJhY3RlciBhdCB0aGUgY3Vyc29yDQogICAgICBGb250IDEsLDEmIzU4OyBQcmludCBNaWQkKGEkLCBjdXIgKyAxLCAxKTsmIzU4OyBGb250IDEsLDANCiAgICAgICcgcHJpbnQgdGhlIHJlc3Qgb2YgdGhlIGxpbmUNCiAgICAgIFByaW50IE1pZCQoYSQsIGN1ciArIDIsIHdpbiAtIGN1ciArIGZyb20gLSAyKTsNCiAgICAgIElmIGN1ciAmbHQ7IHdpbiBBbmQgc2l6ZSAmbHQ7IHdpbiBUaGVuIFByaW50ICIgIjsNCiAgICBFbmRJZg0KICAgICcgaWYgdGhpcyBpcyBhIG5vbi1ibG9ja2luZyBjYWxsIHRoZW4gZXhpdA0KICAgIElmIGRvbmUgJmd0OyAwIFRoZW4gRXhpdA0KICAgICcgd2FpdCBvbiBrZXkgcHJlc3MNCiAgICBEbyYjNTg7IGtleSA9IEFzYyhJbmtleSQpJiM1ODsgTG9vcCBVbnRpbCBrZXkNCiAgICBkb25lID0gLWRvbmUNCiAgTG9vcA0KICAnIG1vdmUgY3Vyc29yIGJhY2sgdG8gdGhlIHN0YXJ0IG9mIHRoZSBsaW5lIGJlZm9yZSByZXR1cm5pbmcNCiAgUHJpbnQgQCh4LHkpOw0KICBMaW5lRWRpdCA9IGtleQ0KRW5kIEZ1bmN0aW9uPC9wcmU+ZGTR7hU79DHOrST2jIs1zK+yHyDkDQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</h1><small>Modified on 2018/03/24 00:54 by rave &mdash; Categorized as: Arrays, Strings</small><br /><br />The LineEdit function defined in the attached LINEEDIT.BAS is an MMBasic 4.5 function to edit lines of text or even pages of text, as these five examples demonstrate:<br /><br /><pre>'
+' Edit a string until ENTER with LineEdit&#58;
+'
+Sub Example1
+  a$ = "text to edit"
+  Do&#58; k = LineEdit(a$)&#58; Loop Until k = 13 ' until ENTER
+End Sub</pre><br /><pre>'
+' Edit a string until ENTER or ESC with ESC to restore the old string value&#58;
+'
+Sub Example2
+  a$ = "text to edit"
+  b$ = a$ ' save old string value
+  Do&#58; k = LineEdit(a$)&#58; Loop Until k = 13 Or k = 27 ' until ENTER or ESC
+  If k = 27 Then ' ESC pressed
+    Print b$;
+    If Len(a$) &gt; Len(b$) Then Print Space$(Len(a$) - Len(b$));
+    a$ = b$ ' restore old value on ESC
+  EndIf
+End Sub</pre><br /><pre>'
+' Interactive editing of 10 lines with up/down screen navigation&#58;
+'
+Sub Example3
+  Local a$(10) length 40
+  Cls
+  Print "Tiny edit | ESC to quit"
+  For row = 1 To 10
+    Print @(0,12&#42;row) a$(row);Tab(11);"|"
+  Next row
+  row = 1  ' first row to edit
+  cur = 0  ' cursor at begin of the line
+  max = 40 ' max size of a$()
+  win = 10 ' edit in window of 10 chars
+  Do
+    Print @(0,12&#42;row); ' place cursor where we want to edit the line
+    k = LineEdit(a$(row), cur, -1, max, win) ' -1&#58; get next key press
+    If k = 128 Then
+      If row &gt; 1 Then row = row - 1  ' UP key&#58; move up
+    ElseIf k = 13 Or k = 129 Then
+      If row &lt; 10 Then row = row + 1 ' DOWN key&#58; move down
+    EndIf
+    Print @(0,132) "row&#58;";row;" col&#58;";cur;" key&#58;";k;"  ";
+  Loop Until k = 27 ' until ESC
+End Sub</pre><br /><pre>'
+' Interactive editing with screen navigation while continuously updating the screen with the current time&#58;
+'
+Sub Example4
+  Local a$(10) length 120
+  Cls
+  Print "         | Editor | ESC to quit"
+  For row = 1 To 10
+    Print @(0,12&#42;row) a$(row);
+  Next row
+  row = 1  ' first row to edit
+  cur = 0  ' cursor at begin of the line
+  max = 120 ' max size of a$()
+  win = MM.HRes/6 ' edit in window up to window width
+  ' show cursor
+  Font 1,,1&#58; Print @(0,12&#42;row) Mid$(a$(row)+" ", 1, 1);Chr$(8);&#58; Font 1,,0
+  Do
+    Print @(0,0) Time$; ' continuously show the current time
+    k = Asc(Inkey$)
+    If k Then
+      Print @(0,12&#42;row);
+      k = LineEdit(a$(row), cur, k, max, win) ' pass in key to edit line
+      If k = 128 Then ' UP key&#58; move up
+        If row &gt; 1 Then row = row - 1
+        Font 1,,1&#58; Print @(0,12&#42;row) Mid$(a$(row)+" ", 1, 1);Chr$(8);&#58; Font 1,,0
+        cur = 0
+      ElseIf k = 13 Or k = 129 Then ' DOWN key&#58; move down
+        If row &lt; 10 Then row = row + 1
+        Font 1,,1&#58; Print @(0,12&#42;row) Mid$(a$(row)+" ", 1, 1);Chr$(8);&#58; Font 1,,0
+        cur = 0
+      EndIf
+    EndIf
+  Loop Until k = 27 ' until ESC
+End Sub</pre><br /><pre>'
+' Edit a string of digits, masking key presses to digits
+'
+Sub Example5
+  a$ = "1234"
+  Font 1,,1&#58; Print Mid$(a$, 1, 1);&#58; Font 1,,0&#58; Print Mid$(a$, 2);Chr$(13);
+  Do
+    k = Asc(Inkey$)
+    If k Then
+      If k &lt; 32 Or k &gt; 126 Or Instr("0123456789", Chr$(k)) Then
+        k = LineEdit(a$, cur, k)
+      EndIf
+    EndIf
+  Loop Until k = 13 Or k = 27 ' until ENTER or ESC
+End Sub
+</pre><br />Source code of LineEdit:<br /><br /><pre>
+' LineEdit(a$, &#91;cur &#91;, key &#91;, max &#91;, win &#93;&#93;&#93;&#93;) edit string a$ at position cur,
+' use key parameter (when provided) to make the next edit of a$ and update cur, and
+' return new key press, or if key press not provided (zero) keep editing until
+' ESC, ENTER or special key such as F1, UP/DOWN etc. where max is the maximum
+' string length and win is the "window" size. Use LEFT/RIGHT/HOME/END to
+' navigate the line, BACKSPACE/DEL to delete a character.
+'
+' Supports three editing modes&#58; key=0 (default) edit until ENTER or other
+' special key, key=-1 wait for key and make one edit, returning the key value,
+' key=X to pass a key press to LineEdit to make one edit, returning the key
+' value.
+'
+' Curser position cur parameter is passed in and updated by LineEdit
+'
+' Use the max parameter when the string has a maximum length smaller than 255
+'
+' To edit within a smaller window, use the win parameter
+'
+Function LineEdit(a$, cur, key, max, win)
+  Local x, y, size, from, done
+  x = MM.HPos&#58; y = MM.VPos
+  If max &lt;= 0 Then max = 255
+  If win &lt;= 0 Then win = 255
+  size = Len(a$)
+  If cur &lt; 0 Then
+    cur = 0
+  ElseIf cur &gt; size Then
+    cur = size
+  EndIf
+  done = key
+  Do
+    If key &gt;= 32 And key &lt; 127 Then
+      If size &lt; max Then
+        a$ = Left$(a$, cur) + Chr$(key) + Mid$(a$, cur + 1)
+        cur = cur + 1
+        size = size + 1
+      EndIf
+    ElseIf key = 8 Then
+      If cur &gt; 0 Then
+        cur = cur - 1
+        a$ = Left$(a$, cur) + Mid$(a$, cur + 2)
+        size = size - 1
+      EndIf
+    ElseIf key = 127 Then
+      If cur &lt; size Then
+        a$ = Left$(a$, cur) + Mid$(a$, cur + 2)
+        size = size - 1
+      EndIf
+    ElseIf key = 130 Then
+      If cur &gt; 0 Then cur = cur - 1
+    ElseIf key = 131 Then
+      If cur &lt; size Then cur = cur + 1
+    ElseIf key = 134 Then
+      cur = 0
+    ElseIf key = 135 Then
+      cur = size
+    ElseIf key &gt; 0 Then
+      ' done editing, so print a clean line
+      Print @(x,y) Left$(a$, win);
+      ' remove the cursor from the end of the line
+      If cur = size And size &lt; win Then Print " ";
+      Exit
+    EndIf
+    ' cursor cannot move beyond string max length
+    If cur &gt;= max Then cur = max - 1
+    ' cursor is offset from window start
+    If cur &gt;= win Then from = cur - win + 2 Else from = 1
+    If cur = size Then
+      ' print the line constrained to the window size
+      Print @(x,y) Mid$(a$, from);
+      ' put the cursor at the end
+      Font 1,,1&#58; Print " ";&#58; Font 1,,0
+      ' BACKSPACE may require removing the cursor from the end of the line
+      If key = 8 Then
+        If cur + 1 &lt; win And size &lt; win Then Print " ";
+      EndIf
+    Else
+      ' print the line constrained to window size
+      Print @(x,y) Mid$(a$, from, cur - from + 1);
+      ' invert character at the cursor
+      Font 1,,1&#58; Print Mid$(a$, cur + 1, 1);&#58; Font 1,,0
+      ' print the rest of the line
+      Print Mid$(a$, cur + 2, win - cur + from - 2);
+      If cur &lt; win And size &lt; win Then Print " ";
+    EndIf
+    ' if this is a non-blocking call then exit
+    If done &gt; 0 Then Exit
+    ' wait on key press
+    Do&#58; key = Asc(Inkey$)&#58; Loop Until key
+    done = -done
+  Loop
+  ' move cursor back to the start of the line before returning
+  Print @(x,y);
+  LineEdit = key
+End Function</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:17 GMT -->
+</html>

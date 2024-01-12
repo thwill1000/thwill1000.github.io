@@ -1,0 +1,848 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.INA219-Current-Sensor.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:55 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	INA219 Current Sensor - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=INA219-Current-Sensor&amp;NS=MMBasic&amp;HL=mmbasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login33f1.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dINA219-Current-Sensor%26NS%3dMMBasic%26HL%3dmmbasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.INA219-Current-Sensor266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History3a4c.html?Page=MMBasic.INA219-Current-Sensor">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			INA219 Current Sensor
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print3a4c.html?Page=MMBasic.INA219-Current-Sensor" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2020/01/03 16:36
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesc884.html?Cat=MMBasic.Communications" title="Communications">Communications</a>, <a href="MMBasic.AllPages5ce5.html?Cat=MMBasic.Electronics" title="Electronics">Electronics</a>, <a href="MMBasic.AllPagesbcca.html?Cat=MMBasic.Environment" title="Environment">Environment</a>, <a href="MMBasic.AllPages9386.html?Cat=MMBasic.Hardware" title="Hardware">Hardware</a>, <a href="MMBasic.AllPagesc605.html?Cat=MMBasic.i2c" title="i2c">i2c</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fb0d9155f-ca74-4d05-a8db-0372e4632561" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fb0d9155f-ca74-4d05-a8db-0372e4632561');"><a href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTrim Functions (VB work-a-like)</a><a href="MMBasic.LTrim-RTrim-cFunctions.html" title="LTrim RTrim CFunctions">LTrim RTrim CFunctions</a><a href="MMBasic.String-editing-on-screen-for-VT-compatible-Terminals.html" title="String editing on-screen for VT compatible Terminals">String editing on-screen for VT compatible Terminals</a></div><div id="f31d5c76a-e1a3-4aa2-90d8-fcf0cb2262b9" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f31d5c76a-e1a3-4aa2-90d8-fcf0cb2262b9');"><a href="MMBasic.ByREF-ByVAL-VB-work-a-like.html" title="ByREF & ByVAL - (VB work-a-like)">ByREF & ByVAL - (VB work-a-like)</a><a href="MMBasic.Field-Function-cField.html" title="Field Function cField$">Field Function cField$</a></div><div id="f8a49c5a3-f099-4aa2-90aa-1a5ffb4858b1" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f8a49c5a3-f099-4aa2-90aa-1a5ffb4858b1');"></div><div id="f41df9d2b-8359-4baf-b8c9-fa2fffeaa267" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f41df9d2b-8359-4baf-b8c9-fa2fffeaa267');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library.html" title="SPLIT subroutine (MMBasic)">SPLIT subroutine (MMBasic)</a> &raquo; <a href="MMBasic.Maze-bas-part-of-the-original-MMBasic-library.html" title="Maze.bas (MMBasic)">Maze.bas (MMBasic)</a> &raquo; <b><a href="MMBasic.INA219-Current-Sensor.html" title="INA219 Current Sensor (MMBasic)">INA219 Current Sensor (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers.html" title="SHIFT or ROTATE an array of integers (MMBasic)">SHIFT or ROTATE an array of integers (MMBasic)</a> &raquo; <a href="MMBasic.REVERSE-BAS-part-of-the-original-MMBasic-library.html" title="REVERSE.BAS (MMBasic)">REVERSE.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Vehicle-Reversing-Assistant.html" title="Vehicle Reversing Assistant (MMBasic)">Vehicle Reversing Assistant (MMBasic)</a> &raquo; <a href="MMBasic.VB%20Work-a-like%20SPLIT%20Function.html" title="SPLIT Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f31d5c76a-e1a3-4aa2-90d8-fcf0cb2262b9', this);" id="lnkf31d5c76a-e1a3-4aa2-90d8-fcf0cb2262b9" onmouseout="javascript:return __HideDropDown('f31d5c76a-e1a3-4aa2-90d8-fcf0cb2262b9');">SPLIT Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.Base64-Mime-Encode-and-Decode-Functions.html" title="Base64 Mime Encode and Decode Functions (MMBasic)">Base64 Mime Encode and Decode Functions (MMBasic)</a> &raquo; <a href="MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc.html" title="VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fb0d9155f-ca74-4d05-a8db-0372e4632561', this);" id="lnkfb0d9155f-ca74-4d05-a8db-0372e4632561" onmouseout="javascript:return __HideDropDown('fb0d9155f-ca74-4d05-a8db-0372e4632561');">VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a> &raquo; <a href="MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library.html" title="SPLIT subroutine (MMBasic)">SPLIT subroutine (MMBasic)</a> &raquo; <a href="MMBasic.Maze-bas-part-of-the-original-MMBasic-library.html" title="Maze.bas (MMBasic)">Maze.bas (MMBasic)</a> &raquo; <b><a href="MMBasic.INA219-Current-Sensor.html" title="INA219 Current Sensor (MMBasic)">INA219 Current Sensor (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		This is a port of the INA219 Arduino library originally created by K. Townsend (Adafruit Industries)<br />It has been tested on MMBasic v5.04.04. It also includes corrections to the PowerDivider_mW calculation in the calibration routines as well as converts the negative readings (in 2's complement) to positive.<br />The datasheet for the INA219 can be found <a class="externallink" href="http://www.ti.com/lit/ds/symlink/ina219.pdf" title="here." target="_blank">here.</a><br />The INA219 is a very handy little voltage/current/power sensor that communicates via the I2C databus.<br /><br />I hope you all find it as handy as I have!<br /><br />GTG!<br /><br /><pre>
+'INA219 routine
+
+'Code for a Micromite to communicate with a INA219 current sensing module over I2C.
+
+'Original Author&#58;- K. Townsend (Adafruit Industries)
+
+'Ported to MMBasic by GoodToGo!, TBS forums
+
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+'Software License Agreement (BSD License)
+
+'Copyright (c) 2012, Adafruit Industries
+'All rights reserved.
+
+'Redistribution and use in source and binary forms, with or without
+'modification, are permitted provided that the following conditions are met&#58;
+'1. Redistributions of source code must retain the above copyright
+'notice, this list of conditions and the following disclaimer.
+'2. Redistributions in binary form must reproduce the above copyright
+'notice, this list of conditions and the following disclaimer in the
+'documentation and/or other materials provided with the distribution.
+'3. Neither the name of the copyright holders nor the
+'names of its contributors may be used to endorse or promote products
+'derived from this software without specific prior written permission.
+'
+'THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS &#39;&#39;AS IS&#39;&#39; AND ANY
+'EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+'WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+'DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY
+'DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+'(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+'LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+'ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+'(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+'SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+'&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+
+option explicit
+option default integer
+
+'Select one of the following four possible INA219 I2C Addresses
+
+const INA219_ADDRESS = &amp;h40    	'&amp;b1000000 = (A0,A1=GND)
+'const INA219_ADDRESS = &amp;h41  	'&amp;b1000001 = (A0=+V,A1=GND)
+'const INA219_ADDRESS = &amp;h44	'&amp;b1000100 = (A0=GND,A1=+V)
+'const INA219_ADDRESS = &amp;h45	'&amp;b1000101 = (A0,A1=+V)
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'       Setup Constants associated with INA219
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+const INA219_READ =                         &amp;h01
+
+const INA219_REGISTER_CONFIG =              &amp;h00    'Configuration Register (R/W)
+const INA219_CONFIG_RESET =                 &amp;h8000  'Reset Bit
+
+const INA219_CONFIG_BVOLTAGERANGE_MASK =    &amp;h2000  'Bus Voltage Range Mask
+const INA219_CONFIG_BVOLTAGERANGE_16V =     &amp;h0000  '0-16V Range
+const INA219_CONFIG_BVOLTAGERANGE_32V =     &amp;h2000  '0-32V Range
+
+const INA219_CONFIG_GAIN_MASK =             &amp;h1800  'Gain Mask
+const INA219_CONFIG_GAIN_1_40MV =           &amp;h0000  'Gain 1, 40mV Range
+const INA219_CONFIG_GAIN_2_80MV =           &amp;h0800  'Gain 2, 80mV Range
+const INA219_CONFIG_GAIN_4_160MV =          &amp;h1000  'Gain 4, 160mV Range
+const INA219_CONFIG_GAIN_8_320MV =          &amp;h1800  'Gain 8, 320mV Range
+
+const INA219_CONFIG_BADCRES_MASK =          &amp;h0780  'Bus Voltage ADC Resolution and Averaging Mask
+const INA219_CONFIG_BADCRES_9BIT_1S =       &amp;h0080  '1 x 9-bit bus voltage sample
+const INA219_CONFIG_BADCRES_10BIT_1S =      &amp;h0100  '1 x 10-bit bus voltage sample
+const INA219_CONFIG_BADCRES_11BIT_1S =      &amp;h0200  '1 x 11-bit bus voltage sample
+const INA219_CONFIG_BADCRES_12BIT_1S =      &amp;h0400  '1 x 12-bit bus voltage sample
+const INA219_CONFIG_BADCRES_12BIT_2S =      &amp;h0480  '2 x 12-bit bus voltage samples averaged together
+const INA219_CONFIG_BADCRES_12BIT_4S =      &amp;h0500  '4 x 12-bit bus voltage samples averaged together
+const INA219_CONFIG_BADCRES_12BIT_8S =      &amp;h0580  '8 x 12-bit bus voltage samples averaged together
+const INA219_CONFIG_BADCRES_12BIT_16S =     &amp;h0600  '16 x 12-bit bus voltage samples averaged together
+const INA219_CONFIG_BADCRES_12BIT_32S =     &amp;h0680  '32 x 12-bit bus voltage samples averaged together
+const INA219_CONFIG_BADCRES_12BIT_64S =     &amp;h0700  '64 x 12-bit bus voltage samples averaged together
+const INA219_CONFIG_BADCRES_12BIT_128S =    &amp;h0780  '128 x 12-bit bus voltage samples averaged together
+
+const INA219_CONFIG_SADCRES_MASK =          &amp;h0078  'Shunt Voltage ADC Resolution and Averaging Mask
+const INA219_CONFIG_SADCRES_9BIT_1S =       &amp;h0000  '1 x 9-bit shunt voltage sample
+const INA219_CONFIG_SADCRES_10BIT_1S =      &amp;h0008  '1 x 10-bit shunt voltage sample
+const INA219_CONFIG_SADCRES_11BIT_1S =      &amp;h0010  '1 x 11-bit shunt voltage sample
+const INA219_CONFIG_SADCRES_12BIT_1S =      &amp;h0018  '1 x 12-bit shunt voltage sample
+const INA219_CONFIG_SADCRES_12BIT_2S =      &amp;h0048  '2 x 12-bit shunt voltage samples averaged together
+const INA219_CONFIG_SADCRES_12BIT_4S =      &amp;h0050  '4 x 12-bit shunt voltage samples averaged together
+const INA219_CONFIG_SADCRES_12BIT_8S =      &amp;h0058  '8 x 12-bit shunt voltage samples averaged together
+const INA219_CONFIG_SADCRES_12BIT_16S =     &amp;h0060  '16 x 12-bit shunt voltage samples averaged together
+const INA219_CONFIG_SADCRES_12BIT_32S =     &amp;h0068  '32 x 12-bit shunt voltage samples averaged together
+const INA219_CONFIG_SADCRES_12BIT_64S =     &amp;h0070  '64 x 12-bit shunt voltage samples averaged together
+const INA219_CONFIG_SADCRES_12BIT_128S =    &amp;h0078  '128 x 12-bit shunt voltage samples averaged together
+
+const INA219_CONFIG_MODE_MASK =             &amp;h0007  'Operating Mode Mask
+const INA219_CONFIG_MODE_POWERDOWN =        &amp;h0000
+const INA219_CONFIG_MODE_SVOLT_TRIG =       &amp;h0001
+const INA219_CONFIG_MODE_BVOLT_TRIG =       &amp;h0002
+const INA219_CONFIG_MODE_SNBVOLT_TRIG =     &amp;h0003
+const INA219_CONFIG_MODE_ADCOFF =           &amp;h0004
+const INA219_CONFIG_MODE_SVOLT_CONT =       &amp;h0005
+const INA219_CONFIG_MODE_BVOLT_CONT =       &amp;h0006
+const INA219_CONFIG_MODE_SNBVOLT_CONT =     &amp;h0007
+
+const INA219_REGISTER_SHUNTVOLTAGE =        &amp;h01 'Shunt Voltage Register (R)
+const INA219_REGISTER_BUSVOLTAGE =          &amp;h02 'Bus Voltage Register (R)
+const INA219_REGISTER_POWER =               &amp;h03 'Power Register (R)
+const INA219_REGISTER_CURRENT =             &amp;h04 'Current Register (R)
+const INA219_REGISTER_CALIBRATION =         &amp;h05 'Calibration register (R/W)
+
+dim INA219_currentDivider_mA as float
+dim INA219_powerDivider_mW as float
+dim INA219_calValue
+
+i2c open 100, 100
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'  Select one of the below to set up the Hardware calibration
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+setCalibration_32V_2A
+'setCalibration_32V_1A
+'setCalibration_16V_400mA
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'                   Main Program
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+dim shuntvoltage as float
+dim busvoltage as float
+dim current as float
+dim supplyvoltage as float
+dim power as float
+
+do
+  shuntvoltage = ShuntVoltage_mV()
+  busvoltage = BusVoltage_V()
+  current = Current_mA()
+  supplyvoltage = SupplyVoltage_V()
+  power = Power_mW()
+  
+  print"Bus Voltage&#58;    "+str$(busvoltage)+"V"
+  print"Shunt Voltage&#58;  "+str$(shuntvoltage)+"mV"
+  print"Supply Voltage&#58; "+str$(supplyvoltage)+"V"
+  print"Current&#58;        "+str$(current)+"mA"
+  print"Power&#58;          "+str$(power)+"mW"
+  print"Calc. Power&#58;    "+str$(busvoltage&#42;current)+"mW"
+  print""
+  pause 2000
+loop
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'                 Calculation Functions
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+function BusVoltage_V() as float  'Gets the bus voltage in volts
+  Local Value
+  ReadRegister (INA219_REGISTER_BUSVOLTAGE, Value)
+  Value =((Value &gt;&gt; 3) &#42; 4) 'Shift to right 3 to drop ConversionReady and OverFlow bits, multiply by LSB
+  BusVoltage_V = Value / 1000
+End Function
+
+function ShuntVoltage_mV() as float 'Gets the shunt voltage in mV
+  local Value
+  ReadRegister (INA219_REGISTER_SHUNTVOLTAGE, Value)
+  If ((Value &gt;&gt; 15) and 1) = 1 then 'Check for negative reading (2’s complement)
+     Value = -((Value xor &amp;hffff) + 1)  'Convert negative reading to a negative integer
+  endif	
+  ShuntVoltage_mV = (Value / 100)
+end function
+
+function SupplyVoltage_V() as float 'The Supply voltage is a combination of the Bus voltage and the Shunt voltage
+  SupplyVoltage_V = BusVoltage_V() + (ShuntVoltage_mV()/1000)
+end function  
+
+function Current_mA() 'Gets the current value in mA
+  local Value
+  ReadRegister(INA219_REGISTER_CURRENT, Value)
+  If ((Value &gt;&gt; 15) and 1) = 1 then 'Check for negative reading (2’s complement)
+     Value = -((Value xor &amp;hffff) + 1)  'Convert negative reading to a negative integer	
+  endif	
+  Current_mA = Value / INA219_currentDivider_mA
+end function
+  
+function Power_mW() 'Gets the power value in mW
+  local Value
+  ReadRegister (INA219_REGISTER_POWER, Value)
+  Power_mW = Value / INA219_powerDivider_mW
+end function
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'             I2C read and write routines
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+sub ReadRegister (Register, Value)  'Reads a 16 bit value over I2C
+  local GetData(1)
+  i2c write INA219_ADDRESS, 0, 1, Register
+  i2c read INA219_ADDRESS, 0, 2, GetData()
+  Value = ((GetData(0) &lt;&lt;8) or GetData(1))
+end sub
+
+sub WriteRegister (Register, Value) 'Writes a 16 bit value (2 x 8 bit) in a register over I2C
+  local MSB,LSB
+  MSB = Value &gt;&gt; 8
+  LSB = Value and &amp;hff
+  i2c write INA219_ADDRESS, 0, 3, Register, MSB, LSB
+end sub
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'               Various calibration routines
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+sub setCalibration_32V_2A
+
+  local Config as integer
+  
+'Configures to INA219 to be able to measure up to 32V and 2A of current.
+'Each unit of current corresponds to 100uA, and each unit of power corresponds to 2mW.
+'Counter overflow occurs at 3.2A.
+'Note&#58; These calculations assume a 0.1 ohm resistor is present
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+  ' By default we use a pretty huge range for the input voltage,
+  ' which probably isn't the most appropriate choice for system
+  ' that don't use a lot of power.  But all of the calculations
+  ' are shown below if you want to change the settings.  You will
+  ' also need to change any relevant register settings, such as
+  ' setting the VBUS_MAX to 16V instead of 32V, etc.
+
+  ' VBUS_MAX = 32V             (Assumes 32V, can also be set to 16V)
+  ' VSHUNT_MAX = 0.32          (Assumes Gain 8, 320mV, can also be 0.16, 0.08, 0.04)
+  ' RSHUNT = 0.1               (Resistor value in ohms)
+  
+  ' 1. Determine max possible current
+  ' MaxPossible_I = VSHUNT_MAX / RSHUNT
+  ' MaxPossible_I = 3.2A
+  
+  ' 2. Determine max expected current
+  ' MaxExpected_I = 2.0A
+  
+  ' 3. Calculate possible range of LSBs (Min = 15-bit, Max = 12-bit)
+  ' MinimumLSB = MaxExpected_I/32767
+  ' MinimumLSB = 0.000061              (61uA per bit)
+  ' MaximumLSB = MaxExpected_I/4096
+  ' MaximumLSB = 0.000488              (488uA per bit)
+  
+  ' 4. Choose an LSB between the min and max values
+  '    (Preferrably a roundish number close to MinLSB)
+  ' CurrentLSB = 0.0001 (100uA per bit)
+  
+  ' 5. Compute the calibration register
+  ' Cal = trunc (0.04096 / (Current_LSB &#42; RSHUNT))
+  ' Cal = 4096 (0x1000)
+  
+  INA219_calValue = 4096
+  
+  ' 6. Calculate the power LSB
+  ' PowerLSB = 20 &#42; CurrentLSB
+  ' PowerLSB = 0.002 (2mW per bit)
+  
+  ' 7. Compute the maximum current and shunt voltage values before overflow
+  '
+  ' Max_Current = Current_LSB &#42; 32767
+  ' Max_Current = 3.2767A before overflow
+  '
+  ' If Max_Current &gt; Max_Possible_I then
+  '    Max_Current_Before_Overflow = MaxPossible_I
+  ' Else
+  '    Max_Current_Before_Overflow = Max_Current
+  ' End If
+  '
+  ' Max_ShuntVoltage = Max_Current_Before_Overflow &#42; RSHUNT
+  ' Max_ShuntVoltage = 0.32V
+  '
+  ' If Max_ShuntVoltage &gt;= VSHUNT_MAX
+  '    Max_ShuntVoltage_Before_Overflow = VSHUNT_MAX
+  ' Else
+  '    Max_ShuntVoltage_Before_Overflow = Max_ShuntVoltage
+  ' End If
+  
+  ' 8. Compute the Maximum Power
+  ' MaximumPower = Max_Current_Before_Overflow &#42; VBUS_MAX
+  ' MaximumPower = 3.2 &#42; 32V
+  ' MaximumPower = 102.4W
+  
+  ' Set multipliers to convert raw current/power values
+  INA219_currentDivider_mA = 10  'Current LSB = 100uA per bit (1000/100 = 10)
+  INA219_powerDivider_mW = 0.5     'Power LSB = 2mW per bit (1/2)
+
+  ' Set Calibration register to 'Cal' calculated above	
+  WriteRegister(INA219_REGISTER_CALIBRATION, INA219_calValue) 
+  
+  ' Set Config register to take into account the settings above
+  Config = INA219_CONFIG_BVOLTAGERANGE_32V or INA219_CONFIG_GAIN_8_320MV or INA219_CONFIG_BADCRES_12BIT_2S
+  Config = Config or INA219_CONFIG_SADCRES_12BIT_2S or INA219_CONFIG_MODE_SNBVOLT_CONT
+  WriteRegister(INA219_REGISTER_CONFIG, Config)
+end sub
+
+sub setCalibration_32V_1A
+
+  local Config as Integer
+  
+'Configures to INA219 to be able to measure up to 32V and 1A of current.
+'Each unit of current corresponds to 40uA, and each unit of power corresponds to 800uW.
+'Counter overflow occurs at 1.3A.
+'Note&#58; These calculations assume a 0.1 ohm resistor is present
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+  
+  ' VBUS_MAX = 32V		(Assumes 32V, can also be set to 16V)
+  ' VSHUNT_MAX = 0.32	(Assumes Gain 8, 320mV, can also be 0.16, 0.08, 0.04)
+  ' RSHUNT = 0.1			(Resistor value in ohms)
+
+  ' 1. Determine max possible current
+  ' MaxPossible_I = VSHUNT_MAX / RSHUNT
+  ' MaxPossible_I = 3.2A
+
+  ' 2. Determine max expected current
+  ' MaxExpected_I = 1.0A
+
+  ' 3. Calculate possible range of LSBs (Min = 15-bit, Max = 12-bit)
+  ' MinimumLSB = MaxExpected_I/32767
+  ' MinimumLSB = 0.0000305             (30.5uA per bit)
+  ' MaximumLSB = MaxExpected_I/4096
+  ' MaximumLSB = 0.000244              (244uA per bit)
+
+  ' 4. Choose an LSB between the min and max values
+  '    (Preferrably a roundish number close to MinLSB)
+  ' CurrentLSB = 0.0000400 (40uA per bit)
+
+  ' 5. Compute the calibration register
+  ' Cal = trunc (0.04096 / (Current_LSB &#42; RSHUNT))
+  ' Cal = 10240 (0x2800)
+
+  INA219_calValue = 10240
+  
+  ' 6. Calculate the power LSB
+  ' PowerLSB = 20 &#42; CurrentLSB
+  ' PowerLSB = 0.0008 (800uW per bit)
+
+  ' 7. Compute the maximum current and shunt voltage values before overflow
+  '
+  ' Max_Current = Current_LSB &#42; 32767
+  ' Max_Current = 1.31068A before overflow
+  '
+  ' If Max_Current &gt; Max_Possible_I then
+  '    Max_Current_Before_Overflow = MaxPossible_I
+  ' Else
+  '    Max_Current_Before_Overflow = Max_Current
+  ' End If
+  '
+  ' ... In this case, we're good though since Max_Current is less than MaxPossible_I
+  '
+  ' Max_ShuntVoltage = Max_Current_Before_Overflow &#42; RSHUNT
+  ' Max_ShuntVoltage = 0.131068V
+  '
+  ' If Max_ShuntVoltage &gt;= VSHUNT_MAX
+  '    Max_ShuntVoltage_Before_Overflow = VSHUNT_MAX
+  ' Else
+  '    Max_ShuntVoltage_Before_Overflow = Max_ShuntVoltage
+  ' End If
+
+  ' 8. Compute the Maximum Power
+  ' MaximumPower = Max_Current_Before_Overflow &#42; VBUS_MAX
+  ' MaximumPower = 1.31068 &#42; 32V
+  ' MaximumPower = 41.94176W
+
+  ' Set multipliers to convert raw current/power values
+  INA219_currentDivider_mA = 25  'Current LSB = 40uA per bit (1000/40 = 25)
+  INA219_powerDivider_mW = 1.25  'Power LSB = 800uW per bit (1/0.8)
+
+  ' Set Calibration register to 'Cal' calculated above	
+  WriteRegister(INA219_REGISTER_CALIBRATION, INA219_calValue) 
+
+  ' Set Config register to take into account the settings above
+  Config = INA219_CONFIG_BVOLTAGERANGE_32V or INA219_CONFIG_GAIN_8_320MV or INA219_CONFIG_BADCRES_12BIT_2S
+  Config = Config or INA219_CONFIG_SADCRES_12BIT_2S or INA219_CONFIG_MODE_SNBVOLT_CONT
+  WriteRegister(INA219_REGISTER_CONFIG, Config)
+end sub
+
+sub setCalibration_16V_400mA
+
+  local Config as integer
+  
+'Calibration which uses the highest precision for current measurement (0.1mA)
+'at the expense of only supporting 16V at 400mA max.
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+  
+  ' VBUS_MAX = 16V
+  ' VSHUNT_MAX = 0.04          (Assumes Gain 1, 40mV)
+  ' RSHUNT = 0.1               (Resistor value in ohms)
+  
+  ' 1. Determine max possible current
+  ' MaxPossible_I = VSHUNT_MAX / RSHUNT
+  ' MaxPossible_I = 0.4A
+
+  ' 2. Determine max expected current
+  ' MaxExpected_I = 0.4A
+  
+  ' 3. Calculate possible range of LSBs (Min = 15-bit, Max = 12-bit)
+  ' MinimumLSB = MaxExpected_I/32767
+  ' MinimumLSB = 0.0000122              (12uA per bit)
+  ' MaximumLSB = MaxExpected_I/4096
+  ' MaximumLSB = 0.0000977              (98uA per bit)
+  
+  ' 4. Choose an LSB between the min and max values
+  '    (Preferrably a roundish number close to MinLSB)
+  ' CurrentLSB = 0.00005 (50uA per bit)
+  
+  ' 5. Compute the calibration register
+  ' Cal = trunc (0.04096 / (Current_LSB &#42; RSHUNT))
+  ' Cal = 8192 (0x2000)
+
+  INA219_calValue = 8192
+
+  ' 6. Calculate the power LSB
+  ' PowerLSB = 20 &#42; CurrentLSB
+  ' PowerLSB = 0.001 (1mW per bit)
+  
+  ' 7. Compute the maximum current and shunt voltage values before overflow
+  '
+  ' Max_Current = Current_LSB &#42; 32767
+  ' Max_Current = 1.63835A before overflow
+  '
+  ' If Max_Current &gt; Max_Possible_I then
+  '    Max_Current_Before_Overflow = MaxPossible_I
+  ' Else
+  '    Max_Current_Before_Overflow = Max_Current
+  ' End If
+  '
+  ' Max_Current_Before_Overflow = MaxPossible_I
+  ' Max_Current_Before_Overflow = 0.4
+  '
+  ' Max_ShuntVoltage = Max_Current_Before_Overflow &#42; RSHUNT
+  ' Max_ShuntVoltage = 0.04V
+  '
+  ' If Max_ShuntVoltage &gt;= VSHUNT_MAX
+  '    Max_ShuntVoltage_Before_Overflow = VSHUNT_MAX
+  ' Else
+  '    Max_ShuntVoltage_Before_Overflow = Max_ShuntVoltage
+  ' End If
+  '
+  ' Max_ShuntVoltage_Before_Overflow = VSHUNT_MAX
+  ' Max_ShuntVoltage_Before_Overflow = 0.04V
+  
+  ' 8. Compute the Maximum Power
+  ' MaximumPower = Max_Current_Before_Overflow &#42; VBUS_MAX
+  ' MaximumPower = 0.4 &#42; 16V
+  ' MaximumPower = 6.4W
+  
+  ' Set multipliers to convert raw current/power values
+  INA219_currentDivider_mA = 20  'Current LSB = 50uA per bit (1000/50 = 20)
+  INA219_powerDivider_mW = 1    'Power LSB = 1mW per bit
+
+  ' Set Calibration register to 'Cal' calculated above 
+  WriteRegister(INA219_REGISTER_CALIBRATION, INA219_calValue)
+  
+  ' Set Config register to take into account the settings above
+  Config = INA219_CONFIG_BVOLTAGERANGE_16V or INA219_CONFIG_GAIN_1_40MV or INA219_CONFIG_BADCRES_12BIT_2S
+  Config = Config or INA219_CONFIG_SADCRES_12BIT_2S or INA219_CONFIG_MODE_SNBVOLT_CONT
+  WriteRegister(INA219_REGISTER_CONFIG, Config)
+end sub
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.INA219-Current-Sensor.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:55 GMT -->
+</html>

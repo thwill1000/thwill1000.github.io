@@ -1,0 +1,790 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Analog-Clock-part-of-the-original-MMBasic-library.ashx?HL=mmbasic,display by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Analog Clock - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Analog-Clock-part-of-the-original-MMBasic-library&amp;NS=MMBasic&amp;HL=mmbasic%2cdisplay" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBL8BR2V0RmlsZS5hc3B4P0ZpbGU9Q0xPQ0suQk1QJmFtcDtBc1N0cmVhbUF0dGFjaG1lbnQ9MSZhbXA7UHJvdmlkZXI9U2NyZXdUdXJuLldpa2kuRmlsZXNTdG9yYWdlUHJvdmlkZXImYW1wO0lzUGFnZUF0dGFjaG1lbnQ9MSZhbXA7UGFnZT1NTUJhc2ljLkFuYWxvZy1DbG9jay1wYXJ0LW9mLXRoZS1vcmlnaW5hbC1NTUJhc2ljLWxpYnJhcnkIRG93bmxvYWQJQ0xPQ0suQk1QCDI1LjM3IEtCZGTp0wVVgxttLtZv87aDnLudSwLCKw==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login1c50.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dAnalog-Clock-part-of-the-original-MMBasic-library%26NS%3dMMBasic%26HL%3dmmbasic%2cdisplay" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Analog-Clock-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History8b52.html?Page=MMBasic.Analog-Clock-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Analog Clock
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print8b52.html?Page=MMBasic.Analog-Clock-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:16
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesdb1b.html?Cat=MMBasic.Dates%2c%20Time%20and%20Clocks" title="Dates, Time and Clocks">Dates, Time and Clocks</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f326e4522-24c7-4b2b-b240-64272c358834" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f326e4522-24c7-4b2b-b240-64272c358834');"></div><div id="f9d3e34e3-6feb-4883-8a4f-285de641f393" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f9d3e34e3-6feb-4883-8a4f-285de641f393');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.DigiClock-part-of-the-original-MMBasic-library.html" title="DCF77 DigiClock (MMBasic)">DCF77 DigiClock (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-with-I2C-interface-using-a-Micromite-5-3.html" title="Driving LCD with I2C interface using a Micromite (&gt;5.3) (MMBasic)">Driving LCD with I2C interface using a Micromite (&gt;5.3) (MMBasic)</a> &raquo; <b><a href="MMBasic.Analog-Clock-part-of-the-original-MMBasic-library.html" title="Analog Clock (MMBasic)">Analog Clock (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-with-i2c-interface-part-of-the-original-MMBasic-library.html" title="Driving LCD with i2c interface (MMBasic)">Driving LCD with i2c interface (MMBasic)</a> &raquo; <a href="MMBasic.Multiple-LCD-panel-displays.html" title="Multiple LCD panel displays (MMBasic)">Multiple LCD panel displays (MMBasic)</a> &raquo; <a href="MMBasic.BIN8-BAS-part-of-the-original-MMBasic-library.html" title="BIN8.BAS (MMBasic)">BIN8.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Maxifont-bas-part-of-the-original-MMBasic-library.html" title="Maxifont.bas (MMBasic)">Maxifont.bas (MMBasic)</a> &raquo; <a href="MMBasic.ARMMite-Pin-Aliases.html" title="ARMMite H7 Pin Aliases (MMBasic)">ARMMite H7 Pin Aliases (MMBasic)</a> &raquo; <a href="MMBasic.Measuring-RMS-algorythm-using-MMBasic.html" title="Measuring RMS (algorythm) using MMBasic (MMBasic)">Measuring RMS (algorythm) using MMBasic (MMBasic)</a> &raquo; <a href="MMBasic.DigiClock-part-of-the-original-MMBasic-library.html" title="DCF77 DigiClock (MMBasic)">DCF77 DigiClock (MMBasic)</a> &raquo; <a href="MMBasic.Driving-LCD-with-I2C-interface-using-a-Micromite-5-3.html" title="Driving LCD with I2C interface using a Micromite (&gt;5.3) (MMBasic)">Driving LCD with I2C interface using a Micromite (&gt;5.3) (MMBasic)</a> &raquo; <b><a href="MMBasic.Analog-Clock-part-of-the-original-MMBasic-library.html" title="Analog Clock (MMBasic)">Analog Clock (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required CLOCK.BMP is available in the attachments tab (top right).<br /><br />Original code by Eugene Villar (for the clock) and Ray Thomas (for the day of week).<br /><br />Modified for Maximite  BASIC v2.4  by Bob Devries, June, 2011<br /><br /><a class="externallink" href="http://geoffg.net/maximite.html" title="http://geoffg.net/maximite.html" target="_blank">http://geoffg.net/maximite.html</a><br /><a class="externallink" href="http://www.thebackshed.com/forum/forum_topics.asp?FID=16" title="http://www.thebackshed.com/forum/forum_topics.asp?FID=16" target="_blank">http://www.thebackshed.com/forum/forum_topics.asp?FID=16</a><br /><br />Regards,<br />Bob Devries<br />Dalby, QLD, Australia<br /><br /><br /><b>Original code</b>:<br /><pre>
+   ' ANALOG CLOCK
+   ' Case Study Problem B3&#58; Program 1
+   ' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+   ' written by Eugene Villar http&#58;//seavsoftwares.codedgraphic.com/home_page.html
+   ' ~ This program draws a very simple analog clock.
+   ' modified for Maximite BASIC by Bob Devries
+   '&#42;&#42;&#42; modified by Hugh Buckle in Dec 2011 to request and verify current date and time
+   Timer = Val(Left$(Time$,2)) &#42; 3600 + Val(Mid$(Time$,4,2)) &#42; 60 + Val(Right$(Time$,2))
+   '&#42;&#42;&#42; Get current date and time
+   '&#42;&#42;&#42; days in each month used in the date/time request subroutine
+   Data 31,29,31,30,31,30,31,31,30,31,30,31
+   GoSub L004
+   ' Clock border
+   Cls
+   Line(0,0)-(480,432),1,BF&#58;Line(11,12)-(469,421),0,BF
+   GoSub L001
+   Locate 20,20&#58;Print"MAXIMITE"
+   Locate 20,30&#58;Print"MMBASIC v";&#58;GoSub L002 &#58;Print version$;
+   start=(MM.HRes/2)-((prtlen&#42;6)/2)&#58;stop=(MM.HRes/2)+((prtlen&#42;6)/2)-1
+   For xx=start To stop&#58;For yy=1 To 11&#58; Pixel(xx,yy)=Not(Pixel(xx,yy))&#58; Next yy,xx
+   Circle(240,216), 200, 1
+   Circle(240,216),199,1
+   For i=0 To 59
+   rads=i&#42;3.14159265/30
+   If i Mod 5 &lt;&gt; 0 Then
+   x1=Sin(rads)&#42;195+240
+   y1=-Cos(rads)&#42;195+216
+   Else
+   x1=Sin(rads)&#42;190+240
+   y1=-Cos(rads)&#42;190+216
+   EndIf
+   x2=Sin(rads)&#42;200+240
+   y2=-Cos(rads)&#42;200+216
+   Line(x1,y1)-(x2,y2),1
+   Next i
+   ' Previous hand positions
+   PHrX = 240&#58; PHrY = 216
+   PMnX = 240&#58; PMnY = 216
+   PScX = 240&#58; PScY = 216
+   ' Clock display loop
+   Do
+     ' Wait for a second to elapse
+   t$=Time$&#58; Timed = Val(Left$(t$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Do
+   Pin(0)=0
+   Pause 999
+   Pin(0)=1
+   Loop Until Int(Timer)/1000 &lt;&gt; Timed
+     ' Calculate the time values
+   T$=Time$&#58;TimeNow = Val(Left$(T$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Second = TimeNow Mod 60
+   Minute = (TimeNow \ 60) Mod 60
+   Minute = Minute + Second \ 60
+   Hour = TimeNow / 3600
+     If Hour &gt;= 12 Then Hour = Hour - 12
+     ' Compute the angles (converted to radians)
+     HrAng = .523599 &#42; Hour
+     MnAng = .10472 &#42; Minute
+     ScAng = .10472 &#42; Second
+     ' Compute the hands' endpoints
+   HrX = Sin(HrAng) &#42; 120 + 240&#58; HrY = 0 - Cos(HrAng) &#42; 120 + 216
+   MnX = Sin(MnAng) &#42; 180 + 240&#58; MnY = 0 - Cos(MnAng) &#42; 180 + 216
+   ScX = Sin(ScAng) &#42; 190 + 240&#58; ScY = 0 - Cos(ScAng) &#42; 190 + 216
+     ' Erase the previous hands
+   Line(240, 216)-(PHrx, PHry),0
+   Line(240, 216)-(PMnx, PMny),0
+   Line(240, 216)-(PScx, PScy),0
+     ' Draw the current hands
+   Line(240, 216)-(HrX, HrY),1
+   Line(240, 216)-(MnX, MnY),1
+   Line(240, 216)-(ScX, ScY),1
+     ' Save the hands' position
+     PHrX = HrX&#58; PHrY = HrY
+     PMnX = MnX&#58; PMnY = MnY
+     PScX = ScX&#58; PScY = ScY
+   Loop Until Inkey$ = Chr$(27)
+   End
+L001&#58; 'WeekDay.bas    Ray Thomas      September 2000
+   Dim TxtDay$(7)
+   Dim TxtMonth$(12)
+   Data "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+   Data "January","February","March","April","May","June","July"
+   Data "August","September","October","November","December"
+   For Count = 0 To 6
+          Read TxtDay$(Count)
+   Next Count
+   For Count = 0 To 11
+          Read TxtMonth$(Count)
+   Next Count
+   UserDate$ = Date$
+   '&#42;&#42;&#42; Split out the day, month and year &#42;&#42;&#42;
+   Day = Val(Left$(UserDate$, 2))
+   Month = Val(Mid$(UserDate$, 4, 2))
+   Year = Val(Right$(UserDate$, 4))
+   OldYear = Year
+   OldMonth=Month
+   '&#42;&#42;&#42; start the print out
+   Suffix$ = "th"
+   If Day Mod 10 = 1 Then Suffix$ = "st"
+   If Day Mod 10 = 2 Then Suffix$ = "nd"
+   If Day Mod 10 = 3 Then Suffix$ = "rd"
+   If Day &gt; 10 And Day &lt; 14 Then Suffix$ = "th"
+   '&#42;&#42;&#42; For any date in Jan or Feb add 12 to the month and
+   '&#42;&#42;&#42; subtract 1 from the year
+   If Month &lt; 3 Then
+          Month = Month + 12
+          Year = Year - 1
+   EndIf
+   '&#42;&#42;&#42; Add 1 to the month and multiply by 2.61
+   '&#42;&#42;&#42; Drop the fraction (not round) afterwards
+   Month = Month + 1
+   Month = Fix(Month &#42; 2.61)
+   '&#42;&#42;&#42; Add Day, Month and the last two digits of the year
+   NewYear$ = Str$(Year)
+   Year = Val(Right$(NewYear$, 2))
+   DMY = Day + Month + Year
+   Century = Val(Left$(NewYear$, 2))
+   '&#42;&#42;&#42; Add a quarter of the last two digits of the year
+   '&#42;&#42;&#42; (truncated not rounded)
+   Year = Fix(Year / 4)
+   DMY = DMY + Year
+   '&#42;&#42;&#42; Add the following factors for the year
+   If Century = 18 Then Century = 2
+   If Century = 19 Then Century = 0
+   If Century = 20 Then Century = 6
+   If Century = 21 Then Century = 4
+   DMY = DMY + Century
+   '&#42;&#42;&#42; The day of the week is the modulus of DMY divided by 7
+   DMY = DMY Mod 7
+   prt$=TxtDay$(DMY)+", "+Str$(Day)+Suffix$+" of "+TxtMonth$(OldMonth-1)+", "+Str$(OldYear)
+   prtlen=Len(prt$)
+   Locate (480-(prtlen&#42;6))/2,1&#58;Print prt$
+   Return
+L002&#58; ver$=Str$(MM.Ver)
+L003&#58; verpos=Instr(ver$,".")
+   If verpos = 0 Then ver$=ver$+".0"&#58;GoTo L003
+   ver1$=Left$(ver$,verpos-1)
+   ver2$=Mid$(ver$,verpos+1,2)
+   ver3$=Right$(ver$,Len(ver$)-verpos)
+   ver4$=Str$(Val(Left$(ver3$,2)))
+   If Len(ver3$)&gt;2 Then ver5=Val(Right$(ver3$,2))&#58;ver5$=Chr$(ver5+64)
+   version$=ver1$+"."+ver4$+ver5$
+   Return
+   '&#42;&#42;&#42;
+L004&#58; '&#42;&#42;&#42; Subroutine to request and verify the current date and time - Hugh Buckle 12/2011
+   Cls
+   '&#42;&#42;&#42; days in each month
+   Dim DaysInMth(12)
+   For i = 1 To 12
+     Read DaysInMth(i)
+   Next
+   '&#42;&#42;&#42;
+L005&#58; '&#42;&#42;&#42; Ask if date and time to be entered
+   Print "System date &amp; time are " Date$ " " Time$
+   Input "Do you wish to change them (y/n)"; Reply$
+   If LCase$(Reply$) = "n" Then
+     Return
+   ElseIf LCase$(Reply$) &lt;&gt; "y" Then
+     Print " Sorry I didn't understand your reply. Please answer Y or N"
+     GoTo L005
+   EndIf
+   '&#42;&#42;&#42;
+L006&#58; '&#42;&#42;&#42; ask for current date
+   Input "Enter date dd-mm-yyyy"; reply$
+   i = Instr(1,reply$,"-")
+   If i &gt; 1 Then
+     day = Val(Left$(reply$,i-1))
+   Else
+     Print "Please use format dd-mm-yy."
+     Print
+     GoTo L006
+   EndIf
+   j = Instr(i+1,reply$,"-")
+   If j &gt; i + 1 Then
+     month = Val(Mid$(reply$,i+1,j-i-1))
+     year = Val(Right$(reply$, Len(reply$) - j))
+   EndIf
+   If Month &lt; 1 Or Month &gt; 12 Then
+     Print "Month error. Please use format dd-mm-yyyy"
+     Print
+     GoTo L006
+   EndIf
+   If day &lt; 1 Or day &gt; DaysInMth(Month) Then
+      Print "Day error. Please use format dd-mm-yyyy"
+      Print
+      GoTo L006
+   EndIf
+   '&#42;&#42;&#42; leap years are evenly divisible by 4
+   '&#42;&#42;&#42; however those evenly divisible by 100 are not unless they are evenly divisible by 400
+   If month = 2 And day &gt; 28 Then
+     If year Mod 4 &lt;&gt; 0 Or year/100 Mod 4 &lt;&gt; 0 Then
+       Print year " is not a leap year."
+       Print
+       GoTo L006
+     EndIf
+   EndIf
+   Date$ = reply$
+   '&#42;&#42;&#42;
+L007&#58; '&#42;&#42;&#42; Ask for current time
+   Input "Enter time hh&#58;mm&#91;&#58;ss&#93; "; reply$
+   i  = Instr(1,reply$,"&#58;")
+   If i &gt; 1 Then
+     hour = Val(Left$(reply$,i-1))
+   Else
+     Print "Please use format hh&#58;mm&#91;&#58;ss&#93;"
+     Print
+     GoTo L007
+   EndIf
+   j = Instr(i+1,reply$,"&#58;")
+   '&#42;&#42;&#42; if no second colon then seconds have been omitted
+   If j = 0 Then
+     minute = Val(Right$(Reply$, Len(reply$) - i))
+     second = 0
+   Else
+     minute = Val(Mid$(reply$,i+1,j-i-1))
+     second = Val(Right$(reply$, Len(reply$) - j))
+   EndIf
+   If hour &lt; 0 Or Hour &gt; 24 Or minute &lt; 0  Or minute &gt; 59 Or second &lt; 0 Or second &gt; 59 Then
+     Print "Time error. Please use format hh&#58;mm&#91;&#58;ss&#93; where seconds are optional."
+     Print
+     GoTo L007
+   EndIf
+   Time$ = reply$
+   Return
+   '&#42;&#42;&#42; End HB mod 12/2011
+
+
+</pre><br /><br /><b>Modified code</b>:<br /><pre>
+   ' ANALOG CLOCK
+   ' Case Study Problem B3&#58; Program 1
+   ' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+   ' written by Eugene Villar http&#58;//seavsoftwares.codedgraphic.com/home_page.html
+   ' ~ This program draws a very simple analog clock.
+   ' modified for Maximite BASIC by Bob Devries
+   ' modified for colour by Geoff Graham
+
+   If MM.Device$ &lt;&gt; "Colour Maximite" Then
+      Print "This program requires the Colour Maximite"
+      End
+   EndIf
+
+   Timer = Val(Left$(Time$,2)) &#42; 3600 + Val(Mid$(Time$,4,2)) &#42; 60 + Val(Right$(Time$,2))
+   ' Clock border
+   Mode 3
+   Cls
+   Line(0,0)-(480,432),Cyan,BF&#58;Line(11,12)-(469,421),0,BF
+   GoSub L001
+   Colour Green
+   Locate 20,20&#58;Print "MAXIMITE"
+   Locate 20,30&#58;Print "MMBASIC v";&#58;GoSub L002 &#58;Print version$;
+   Colour White
+   Circle(240,216), 200, Yellow
+   Circle(240,216),199, Yellow
+   For i=0 To 59
+   rads=i&#42;3.14159265/30
+   If i Mod 5 &lt;&gt; 0 Then
+   x1=Sin(rads)&#42;195+240
+   y1=-Cos(rads)&#42;195+216
+   Else
+   x1=Sin(rads)&#42;190+240
+   y1=-Cos(rads)&#42;190+216
+   EndIf
+   x2=Sin(rads)&#42;200+240
+   y2=-Cos(rads)&#42;200+216
+   Line(x1,y1)-(x2,y2),Yellow
+   Next i
+   ' Previous hand positions
+   PHrX = 240&#58; PHrY = 216
+   PMnX = 240&#58; PMnY = 216
+   PScX = 240&#58; PScY = 216
+   ' Clock display loop
+   Do
+     ' Wait for a second to elapse
+   t$=Time$&#58; Timed = Val(Left$(t$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Do
+   Pin(0)=0
+   Pause 999
+   Pin(0)=1
+   Loop Until Int(Timer)/1000 &lt;&gt; Timed
+     ' Calculate the time values
+   T$=Time$&#58;TimeNow = Val(Left$(T$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Second = TimeNow Mod 60
+   Minute = (TimeNow \ 60) Mod 60
+   Minute = Minute + Second \ 60
+   Hour = TimeNow / 3600
+     If Hour &gt;= 12 Then Hour = Hour - 12
+     ' Compute the angles (converted to radians)
+     HrAng = .523599 &#42; (Hour + Minute/60)
+     MnAng = .10472 &#42; (Minute + Second/60)
+     ScAng = .10472 &#42; Second
+     ' Compute the hands' endpoints
+   HrX = Sin(HrAng) &#42; 120 + 240&#58; HrY = 0 - Cos(HrAng) &#42; 120 + 216
+   MnX = Sin(MnAng) &#42; 180 + 240&#58; MnY = 0 - Cos(MnAng) &#42; 180 + 216
+   ScX = Sin(ScAng) &#42; 190 + 240&#58; ScY = 0 - Cos(ScAng) &#42; 190 + 216
+
+     ' make the tick sound
+     Sound 3000, 5, 1
+
+     ' Draw the current hands
+     ' we erase then immediately redraw to avoid flicker
+     ' then one final redraw incase the hands overlapped
+   Line(240, 216)-(PScx, PScy),0     ' Erase the previous second hand
+   Line(240, 216)-(ScX, ScY),Red     ' Draw the second hand
+   Line(240, 216)-(PMnx, PMny),0     ' Erase the previous minute hand
+   Line(240, 216)-(MnX, MnY),Purple  ' Draw the minute hand
+   Line(240, 216)-(PHrx, PHry),0     ' Erase the previous hour hand
+   Line(240, 216)-(HrX, HrY),Purple  ' Draw the hour hand
+
+     ' Save the hands' position
+     PHrX = HrX&#58; PHrY = HrY
+     PMnX = MnX&#58; PMnY = MnY
+     PScX = ScX&#58; PScY = ScY
+   Loop Until Inkey$ = Chr$(27)
+   End
+L001&#58; 'WeekDay.bas    Ray Thomas      September 2000
+   Dim TxtDay$(7)
+   Dim TxtMonth$(12)
+   Data "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+   Data "January","February","March","April","May","June","July"
+   Data "August","September","October","November","December"
+   For Count = 0 To 6
+          Read TxtDay$(Count)
+   Next Count
+   For Count = 0 To 11
+          Read TxtMonth$(Count)
+   Next Count
+   UserDate$ = Date$
+   '&#42;&#42;&#42; Split out the day, month and year &#42;&#42;&#42;
+   Day = Val(Left$(UserDate$, 2))
+   Month = Val(Mid$(UserDate$, 4, 2))
+   Year = Val(Right$(UserDate$, 4))
+   OldYear = Year
+   OldMonth=Month
+   '&#42;&#42;&#42; start the print out
+   Suffix$ = "th"
+   If Day Mod 10 = 1 Then Suffix$ = "st"
+   If Day Mod 10 = 2 Then Suffix$ = "nd"
+   If Day Mod 10 = 3 Then Suffix$ = "rd"
+   If Day &gt; 10 And Day &lt; 14 Then Suffix$ = "th"
+   '&#42;&#42;&#42; For any date in Jan or Feb add 12 to the month and
+   '&#42;&#42;&#42; subtract 1 from the year
+   If Month &lt; 3 Then
+          Month = Month + 12
+          Year = Year - 1
+   EndIf
+   '&#42;&#42;&#42; Add 1 to the month and multiply by 2.61
+   '&#42;&#42;&#42; Drop the fraction (not round) afterwards
+   Month = Month + 1
+   Month = Fix(Month &#42; 2.61)
+   '&#42;&#42;&#42; Add Day, Month and the last two digits of the year
+   NewYear$ = Str$(Year)
+   Year = Val(Right$(NewYear$, 2))
+   DMY = Day + Month + Year
+   Century = Val(Left$(NewYear$, 2))
+   '&#42;&#42;&#42; Add a quarter of the last two digits of the year
+   '&#42;&#42;&#42; (truncated not rounded)
+   Year = Fix(Year / 4)
+   DMY = DMY + Year
+   '&#42;&#42;&#42; Add the following factors for the year
+   If Century = 18 Then Century = 2
+   If Century = 19 Then Century = 0
+   If Century = 20 Then Century = 6
+   If Century = 21 Then Century = 4
+   DMY = DMY + Century
+   '&#42;&#42;&#42; The day of the week is the modulus of DMY divided by 7
+   DMY = DMY Mod 7
+   prt$=TxtDay$(DMY)+", "+Str$(Day)+Suffix$+" of "+TxtMonth$(OldMonth-1)+", "+Str$(OldYear)
+   prtlen=Len(prt$)
+   Locate (480-(prtlen&#42;6))/2,0&#58;Print CLR$(Black, Cyan) prt$
+   Return
+L002&#58; ver$=Str$(MM.Ver)
+L003&#58; verpos=Instr(ver$,".")
+   If verpos = 0 Then ver$=ver$+".0"&#58;GoTo L003
+   ver1$=Left$(ver$,verpos-1)
+   ver2$=Mid$(ver$,verpos+1,2)
+   ver3$=Right$(ver$,Len(ver$)-verpos)
+   ver4$=Str$(Val(Left$(ver3$,2)))
+   If Len(ver3$)&gt;2 Then ver5=Val(Right$(ver3$,2))&#58;ver5$=Chr$(ver5+64)
+   version$=ver1$+"."+ver4$+ver5$
+   Return
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='CLOCK681b.BMP?File=CLOCK.BMP&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Analog-Clock-part-of-the-original-MMBasic-library' title="Download">CLOCK.BMP</a></td>
+			<td>25.37 KB</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Analog-Clock-part-of-the-original-MMBasic-library.ashx?HL=mmbasic,display by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:43 GMT -->
+</html>

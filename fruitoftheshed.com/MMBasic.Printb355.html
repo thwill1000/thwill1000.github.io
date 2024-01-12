@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&Discuss=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:20:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	MMBasic - Create/Manipulate Stack, Queue or List - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&amp;Discuss=1" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFqQs8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TU1CYXNpYyAtIENyZWF0ZS9NYW5pcHVsYXRlIFN0YWNrLCBRdWV1ZSBvciBMaXN0IC0gRGlzY3Vzc2lvbjwvaDE+PGRpdiBjbGFzcz0icm9vdG1lc3NhZ2Vjb250YWluZXIiPjxkaXYgY2xhc3M9Im1lc3NhZ2VoZWFkZXIiPjIwMTYvMTIvMTQgMDA6MjUgYnkgPGEgaHJlZj0iTU1CYXNpYy5Vc2VyLmFzcHg/VXNlcm5hbWU9cGFua3kiPkRvdWc8L2E+PGJyIC8+PHNwYW4gY2xhc3M9Im1lc3NhZ2VzdWJqZWN0Ij5Dcm9zc2VkIG91dCBsaW5lczwvc3Bhbj48L2Rpdj48ZGl2IGNsYXNzPSJtZXNzYWdlYm9keSI+Tm90IHN1cmUgd2h5IHRoaXMgaGFwcGVuZWQgYnV0IHRoZSBjcm9zc2VkIG91dCBsaW5lcyBzaG91bGQgbm90IGJlIHNvLiAgQSBjb3B5IG9mIHRoZSB0ZXh0IGRlc2NyaXB0aW9uIGlzIGluY2x1ZGVkIGluIHRoZSBhdHRhY2htZW50LjxiciAvPkVuam95LCBEb3VnLjxiciAvPjwvZGl2PjxkaXYgY2xhc3M9Im1lc3NhZ2Vjb250YWluZXIiPjxkaXYgY2xhc3M9Im1lc3NhZ2VoZWFkZXIiPjIwMTYvMTIvMTQgMDc6NTMgYnkgPGEgaHJlZj0iTU1CYXNpYy5Vc2VyLmFzcHg/VXNlcm5hbWU9aGVuZHkiPkNhcHRhaW5Cb2luZzwvYT48YnIgLz48c3BhbiBjbGFzcz0ibWVzc2FnZXN1YmplY3QiPlJlOiBDcm9zc2VkIG91dCBsaW5lczwvc3Bhbj48L2Rpdj48ZGl2IGNsYXNzPSJtZXNzYWdlYm9keSI+SGkgRG91Zy48YnIgLz5Zb3VyIHBvc3QgY29udGFpbnMgc3RyaW5ncyBvZiBoeXBoZW5zLCB0d28gdG9nZXRoZXIgPHN0cmlrZT5saWtlIHRoaXM8L3N0cmlrZT4gbWVhbiBzdHJpa2V0aHJ1IGluIHdpa2kgbWFya3VwLiBJIGFkZGVkICJibG9jayBjb2RlIiB0YWdzIHRvIHN0b3AgdGhhdCBpbnRlcnByZXRhdGlvbiBieSB0aGUgd2lraSBwYWdlIHJlbmRlcmVyLjxiciAvPjxiciAvPklmIHlvdSBhcmUgcG9zdGluZyB0ZXh0ICJhcyBpcyIgdXNlIHRoZSAiYmxvY2sgY29kZSIgbWFya3VwICh0aGUgYnV0dG9uIGxpa2UgYSBib3ggd2l0aCA8PiBpbnNpZGUpLiA8YnIgLz48YnIgLz48cHJlPg0KJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCmxpa2UgdGhpcy4uLiANCnRoZW4gYW55dGhpbmcgeW91IHR5cGUgd2lsbCBiZSBkaXNwbGF5ZWQgbGl0ZXJhbGx5Lg0KJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCjwvcHJlPjxiciAvPk1hcmt1cCBsYW5ndWFnZXMsIGh1aD8gOm8pIENoZWVyczxiciAvPjxiciAvPmg8L2Rpdj48L2Rpdj48L2Rpdj5kZLwOJOjyrnm6g5uNK75j/C5gjZB3" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">MMBasic - Create/Manipulate Stack, Queue or List - Discussion</h1><div class="rootmessagecontainer"><div class="messageheader">2016/12/14 00:25 by <a href="MMBasic.User2a51.html?Username=panky">Doug</a><br /><span class="messagesubject">Crossed out lines</span></div><div class="messagebody">Not sure why this happened but the crossed out lines should not be so.  A copy of the text description is included in the attachment.<br />Enjoy, Doug.<br /></div><div class="messagecontainer"><div class="messageheader">2016/12/14 07:53 by <a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a><br /><span class="messagesubject">Re: Crossed out lines</span></div><div class="messagebody">Hi Doug.<br />Your post contains strings of hyphens, two together <strike>like this</strike> mean strikethru in wiki markup. I added "block code" tags to stop that interpretation by the wiki page renderer.<br /><br />If you are posting text "as is" use the "block code" markup (the button like a box with <> inside). <br /><br /><pre>
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+like this... 
+then anything you type will be displayed literally.
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+</pre><br />Markup languages, huh? :o) Cheers<br /><br />h</div></div></div>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&Discuss=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:20:47 GMT -->
+</html>

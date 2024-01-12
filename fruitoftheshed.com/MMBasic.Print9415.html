@@ -1,0 +1,57 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	LTrim and RTrim Functions (VB work-a-like) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFiRg8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TFRyaW0gYW5kIFJUcmltIEZ1bmN0aW9ucyAoVkIgd29yay1hLWxpa2UpPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAyMS8wMi8wMSAxMjoyOSBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogU3RyaW5nczwvc21hbGw+PGJyIC8+PGJyIC8+VGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgcmV0dXJuIHRoZSBpbnB1dCBzdHJpbmcgd2l0aCBsZWFkaW5nIG9yIHRyYWlsaW5nIHdoaXRlLXNwYWNlIGNoYXJhY3RlcnMgKCZIMjAgJiAmSDA5KSByZW1vdmVkLjxiciAvPjxiciAvPklmIHlvdSBuZWVkIHRoZSBmdW5jdGlvbnMgZm9yIE1NKywgTU1YLCBQaUNyb21pdGUsIG9yIEFSTU1pdGUgeW91IHNob3VsZCB1c2UgdGhlIHZlcnNpb25zIHNob3duIGJlbG93LiBJZiB5b3UgYXJlIHVzaW5nIGEgTWljcm9NaXRlIE1rMiAoMjggb3IgNDggcGluIE1YMTcwKSwgdGhlIGJlbG93IGFyZSBmdWxseSBjb21wYXRpYmxlLCBidXQgeW91IGFyZSBiZXR0ZXIgb2ZmIHVzaW5nIDxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5MVHJpbS1SVHJpbS1jRnVuY3Rpb25zLmFzaHgiIHRpdGxlPSJMVHJpbSBSVHJpbSBDRnVuY3Rpb25zIj50aGVzZSB2ZXJzaW9uczwvYT4uIEJlaW5nIENGdW5jdGlvbnMsIHRoZXkgYXJlIGh1Z2VseSBmYXN0ZXIgKGF0IGxlYXN0IDEweCBhbmQgb2Z0ZW4gbmVhcmVyIDEwMHgpIC0gbm90IDxpPnByZWNpc2VseSA8L2k+VkIgY29tcGF0aWJsZSBhcyB0aGV5IG9ubHkgcmVjb2duaXNlIGEgQ0hSJCgzMikgYXMgd2hpdGUgc3BhY2UgLSB1bmxpa2VseSB0byBiZSBhIHByb2JsZW0uPGJyIC8+PGJyIC8+VXNpbmcgQ09OU1RzIGFuZCBhIHRlbXBvcmFyeSBzdHJpbmcgZm9yIHRoZSBjb21wYXJlIHNsaWNlIGdpdmVzIGEgZ29vZCBzcGVlZCBpbmNyZWFzZS4gPGJyIC8+ID1MVHJpbSQoUlRyaW0kKCJhIikpdGFrZXMgb25seSAxMS41bVMgYXQgNDhNSHogb24gTVgxNzA8YnIgLz48YnIgLz48Yj5TeW50YXg8L2I+OjxiciAvPiAgICBMVHJpbSQoZXhwcmVzc2lvbik8YnIgLz4gICAgUlRyaW0kKGV4cHJlc3Npb24pPGJyIC8+PGJyIC8+PGI+RXhhbXBsZTwvYj46PGJyIC8+ICAgIGEkPVJUcmltJCh1c2VyaW5wdXQkKTxiciAvPjxiciAvPjxiPkNvZGU8L2I+OjxiciAvPiA8YnIgLz48cHJlPg0KJ3ByZWFtYmxlDQoJQ29uc3Qgc1QkPUNociQoOSksIHNTJD0iICINCg0KCUZ1bmN0aW9uIExUcmltJChhJCkNCgkJTG9jYWwgSW50ZWdlciBtDQoJCUZvciBtPTEgVG8gTGVuKGEkKQ0KCQkJSWYgTm90KE1pZCQoYSQsbSwxKT0iICIgT3IgTWlkJChhJCxtLDEpPUNociQoOSkpIFRoZW4gTFRyaW0kPU1pZCQoYSQsbSkmIzU4OyBFeGl0IEZ1bmN0aW9uDQoJCU5leHQgICAgDQoJCUxUcmltJD0iIg0KCUVuZCBGdW5jdGlvbg0KDQoJRnVuY3Rpb24gUlRyaW0kKGEkKQ0KCQlMb2NhbCBJbnRlZ2VyIG4NCgkJRm9yIG49TGVuKGEkKSBUTyAxIFN0ZXAgLTENCgkJCUlmIE5vdChNaWQkKGEkLG4sMSk9IiAiIE9yIE1pZCQoYSQsbiwxKT1DaHIkKDkpKSBUaGVuIFJUcmltJD1MZWZ0JChhJCxuKSYjNTg7IEV4aXQgRnVuY3Rpb24NCgkJTmV4dCANCgkJUlRyaW0kPSIiDQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48YnIgLz5Gb3IgdGhvc2UgbmVlZGluZyByZWR1Y2VkIHRpbWluZ3Mgd2l0aG91dCByZXNvcnRpbmcgdG8gQ1N1YnMsIGluIHRoZSBhbHRlcm5hdGl2ZSBSVHJpbSQoKSBiZWxvdywgc29tZSB0cmlja3Mgd2hpY2ggc3BlZWQgdXAgdGhpbmdzIHVwIGJ5IGFib3V0IDI1JSBhcmUgdXNlZDsgSW5zdGVhZCBvZiByZW1vdmluZyBwYWRkaW5nIGZyb20gdGhlIHJpZ2h0IGJ5IHJlcGVhdGVkIHN0cmluZyBzbGljaW5nLCBpdCBhbmFseXplcyBieXRlcyAtIHN0b3BwaW5nIHdoZW4gaXQgaGl0cyBhIG5vbi1zcGFjZS4gSXQgdGhlbiBQT0tFcyB0aGF0IHBvc2l0aW9uIGludG8gdGhlIHZhcmlhYmxlIGRlc2NyaXB0b3IgdG8gdHJ1bmNhdGUgdGhlIHN0cmluZyBpbiBvbmUgZ28uIFRoaXMgbWV0aG9kIGlzIGZhaXJseSBhZHZhbmNlZCBNTUJhc2ljIGFuZCB0d2Vha2VycyBzaG91bGQgYmUgd2FyeSBvZiBjaGFuZ2luZyB0aGUgUE9LRSBjb21tYW5kcy4gSXQgaXMgZ29vZCB0byB0cnkgdG8gdW5kZXJzdGFuZCB3aGF0IGlzIGhhcHBlbmluZyB0aG91Z2guIDxiciAvPjxiciAvPjxwcmU+DQoJRnVuY3Rpb24gUlRyaW0kKGFhJCkNCgkJTG9jYWwgSW50ZWdlciBuLHgNCgkJbG9jYWwgcSQNCgkJcSQ9YWEkDQoJCUZvciBuPVBlZWsoVmFyIHEkLDApIFRPIDAgU3RlcCAtMQ0KCQkJeD1QZWVrKFZhciBxJCwgbikNCgkJCUlmIE5vdCh4PSZhbXA7bzQwIE9yIHg9JmFtcDtvMTEpIFRoZW4gUG9rZSBWYXIgcSQsIDAsIG4mIzU4OyBFeGl0IEZvcg0KCQlOZXh0IA0KCQlSVHJpbSQ9cSQNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPkFzIHdpdGggbW9zdCBvcHRpbWl6YXRpb25zIHJlc3VsdGluZyBpbiBhbiBpbmNyZWFzZWQgY29kZSBmb290cHJpbnQsIHRoZXJlIGlzIGEgc3dlZXQtc3BvdCB3aGVyZSB0aGUgbGFyZ2VyIHNpemUgY2FuIHdvcmsgYWdhaW5zdCB0aGUgd29ya2xvYWQuIFRoaXMgc2VlbXMgdG8gYmUgYSBzdHJpbmcgb2Ygc2l4IHNwYWNlcyB3aGVyZSB0aGUgbmV3IHZlcnNpb24gaXMgb25seSBzbGlnaHRseSBmYXN0ZXIgdGhhbiB0aGUgb2xkICh0aGUgaW52ZXJzZSBpcyB0cnVlKS48YnIgLz48YnIgLz5Ob3RlIGFsc28sIHRoZSBwYWQgY2hhcmFjdGVycyBhcmUgZGVzY3JpYmVkIGluIG9jdGFsIHdoaWNoIGlzIHRoZSBmYXN0ZXN0IHJhZGl4IGZvciB0aGUgaW50ZXJwcmV0ZXIuPGJyIC8+PGJyIC8+U3VjaCBhIHRyaWNrIGlzIG5vdCBwb3NzaWJsZSB3aXRoIExUcmltJCgpIGJlY2F1c2Ugd2Ugd291bGQgbmVlZCB0byBjb3B5IHRoZSB1c2VmdWwgcGFydCBvZiB0aGUgc3RyaW5nIGRvd24gdG8gc3RhcnQgYXQgcG9zaXRpb24gb25lIGluIHRoZSBzdHJpbmcgZGVzY3JpcHRvciwgbGlrZWx5IHZvaWRpbmcgYW55IGdhaW5zIGFuZCBxdWl0ZSBwb3NzaWJseSBtYWtpbmcgdGhpbmdzIGEgbG90IHdvcnNlIG9uIGxhcmdlIHN0cmluZ3MuICA8YnIgLz48YnIgLz5kZOc7VdgfGQ23F4JgiXt6ZFJNaqyV" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">LTrim and RTrim Functions (VB work-a-like)</h1><small>Modified on 2021/02/01 12:29 by CaptainBoing &mdash; Categorized as: Strings</small><br /><br />The following functions return the input string with leading or trailing white-space characters (&H20 & &H09) removed.<br /><br />If you need the functions for MM+, MMX, PiCromite, or ARMMite you should use the versions shown below. If you are using a MicroMite Mk2 (28 or 48 pin MX170), the below are fully compatible, but you are better off using <a class="pagelink" href="MMBasic.LTrim-RTrim-cFunctions.html" title="LTrim RTrim CFunctions">these versions</a>. Being CFunctions, they are hugely faster (at least 10x and often nearer 100x) - not <i>precisely </i>VB compatible as they only recognise a CHR$(32) as white space - unlikely to be a problem.<br /><br />Using CONSTs and a temporary string for the compare slice gives a good speed increase. <br /> =LTrim$(RTrim$("a"))takes only 11.5mS at 48MHz on MX170<br /><br /><b>Syntax</b>:<br />    LTrim$(expression)<br />    RTrim$(expression)<br /><br /><b>Example</b>:<br />    a$=RTrim$(userinput$)<br /><br /><b>Code</b>:<br /> <br /><pre>
+'preamble
+	Const sT$=Chr$(9), sS$=" "
+
+	Function LTrim$(a$)
+		Local Integer m
+		For m=1 To Len(a$)
+			If Not(Mid$(a$,m,1)=" " Or Mid$(a$,m,1)=Chr$(9)) Then LTrim$=Mid$(a$,m)&#58; Exit Function
+		Next    
+		LTrim$=""
+	End Function
+
+	Function RTrim$(a$)
+		Local Integer n
+		For n=Len(a$) TO 1 Step -1
+			If Not(Mid$(a$,n,1)=" " Or Mid$(a$,n,1)=Chr$(9)) Then RTrim$=Left$(a$,n)&#58; Exit Function
+		Next 
+		RTrim$=""
+	End Function
+</pre><br /><br />For those needing reduced timings without resorting to CSubs, in the alternative RTrim$() below, some tricks which speed up things up by about 25% are used; Instead of removing padding from the right by repeated string slicing, it analyzes bytes - stopping when it hits a non-space. It then POKEs that position into the variable descriptor to truncate the string in one go. This method is fairly advanced MMBasic and tweakers should be wary of changing the POKE commands. It is good to try to understand what is happening though. <br /><br /><pre>
+	Function RTrim$(aa$)
+		Local Integer n,x
+		local q$
+		q$=aa$
+		For n=Peek(Var q$,0) TO 0 Step -1
+			x=Peek(Var q$, n)
+			If Not(x=&amp;o40 Or x=&amp;o11) Then Poke Var q$, 0, n&#58; Exit For
+		Next 
+		RTrim$=q$
+	End Function
+</pre><br />As with most optimizations resulting in an increased code footprint, there is a sweet-spot where the larger size can work against the workload. This seems to be a string of six spaces where the new version is only slightly faster than the old (the inverse is true).<br /><br />Note also, the pad characters are described in octal which is the fastest radix for the interpreter.<br /><br />Such a trick is not possible with LTrim$() because we would need to copy the useful part of the string down to start at position one in the string descriptor, likely voiding any gains and quite possibly making things a lot worse on large strings.  <br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:42 GMT -->
+</html>

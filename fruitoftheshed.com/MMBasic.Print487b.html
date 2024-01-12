@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.GRAPH-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:16:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	GRAPH.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.GRAPH-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFmyk8aDEgY2xhc3M9InBhZ2V0aXRsZSI+R1JBUEguQkFTPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzozMCBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEVsZWN0cm9uaWNzLCBFbnZpcm9ubWVudCwgR3JhcGhpY3MsIE1hdGhzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz48YnIgLz48Yj5HUkFQSC5CQVM8L2I+PGJyIC8+PHByZT4NCjEwMCAmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNCjExMCAnIEdSQVBILkJBUw0KMTIwICcgRGVtb25zdHJhdGlvbiBwcm9ncmFtIHNob3dpbmcgdGhlIGFiaWxpdHkgdG8gZ3JhcGggZGF0YQ0KMTMwICcgSXQgd2lsbCBncmFwaCB0aGUgdm9sdGFnZSBvbiBwaW5zIDEgdG8gMTAgdXNpbmcgYm90aCBsaW5lIGFuZA0KMTQwICcgYmFyIGdyYXBocy4gIFRoaXMgd2lsbCBydW4gb24gZWl0aGVyIFZHQSBvciBjb21wb3NpdGUgZGlzcGxheXMuDQoxNTAgJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KMTYwICcNCjE3MCBESU0gYmFydmFsKDEwKQ0KMTgwIENMUw0KMTkwICcgZ2VuZXJhbCBkcmF3aW5nIHBhcmFtZXRlcnMsIHRoZSBzYW1lIGZvciBib3RoIGdyYXBocw0KMjAwIGhlaWdodCA9IG1tLnZyZXMvMiAtIG1tLnZyZXMvMTcgJiM1ODsgbWFyZ2luID0gNDUgJiM1ODsgd2lkdGggPSBtbS5ocmVzIC0gbWFyZ2luDQoyMTAgJw0KMjIwICcgcGFyYW1ldGVycyBmb3IgdGhlIGJhciBncmFwaHMNCjIzMCBieCA9IG1hcmdpbiAmIzU4OyBieSA9IG1tLnZyZXMtMTANCjI0MCBkeCA9IGJ4ICYjNTg7IGR5ID0gYnkgJiM1ODsgR09TVUIgNjQwICAgICAgJyBkcmF3IHRoZSBheGllcyBmb3IgdGhlIGJhciBncmFwaA0KMjUwICcNCjI2MCAnIHBhcmFtZXRlcnMgZm9yIHRoZSBhbmFsb2cgbGluZSBncmFwaA0KMjcwIGF4ID0gbWFyZ2luICYjNTg7IGF5ID0gaGVpZ2h0DQoyODAgZHggPSBheCAmIzU4OyBkeSA9IGF5ICYjNTg7IEdPU1VCIDY0MCAgICAgICcgZHJhdyB0aGUgYXhpZXMgZm9yIHRoZSBsaW5lIGdyYXBoDQoyOTAgJw0KMzAwIGF2ZXJhZ2UgPSAyMCAgICAgICAgICAgICAgICAgICAgICAgJyBhdmVyYWdpbmcgZm9yIHRoZSBsaW5lIGdyYXBoDQozMTAgcHJpbnR4ID0gV2lkdGgvMiAtIDQ1ICYjNTg7IHByaW50eSA9IGF5ICsgOA0KMzIwICcNCjMzMCBGT1IgaSA9IDEgVE8gMTAgJiM1ODsgU0VUUElOIGksIDEgICYjNTg7IE5FWFQgaSAgICcgSW5pdGlhbGlzZSB0aGUgSS9PIHBpbnMNCjM0MCBUSU1FJCA9ICIwJiM1ODswJiM1ODswIiAgICAgICAgICAgICAgICAgICAgICcgWmVybyB0aGUgY2xvY2sNCjM1MCAnDQozNjAgJw0KMzcwIEZPUiBpICA9IGF4ICsgMSBUTyBheCArIHdpZHRoIC0gMQ0KMzgwICYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyBkcmF3IHRoZSBsaW5lIGdyYXBoICYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCjM5MCAgICB2b2x0ID0gMA0KNDAwICAgIEZPUiBqID0gMSBUTyBhdmVyYWdlDQo0MTAgICAgICAgIHZvbHQgPSB2b2x0ICsgUElOKDEpICAgICAgICcgVGFrZSBtdWx0aXBsZSByZWFkaW5ncw0KNDIwICAgIE5FWFQgag0KNDMwICAgIHZvbHQgPSB2b2x0L2F2ZXJhZ2UNCjQ0MCAgICBMSU5FIChpLGF5IC0gSGVpZ2h0KS0oaSArIDEwLCBheSAtIDEpLCAwLCBiZiAnIEJsYW5rIHByZXZpb3VzDQo0NTAgICAgaCA9IGF5IC0gKGhlaWdodCAvIDMuMykgJiM0Mjsgdm9sdCAgICAnIENhbGN1bGF0ZSB0aGUgdmVydGljYWwgY29vcmRpbmF0ZQ0KNDYwICAgIElGIGkgPSBheCArIDEgVEhFTiBoX2xhc3QgPSBoICAnIFNldHVwIGEgc3RhcnQgcG9pbnQNCjQ3MCAgICBMSU5FIChpIC0gMSwgaF9sYXN0KS0oaSwgaCksIDEgJyBHcmFwaCB0aGUgdm9sdGFnZSBsZXZlbA0KNDgwICAgIGhfbGFzdCA9IGggICAgICAgICAgICAgICAgICAgICAnIHJlbWVtYmVyIGZvciB0aGUgbmV4dCB0aW1lIGFyb3VuZA0KNDkwICAgIExPQ0FURSBwcmludHgsIHByaW50eSAgICAgICAgICAnIFBvc2l0aW9uIGZvciBwcmludGluZyB0aGUgdm9sdGFnZQ0KNTAwICAgIFBSSU5UIFRJTUUkOyAiICAgQ0hBTk5FTCAxID0gIjsNCjUxMCAgICBQUklOVCBGT1JNQVQkKHZvbHQsICIlNS4zZlYiKSAgJyBBbmQgcHJpbnQgdGhlIHZvbHRhZ2UNCjUyMCAgICAnDQo1MzAgICAgJw0KNTQwICAgICYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyBkcmF3IHRoZSBiYXIgZ3JhcGhzICYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCjU1MCAgICBGT1IgaiA9IDEgVE8gMTANCjU2MCAgICAgIGJhcnZhbChqKSA9IChiYXJ2YWwoaikgJiM0MjsgOSArIChoZWlnaHQgLyAzLjMpICYjNDI7IFBJTihqKSkgLyAxMA0KNTcwICAgICAgc3QgPSAod2lkdGgvMTApJiM0MjsoaiAtIDEpICsgYnggKyAxMA0KNTgwICAgICAgTElORSAoc3QsIGJ5KS0oc3QgKyAyMCwgYnktYmFydmFsKGopKSwxLGJmDQo1OTAgICAgICBMSU5FIChzdCwgYnktYmFydmFsKGopKS0oc3QgKyAyMCwgYnktaGVpZ2h0KSwwLGJmDQo2MDAgICAgTkVYVCBqDQo2MTAgTkVYVCBpDQo2MjAgR09UTyAzNzAgICAgICAgICAgICAgICAgICAgICAgICAgICcgTG9vcCBmb3JldmVyDQo2MzAgJw0KNjQwICYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycgU3Vicm91dGluZSB0byBkcmF3IHRoZSBncmFwaCBheGllcyAmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQo2NTAgJ0NMUw0KNjYwIExJTkUgKGR4LGR5KS0oZHgsIGR5IC0gaGVpZ2h0KSwgMSAnIERyYXcgdGhlIHZlcnQgbGluZQ0KNjcwIExJTkUgKGR4LGR5KS0oZHggKyBXaWR0aCAsZHkpLCAxICAnIERyYXcgdGhlIGhvcml6IGxpbmUNCjY4MCBGT1IgaSA9IDAgVE8gMzMgICAgICAgICAgICAgICAgICAgJyBUaGlzIGxvb3AgZHJhd3MgdGhlIHRpY2sgbWFya3MNCjY5MCAgICAgaCA9IGR5IC0gKGhlaWdodCAvIDMzKSAmIzQyOyBpDQo3MDAgICAgIHQgPSBkeCAtIDUNCjcxMCAgICAgSUYgaSBNT0QgNSA9IDAgVEhFTiB0ID0gZHgtOCAgJyBMb25nZXIgdGljayBtYXJrIGlmIHVuaXQgb2YgMC41Vg0KNzIwICAgICBJRiBpIE1PRCAxMCA9IDAgVEhFTiAgICAgICAgICAnIFNwZWNpYWwgbWFyayBmb3IgYSB1bml0IG9mIDFWDQo3MzAgICAgICAgICBMT0NBVEUgZHggLSA0MiwgaCAtIDMNCjc0MCAgICAgICAgIFBSSU5UIExFRlQkKEZPUk1BVCQoaS8xMCwiJWYiKSwzKTsiViI7ICcgTGFiZWwgdGhlIHRpY2sgbWFyaw0KNzUwICAgICAgICAgdCA9IGR4IC0gMTUNCjc2MCAgICAgRU5ESUYNCjc3MCAgICAgTElORSAoZHgsIGgpLSh0LCBoKSwgMSAgICAgICAgJyBEcmF3IHRoZSB0aWNrIG1hcmsNCjc4MCBORVhUIGkNCjc5MCBSRVRVUk4NCg0KPC9wcmU+ZGQsJQWN/nIZVpmrjOg6kML4wK6iKA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">GRAPH.BAS</h1><small>Modified on 2016/12/23 23:30 by Administrator &mdash; Categorized as: Electronics, Environment, Graphics, Maths, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><b>GRAPH.BAS</b><br /><pre>
+100 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+110 ' GRAPH.BAS
+120 ' Demonstration program showing the ability to graph data
+130 ' It will graph the voltage on pins 1 to 10 using both line and
+140 ' bar graphs.  This will run on either VGA or composite displays.
+150 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+160 '
+170 DIM barval(10)
+180 CLS
+190 ' general drawing parameters, the same for both graphs
+200 height = mm.vres/2 - mm.vres/17 &#58; margin = 45 &#58; width = mm.hres - margin
+210 '
+220 ' parameters for the bar graphs
+230 bx = margin &#58; by = mm.vres-10
+240 dx = bx &#58; dy = by &#58; GOSUB 640      ' draw the axies for the bar graph
+250 '
+260 ' parameters for the analog line graph
+270 ax = margin &#58; ay = height
+280 dx = ax &#58; dy = ay &#58; GOSUB 640      ' draw the axies for the line graph
+290 '
+300 average = 20                       ' averaging for the line graph
+310 printx = Width/2 - 45 &#58; printy = ay + 8
+320 '
+330 FOR i = 1 TO 10 &#58; SETPIN i, 1  &#58; NEXT i   ' Initialise the I/O pins
+340 TIME$ = "0&#58;0&#58;0"                     ' Zero the clock
+350 '
+360 '
+370 FOR i  = ax + 1 TO ax + width - 1
+380 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39; draw the line graph &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+390    volt = 0
+400    FOR j = 1 TO average
+410        volt = volt + PIN(1)       ' Take multiple readings
+420    NEXT j
+430    volt = volt/average
+440    LINE (i,ay - Height)-(i + 10, ay - 1), 0, bf ' Blank previous
+450    h = ay - (height / 3.3) &#42; volt    ' Calculate the vertical coordinate
+460    IF i = ax + 1 THEN h_last = h  ' Setup a start point
+470    LINE (i - 1, h_last)-(i, h), 1 ' Graph the voltage level
+480    h_last = h                     ' remember for the next time around
+490    LOCATE printx, printy          ' Position for printing the voltage
+500    PRINT TIME$; "   CHANNEL 1 = ";
+510    PRINT FORMAT$(volt, "%5.3fV")  ' And print the voltage
+520    '
+530    '
+540    &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39; draw the bar graphs &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+550    FOR j = 1 TO 10
+560      barval(j) = (barval(j) &#42; 9 + (height / 3.3) &#42; PIN(j)) / 10
+570      st = (width/10)&#42;(j - 1) + bx + 10
+580      LINE (st, by)-(st + 20, by-barval(j)),1,bf
+590      LINE (st, by-barval(j))-(st + 20, by-height),0,bf
+600    NEXT j
+610 NEXT i
+620 GOTO 370                          ' Loop forever
+630 '
+640 &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;' Subroutine to draw the graph axies &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+650 'CLS
+660 LINE (dx,dy)-(dx, dy - height), 1 ' Draw the vert line
+670 LINE (dx,dy)-(dx + Width ,dy), 1  ' Draw the horiz line
+680 FOR i = 0 TO 33                   ' This loop draws the tick marks
+690     h = dy - (height / 33) &#42; i
+700     t = dx - 5
+710     IF i MOD 5 = 0 THEN t = dx-8  ' Longer tick mark if unit of 0.5V
+720     IF i MOD 10 = 0 THEN          ' Special mark for a unit of 1V
+730         LOCATE dx - 42, h - 3
+740         PRINT LEFT$(FORMAT$(i/10,"%f"),3);"V"; ' Label the tick mark
+750         t = dx - 15
+760     ENDIF
+770     LINE (dx, h)-(t, h), 1        ' Draw the tick mark
+780 NEXT i
+790 RETURN
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.GRAPH-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:16:44 GMT -->
+</html>

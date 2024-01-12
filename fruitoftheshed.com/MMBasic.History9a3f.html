@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:18:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values&amp;Revision=00001" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAVSUGFnZSBIaXN0b3J5OiB1Rm9ybWF0JCgpIGFuZCBTdHJFJCgpIHByb3ZpZGUgZmxleGlibGUgZm9ybWF0dGluZyBvZiBudW1lcmljIHZhbHVlc2QCBQ8QZBAVAgExATAVAgExATAUKwMCZ2dkZAIHDxBkEBUDB0N1cnJlbnQBMQEwFQMHQ3VycmVudAExATAUKwMDZ2dnZGQCCw8WAh8ABckjPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+PGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLnVGb3JtYXQtYW5kLVN0ckUtcHJvdmlkZS1mbGV4aWJsZS1mb3JtYXR0aW5nLW9mLW51bWVyaWMtdmFsdWVzJmFtcDtSZXZpc2lvbj0wMDAwMCI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbjwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMudUZvcm1hdC1hbmQtU3RyRS1wcm92aWRlLWZsZXhpYmxlLWZvcm1hdHRpbmctb2YtbnVtZXJpYy12YWx1ZXMiPkJhY2sgdG8gUGFnZSBIaXN0b3J5PC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMudUZvcm1hdC1hbmQtU3RyRS1wcm92aWRlLWZsZXhpYmxlLWZvcm1hdHRpbmctb2YtbnVtZXJpYy12YWx1ZXMuYXNoeCI+Q3VycmVudCBSZXZpc2lvbjwvYT48L2I+PC9wPjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPjxoMyBjbGFzcz0ic2VwYXJhdG9yIj5QYWdlIFJldmlzaW9uOiAyMDE4LzEyLzE0IDEyOjUxPC9oMz48YnIgLz5EUkFGVCBET0NVTUVOVD4JPGJyIC8+U29tZSBsYW5ndWFnZXMgcHJvdmlkZSB0aGUgRk9STUFUJCgpIGZ1bmN0aW9uIC0gaW5kZWVkIHRoaXMgZmVhdHVyZXMgaW4gTU1CYXNpYyBmb3IgdGhlIE1heGlNaXRlIGJ1dCBoYXMgYmVlbiBkcm9wcGVkIGZyb20gdmVyc2lvbnMgaW50ZW5kZWQgZm9yIHRoZSBNaWNyb01pdGUgKFY0LjUgb253YXJkKS4gSXQgY2FuIGJlIGFuIGludGVuc2l2ZSBmdW5jdGlvbiBmb3Igc29tZSBvZnRlbiBxdWl0ZSBmcmluZ2UgZnVuY3Rpb25zLiBBIGZ1bGx5IGZsZWRnZWQgdmVyc2lvbiBpcyBkb2N1bWVudGVkIDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHBzOi8vZG9jcy5taWNyb3NvZnQuY29tL2VuLXVzL29mZmljZS92YmEvbGFuZ3VhZ2UvcmVmZXJlbmNlL3VzZXItaW50ZXJmYWNlLWhlbHAvZm9ybWF0LWZ1bmN0aW9uLXZpc3VhbC1iYXNpYy1mb3ItYXBwbGljYXRpb25zIiB0aXRsZT0iaGVyZSIgdGFyZ2V0PSJfYmxhbmsiPmhlcmU8L2E+LiBJIHRoaW5rIHlvdSdsbCBhZ3JlZSBpdCBpcyBhIGxvdCBvZiB3b3JrIGZvciBvZnRlbiBsaXR0bGUgcGF5YmFjay4uLiBmaW5lIG9uIFBDJ3Mgd2l0aCBtdWx0aS1naWdhYnl0ZSBtZW1vcmllcyBidXQgbm90IHJlYWxseSB3b3J0aCB0aGUgZmxhc2ggaW4gY29uZmluZWQgc3lzdGVtcyB3aGVuIHRoZSBmdW5jdGlvbiBpcyByYXJlbHkgdXNlZC48YnIgLz48YnIgLz5JbiBNTUJhc2ljLCB0aGUgU1RSJCgpIGZ1bmN0aW9uIGRvZXMgcHJvdmlkZSBhIGxvdCBvZiB0aGUgbnVtZXJpY2FsIGZvcm1hdHRpbmcgYnV0IHN0aWxsIG1pc3NlcyBhIGNvdXBsZSBvZiB0eXBlcyBiZXlvbmQgImh1bWFuIHNlbnNpYmxlIi48YnIgLz48YnIgLz5CZWxvdyBhcmUgdHdvIGZ1bmN0aW9ucyB0aGF0IHByb3ZpZGUgdGhlIG1vc3QgY29tbW9uIGZvcm1hdHRpbmcgb3B0aW9ucyBmb3IgZGVjaW1hbCBudW1iZXJzLCBhbGxvd2luZyBudW1lcmljIHZhbHVlcyB0byBiZSByZXR1cm5lZCAoYXMgYSBzdHJpbmcpIGNvcnJlY3RseSBmb3JtYXR0ZWQuIEJvdGggZnVuY3Rpb25zIGFyZSByZXByb2R1Y2VkIGhlcmUgY291cnRlc3kgb2YgVGhlIEJhY2sgU2hlZCB1c2VyOyBUYXNzeUppbSBhbmQgdGhlIG9yaWdpbmFsIHRocmVhZHMgY2FuIGJlIGZvdW5kIDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHA6Ly93d3cudGhlYmFja3NoZWQuY29tL2ZvcnVtL2ZvcnVtX3Bvc3RzLmFzcD9USUQ9Njk3OSIgdGl0bGU9ImhlcmUiIHRhcmdldD0iX2JsYW5rIj5oZXJlPC9hPiBhbmQgPGEgY2xhc3M9ImV4dGVybmFsbGluayIgaHJlZj0iaHR0cHM6Ly93d3cudGhlYmFja3NoZWQuY29tL2ZvcnVtL2ZvcnVtX3Bvc3RzLmFzcD9USUQ9OTMyOSZhbXA7UE49MSZhbXA7VFBOPTYiIHRpdGxlPSJoZXJlIiB0YXJnZXQ9Il9ibGFuayI+aGVyZTwvYT4uPGJyIC8+PGJyIC8+PGI+dUZvcm1hdCQoKTwvYj48YnIgLz5UaGlzIGZ1bmN0aW9uIGZvcm1hdHMgYSB2YWx1ZSB0byB0aGUgbmVhcmVzdCBudW1iZXIgb2YgZGVjaW1hbCBwbGFjZXMgcmVxdWlyZWQuIEl0IHdpbGwgcm91bmQgdGhlIG51bWJlciB1cCBvciBkb3duIHRvIGRvIHRoaXMgaS5lLiBpZiB5b3UgYXNrIGZvciB0aGUgdmFsdWUgNTkwMCByb3VuZGVkIHRvIHRoZSBuZWFyZXN0IHRob3VzYW5kIChuZWdhdGl2ZSBvcHRpb24pIHRoZSByZXR1cm5lZCB2YWx1ZSB3aWxsIGJlIDYwMDAgYW5kIHNvIG9uLjxiciAvPjxiciAvPjxiPkV4YW1wbGVzPC9iPjxiciAvPjxwcmU+DQoJRm9yIHAgPSAtMyBUTyAzDQoJCVByaW50IHVGb3JtYXQkKDYyNTguOTkwODc2LHApDQoJTmV4dCBwDQoNCglQcmludA0KPC9wcmU+PGJyIC8+PGJyIC8+PGI+RGVwZW5kZW5jaWVzPC9iPjxiciAvPk5vbmUuPGJyIC8+PGJyIC8+PHByZT4NCicgVGhlIGZ1bmN0aW9uDQoJRnVuY3Rpb24gdUZvcm1hdCQoeCxwKQ0KCQknIGdpdmVuIGEgbnVtYmVyICh4KSBhbmQgdGhlIHJlcXVpcmVkIG51bWJlciBvZiBkZWNpbWFsIHBsYWNlcyAocCkNCgkJJyByZXR1cm5zIGZvcm1hdHRlZCBzdHJpbmcuIE5lZ2F0aXZlIGFuZCB6ZXJvIHAgaXMgcGVybWl0dGVkDQoJCUxvY2FsIGYkDQoJCWYkPVN0ciQoQ2ludCh4JiM0MjsxMF5wKSkNCgkJSWYgTGVuKGYkKSZsdDs9cCBUaGVuDQoJCQlmJD1TdHJpbmckKHArMS1MZW4oZiQpLCAiMCIpK2YkDQoJCUVuZElmDQoJCUlmIHAmZ3Q7MCBUaGVuDQoJCQl1Rm9ybWF0JD1MZWZ0JChmJCxMZW4oZiQpLXApKyIuIitSaWdodCQoZiQscCkNCgkJRWxzZUlmIHAgPSAwIFRoZW4NCgkJCXVGb3JtYXQkPWYkDQoJCUVsc2UNCgkJCXVGb3JtYXQkPWYkK1N0cmluZyQoQWJzKHApLCIwIikNCgkJRW5kSWYNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiPlN0ckUkKCk8L2I+PGJyIC8+SXMgYW4gZW5oYW5jZWQgZm9ybSBvZiB0aGUgU1RSJCgpIGZ1bmN0aW9uIHRoYXQgcmV0dXJucyBhIG51bWVyaWMgdmFsdWUgdXNpbmcgc2NpZW50aWZpYy9lbmdpbmVlcmluZyBub3RhdGlvbiAtIHRoYXQgaXMgYSB2YWx1ZSBhbmQgZXhwb25lbnQuIEVuZ2luZWVyaW5nIG5vdGF0aW9uIGdyb3VwcyBudW1iZXIgYnkgdGhvdXNhbmRzIGUuZy4gMTAwLDAwMCB3aWxsIGJlIHJldHVybmVkIGFzIDEwMGUrMyB3aGVyZWFzIGluIHNjaWVudGlmaWMgbm90YXRpb24sIHRoZSBzYW1lIHZhbHVlIHdvdWxkIGJlIHJldHVybiBhcyAxZSs1LCBhbHdheXMgcmVkdWNpbmcgdGhlIHZhbHVlIHRvIGJldHdlZW4gMCBhbmQgOS45OTk5PGJyIC8+PGJyIC8+PGI+RXhhbXBsZXM8L2I+PGJyIC8+PHByZT4NCg0KCXE9LjAwMDAwMQ0KCQlQcmludCBTdHJFJChxLDEsMSksLFN0ckUkKHEsNSwwKQ0KCXE9LjAwMDENCgkJUHJpbnQgU3RyRSQocSwyLDEpLCxTdHJFJChxLDUsMCkNCglxPS4wMQ0KCQlQcmludCBTdHJFJChxLDMsMSksLFN0ckUkKHEsNSwwKQ0KCXE9LjQ1NQ0KCQlQcmludCBTdHJFJChxLDQsMSksLFN0ckUkKHEsNSwwKQ0KCXE9MA0KCQlQcmludCBTdHJFJChxLDQsMSksLFN0ckUkKHEsNSwwKQ0KCXE9MQ0KCQlQcmludCBTdHJFJChxLDUsMSksLFN0ckUkKHEsNSwwKQ0KCXE9Nzc0OA0KCQlQcmludCBTdHJFJChxLDYsMSksLFN0ckUkKHEsNSwtMSkNCglxPTEwMDAwMA0KCQlQcmludCBTdHJFJChxLDcsMSksLFN0ckUkKHEsNSwtMSkNCglxPTIyMDAwMDANCgkJUHJpbnQgU3RyRSQocSw4LDEpLCxTdHJFJChxLDUsMCkNCjwvcHJlPjxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczwvYj48YnIgLz5Ob25lLjxiciAvPjxiciAvPjxiciAvPjxwcmU+DQonIHRoZSBmdW5jdGlvbg0KCUZ1bmN0aW9uIHN0ckUkKG14LHAsZW5nKQ0KCQknIG14ID0gbnVtYmVyIHRvIGZvcm1hdA0KCQknIHAgPSBudW1iZXIgb2YgZGVjaW1hbCBwbGFjZXMNCgkJJyBpZiBlbmcgaXMgbm90IHplcm8sIHVzZSBlbmdpbmVlcmluZyBub3RhdGlvbiANCgkJTG9jYWwgc24kDQoJCUxvY2FsIEZsb2F0IHgscHgNCgkJc24kPSIgIg0KCQl4PW14DQoJCUlmIHgmbHQ7MCBUaGVuDQoJCQlzbiQ9Ii0iDQoJCQl4PXgmIzQyOy0xDQoJCUVuZElmDQoJCUlmIHgmbHQ7Jmd0OzAgVGhlbiAgJyB6ZXJvIGlzIGEgc3BlY2lhbCBjYXNlDQoJCQlweD1JbnQoTG9nKHgpL0xvZygxMCkpDQoJCQlJZiBlbmcmbHQ7Jmd0OzAgVGhlbiAnIGVuZ2luZWVyaW5nIG5vdGF0aW9uIC0gbXVsdGlwbGVzIG9mIDMNCgkJCQlweD1JbnQocHgvMykmIzQyOzMNCgkJCUVuZElmDQoJCQl4PXgmIzQyOygxMF4tcHgpDQoJCQlzdHJFJD1zbiQrU3RyJCh4LDAscCkrImUiDQoJCQknIGlmIFNnbihJbnQocHgpKSZsdDsmZ3Q7LTEgVGhlbiBzdHJFJD1zdHJFJCsiKyIgICcgdW4tUkVNIHRoaXMgbGluZSB0byBmb3JjZSB0aGUgZXhwb25lbnQgc2lnbiBlLmcuIDFlKzYgaW5zdGVhZCBvZiAxZTYNCgkJCXN0ckUkPXN0cmUkK1N0ciQoSW50KHB4KSkNCgkJRWxzZQ0KCQkJc3RyRSQ9c24kK1N0ciQoeCwwLFApDQoJCUVuZElmDQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48YnIgLz5kZN8SauQo6kEhP6EyHgrRqhHNjqus" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwLg89nyDQK9z/TSAwKiz/TSAwK3j57gBwLC5ta/BQLd5ta/BQL9yYWiCUS7oDR7Ng6neT5Q15rEB81aTZE7" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login7eec.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values%26Revision%3d00001" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: uFormat$() and StrE$() provide flexible formatting of numeric values</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.Historye968.html?Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values&amp;Revision=00000">&laquo; Older Revision</a> - <a href="MMBasic.History7346.html?Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values">Back to Page History</a> - <a href="MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values.html">Current Revision</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/12/14 12:51</h3><br />DRAFT DOCUMENT>	<br />Some languages provide the FORMAT$() function - indeed this features in MMBasic for the MaxiMite but has been dropped from versions intended for the MicroMite (V4.5 onward). It can be an intensive function for some often quite fringe functions. A fully fledged version is documented <a class="externallink" href="https://docs.microsoft.com/en-us/office/vba/language/reference/user-interface-help/format-function-visual-basic-for-applications" title="here" target="_blank">here</a>. I think you'll agree it is a lot of work for often little payback... fine on PC's with multi-gigabyte memories but not really worth the flash in confined systems when the function is rarely used.<br /><br />In MMBasic, the STR$() function does provide a lot of the numerical formatting but still misses a couple of types beyond "human sensible".<br /><br />Below are two functions that provide the most common formatting options for decimal numbers, allowing numeric values to be returned (as a string) correctly formatted. Both functions are reproduced here courtesy of The Back Shed user; TassyJim and the original threads can be found <a class="externallink" href="http://www.thebackshed.com/forum/forum_posts.asp?TID=6979" title="here" target="_blank">here</a> and <a class="externallink" href="https://www.thebackshed.com/forum/forum_posts.asp?TID=9329&amp;PN=1&amp;TPN=6" title="here" target="_blank">here</a>.<br /><br /><b>uFormat$()</b><br />This function formats a value to the nearest number of decimal places required. It will round the number up or down to do this i.e. if you ask for the value 5900 rounded to the nearest thousand (negative option) the returned value will be 6000 and so on.<br /><br /><b>Examples</b><br /><pre>
+	For p = -3 TO 3
+		Print uFormat$(6258.990876,p)
+	Next p
+
+	Print
+</pre><br /><br /><b>Dependencies</b><br />None.<br /><br /><pre>
+' The function
+	Function uFormat$(x,p)
+		' given a number (x) and the required number of decimal places (p)
+		' returns formatted string. Negative and zero p is permitted
+		Local f$
+		f$=Str$(Cint(x&#42;10^p))
+		If Len(f$)&lt;=p Then
+			f$=String$(p+1-Len(f$), "0")+f$
+		EndIf
+		If p&gt;0 Then
+			uFormat$=Left$(f$,Len(f$)-p)+"."+Right$(f$,p)
+		ElseIf p = 0 Then
+			uFormat$=f$
+		Else
+			uFormat$=f$+String$(Abs(p),"0")
+		EndIf
+	End Function
+</pre><br /><b>StrE$()</b><br />Is an enhanced form of the STR$() function that returns a numeric value using scientific/engineering notation - that is a value and exponent. Engineering notation groups number by thousands e.g. 100,000 will be returned as 100e+3 whereas in scientific notation, the same value would be return as 1e+5, always reducing the value to between 0 and 9.9999<br /><br /><b>Examples</b><br /><pre>
+
+	q=.000001
+		Print StrE$(q,1,1),,StrE$(q,5,0)
+	q=.0001
+		Print StrE$(q,2,1),,StrE$(q,5,0)
+	q=.01
+		Print StrE$(q,3,1),,StrE$(q,5,0)
+	q=.455
+		Print StrE$(q,4,1),,StrE$(q,5,0)
+	q=0
+		Print StrE$(q,4,1),,StrE$(q,5,0)
+	q=1
+		Print StrE$(q,5,1),,StrE$(q,5,0)
+	q=7748
+		Print StrE$(q,6,1),,StrE$(q,5,-1)
+	q=100000
+		Print StrE$(q,7,1),,StrE$(q,5,-1)
+	q=2200000
+		Print StrE$(q,8,1),,StrE$(q,5,0)
+</pre><br /><br /><b>Dependencies</b><br />None.<br /><br /><br /><pre>
+' the function
+	Function strE$(mx,p,eng)
+		' mx = number to format
+		' p = number of decimal places
+		' if eng is not zero, use engineering notation 
+		Local sn$
+		Local Float x,px
+		sn$=" "
+		x=mx
+		If x&lt;0 Then
+			sn$="-"
+			x=x&#42;-1
+		EndIf
+		If x&lt;&gt;0 Then  ' zero is a special case
+			px=Int(Log(x)/Log(10))
+			If eng&lt;&gt;0 Then ' engineering notation - multiples of 3
+				px=Int(px/3)&#42;3
+			EndIf
+			x=x&#42;(10^-px)
+			strE$=sn$+Str$(x,0,p)+"e"
+			' if Sgn(Int(px))&lt;&gt;-1 Then strE$=strE$+"+"  ' un-REM this line to force the exponent sign e.g. 1e+6 instead of 1e6
+			strE$=stre$+Str$(Int(px))
+		Else
+			strE$=sn$+Str$(x,0,P)
+		EndIf
+	End Function
+</pre><br /><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:18:02 GMT -->
+</html>

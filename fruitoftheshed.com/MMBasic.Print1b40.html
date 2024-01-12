@@ -1,0 +1,58 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.ONE-WIRE-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	ONE-WIRE.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.ONE-WIRE-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFrBk8aDEgY2xhc3M9InBhZ2V0aXRsZSI+T05FLVdJUkUuQkFTPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzo0MiBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IENvbnRyb2wsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPjxwcmU+DQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQonIERlbW9uc3RyYXRlIGhvdyB0byB1c2UgdGhlIG9uZS13aXJlIGZ1bmN0aW9ucw0KJyBHZW9mZiBHcmFoYW0gICBKdWx5IDIwMTMNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCg0KJyB1c2UgYSBkZWZpbmVkIGZ1bmN0aW9uIHRvIGdldCB0aGUgdGVtcGVyYXR1cmUNCicgVGhlIHNlbnNvciBpcyBjb25uZWN0ZWQgdG8gdGhlIHBpbiAxOA0KUHJpbnQgIlRoZSB0ZW1wZXJhdHVyZSBpcyYjNTg7IiBHZXRUZW1wKDE4KQ0KDQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCicgRnVuY3Rpb24gdG8gZ2V0IHRoZSB0ZW1wZXJhdHVyZSBmcm9tIGEgRGFsbGFzIERTMThCMjAuDQonIFRoZSBEUzE4QjIwIGlzIGNvbm5lY3RlZCB0byB0aGUgcGluIHNwZWNpZmllZCBieSBQaW5OYnINCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCkZ1bmN0aW9uIEdldFRlbXAgKFBpbk5icikNCiAgTG9jYWwgVDEsIFQyLCBiLCB0DQogIE9XUmVzZXQgUGluTmJyICAgICAgICAgICAgICAgICAgICAgICAgJyByZXNldA0KICBPV1dyaXRlIFBpbk5iciwgMSwgMiwgJmFtcDtoY2MsICZhbXA7aDQ0ICAgICAgJyBzdGFydCBjb252ZXJzaW9uDQogIFBhdXNlIDEwMA0KICB0ID0gVGltZXINCiAgRG8NCiAgICBJZiBUaW1lciAtIHQgJmd0OyAxMDAwIFRoZW4gRXJyb3IgIlNlbnNvciBub3QgcmVzcG9uZGluZyINCiAgICBPV1JlYWQgUGluTmJyLCA0ICwgMSAsIGIgICAgICAgICAgICAnIGNvbnZlcnNpb24gZG9uZT8NCiAgTG9vcCBVbnRpbCBiID0gMQ0KICBPV1dyaXRlIFBpbk5iciwgMSwgMiwgJmFtcDtoY2MsICZhbXA7aGJlICAgICAgJyBjb21tYW5kIHJlYWQgZGF0YQ0KICBPV1JlYWQgUGluTmJyLCAyLCAyLCBUMSwgVDIgICAgICAgICAgICcgZ2V0IHRoZSBkYXRhDQogIEdldFRlbXAgPSAoKFQyIEFuZCAmYW1wO2IxMTEpICYjNDI7IDI1NiArIFQxKSAvIDE2DQogIElmIFQyIEFuZCAmYW1wO2IxMDAwIFRoZW4gR2V0VGVtcCA9IC1HZXRUZW1wICcgYWRqdXN0IGlmIG5lZ2F0aXZlDQpFbmQgRnVuY3Rpb24NCg0KPC9wcmU+ZGQo7YCDAyB0Qd1q+/xcYcVPC4t/YA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">ONE-WIRE.BAS</h1><small>Modified on 2016/12/23 23:42 by Administrator &mdash; Categorized as: Control, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+' Demonstrate how to use the one-wire functions
+' Geoff Graham   July 2013
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+' use a defined function to get the temperature
+' The sensor is connected to the pin 18
+Print "The temperature is&#58;" GetTemp(18)
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+' Function to get the temperature from a Dallas DS18B20.
+' The DS18B20 is connected to the pin specified by PinNbr
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+Function GetTemp (PinNbr)
+  Local T1, T2, b, t
+  OWReset PinNbr                        ' reset
+  OWWrite PinNbr, 1, 2, &amp;hcc, &amp;h44      ' start conversion
+  Pause 100
+  t = Timer
+  Do
+    If Timer - t &gt; 1000 Then Error "Sensor not responding"
+    OWRead PinNbr, 4 , 1 , b            ' conversion done?
+  Loop Until b = 1
+  OWWrite PinNbr, 1, 2, &amp;hcc, &amp;hbe      ' command read data
+  OWRead PinNbr, 2, 2, T1, T2           ' get the data
+  GetTemp = ((T2 And &amp;b111) &#42; 256 + T1) / 16
+  If T2 And &amp;b1000 Then GetTemp = -GetTemp ' adjust if negative
+End Function
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.ONE-WIRE-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:10 GMT -->
+</html>

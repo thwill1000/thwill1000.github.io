@@ -1,0 +1,38 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Simple-Decimal-to-BCD-conversion-function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Simple Decimal to BCD conversion function - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Simple-Decimal-to-BCD-conversion-function" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF/As8aDEgY2xhc3M9InBhZ2V0aXRsZSI+U2ltcGxlIERlY2ltYWwgdG8gQkNEIGNvbnZlcnNpb24gZnVuY3Rpb248L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE5LzExLzIzIDA1OjA4IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBEYXRlcywgVGltZSBhbmQgQ2xvY2tzLCBFbmNvZGUgYW5kIERlY29kZSwgTWF0aHM8L3NtYWxsPjxiciAvPjxiciAvPkNvbnZlcnRzIGEgZGVjaW1hbCBudW1iZXIgdG8gaXRzIEJDRCBlcXVpdmFsZW50LjxiciAvPjxiciAvPmUuZy4gMjcgaXMgcmV0dXJuZWQgYXMgJmgyNyAoMzkgZGVjaW1hbCk8YnIgLz48YnIgLz5UaGlzIGlzIHVzZWZ1bCBmb3Igd3JpdGluZyB0byBkZXZpY2UgcmVnaXN0ZXJzIHRoYXQgcmVxdWlyZSBCQ0QgdG8gIGhvbGQgYSB2YWx1ZSByYXRoZXIgdGhhbiBiaW5hcnkuIEFuIGV4YW1wbGUgaGVyZSBpcyB0aGUgcmVnaXN0ZXJzIGluc2lkZSBwb3B1bGFyIFJlYWwgVGltZSBDbG9jayBjaGlwcyAoRFMzMjMxLCBldGMpLiBDb25zaWRlciB0aGUgZGF5LW9mLW1vbnRoIHJlZ2lzdGVyLiBUaGUgYm90dG9tIG5pYmJsZSBob2xkcyB0aGUgdW5pdHMgYW5kIHRoZSB0b3AgbmliYmxlIGhvbGRzIHRoZSB0ZW5zLiBBIHZhbHVlIG9mIDMxIGRlY2ltYWwgY2Fubm90IGJlIHdyaXR0ZW4gZGlyZWN0bHkgaW50byB0aGUgcmVnaXN0ZXIgYXMgdGhpcyB3b3VsZCByZXN1bHQgaW4gdGhlIHZhbHVlICZoMUYgYmVpbmcgd3JpdHRlbiAtIHdoaWNoIGlzIGlsbGVnYWwuPGJyIC8+PGJyIC8+VGhlIGZvbGxvd2luZyBmdW5jdGlvbiB0YWtlcyBhIGRlY2ltYWwgdmFsdWUgYW5kIHJldHVybnMgdGhlIHNhbWUgcG9zaXRpb25hbCBkaWdpdHMgYXMgYSBoZXggbnVtYmVyLCBzbyBpbiB0aGUgZXhhbXBsZSBhYm92ZSwgMzEgZGVjaW1hbCB3b3VsZCBiZSByZXR1cm5lZCBhcyAzMSBoZXggKDQ5IGRlY2ltYWwpLiB0aGlzIHdvdWxkIHJlc3VsdCBpbiB0aGUgbGVnYWwgdmFsdWVzIG9mIDMgYmVpbmcgd3JpdHRlbiB0byB0aGUgdG9wIG5pYmJsZSBvZiB0aGUgcmVnaXN0ZXIgYW5kIDEgd3JpdHRlbiB0byB0aGUgYm90dG9tIG5pYmJsZS48YnIgLz48YnIgLz48Yj5FeGFtcGxlPC9iPjxiciAvPglPcHRpb24gZGVmYXVsdCBpbnRlZ2VyPGJyIC8+CTxiciAvPglGb3Igbj0xIFRvIDIwPGJyIC8+CQlQcmludCBuLCBCQ0QobiksSGV4JChCQ0QobikpPGJyIC8+CU5leHQ8YnIgLz48YnIgLz48Yj5UaGUgQ29kZTwvYj48YnIgLz48cHJlPg0KCUZ1bmN0aW9uIEJDRCh4IEFzIGludGVnZXIpIEFzIGludGVnZXINCgkJTG9jYWwgYSQNCgkJTG9jYWwgaW50ZWdlciBuLHENCgkJYSQ9U3RyJCh4KQ0KDQoJCUZvciBuPTEgVG8gTGVuKGEkKQ0KCQkJcT0ocSZsdDsmbHQ7NCkgT3IgKFZhbChNaWQkKGEkLG4sMSkpKQ0KCQlOZXh0DQoJCUJDRD1xDQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz5UaGVyZSBhcmUgbm8gY2hlY2tzIHRoYXQgdGhlIG51bWJlciB5b3UgcGFzcyB3aWxsIGZpdCwgdXNlIHlvdXIgc2tpbGwgYW5kIGp1ZGdlbWVudDxiciAvPjxiciAvPmRk3HmNzD1YqJ0Q7lz3QpX4TR58n/c=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Simple Decimal to BCD conversion function</h1><small>Modified on 2019/11/23 05:08 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks, Encode and Decode, Maths</small><br /><br />Converts a decimal number to its BCD equivalent.<br /><br />e.g. 27 is returned as &h27 (39 decimal)<br /><br />This is useful for writing to device registers that require BCD to  hold a value rather than binary. An example here is the registers inside popular Real Time Clock chips (DS3231, etc). Consider the day-of-month register. The bottom nibble holds the units and the top nibble holds the tens. A value of 31 decimal cannot be written directly into the register as this would result in the value &h1F being written - which is illegal.<br /><br />The following function takes a decimal value and returns the same positional digits as a hex number, so in the example above, 31 decimal would be returned as 31 hex (49 decimal). this would result in the legal values of 3 being written to the top nibble of the register and 1 written to the bottom nibble.<br /><br /><b>Example</b><br />	Option default integer<br />	<br />	For n=1 To 20<br />		Print n, BCD(n),Hex$(BCD(n))<br />	Next<br /><br /><b>The Code</b><br /><pre>
+	Function BCD(x As integer) As integer
+		Local a$
+		Local integer n,q
+		a$=Str$(x)
+
+		For n=1 To Len(a$)
+			q=(q&lt;&lt;4) Or (Val(Mid$(a$,n,1)))
+		Next
+		BCD=q
+	End Function
+</pre><br />There are no checks that the number you pass will fit, use your skill and judgement<br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Simple-Decimal-to-BCD-conversion-function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:45 GMT -->
+</html>

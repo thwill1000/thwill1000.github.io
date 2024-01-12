@@ -1,0 +1,67 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.vmndlbrot-bas-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	vmndlbrot.bas - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.vmndlbrot-bas-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF5BM8aDEgY2xhc3M9InBhZ2V0aXRsZSI+dm1uZGxicm90LmJhczwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6NDMgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBHcmFwaGljcywgTWF0aHMsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPjxiciAvPjxwcmU+DQoxMDAgJ01BTkRFTEJST1QuQkFTIC0gRHJhd3MgbWFuZGVsYnJvdCBzZXQgZnJhY3RhbCBpbWFnZXMNCjEwMiAnQnkgbG9raSBvbiB0aGUgQmFjayBTaGVkICBBdWcgMjAxMg0KMTAzICdTZWUgdG9waWMgKE1NKSBNYW5kZWxicm90ICZhbXA7IEp1bGlhIHNldCBmcmFjdGFscw0KMTA1ICdTcGVjaWZ5IGluaXRpYWwgdmFsdWVzDQoxMTAgUmVhbE9mZnNldCA9IC0yLjANCjExNSBJbWFnaW5PZmZzZXQgPSAtMS4yDQoxMzAgTUFYSVQ9NzAgJ21heCBpdGVyYXRpb25zDQoxNjUgUGl4ZWxXaWR0aCA9IE1NLkhSRVMNCjE3MCBQaXhlbEhlaWdodCA9IE1NLlZSRVMNCjE3NSBHQVAgPSBQaXhlbEhlaWdodCAvIFBpeGVsV2lkdGgNCjE4MCBTSVpFID0gMi44DQoxODUgWERlbHRhID0gU0laRSAvIFBpeGVsV2lkdGgNCjE5MCBZRGVsdGEgPSAoU0laRSAmIzQyOyBHQVApIC8gUGl4ZWxIZWlnaHQNCjE5NSBDTFMNCjIwMCAnTG9vcCBwcm9jZXNzaW5nIC0gdmlzaXQgZXZlcnkgcGl4ZWwgaW4gc2NyZWVuIGFyZWEgYW5kIGJhc2UgY29sb3VyIG9mIHBpeGVsDQoyMDEgJyBvbiB0aGUgbnVtYmVyIG9mIGl0ZXJhdGlvbnMgcmVxdWlyZWQgdG8gZXNjYXBlIGJvdW5kYXJ5IGNvbmRpdGlvbnMNCjIwMiAnIElmIGNvdW50IGhpdHMgbWF4IGl0ZXJhdGlvbnMgdGhlbiBwaXhlbCBoYXNuJ3QgZXNjYXBlZCBhbmQgaXMgcGFydCBvZiB0aGUgc2V0ICh0aGUgJ2lubmVyIHNlYScpDQoyMDUgRk9SIFggPSAwIFRPIChQaXhlbFdpZHRoIC0gMSkNCjIxMCAgIEN4ID0gWCAmIzQyOyBYZGVsdGEgKyBSZWFsT2Zmc2V0DQoyMTUgICBGT1IgWSA9IDAgVE8gKFBpeGVsSGVpZ2h0IC0gMSkNCjIyMCAgICAgQ3kgPSBZICYjNDI7IFlEZWx0YSArIEltYWdpbk9mZnNldA0KMjI1ICAgICBaciA9IDAuMA0KMjMwICAgICBaaSA9IDAuMA0KMjM1ICAgICBDT1VOVCA9IDANCjI0MCAgICAgJ0JlZ2luIEl0ZXJhdGlvbiBsb29wLCBjaGVja2luZyBib3VuZGFyeSBjb25kaXRpb25zIG9uIGVhY2ggbG9vcCAgICAgIA0KMjUwICAgICBETyBXSElMRSAoKCBDT1VOVCAmbHQ7PSBNQVhJVCApIEFORCAoKCBaciAmIzQyOyBaciArIFppICYjNDI7IFppICkgJmx0Oz0gNCApKQ0KMjU1ICAgICAgIG5ld19aciA9IFpyICYjNDI7IFpyIC0gWmkgJiM0MjsgWmkgKyBDeA0KMjYwICAgICAgIG5ld19aaSA9IDIgJiM0MjsgWnIgJiM0MjsgWmkgKyBDeQ0KMjY1ICAgICAgIFpyID0gbmV3X1pyDQoyNzAgICAgICAgWmkgPSBuZXdfWmkNCjI3NSAgICAgICBDT1VOVCA9IENPVU5UICsgMQ0KMjgwICAgICBMT09QDQo0MTUgICAgIFBJWEVMKFgsWSkgPSAoKENPVU5UIE1PRCAyKSAtIDEpICYjNDI7IC0xDQo1MDAgICBORVhUIFkNCjUxMCBORVhUIFgNCjUyMCBETw0KNTMwICAgYSQgPSBJTktFWSQNCjU0MCBMT09QIFdISUxFIGEkID0gIiINCjYwMCAnRW5kIGxpc3RpbmcgDQo8L3ByZT5kZLU9Fz6eORVib06hw4k5nNcix+wq" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">vmndlbrot.bas</h1><small>Modified on 2016/12/23 23:43 by Administrator &mdash; Categorized as: Graphics, Maths, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><pre>
+100 'MANDELBROT.BAS - Draws mandelbrot set fractal images
+102 'By loki on the Back Shed  Aug 2012
+103 'See topic (MM) Mandelbrot &amp; Julia set fractals
+105 'Specify initial values
+110 RealOffset = -2.0
+115 ImaginOffset = -1.2
+130 MAXIT=70 'max iterations
+165 PixelWidth = MM.HRES
+170 PixelHeight = MM.VRES
+175 GAP = PixelHeight / PixelWidth
+180 SIZE = 2.8
+185 XDelta = SIZE / PixelWidth
+190 YDelta = (SIZE &#42; GAP) / PixelHeight
+195 CLS
+200 'Loop processing - visit every pixel in screen area and base colour of pixel
+201 ' on the number of iterations required to escape boundary conditions
+202 ' If count hits max iterations then pixel hasn't escaped and is part of the set (the 'inner sea')
+205 FOR X = 0 TO (PixelWidth - 1)
+210   Cx = X &#42; Xdelta + RealOffset
+215   FOR Y = 0 TO (PixelHeight - 1)
+220     Cy = Y &#42; YDelta + ImaginOffset
+225     Zr = 0.0
+230     Zi = 0.0
+235     COUNT = 0
+240     'Begin Iteration loop, checking boundary conditions on each loop      
+250     DO WHILE (( COUNT &lt;= MAXIT ) AND (( Zr &#42; Zr + Zi &#42; Zi ) &lt;= 4 ))
+255       new_Zr = Zr &#42; Zr - Zi &#42; Zi + Cx
+260       new_Zi = 2 &#42; Zr &#42; Zi + Cy
+265       Zr = new_Zr
+270       Zi = new_Zi
+275       COUNT = COUNT + 1
+280     LOOP
+415     PIXEL(X,Y) = ((COUNT MOD 2) - 1) &#42; -1
+500   NEXT Y
+510 NEXT X
+520 DO
+530   a$ = INKEY$
+540 LOOP WHILE a$ = ""
+600 'End listing 
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.vmndlbrot-bas-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:41 GMT -->
+</html>

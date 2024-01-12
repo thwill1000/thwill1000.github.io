@@ -1,0 +1,52 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Temperature-measurement-reading-the-internal-sensor-on-PIC32MX170 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Temperature measurement reading the internal sensor on PIC32MX170 - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Temperature-measurement-reading-the-internal-sensor-on-PIC32MX170" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF1Rc8aDEgY2xhc3M9InBhZ2V0aXRsZSI+VGVtcGVyYXR1cmUgbWVhc3VyZW1lbnQgcmVhZGluZyB0aGUgaW50ZXJuYWwgc2Vuc29yIG9uIFBJQzMyTVgxNzA8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE3LzExLzIxIDE1OjU3IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBDb250cm9sLCBFbGVjdHJvbmljcywgRW52aXJvbm1lbnQsIEhhcmR3YXJlPC9zbWFsbD48YnIgLz48YnIgLz5Ob3ZlbCBDRnVuY3Rpb24gdG8gZ2V0IHRoZSByZWFkaW5nIGZyb20gdGhlIG9uLWRpZSB0ZW1wZXJhdHVyZSBzZW5zb3IuIFRoaXMgRnVuY3Rpb24gaXMgb25seSBzdWl0YWJsZSBmb3IgdGhlIDI4IGFuZCA0NCBwaW4gTVgxNzAgQ1BVcy48YnIgLz48YnIgLz5vcmlnaW5hbGx5IHB1Ymxpc2hlZCBoZXJlOiA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTc4MjIiIHRpdGxlPSJodHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTc4MjIiIHRhcmdldD0iX2JsYW5rIj5odHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTc4MjI8L2E+PGJyIC8+PGJyIC8+PGI+Q3JlZGl0PC9iPjptYXRoZXJwPGJyIC8+PGJyIC8+PHByZT4NCmRvICANCnByaW50IHJlYWRpbnRlcm5hbHRlbXAoKSAgDQpwYXVzZSAxMDAwICANCmxvb3AgIA0KDQoNCg0KQ0Z1bmN0aW9uIHJlYWRpbnRlcm5hbHRlbXAgDQogICAgIDAwMDAwMDAwIA0KICAgICAyN2JkZmZjOCBhZmJmMDAzNCBhZmJlMDAzMCBhZmI3MDAyYyBhZmI2MDAyOCBhZmI1MDAyNCBhZmI0MDAyMCBhZmIzMDAxYyAgDQogICAgIGFmYjIwMDE4IGFmYjEwMDE0IGFmYjAwMDEwIDNjMDMwMjAwIDM0NjM4MDAxIDNjMDJiZjgxIGFjNDNhMjAwIDNjMDMxMDAwICANCiAgICAgM2MwMmJmODggYWM0MzEwNjQgM2MwMmJmODggYWM0MDEwNjggMzQwMzgwMDAgM2MwMmJmODEgYWM0MzkwMDQgMjQxMDAwMDEgIA0KICAgICAwMDAwODgyMSAzYzEyYmY4MSAzYzEzMDAwZCAzYzE0YmY4OCAzYzE1YmY4OCAzYzE2YmY4MSAzYzE3ZmZmZiAxMDAwMDAwMiAgDQogICAgIDNjMWViZjgxIDI2MTAwMDAxIGFlNTM5MDQwIGFlODA2MTE4IGFlYTA2MTA4IGFlZDc5MDUwIDM0MDI4ZjAwIGFmYzI5MDIwICANCiAgICAgMjQwMjAwMDMgM2MwM2JmODEgYWM2MjkwMTAgMjQwMjAwZTQgM2MwM2JmODEgYWM2MjkwMDAgMzQwMjgwMDAgM2MwM2JmODEgIA0KICAgICBhYzYyOTAwOCAzYzA0YmY4OCAzYzAzMTAwMCA4YzgyMTAzMCAwMDQzMTAyNCAxMDQwZmZmZCAzYzAyYmY4MSA4YzQyOTA3MCAgDQogICAgIDAyMjI4ODIxIDI0MDIwMDAxIDEyMDIwMDI4IDNjMDMxMDAwIDNjMDJiZjg4IGFjNDMxMDM0IDNjMDI5ZDAwIDhjNDIwMDA0ICANCiAgICAgMDA0MGY4MDkgMjQwNDAzZTggMmEwMjAwMDkgMTQ0MGZmZGUgMjYxMDAwMDEgM2MwMzEwMDAgM2MwMmJmODggYWM0MzEwNjQgIA0KICAgICAzYzAyYmY4OCBhYzQwMTA2OCAzNDAzODAwMCAzYzAyYmY4MSBhYzQzOTAwNCAzYzAyYmY4MSBhYzQwYTIwMCAyNDAyMDU4OCAgDQogICAgIDAwNTE4ODIzIDI2MjIwMDA3IDJhMjMwMDAwIDAyMjMxMDBhIDAwMDIxMGMzIDI0NDIwMDFjIDAwMDIxZmMzIDhmYmYwMDM0ICANCiAgICAgOGZiZTAwMzAgOGZiNzAwMmMgOGZiNjAwMjggOGZiNTAwMjQgOGZiNDAwMjAgOGZiMzAwMWMgOGZiMjAwMTggOGZiMTAwMTQgIA0KICAgICA4ZmIwMDAxMCAwM2UwMDAwOCAyN2JkMDAzOCAzYzAyYmY4OCBhYzQzMTAzNCAzYzAyOWQwMCA4YzQyMDAwNCAwMDQwZjgwOSAgDQogICAgIDI0MDQwM2U4IDEwMDBmZmI3IDAwMDA4ODIxICANCkVuZCBDRnVuY3Rpb24gICAnTUlQUzMyIE00Sw0KPC9wcmU+PGJyIC8+SSByZWNvbW1lbmQgeW91IGRvbid0IHVzZSB0aGlzIGFzIGFuIGFic29sdXRlIG1lYXN1cmVtZW50IC0gdGhlIGp1bmN0aW9uIHNlZW1zIHRvIHdhbmRlciBhYm91dCBhIGJpdCBhbmQgYmVuZWZpdCBmcm9tIGJlaW5nIGF2ZXJhZ2VkIG92ZXIgMjAgb3Igc28gcmVhZGluZ3MuPGJyIC8+PGJyIC8+RXZlbiBzbywgdGVzdHMgc2hvdyBhIGxhcmdlIHZhcmlhdGlvbiBpbiB0aGUgbWVhc3VyZWQgdGVtcGVyYXR1cmUgd2hpY2ggZ2VuZXJhbGx5IGNvcnJlbGF0ZXMgdG8gdGhlIGFtb3VudCBvZiBwcm9jZXNzaW5nIGJlaW5nIGRvbmUuIEJlY2F1c2UgdGhlIHNlbnNvciBpcyBmYWJyaWNhdGVkIGRpcmVjdGx5IG9udG8gdGhlIGNoaXAsIGl0IGlzIGFmZmVjdGVkIGJ5IHRoZSB0ZW1wZXJhdHVyZSBvZiB0aGUgZGllIC0gd2hpY2ggaW4gdHVybiBpcyBoZWF0ZWQgYnkgdGhlIHdvcmtsb2FkIC0gdG8gYmUgZXhwZWN0ZWQgcmVhbGx5LiBSZWR1Y2UgdGhlIHdvcmtsb2FkL3NwZWVkIGFuZCB5b3UgcmVkdWNlIHRoZSAiYXJ0aWZpY2lhbCIgaGVhdGluZyBvZiB0aGUgc2Vuc29yLiBPbmUgc3BlY2lmaWMgdGVzdCBzaG93cyB0aGF0IGluIGFuIGFtYmllbnQgdGVtcGVyYXR1cmUgb2YgMjFDIHdpdGggcmVhZGluZ3MgYXZlcmFnZWQgb3ZlciA1MCBzYW1wbGVzLCBhdCA1TUh6IHRoZSB0ZW1wZXJhdHVyZSB3YXMgfjI1QyBidXQgYXQgNDhNSHogaXQgd2FzIH4zMC41QyAtIGEgZml2ZSBkZWdyZWUgdmFyaWFuY2Ugd2hlcmUgdGhlIG9ubHkgY2hhbmdlIHdhcyB0aGUgc3BlZWQgb2YgdGhlIENQVS48YnIgLz48YnIgLz5JbiBjb25jbHVzaW9uLCB0aGlzIGlzIGEgdXNlZnVsIGZ1bmN0aW9uIHNvIGxvbmcgYXMgdGhlIGFmZmVjdGluZyBhc3BlY3RzIGFyZSByZW1lbWJlcmVkLiBJZiB5b3Ugd2FudCBhICJwcm9wZXIiIHRlbXBlcmF0dXJlIG1lYXN1cmVtZW50LCB1c2UgYSBwcm9wZXIgdGVtcGVyYXR1cmUgc2Vuc29yLiBJZiB5b3UgdXNlIHRoaXMgYXMgYW4gZW5jbG9zdXJlIHRlbXBlcmF0dXJlIDxpPmluZGljYXRvcjwvaT4sIGkuZSBmb3IgYW4gYWxhcm0gYXQgNjBDIHNheSwgdGhlbiBpdCB3aWxsIHByb2JhYmx5IGJlIGEgZ29vZCBhZGRpdGlvbjxiciAvPjxiciAvPjxiciAvPmRkp7RUkGvhjWKen7XPFWLo+tpM3Eo=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Temperature measurement reading the internal sensor on PIC32MX170</h1><small>Modified on 2017/11/21 15:57 by CaptainBoing &mdash; Categorized as: Control, Electronics, Environment, Hardware</small><br /><br />Novel CFunction to get the reading from the on-die temperature sensor. This Function is only suitable for the 28 and 44 pin MX170 CPUs.<br /><br />originally published here: <a class="externallink" href="http://www.thebackshed.com/forum/forum_posts.asp?TID=7822" title="http://www.thebackshed.com/forum/forum_posts.asp?TID=7822" target="_blank">http://www.thebackshed.com/forum/forum_posts.asp?TID=7822</a><br /><br /><b>Credit</b>:matherp<br /><br /><pre>
+do  
+print readinternaltemp()  
+pause 1000  
+loop  
+
+
+
+CFunction readinternaltemp 
+     00000000 
+     27bdffc8 afbf0034 afbe0030 afb7002c afb60028 afb50024 afb40020 afb3001c  
+     afb20018 afb10014 afb00010 3c030200 34638001 3c02bf81 ac43a200 3c031000  
+     3c02bf88 ac431064 3c02bf88 ac401068 34038000 3c02bf81 ac439004 24100001  
+     00008821 3c12bf81 3c13000d 3c14bf88 3c15bf88 3c16bf81 3c17ffff 10000002  
+     3c1ebf81 26100001 ae539040 ae806118 aea06108 aed79050 34028f00 afc29020  
+     24020003 3c03bf81 ac629010 240200e4 3c03bf81 ac629000 34028000 3c03bf81  
+     ac629008 3c04bf88 3c031000 8c821030 00431024 1040fffd 3c02bf81 8c429070  
+     02228821 24020001 12020028 3c031000 3c02bf88 ac431034 3c029d00 8c420004  
+     0040f809 240403e8 2a020009 1440ffde 26100001 3c031000 3c02bf88 ac431064  
+     3c02bf88 ac401068 34038000 3c02bf81 ac439004 3c02bf81 ac40a200 24020588  
+     00518823 26220007 2a230000 0223100a 000210c3 2442001c 00021fc3 8fbf0034  
+     8fbe0030 8fb7002c 8fb60028 8fb50024 8fb40020 8fb3001c 8fb20018 8fb10014  
+     8fb00010 03e00008 27bd0038 3c02bf88 ac431034 3c029d00 8c420004 0040f809  
+     240403e8 1000ffb7 00008821  
+End CFunction   'MIPS32 M4K
+</pre><br />I recommend you don't use this as an absolute measurement - the junction seems to wander about a bit and benefit from being averaged over 20 or so readings.<br /><br />Even so, tests show a large variation in the measured temperature which generally correlates to the amount of processing being done. Because the sensor is fabricated directly onto the chip, it is affected by the temperature of the die - which in turn is heated by the workload - to be expected really. Reduce the workload/speed and you reduce the "artificial" heating of the sensor. One specific test shows that in an ambient temperature of 21C with readings averaged over 50 samples, at 5MHz the temperature was ~25C but at 48MHz it was ~30.5C - a five degree variance where the only change was the speed of the CPU.<br /><br />In conclusion, this is a useful function so long as the affecting aspects are remembered. If you want a "proper" temperature measurement, use a proper temperature sensor. If you use this as an enclosure temperature <i>indicator</i>, i.e for an alarm at 60C say, then it will probably be a good addition<br /><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Temperature-measurement-reading-the-internal-sensor-on-PIC32MX170 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:53 GMT -->
+</html>

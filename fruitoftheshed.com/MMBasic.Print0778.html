@@ -1,0 +1,76 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Automatic-LogFile-Naming-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:12:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Automatic LogFile Naming - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Automatic-LogFile-Naming-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFzx88aDEgY2xhc3M9InBhZ2V0aXRsZSI+QXV0b21hdGljIExvZ0ZpbGUgTmFtaW5nPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzoxNyBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEVudmlyb25tZW50LCBGaWxlIE1hbmFnZW1lbnQsIEZpbGVzeXN0ZW0sIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPjxiciAvPjxiPkFVVE9MT0cuYmFzIDwvYj48YnIgLz48cHJlPg0KJyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7PQ0KJ0FVVE9MT0cgLSBBdXRvbWF0aWMgbG9nZmlsZSBuYW1pbmcgZm9yIGxvZ2dpbmcgcHVycG9zZXMuDQonQnkgR3JvZ3N0ZXIgYXQgVGhlIEJhY2sgU2hlZCBmb3J1bXMsIE1hcmNoIDIwMTQNCg0KJ1ZlcnNpb24gMUEgLSBJbml0aWFsIHN1Ym1pc3Npb24gdG8gbGlicmFyeS4NCicmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOz0NCg0KJ1RoaXMgY29kZSB3aWxsIGF1dG8tZ2VuZXJhdGUgYSBmaWxlbmFtZSBmb3IgZGFpbHkgbG9nZ2luZyBwdXJwb3Nlcy4NCg0KJ0luIHRoZSBldmVudCB0aGF0IHlvdSBuZWVkIHRvIGxvZyBzb21ldGhpbmcsIGFuZCBpbiB0aGUgbGlrZWx5IGV2ZW50IHRoYXQgdGhlDQonbG9nZ2VyIHdpbGwgbmVlZCB0byBydW4gZm9yIGEgZmV3IGRheXMsIHRoZW4gdGhpcyByb3V0aW5lIHdpbGwgY29tZSBpbiBoYW5keS4NCidBdCB0aGUgc3RhcnQgb2YgeW91ciBjb2RlLCB5b3UgZGVmaW5lIGFuIGFycmF5IHRvIGhvbGQgYWxsIHRoZSBtb250aCByZWZlcmVuY2VzLCBhbmQNCid3aGVuZXZlciB5b3UgbmVlZCB0byBsb2cgc29tZSBkYXRhLCB5b3UgY2FsbCB0aGUgTG9nRHRhIHJvdXRpbmUuICBUaGlzIHJvdXRpbmUgd2lsbA0KJ2J1aWxkIGEgZmlsZW5hbWUgZnJvbSB0aGUgY3VycmVudCBkYXRlLCBhbmQgd3JpdGUgeW91ciBkYXRhIHRvIHRoZSBsb2cgZmlsZSB3aXRoDQonYSBkYXRlLWFuZC10aW1lIHJlZmVyZW5jZS4NCg0KJ1RoZSByb3V0aW5lIHdpbGwgcmVidWlsZCB0aGUgZmlsZW5hbWUgcmVmZXJlbmNlIGFueSB0aW1lIHlvdSBjYWxsIGl0LCBzbyBhcyB0aGUgZGF5LCBtb250aA0KJ2FuZCB5ZWFyIGNoYW5nZSwgc28gd2lsbCB0aGUgbG9nZmlsZSBuYW1lLCBhbGwgYXV0b21hdGljYWxseSwgd2l0aCBubyBpbnB1dCBmcm9tIHlvdSANCidyZXF1aXJlZCBvdGhlciB0aGVuIHRvIG1ha2Ugc3VyZSB0aGUgaW5pdGlhbCBzeXN0ZW0gZGF0ZSBhbmQgdGltZSBhcmUgY29ycmVjdC4NCidBY3R1YWwgb3V0cHV0IHdpbGwgYmUgaW4gdGhlIGRpcmVjdG9yeSBCJiM1ODtcTE9HXCBpbiB0aGlzIGV4YW1wbGUsIGJ1dCB5b3UgY2FuIGNoYW5nZQ0KJ3RoYXQgdG8gd2hhdGV2ZXIgeW91IG5lZWQsIGJ5IGFsdGVyaW5nIHRoaXMgaW4gdGhlIHJvdXRpbmUuDQoNCidUaGUgcm91dGluZSBjb3VsZCBiZSBhIEdPU1VCLCBhIGRlZmluZWQgc3Vicm91dGluZSBwYXNzaW5nIHRoZSBkYXRhIHlvdSB3YW50IHRvIGxvZw0KJ2FzIGFuIGFyZ3VtZW50LCBvciBldmVuIGFuIGludGVycnVwdCBpZiB0aGUgZGF0YSB0byBsb2cgd2FzIHNob3J0Lg0KDQonQW4gZXhhbXBsZSBvZiBMRklMRSQgYXMgYnVpbHQgYnkgdGhlIHJvdXRpbmUsIHdvdWxkIGJlIEImIzU4O1xMT0dcMDRNQVIxNC5MT0cNCg0KJ0RhdGUtYW5kLXRpbWUgc3RhbXBpbmcgaXMgYWxtb3N0IGVzc2VudGlhbCBmb3IgbW9zdCBsb2dnaW5nIGFwcGxpY2F0aW9ucywgc28geW91IA0KJ2NhbiBrbm93IGV4YWN0bHkgd2hlbiBzb21ldGhpbmcgaGFwcGVuZWQsIGFuZCB0aGlzIHJvdXRpbmUgc3RhbXBzIGFueSBkYXRhIHdpdGggdGhhdA0KJ2luZm9yYW10aW9uIGFzIHBhcnQgb2YgdGhlIHByb2Nlc3MgYmVmb3JlIHNhdmluZyBpdCBhbGwgdG8gdGhlIGxvZyBmaWxlLg0KDQonJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQoNCg0KRElNIE1USCQoMTIpIGxlbmd0aCAzICdTZXR1cCBhcnJheSBmb3IgaGFuZGxpbmcgdGhlIG1vbnRocyBvZiB0aGUgeWVhcg0KTVRIJCgxKT0iSkFOIiYjNTg7TVRIJCgyKT0iRkVCIiYjNTg7TVRIJCgzKT0iTUFSIiYjNTg7TVRIJCg0KT0iQVBSIiYjNTg7TVRIJCg1KT0iTUFZIiYjNTg7TVRIJCg2KT0iSlVOIg0KTVRIJCg3KT0iSlVMIiYjNTg7TVRIJCg4KT0iQVVHIiYjNTg7TVRIJCg5KT0iU0VQIiYjNTg7TVRIJCgxMCk9Ik9DVCImIzU4O01USCQoMTEpPSJOT1YiJiM1ODtNVEgkKDEyKT0iREVDIg0KDQonDQonJiM0NTsmIzQ1Oy1ZT1VSIE1BSU4gUFJPR1JBTSBDT0RFIEhFUkUNCicNCg0KTG9nRHRhJiM1ODsNCiAgTEZJTEUkPSJCJiM1ODtcTE9HXCIgKyBNSUQkKERBVEUkLDEsMikgKyBNVEgkKFZBTChNSUQkKERBVEUkLDQsMikpKSArIE1JRCQoREFURSQsOSwyKSArICIuTE9HIg0KICBMRFQkPURBVEUkICsgIiwiICsgVElNRSQgKyAiJmd0OyIgKyAiICIgKyAmIzEyMztEQVRBIFlPVSBXQU5UIExPR0dFRCBIRVJFJiMxMjU7ICsgQ0hSJCgxMykNCiAgT1BFTiBMRklMRSQgRk9SIEFQUEVORCBBUyAmIzM1OzMmIzU4O0ZsYWdTRD0xDQogIFBSSU5UICYjMzU7MyxMRFQkJiM1ODtDTE9TRSAmIzM1OzMmIzU4O0ZsYWdTRD0wIA0KDQo8L3ByZT5kZDzC+vgJw2hgTKjfru55eina6/ji" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Automatic LogFile Naming</h1><small>Modified on 2016/12/23 23:17 by Administrator &mdash; Categorized as: Environment, File Management, Filesystem, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><b>AUTOLOG.bas </b><br /><pre>
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;=
+'AUTOLOG - Automatic logfile naming for logging purposes.
+'By Grogster at The Back Shed forums, March 2014
+
+'Version 1A - Initial submission to library.
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;=
+
+'This code will auto-generate a filename for daily logging purposes.
+
+'In the event that you need to log something, and in the likely event that the
+'logger will need to run for a few days, then this routine will come in handy.
+'At the start of your code, you define an array to hold all the month references, and
+'whenever you need to log some data, you call the LogDta routine.  This routine will
+'build a filename from the current date, and write your data to the log file with
+'a date-and-time reference.
+
+'The routine will rebuild the filename reference any time you call it, so as the day, month
+'and year change, so will the logfile name, all automatically, with no input from you 
+'required other then to make sure the initial system date and time are correct.
+'Actual output will be in the directory B&#58;\LOG\ in this example, but you can change
+'that to whatever you need, by altering this in the routine.
+
+'The routine could be a GOSUB, a defined subroutine passing the data you want to log
+'as an argument, or even an interrupt if the data to log was short.
+
+'An example of LFILE$ as built by the routine, would be B&#58;\LOG\04MAR14.LOG
+
+'Date-and-time stamping is almost essential for most logging applications, so you 
+'can know exactly when something happened, and this routine stamps any data with that
+'inforamtion as part of the process before saving it all to the log file.
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+
+DIM MTH$(12) length 3 'Setup array for handling the months of the year
+MTH$(1)="JAN"&#58;MTH$(2)="FEB"&#58;MTH$(3)="MAR"&#58;MTH$(4)="APR"&#58;MTH$(5)="MAY"&#58;MTH$(6)="JUN"
+MTH$(7)="JUL"&#58;MTH$(8)="AUG"&#58;MTH$(9)="SEP"&#58;MTH$(10)="OCT"&#58;MTH$(11)="NOV"&#58;MTH$(12)="DEC"
+
+'
+'&#45;&#45;-YOUR MAIN PROGRAM CODE HERE
+'
+
+LogDta&#58;
+  LFILE$="B&#58;\LOG\" + MID$(DATE$,1,2) + MTH$(VAL(MID$(DATE$,4,2))) + MID$(DATE$,9,2) + ".LOG"
+  LDT$=DATE$ + "," + TIME$ + "&gt;" + " " + &#123;DATA YOU WANT LOGGED HERE&#125; + CHR$(13)
+  OPEN LFILE$ FOR APPEND AS &#35;3&#58;FlagSD=1
+  PRINT &#35;3,LDT$&#58;CLOSE &#35;3&#58;FlagSD=0 
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Automatic-LogFile-Naming-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:12:56 GMT -->
+</html>

@@ -1,0 +1,402 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology.ashx?NS=Platform%20Agnostic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:36:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	A Brief Introduction to State Machine Methodology... - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=A-Brief-Introduction-to-State-Machine-Methodology&amp;NS=Platform+Agnostic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="Platform%20Agnostic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option selected="selected" value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="Platform%20Agnostic.Loginaed2.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dA-Brief-Introduction-to-State-Machine-Methodology%26NS%3dPlatform%20Agnostic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (Platform Agnostic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="Platform%20Agnostic.MainPage.html" title="Home Page">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology41aa.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="Platform%20Agnostic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina68e.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Login8296.html" title="Administration">Administration</a></li><li><a class="systemlink" href="Platform%20Agnostic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Platform%20Agnostic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Platform%20Agnostic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBd2edb6f471824a359e5976e51c93c446() { document.location = 'Platform Agnostic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBd2edb6f471824a359e5976e51c93c446').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBd2edb6f471824a359e5976e51c93c446" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBd2edb6f471824a359e5976e51c93c446(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBd2edb6f471824a359e5976e51c93c446(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="Platform%20Agnostic.History9ae6.html?Page=Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			A Brief Introduction to State Machine Methodology...
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="Platform%20Agnostic.Print9ae6.html?Page=Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2019/05/13 15:31
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="Platform%20Agnostic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="Platform%20Agnostic.AllPagesc9d2.html?Cat=Platform%20Agnostic.methodology" title="methodology">methodology</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f9537481a-69b7-4a91-9583-b3019f5244fe" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f9537481a-69b7-4a91-9583-b3019f5244fe');"></div><div id="f6b82d15f-f139-44d2-b80b-0b855209ed1d" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f6b82d15f-f139-44d2-b80b-0b855209ed1d');"><a href="MMBasic.True-Random-Generator-companion-code-for-circuit.html" title="True Random Generator (companion code for circuit)">True Random Generator (companion code for circuit)</a></div><div id="f45c8eb55-b9c7-43ee-8179-82ae616251d6" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f45c8eb55-b9c7-43ee-8179-82ae616251d6');"></div><div id="f5d2566e3-79c4-4b89-9d52-b0fd3852d9b7" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f5d2566e3-79c4-4b89-9d52-b0fd3852d9b7');"></div><div id="ffa842c4b-cf2a-4535-b4c1-cf526a007756" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ffa842c4b-cf2a-4535-b4c1-cf526a007756');"><a href="Creating-and-Editing-Pages-on-Fruit-of-the-Shed.html" title="Creating and Editing Pages on Fruit of the Shed">Creating and Editing Pages on Fruit of the Shed</a></div><div id="s60a7497a-7999-434a-b62f-073a40452c7f" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s60a7497a-7999-434a-b62f-073a40452c7f');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="Circuit%20Ideas.Really-Simple-Zero-Crossing-Detect.html" title="Really Simple Zero Crossing Detect (Circuit Ideas)">Really Simple Zero Crossing Detect (Circuit Ideas)</a> &raquo; <a href="Platform%20Agnostic.MainPage.html" title="Main Page (Platform Agnostic)">Main Page (Platform Agnostic)</a> &raquo; <b><a href="Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology.html" title="A Brief Introduction to State Machine Methodology... (Platform Agnostic)">A Brief Introduction to State Machine Methodology... (Platform Agnostic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MainPage.html" title="Home Page" onmouseover="javascript:return __ShowDropDown(event, 'ffa842c4b-cf2a-4535-b4c1-cf526a007756', this);" id="lnkffa842c4b-cf2a-4535-b4c1-cf526a007756" onmouseout="javascript:return __HideDropDown('ffa842c4b-cf2a-4535-b4c1-cf526a007756');">Home Page</a> &raquo; <a href="Creating-and-Editing-Pages-on-Fruit-of-the-Shed.html" title="Creating and Editing Pages on Fruit of the Shed">Creating and Editing Pages on Fruit of the Shed</a> &raquo; <a href="MMBasic.EggDrop-part-of-the-original-MMBasic-library.html" title="EggDrop (MMBasic)">EggDrop (MMBasic)</a> &raquo; <a href="MMBasic.A-Simple-GUI-pack.html" title="A Simple GUI pack (MMBasic)">A Simple GUI pack (MMBasic)</a> &raquo; <a href="Circuit%20Ideas.MainPage.html" title="_Main Page (Circuit Ideas)">_Main Page (Circuit Ideas)</a> &raquo; <a href="Circuit%20Ideas.Simple-Serial-Console-Connection.html" title="Simple Serial Console Connection (Circuit Ideas)">Simple Serial Console Connection (Circuit Ideas)</a> &raquo; <a href="Circuit%20Ideas.Random-Bit-Generator-for-cryptographic-strength-random-numbers.html" title="Random Bit Generator for cryptographic strength random numbers (Circuit Ideas)" onmouseover="javascript:return __ShowDropDown(event, 'f6b82d15f-f139-44d2-b80b-0b855209ed1d', this);" id="lnkf6b82d15f-f139-44d2-b80b-0b855209ed1d" onmouseout="javascript:return __HideDropDown('f6b82d15f-f139-44d2-b80b-0b855209ed1d');">Random Bit Generator for cryptographic strength random numbers (Circuit Ideas)</a> &raquo; <a href="Circuit%20Ideas.Really-Simple-Zero-Crossing-Detect.html" title="Really Simple Zero Crossing Detect (Circuit Ideas)">Really Simple Zero Crossing Detect (Circuit Ideas)</a> &raquo; <a href="Platform%20Agnostic.MainPage.html" title="Main Page (Platform Agnostic)">Main Page (Platform Agnostic)</a> &raquo; <b><a href="Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology.html" title="A Brief Introduction to State Machine Methodology... (Platform Agnostic)">A Brief Introduction to State Machine Methodology... (Platform Agnostic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		... and why you should use it.<br /><br />A <a class="externallink" href="https://en.wikipedia.org/wiki/Finite-state_machine" title="State Machine" target="_blank">State Machine</a> is a mathematical concept whereby a system is driven by stimuli and its state alters by reacting to them. The condition of the stimuli indicates the state of the system at any point in time. <br /><br />In computing, state machine methodology is employed to get away from having a traditionally tightly interlocked system in favour of one that is only active when a stimulus is received; Changing its "state" depending on those stimuli. Stimuli could be I/O pins, a specific string or more often, flags. Such a system tends to be loose-coupled to its tasks and thus easier to program for multiple actions, each being self contained often as the body code inside an IF test in the main thread.<br /><br />As an example, consider the following:<br /><br /><pre>
+Do
+
+If ThisFlag Then
+  DoThisProcess
+EndIf
+
+If ThatFlag Then
+  DoThatProcess
+EndIf
+
+...etc
+
+Loop
+</pre><br />The Main Thread spends all it's time zipping around simply and rapidly checking flags and only taking a self-contained action when it has to. If the code is simple enough and only used in one place, then it should exist inside the If/EndIf block, otherwise write the code in a Sub program and call that from the If block.<br /><br />With micro-controllers you don't often have an Operating System to handle the CPU when it is idle - you control the CPU at a very low level. In modern computer languages, the "main loop" would be a dormant state and an event handler would wake your program when the state of the stimuli changed (you don't have to give the CPU something to do while it is waiting for a state change). This makes all of the resources (while the CPU isn't busy) available to the system for other tasks. <br /><br />State machine techniques are a major step towards event-driven programming on systems that don't normally have it. It can provide an almost multi-tasking appearance in micro-controllers as sections of code execute asynchronously to others, signaling and interlocking with other processes by setting or clearing flags - a process called "semaphore". The process of semaphore by tweaking flags goes back to the earliest CPUs, when an action would be taken as a result of one process signaling a specific state which resulted in another process doing something about it. All CPUs support semaphores, if only with a zero or carry flag in the status register. This was was a good way to signal from a one section of code to another that a decision needed to be made.<br /><br />State-machine code makes for easily readable and modifiable programs as each action becomes an atomic section of code with a clearly identifiable trigger. You don't have to worry about disrupting other sections of code so long as any process handles its input values and provides the expected output values. Flags can be set by any section of code, triggering activity from anywhere in your code. <br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology.ashx?NS=Platform%20Agnostic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:36:00 GMT -->
+</html>

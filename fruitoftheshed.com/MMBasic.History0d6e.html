@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack&Revision=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack&amp;Revision=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAU6UGFnZSBIaXN0b3J5OiBTZW5zaWJsZSBDYXJ0ZXNpYW4gQ28tb3JkaW5hdGUgZ3JhcGhpY3MgcGFja2QCBQ8QZBAVAwEyATEBMBUDATIBMQEwFCsDA2dnZ2RkAgcPEGQQFQQHQ3VycmVudAEyATEBMBUEB0N1cnJlbnQBMgExATAUKwMEZ2dnZ2RkAgsPFgIfAAX5Fzx0YWJsZSBjbGFzcz0iYm94IiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQ+PHAgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPjxiPjxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5TZW5zaWJsZS1DYXJ0ZXNpYW4tQ28tb3JkaW5hdGUtZ3JhcGhpY3MtcGFjayZhbXA7UmV2aXNpb249MDAwMDAiPiZsYXF1bzsgT2xkZXIgUmV2aXNpb248L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLlNlbnNpYmxlLUNhcnRlc2lhbi1Dby1vcmRpbmF0ZS1ncmFwaGljcy1wYWNrIj5CYWNrIHRvIFBhZ2UgSGlzdG9yeTwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuU2Vuc2libGUtQ2FydGVzaWFuLUNvLW9yZGluYXRlLWdyYXBoaWNzLXBhY2smYW1wO1JldmlzaW9uPTAwMDAyIj5OZXdlciBSZXZpc2lvbiAmcmFxdW87PC9hPjwvYj48L3A+PC90ZD48L3RyPjwvdGFibGU+PGJyIC8+PGgzIGNsYXNzPSJzZXBhcmF0b3IiPlBhZ2UgUmV2aXNpb246IDIwMTcvMDgvMTcgMTY6NDg8L2gzPjxiciAvPlRoZSBzdGFuZGFyZCBDYXJ0ZXNpYW4gY28tb3JkaW5hdGUgc3lzdGVtIHBsYWNlcyAwLDAgaW4gdGhlIGJvdHRvbSBsZWZ0IGNvcm5lciBvZiB0aGUgdmlldyAoaWdub3Jpbmcgb2Zmc2V0cykgZS5nLiBsaWtlIGEgcGllY2Ugb2YgZ3JhcGggcGFwZXIuPGJyIC8+PGJyIC8+TW9kZXJuIHdpbmRvd2luZyBhbmQgTENEIHBhbmVsIGNvLW9yZGluYXRlIHN5c3RlbXMgcGxhY2UgMCwwIGluIHRoZSB0b3AgbGVmdCBwb3NpdGlvbi48YnIgLz48YnIgLz5UaGUgZm9sbG93aW5nIGlzIGEgc2VyaWVzIG9mIGdyYXBoaWNzIHByaW1pdGl2ZSBzdWJyb3V0aW5lcyB0aGF0IG1ha2UgaXQgZWFzeSB0byBwYXNzIGNvbnZlbnRpb25hbCB4LHkgY28tb3JkaW5hdGVzIGFuZCBwbG90IHRoZW0gY29ycmVjdGx5IHVzaW5nIHRoZSBuYXRpdmUgd2luZG93aW5nIGNvLW9yZGluYXRlcywgdXNpbmcgb2xkIHRoZSBzY2hvb2wgZHJhd2luZyBjb21tYW5kcyBQTE9ULCBEUkFXIGFuZCBNT1ZFLiBUaGlzIG1ha2VzIGl0IGEgY2luY2ggdG8gcHJvZHVjZSBuaWNlIGxvb2tpbmcgZ3JhcGhzIHdpdGhvdXQgdHlpbmcgeW91ciBicmFpbiBpbiBhIGtub3Qgd2l0aCB3aW5kb3dpbmcgY28tb3JkaW5hdGVzLjxiciAvPjxiciAvPkkgaGF2ZSBtb3JlIHRvIGFkZCAoaW5jbHVkaW5nIGEgc2NhbGluZyBPUklHSU4gY29tbWFuZCB0byBwbGFjZSB0aGUgY28tb3JkaW5hdGUgc3lzdGVtIGFueXdoZXJlIHlvdSBjaG9vc2UpIGJ1dCB0aGV5IG5lZWQgc29tZSBob25pbmcuPGJyIC8+PGJyIC8+PGI+Tm90ZTwvYj46QWx3YXlzIHVzZXMgdGhlIGN1cnJlbnQgZ3JhcGhpY3MgcGVuIChjb2xvdXIpPGJyIC8+PGJyIC8+PHByZT4NCidzY3JlZW4gZGltZW5zaW9ucyBmb2xsb3cgTENEUEFORUwgc2V0dGluZ3MNCglDb25zdCBHX3htPU1NLkhSZXMtMSxHX3ltPU1NLlZSZXMtMSAnIDAgdG8genp6DQoNCidUaGUgZ2xvYmFsIHZhcmlhYmxlcyBHeCBhbmQgR3kgYWx3YXlzIGNvbnRhaW4gdGhlIGN1cnJlbnQgZ3JhcGhpYyBjdXJzb3IgaW4gbmF0aXZlIGNvLW9yZGluYXRlcw0KCURpbSBJbnRlZ2VyIEdfeCwgR195ICAnIGN1cnJlbnQgbmF0aXZlIHgseSAoaS5lLiBub3QgY2FydGVzaWFuKSBjb29yZCBzeXN0ZW0NCg0KJ3Bsb3QgYSBwb2ludA0KCVN1YiBQbG90KHggQXMgSW50ZWdlcix5IEFzIEludGVnZXIpDQoJCUdfeD14JiM1ODtHX3k9R195bS15DQoJCVBpeGVsIEdfeCxHX3kNCglFbmQgU3ViDQoJDQoncGxvdCBhIHBvaW50IHJlbGF0aXZlIHRvIHRoZSBjdXJzb3IgZS5nLiBQbG90UiAtMSwtMSBwbG90cyBhIHBvaW50IG9uZSBwaXhlbCBsZWZ0IGFuZCBkb3duIGZyb20gdGhlIGN1cnJlbnQgZ3JhcGhpY3MgY3Vyc29yDQoJU3ViIFBsb3RSKHggQXMgSW50ZWdlcix5IEFzIEludGVnZXIpDQoJCUdfeD1HX3greCYjNTg7R195PUdfeS15DQoJCVBpeGVsIEdfeCxHX3kNCglFbmQgU3ViDQoNCidEcmF3IGEgbGluZSBmcm9tIHRoZSBjdXJyZW50IGdyYXBoaWNzIGN1cnNvciB0byB0aGUgeCx5IGdpdmVuDQoJU3ViIERyYXcoeCBBcyBJbnRlZ2VyLHkgQXMgSW50ZWdlcikgJ2RyYXcgYSBsaW5lIGZyb20gdGhlIGN1cnJlbnQgZ3JhcGhpY3MgY3Vyc29yIHRvIHRoZSBzcGVjaWZpZWQgcG9pbnQNCgkJTGluZSBHX3gsR195LHgsR195bS15DQoJCUdfeD14JiM1ODtHX3k9R195bS15DQoJRW5kIFN1Yg0KCQ0KJ0RyYXcgYSBsaW5lIGZyb20gdGhlIGN1cnJlbnQgZ3JhcGhpY3MgY3Vyc29yIHRvIHRoZSByZWxhdGl2ZSBwb2ludCB4LHkgZnJvbSB0aGUgY3Vyc29yDQoJU3ViIERyYXdSKHggQXMgSW50ZWdlcix5IEFzIEludGVnZXIpDQoJCUxpbmUgR194LEdfeSxHX3greCxHX3kteQ0KCQlHX3g9R194K3gmIzU4O0dfeT1HX3kteQ0KCUVuZCBTdWINCg0KJ21vdmUgdGhlIGdyYXBoaWNzIGN1cnNvciB0byB0aGUgZ2l2ZW4geCx5IGJ1dCBkb2Vzbid0IGRyYXcgYW55dGhpbmcNCglTdWIgTW92ZSh4IEFzIEludGVnZXIseSBBcyBJbnRlZ2VyKQ0KCQlHX3g9eCYjNTg7R195PUdfeW0teQ0KCUVuZCBTdWINCgkNCidtb3ZlIHRoZSBncmFwaGljcyBjdXJzb3IgdG8gdGhlIHBvaW50IHgseSByZWxhdGl2ZSB0byB0aGUgY3VycmVudCBjdXJzb3IgYnV0IGRvZXNuJ3QgZHJhdyBhbnl0aGluZw0KCVN1YiBNb3ZlUih4IEFzIEludGVnZXIseSBBcyBJbnRlZ2VyKQ0KCQlHX3g9R194K3gmIzU4O0dfeT1HX3kteQ0KCUVuZCBTdWINCjwvcHJlPjxiciAvPjxiciAvPjxiciAvPjxiPkRlbW8gY29kZTwvYj48YnIgLz48cHJlPg0KCQljbHMNCgkJRm9yIG4gPTAgVG8gMjM5IFN0ZXAgOCcyMzkgVG8gMCBTdGVwIC00DQoJCQltb3ZlIDIzOS1uLG4NCgkJCWRyYXcgbiwyMzkNCgkJTmV4dA0KCQlGb3IgeD0wIFRvIEdfeG0gU3RlcCAxMA0KCQkJRm9yIHk9MCBUbyBHX3ltIFN0ZXAgMTANCgkJCQltb3ZlIHgseQ0KCQkJCWNpcmNsZSBHX3gsR195LDQNCgkJCQlkcmF3ciBybmQmIzQyOzIwLTEwLHJuZCYjNDI7MjAtMTANCg0KCQlOZXh0IHkseA0KPC9wcmU+ZGQxx0ZOtL2emilCl/jnvKTsvPNU/Q==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWCQKr09i/AQK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCeUyVPUCupMPLzmAwbjpSeIctkco" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login692c.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack%26Revision%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Sensible Cartesian Co-ordinate graphics pack</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.Historyf435.html?Page=MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack&amp;Revision=00000">&laquo; Older Revision</a> - <a href="MMBasic.History2d70.html?Page=MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack">Back to Page History</a> - <a href="MMBasic.History317b.html?Page=MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack&amp;Revision=00002">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2017/08/17 16:48</h3><br />The standard Cartesian co-ordinate system places 0,0 in the bottom left corner of the view (ignoring offsets) e.g. like a piece of graph paper.<br /><br />Modern windowing and LCD panel co-ordinate systems place 0,0 in the top left position.<br /><br />The following is a series of graphics primitive subroutines that make it easy to pass conventional x,y co-ordinates and plot them correctly using the native windowing co-ordinates, using old the school drawing commands PLOT, DRAW and MOVE. This makes it a cinch to produce nice looking graphs without tying your brain in a knot with windowing co-ordinates.<br /><br />I have more to add (including a scaling ORIGIN command to place the co-ordinate system anywhere you choose) but they need some honing.<br /><br /><b>Note</b>:Always uses the current graphics pen (colour)<br /><br /><pre>
+'screen dimensions follow LCDPANEL settings
+	Const G_xm=MM.HRes-1,G_ym=MM.VRes-1 ' 0 to zzz
+
+'The global variables Gx and Gy always contain the current graphic cursor in native co-ordinates
+	Dim Integer G_x, G_y  ' current native x,y (i.e. not cartesian) coord system
+
+'plot a point
+	Sub Plot(x As Integer,y As Integer)
+		G_x=x&#58;G_y=G_ym-y
+		Pixel G_x,G_y
+	End Sub
+	
+'plot a point relative to the cursor e.g. PlotR -1,-1 plots a point one pixel left and down from the current graphics cursor
+	Sub PlotR(x As Integer,y As Integer)
+		G_x=G_x+x&#58;G_y=G_y-y
+		Pixel G_x,G_y
+	End Sub
+
+'Draw a line from the current graphics cursor to the x,y given
+	Sub Draw(x As Integer,y As Integer) 'draw a line from the current graphics cursor to the specified point
+		Line G_x,G_y,x,G_ym-y
+		G_x=x&#58;G_y=G_ym-y
+	End Sub
+	
+'Draw a line from the current graphics cursor to the relative point x,y from the cursor
+	Sub DrawR(x As Integer,y As Integer)
+		Line G_x,G_y,G_x+x,G_y-y
+		G_x=G_x+x&#58;G_y=G_y-y
+	End Sub
+
+'move the graphics cursor to the given x,y but doesn't draw anything
+	Sub Move(x As Integer,y As Integer)
+		G_x=x&#58;G_y=G_ym-y
+	End Sub
+	
+'move the graphics cursor to the point x,y relative to the current cursor but doesn't draw anything
+	Sub MoveR(x As Integer,y As Integer)
+		G_x=G_x+x&#58;G_y=G_y-y
+	End Sub
+</pre><br /><br /><br /><b>Demo code</b><br /><pre>
+		cls
+		For n =0 To 239 Step 8'239 To 0 Step -4
+			move 239-n,n
+			draw n,239
+		Next
+		For x=0 To G_xm Step 10
+			For y=0 To G_ym Step 10
+				move x,y
+				circle G_x,G_y,4
+				drawr rnd&#42;20-10,rnd&#42;20-10
+
+		Next y,x
+</pre>
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack&Revision=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:05 GMT -->
+</html>

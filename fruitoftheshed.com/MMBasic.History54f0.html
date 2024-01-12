@@ -1,0 +1,116 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Temperature-Measurement-with-DS3231-Realtime-Clock-RTC&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:54:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Temperature-Measurement-with-DS3231-Realtime-Clock-RTC&amp;Revision=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAVEUGFnZSBIaXN0b3J5OiBUZW1wZXJhdHVyZSBNZWFzdXJlbWVudCB3aXRoIERTMzIzMSBSZWFsdGltZSBDbG9jayBSVENkAgUPEGQQFQEBMBUBATAUKwMBZ2RkAgcPEGQQFQIHQ3VycmVudAEwFQIHQ3VycmVudAEwFCsDAmdnZGQCCw8WAh8ABf0HPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5UZW1wZXJhdHVyZS1NZWFzdXJlbWVudC13aXRoLURTMzIzMS1SZWFsdGltZS1DbG9jay1SVEMiPkJhY2sgdG8gUGFnZSBIaXN0b3J5PC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuVGVtcGVyYXR1cmUtTWVhc3VyZW1lbnQtd2l0aC1EUzMyMzEtUmVhbHRpbWUtQ2xvY2stUlRDLmFzaHgiPkN1cnJlbnQgUmV2aXNpb248L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAxNy8wNS8wMyAwNzoyODwvaDM+PGJyIC8+VGhlIERTMzIzMSBSVEMgY2hpcCBoYXMgYSB0ZW1wZXJhdHVyZSBtZWFzdXJlbWVudCBqdW5jdGlvbiB3aGljaCBpcyBhdXRvbWF0aWNhbGx5IHNhbXBsZWQgZXZlcnkgNjQgc2Vjb25kcy4gVGhlIG1lYXN1cmVtZW50IGlzIHBsYWNlZCBpbiByZWdpc3RlcnMgMTcgJiAxOC4gUmVnaXN0ZXIgMTcgY29udGFpbnMgd2hvbGUgZGVncmVlcyBhbmQgMTggdGhlIGZyYWN0aW9uIGlmIHlvdSB3YW50IGl0ICh0aGlzIGZyYWN0aW9uIGlzIGJpbmFyeSBwb2ludCwgbm90IGRlY2ltYWwgcG9pbnQgc28gTVNCIGlzIDAuNWQsIG5leHQgaXMgMC4yNWQgZXRjLikuIDxiciAvPjxiciAvPlRoaXMgY2FuIGJlIHVzZWZ1bCBmb3IgbWVhc3VyaW5nIHRoZSAoYW1iaWVudCkgdGVtcGVyYXR1cmUgb2YgYW4gZW5jbG9zdXJlLjxiciAvPjxiciAvPkFzc3VtaW5nIHdob2xlIGRlZ3JlZXMgb25seTo8YnIgLz48YnIgLz48Yj5Db2RlPC9iPjo8YnIgLz48cHJlPg0KICBSVEMgR2V0UmVnIDE3LHggICAnIHJlYWQgdGhlIHdob2xlIGRlZ3JlZXMgb25seQ0KDQogIHQ9eCBBTkQgJmFtcDtoN2YgICAgICAnIG1hc2sgb2ZmIHRoZSBzaWduDQoNCjwvcHJlPmRkfo5z8DldicygQDKT7bSEnJFiAJ0=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQLg663/BwKiz/TSAwK3j57gBwLd5ta/BQL9yYWiCSpQ/eMONhZ5c/BGh9BL1q6bGFGF" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login558c.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Temperature-Measurement-with-DS3231-Realtime-Clock-RTC%26Revision%3d0" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Temperature Measurement with DS3231 Realtime Clock RTC</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b>&laquo; Older Revision - <a href="MMBasic.History821f.html?Page=MMBasic.Temperature-Measurement-with-DS3231-Realtime-Clock-RTC">Back to Page History</a> - <a href="MMBasic.Temperature-Measurement-with-DS3231-Realtime-Clock-RTC.html">Current Revision</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2017/05/03 07:28</h3><br />The DS3231 RTC chip has a temperature measurement junction which is automatically sampled every 64 seconds. The measurement is placed in registers 17 & 18. Register 17 contains whole degrees and 18 the fraction if you want it (this fraction is binary point, not decimal point so MSB is 0.5d, next is 0.25d etc.). <br /><br />This can be useful for measuring the (ambient) temperature of an enclosure.<br /><br />Assuming whole degrees only:<br /><br /><b>Code</b>:<br /><pre>
+  RTC GetReg 17,x   ' read the whole degrees only
+
+  t=x AND &amp;h7f      ' mask off the sign
+
+</pre>
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Temperature-Measurement-with-DS3231-Realtime-Clock-RTC&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:54:16 GMT -->
+</html>

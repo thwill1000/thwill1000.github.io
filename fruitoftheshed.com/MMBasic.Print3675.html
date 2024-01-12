@@ -1,0 +1,260 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Sprite-demo-Lander-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Sprite demo: Lander - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Sprite-demo-Lander-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF9Dk8aDEgY2xhc3M9InBhZ2V0aXRsZSI+U3ByaXRlIGRlbW86IExhbmRlcjwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6NDYgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBHYW1lcywgR3JhcGhpY3MsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogVGhlIHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPkNvbG91ciBNYXhpbWl0ZSBWNC4wIERlbW9zIGZyb20gRmFicmljZSBNdWxsZXIsIEZyYW5jZTxiciAvPjxiciAvPjxiPkxhbmRlcjwvYj46PGJyIC8+V2VsbCwgaGVyZSB3ZSBnbyBiYWNrIHRvIDE5NjkgYW5kIHRyeSB0byBMYW5kIG9uIHRoZSBNb29uLiBUYWtlIGNhcmUgb2YgeW91ciBmdWVsIG9yIHlvdSB3aWxsIGNyYXNoIDopIFlvdSB3aWxsIHNlZSBob3cgdG8gbWFrZSBhIHJhbmRvbSBtb29uIHN1cmZhY2UsIHVzZSBtdXNpYyBtb2R1bGUgYXMgYXVkaW8gZWZmZWN0cywgc3ByaXRlcyBhbmQgYnV0dG9ucyB0byBiZSBhYmxlIHRvIGxhbmQgeW91IHNoaXAuPGJyIC8+PGJyIC8+PGI+TGFuZGVyLmJhczwvYj46PGJyIC8+PHByZT4NCidMdW5hciBMYW5kZXIgZm9yIENvbG91ciBNYXhpbWl0ZSB2NC4wDQonDQpPcHRpb24gQmFzZSAxDQpDbGVhcg0KJ0FycmF5IGRlY2xhcmF0aW9uDQpEaW0gVGV2ZWwoTU0uSFJlcykNCkRpbSBCb29zdGVyU3ByKDIpDQpEaW0gRXhwbG9kZVNwcig1KQ0KRGltIFBsYXRmb3JtTFNwcig1KQ0KRGltIFBsYXRmb3JtUlNwcig1KQ0KRGltIEZvb3RQaXgoMikNCidTZXQgMjQwIHggMjE2IDggY29sb3VycyByZXNvbHV0aW9uDQpNb2RlIDQNCidXZSBnZXQgdGhlIFNwcml0ZXMgZnJvbSBmaWxlDQpEcml2ZSAiYiYjNTg7Ig0KU3ByaXRlIExvYWQgIkx1bmFyLnNwciINCidTcHJpdGUgZGVjbGFyYXRpb24NCkxhbmRlclNwciA9IDENCkJvb3N0ZXJTcHIoMSkgPSAyICYjNTg7IEJvb3N0ZXJTcHIoMikgPSAzDQpGb3IgYSA9IDEgVG8gNQ0KIEV4cGxvZGVTcHIoYSkgPSBhICsgMw0KIFBsYXRmb3JtTFNwcihhKSA9IGEgKyA4DQogUGxhdGZvcm1SU3ByKGEpID0gYSArIDEzDQpOZXh0IGENCkZvb3RQaXgoMSkgPSAwICYjNTg7IEZvb3RQaXgoMikgPSAwDQonMXN0IGFuaW1hdGVkIFNwcml0ZSBwZXIgdHlwZQ0KUGxhdEZvcm1TcHJOdW0gPSAxDQpFeHBsb2RlU3ByTnVtID0gMQ0KQm9vc3RlclNwck51bSA9IDENCidTZXQgdGhlIEpveXN0aWNrIHBpbidzDQonUElOIDExID0gVVAgKEJvb3N0ZXIpDQpTZXRQaW4gMTEsMg0KJ1BJTiAxMyA9IExFRlQNClNldFBpbiAxMywyDQonUElOIDE0ID0gUklHSFQNClNldFBpbiAxNCwyDQonU2V0IHNvbWUgdmFyaWFibGVzDQpCb29zdGVyID0gMA0KTGVtU3BlZWQgPSAwLjENClNwZWVkWCA9IDAuMA0KRnVlbCA9IDI1LjANCkdyYXZpdHkgPSAxLjYzDQpHb1JpZ2h0ID0gMCAmIzU4OyBHb1VwID0gMCAmIzU4OyBHb0xlZnQgPSAwDQpTY29yZSA9IDANClBpeExlZnQgPSAwDQpQaXhSaWdodCA9IDANCkdNeCA9IE1NLkhSZXMgLSAxDQpHTXkgPSBNTS5WUmVzIC0gMQ0KUHJpbnQgQCg3MCwxMDApICJQcmVzcyBhIGtleSB0byBTdGFydCINCkRvIFdoaWxlIChJbmtleSQgPSAiIikgQW5kIChQaW4oMTEpID0gMSkgQW5kIChQaW4oMTMpID0gMSkgQW5kIChQaW4oMTQpID0gMSkNCkxvb3ANCkNscw0KUmFuZG9taXplIFRpbWVyDQonTGFuZGluZyBwbGF0Zm9ybSBwb3NpdGlvbg0KUGxhdGZvcm14ID0gSW50KFJuZCAmIzQyOyAoR014IC02MCkpICsgMjANClBsYXRmb3JteSA9IEludChSbmQgJiM0MjsgODApICsgKEdNeSAtIDgwKQ0KJ0hlcmUgd2UgZHJhdyB0aGUgdGVycmFpbiBhbmQgdGhlIExhbmRpbmcgcGxhdGZvcm0NClNwcml0ZSBPbiBQbGF0Zm9ybUxTcHIoUGxhdEZvcm1TcHJOdW0pICwgUGxhdGZvcm14ICwgUGxhdGZvcm15DQpTcHJpdGUgT24gUGxhdGZvcm1SU3ByKFBsYXRGb3JtU3ByTnVtKSAsIFBsYXRmb3JteCArIDE2LCBQbGF0Zm9ybXkNCidUZXJyYWluIGF0IExlZnQgZnJvbSB0aGUgcGxhdGZvcm0NCnB5ID0gUGxhdGZvcm15ICsgKFJuZCAmIzQyOyA3KSAtIDMNCkZvciBhID0gUGxhdGZvcm14IC0gMSBUbyAwIFN0ZXAgLSAxDQogcHkgPSBweSArIChSbmQgJiM0MjsgNykgLSAzDQogTGluZSAoYSxHTXkpIC0gKGEscHkpLDMNCiBUZXZlbChhKSA9IHB5DQpOZXh0IGENCidUZXJyYWluIGF0IFJpZ2h0IGZyb20gdGhlIHBsYXRmb3JtDQpweSA9IFBsYXRmb3JteSArIChSbmQgJiM0MjsgNykgLSAzDQpGb3IgYSA9IFBsYXRmb3JteCArIDMzIFRvIEdNeA0KIHB5ID0gcHkgKyAoUm5kICYjNDI7IDcpIC0gMw0KIExpbmUgKGEsR015KSAtIChhLHB5KSwzDQogVGV2ZWwoYSkgPSBweQ0KTmV4dCBhDQonVGVycmFpbiB1bmRlciB0aGUgcGxhdGZvcm0NCkZvciBhID0gUGxhdGZvcm14IFRvIFBsYXRmb3JteCArIDMyDQogTGluZSAoYSxHTXkpIC0gKGEsUGxhdGZvcm15ICsgNiksMw0KTmV4dCBhDQonTEVNIHBvc2l0aW9uIGF0IHN0YXJ0DQpMZW1YID0gUm5kICYjNDI7IChHTXggLSA2MCkgKyAyMA0KTGVtWSA9IFJuZCAmIzQyOyA1MCArIDI1DQonU2hvdyB0aGUgTEVNDQpTcHJpdGUgT24gTGFuZGVyU3ByICwgTGVtWCAsIExlbVkNCkJvb3N0ZXJXYXMxID0gMA0KJ0luaXRpYWxpc2UgdGhlIHBsYXRmb3JtIHNwcml0ZSBjb3VudGVyDQpQbGF0Zm9ybUNvdW50ID0gMA0KJ05leHQgbG9hZCdzIHdpbGwgYmUgZnJvbSBkcml2ZSAiYSYjNTg7Ig0KRHJpdmUgImEmIzU4OyINCk1vZF9pc19wbGF5aW5nID0gMA0KVGltZXIgPSAwDQonTWFpbiBwcm9ncmFtIGxvb3ANCkRvIFdoaWxlIDENCiAnUmVhZCB0aGUgYnV0dG9ucw0KIGtleXByZXNzZWQkID0gSW5rZXkkDQogSWYgKFBpbigxMSkgPSAwKSBPciAoQXNjKGtleXByZXNzZWQkKSA9IDEyOCkgVGhlbiBHb1VQID0gMQ0KIElmIChQaW4oMTQpID0gMCkgT3IgKEFzYyhrZXlwcmVzc2VkJCkgPSAxMzEpIFRoZW4gR29SaWdodCA9IDENCiBJZiAoUGluKDEzKSA9IDApIE9yIChBc2Moa2V5cHJlc3NlZCQpID0gMTMwKSBUaGVuIEdvTGVmdCA9IDENCiAnDQogJ1Rlc3QgaWYgd2UgYXJlIG92ZXIgdGhlIHBsYXRmb3JtDQogSWYgTGVtWSAmZ3Q7IChQbGF0Zm9ybXkgLSAxNykgVGhlbg0KICAgJ1Rlc3QgaWYgd2UgaGF2ZSBsYW5kZWQgb3IgQ29sbGlkZWQNCiAgSWYgKExlbVggJmd0Oz0gUGxhdGZvcm14KSBBbmQgKExlbXggJmx0OyAoUGxhdGZvcm14ICsgMTYpKSBUaGVuDQogICAnTGFuZGluZyB0ZXN0DQogICBJZiBMZW1TcGVlZCAmbHQ7PSAyLjAgVGhlbg0KICAgIElmIE1vZF9pc19wbGF5aW5nID0gMSBUaGVuDQogICAgIFBsYXlNT0QgU3RvcA0KICAgIEVuZElmDQogICAgUGxheU1PRCAibGFuZGVkLm1vZCIgLCA0MDAwDQogICAgUHJpbnQgQCg3NSw1MCkgIlN1Y2Nlc3NmdWxseSBMYW5kZWQiDQogICAgUGF1c2UgMjAwMA0KICAgIFJ1bg0KICAgRWxzZQ0KICAgIElmIEJvb3N0ZXJXYXMxID0gMSBUaGVuDQogICAgIFNwcml0ZSBPZmYgQm9vc3RlclNwcihCb29zdGVyU3ByTnVtKQ0KICAgIEVuZElmDQogICAgSWYgTW9kX2lzX3BsYXlpbmcgPSAxIFRoZW4NCiAgICAgUGxheU1PRCBTdG9wDQogICAgRW5kSWYNCiAgICBQbGF5TU9EICJleHBsb2RlLm1vZCIgLCA0MDAwDQogICAgU3ByaXRlIE9mZiBMYW5kZXJTcHINCiAgICBGb3IgYSA9IDEgVG8gNQ0KICAgICBTcHJpdGUgb24gRXhwbG9kZVNwcihhKSAsIExlbVggLCBMZW1ZDQogICAgIFBhdXNlIDEwMA0KICAgICBTcHJpdGUgb2ZmIEV4cGxvZGVTcHIoYSkNCiAgICBOZXh0IGENCiAgICBQcmludCBAKDgwLDUwKSAiWW91IENyYXNoZWQgISEhIg0KICAgIFBhdXNlIDIwMDANCiAgICAgUnVuDQogICBFbmRJZg0KICBFbmRJZg0KIEVuZElmDQogJ1dlIGNoZWNrIGNvbGxpc2lvbiB3aXRoIHRoZSBUZXJyYWluDQogRm9vdFBpeCgxKSA9IFBpeGVsKExlbVgsTGVtWSArIDE2KQ0KIEZvb3RQaXgoMikgPSBQaXhlbChMZW1YICsgMTUsTGVtWSArIDE2KQ0KIElmIChGb290UGl4KDEpICZsdDsmZ3Q7IDApIE9yIChGb290UGl4KDIpICZsdDsmZ3Q7IDApIFRoZW4NCiAgSWYgQm9vc3RlcldhczEgPSAxIFRoZW4NCiAgIFNwcml0ZSBPZmYgQm9vc3RlclNwcihCb29zdGVyU3ByTnVtKQ0KICBFbmRJZg0KICBTcHJpdGUgT2ZmIExhbmRlclNwcg0KICBJZiBNb2RfaXNfcGxheWluZyA9IDEgVGhlbg0KICAgUGxheU1PRCBTdG9wDQogIEVuZElmDQogIFBsYXlNT0QgImV4cGxvZGUubW9kIiAsIDQwMDANCiAgRm9yIGEgPSAxIFRvIDUNCiAgIFNwcml0ZSBvbiBFeHBsb2RlU3ByKGEpICwgTGVtWCAsIExlbVkNCiAgIFBhdXNlIDEwMA0KICAgU3ByaXRlIG9mZiBFeHBsb2RlU3ByKGEpDQogIE5leHQgYQ0KICBQcmludCBAKDgwLDUwKSAiWW91IENyYXNoZWQgISEhIg0KICBQYXVzZSAyMDAwDQogIFJ1bg0KIEVuZElmDQogSWYgVGltZXIgJmd0Oz0gMTAwIFRoZW4NCiAgJ1RpbWVyIHJvdXRpbmUgZXZlcnkgMTAwbVMNCiAgUGxhdGZvcm1Db3VudCA9IFBsYXRmb3JtQ291bnQgKyAxDQogIFJlY29tcHV0ZQ0KICBSZWRyYXcNCiAgVGltZXIgPSAwDQogRW5kSWYNCkxvb3ANCg0KU3ViIFJlY29tcHV0ZQ0KJ1RoaXMgcGFydCBpcyBleGVjdXRlZCBldmVyeSAxMDBtUw0KIExFTVNwZWVkID0gTEVNU3BlZWQgKyAoR3Jhdml0eSAmIzQyOyAwLjEpDQogSWYgKEdvVVAgPSAxKSBBbmQgKEZ1ZWwgJmd0OyAwKSBUaGVuDQogIExlbVNwZWVkID0gTGVtU3BlZWQgLSAoR3Jhdml0eSAmIzQyOyAwLjIpDQogIEZ1ZWwgPSBGdWVsIC0gMC4zDQogIEdvVXAgPSAwDQogIEJvb3N0ZXIgPSAxDQogRWxzZQ0KICBCb29zdGVyID0gMA0KIEVuZElmDQogSWYgKEdvUmlnaHQgPSAxKSBBbmQgKEZ1ZWwgJmd0OyAwKSBUaGVuDQogIFZ4ID0gVnggKyAwLjENCiAgRnVlbCA9IEZ1ZWwgLSAwLjENCiAgR29SaWdodCA9IDANCiBFbmRJZg0KIElmIChHb0xlZnQgPSAxKSBBbmQgKEZ1ZWwgJmd0OyAwKSBUaGVuDQogIFZ4ID0gVnggLSAwLjENCiAgRnVlbCA9IEZ1ZWwgLSAwLjENCiAgR29MZWZ0ID0gMA0KIEVuZElmDQogJ1JlY29yZCB0aGUgTEVNIHBvc2l0aW9uDQogT2xkTGVtWCA9IEludChMZW1YKSAmIzU4OyBPbGRMZW1ZID0gSW50KExlbVkpDQogTGVtWSA9IEludChMZW1ZICsgTGVtU3BlZWQpDQogTGVtWCA9IEludChMZW1YICsgVngpDQogJ0NsaXAgdGhlIExFTSBpbiB0aGUgc2NyZWVuDQogSWYgTGVtWCAmZ3Q7IChHTXggLSAxNykgVGhlbiBMZW1YID0gR014IC0gMTcNCiBJZiBMZW1YICZsdDsgNSBUaGVuIExlbVggPSA1DQogSWYgTGVtWSAmZ3Q7IChHTXkgLSAxNykgVGhlbiBMZW1ZID0gR015IC0gMTcNCiBJZiBMZW1ZICZsdDsgNTAgVGhlbiBMZW1ZID0gNTANCkVuZCBTdWINCg0KU3ViIFJlZHJhdw0KICdUaGlzIHBhcnQgaXMgZXhlY3V0ZWQgZXZlcnkgMTAwbVMNCiBQcmludCBAKDAsMCkgIlNwZWVkICIgQCgzNSwwKSBTdHIkKEludChMZW1TcGVlZCkpICsgIiAiDQogUHJpbnQgQCgxMDAsMCkgIkZ1ZWwgIkAoMTM1LDApIFN0ciQoSW50KEZ1ZWwpKSArICIgIg0KICdDaGVjayBpZiB3ZSBoYXZlIHRvIGVyYXNlIHRoZSBib29zdGVyDQogSWYgQm9vc3RlcldhczEgPSAxIFRoZW4NCiAgU3ByaXRlIE9mZiBCb29zdGVyU3ByKEJvb3N0ZXJTcHJOdW0pDQogIEJvb3N0ZXJXYXMxID0gMA0KIEVsc2UNCiAgSWYgTW9kX2lzX3BsYXlpbmcgPSAxIFRoZW4NCiAgIFBsYXlNT0QgU3RvcA0KICAgTW9kX2lzX3BsYXlpbmcgPSAwDQogIEVuZElmDQogRW5kSWYNCiAnV2UgcmVkcmF3IHRoZSBMRU0NCiBTcHJpdGUgTW92ZSBMYW5kZXJTcHIgLCBMZW1YICwgTGVtWQ0KICcgRHJhdyB0aGUgQm9vc3RlciBpZiBuZWVkZWQNCiBJZiBCb29zdGVyID0gMSBUaGVuDQogIElmIE1vZF9pc19wbGF5aW5nID0gMCBUaGVuDQogICBQbGF5TU9EICJ0dXJiaW5lLm1vZCINCiAgIE1vZF9pc19wbGF5aW5nID0gMQ0KICBFbmRJZg0KICBCb29zdGVyU3ByTnVtID0gQm9vc3RlclNwck51bSArIDENCiAgSWYgQm9vc3RlclNwck51bSAmZ3Q7IDIgVGhlbiBCb29zdGVyU3ByTnVtID0gMQ0KICBTcHJpdGUgT24gQm9vc3RlclNwcihCb29zdGVyU3ByTnVtKSAsIExlbVggKyA1ICwgTGVtWSArIDEyDQogIEJvb3N0ZXIgPSAwDQogIEJvb3N0ZXJXYXMxID0gMQ0KIEVuZElmDQogJ0N5Y2xlIHRoZSBwbGF0Zm9ybSBTcHJpdGVzIGV2ZXkgMzAwbVMNCiBJZiBQbGF0Zm9ybUNvdW50ID0gMyBUaGVuDQogIFNwcml0ZSBPZmYgUGxhdGZvcm1SU3ByKFBsYXRGb3JtU3ByTnVtKQ0KICBTcHJpdGUgT2ZmIFBsYXRmb3JtTFNwcihQbGF0Rm9ybVNwck51bSkNCiAgUGxhdEZvcm1TcHJOdW0gPSBQbGF0Rm9ybVNwck51bSArIDENCiAgSWYgUGxhdEZvcm1TcHJOdW0gJmd0OyA1IFRoZW4gUGxhdEZvcm1TcHJOdW0gPSAxDQogIFNwcml0ZSBPbiBQbGF0Zm9ybUxTcHIoUGxhdEZvcm1TcHJOdW0pICwgUGxhdGZvcm14ICwgUGxhdGZvcm15DQogIFNwcml0ZSBPbiBQbGF0Zm9ybVJTcHIoUGxhdEZvcm1TcHJOdW0pICwgUGxhdGZvcm14ICsgMTYsIFBsYXRmb3JteQ0KICBQbGF0Zm9ybUNvdW50ID0gMA0KIEVuZElmDQpFbmQgU3ViDQoNCjwvcHJlPmRk28E6Xl4CSpOjvb7okzWwmbBwM7A=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Sprite demo: Lander</h1><small>Modified on 2016/12/23 23:46 by Administrator &mdash; Categorized as: Games, Graphics, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required file(s) are available in the attachments tab (top right).<br /><br />Colour Maximite V4.0 Demos from Fabrice Muller, France<br /><br /><b>Lander</b>:<br />Well, here we go back to 1969 and try to Land on the Moon. Take care of your fuel or you will crash :) You will see how to make a random moon surface, use music module as audio effects, sprites and buttons to be able to land you ship.<br /><br /><b>Lander.bas</b>:<br /><pre>
+'Lunar Lander for Colour Maximite v4.0
+'
+Option Base 1
+Clear
+'Array declaration
+Dim Tevel(MM.HRes)
+Dim BoosterSpr(2)
+Dim ExplodeSpr(5)
+Dim PlatformLSpr(5)
+Dim PlatformRSpr(5)
+Dim FootPix(2)
+'Set 240 x 216 8 colours resolution
+Mode 4
+'We get the Sprites from file
+Drive "b&#58;"
+Sprite Load "Lunar.spr"
+'Sprite declaration
+LanderSpr = 1
+BoosterSpr(1) = 2 &#58; BoosterSpr(2) = 3
+For a = 1 To 5
+ ExplodeSpr(a) = a + 3
+ PlatformLSpr(a) = a + 8
+ PlatformRSpr(a) = a + 13
+Next a
+FootPix(1) = 0 &#58; FootPix(2) = 0
+'1st animated Sprite per type
+PlatFormSprNum = 1
+ExplodeSprNum = 1
+BoosterSprNum = 1
+'Set the Joystick pin's
+'PIN 11 = UP (Booster)
+SetPin 11,2
+'PIN 13 = LEFT
+SetPin 13,2
+'PIN 14 = RIGHT
+SetPin 14,2
+'Set some variables
+Booster = 0
+LemSpeed = 0.1
+SpeedX = 0.0
+Fuel = 25.0
+Gravity = 1.63
+GoRight = 0 &#58; GoUp = 0 &#58; GoLeft = 0
+Score = 0
+PixLeft = 0
+PixRight = 0
+GMx = MM.HRes - 1
+GMy = MM.VRes - 1
+Print @(70,100) "Press a key to Start"
+Do While (Inkey$ = "") And (Pin(11) = 1) And (Pin(13) = 1) And (Pin(14) = 1)
+Loop
+Cls
+Randomize Timer
+'Landing platform position
+Platformx = Int(Rnd &#42; (GMx -60)) + 20
+Platformy = Int(Rnd &#42; 80) + (GMy - 80)
+'Here we draw the terrain and the Landing platform
+Sprite On PlatformLSpr(PlatFormSprNum) , Platformx , Platformy
+Sprite On PlatformRSpr(PlatFormSprNum) , Platformx + 16, Platformy
+'Terrain at Left from the platform
+py = Platformy + (Rnd &#42; 7) - 3
+For a = Platformx - 1 To 0 Step - 1
+ py = py + (Rnd &#42; 7) - 3
+ Line (a,GMy) - (a,py),3
+ Tevel(a) = py
+Next a
+'Terrain at Right from the platform
+py = Platformy + (Rnd &#42; 7) - 3
+For a = Platformx + 33 To GMx
+ py = py + (Rnd &#42; 7) - 3
+ Line (a,GMy) - (a,py),3
+ Tevel(a) = py
+Next a
+'Terrain under the platform
+For a = Platformx To Platformx + 32
+ Line (a,GMy) - (a,Platformy + 6),3
+Next a
+'LEM position at start
+LemX = Rnd &#42; (GMx - 60) + 20
+LemY = Rnd &#42; 50 + 25
+'Show the LEM
+Sprite On LanderSpr , LemX , LemY
+BoosterWas1 = 0
+'Initialise the platform sprite counter
+PlatformCount = 0
+'Next load's will be from drive "a&#58;"
+Drive "a&#58;"
+Mod_is_playing = 0
+Timer = 0
+'Main program loop
+Do While 1
+ 'Read the buttons
+ keypressed$ = Inkey$
+ If (Pin(11) = 0) Or (Asc(keypressed$) = 128) Then GoUP = 1
+ If (Pin(14) = 0) Or (Asc(keypressed$) = 131) Then GoRight = 1
+ If (Pin(13) = 0) Or (Asc(keypressed$) = 130) Then GoLeft = 1
+ '
+ 'Test if we are over the platform
+ If LemY &gt; (Platformy - 17) Then
+   'Test if we have landed or Collided
+  If (LemX &gt;= Platformx) And (Lemx &lt; (Platformx + 16)) Then
+   'Landing test
+   If LemSpeed &lt;= 2.0 Then
+    If Mod_is_playing = 1 Then
+     PlayMOD Stop
+    EndIf
+    PlayMOD "landed.mod" , 4000
+    Print @(75,50) "Successfully Landed"
+    Pause 2000
+    Run
+   Else
+    If BoosterWas1 = 1 Then
+     Sprite Off BoosterSpr(BoosterSprNum)
+    EndIf
+    If Mod_is_playing = 1 Then
+     PlayMOD Stop
+    EndIf
+    PlayMOD "explode.mod" , 4000
+    Sprite Off LanderSpr
+    For a = 1 To 5
+     Sprite on ExplodeSpr(a) , LemX , LemY
+     Pause 100
+     Sprite off ExplodeSpr(a)
+    Next a
+    Print @(80,50) "You Crashed !!!"
+    Pause 2000
+     Run
+   EndIf
+  EndIf
+ EndIf
+ 'We check collision with the Terrain
+ FootPix(1) = Pixel(LemX,LemY + 16)
+ FootPix(2) = Pixel(LemX + 15,LemY + 16)
+ If (FootPix(1) &lt;&gt; 0) Or (FootPix(2) &lt;&gt; 0) Then
+  If BoosterWas1 = 1 Then
+   Sprite Off BoosterSpr(BoosterSprNum)
+  EndIf
+  Sprite Off LanderSpr
+  If Mod_is_playing = 1 Then
+   PlayMOD Stop
+  EndIf
+  PlayMOD "explode.mod" , 4000
+  For a = 1 To 5
+   Sprite on ExplodeSpr(a) , LemX , LemY
+   Pause 100
+   Sprite off ExplodeSpr(a)
+  Next a
+  Print @(80,50) "You Crashed !!!"
+  Pause 2000
+  Run
+ EndIf
+ If Timer &gt;= 100 Then
+  'Timer routine every 100mS
+  PlatformCount = PlatformCount + 1
+  Recompute
+  Redraw
+  Timer = 0
+ EndIf
+Loop
+
+Sub Recompute
+'This part is executed every 100mS
+ LEMSpeed = LEMSpeed + (Gravity &#42; 0.1)
+ If (GoUP = 1) And (Fuel &gt; 0) Then
+  LemSpeed = LemSpeed - (Gravity &#42; 0.2)
+  Fuel = Fuel - 0.3
+  GoUp = 0
+  Booster = 1
+ Else
+  Booster = 0
+ EndIf
+ If (GoRight = 1) And (Fuel &gt; 0) Then
+  Vx = Vx + 0.1
+  Fuel = Fuel - 0.1
+  GoRight = 0
+ EndIf
+ If (GoLeft = 1) And (Fuel &gt; 0) Then
+  Vx = Vx - 0.1
+  Fuel = Fuel - 0.1
+  GoLeft = 0
+ EndIf
+ 'Record the LEM position
+ OldLemX = Int(LemX) &#58; OldLemY = Int(LemY)
+ LemY = Int(LemY + LemSpeed)
+ LemX = Int(LemX + Vx)
+ 'Clip the LEM in the screen
+ If LemX &gt; (GMx - 17) Then LemX = GMx - 17
+ If LemX &lt; 5 Then LemX = 5
+ If LemY &gt; (GMy - 17) Then LemY = GMy - 17
+ If LemY &lt; 50 Then LemY = 50
+End Sub
+
+Sub Redraw
+ 'This part is executed every 100mS
+ Print @(0,0) "Speed " @(35,0) Str$(Int(LemSpeed)) + " "
+ Print @(100,0) "Fuel "@(135,0) Str$(Int(Fuel)) + " "
+ 'Check if we have to erase the booster
+ If BoosterWas1 = 1 Then
+  Sprite Off BoosterSpr(BoosterSprNum)
+  BoosterWas1 = 0
+ Else
+  If Mod_is_playing = 1 Then
+   PlayMOD Stop
+   Mod_is_playing = 0
+  EndIf
+ EndIf
+ 'We redraw the LEM
+ Sprite Move LanderSpr , LemX , LemY
+ ' Draw the Booster if needed
+ If Booster = 1 Then
+  If Mod_is_playing = 0 Then
+   PlayMOD "turbine.mod"
+   Mod_is_playing = 1
+  EndIf
+  BoosterSprNum = BoosterSprNum + 1
+  If BoosterSprNum &gt; 2 Then BoosterSprNum = 1
+  Sprite On BoosterSpr(BoosterSprNum) , LemX + 5 , LemY + 12
+  Booster = 0
+  BoosterWas1 = 1
+ EndIf
+ 'Cycle the platform Sprites evey 300mS
+ If PlatformCount = 3 Then
+  Sprite Off PlatformRSpr(PlatFormSprNum)
+  Sprite Off PlatformLSpr(PlatFormSprNum)
+  PlatFormSprNum = PlatFormSprNum + 1
+  If PlatFormSprNum &gt; 5 Then PlatFormSprNum = 1
+  Sprite On PlatformLSpr(PlatFormSprNum) , Platformx , Platformy
+  Sprite On PlatformRSpr(PlatFormSprNum) , Platformx + 16, Platformy
+  PlatformCount = 0
+ EndIf
+End Sub
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Sprite-demo-Lander-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:38 GMT -->
+</html>

@@ -1,0 +1,392 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.ZPad-pad-a-number-with-leading-zeroes.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:59:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	ZPad$() - pad a number with leading zeroes - Fruit Of The Shed
+</title><meta name="keywords" content="leading zero, pad, Str$" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=ZPad-pad-a-number-with-leading-zeroes&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login3b63.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dZPad-pad-a-number-with-leading-zeroes%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.ZPad-pad-a-number-with-leading-zeroes266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History8d58.html?Page=MMBasic.ZPad-pad-a-number-with-leading-zeroes">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			ZPad$() - pad a number with leading zeroes
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print8d58.html?Page=MMBasic.ZPad-pad-a-number-with-leading-zeroes" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2021/11/28 10:02
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages53de.html?Cat=MMBasic.Printers%20and%20Printing" title="Printers and Printing">Printers and Printing</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fbd9d535b-6c14-4ddd-94a3-ee5827d4149d" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fbd9d535b-6c14-4ddd-94a3-ee5827d4149d');"><a href="MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values.html" title="uFormat$() and StrE$() provide flexible formatting of numeric values">uFormat$() and StrE$() provide flexible formatting of numeric values</a></div><div id="f2ea5e296-70ab-4e0c-a08d-a277684be096" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f2ea5e296-70ab-4e0c-a08d-a277684be096');"><a href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTrim Functions (VB work-a-like)</a><a href="MMBasic.LTrim-RTrim-cFunctions.html" title="LTrim RTrim CFunctions">LTrim RTrim CFunctions</a><a href="MMBasic.String-editing-on-screen-for-VT-compatible-Terminals.html" title="String editing on-screen for VT compatible Terminals">String editing on-screen for VT compatible Terminals</a></div><div id="f16ab1ccd-7df2-4c20-8255-5ca0a2fd31bb" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f16ab1ccd-7df2-4c20-8255-5ca0a2fd31bb');"></div><div id="f6db5cefa-02e2-4645-a913-7d552a66fd9b" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f6db5cefa-02e2-4645-a913-7d552a66fd9b');"><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime() Function to return a human readable date and time from a unixtime number</a><a href="MMBasic.VB%20Work-a-like%20SPLIT%20Function.html" title="SPLIT Function (VB work-a-like)">SPLIT Function (VB work-a-like)</a><a href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar</a><a href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a></div><div id="ff7b45b2b-38ef-47d3-b944-52f417afe20c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ff7b45b2b-38ef-47d3-b944-52f417afe20c');"><a href="MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories.html" title="MMBasic code-pack to Read and Write Winbond Flash Memories">MMBasic code-pack to Read and Write Winbond Flash Memories</a><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime() Function to return a human readable date and time from a unixtime number</a><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a><a href="MMBasic.Sign-Extend-an-Integer.html" title="Sign Extend an Integer">Sign Extend an Integer</a></div><div id="scf9abb8f-c5bd-435c-a524-d2f2a667816f" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('scf9abb8f-c5bd-435c-a524-d2f2a667816f');"><a href="MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values.html" title="uFormat$() and StrE$() provide flexible formatting of numeric values">uFormat$() and StrE$() provide flexible formatting of numeric values</a></div><div id="s2a1395ff-b33d-4448-b145-14320ff41962" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s2a1395ff-b33d-4448-b145-14320ff41962');"><a href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTrim Functions (VB work-a-like)</a><a href="MMBasic.LTrim-RTrim-cFunctions.html" title="LTrim RTrim CFunctions">LTrim RTrim CFunctions</a><a href="MMBasic.String-editing-on-screen-for-VT-compatible-Terminals.html" title="String editing on-screen for VT compatible Terminals">String editing on-screen for VT compatible Terminals</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc.html" title="VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's2a1395ff-b33d-4448-b145-14320ff41962', this);" id="lnks2a1395ff-b33d-4448-b145-14320ff41962" onmouseout="javascript:return __HideDropDown('s2a1395ff-b33d-4448-b145-14320ff41962');">VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)</a> &raquo; <a href="MMBasic.Xmodem-CRC.html" title="Xmodem CRC (MMBasic)">Xmodem CRC (MMBasic)</a> &raquo; <b><a href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'scf9abb8f-c5bd-435c-a524-d2f2a667816f', this);" id="lnkscf9abb8f-c5bd-435c-a524-d2f2a667816f" onmouseout="javascript:return __HideDropDown('scf9abb8f-c5bd-435c-a524-d2f2a667816f');">ZPad$() - pad a number with leading zeroes (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values.html" title="uFormat$() and StrE$() provide flexible formatting of numeric values (MMBasic)">uFormat$() and StrE$() provide flexible formatting of numeric values (MMBasic)</a> &raquo; <a href="MMBasic.Ultra-Compact-Logging-with-Flash-Storage-on-small-MicroMites.html" title="Ultra-Compact Logging with Flash Storage on small MicroMites (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'ff7b45b2b-38ef-47d3-b944-52f417afe20c', this);" id="lnkff7b45b2b-38ef-47d3-b944-52f417afe20c" onmouseout="javascript:return __HideDropDown('ff7b45b2b-38ef-47d3-b944-52f417afe20c');">Ultra-Compact Logging with Flash Storage on small MicroMites (MMBasic)</a> &raquo; <a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f6db5cefa-02e2-4645-a913-7d552a66fd9b', this);" id="lnkf6db5cefa-02e2-4645-a913-7d552a66fd9b" onmouseout="javascript:return __HideDropDown('f6db5cefa-02e2-4645-a913-7d552a66fd9b');">UnixTime or Epoch Time (MMBasic)</a> &raquo; <a href="MMBasic.URL-DECODE-Function.html" title="URL DECODE Function	 (MMBasic)">URL DECODE Function	 (MMBasic)</a> &raquo; <a href="MMBasic.URL-ENCODE-Function.html" title="URL ENCODE Function (MMBasic)">URL ENCODE Function (MMBasic)</a> &raquo; <a href="MMBasic.Vehicle-Reversing-Assistant.html" title="Vehicle Reversing Assistant (MMBasic)">Vehicle Reversing Assistant (MMBasic)</a> &raquo; <a href="MMBasic.vmndlbrot-bas-part-of-the-original-MMBasic-library.html" title="vmndlbrot.bas (MMBasic)">vmndlbrot.bas (MMBasic)</a> &raquo; <a href="MMBasic.Simple-screen-Control-for-ANSI-based-Consoles-VT100-etc.html" title="VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f2ea5e296-70ab-4e0c-a08d-a277684be096', this);" id="lnkf2ea5e296-70ab-4e0c-a08d-a277684be096" onmouseout="javascript:return __HideDropDown('f2ea5e296-70ab-4e0c-a08d-a277684be096');">VT Console Pack. Screen Positioning, Sane Key Scanning And a String Editing Routine (MMBasic)</a> &raquo; <a href="MMBasic.Xmodem-CRC.html" title="Xmodem CRC (MMBasic)">Xmodem CRC (MMBasic)</a> &raquo; <b><a href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fbd9d535b-6c14-4ddd-94a3-ee5827d4149d', this);" id="lnkfbd9d535b-6c14-4ddd-94a3-ee5827d4149d" onmouseout="javascript:return __HideDropDown('fbd9d535b-6c14-4ddd-94a3-ee5827d4149d');">ZPad$() - pad a number with leading zeroes (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		Some time it is nice to have leading zeroes on a number. MMBasic helpfully removes these for you which means to have them, the number must be returned as a string.<br /><br />Str$ in MMBasic is deceptively powerful and goes some way to replacing the missing (on Micromites at least) FORMAT$ and USING. It can be tricky to get your head round the functionality so think of this function as a wrapper for a specific form.<br /><br />This tiddly Function returns a string of the integer value x, padded to (at least) length y with leading zeroes. I say at least because if x already exceeds y then nothing is added.<br /><br />This is a newer version of this function; it is better as it uses inbuilt "primitive" functionality to do the padding rather than "re-inventing the wheel" by string slicing. Consequently it is very marginally faster - rough tests seem to indicate a 16% improvement in speed. It also eliminates the potential restriction of 127 characters on the desired string.<br /><br />If the string version of the argument already exceeds the desired length, the original number is returned - e.g. if you ask for 1000 to be padded to 3 digits.<br /><br /><b>Syntax</b>:<br />=ZPad$(number,totalNumDigits)<br /><br /><b>Example</b>:<br />Print ZPad$(7,3)' returns "007"<br /><br /><b>Code</b>:<br /><pre>
+  Function ZPad$(x As Integer,y As Integer)
+    ZPad$=Str$(x,y,0,"0")
+  End Function
+</pre><br /><b>See Also</b><br /><a class="pagelink" href="MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values.html" title="uFormat$() and StrE$() provide flexible formatting of numeric values">uFormat$() and StrE$() provide flexible formatting of numeric values</a><br /><br /><b>Hold your horses! A Note on Str$():</b> You should probably use Str$ as a stand-alone and not ZPad$() where-ever needed in your program. Str$ can be a bit difficult to get to grips with, but learning to use it properly is a much better way and better understanding leads to better programs. ZPad$() assumes you only want to pad with zeroes. The overhead of calling this as a function is also undesirable - a loop of 1000 iterations at 48MHz takes 492mS using ZPad$(), the same using Str$ explicitly takes 177mS - two-and-a-half times quicker with a smaller code footprint.<br /><br />That said, Str$ makes (reasonable) assumptions too. Suppose one where trying to pad the right of a string. Consider the following:<br /><pre>Print Str$(53,4,4,"&#42;")</pre><br />you might expect the string<br /><code>**53.****</code><br />but the pad character (*) is ignored for the third argument (digits after the decimal point) and zero is mandated.<br /><code>**53.0000</code><br /><br />If you were trying to emulate the action of the old LSet and RSet statements of MicroSoft Basics (ignoring that Str$ only works with floats and integers), you'd still need to write a function similar to the old version of ZPad$() to get LSet. Str$ can do RSet on it's own but not LSet due to the above mandatory 0 padding.
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.ZPad-pad-a-number-with-leading-zeroes.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:59:31 GMT -->
+</html>

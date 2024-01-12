@@ -1,0 +1,164 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:08:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number&amp;Revision=00001" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAViUGFnZSBIaXN0b3J5OiBIdW1hblRpbWUoKSBGdW5jdGlvbiB0byByZXR1cm4gYSBodW1hbiByZWFkYWJsZSBkYXRlIGFuZCB0aW1lIGZyb20gYSB1bml4dGltZSBudW1iZXJkAgUPEGQQFQIBMQEwFQIBMQEwFCsDAmdnZGQCBw8QZBAVAwdDdXJyZW50ATEBMBUDB0N1cnJlbnQBMQEwFCsDA2dnZ2RkAgsPFgIfAAWUHTx0YWJsZSBjbGFzcz0iYm94IiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQ+PHAgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPjxiPjxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5IdW1hblRpbWUtRnVuY3Rpb24tdG8tcmV0dXJuLWEtaHVtYW4tcmVhZGFibGUtZGF0ZS1hbmQtdGltZS1mcm9tLWEtdW5peHRpbWUtbnVtYmVyJmFtcDtSZXZpc2lvbj0wMDAwMCI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbjwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuSHVtYW5UaW1lLUZ1bmN0aW9uLXRvLXJldHVybi1hLWh1bWFuLXJlYWRhYmxlLWRhdGUtYW5kLXRpbWUtZnJvbS1hLXVuaXh0aW1lLW51bWJlciI+QmFjayB0byBQYWdlIEhpc3Rvcnk8L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IdW1hblRpbWUtRnVuY3Rpb24tdG8tcmV0dXJuLWEtaHVtYW4tcmVhZGFibGUtZGF0ZS1hbmQtdGltZS1mcm9tLWEtdW5peHRpbWUtbnVtYmVyLmFzaHgiPkN1cnJlbnQgUmV2aXNpb248L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAxOC8wNS8wMyAxNTo1NjwvaDM+PGJyIC8+VGhpcyBmdW5jdGlvbiByZXR1cm5zIGEgc3RyaW5nIHdoaWNoIGlzIHRoZSBjb21iaW5lZCBkYXRlIGFuZCB0aW1lIGZyb20gdGhlIHVuaXh0aW1lIG51bWJlciBwcm92aWRlZC4gSXQgaXMgdGhlIGNvdW50ZXJwYXJ0IG9mIHRoZSA8YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLlVuaXhUaW1lLW9yLUVwb2NoLVRpbWUuYXNoeCIgdGl0bGU9IlVuaXhUaW1lIG9yIEVwb2NoIFRpbWUiPlVuaXhUaW1lPC9hPiBmdW5jdGlvbiAtIEh1bWFudGltZSgpIGFuZCBVbml4dGltZSgpIHRyYW5zbGF0ZSBlYWNoLW90aGVycyBvdXRwdXRzLjxiciAvPjxiciAvPkEgZm9ybWF0IG9wdGlvbiBmb3JtYXRzIHRoZSBkYXRlIHBhcnQgYXMgZm9sbG93czo8YnIgLz48dWw+PGxpPkRELU1NLVlZWVkgd2hlbiBvcHQ9MCBvciBvbWl0dGVkICh0aGlzIG1hdGNoZXMgREFURSQpPC9saT48bGk+WVlZWS1NTS1ERCB3aGVuIG9wdDw+MCA8YnIgLz48L2xpPjwvdWw+PGJyIC8+VGhlIG9wdGlvbiBjYW4gYmUgb21pdHRlZCBpZiByZXF1aXJlZDxiciAvPjxiciAvPjxiPlN5bnRheDo8L2I+PGJyIC8+SHVtYW5UaW1lKHV0JiMwMDkxOyxvcHRpb24mIzAwOTM7KTxiciAvPjxiciAvPjxiPkV4YW1wbGUgVXNhZ2U6PC9iPjxiciAvPjxjb2RlPlByaW50IEh1bWFuVGltZSh1dF9mcm9tX2xvZywxKTwvY29kZT48YnIgLz5vcjxiciAvPjxjb2RlPlByaW50IEh1bWFuVGltZSh1dF9teV9iaXJ0aGRheSk8L2NvZGU+PGJyIC8+PGJyIC8+PGI+RGVwZW5kZW5jaWVzOjwvYj4gVGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgbXVzdCBiZSBpbmNsdWRlZCBpbiB5b3VyIHByb2dyYW0gZm9yIEh1bWFuVGltZSgpIHRvIHdvcmsgY29ycmVjdGx5Li4uPGJyIC8+PHVsPjxsaT48YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLklzTGVhcFllYXItRnVuY3Rpb24tdG8tZGV0ZXJtaW5lLWlmLXRoZS1naXZlbi15ZWFyLWlzLWEtTGVhcC1ZZWFyLW9uLXRoZS1HcmVnb3JpYW4td2VzdGVybi1jYWxlbmRhci5hc2h4IiB0aXRsZT0iSXNMZWFwWWVhciBGdW5jdGlvbiB0byBkZXRlcm1pbmUgaWYgdGhlIGdpdmVuIHllYXIgaXMgYSBMZWFwIFllYXIgb24gdGhlIEdyZWdvcmlhbiAod2VzdGVybikgY2FsZW5kYXIiPklzTGVhcFllYXIgRnVuY3Rpb248L2E+PC9saT48bGk+PGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5aUGFkLXBhZC1hLW51bWJlci13aXRoLWxlYWRpbmctemVyb2VzLmFzaHgiIHRpdGxlPSJaUGFkJCgpIC0gcGFkIGEgbnVtYmVyIHdpdGggbGVhZGluZyB6ZXJvZXMiPlpQYWQkPC9hPjxiciAvPjwvbGk+PC91bD48YnIgLz48YnIgLz48cHJlPg0KDQogIEZ1bmN0aW9uIEh1bWFuVGltZShVVCBBcyBJbnRlZ2VyLG9wdCBBcyBJbnRlZ2VyKSBBcyBTdHJpbmcNCiAgICAnIHRha2Ugc2Vjb25kcyBzaW5jZSAxOTcwLTAxLTAxICh1bml4dGltZSkgYW5kIGNvbnZlcnRzIHRvIGEgaHVtYW4gZm9ybSBkYXRlL3RpbWUgYXMNCiAgICAnIGlmIG9wdD0wIChvciBub3Qgc3BlY2lmaWVkKSB0aGUgZm9ybWF0IGlzIGRkLW1tLXl5eXkgaGgmIzU4O21tJiM1ODtzcyIgdG8gbWF0Y2ggdGhlIGZvcm1hdCBvZiBEQVRFJA0KICAgICcgaWYgb3B0Jmx0OyZndDswIHRoZSBkYXRlIHBhcnQgaXMgcmV0dXJuZWQgYXMgeXl5eS1tbS1kZCB0byBhaWQgc29ydGluZyBhbmQgYXZvaWQNCiAgICBMb2NhbCBpbnRlZ2VyIGQsbSxzLHkseg0KICAgIElmIFVUJmx0OzAgVGhlbiBIdW1hblRpbWUkPSIiJiM1ODtFeGl0IEZ1bmN0aW9uDQogICAgeT0xOTcwJiM1ODtkPVVUXDg2NDAwJiM1ODtzPVVUIE1vZCA4NjQwMA0KICAgIERvDQogICAgICB6PTM2NStJc0xlYXBZZWFyKHkpDQogICAgICBJZiBkJmd0Oz16IFRoZW4NCiAgICAgICAgZD1kLXomIzU4O3k9eSsxDQogICAgICBFbHNlDQogICAgICAgIEV4aXQgRG8NCiAgICAgIEVuZElmDQogICAgTG9vcA0KICAgICdoZXJlLCBZIGlzIHRoZSBjdXJyZW50IHllYXIgYW5kIGQgdGhlIHJlbWFpbmluZyBkYXlzDQogICAgbT0xJyBzdGFydCBhdCBqYW51YXJ5DQogICAgJyBkYXlzIGJldHdlZW4gdGhlIHN0YXJ0IG9mIHRoZSB5ZWFyIGFuZCB0aGUgY3VycmVudCBtb250aA0KICAgIERvDQogICAgICB6PTANCiAgICAgIFNlbGVjdCBDYXNlIG0NCiAgICAgICAgQ2FzZSAxLDMsNSw3LDgsMTANCiAgICAgICAgICBJZiBkJmd0Oz0zMSBUaGVuIGQ9ZC0zMSYjNTg7ej0xDQogICAgICAgIENhc2UgMg0KICAgICAgICAgIElmIElzTGVhcFllYXIoeSlUaGVuDQogICAgICAgICAgICBJZiBkJmd0Oz0yOSBUaGVuIGQ9ZC0yOSYjNTg7ej0xDQogICAgICAgICAgRWxzZQ0KICAgICAgICAgICAgSWYgZCZndDs9MjggVGhlbiBkPWQtMjgmIzU4O3o9MQ0KICAgICAgICAgIEVuZElmDQogICAgICAgIENhc2UgNCw2LDksMTENCiAgICAgICAgICBJZiBkJmd0Oz0zMCBUaGVuIGQ9ZC0zMCYjNTg7ej0xDQogICAgICBFbmQgU2VsZWN0DQoNCiAgICAgIElmIHo9MSBUaGVuDQogICAgICAgIG09bSsxDQogICAgICBFbHNlDQogICAgICAgIGQ9ZCsxJiM1ODtFeGl0IERvICdmaXJzdCBkYXkgaXMgMSBub3QgMA0KICAgICAgRW5kSWYNCiAgICBMb29wDQoNCiAgICBJZiBvcHQmbHQ7Jmd0OzAgVGhlbg0KICAgICAgSHVtYW5UaW1lJD1TdHIkKHkpKyItIitaUGFkJChtLDIpKyItIitaUGFkJChkLDIpDQogICAgRWxzZQ0KICAgICAgSHVtYW5UaW1lJD1aUGFkJChkLDIpKyItIitaUGFkJChtLDIpKyItIitTdHIkKHkpDQogICAgRW5kSWYNCiAgICB5PXNcMzYwMCYjNTg7cz1zLXkmIzQyOzM2MDANCiAgICBtPXNcNjAmIzU4O3M9cy1tJiM0Mjs2MA0KICAgIEh1bWFuVGltZSQ9SHVtYW5UaW1lJCsiICIrWlBhZCQoeSwyKSsiJiM1ODsiK1pQYWQkKG0sMikrIiYjNTg7IitaUGFkJChzLDIpDQogIEVuZCBGdW5jdGlvbg0KPC9wcmU+PGJyIC8+PGI+U2VlIEFsc288L2I+OjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5Vbml4VGltZS1vci1FcG9jaC1UaW1lLmFzaHgiIHRpdGxlPSJVbml4VGltZSBvciBFcG9jaCBUaW1lIj5Vbml4VGltZSgpPC9hPjxiciAvPmRkXfoV45x5R4nRlGKsBc+C8jBSVJc=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwLx+qrZCgK9z/TSAwKiz/TSAwK3j57gBwLC5ta/BQLd5ta/BQL9yYWiCZOWR597AhDhXDn8KxjAXT1Mr3zq" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login4031.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number%26Revision%3d00001" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: HumanTime() Function to return a human readable date and time from a unixtime number</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.Historyb8cb.html?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number&amp;Revision=00000">&laquo; Older Revision</a> - <a href="MMBasic.History82fa.html?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number">Back to Page History</a> - <a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html">Current Revision</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/05/03 15:56</h3><br />This function returns a string which is the combined date and time from the unixtime number provided. It is the counterpart of the <a class="pagelink" target="_blank" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a> function - Humantime() and Unixtime() translate each-others outputs.<br /><br />A format option formats the date part as follows:<br /><ul><li>DD-MM-YYYY when opt=0 or omitted (this matches DATE$)</li><li>YYYY-MM-DD when opt<>0 <br /></li></ul><br />The option can be omitted if required<br /><br /><b>Syntax:</b><br />HumanTime(ut&#0091;,option&#0093;)<br /><br /><b>Example Usage:</b><br /><code>Print HumanTime(ut_from_log,1)</code><br />or<br /><code>Print HumanTime(ut_my_birthday)</code><br /><br /><b>Dependencies:</b> The following functions must be included in your program for HumanTime() to work correctly...<br /><ul><li><a class="pagelink" target="_blank" href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function</a></li><li><a class="pagelink" target="_blank" href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$</a><br /></li></ul><br /><br /><pre>
+
+  Function HumanTime(UT As Integer,opt As Integer) As String
+    ' take seconds since 1970-01-01 (unixtime) and converts to a human form date/time as
+    ' if opt=0 (or not specified) the format is dd-mm-yyyy hh&#58;mm&#58;ss" to match the format of DATE$
+    ' if opt&lt;&gt;0 the date part is returned as yyyy-mm-dd to aid sorting and avoid
+    Local integer d,m,s,y,z
+    If UT&lt;0 Then HumanTime$=""&#58;Exit Function
+    y=1970&#58;d=UT\86400&#58;s=UT Mod 86400
+    Do
+      z=365+IsLeapYear(y)
+      If d&gt;=z Then
+        d=d-z&#58;y=y+1
+      Else
+        Exit Do
+      EndIf
+    Loop
+    'here, Y is the current year and d the remaining days
+    m=1' start at january
+    ' days between the start of the year and the current month
+    Do
+      z=0
+      Select Case m
+        Case 1,3,5,7,8,10
+          If d&gt;=31 Then d=d-31&#58;z=1
+        Case 2
+          If IsLeapYear(y)Then
+            If d&gt;=29 Then d=d-29&#58;z=1
+          Else
+            If d&gt;=28 Then d=d-28&#58;z=1
+          EndIf
+        Case 4,6,9,11
+          If d&gt;=30 Then d=d-30&#58;z=1
+      End Select
+
+      If z=1 Then
+        m=m+1
+      Else
+        d=d+1&#58;Exit Do 'first day is 1 not 0
+      EndIf
+    Loop
+
+    If opt&lt;&gt;0 Then
+      HumanTime$=Str$(y)+"-"+ZPad$(m,2)+"-"+ZPad$(d,2)
+    Else
+      HumanTime$=ZPad$(d,2)+"-"+ZPad$(m,2)+"-"+Str$(y)
+    EndIf
+    y=s\3600&#58;s=s-y&#42;3600
+    m=s\60&#58;s=s-m&#42;60
+    HumanTime$=HumanTime$+" "+ZPad$(y,2)+"&#58;"+ZPad$(m,2)+"&#58;"+ZPad$(s,2)
+  End Function
+</pre><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime()</a><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:08:32 GMT -->
+</html>

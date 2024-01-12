@@ -1,0 +1,94 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.BLITDEMO-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	BLITDEMO.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.BLITDEMO-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFhRM8aDEgY2xhc3M9InBhZ2V0aXRsZSI+QkxJVERFTU8uQkFTPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzoyMSBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEdyYXBoaWNzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IFRoZSByZXF1aXJlZCBTQ1JFRU4uQk1QIGlzIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPjxwcmU+DQonJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQonDQonICAgICAgICAgICBCIEwgSSBUICAgRCBFIE0gTw0KJw0KJyBBIGRlbW9uc3RyYXRpb24gb2YgdGhlIEJMSVQgY29tbWFuZA0KJw0KJyAgICAgICAgIGJ5IE5pY2tvbGFzIE1hcmVudGVzDQonDQonJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQoNCkxvYWRCTVAgInNjcmVlbi5ibXAiDQpDb2xvciA0DQp5PTE1OQ0KDQoNCkxPT1BTVEFSVCYjNTg7DQpUaW1lcj0wDQoNCicgU0NST0xMSU5HIFBMT1QgV0lORE9XDQoNClBpeGVsKDQ1Myx5KT0yDQpyPVJuZA0KSWYgciZndDsuNzUgQW5kIHkmbHQ7MjE4IFRoZW4geT15KzQmIzU4O0dvVG8gU0NST0xMDQpJZiByJmx0Oy4yNSBBbmQgeSZndDsxMDAgVGhlbiB5PXktNCYjNTg7R29UbyBTQ1JPTEwNCklmIHkmbHQ7MTU5IFRoZW4geT15KzEmIzU4O0dvVG8gU0NST0xMDQpJZiB5Jmd0OzE1OSBUaGVuIHk9eS0xDQoNClNDUk9MTCYjNTg7DQpMaW5lIC0oNDUzLHkpLDINCkJMSVQgMjksOTUsMjgsOTUsNDI2LDEzMCxHDQoNCg0KJyBTQ1JPTExJTkcgVEVYVCBXSU5ET1cNCg0KSWYgdD0wIFRoZW4gR29UbyBUWEENCnQ9dC0xDQpJZiB0Jmx0OzggVGhlbiBHb1RvIENMUk1JWA0KQkxJVCAyNywyNTcsMjcsMjU1LDE4MiwxNTYNCkdvVG8gQ0xSTUlYDQoNClRYQSYjNTg7DQpDb2xvciBSbmQmIzQyOzcNClByaW50QCgzNSw0MDApIkEgc2Nyb2xsaW5nIHRleHQgd2luZG93Ig0KdD0xNQ0KDQoNCicgUkdCIENPTE9SIE1JWElORw0KDQpDTFJNSVgmIzU4Ow0KSWYgYyZndDsxMTAgVGhlbiBHb1RvIENMQQ0KQkxJVCAyNjYsMzA1LDI2NywzMDUsMTU4LDQ0LFINCkJMSVQgMjY3LDMwNSwyNjYsMzA1LDE1OCw0NCxCDQpHb1RvIENMQg0KDQpDTEEmIzU4Ow0KQkxJVCAyNjYsMzA1LDI2NywzMDUsMTU4LDQ0LEINCkJMSVQgMjY3LDMwNSwyNjYsMzA1LDE1OCw0NCxSDQoNCkNMQiYjNTg7DQpjPWMrMQ0KSWYgYyZndDsyMjEgVGhlbiBjPTANCg0KDQpEbyBXaGlsZSBUaW1lciZsdDs0MCYjNTg7TG9vcA0KR29UbyBMT09QU1RBUlQNCg0KPC9wcmU+ZGTGKACGYjYX97r/e8IyynlpX677ZQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">BLITDEMO.BAS</h1><small>Modified on 2016/12/23 23:21 by Administrator &mdash; Categorized as: Graphics, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required SCREEN.BMP is available in the attachments tab (top right).<br /><br /><pre>
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'
+'           B L I T   D E M O
+'
+' A demonstration of the BLIT command
+'
+'         by Nickolas Marentes
+'
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+LoadBMP "screen.bmp"
+Color 4
+y=159
+
+
+LOOPSTART&#58;
+Timer=0
+
+' SCROLLING PLOT WINDOW
+
+Pixel(453,y)=2
+r=Rnd
+If r&gt;.75 And y&lt;218 Then y=y+4&#58;GoTo SCROLL
+If r&lt;.25 And y&gt;100 Then y=y-4&#58;GoTo SCROLL
+If y&lt;159 Then y=y+1&#58;GoTo SCROLL
+If y&gt;159 Then y=y-1
+
+SCROLL&#58;
+Line -(453,y),2
+BLIT 29,95,28,95,426,130,G
+
+
+' SCROLLING TEXT WINDOW
+
+If t=0 Then GoTo TXA
+t=t-1
+If t&lt;8 Then GoTo CLRMIX
+BLIT 27,257,27,255,182,156
+GoTo CLRMIX
+
+TXA&#58;
+Color Rnd&#42;7
+Print@(35,400)"A scrolling text window"
+t=15
+
+
+' RGB COLOR MIXING
+
+CLRMIX&#58;
+If c&gt;110 Then GoTo CLA
+BLIT 266,305,267,305,158,44,R
+BLIT 267,305,266,305,158,44,B
+GoTo CLB
+
+CLA&#58;
+BLIT 266,305,267,305,158,44,B
+BLIT 267,305,266,305,158,44,R
+
+CLB&#58;
+c=c+1
+If c&gt;221 Then c=0
+
+
+Do While Timer&lt;40&#58;Loop
+GoTo LOOPSTART
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.BLITDEMO-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:01 GMT -->
+</html>

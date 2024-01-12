@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Function-to-Test-a-DateTime-to-see-if-Daylight-Savings-should-be-applied by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	IsDST - Function to Test a DateTime to see if Daylight Savings should be applied - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Function-to-Test-a-DateTime-to-see-if-Daylight-Savings-should-be-applied" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFrSc8aDEgY2xhc3M9InBhZ2V0aXRsZSI+SXNEU1QgLSBGdW5jdGlvbiB0byBUZXN0IGEgRGF0ZVRpbWUgdG8gc2VlIGlmIERheWxpZ2h0IFNhdmluZ3Mgc2hvdWxkIGJlIGFwcGxpZWQ8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIwLzA3LzIxIDA4OjExIGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBEYXRlcywgVGltZSBhbmQgQ2xvY2tzLCBFbmNvZGUgYW5kIERlY29kZSwgTWF0aHMsIFN0cmluZ3MsIFRpbWVyczwvc21hbGw+PGJyIC8+PGJyIC8+U3lzdGVtIGNsb2NrcyBhcmUgYmVzdCBydW4gYXQgYSBsb2NhbCB0aW1lIHRoYXQgaXNuJ3QgaW5mbHVlbmNlZCBieSBEYXlsaWdodCBTYXZpbmdzIFRpbWUgKERTVCkuIEluIHRoZSBVSywgd2UgYXJlIGZvcnR1bmF0ZSBlbm91Z2ggdG8gaGF2ZSBvdXIgYmFzaWMgdGltZSBhcyBVVEMuIDxiciAvPjxiciAvPkhhdmluZyB0aW1lcyBtb3ZlIGFib3V0IGNhbiBiZSBxdWl0ZSBkaXNjb25jZXJ0aW5nLCBlc3BlY2lhbGx5IHdoZW4gbG9nZ2luZy4gU2VlaW5nIHNldmVyYWwgZW50cmllcyB3aXRoIHRoZSBzYW1lIHRpbWUgYXJvdW5kIHRoZSBlbmQgb2YgT2N0b2JlciBjYW4gY2F1c2UgcXVpdGUgYSBiaXQgb2YgY29uZnVzaW9uLiBDb25zZXF1ZW50bHksIGl0IGlzIHF1aXRlIHVzdWFsIHRvIHJ1biBzeXN0ZW1zIG9uIGEgdGltZSBiYXNlIHRoYXQgZG9lcyBub3QgaW5jbHVkZSBEU1QgLSB0aGlzIGNvdWxkIGJlIEdNVCBvciB5b3VyIG93biBmbGF2b3VyLCBvciBldmVuIFVUQywgaG93ZXZlciBVVEMgY2FuIGNhdXNlIGRpZmZpY3VsdHkgd2hlbiB0aGUgbG9jYWwgdGltZSBpcyBjb25zaWRlcmFibHkgZGlmZmVyZW50LjxiciAvPjxiciAvPldoZW4gdXNpbmcgYSBsb2NhbCB0aW1lIHdpdGhvdXQgRFNULCBhY3R1YWxseSBkaXNwbGF5aW5nIGxvY2FsIHRpbWUgY2FuIGFsc28gYmUgY29uZnVzaW5nIGluIHRoZSBEU1QgcGVyaW9kIHdoZW4gdGhlIGNsb2NrIHdpbGwgYXBwZWFyIHRvIGJlIGFuIGhvdXIgc2xvdyBhbmQgc2V0dGluZyBhbGFybXMgZXRjIGlzIHByb2JsZW1hdGljIGJlY2F1c2UgdGhlIGhvdXIgZGlmZmVyZW5jZSBpcyBvZnRlbiBmb3Jnb3R0ZW4uPGJyIC8+PGJyIC8+QmVsb3cgaXMgYSBGdW5jdGlvbiAoYW5kIGl0cyBhdHRlbmRhbnQgc3VwcG9ydCBmdW5jdGlvbnMpIHRoYXQgd2lsbCBjYWxjdWxhdGUgYSBzaW1wbGUgYm9vbGVhbiAoYWN0dWFsbHkgYW4gaW50ZWdlcikgYW5zd2VyIGZvciBpZiBhIGdpdmVuIERhdGVUaW1lIHNob3VsZCBiZSBzdWJqZWN0IHRvIERTVC4gU28gbm93IHlvdSBjYW4gcnVuIGFsbCB5b3VyIHN5c3RlbSB0aW1lcyBpbiBHTVQgb3Igd2hhdGV2ZXIgYW5kIG9ubHkgYWRkLW9uIHRoZSBEU1Qgd2hlbiB5b3Ugd2FudCB0byBkaXNwbGF5IGl0IHRvIGZhbGxpYmxlIGh1bWFucy48YnIgLz48YnIgLz5EYXlsaWdodCBzYXZpbmcgdGltZSBoZXJlIGluIHRoZSBVSyBpcyB0ZXJtZWQgQlNUIChCcml0aXNoIFN1bW1lciBUaW1lKSBhbmQgaXMgb25lIGhvdXIgYWhlYWQgb2YgR01UIGZyb20gMDI6MDAgb24gdGhlIGxhc3QgU3VuZGF5IG9mIE1hcmNoIHVudGlsIDAyOjAwIG9uIHRoZSBsYXN0IFN1bmRheSBvZiBPY3RvYmVyLiBUaGUgcHJvYmxlbSBpcyB0aGF0IHRoZXNlIFN1bmRheXMgYWx3YXlzIG1vdmUgYWJvdXQuIFRoZSBGdW5jdGlvbiB0YWtlcyB0aGlzIGludG8gYWNjb3VudCB3aXRoIHNldmVyYWwgc2hvcnRjdXRzLCBvbmx5IGRvaW5nIGNhbGN1bGF0aW9uIHdoZW4gaXQgaXMgbmVjZXNzYXJ5LjxiciAvPjxiciAvPlRoZSBzdXBwb3J0IEZ1bmN0aW9ucyBpbmNsdWRlIGEgbW9kaWZpZWQgZm9ybSBvZiB0aGUgRGF5LW9mLVdlZWsgZnVuY3Rpb24gZm91bmQgZWxzZXdoZXJlIGluIHRoaXMgc2VjdGlvbi48YnIgLz48YnIgLz5Gb3IgYWNjdXJhdGUgZnVuY3Rpb24sIGl0IGlzIG5lY2Vzc2FyeSB0byBwYXNzIERhdGVUaW1lcyB0aGF0IGRvIG5vdCBhbHJlYWR5IGhhdmUgYSBEU1QgY29tcG9uZW50LjxiciAvPjxiciAvPkEgYnJpZWYgZXhwbGFuYXRpb24gb2YgdGhlIGFsZ29yaXRobTo8YnIgLz5Nb250aHMgNCw1LDYsNyw4LDkgYXJlIHN1YmplY3QgdG8gRFNULCBzbyBpZiB0aGUgZ2l2ZW4gZGF0ZSBpcyBpbiBvbmUgb2YgdGhlbSB3ZSBxdWlja2x5IHJldHVybiBhIDEgKERTVCBhcHBsaWVzKS4gTGlrZXdpc2UsIGFsbCBkYXRlcyBpbiBtb250aHMgMSwyLDExLDEyIGRvIG5vdCBoYXZlIERTVCBzbyB3ZSByZXR1cm4gYSAwIChEU1QgZG9lcyBub3QgYXBwbHkpLiBJbiBVSywgRFNUIGNoYW5nZXMgb24gdGhlIGxhc3QgU3VuZGF5IG9mIG1vbnRocyAzIGFuZCAxMCBhbmQgaXQgZm9sbG93cyB0aGF0IG11c3Qgb2NjdXIgc29tZXRpbWUgaW4gdGhlIGxhc3Qgd2VlayBvZiB0aG9zZSBtb250aHM7IGVhY2ggb2Ygd2hpY2ggaGFzIDMxIGRheXMuIDMxLTcgPSAyNCwgdGh1cyBJZiB0aGUgZGF0ZSBpcyBiZWZvcmUgdGhlIDI1dGggd2UgY2FuIHF1aWNrbHkgZGVkdWNlIHRoYXQgRFNUIGRvZXMgb3IgZG9lcyBub3QgYXBwbHkuIEZvciB0aGUgcmVtYWluaW5nIHdlZWsgaW4gdGhvc2UgbW9udGhzLCB3ZSBzZWVrIHRoZSBTdW5kYXkgYnkgdGFraW5nIHRoZSAyNXRoIGRheSAodGhlIGZpcnN0IHRoYXQgY291bGQgYmUgYSBTdW5kYXkpIGFuZCBkZXRlcm1pbmluZyBpdHMgZGF5IG9mIHRoZSB3ZWVrIG51bWJlci4gV2Ugc3VidHJhY3QgdGhpcyBmcm9tIDcgYW5kIHRoZSByZXN1bHQgaXMgdGhlIG51bWJlciBvZiBkYXlzIHdlIG11c3QgYWRkIHRvIGp1bXAgdG8gdGhlIHJlYWwgZGF0ZSBvZiB0aGUgU3VuZGF5LiBJdCBpcyB0aGVuIGEgc2ltcGxlIGNhc2UgY29tcGFyaW5nIHRoZSB1bml4dGltZXMgb2YgMmFtIG9uIHRoYXQgU3VuZGF5IHdpdGggdGhlIHN1cHBsaWVkIGRhdGUgKHVzaW5nIHVuaXh0aW1lcyBhdm9pZHMgYWxsIHRoZSBmYWZmIGFzc29jaWF0ZWQgd2l0aCBkYXRlIHN0cmluZ3MpLjxiciAvPjxiciAvPklmIHRoZSBwb2ludHMgYXQgd2hpY2ggRFNUIGZvciB5b3VyIHJlZ2lvbiBhcmUgZGlmZmVyZW50LCBpdCBzaG91bGRuJ3QgYmUgdG9vIGhhcmQgdG8gdHdlYWsgdGhlIGZ1bmN0aW9uIHRvIHlvdXIgb3duIHJlcXVpcmVtZW50cy48YnIgLz48YnIgLz48Yj5EZXBlbmRlbmNpZXM6PC9iPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5aUGFkLXBhZC1hLW51bWJlci13aXRoLWxlYWRpbmctemVyb2VzLmFzaHgiIHRpdGxlPSJaUGFkJCgpIC0gcGFkIGEgbnVtYmVyIHdpdGggbGVhZGluZyB6ZXJvZXMiPlpQYWQkKCkgLSBwYWQgYSBudW1iZXIgd2l0aCBsZWFkaW5nIHplcm9lczwvYT48YnIgLz48YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuVW5peFRpbWUtb3ItRXBvY2gtVGltZS5hc2h4IiB0aXRsZT0iVW5peFRpbWUgb3IgRXBvY2ggVGltZSI+VW5peFRpbWUgb3IgRXBvY2ggVGltZTwvYT48YnIgLz48YnIgLz48Yj5TeW50YXg6PC9iPjxiciAvPj1Jc0RTVChEYXRlVGltZSk8YnIgLz48YnIgLz48Yj5FeGFtcGxlczo8L2I+PGJyIC8+SWYgSXNEU1QoIjAxLTAxLTE5NzAgMDA6MDA6MDAiKSBUaGVuIC4uLjxiciAvPmhvdXI9aG91citJc0RTVChOb3coKSk8YnIgLz48YnIgLz48YnIgLz48cHJlPglGdW5jdGlvbiBJc0RTVChkJCkgQXMgSW50ZWdlcg0KCQlTZWxlY3QgQ2FzZSBWYWwoTWlkJChkJCw0LDIpKScgZXh0cmFjdCB0aGUgbW9udGggbnVtYmVyDQoJCQlDYXNlIDQgVG8gOScgc3VtbWVyIG1vbnRocywgZWFybHkgYmF0aA0KCQkJCUlzRFNUPTEgDQoJCQlDYXNlIDEsMiwxMSwxMicgd2ludGVyIG1vbnRocywgZWFybHkgYmF0aA0KCQkJCUlzRFNUPTANCgkJCUNhc2UgMw0KCQkJCUlmIFZhbChMZWZ0JChkJCwyKSkmbHQ7MjUgVGhlbicgc3RpbGwgd2ludGVyLCBlYXJseSBiYXRoDQoJCQkJCUlzRFNUPTANCgkJCQlFbHNlDQoJCQkJCUlzRFNUPU5vdChVbml4VGltZShkJCkmbHQ7VW5peFRpbWUoRmluZExhc3RTdW5kYXkoZCQpKSkgJ2NvbXBhcmUgdGhlIHR3byB1bml4dGltZXMNCgkJCQlFbmRJZg0KCQkJQ2FzZSAxMA0KCQkJCUlmIFZhbChMZWZ0JChkJCwyKSkmbHQ7MjUgVGhlbicgc3RpbGwgc3VtbWVyLCBlYXJseSBiYXRoDQoJCQkJCUlzRFNUPTENCgkJCQlFbHNlDQoJCQkJCUlzRFNUPShVbml4VGltZShkJCkmbHQ7VW5peFRpbWUoRmluZExhc3RTdW5kYXkoZCQpKSkgJ2NvbXBhcmUgdGhlIHR3byB1bml4dGltZXMNCgkJCQlFbmRJZg0KCQlFbmQgU2VsZWN0DQoJRW5kIEZ1bmN0aW9uDQoJDQoJRnVuY3Rpb24gRmluZExhc3RTdW5kYXkoZCQpIEFzIFN0cmluZw0KCQlMb2NhbCBhJA0KCQlhJD0iMjUiK01pZCQoZCQsMyw5KSsiMDImIzU4OzAwJiM1ODswMCInIHN0YXJ0aW5nIGZyb20gbWlkbmlnaHQgb24gdGhlIDI1dGggLSB0aGUgZWFybGllc3QgcG9zc2libGUgU3VuZGF5ICh3aXRoIGVtYmVkZGVkIHRpbWUgd2hlbiBEU1QgY2hhbmdlcykNCgkJRmluZExhc3RTdW5kYXk9WlBhZCQoMjUrKCg3LURvdyhhJCkpIE1vZCA3KSwyKStNaWQkKGEkLDMpJyBhZGQgdGhlIGRpZmZlcmVuY2UgaW4gdGhlIGRheSBudW1iZXIgYW5kIGdlbmVyYXRlIHRoZSB0cnVlIGNoYW5nZSBkYXRldGltZQ0KCUVuZCBGdW5jdGlvbg0KCQ0KCScwPVN1bg0KCUZ1bmN0aW9uIERvdyhkdCQpIEFzIEludGVnZXINCgkJTG9jYWwgSW50ZWdlciBtLGQseQ0KCQlkPVZhbChMZWZ0JChkdCQsMikpDQoJCW09VmFsKE1pZCQoZHQkLDQsMikpDQoJCXk9VmFsKE1pZCQoZHQkLDcsNCkpDQoJCUlmIG0mbHQ7MyBUaGVuDQoJCQltPW0rMTINCgkJCXk9eS0xDQoJCUVuZCBJZg0KCQlkb3c9KGQrKCgyNiYjNDI7bSsxKS8xMCktKDImIzQyOyh5XDEwMCkpK3krKHlcNCkrKHlcNDAwKSkgTW9kIDcNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiPlNlZSBBbHNvOjwvYj48YnIgLz48YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuTm93LUZ1bmN0aW9uLVZCLXdvcmstYS1saWtlLmFzaHgiIHRpdGxlPSJOb3coKSBGdW5jdGlvbiAoVkIgd29yay1hLWxpa2UpICI+Tm93KCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKTwvYT5kZGJMMubftezyMaZGuZ7epJp8AQu3" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">IsDST - Function to Test a DateTime to see if Daylight Savings should be applied</h1><small>Modified on 2020/07/21 08:11 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks, Encode and Decode, Maths, Strings, Timers</small><br /><br />System clocks are best run at a local time that isn't influenced by Daylight Savings Time (DST). In the UK, we are fortunate enough to have our basic time as UTC. <br /><br />Having times move about can be quite disconcerting, especially when logging. Seeing several entries with the same time around the end of October can cause quite a bit of confusion. Consequently, it is quite usual to run systems on a time base that does not include DST - this could be GMT or your own flavour, or even UTC, however UTC can cause difficulty when the local time is considerably different.<br /><br />When using a local time without DST, actually displaying local time can also be confusing in the DST period when the clock will appear to be an hour slow and setting alarms etc is problematic because the hour difference is often forgotten.<br /><br />Below is a Function (and its attendant support functions) that will calculate a simple boolean (actually an integer) answer for if a given DateTime should be subject to DST. So now you can run all your system times in GMT or whatever and only add-on the DST when you want to display it to fallible humans.<br /><br />Daylight saving time here in the UK is termed BST (British Summer Time) and is one hour ahead of GMT from 02:00 on the last Sunday of March until 02:00 on the last Sunday of October. The problem is that these Sundays always move about. The Function takes this into account with several shortcuts, only doing calculation when it is necessary.<br /><br />The support Functions include a modified form of the Day-of-Week function found elsewhere in this section.<br /><br />For accurate function, it is necessary to pass DateTimes that do not already have a DST component.<br /><br />A brief explanation of the algorithm:<br />Months 4,5,6,7,8,9 are subject to DST, so if the given date is in one of them we quickly return a 1 (DST applies). Likewise, all dates in months 1,2,11,12 do not have DST so we return a 0 (DST does not apply). In UK, DST changes on the last Sunday of months 3 and 10 and it follows that must occur sometime in the last week of those months; each of which has 31 days. 31-7 = 24, thus If the date is before the 25th we can quickly deduce that DST does or does not apply. For the remaining week in those months, we seek the Sunday by taking the 25th day (the first that could be a Sunday) and determining its day of the week number. We subtract this from 7 and the result is the number of days we must add to jump to the real date of the Sunday. It is then a simple case comparing the unixtimes of 2am on that Sunday with the supplied date (using unixtimes avoids all the faff associated with date strings).<br /><br />If the points at which DST for your region are different, it shouldn't be too hard to tweak the function to your own requirements.<br /><br /><b>Dependencies:</b><br /><a class="pagelink" href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$() - pad a number with leading zeroes</a><br /><a class="pagelink" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><br /><br /><b>Syntax:</b><br />=IsDST(DateTime)<br /><br /><b>Examples:</b><br />If IsDST("01-01-1970 00:00:00") Then ...<br />hour=hour+IsDST(Now())<br /><br /><br /><pre>	Function IsDST(d$) As Integer
+		Select Case Val(Mid$(d$,4,2))' extract the month number
+			Case 4 To 9' summer months, early bath
+				IsDST=1 
+			Case 1,2,11,12' winter months, early bath
+				IsDST=0
+			Case 3
+				If Val(Left$(d$,2))&lt;25 Then' still winter, early bath
+					IsDST=0
+				Else
+					IsDST=Not(UnixTime(d$)&lt;UnixTime(FindLastSunday(d$))) 'compare the two unixtimes
+				EndIf
+			Case 10
+				If Val(Left$(d$,2))&lt;25 Then' still summer, early bath
+					IsDST=1
+				Else
+					IsDST=(UnixTime(d$)&lt;UnixTime(FindLastSunday(d$))) 'compare the two unixtimes
+				EndIf
+		End Select
+	End Function
+	
+	Function FindLastSunday(d$) As String
+		Local a$
+		a$="25"+Mid$(d$,3,9)+"02&#58;00&#58;00"' starting from midnight on the 25th - the earliest possible Sunday (with embedded time when DST changes)
+		FindLastSunday=ZPad$(25+((7-Dow(a$)) Mod 7),2)+Mid$(a$,3)' add the difference in the day number and generate the true change datetime
+	End Function
+	
+	'0=Sun
+	Function Dow(dt$) As Integer
+		Local Integer m,d,y
+		d=Val(Left$(dt$,2))
+		m=Val(Mid$(dt$,4,2))
+		y=Val(Mid$(dt$,7,4))
+		If m&lt;3 Then
+			m=m+12
+			y=y-1
+		End If
+		dow=(d+((26&#42;m+1)/10)-(2&#42;(y\100))+y+(y\4)+(y\400)) Mod 7
+	End Function
+</pre><br /><b>See Also:</b><br /><a class="pagelink" href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like)</a>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Function-to-Test-a-DateTime-to-see-if-Daylight-Savings-should-be-applied by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:15 GMT -->
+</html>

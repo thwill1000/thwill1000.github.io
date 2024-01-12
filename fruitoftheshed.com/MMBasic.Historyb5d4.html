@@ -1,0 +1,137 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Factus-Comb-Sort-for-strings&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:44:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Factus-Comb-Sort-for-strings&amp;Revision=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAUjUGFnZSBIaXN0b3J5OiBDb21iIFNvcnQgZm9yIHN0cmluZ3NkAgUPEGQQFQEBMBUBATAUKwMBZ2RkAgcPEGQQFQIHQ3VycmVudAEwFQIHQ3VycmVudAEwFCsDAmdnZGQCCw8WAh8ABaALPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5GYWN0dXMtQ29tYi1Tb3J0LWZvci1zdHJpbmdzIj5CYWNrIHRvIFBhZ2UgSGlzdG9yeTwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLkZhY3R1cy1Db21iLVNvcnQtZm9yLXN0cmluZ3MuYXNoeCI+Q3VycmVudCBSZXZpc2lvbjwvYT48L2I+PC9wPjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPjxoMyBjbGFzcz0ic2VwYXJhdG9yIj5QYWdlIFJldmlzaW9uOiAyMDE3LzA4LzEwIDE5OjIyPC9oMz48YnIgLz5Bbm90aGVyIHNvcnQgcm91dGluZTxiciAvPjxiciAvPm9yaWdpbmFsbHkgcHVibGlzaGVkIDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHA6Ly93d3cudGhlYmFja3NoZWQuY29tL2ZvcnVtL2ZvcnVtX3Bvc3RzLmFzcD9USUQ9NzMxMSZhbXA7VFBOPTMiIHRpdGxlPSJodHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTczMTEmVFBOPTMiIHRhcmdldD0iX2JsYW5rIj5odHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTczMTEmVFBOPTM8L2E+IGFuZCB0d2Vha2VkIHNsaWdodGx5IGZvciBNTUJhc2ljIHN5bnRheDxiciAvPjxiciAvPjxiPkNyZWRpdDwvYj46IHR3b2ZpbmdlcnM8YnIgLz48YnIgLz48cHJlPg0KJyBDb21iIFNvcnQNCicgYW4gb3B0aW1pemVkICg4LzIwMTcgYnkgdHdvZmluZ2Vyc0BUQlMpIHZlcnNpb24gb2YgYUNvbWJTb3J0IGZvciBzdHJpbmdzLg0KJyBJdCBzb3J0cyB0aGUgYXJyYXkgUyQoKSBhbmQgbmVlZHMgdGhlIG51bWJlciBvZiBlbGVtZW50cyB0byBzb3J0IChTVG9wKQ0KJyBVc2FnZSYjNTg7IENvbWJTb3J0IFNUb3ANCicNCicgSXQgdGFrZXMgMzMwbXMgKG9yIGxlc3MpIGZvciBhbiBhcnJheSBvZiAxMDAgZWxlbWVudHMNCicgU3lzdGVtJiM1ODsgTU0yLzQ4TUh6L01NQmFzaWMgNS4wNC4wNQ0KJw0KU3ViIENvbWJTb3J0KFNUb3ApDQpMb2NhbCBzdHJpbmcgTSQNCkxvY2FsIGludGVnZXIgaSwgaCwgVD0xLCBGPTAsIHN3DQpMb2NhbCBmbG9hdCBHYXA9U1RvcCwgU2hyaW5rPTEuMw0KDQpEbyBXaGlsZSBHYXAmZ3Q7MSBPciBTdw0KICBHYXA9SW50KEdhcC9TaHJpbmspDQogIElmIEdhcCZsdDsxIFRoZW4gR2FwPTENCiAgaT0xJiM1ODtTdz1GDQogIEZvciBoPWkrR2FwIFRvIFNUb3ANCiAgICBJZiBTJChpKSZndDtTJChoKSBUaGVuDQogICAgICAgTSQ9UyQoaSkmIzU4O1MkKGkpPVMkKGgpJiM1ODtTJChoKT1NJCYjNTg7U3c9VA0KICAgIEVuZElmDQogICAgaT1pKzENCiAgTmV4dA0KTG9vcA0KRW5kIFN1Yg0KPC9wcmU+ZGTklbXhNxTgGJ06+MlaIC9E+YnMzw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQKKupGpDgKiz/TSAwK3j57gBwLd5ta/BQL9yYWiCYjjFPY4wyHuIfmxeeOOPuiU6JU2" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Logina93d.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Factus-Comb-Sort-for-strings%26Revision%3d0" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Comb Sort for strings</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b>&laquo; Older Revision - <a href="MMBasic.History1a8e.html?Page=MMBasic.Factus-Comb-Sort-for-strings">Back to Page History</a> - <a href="MMBasic.Factus-Comb-Sort-for-strings.html">Current Revision</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2017/08/10 19:22</h3><br />Another sort routine<br /><br />originally published <a class="externallink" href="http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&amp;TPN=3" title="http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&TPN=3" target="_blank">http://www.thebackshed.com/forum/forum_posts.asp?TID=7311&TPN=3</a> and tweaked slightly for MMBasic syntax<br /><br /><b>Credit</b>: twofingers<br /><br /><pre>
+' Comb Sort
+' an optimized (8/2017 by twofingers@TBS) version of aCombSort for strings.
+' It sorts the array S$() and needs the number of elements to sort (STop)
+' Usage&#58; CombSort STop
+'
+' It takes 330ms (or less) for an array of 100 elements
+' System&#58; MM2/48MHz/MMBasic 5.04.05
+'
+Sub CombSort(STop)
+Local string M$
+Local integer i, h, T=1, F=0, sw
+Local float Gap=STop, Shrink=1.3
+
+Do While Gap&gt;1 Or Sw
+  Gap=Int(Gap/Shrink)
+  If Gap&lt;1 Then Gap=1
+  i=1&#58;Sw=F
+  For h=i+Gap To STop
+    If S$(i)&gt;S$(h) Then
+       M$=S$(i)&#58;S$(i)=S$(h)&#58;S$(h)=M$&#58;Sw=T
+    EndIf
+    i=i+1
+  Next
+Loop
+End Sub
+</pre>
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Factus-Comb-Sort-for-strings&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:44:17 GMT -->
+</html>

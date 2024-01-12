@@ -1,0 +1,29 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.LBOUND-Lower-boundary-of-an-Array by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	LBOUND Lower boundary of an Array. A work-around - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.LBOUND-Lower-boundary-of-an-Array" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFiQc8aDEgY2xhc3M9InBhZ2V0aXRsZSI+TEJPVU5EIExvd2VyIGJvdW5kYXJ5IG9mIGFuIEFycmF5LiBBIHdvcmstYXJvdW5kPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8xNyAxOTo1NSBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogQXJyYXlzPC9zbWFsbD48YnIgLz48YnIgLz5MQk9VTkQoKSByZXR1cm5zIHRoZSBudW1iZXIgb2YgdGhlIGxvd2VzdCBhcnJheSBlbGVtZW50LiBJdCBpcyBjb21tb24gaW4gdGhlIE1pY3Jvc29mdCBCYXNpY3MgYW5kIHByb3ZpZGVzIGRpbWVuc2lvbiBpbmZvcm1hdGlvbiBmb3IgdGhlIHBsYW5uZWQgKGJ1dCBuZXZlciBpbXBsaW1lbnRlZCkgbWV0aG9kIG9mIGRlZmluaW5nIGFuIGFycmF5IHRvIGhhdmUgZGltZW5zaW9ucyBzdGFydGluZyBhdCBhbnkgcG9zaXRpdmUgaW50ZWdlciAtIGNvbnNlcXVlbnRseSBpdCByZXR1cm5zIHRoZSBPUFRJT04gQkFTRSBhcmd1bWVudC4gSXQgaXMgZGlmZmljdWx0IHRvIGVtdWxhdGUgYmVjYXVzZSBvZiB0aGUgcHJvYmxlbSBvZiBub3Qga25vd2luZyB0aGUgdHlwZSBvZiBhcnJheSBwYXNzZWQgaW4gdG8gYW55IGFyZ3VtZW50LjxiciAvPjxiciAvPlRoZSBlYXNpZXN0IGFuZCBmYXN0ZXN0IHdheSBJIGhhdmUgZm91bmQgaXM6PGJyIC8+PGJyIC8+PHByZT4gICAgQ09OU1QgTEJvdW5kPTANCiAgICBPUFRJT04gQkFTRSBMQm91bmQNCjwvcHJlPjxiciAvPi4uLiB3aGljaCBpcyBhIHRpbnkgb3ZlcmhlYWQgYnV0IG5vdCBhIHByb3BlciBlbXVsYXRpb24uPGJyIC8+PGJyIC8+SSBzdXNwZWN0IHRoZXJlIGFyZSBwcm9iYWJseSBvdGhlciBtZXRob2RzIHN1cnJvdW5kaW5nIFBFRUsgYW5kIHRoZSBWQVIgdGFibGVzIGJ1dCBJIGhhdmUgbm90IGV4cGxvcmVkIHRoZXNlLjxiciAvPjxiciAvPmRkUyUrUMSTmhZCd9w1CEytmDsX7F4=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">LBOUND Lower boundary of an Array. A work-around</h1><small>Modified on 2016/12/17 19:55 by CaptainBoing &mdash; Categorized as: Arrays</small><br /><br />LBOUND() returns the number of the lowest array element. It is common in the Microsoft Basics and provides dimension information for the planned (but never implimented) method of defining an array to have dimensions starting at any positive integer - consequently it returns the OPTION BASE argument. It is difficult to emulate because of the problem of not knowing the type of array passed in to any argument.<br /><br />The easiest and fastest way I have found is:<br /><br /><pre>    CONST LBound=0
+    OPTION BASE LBound
+</pre><br />... which is a tiny overhead but not a proper emulation.<br /><br />I suspect there are probably other methods surrounding PEEK and the VAR tables but I have not explored these.<br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.LBOUND-Lower-boundary-of-an-Array by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:31 GMT -->
+</html>

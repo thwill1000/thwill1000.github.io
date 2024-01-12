@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.NUMBERS-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:05 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	NUMBERS.BAS - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.NUMBERS-BAS-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF7w48aDEgY2xhc3M9InBhZ2V0aXRsZSI+TlVNQkVSUy5CQVM8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzIzIDIzOjQ4IGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogR2FtZXMsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPlRoaXMgaXMgYSBtYXRoIGdhbWUgb2YgbWVtb3J5IHRlc3RpbmcuIFRoZSBvYmplY3RpdmUgb2YgdGhpcyBnYW1lIGlzIHRvIHJlbWVtYmVyIHRoZSBudW1iZXJzIGFzIHRoZXkgZ2V0IHByb2R1Y2VkIGFjcm9zcyB0aGUgc2NyZWVuLjxiciAvPjxiciAvPllvdSBjYW4gZ28gaW50byB0aGUgcHJvZ3JhbSBhbmQgbGVuZ3RoZW4gdGhlIHRpbWUgdGhlIG51bWJlcnMgYXJlIGRpc3BsYXllZCAuLi5idXQgdGhleSBnZXQgcXVpY2tlciBhcyB0aW1lIGdvZXMgYnkuLi4gWW91IGhhdmUgdG8gbWF0Y2ggdGhlIG9uIHNjcmVlbiBudW1iZXJzIGJ5IHJlbWVtYmVyaW5nIHRoZWlyIHNlcXVlbmNlLjxiciAvPjxiciAvPjxwcmU+DQo1IFJlbSBOVU1CRVJTIEJZIEZSQU5LIC5QLiBERUMgODMuLi4uDQoxMCBBJD0iIg0KMjAgWT0xDQozMCBYPUludChSbmQmIzQyOygxMCkpDQo0MCBBJD1BJCsoU3RyJChYKSkNCjUwID8gQSQNCjYwIFBhdXNlIDYwMDAvWQ0KNzAgQ2xzDQo4MCBJbnB1dCBCJA0KOTAgSWYgQSQgJmx0OyZndDsgQiQgVGhlbiBHb1RvIDE5MA0KMTAwIElmIFkmbHQ7NSBUaGVuID8gIlRIQVRTIiJTIE8uSy4iDQoxMTAgIFk9WSArMQ0KMTIwIElmIFkmZ3Q7PTUgQW5kIFkmbHQ7OCBUaGVuID8gIldFTEwgRE9ORSINCjEzMCBJZiBZJmd0Oz04IFRoZW4gPyAiRVhDRUxMRU5UIg0KMTQwIEdvVG8gMzANCjE5MCA/ICJUT08gQkFEIg0KMjAwID8gQSQsIiBXQVMgVEhFIEFOU1dFUiINCjIxMCA/IEIkLCAiV0FTIFlPVVIgQU5TV0VSIg0KMjIwID8gIllPVSBMQVNURUQgRk9SICI7WTsiR09FUyINCg0KPC9wcmU+PGJyIC8+PGJyIC8+PGJyIC8+PGJyIC8+PGJyIC8+ZGSljFbMnDzwV0BLDLWhTAsxb73YBw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">NUMBERS.BAS</h1><small>Modified on 2016/12/23 23:48 by Administrator &mdash; Categorized as: Games, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />This is a math game of memory testing. The objective of this game is to remember the numbers as they get produced across the screen.<br /><br />You can go into the program and lengthen the time the numbers are displayed ...but they get quicker as time goes by... You have to match the on screen numbers by remembering their sequence.<br /><br /><pre>
+5 Rem NUMBERS BY FRANK .P. DEC 83....
+10 A$=""
+20 Y=1
+30 X=Int(Rnd&#42;(10))
+40 A$=A$+(Str$(X))
+50 ? A$
+60 Pause 6000/Y
+70 Cls
+80 Input B$
+90 If A$ &lt;&gt; B$ Then GoTo 190
+100 If Y&lt;5 Then ? "THATS""S O.K."
+110  Y=Y +1
+120 If Y&gt;=5 And Y&lt;8 Then ? "WELL DONE"
+130 If Y&gt;=8 Then ? "EXCELLENT"
+140 GoTo 30
+190 ? "TOO BAD"
+200 ? A$," WAS THE ANSWER"
+210 ? B$, "WAS YOUR ANSWER"
+220 ? "YOU LASTED FOR ";Y;"GOES"
+
+</pre><br /><br /><br /><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.NUMBERS-BAS-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:05 GMT -->
+</html>

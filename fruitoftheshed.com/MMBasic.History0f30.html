@@ -1,0 +1,148 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons&amp;Revision=0" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAU6UGFnZSBIaXN0b3J5OiBTaGFwZSBkcmF3aW5nIGZvciBDb21wbGV4IExpbmVzIGFuZCBQb2x5Z29uc2QCBQ8QZBAVAQEwFQEBMBQrAwFnZGQCBw8QZBAVAgdDdXJyZW50ATAVAgdDdXJyZW50ATAUKwMCZ2dkZAILDxYCHwAF+Bg8dGFibGUgY2xhc3M9ImJveCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIj48dHI+PHRkPjxwIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij48Yj4mbGFxdW87IE9sZGVyIFJldmlzaW9uIC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLlNoYXBlLWRyYXdpbmctZm9yLUNvbXBsZXgtTGluZXMtYW5kLVBvbHlnb25zIj5CYWNrIHRvIFBhZ2UgSGlzdG9yeTwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLlNoYXBlLWRyYXdpbmctZm9yLUNvbXBsZXgtTGluZXMtYW5kLVBvbHlnb25zLmFzaHgiPkN1cnJlbnQgUmV2aXNpb248L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAxOS8wNS8yMSAxNjowMDwvaDM+PGJyIC8+VGhlIE1NWCBhbmQgU1QgdmFyaWFudHMgb2YgTU1CYXNpYyBpbXBsZW1lbnQgYSBQb2x5Z29uIGNvbW1hbmQgdGhhdCB0YWtlcyBhIHNldCBvZiBwb2ludHMgaW4gdHdvIGludGVnZXIgYXJyYXlzIGFuZCBkcmF3cyBhbiBvdXRsaW5lIG9mIHRoZSBhcmVhIHdpdGggdGhlIG9wdGlvbiB0byBmaWxsIHRoZSBpbnRlcmlvci48YnIgLz48YnIgLz5UaGUgZm9sbG93aW5nIGlzIGluc3BpcmVkIGJ5IHRoaXMgY29tbWFuZCBidXQgaW5jbHVkZXMgYW4gb3B0aW9uIHRvIGRyYXcgdGhlIGRhdGEgYXMgZWl0aGVyIGEgbGluZSBvciBhIHBvbHlnb24uIFRoZXJlIGlzIG5vIG9wdGlvbiB0byBmaWxsIHRoZSBlbmNsb3NlZCBhcmVhLjxiciAvPjxiciAvPkFzIHdyaXR0ZW4gYmVsb3csIHRoZSByb3V0aW5lcyB1c2UgdGhlIENhcnRlc2lhbiBkcmF3aW5nIGNvbW1hbmRzIChzZWUgZGVwZW5kZW5jaWVzKSB0byBwcm92aWRlIGNvLW9yZGluYXRlIDAsMCBpbiB0aGUgYm90dG9tIGxlZnQgb2YgdGhlIGRpc3BsYXkuIEl0IGlzIGFuIGVhc3kgZW5vdWdoIGpvYiB0byByZXBsYWNlIHRoZSByZWxldmFudCBkcmF3aW5nIGNvbW1hbmRzIHdpdGggdGhlIG5hdGl2ZSBvbmVzIG9mIE1NQmFzaWMuPGJyIC8+PGJyIC8+QW4gb2Zmc2V0IGNhbiBiZSBzcGVjaWZpZWQgZm9yIHRoZSBEcmF3IGNvbW1hbmQgdGh1cyBhbGxvd2luZyB0aGUgU2hhcGUgZGF0YSB0byBiZSBwbGFjZWQgdXNpbmcgcmVsYXRpdmUgY29vcmRpbmF0ZXMuIFNjYWxpbmcgY291bGQgZWFzaWx5IGJlIGFkZGVkIGJ1dCBJIGhhdmUgYXZvaWRlZCBpdCBmb3Igbm93IGJlY2F1c2UgaXQgd291bGQgc2xvdyB0aGluZ3MgZG93biB3aXRoIGEgKHByb2JhYmx5IGxhcmdlbHkpIHVuLW5lY2Vzc2FyeSBjYWxjdWxhdGlvbi48YnIgLz48YnIgLz5UaGlzIGlzIGEgcHVyZSBNTUJhc2ljIHNldCBvZiByb3V0aW5lcyBhbmQgdGh1cyB3aWxsIHdvcmsgb24gYW55IE1NQmFzaWMgcGxhdGZvcm0uPGJyIC8+PGJyIC8+PGI+RGVwZW5kZW5jaWVzPC9iPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Ik1NQmFzaWMuU2Vuc2libGUtQ2FydGVzaWFuLUNvLW9yZGluYXRlLWdyYXBoaWNzLXBhY2suYXNoeCIgdGl0bGU9IlNlbnNpYmxlIENhcnRlc2lhbiBDby1vcmRpbmF0ZSBncmFwaGljcyBwYWNrIj5TZW5zaWJsZSBDYXJ0ZXNpYW4gQ28tb3JkaW5hdGUgZ3JhcGhpY3MgcGFjazwvYT48YnIgLz48YnIgLz48Yj5QcmVhbWJsZTwvYj48YnIgLz5UaGUgIGNvbW1hbmRzIGFzc3VtZSB0aGF0IGFycmF5cyBhcmUgZGltZW5zaW9uZWQgZnJvbSB6ZXJvIChub3QgMSk8YnIgLz48cHJlPg0KCU9wdGlvbiBCYXNlIDANCjwvcHJlPjxiciAvPjxiciAvPjxiPkV4YW1wbGU8L2I+PGJyIC8+PGNvZGU+U2hhcGUuTmV3KDQpICcgZHJhdyBhIDUwIHBpeGVsIHNxdWFyZTxiciAvPlNoYXBlLlZlcnRleCgwLDApPGJyIC8+U2hhcGUuVmVydGV4KDAsNTApPGJyIC8+U2hhcGUuVmVydGV4KDUwLDUwKTxiciAvPlNoYXBlLlZlcnRleCg1MCwwKTxiciAvPlNoYXBlLkRyYXcoMCwwLDEpICAnIDE9IHRoZSBsYXN0IHBvaW50IGlzIGNvbm5lY3RlZCB0byB0aGUgZmlyc3QsIGVuY2xvc2luZyB0aGUgYXJlYSAocG9seWdvbik8YnIgLz48L2NvZGU+PGJyIC8+PGJyIC8+PGJyIC8+PGI+VGhlIENvZGU8L2I+PGJyIC8+PHByZT4NCidDbGVhciB0aGUgc2hhcGUgc3RhY2sgYW5kIHBvaW50ZXJzIGluIHJlYWRpbmVzcyBmb3IgYSBuZXcgc2hhcGUuDQoJU3ViIFNoYXBlLk5ldyhQb2ludHMgQXMgSW50ZWdlcikNCgkJT24gRXJyb3IgU2tpcCAxDQoJCUVyYXNlIFNoWA0KCQlEaW0gSW50ZWdlciBTaFgoUG9pbnRzLTEpDQoNCgkJT24gRXJyb3IgU2tpcCAxDQoJCUVyYXNlIFNoWQ0KCQlEaW0gSW50ZWdlciBTaFkoUG9pbnRzLTEpDQoNCgkJT24gRXJyb3IgU2tpcCAxDQoJCURpbSBJbnRlZ2VyIFNoUHRyDQoJCVNoUHRyPTANCglFbmQgU3ViDQoNCidBZGQgYSBuZXcgdmVydGV4IChjb3JuZXIpIHRvIHRoZSBzaGFwZSBzdGFjaw0KJ0NhcmUgbXVzdCBiZSB0YWtlbiBub3QgdG8gYWRkIG1vcmUgdmVydGljZXMgdGhhbiB3ZXJlIHNwZWNpZmllZCBpbiBTaGFwZS5OZXcNCglTdWIgU2hhcGUuVmVydGV4KHggQXMgSW50ZWdlcix5IEFzIEludGVnZXIpDQoJCVNoWChTaFB0cik9eA0KCQlTaFkoU2hQdHIpPXkNCgkJU2hQdHI9U2hQdHIrMQ0KCUVuZCBTdWINCg0KJ0RyYXcgdGhlIHNoYXBlLiBJZiBvcHQgaXMgbm9uLXplcm8sIHRoZSBzaGFwZSBpcyBjbG9zZWQgYnkgZHJhd2luZyBiZXR3ZWVuIHRoZSBmaXJzdCBhbmQgbGFzdCB2ZXJ0aWNlcyB0byBwcm9kdWNlIGEgcG9seWdvbg0KJ1RoZSBzaGFwZSBzdGFjayBpcyBwcmVzZXJ2ZWQgYW5kIHNvIGNhbiBiZSByZS11c2VkLg0KJ1gvWSBvZmZzZXQgaXMgYWRkZWQgdG8gdGhlIHNoYXBlIHZlcnRpY2VzIGFsbG93aW5nIHRoZSBzaGFwZSB0byBiZSBkcmF3biBpbiBtdWx0aXBsZSBsb2NhdGlvbnMgd2l0aCB0aGUgc2FtZSBkYXRhLg0KCVN1YiBTaGFwZS5EcmF3KHhPZmZzZXQgQXMgSW50ZWdlcix5T2Zmc2V0IEFzIEludGVnZXIsT3B0IEFzIEludGVnZXIpDQoJCUxvY2FsIG4gQXMgSW50ZWdlcg0KCQlNb3ZlIHhPZmZzZXQrU2hYKDApLHlPZmZzZXQrU2hZKDApDQoJCUZvciBuPTEgdG8gU2hQdHItMQ0KCQkJRHJhdyB4T2Zmc2V0K1NoWChuKSx5T2Zmc2V0K1NoWShuKQ0KCQlOZXh0DQoJCUlmIE9wdCBUaGVuIERyYXcgeE9mZnNldCtTaFgoMCkseU9mZnNldCtTaFkoMCkNCglFbmQgU3ViDQo8L3ByZT48YnIgLz5kZJYFamzioGKSn8OSgMwALu0Ka/10" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBQKJwMvjDwKiz/TSAwK3j57gBwLd5ta/BQL9yYWiCdMXpmxBj7Iib9ibHHzZiBpmzc3I" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login0b62.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Shape-drawing-for-Complex-Lines-and-Polygons%26Revision%3d0" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Shape drawing for Complex Lines and Polygons</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b>&laquo; Older Revision - <a href="MMBasic.History1fec.html?Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons">Back to Page History</a> - <a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html">Current Revision</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2019/05/21 16:00</h3><br />The MMX and ST variants of MMBasic implement a Polygon command that takes a set of points in two integer arrays and draws an outline of the area with the option to fill the interior.<br /><br />The following is inspired by this command but includes an option to draw the data as either a line or a polygon. There is no option to fill the enclosed area.<br /><br />As written below, the routines use the Cartesian drawing commands (see dependencies) to provide co-ordinate 0,0 in the bottom left of the display. It is an easy enough job to replace the relevant drawing commands with the native ones of MMBasic.<br /><br />An offset can be specified for the Draw command thus allowing the Shape data to be placed using relative coordinates. Scaling could easily be added but I have avoided it for now because it would slow things down with a (probably largely) un-necessary calculation.<br /><br />This is a pure MMBasic set of routines and thus will work on any MMBasic platform.<br /><br /><b>Dependencies</b><br /><a class="pagelink" target="_blank" href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a><br /><br /><b>Preamble</b><br />The  commands assume that arrays are dimensioned from zero (not 1)<br /><pre>
+	Option Base 0
+</pre><br /><br /><b>Example</b><br /><code>Shape.New(4) ' draw a 50 pixel square<br />Shape.Vertex(0,0)<br />Shape.Vertex(0,50)<br />Shape.Vertex(50,50)<br />Shape.Vertex(50,0)<br />Shape.Draw(0,0,1)  ' 1= the last point is connected to the first, enclosing the area (polygon)<br /></code><br /><br /><br /><b>The Code</b><br /><pre>
+'Clear the shape stack and pointers in readiness for a new shape.
+	Sub Shape.New(Points As Integer)
+		On Error Skip 1
+		Erase ShX
+		Dim Integer ShX(Points-1)
+
+		On Error Skip 1
+		Erase ShY
+		Dim Integer ShY(Points-1)
+
+		On Error Skip 1
+		Dim Integer ShPtr
+		ShPtr=0
+	End Sub
+
+'Add a new vertex (corner) to the shape stack
+'Care must be taken not to add more vertices than were specified in Shape.New
+	Sub Shape.Vertex(x As Integer,y As Integer)
+		ShX(ShPtr)=x
+		ShY(ShPtr)=y
+		ShPtr=ShPtr+1
+	End Sub
+
+'Draw the shape. If opt is non-zero, the shape is closed by drawing between the first and last vertices to produce a polygon
+'The shape stack is preserved and so can be re-used.
+'X/Y offset is added to the shape vertices allowing the shape to be drawn in multiple locations with the same data.
+	Sub Shape.Draw(xOffset As Integer,yOffset As Integer,Opt As Integer)
+		Local n As Integer
+		Move xOffset+ShX(0),yOffset+ShY(0)
+		For n=1 to ShPtr-1
+			Draw xOffset+ShX(n),yOffset+ShY(n)
+		Next
+		If Opt Then Draw xOffset+ShX(0),yOffset+ShY(0)
+	End Sub
+</pre><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons&Revision=0 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:08 GMT -->
+</html>

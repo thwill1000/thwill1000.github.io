@@ -1,0 +1,1212 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library.ashx?HL=mmbasic,layout by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	TOWERS of HANOI - Fruit Of The Shed
+</title><meta name="keywords" content="recursive" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=TOWERS-of-HANOI-part-of-the-original-MMBasic-library&amp;NS=MMBasic&amp;HL=mmbasic%2clayout" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBMQBR2V0RmlsZS5hc3B4P0ZpbGU9VG93ZXJzMi56aXAmYW1wO0FzU3RyZWFtQXR0YWNobWVudD0xJmFtcDtQcm92aWRlcj1TY3Jld1R1cm4uV2lraS5GaWxlc1N0b3JhZ2VQcm92aWRlciZhbXA7SXNQYWdlQXR0YWNobWVudD0xJmFtcDtQYWdlPU1NQmFzaWMuVE9XRVJTLW9mLUhBTk9JLXBhcnQtb2YtdGhlLW9yaWdpbmFsLU1NQmFzaWMtbGlicmFyeQhEb3dubG9hZAtUb3dlcnMyLnppcAUyNjggQmRkMeFQ3thrQe3zJPDUk5Bf/70XfwA=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login0263.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dTOWERS-of-HANOI-part-of-the-original-MMBasic-library%26NS%3dMMBasic%26HL%3dmmbasic%2clayout" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History527e.html?Page=MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			TOWERS of HANOI
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print527e.html?Page=MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:44
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages0dbd.html?Cat=MMBasic.Games" title="Games">Games</a>, <a href="MMBasic.AllPages6c47.html?Cat=MMBasic.Program%20Flow" title="Program Flow">Program Flow</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f18881fab-ed57-41df-9615-2fa7224d993c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f18881fab-ed57-41df-9615-2fa7224d993c');"></div><div id="f38ca6539-cbd4-4770-aca4-bd9d7d625fa0" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f38ca6539-cbd4-4770-aca4-bd9d7d625fa0');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="f3b6b4f5b-ef3d-4c64-b1c9-2445bcfe0600" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f3b6b4f5b-ef3d-4c64-b1c9-2445bcfe0600');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="sdc8e4e01-723d-4086-9746-bf20058df7a6" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sdc8e4e01-723d-4086-9746-bf20058df7a6');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Backpack-Tracker-curve-tracer.html" title="Backpack Tracker curve tracer (MMBasic)">Backpack Tracker curve tracer (MMBasic)</a> &raquo; <a href="MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.html" title="RENUM.BAS (MMBasic)">RENUM.BAS (MMBasic)</a> &raquo; <b><a href="MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library.html" title="TOWERS of HANOI (MMBasic)">TOWERS of HANOI (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a> &raquo; <a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f3b6b4f5b-ef3d-4c64-b1c9-2445bcfe0600', this);" id="lnkf3b6b4f5b-ef3d-4c64-b1c9-2445bcfe0600" onmouseout="javascript:return __HideDropDown('f3b6b4f5b-ef3d-4c64-b1c9-2445bcfe0600');">Comb Sort for strings (MMBasic)</a> &raquo; <a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f38ca6539-cbd4-4770-aca4-bd9d7d625fa0', this);" id="lnkf38ca6539-cbd4-4770-aca4-bd9d7d625fa0" onmouseout="javascript:return __HideDropDown('f38ca6539-cbd4-4770-aca4-bd9d7d625fa0');">Shape drawing for Complex Lines and Polygons (MMBasic)</a> &raquo; <a href="MMBasic.Magic-Switchboard-part-of-the-original-MMBasic-library.html" title="Magic Switchboard (MMBasic)">Magic Switchboard (MMBasic)</a> &raquo; <a href="MMBasic.Analog-Clock-part-of-the-original-MMBasic-library.html" title="Analog Clock (MMBasic)">Analog Clock (MMBasic)</a> &raquo; <a href="MMBasic.Hearts-and-Bones-v1-0-part-of-the-original-MMBasic-library.html" title="Hearts and Bones v1.0 (MMBasic)">Hearts and Bones v1.0 (MMBasic)</a> &raquo; <a href="MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library.html" title="Driving a Parallel Printer (MMBasic)">Driving a Parallel Printer (MMBasic)</a> &raquo; <a href="MMBasic.Backpack-Tracker-curve-tracer.html" title="Backpack Tracker curve tracer (MMBasic)">Backpack Tracker curve tracer (MMBasic)</a> &raquo; <a href="MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.html" title="RENUM.BAS (MMBasic)">RENUM.BAS (MMBasic)</a> &raquo; <b><a href="MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library.html" title="TOWERS of HANOI (MMBasic)">TOWERS of HANOI (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />This program plays the game of Towers of Hanoi for you. It is a programming exercise in recursion, that is, where a subroutine, in this case "TOWER", calls itself.<br /><br />It plays on a MicroMite using a VT100 terminal .eg Tera Term. It does NOT play in the chat window of MMEdit prior to V3.4.18 <br /><br /><h1 class="separator"> </h1><br /><b>TOWERS.BAS</b><br /><pre>
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;TOWERS of HANOI&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;By H W Holmes&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;July 31, 2014&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+  'This program plays the game of Towers of Hanoi for you.
+  'It is a programing exercise in recursion, that is,
+  'where a subroutine, in this case "TOWER", calls itself.
+
+  'It plays on a MicroMite using a VT100 terminal .eg Tera Term.
+  'It does NOT play in the chat window of MMEdit prior to V3.4.18 
+
+INFO&#58;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;Display Constants&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  Delay = 500 ' Change for speed of play
+  TopRow = 8  ' CHANGE THIS TO MOVE Game UP OR DOWN THE SCREEN!
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;Tower Pieces&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  Dim TP$(9)
+  TP$(0) = "       M       "  ' Empty Peg
+  TP$(1) = "      1M1      "  ' Level 1
+  TP$(2) = "     22M22     "
+  TP$(3) = "    333M333    "
+  TP$(4) = "   4444M4444   "
+  TP$(5) = "  55555M55555  "
+  TP$(6) = " 666666M666666 "
+  TP$(7) = "7777777M7777777"  ' level 7
+  TP$(8) = "TTTTTTTTTTTTTTT"  ' Base
+  TP$(9) = "               "  ' ERASE disk
+
+  Dim PL(3)  'Pin Level
+
+HMD&#58;  'How many disks?
+
+  ClearScreen
+  HOME
+  ' c 1.1
+
+  Print "This program plays the game of Towers of Hanoi for you."
+  Print "Object&#58; To Move Disks from 1 Pin To Another, 1 pin at a time,"
+  Print "        never puting a larger Disk on a smaller one."
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;'Display&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  D=0&#58;S=0&#58;E=0
+
+  ScreenBuild
+  Print
+
+DK&#58;
+  Print "How many Disks (1-7) " ; &#58; GetDig D &#58; Print D
+  If D&lt;1 Or D&gt;7 Then Print "Disk Count Out of Range! -&gt; "; &#58; GoTo DK
+SP&#58;
+  Print "Starting on Pin (1-3)"; &#58; GetDig S &#58; Print S
+  If S&lt;1 Or S&gt;3 Then Print "Pin &#35; Out of Range! -&gt; "; &#58; GoTo SP
+EP&#58;
+  cnt = 0
+  Print "Move to Pin (";
+  If S&lt;&gt;1 Then Print "1";&#58; cnt = 1&#58; Print" OR "; ' 1 was not chosen to start
+  If S&lt;&gt;2 Then   ' 2 was not chosen to start
+    Print "2"; &#58; cnt = cnt + 1
+    If cnt = 1 Then Print " OR ";&#58; Print "3"; 'must be the other not chosen
+  Else
+    Print "3";  'must be the other not chosen
+  EndIf
+  Print ") "; &#58; GetDig E &#58; Print  E' get end destination pin
+  If E&lt;1 Or E&gt;3 Then Print "Pin &#35; Out of Range! -&gt; "; &#58; GoTo EP
+  If E=S Then Print "Pin &#35; Same as Start Pin! -&gt; "; &#58; GoTo EP
+
+  Print
+SUMARY&#58;
+  Print "Move" D " Disks From Pin" S " TO Pin" E "  " ;
+  Print "Correct? (Y,N)  ";&#58;  GetKey A$  ' Did you type your choices correctly?
+  Print A$; &#58; If (A$ = "N") Or (A$ = "n") Then GoTo HMD
+  If (A$ &lt;&gt; "Y") And (A$ &lt;&gt; "y") Then
+  Print &#58; Print "Press Y or N - "; &#58; GoTo Sumary &#58; EndIf
+
+SETUP&#58;  'c y,x notes below indicate cursor position for calulating page layout
+  ClearScreen
+  HOME
+  Print "          T O W E R S  O F  H A N O I"
+  ' c 2.1
+  Print "Object&#58; To Move" D " Disks from Pin" S " To Pin" E
+  ' c 3,1
+  Print "1 pin at a time, never puting a larger Disk on "
+  Print "a smaller one."
+  Print
+  ' c 6,1           1         2         3
+  '        123456789012345678901234567890123
+  Print "Moving Disk _ From Pin _ To Pin _."
+  ' c 6,1
+  SHOW_MOVE
+
+Sub SHOW_MOVE d,s,e   'fills in the above blanks for disk and pins
+  yx 6,13&#58; dS d&#58; cr 10&#58; dS s&#58; cr 8&#58; dS e
+  Pause Delay
+End Sub
+
+  ' c 5,33
+
+PLAY&#58;
+  ScreenBuild
+
+Sub ScreenBuild
+  yx (toprow + 2,1)
+  For I = 0 To 7            ' 8 peg levels - 0-7
+    Level = MAX(0,(I+D-7))  ' negative disk levels use empty peg (0)
+    For J = 1 To 3          ' 3 pegs
+      If Not (J = S) Then
+        Print TP$(0);       ' empty peg
+      Else
+        Print TP$(Level);   ' Empty peg if Level = 0
+      EndIf
+    Next J
+    Print
+  Next I
+  For iI = 1 To 3&#58; Print TP$(8);&#58; Next&#58; Print ' 3 wide base
+  Print "     PIN 1          PIN 2          PIN 3"  ' ID labeling
+End Sub
+
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;THE GAME&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  'set pin current relative levels of top disk down from top of pin
+INIT&#58;
+  PL(s) = 7-d
+  PL(e) = 7
+  PL(6-e-s) = 7
+
+  TOWER d,s,e
+
+  yx TopRow+12, 1
+FINI&#58;
+  Print "Play Again (Y,N)   "; &#58; GetKey A$ &#58; Print A$
+  If (A$ = "N") Or (A$ = "n") Then
+    Print " I Hope you liked chalenging me to play the game!"&#58; End &#58; EndIf
+  If (A$ &lt;&gt; "Y") And (A$ &lt;&gt; "y") Then
+  Print "Press Y or N - "; &#58; GoTo FINI &#58; EndIf
+  Pause 1000&#58; GoTo HMD
+End
+
+
+Sub TOWER d,s,e
+  Local Nd,Ns,Ne    'Next values for d,s,e
+  If d &lt;&gt; 1 Then
+    Nd = d-1&#58; Ns = s&#58; Ne = 6-s-e
+    TOWER Nd,Ns,Ne
+  EndIf
+  MOVE d,s,e
+  If d &lt;&gt; 1 Then
+    Ns = Ne&#58; Ne = e
+    TOWER Nd,Ns,Ne
+  EndIf
+End Sub
+
+
+Sub MOVE d,s,e
+  SHOW_MOVE d,s,e  '  Update the header line describing the current move
+
+  'Empty Current Pin Level &amp; Move Up
+  yx (toprow + 3 + PL(s),15&#42;(S-1)+1)&#58; Print TP$(0); 'clear old pin position
+  PL(s) = PL(s)+1     '  Adjuist Pin Level
+  yx (toprow,15&#42;(S-1)+1)&#58; Print TP$(d);   'place pin above to move sideways
+  Pause Delay
+
+  'Clear Position &amp; move Across
+  yx (toprow,15&#42;(s-1)+1)&#58; Print TP$(9); 'erase current disk position
+
+  '  Do long move in two steps; comment out the whole if structure to speed up
+  If Abs(s-e)=2 Then  ' is this a long move?
+    dir = Sgn(e-s)    'which way?
+    'place disk in intermediate position
+    yx (toprow,15&#42;(e-dir-1)+1)&#58; Print TP$(d);
+    Pause Delay ' let disk settle
+    'erase disk from intermediate position
+    yx (toprow,15&#42;(s+dir-1)+1)&#58; Print TP$(9);
+  EndIf
+
+  ' Place Disk above destination pin
+  yx (toprow,15&#42;(e-1)+1)&#58; Print TP$(d);
+  Pause Delay
+
+  'Clear position and Place Disk
+  yx (toprow,15&#42;(e-1)+1)&#58; Print TP$(9); 'Clear disk from top
+  yx (toprow + 2 + PL(e),15&#42;(e-1)+1)&#58; Print TP$(d);  'Place disk at end
+  PL(e) = PL(e)-1  ' Adjuist Pin Level  compensate pin level for new disk
+  Pause Delay
+
+End Sub
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;Cursor Control Subrouines&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+Sub CU n ' UP
+  Print Chr$(27)+"&#91;"+Str$(n)+"A";
+End Sub
+
+Sub CD n  ' Down
+  Print Chr$(27)+"&#91;"+Str$(n)+"B";
+End Sub
+
+Sub CR n  ' Right (This is the only one I used once I wrote Sub YX)
+  Print Chr$(27)+"&#91;"+Str$(n)+"C";
+End Sub
+
+Sub CL n  ' Left
+  Print Chr$(27)+"&#91;"+Str$(n)+"D";
+End Sub
+
+
+Sub YX n, m       ' Move cursor to Y,X - (VT100 is 1,1 based
+  Local s$
+  Print Chr$(27)+"&#91;"+Str$(n)+";"+Str$(m)+"H";
+End Sub
+
+Sub HOME          ' Equivalent to YX 1,1
+  Print Chr$(27)+"&#91;1;1H";
+End Sub
+
+Sub ClearScreen
+  Print Chr$(27)+"&#91;2J";
+End Sub
+
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;SIMPLE FUNCTIONS&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+
+Sub dS S  'Display Numeric String and leave cursor where it stops.
+  Print Str$(S); 'Print Char Data  -  don't use automatic space padding
+End Sub
+
+Sub GetDig D
+GD&#58;
+  D$ = Inkey$
+  If (d$&lt;"0") Or (d$&gt;"9")  Then GoTo GD
+  D = Asc(d$)-48
+End Sub
+
+Sub GetKey A$
+GK&#58;
+  A$ = Inkey$
+  If (A$ &gt;= " ") And (A$ &lt;= "z") Then Exit Sub
+  'If (a$ = "Y") Or (a$ = "y") Or (a$ = "N") Or (a$ = "n") Then Exit Sub
+  GoTo GK
+End Sub
+
+Function MAX(a,b)       'self explained
+  If a&gt;= b Then&#58; MAX=a&#58;Else&#58; MAX=b&#58; EndIf
+End Function
+
+</pre><br /><h1 class="separator"> </h1><br /><b>TOWERS1.BAS</b><br /><pre>
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;TOWERS of HANOI&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;By H W Holmes - Modified by Hugh Buckle&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;Aug 9, 2014&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  ' TOWERS1.BAS
+
+  'This program plays the game of Towers of Hanoi for you.
+  'It is a programing exercise in recursion, that is,
+  'where a subroutine, in this case "TOWER", calls itself.
+
+  'It plays on a MaxiMite with PC keyboard and VGA screen
+  'It does NOT play in the chat window of MMEdit (I think)
+
+INFO&#58;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;Display Constants&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  Delay = 500 ' Change for speed of play - Not used a user is asked for speed
+  TopRow = 8  ' CHANGE THIS TO MOVE Game UP OR DOWN THE SCREEN!
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;Tower Pieces&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  Dim TP$(9)
+  TP$(0) = "       M       "  ' Empty Peg
+  TP$(1) = "      1M1      "  ' Level 1
+  TP$(2) = "     22M22     "
+  TP$(3) = "    333M333    "
+  TP$(4) = "   4444M4444   "
+  TP$(5) = "  55555M55555  "
+  TP$(6) = " 666666M666666 "
+  TP$(7) = "7777777M7777777"  ' level 7
+  TP$(8) = "TTTTTTTTTTTTTTT"  ' Base
+  TP$(9) = "               "  ' ERASE disk
+
+  Dim PL(3)  'Pin Level
+
+HMD&#58;  'How many disks?
+
+  ClearScreen
+  HOME
+  ' c 1.1
+
+  Print "This program plays the game of Towers of Hanoi for you."
+  Print "Object&#58; To Move Disks from 1 Pin To Another, 1 pin at a time,"
+  Print "        never puting a larger Disk on a smaller one."
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;'Display&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  D=0&#58;S=0&#58;E=0
+
+  ScreenBuild
+  Print
+DL&#58;
+  Print "Game speed (1-5 1=fast) ?" ; &#58; GetDig P &#58; Print P
+  If P&lt;1 Or P&gt;5 Then Print " Speed out of range! -&gt; "; &#58; GoTo DL
+  Delay = p&#42;100
+DK&#58;
+  Print "How many Disks (1-7)    ?" ; &#58; GetDig D &#58; Print D
+  If D&lt;1 Or D&gt;7 Then Print "Disk Count Out of Range! -&gt; "; &#58; GoTo DK
+SP&#58;
+  Print "Starting on Pin (1-3)   ?"; &#58; GetDig S &#58; Print S
+  If S&lt;1 Or S&gt;3 Then Print "Pin &#35; Out of Range! -&gt; "; &#58; GoTo SP
+EP&#58;
+  cnt = 0
+  Print "Move to Pin (";
+  If S&lt;&gt;1 Then Print "1";&#58; cnt = 1&#58; Print" OR "; ' 1 was not chosen to start
+  If S&lt;&gt;2 Then   ' 2 was not chosen to start
+    Print "2"; &#58; cnt = cnt + 1
+    If cnt = 1 Then Print " OR ";&#58; Print "3"; 'must be the other not chosen
+  Else
+    Print "3";  'must be the other not chosen
+  EndIf
+  Print ") "; &#58; GetDig E &#58; Print  E' get end destination pin
+  If E&lt;1 Or E&gt;3 Then Print "Pin &#35; Out of Range! -&gt; "; &#58; GoTo EP
+  If E=S Then Print "Pin &#35; Same as Start Pin! -&gt; "; &#58; GoTo EP
+
+  Print
+SUMARY&#58;
+  Print "Move" D " Disks From Pin" S " TO Pin" E "  " ;
+  Print "Correct? (Y,N)  ";&#58;  GetKey A$  ' Did you type your choices correctly?
+  Print A$; &#58; If (A$ = "N") Or (A$ = "n") Then GoTo HMD
+  If (A$ &lt;&gt; "Y") And (A$ &lt;&gt; "y") Then
+  Print &#58; Print "Press Y or N - "; &#58; GoTo Sumary &#58; EndIf
+
+SETUP&#58;  'c y,x notes below indicate cursor position for calulating page layout
+  ClearScreen
+  HOME
+  Print "          T O W E R S  O F  H A N O I"
+  ' c 2.1
+  Print "Object&#58; To Move" D " Disks from Pin" S " To Pin" E
+  ' c 3,1
+  Print "1 pin at a time, never puting a larger Disk on "
+  Print "a smaller one."
+  Print
+  ' c 6,1           1         2         3
+  '        123456789012345678901234567890123
+  Print "Moving Disk _ From Pin _ To Pin _."
+  ' c 6,1
+  SHOW_MOVE
+
+Sub SHOW_MOVE d,s,e   'fills in the above blanks for disk and pins
+  yx 5,12&#58; dS d&#58; cr 10&#58; dS s&#58; cr 8&#58; dS e
+  Pause Delay
+End Sub
+
+  ' c 5,33
+
+PLAY&#58;
+  ScreenBuild
+
+Sub ScreenBuild
+  yx (toprow + 2,0)
+  For I = 0 To 7            ' 8 peg levels - 0-7
+    Level = MAX(0,(I+D-7))  ' negative disk levels use empty peg (0)
+    For J = 1 To 3          ' 3 pegs
+      If Not (J = S) Then
+        Print TP$(0);       ' empty peg
+      Else
+        Print TP$(Level);   ' Empty peg if Level = 0
+      EndIf
+    Next J
+    Print
+  Next I
+  For iI = 1 To 3&#58; Print TP$(8);&#58; Next&#58; Print ' 3 wide base
+  Print "     PIN 1          PIN 2          PIN 3"  ' ID labeling
+End Sub
+
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;THE GAME&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  'set pin current relative levels of top disk down from top of pin
+INIT&#58;
+  PL(s) = 7-d
+  PL(e) = 7
+  PL(6-e-s) = 7
+
+  TOWER d,s,e
+
+  yx TopRow+12, 1
+FINI&#58;
+  Print&#58; Print "Play Again (Y,N)   "; &#58; GetKey A$ &#58; Print A$
+  If (A$ = "N") Or (A$ = "n") Then
+    Print " I Hope you liked chalenging me to play the game!"&#58; End &#58; EndIf
+  If (A$ &lt;&gt; "Y") And (A$ &lt;&gt; "y") Then
+  Print "Press Y or N - "; &#58; GoTo FINI &#58; EndIf
+  Pause 1000&#58; GoTo HMD
+End
+
+
+Sub TOWER d,s,e
+  Local Nd,Ns,Ne    'Next values for d,s,e
+  If d &lt;&gt; 1 Then
+    Nd = d-1&#58; Ns = s&#58; Ne = 6-s-e
+    TOWER Nd,Ns,Ne
+  EndIf
+  MOVE d,s,e
+  If d &lt;&gt; 1 Then
+    Ns = Ne&#58; Ne = e
+    TOWER Nd,Ns,Ne
+  EndIf
+End Sub
+
+
+Sub MOVE d,s,e
+  SHOW_MOVE d,s,e  '  Update the header line describing the current move
+
+  'Empty Current Pin Level &amp; Move Up
+  yx (toprow + 3 + PL(s),15&#42;(S-1))&#58; Print TP$(0); 'clear old pin position
+  PL(s) = PL(s)+1     '  Adjuist Pin Level
+  yx (toprow,15&#42;(S-1))&#58; Print TP$(d);   'place pin above to move sideways
+  Pause Delay
+
+  'Clear Position &amp; move Across
+  yx (toprow,15&#42;(s-1))&#58; Print TP$(9); 'erase current disk position
+
+  '  Do long move in two steps; comment out the whole if structure to speed up
+  If Abs(s-e)=2 Then  ' is this a long move?
+    dir = Sgn(e-s)    'which way?
+    'place disk in intermediate position
+    yx (toprow,15&#42;(e-dir-1))&#58; Print TP$(d);
+    Pause Delay ' let disk settle
+    'erase disk from intermediate position
+    yx (toprow,15&#42;(s+dir-1))&#58; Print TP$(9);
+  EndIf
+
+  ' Place Disk above destination pin
+  yx (toprow,15&#42;(e-1))&#58; Print TP$(d);
+  Pause Delay
+
+  'Clear position and Place Disk
+  yx (toprow,15&#42;(e-1))&#58; Print TP$(9); 'Clear disk from top
+  yx (toprow + 2 + PL(e),15&#42;(e-1))&#58; Print TP$(d);  'Place disk at end
+  PL(e) = PL(e)-1  ' Adjuist Pin Level  compensate pin level for new disk
+  Pause Delay
+
+End Sub
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;Cursor Control Subrouines&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+Sub CU n ' UP
+  Print Chr$(27)+"&#91;"+Str$(n)+"A";
+End Sub
+
+Sub CD n  ' Down
+  Print Chr$(27)+"&#91;"+Str$(n)+"B";
+End Sub
+
+Sub CR n  ' Right (This is the only one I used once I wrote Sub YX)
+  Print @(MM.HPos+n&#42;6,MM.VPos) "";
+End Sub
+
+Sub CL n  ' Left
+  Print Chr$(27)+"&#91;"+Str$(n)+"D";
+End Sub
+
+
+Sub YX n, m       ' Move cursor to Y,X - (VT100 is 1,1 based
+  'Multipliers (6 &amp; 12) are for the standard font
+  Print @(m&#42;6,n&#42;12);
+End Sub
+
+Sub HOME          ' Equivalent to YX 1,1
+  Print @(0,0);
+End Sub
+
+Sub ClearScreen
+  Cls
+End Sub
+
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;SIMPLE FUNCTIONS&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+
+Sub dS S  'Display Numeric String and leave cursor where it stops.
+  Print Str$(S); 'Print Char Data  -  don't use automatic space padding
+End Sub
+
+Sub GetDig D
+GD&#58;
+  D$ = Inkey$
+  If (d$&lt;"0") Or (d$&gt;"9")  Then GoTo GD
+  D = Asc(d$)-48
+End Sub
+
+Sub GetKey A$
+GK&#58;
+  A$ = Inkey$
+  If (A$ &gt;= " ") And (A$ &lt;= "z") Then Exit Sub
+  'If (a$ = "Y") Or (a$ = "y") Or (a$ = "N") Or (a$ = "n") Then Exit Sub
+  GoTo GK
+End Sub
+
+Function MAX(a,b)       'self explained
+  If a&gt;= b Then&#58; MAX=a&#58;Else&#58; MAX=b&#58; EndIf
+End Function
+
+</pre><br /><h1 class="separator"> </h1><br /><b>TOWERS2.BAS</b><br /><pre>
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;TOWERS of HANOI&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;By H W Holmes - Modified by Hugh Buckle&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;Aug 9, 2014&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  ' TOWERS2.BAS
+
+  'This program plays the game of Towers of Hanoi for you.
+  'It is a programing exercise in recursion, that is,
+  'where a subroutine, in this case "TOWER", calls itself.
+
+  'It plays on a MaxiMite with PC keyboard and VGA screen
+  'It does NOT play in the chat window of MMEdit (I think)
+  'It is the same as TOWER1.BAS except that it uses
+  'Towers.fnt to display pins and disks as graphics.
+
+INFO&#58;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;Display Constants&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  Delay = 500 ' Change for speed of play
+  TopRow = 8  ' CHANGE THIS TO MOVE Game UP OR DOWN THE SCREEN!
+  Font Load "Towers2.fnt" As 4
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;Tower Pieces&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  Dim TP$(9)
+  TP$(0) = "zzzzzzz|zzzzzzz"  ' Empty Peg
+  TP$(1) = "zzzzzz&#123;|&#125;zzzzzz"  ' Level 1
+  TP$(2) = "zzzzz&#123;~|~&#125;zzzzz"
+  TP$(3) = "zzzz&#123;~~|~~&#125;zzzz"
+  TP$(4) = "zzz&#123;~~~|~~~&#125;zzz"
+  TP$(5) = "zz&#123;&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;|&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;&#125;zz"
+  TP$(6) = "z&#123;&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;~|&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;~&#125;z"
+  TP$(7) = "&#123;&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;~~|&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;~~&#125;"  ' level 7
+  TP$(8) = "&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;&#167;&#167;(admin,2016/12/17 18&#58;39&#58;15)&#167;&#167;~~~"  ' Base
+  TP$(9) = "zzzzzzzzzzzzzzz"  ' ERASE disk
+
+  Dim PL(3)  'Pin Level
+
+HMD&#58;  'How many disks?
+
+  ClearScreen
+  HOME
+  ' c 1.1
+
+  Print "This program plays the game of Towers of Hanoi for you."
+  Print "Object&#58; To Move Disks from 1 Pin To Another, 1 pin at a time,"
+  Print "        never puting a larger Disk on a smaller one."
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;'Display&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  D=0&#58;S=0&#58;E=0
+
+  ScreenBuild
+  Print
+DL&#58;
+  Print "Game speed (1-5 1=fast) ?" ; &#58; GetDig P &#58; Print P
+  If P&lt;1 Or P&gt;5 Then Print " Speed out of range! -&gt; "; &#58; GoTo DL
+  Delay = p&#42;100
+DK&#58;
+  Print "How many Disks (1-7)    ?" ; &#58; GetDig D &#58; Print D
+  If D&lt;1 Or D&gt;7 Then Print "Disk Count Out of Range! -&gt; "; &#58; GoTo DK
+SP&#58;
+  Print "Starting on Pin (1-3)   ?"; &#58; GetDig S &#58; Print S
+  If S&lt;1 Or S&gt;3 Then Print "Pin &#35; Out of Range! -&gt; "; &#58; GoTo SP
+EP&#58;
+  cnt = 0
+  Print "Move to Pin (";
+  If S&lt;&gt;1 Then Print "1";&#58; cnt = 1&#58; Print" OR "; ' 1 was not chosen to start
+  If S&lt;&gt;2 Then   ' 2 was not chosen to start
+    Print "2"; &#58; cnt = cnt + 1
+    If cnt = 1 Then Print " OR ";&#58; Print "3"; 'must be the other not chosen
+  Else
+    Print "3";  'must be the other not chosen
+  EndIf
+  Print ") "; &#58; GetDig E &#58; Print  E' get end destination pin
+  If E&lt;1 Or E&gt;3 Then Print "Pin &#35; Out of Range! -&gt; "; &#58; GoTo EP
+  If E=S Then Print "Pin &#35; Same as Start Pin! -&gt; "; &#58; GoTo EP
+
+  Print
+SUMARY&#58;
+  Print "Move" D " Disks From Pin" S " TO Pin" E "  " ;
+  Print "Correct? (Y,N)  ";&#58;  GetKey A$  ' Did you type your choices correctly?
+  Print A$; &#58; If (A$ = "N") Or (A$ = "n") Then GoTo HMD
+  If (A$ &lt;&gt; "Y") And (A$ &lt;&gt; "y") Then
+  Print &#58; Print "Press Y or N - "; &#58; GoTo Sumary &#58; EndIf
+
+SETUP&#58;  'c y,x notes below indicate cursor position for calulating page layout
+  ClearScreen
+  HOME
+  Print "          T O W E R S  O F  H A N O I"
+  ' c 2.1
+  Print "Object&#58; To Move" D " Disks from Pin" S " To Pin" E
+  ' c 3,1
+  Print "1 pin at a time, never puting a larger Disk on "
+  Print "a smaller one."
+  Print
+  ' c 6,1           1         2         3
+  '        123456789012345678901234567890123
+  Print "Moving Disk _ From Pin _ To Pin _."
+  ' c 6,1
+  SHOW_MOVE
+
+Sub SHOW_MOVE d,s,e   'fills in the above blanks for disk and pins
+  yx 5,12&#58; dS d&#58; cr 10&#58; dS s&#58; cr 8&#58; dS e
+  Pause Delay
+End Sub
+
+  ' c 5,33
+
+PLAY&#58;
+  ScreenBuild
+
+Sub ScreenBuild
+  Font 4
+  yx (toprow + 2,0)
+  For I = 0 To 7            ' 8 peg levels - 0-7
+    Level = MAX(0,(I+D-7))  ' negative disk levels use empty peg (0)
+    For J = 1 To 3          ' 3 pegs
+      If Not (J = S) Then
+        Print TP$(0);       ' empty peg
+      Else
+        Print TP$(Level);   ' Empty peg if Level = 0
+      EndIf
+    Next J
+    Print
+  Next I
+  For iI = 1 To 3&#58; Print TP$(8);&#58; Next&#58; Print ' 3 wide base
+  Font 1
+  Print "     PIN 1          PIN 2          PIN 3"  ' ID labeling
+End Sub
+
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;THE GAME&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+  'set pin current relative levels of top disk down from top of pin
+INIT&#58;
+  PL(s) = 7-d
+  PL(e) = 7
+  PL(6-e-s) = 7
+
+  TOWER d,s,e
+
+  yx TopRow+12, 1
+FINI&#58;
+  Print&#58; Print "Play Again (Y,N)   "; &#58; GetKey A$ &#58; Print A$
+  If (A$ = "N") Or (A$ = "n") Then
+    Print " I Hope you liked chalenging me to play the game!"&#58; End &#58; EndIf
+  If (A$ &lt;&gt; "Y") And (A$ &lt;&gt; "y") Then
+  Print "Press Y or N - "; &#58; GoTo FINI &#58; EndIf
+  Pause 1000&#58; GoTo HMD
+End
+
+
+Sub TOWER d,s,e
+  Local Nd,Ns,Ne    'Next values for d,s,e
+  If d &lt;&gt; 1 Then
+    Nd = d-1&#58; Ns = s&#58; Ne = 6-s-e
+    TOWER Nd,Ns,Ne
+  EndIf
+  MOVE d,s,e
+  If d &lt;&gt; 1 Then
+    Ns = Ne&#58; Ne = e
+    TOWER Nd,Ns,Ne
+  EndIf
+End Sub
+
+
+Sub MOVE d,s,e
+  SHOW_MOVE d,s,e  '  Update the header line describing the current move
+  Font 4
+
+  'Empty Current Pin Level &amp; Move Up
+  yx (toprow + 3 + PL(s),15&#42;(S-1))&#58; Print TP$(0); 'clear old pin position
+  PL(s) = PL(s)+1     '  Adjuist Pin Level
+  yx (toprow,15&#42;(S-1))&#58; Print TP$(d);   'place pin above to move sideways
+  Pause Delay
+
+  'Clear Position &amp; move Across
+  yx (toprow,15&#42;(s-1))&#58; Print TP$(9); 'erase current disk position
+
+  '  Do long move in two steps; comment out the whole if structure to speed up
+  If Abs(s-e)=2 Then  ' is this a long move?
+    dir = Sgn(e-s)    'which way?
+    'place disk in intermediate position
+    yx (toprow,15&#42;(e-dir-1))&#58; Print TP$(d);
+    Pause Delay ' let disk settle
+    'erase disk from intermediate position
+    yx (toprow,15&#42;(s+dir-1))&#58; Print TP$(9);
+  EndIf
+
+  ' Place Disk above destination pin
+  yx (toprow,15&#42;(e-1))&#58; Print TP$(d);
+  Pause Delay
+
+  'Clear position and Place Disk
+  yx (toprow,15&#42;(e-1))&#58; Print TP$(9); 'Clear disk from top
+  yx (toprow + 2 + PL(e),15&#42;(e-1))&#58; Print TP$(d);  'Place disk at end
+  PL(e) = PL(e)-1  ' Adjuist Pin Level  compensate pin level for new disk
+  Pause Delay
+  Font 1
+
+End Sub
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;&#39;&#39;&#39;Cursor Control Subrouines&#39;&#39;&#39;&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+Sub CU n ' UP
+  Print Chr$(27)+"&#91;"+Str$(n)+"A";
+End Sub
+
+Sub CD n  ' Down
+  Print Chr$(27)+"&#91;"+Str$(n)+"B";
+End Sub
+
+Sub CR n  ' Right (This is the only one I used once I wrote Sub YX)
+  Print @(MM.HPos+n&#42;6,MM.VPos) "";
+End Sub
+
+Sub CL n  ' Left
+  Print Chr$(27)+"&#91;"+Str$(n)+"D";
+End Sub
+
+
+Sub YX n, m       ' Move cursor to Y,X - (VT100 is 1,1 based
+  'Multipliers (6 &amp; 12) are for the standard font
+  Print @(m&#42;6,n&#42;12);
+End Sub
+
+Sub HOME          ' Equivalent to YX 1,1
+  Print @(0,0);
+End Sub
+
+Sub ClearScreen
+  Cls
+End Sub
+
+
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+  &#39;&#39;&#39;SIMPLE FUNCTIONS&#39;&#39;&#39;
+  &#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+
+Sub dS S  'Display Numeric String and leave cursor where it stops.
+  Print Str$(S); 'Print Char Data  -  don't use automatic space padding
+End Sub
+
+Sub GetDig D
+GD&#58;
+  D$ = Inkey$
+  If (d$&lt;"0") Or (d$&gt;"9")  Then GoTo GD
+  D = Asc(d$)-48
+End Sub
+
+Sub GetKey A$
+GK&#58;
+  A$ = Inkey$
+  If (A$ &gt;= " ") And (A$ &lt;= "z") Then Exit Sub
+  'If (a$ = "Y") Or (a$ = "y") Or (a$ = "N") Or (a$ = "n") Then Exit Sub
+  GoTo GK
+End Sub
+
+Function MAX(a,b)       'self explained
+  If a&gt;= b Then&#58; MAX=a&#58;Else&#58; MAX=b&#58; EndIf
+End Function
+
+</pre><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='Towers2d85b.zip?File=Towers2.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library' title="Download">Towers2.zip</a></td>
+			<td>268 B</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.TOWERS-of-HANOI-part-of-the-original-MMBasic-library.ashx?HL=mmbasic,layout by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:02:35 GMT -->
+</html>

@@ -1,0 +1,40 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.URL-DECODE-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	URL DECODE Function	 - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.URL-DECODE-Function" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFoQc8aDEgY2xhc3M9InBhZ2V0aXRsZSI+VVJMIERFQ09ERSBGdW5jdGlvbgk8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzE3IDE5OjUyIGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBFbmNvZGUgYW5kIERlY29kZSwgTmV0d29yaywgU3RyaW5nczwvc21hbGw+PGJyIC8+PGJyIC8+RGVjb2RlcyB0aGUgcXVlcnkgcGFydCBvZiBhIFVSTCBzdHJpbmcuIFVSTCBlbmNvZGluZyBpcyB1c2VkIHdoZW4gcGxhY2luZyB0ZXh0IGluIGEgcXVlcnkgc3RyaW5nIHRvIGF2b2lkIGl0IGJlaW5nIGNvbmZ1c2VkIHdpdGggdGhlIFVSTCBpdHNlbGYuIEl0IGlzIG5vcm1hbGx5IHVzZWQgd2hlbiB0aGUgYnJvd3NlciBzZW5kcyBmb3JtIGRhdGEgdG8gYSB3ZWIgc2VydmVyIGFzIHBhcnQgb2YgdGhlIFVSSSAtIGFzIHBhcnQgb2YgdGhlICJ3ZWIgYWRkcmVzcyIgKEdFVCBtZXRob2QpLjxiciAvPjxiciAvPjxiPlN5bnRheDwvYj46PGJyIC8+ICAgIFVSTERlY29kZSQoZXhwcmVzc2lvbik8YnIgLz48YnIgLz48Yj5FeGFtcGxlPC9iPjo8YnIgLz4gICAgcmVhbFVSTCQ9VVJMRGVjb2RlJChSZWNkVVJMKTxiciAvPjxiciAvPjxiPkNvZGU8L2I+OjxiciAvPjxwcmU+ICBGVU5DVElPTiBVUkxEZWNvZGUkKGEkKQ0KICAgIExPQ0FMIElOVEVHRVIgeg0KICAgIExPQ0FMIFNUUklORyBiJCxjJA0KICAgIHo9MQ0KICAgIERPDQogICAgICB6PUlOU1RSKHosYSQsIiUiKQ0KICAgICAgSUYgej0wIE9SIHo9TEVOKGEkKSBUSEVOIEVYSVQgRE8NCiAgICAgICAgYiQ9TUlEJChhJCx6LDMpDQogICAgICAgIGMkPUNIUiQoVkFMKCImYW1wO2giK01JRCQoYiQsMikpKQ0KICAgICAgICBhJD1SZXBsYWNlJChhJCxiJCxjJCkNCiAgICAgIEVORCBJRg0KICAgIExPT1ANCiAgICBVUkxEZWNvZGUkPWEkDQogIEVORCBGVU5DVElPTjwvcHJlPmRkYZQrg4JqIwXui3mnpfFtU9QRIV4=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">URL DECODE Function	</h1><small>Modified on 2016/12/17 19:52 by CaptainBoing &mdash; Categorized as: Encode and Decode, Network, Strings</small><br /><br />Decodes the query part of a URL string. URL encoding is used when placing text in a query string to avoid it being confused with the URL itself. It is normally used when the browser sends form data to a web server as part of the URI - as part of the "web address" (GET method).<br /><br /><b>Syntax</b>:<br />    URLDecode$(expression)<br /><br /><b>Example</b>:<br />    realURL$=URLDecode$(RecdURL)<br /><br /><b>Code</b>:<br /><pre>  FUNCTION URLDecode$(a$)
+    LOCAL INTEGER z
+    LOCAL STRING b$,c$
+    z=1
+    DO
+      z=INSTR(z,a$,"%")
+      IF z=0 OR z=LEN(a$) THEN EXIT DO
+        b$=MID$(a$,z,3)
+        c$=CHR$(VAL("&amp;h"+MID$(b$,2)))
+        a$=Replace$(a$,b$,c$)
+      END IF
+    LOOP
+    URLDecode$=a$
+  END FUNCTION</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.URL-DECODE-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:25:31 GMT -->
+</html>

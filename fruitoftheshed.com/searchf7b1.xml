@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/">
+    <ShortName>Fruit Of The Shed</ShortName>
+    <Description>Fruit Of The Shed - Search</Description>
+    <Url type="text/html" method="get" template="http://fruitoftheshed.com/Search.aspx?AllNamespaces=1&amp;FilesAndAttachments=1&amp;Query={searchTerms}"/>
+    <Image width="16" height="16" type="image/x-icon">http://fruitoftheshed.com/Images/SearchIcon.ico</Image>
+    <InputEncoding>UTF-8</InputEncoding>
+    <SearchForm>http://fruitoftheshed.com/Search.aspx</SearchForm>
+</OpenSearchDescription>

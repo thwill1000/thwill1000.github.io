@@ -1,0 +1,902 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.DigiClock-part-of-the-original-MMBasic-library.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:44:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	DCF77 DigiClock - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=DigiClock-part-of-the-original-MMBasic-library&amp;NS=MMBasic&amp;NoRedirect=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBL0BR2V0RmlsZS5hc3B4P0ZpbGU9ZGlnaXRzLnppcCZhbXA7QXNTdHJlYW1BdHRhY2htZW50PTEmYW1wO1Byb3ZpZGVyPVNjcmV3VHVybi5XaWtpLkZpbGVzU3RvcmFnZVByb3ZpZGVyJmFtcDtJc1BhZ2VBdHRhY2htZW50PTEmYW1wO1BhZ2U9TU1CYXNpYy5EaWdpQ2xvY2stcGFydC1vZi10aGUtb3JpZ2luYWwtTU1CYXNpYy1saWJyYXJ5CERvd25sb2FkCmRpZ2l0cy56aXAHMS45MiBLQmRkHdSg0RA24uAA9On7CwgbN7l7N8M=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login7856.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dDigiClock-part-of-the-original-MMBasic-library%26NS%3dMMBasic%26NoRedirect%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.DigiClock-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyd9cd.html?Page=MMBasic.DigiClock-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			DCF77 DigiClock
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printd9cd.html?Page=MMBasic.DigiClock-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:26
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesdb1b.html?Cat=MMBasic.Dates%2c%20Time%20and%20Clocks" title="Dates, Time and Clocks">Dates, Time and Clocks</a>, <a href="MMBasic.AllPages5f42.html?Cat=MMBasic.GPS" title="GPS">GPS</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="ffd32a0a3-9ae8-4120-aa5f-26cb76812f22" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ffd32a0a3-9ae8-4120-aa5f-26cb76812f22');"><a href="MMBasic.Compact-Quick-Day-Of-Week-function-with-historical-capability.html" title="Compact Quick Day Of Week function with historical capability">Compact Quick Day Of Week function with historical capability</a></div><div id="f4f324273-0556-4cc1-bc08-940265bf8ae1" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f4f324273-0556-4cc1-bc08-940265bf8ae1');"><a href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd() Function (VB work-a-like)</a><a href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff() Function (VB work-a-like)</a><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a></div><div id="fd51abc75-86f1-4e98-a7d7-f46697fe7e3f" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fd51abc75-86f1-4e98-a7d7-f46697fe7e3f');"><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime() Function to return a human readable date and time from a unixtime number</a><a href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd() Function (VB work-a-like)</a><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a><a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart() Function (VB work-a-like)</a></div><div id="feb8de752-c58b-41dd-9428-b1ab8d4d8762" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('feb8de752-c58b-41dd-9428-b1ab8d4d8762');"><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar</a><a href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$() - pad a number with leading zeroes</a><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime() Function to return a human readable date and time from a unixtime number</a><a href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff() Function (VB work-a-like)</a><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a><a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart() Function (VB work-a-like)</a></div><div id="ff49663a4-d868-4673-a435-0ccfee626fc7" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ff49663a4-d868-4673-a435-0ccfee626fc7');"><a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings">Comb Sort for strings</a><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a><a href="MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library.html" title="Bubble Sort">Bubble Sort</a><a href="MMBasic.Shell-Sort.html" title="Shell Sort">Shell Sort</a></div><div id="sf1918fa2-49f9-44fc-9fbe-5e7fc62064c0" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sf1918fa2-49f9-44fc-9fbe-5e7fc62064c0');"><a href="MMBasic.Compact-Quick-Day-Of-Week-function-with-historical-capability.html" title="Compact Quick Day Of Week function with historical capability">Compact Quick Day Of Week function with historical capability</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Day-of-the-week-for-any-date-part-of-the-original-MMBasic-library.html" title="Day of the week for any date (MMBasic)">Day of the week for any date (MMBasic)</a> &raquo; <a href="MMBasic.Day-of-the-Week-from-DATE-as-day-name.html" title="Day of the Week from DATE$ as day name (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'sf1918fa2-49f9-44fc-9fbe-5e7fc62064c0', this);" id="lnksf1918fa2-49f9-44fc-9fbe-5e7fc62064c0" onmouseout="javascript:return __HideDropDown('sf1918fa2-49f9-44fc-9fbe-5e7fc62064c0');">Day of the Week from DATE$ as day name (MMBasic)</a> &raquo; <b><a href="MMBasic.DigiClock-part-of-the-original-MMBasic-library.html" title="DCF77 DigiClock (MMBasic)">DCF77 DigiClock (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Constrain-function.html" title="Constrain() function (MMBasic)">Constrain() function (MMBasic)</a> &raquo; <a href="MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library.html" title="CSV format parsing (MMBasic)">CSV format parsing (MMBasic)</a> &raquo; <a href="MMBasic.CR2-Sort-The-Fastest-Search.html" title="Cube Root of Two Sort - fast sort (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'ff49663a4-d868-4673-a435-0ccfee626fc7', this);" id="lnkff49663a4-d868-4673-a435-0ccfee626fc7" onmouseout="javascript:return __HideDropDown('ff49663a4-d868-4673-a435-0ccfee626fc7');">Cube Root of Two Sort - fast sort (MMBasic)</a> &raquo; <a href="MMBasic.Data-Logger-part-of-the-original-MMBasic-library.html" title="Data Logger (MMBasic)">Data Logger (MMBasic)</a> &raquo; <a href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'feb8de752-c58b-41dd-9428-b1ab8d4d8762', this);" id="lnkfeb8de752-c58b-41dd-9428-b1ab8d4d8762" onmouseout="javascript:return __HideDropDown('feb8de752-c58b-41dd-9428-b1ab8d4d8762');">DateAdd() Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fd51abc75-86f1-4e98-a7d7-f46697fe7e3f', this);" id="lnkfd51abc75-86f1-4e98-a7d7-f46697fe7e3f" onmouseout="javascript:return __HideDropDown('fd51abc75-86f1-4e98-a7d7-f46697fe7e3f');">DateDiff() Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f4f324273-0556-4cc1-bc08-940265bf8ae1', this);" id="lnkf4f324273-0556-4cc1-bc08-940265bf8ae1" onmouseout="javascript:return __HideDropDown('f4f324273-0556-4cc1-bc08-940265bf8ae1');">DatePart() Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.Day-of-the-week-for-any-date-part-of-the-original-MMBasic-library.html" title="Day of the week for any date (MMBasic)">Day of the week for any date (MMBasic)</a> &raquo; <a href="MMBasic.Day-of-the-Week-from-DATE-as-day-name.html" title="Day of the Week from DATE$ as day name (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'ffd32a0a3-9ae8-4120-aa5f-26cb76812f22', this);" id="lnkffd32a0a3-9ae8-4120-aa5f-26cb76812f22" onmouseout="javascript:return __HideDropDown('ffd32a0a3-9ae8-4120-aa5f-26cb76812f22');">Day of the Week from DATE$ as day name (MMBasic)</a> &raquo; <b><a href="MMBasic.DigiClock-part-of-the-original-MMBasic-library.html" title="DCF77 DigiClock (MMBasic)">DCF77 DigiClock (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'
+'      DigiClock for DynaMite / Maxmite
+'
+'      One Maximite drives one screen, three screens make one DigiClock
+'      Each screen is displaying two digits, either HH, MM or SS.
+'
+'	   This program uses V4.4B of the MMBasic language, so the DuinomMites have
+'      to be flashed with the most recent firmware. 
+'
+'      The clock is automatically set via DCF77 (Conrad Receiver)
+' 	   http&#58;//www.conrad.de/ce/de/product/641138/C-Control-DCF-Empfaengerplatine
+'
+'	   Wiring&#58; The first device (SECOND) needs to receive the DCF signal on Pin 1
+'	   The other devices get their time via a UART connection on COM1. So connect Pin 16
+'	   of the SECOND board to pin 15 on the MINUTE and HOUR board.
+'
+'             (External View)
+'
+'             + GND for DCF Board
+'             |
+'             |
+'             |
+'             |   1  DCF In for SECOND module
+'             +   +
+'             o o o o o o o o o o o o o
+'
+'             o o o o o o o o o o o o o
+'               ^         ^ +
+'               |         | 15 Rx Connect to Tx of SECOND Module
+'               |         +
+'               |         16 Tx Connect to Rx of MINUTE and HOUR Module
+'               |
+'               + 3.3V for DCF Board
+'	
+'	   You will need a 10 kOhm Pullup between Vcc and the non-inverting output of
+' 	   the DCF module (pulling high to 3.3V) as the module has open collector
+'	   outputs.
+'
+'      Take a look at "DuinoMite MMBasic ReadMe.pdf" for more info.
+' 
+'	   The bitmaps and all basic files have to be copied to the SD card, change
+'      the DisplayMode variable for each board accordingly.
+'
+'	   You can of course replace the clock images by your own ones, but stick to 
+'      the size and the BMP format - some BMP sizes make ugly bit noise at the end.
+'
+' 	   v2.0 written in 2014 by Tim Hagemann (tim@way2.net)
+'
+'	   Use this code free of charge for private or educational uses. Ask for
+'      permission in case of commercial usage.
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+DisplayMode = 2                     ' 0&#58; HH, 1&#58; MM, 2&#58;SS
+DigitY = 50                         ' Y pos of both digits
+DigitLX = 53                        ' X pos of left digit
+DigitRX = 250                       ' X pos of right digit
+DCFPin = 1                          ' Pin for the DCF77 signal
+SignalY = 300						' Position of the search signal line
+SignalHeight = 20					' Pulse height on screen
+
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- initialization
+'
+
+WaitingForTime = 1
+FirstSyncFound = 0
+OldSignalY = SignalY
+
+oldsignal = 1
+
+Dim dcfbit(60)
+
+' &#45;&#45;- configure pin as input
+
+SetPin DCFPin, 2
+
+cls
+
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- welcome screen
+'
+
+print "Welcome to DClock v2.0"
+print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+print
+print "Starting time sync."
+print
+
+if DisplayMode = 2 then
+	print "This is the 'SECOND' and the DCF77 Unit"
+endif
+
+if DisplayMode = 1 then
+	print "This is the 'MINUTE' Unit"
+endif
+
+if DisplayMode = 0 then
+	print "This is the 'HOUR' Unit"
+endif
+
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- main program
+'
+
+if DisplayMode = 2 then
+
+	DisplaySecondAndSendDCF
+	
+else
+
+	DisplayDigitAndReceiveDCF
+
+endif
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+sub DisplaySecondAndSendDCF
+
+	' &#45;&#45;- setup the ticker for the DCF signal
+
+	SetTick 10, CheckDCF77
+
+	' &#45;&#45;- com1&#58; Rx is pin 15, Tx is pin 16
+	
+	OPEN "COM1&#58;4800" AS &#35;1
+
+	Do
+		   ' &#45;&#45;- deferred actions
+
+		   if DoCls = 1 then
+				cls
+				DoCls = 0
+		   endif
+		
+		   if UpdateLastSync = 1 then
+				print @(0,415) "Last synced&#58; ";LastSync$;"                 ";
+				UpdateLastSync = 0
+		   endif
+
+
+		   currt$ = Time$
+
+		   ' &#45;&#45;- when time changed
+
+		   If currt$ &lt;&gt; oldt$ Then
+	   	   
+				  s1 = Val(Mid$(currt$,7,1))
+				  s2 = Val(Mid$(currt$,8,1))
+
+				  ' &#45;&#45;- main program
+
+				  If WaitingForTime = 0 Then
+
+						print &#35;1,"TT";currt$
+
+						' &#45;&#45;- main display routine
+		
+						PrintDigit DigitLX, DigitY, s1
+						PrintDigit DigitRX, DigitY, s2
+
+				  EndIf
+
+				  ' &#45;&#45;- save time for compare
+
+				  oldt$ = currt$
+
+		   EndIf
+
+		   ' &#45;&#45;- wait a bit
+
+		   Pause 50
+	Loop
+
+end sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub	DisplayDigitAndReceiveDCF
+
+	' &#45;&#45;- com1&#58; Rx is pin 15, Tx is pin 16
+	
+	OPEN "COM1&#58;4800" AS &#35;1
+
+	do
+		if LOC(&#35;1) &lt;&gt; 0 then
+			
+			' &#45;&#45;&#45;&#45; read serial input
+			
+			a$ = input$(50,&#35;1)
+			
+			' &#45;&#45;&#45;&#45; add to the receive uffer
+			
+			r$ = r$ + a$
+		
+			'print "'";r$;"'"
+			
+			' &#45;&#45;&#45;&#45; now process
+			
+			chr13 = instr(r$,chr$(13))
+			if chr13 &lt;&gt; 0 then
+		
+				' &#45;&#45;&#45;&#45; we found a CR
+			
+				command$ = left$(r$,chr13)
+				
+				cmd$ 	= left$(command$,2)
+				param$	= mid$(command$,3)
+			
+				commandfound = 0
+				if cmd$="TT" then
+				
+				   	commandfound = 1
+					
+					h1 = Val(Mid$(param$,1,1))
+					h2 = Val(Mid$(param$,2,1))
+					m1 = Val(Mid$(param$,4,1))
+					m2 = Val(Mid$(param$,5,1))
+
+					' &#45;&#45;- main display routine
+					
+					if FirstCLS = 0 then
+						cls
+						FirstCLS = 1
+					endif
+
+					If DisplayMode = 0 Then
+						PrintDigit DigitLX, DigitY, h1
+						PrintDigit DigitRX, DigitY, h2
+					Else 
+						PrintDigit DigitLX, DigitY, m1
+						PrintDigit DigitRX, DigitY, m2
+					EndIf
+							 
+				endif
+				
+				if commandfound = 0 then
+					'print "Error&#58; command ";command$;" is invalid"
+				
+				endif
+				
+				r$ = ""
+			endif
+
+		else
+			Pause 50
+		endif
+	loop
+	
+
+end sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub PrintDigit (x,y,v)
+
+       bitmapname$ = Str$(v) + ".bmp"
+       LoadBMP bitmapname$, x, y
+
+End Sub
+
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub CheckDCF77
+
+       ' &#45;&#45;- buffer the signal to avoid glitches
+
+       signal = Pin(DCFPin) 
+            
+       ' &#45;&#45;- update the counters
+         
+       if signal = 1 or ignorepulse = 1 then
+       		highcount = highcount + 1
+       else
+			lowcount = lowcount + 1	
+	   endif   	
+
+	   ' &#45;&#45;- in search mode, display a fancy osci like graphic
+	   
+		if WaitingForTime = 1 then
+
+			' &#45;&#45;- clear old line
+			
+			Line (SignalX,SignalY) - (SignalX,SignalY-SignalHeight),0
+			
+			' &#45;&#45;- draw new line
+			
+			NewSignalY = SignalY-signal&#42;SignalHeight
+			Line (SignalX,OldSignalY) - (SignalX,NewSignalY),1
+			OldSignalY = NewSignalY
+			
+			' &#45;&#45;- do the X warp around
+			
+			SignalX = SignalX + 1
+			if (SignalX &gt; MM.HRES) then 
+				SignalX = 0
+			endif
+			
+		endif
+
+	   ' &#45;&#45;- falling edge
+	   
+	   if oldsignal = 1 and signal = 0 then
+
+			' &#45;&#45;- this is the falling edge
+
+			'print "Lowcnt";lowcount;"  Highcnt";highcount
+
+			' &#45;&#45;- filter out very small pulses
+
+			if highcount &lt; 7 then
+				ignorepulse = 1
+				
+				'print "Ignore pulse - too small"
+			
+			else
+				   			
+				if lowcount &gt; 120 then
+
+					'print "Lowcount detected"
+					
+					' &#45;&#45;- two cases&#58; we found the sync and completed the full datagram
+					'                or we found the first sync having read only rubbish
+
+					If FirstSyncFound = 1 Then
+
+						   ' &#45;&#45;- the is then the 2nd, 3rd,... sync.
+
+						   ProcessDCFTime
+
+					Else
+						   ' &#45;&#45;- ok, now we got the first one!
+
+						   FirstSyncFound = 1
+					   
+						   if WaitingForTime = 1 then
+								print @(0,150) "First minute break found...now receiving time...";spc(40)
+						   endif
+				
+					EndIf
+
+					' &#45;&#45;- the next bit will be bit 1, we ignore bit 60 &#45;&#45;&gt; anyway 0
+
+					bitindex = 1
+			
+				else
+
+					'print "Pulse detected"
+			
+					' &#45;&#45;- only process, if we completed the first round
+
+					If FirstSyncFound = 1 Then
+
+						if WaitingForTime = 1 then
+							print @(0,150) "Receiving bit number";bitindex;" of 58";spc(40)
+						endif
+
+						If bitindex &lt;= 60 Then
+			
+						   ' &#45;&#45;- more than 100 ms? The this is a "1"
+
+						   If highcount &gt; 10 Then
+								  dcfbit(bitindex) = 1
+						   Else
+								  dcfbit(bitindex) = 0
+						   EndIf
+						
+						   'Print "BIT &#58;", dcfbit(bitindex)
+					   
+						   bitindex = bitindex + 1
+						Else
+
+						  if WaitingForTime = 1 then
+								print @(0,150) "Lost sync. Try again.";spc(40)
+						  endif
+													
+						  ' &#45;&#45;- something was wrong. Restart sync 
+					
+						  FirstSyncFound = 0
+						EndIf
+					EndIf    
+				endif
+    	
+    	   		lowcount = 0
+				highcount = 0	
+				ignorepulse = 0
+
+			endif
+	   endif
+	   	   
+	   oldsignal = signal
+End Sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub ProcessDCFTime
+
+       idx = 21
+       mm = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20 + dcfbit(idx+6)&#42;40
+
+       p1 = Party(21,28)
+
+       idx = 29
+       hh = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20
+
+       p2 = Party(29,35)
+
+       idx = 36
+       dd = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20
+
+       idx = 45
+       mo = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10
+
+       idx = 50
+       yy = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20 + dcfbit(idx+6)&#42;40 + dcfbit(idx+7)&#42;80
+
+       p3 = Party(36,58)
+
+       'Print "//////////// time", hh , mm, dd,mo,yy,p1,p2,p3
+
+       ' &#45;&#45;- now do some checks
+
+       dcferr = 0
+
+       If Fix(p1/2) &lt;&gt; p1/2 Then
+              dcferr = 1
+       EndIf
+
+       If Fix(p2/2) &lt;&gt; p2/2 Then
+              dcferr = 1
+       EndIf
+
+       If Fix(p3/2) &lt;&gt; p3/2 Then
+              dcferr = 1
+       EndIf
+
+       If mo&lt;1 Or mo&gt;12 Then
+              dcferr = 1
+       EndIf
+
+       If dd&lt;1 Or dd&gt;31 Then
+              dcferr = 1
+       EndIf
+
+       If mm&gt;59 Then
+              dcferr = 1
+       EndIf
+
+       If hh&gt;23 Then
+              dcferr = 1
+       EndIf
+
+       If yy&gt;25 Then
+              dcferr = 1
+       EndIf
+
+       ' &#45;&#45;- now process
+
+       If dcferr = 0 Then
+
+              Time$ = Str$(hh)+"&#58;"+Str$(mm)+"&#58;00"
+              
+              if WaitingForTime = 1 then
+              	WaitingForTime = 0
+            
+            	' &#45;&#45;- deferred CLS - will otherwise get us out of sync
+            	  	
+              	DoCls = 1
+              endif
+              
+              ' &#45;&#45;- deferred PRINT - will otherwise get us out of sync
+              
+              UpdateLastSync = 1
+              LastSync$ = time$
+              
+       EndIf
+
+End Sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Function Party(idxa,idxe)
+
+       p = 0
+       For i = idxa To idxe
+              p = p + dcfbit(i)
+       Next i
+
+       Party = p
+End Function
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='digits17f2.zip?File=digits.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.DigiClock-part-of-the-original-MMBasic-library' title="Download">digits.zip</a></td>
+			<td>1.92 KB</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.DigiClock-part-of-the-original-MMBasic-library.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:44:52 GMT -->
+</html>

@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DateDiff-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	DateDiff() Function (VB work-a-like) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.DateDiff-Function-VB-work-a-like" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFkis8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RGF0ZURpZmYoKSBGdW5jdGlvbiAoVkIgd29yay1hLWxpa2UpPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAyMC8wOS8xNiAwODoxMSBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogRGF0ZXMsIFRpbWUgYW5kIENsb2Nrczwvc21hbGw+PGJyIC8+PGJyIC8+VGhlIGZvbGxvd2luZyBpcyBhIERhdGVEaWZmIGZ1bmN0aW9uIGZvciBjYWxjdWxhdGluZyB0aGUgZGlmZmVyZW5jZSBvZiBpbnRlcnZhbHMgYmV0d2VlbiB0d28gZGF0ZXMuPGJyIC8+PGJyIC8+SXQgaXMgaW5zcGlyZWQgYnkgdGhlIDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHBzOi8vd3d3Lnczc2Nob29scy5jb20vYXNwL2Z1bmNfZGF0ZWRpZmYuYXNwIiB0aXRsZT0iVkIgZnVuY3Rpb24gb2YgdGhlIHNhbWUgbmFtZSIgdGFyZ2V0PSJfYmxhbmsiPlZCIGZ1bmN0aW9uIG9mIHRoZSBzYW1lIG5hbWU8L2E+IGJ1dCBpcyB0d2Vha2VkIHNsaWdodGx5IGZyb20gdGhlIG9yaWdpbmFsLiBUaGUgY29uY2VwdCBpczsgY2FsY3VsYXRlIHRoZSBudW1iZXIgb2Ygc3BlY2lmaWVkIGludGVydmFscyBiZXR3ZWVuIHRoZSB0d28gZGF0ZXRpbWVzLiBPbmx5IHdob2xlIGludGVydmFscyBhcmUgY291bnRlZCBhbmQgYXJlIHNwZWNpZmllZCB3aXRoIGEgc3RyaW5nOjxiciAvPnl5eXkgLSBZZWFyPGJyIC8+bW0gLSBDYWxlbmRhciBNb250aCA8YnIgLz53IC0gQ2FsZW5kYXIgd2VlayAoNyBkYXlzKTxiciAvPmRkIC0gRGF5PGJyIC8+aCAtIEhvdXI8YnIgLz5tIC0gTWludXRlPGJyIC8+cyAtIFNlY29uZDxiciAvPjxiciAvPklmIHRoZSBmaXJzdCBkYXRlIGlzIGVhcmxpZXIgdGhhbiB0aGUgc2Vjb25kLCB0aGUgcmVzdWx0IHdpbGwgYmUgcG9zaXRpdmUgb3RoZXJ3aXNlIG5lZ2F0aXZlLjxiciAvPjxiciAvPlRoZXJlIGlzIGxpdHRsZSB0byBubyBlcnJvciBjaGVja2luZyBzbyBpZiB5b3Ugc3VwcGx5IG5vbnNlbnNlIHlvdSB3aWxsIHByb2JhYmx5IGNyYXNoIGl0IG9yIGdldCBydWJiaXNoIGJhY2suIDxiciAvPjxiciAvPk5vdGU6IFRoZSBkYXRlcyBhcmUgc3ViamVjdCB0byBVbml4VGltZSBjb25zdHJhaW50cyAobm8gZWFybGllciB0aGFuIDAxLzAxLzE5NzApLiBJU084NjAxIGZvcm1hdCBpcyBub3QgeWV0IHN1cHBvcnRlZC48YnIgLz48YnIgLz48Yj5TeW50YXg8L2I+OjxiciAvPj1EYXRlRGlmZihpbnRlcnZhbCxkYXRlc3RyMSxkYXRlc3RyMik8YnIgLz48YnIgLz48Yj5FeGFtcGxlczwvYj46PGJyIC8+UHJpbnQgRGF0ZURpZmYoIm1tIiwiMDEtMDEtMTk3MSAwMDowMDowMCIsIjAxLTA2LTE5ODAgMDA6MDA6MDAiKSAnIHNob3cgdGhlIG51bWJlciBvZiB3aG9sZSBtb250aHMgYmV0d2VlbiB0aGUgZGF0ZXM8YnIgLz5JbnZvaWNlRGF5cz1EYXRlRGlmZigiZCIsSW52RGF0ZSQsTm93KCkpICcgY2FsY3VsYXRlIHRoZSBudW1iZXIgb2YgZGF5cyBzaW5jZSB0aGUgaW52b2ljZSB3YXMgcmFpc2VkPGJyIC8+UHJpbnQgRGF0ZURpZmYoInl5eXkiLCIyOC0wMi0yMDEwIDE3OjAwOjAwIiwiMDEtMDEtMTk3MCAwMDowMDowMCIpJyBzaG93IHRoZSBudW1iZXIgb2YgeWVhcnMgYmV0d2VlbiB0aGUgdHdvIGRhdGVzPGJyIC8+PGJyIC8+PGI+RGVwZW5kZW5jaWVzPC9iPjo8YnIgLz48dWw+PGxpPjxhIGNsYXNzPSJwYWdlbGluayIgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Ik1NQmFzaWMuVW5peFRpbWUtb3ItRXBvY2gtVGltZS5hc2h4IiB0aXRsZT0iVW5peFRpbWUgb3IgRXBvY2ggVGltZSI+VW5peFRpbWU8L2E+PC9saT48bGk+PGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5IdW1hblRpbWUtRnVuY3Rpb24tdG8tcmV0dXJuLWEtaHVtYW4tcmVhZGFibGUtZGF0ZS1hbmQtdGltZS1mcm9tLWEtdW5peHRpbWUtbnVtYmVyLmFzaHgiIHRpdGxlPSJIdW1hblRpbWUoKSBGdW5jdGlvbiB0byByZXR1cm4gYSBodW1hbiByZWFkYWJsZSBkYXRlIGFuZCB0aW1lIGZyb20gYSB1bml4dGltZSBudW1iZXIiPkh1bWFuVGltZTwvYT48YnIgLz48L2xpPjwvdWw+PGJyIC8+PGI+Q29kZTwvYj46PGJyIC8+PHByZT4NCkZ1bmN0aW9uIERhdGVEaWZmKEludGVydmFsIEFzIFN0cmluZyxkdDEgQXMgU3RyaW5nLGR0MiBBcyBTdHJpbmcpIEFzIEludGVnZXINCgkJJ3JldHVybiB0aGUgbnVtYmVyIG9mIHdob2xlIGludGVydmFscyBiZXR3ZWVuIHR3byBkYXRlcw0KCQknUmVzdWx0IGlzICt2ZSB3aGVuIERUMSZsdDtEVDINCgkJJ0RhdGVEaWZmICgiZGQiLCIwMS8wMi8yMDAxIixOb3coKSkgIHJldHVybnMgdGhlIGRpZmZlcmVuY2UgaW4gd2hvbGUgZGF5cyBzaW5jZSAxc3QgRmViIDIwMDENCgkJTG9jYWwgSW50ZWdlciBuLHMsdCx1LHYseCx5LHoNCgkJU2VsZWN0IENhc2UgTENhc2UkKEludGVydmFsKQ0KCQkJQ2FzZSAicyInIFNlY29uZHMNCgkJCQlEYXRlRGlmZj1Vbml4VGltZShkdDIpLVVuaXhUaW1lKGR0MSkNCgkJCUNhc2UgIm0iJyBNaW51dGVzDQoJCQkJRGF0ZURpZmY9KFVuaXhUaW1lKGR0MiktVW5peFRpbWUoZHQxKSlcNjANCgkJCUNhc2UgImgiJyBIb3Vycw0KCQkJCURhdGVEaWZmPShVbml4VGltZShkdDIpLVVuaXhUaW1lKGR0MSkpXDM2MDANCgkJCUNhc2UgImRkIiAnRGF5cw0KCQkJCURhdGVEaWZmPShVbml4VGltZShkdDIpLVVuaXhUaW1lKGR0MSkpXDg2NDAwDQoJCQlDYXNlICJ3IiAnV2Vla3MNCgkJCQlEYXRlRGlmZj0oVW5peFRpbWUoZHQyKS1Vbml4VGltZShkdDEpKVw2MDQ4MDANCgkJCUNhc2UgIm1tIicgY2FsZW5kYXIgTW9udGhzDQoJCQkJdD1Vbml4VGltZShkdDEpJiM1ODt1PVVuaXhUaW1lKGR0MikmIzU4O3M9U2duKHUtdCkNCgkJCQlJZiBzIFRoZW4NCgkJCQkJZHQxPUh1bWFuVGltZShNaW4odCx1KSkmIzU4O2R0Mj1IdW1hblRpbWUoTWF4KHQsdSkpDQoJCQkJCXQ9VmFsKExlZnQkKGR0MSwyKSkmIzU4O3U9VmFsKE1pZCQoZHQxLDQsMikpJiM1ODt2PVZhbChNaWQkKGR0MSw3LDQpKQ0KCQkJCQl4PVZhbChMZWZ0JChkdDIsMikpJiM1ODt5PVZhbChNaWQkKGR0Miw0LDIpKSYjNTg7ej1WYWwoTWlkJChkdDIsNyw0KSkNCgkJCQkJZm9yIG49disxIHRvIHoNCgkJCQkJCURhdGVEaWZmPURhdGVEaWZmKzEyDQoJCQkJCW5leHQNCgkJCQkJRGF0ZURpZmY9RGF0ZURpZmYrKHktdSkNCgkJCQkJSWYgdCZndDt4IHRoZW4gRGF0ZURpZmY9RGF0ZURpZmYtMQ0KCQkJCUVuZElmDQoJCQkJRGF0ZURpZmY9RGF0ZURpZmYmIzQyO3MNCgkJCUNhc2UgInl5eXkiJyBZZWFycw0KCQkJCXQ9VW5peFRpbWUoZHQxKSYjNTg7dT1Vbml4VGltZShkdDIpJiM1ODtzPVNnbih1LXQpDQoJCQkJSWYgcyBUaGVuDQoJCQkJCWR0MT1IdW1hblRpbWUoTWluKHQsdSkpJiM1ODtkdDI9SHVtYW5UaW1lKE1heCh0LHUpKQ0KCQkJCQl0PVZhbChMZWZ0JChkdDEsMikpJiM1ODt1PVZhbChNaWQkKGR0MSw0LDIpKSYjNTg7dj1WYWwoTWlkJChkdDEsNyw0KSkNCgkJCQkJeD1WYWwoTGVmdCQoZHQyLDIpKSYjNTg7eT1WYWwoTWlkJChkdDIsNCwyKSkmIzU4O3o9VmFsKE1pZCQoZHQyLDcsNCkpDQoJCQkJCURhdGVEaWZmPXotdg0KCQkJCQlJZiB1Jmd0O3kgVGhlbg0KCQkJCQkJRGF0ZURpZmY9RGF0ZURpZmYtMQ0KCQkJCQlFbHNlSWYgdT15IFRoZW4NCgkJCQkJCUlmIHQmZ3Q7eCBUaGVuIERhdGVEaWZmPURhdGVEaWZmLTENCgkJCQkJRW5kSWYNCgkJCQlFbmRJZg0KCQkJCURhdGVEaWZmPURhdGVEaWZmJiM0MjtzDQoJCQlDYXNlIEVsc2UNCgkJCQlEYXRlRGlmZj0wDQoJCUVuZCBTZWxlY3QNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiPkJvbnVzITwvYj4gQWx0ZXJuYXRpdmUgRGF5IG9mIFdlZWsgKERvVykgZnVuY3Rpb248YnIgLz5UaGVyZSBhcmUgYSBudW1iZXIgb2YgRGF5LW9mLVRoZS1XZWVrIChEb1cpIGZ1bmN0aW9ucyBoZXJlIGluIHRoaXMgbGlicmFyeSwgYnV0IGp1c3QgdG8gZmxvZyB0aGUgaWRlYSB0byBkZWF0aDsgaGVyZSBpcyBhIERvVyBmdW5jdGlvbiB1c2luZyBEYXRlRGlmZi4gPGJyIC8+PGJyIC8+VVQwIHdhcyBhIFRodXJzZGF5LCBzbyBieSBjYWxjdWxhdGluZyB0aGUgbnVtYmVyIG9mIGRheXMgYmV0d2VlbiB0aGVuIGFuZCBhIGdpdmVuIGRhdGUsIGFkanVzdGluZyBmb3IgdGhlIHBvc2l0aW9uIG9mIFN1bmRheSAoYXNzdW1pbmcgU3VuZGF5PTApIGFuZCB0aGVuIE1PRGluZyBieSA3IChkYXlzIGluIGEgd2VlayksIHdlIGNhbiBkZXJpdmUgdGhlIERvVyBmb3IgYW55IGdpdmVuIGRhdGV0aW1lIC0gdGh1czo8YnIgLz48YnIgLz48Y29kZT5QcmludCBkYXRlZGlmZigiZGQiLCIwMS0wMS0xOTcwIDAwOjAwOjAwIiwiMTgtMDEtMjAxOCAwMDowMDowMCIpIG1vZCA3ICcgc2hvdWxkIGJlIHplcm8gY296IGJvdGggZGF0ZXMgYXJlIFRodXJzZGF5czwvY29kZT48YnIgLz48YnIgLz4nLi4uYnVtcCBhbG9uZyBmb3Igc3VuZGF5IGFkanVzdG1lbnQ8YnIgLz48Y29kZT5QcmludCAoNCtkYXRlZGlmZigiZGQiLCIwMS0wMS0xOTcwIDAwOjAwOjAwIiwiMDEtMDEtMTk3MCAwMDowMDowMCIpKSBtb2QgNyAnIHRlc3QgZm9yVVQwID0gNCAodGh1cnNkYXkpPC9jb2RlPjxiciAvPjxiciAvPid0cnkgd2l0aCB0b2RheSdzIGRhdGUuLi48YnIgLz48Y29kZT5QcmludCAoNCtkYXRlZGlmZigiZGQiLCIwMS0wMS0xOTcwIDAwOjAwOjAwIixOb3coKSkpIG1vZCA3JyBkYXkgdG9kYXk8L2NvZGU+PGJyIC8+PGJyIC8+PGJyIC8+SWYgeW91IGFyZSB1c2luZyBEYXRlRGlmZigpIGluIHlvdXIgY29kZSwgdGhpcyBoYXMgdG8gYmUgYWJvdXQgdGhlIHNpbXBsZXN0IHNvbHV0aW9uIGZvciBEb1coKS4gSWYgbm90LCB5b3UgYXJlIGJldHRlciBvZmYgbG9va2luZyBhdCBvdGhlciBleGFtcGxlcyBoZXJlIGluIHRoZSBsaWJyYXJ5IGFzIHRoZSBvdmVyaGVhZCBmb3IgRGF0ZURpZmYoKSBpcyBmYWlybHkgaGlnaCBhbmQgZGlmZmljdWx0IHRvIGp1c3RpZnkgZm9yIERvVygpIGFsb25lLjxiciAvPjxiciAvPjxwcmU+DQpGdW5jdGlvbiBEb1coZCQpIEFzIEludGVnZXINCiAgRG9XPSg0K0RhdGVEaWZmKCJkZCIsIjAxLTAxLTE5NzAgMDAmIzU4OzAwJiM1ODswMCIsZCQpKSBtb2QgNw0KRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48Yj5TZWUgQWxzbzwvYj46PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLkRhdGVBZGQtRnVuY3Rpb24tVkItd29yay1hLWxpa2UuYXNoeCIgdGl0bGU9IkRhdGVBZGQoKSBGdW5jdGlvbiAoVkIgd29yay1hLWxpa2UpIj5EYXRlQWRkKCk8L2E+PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLk5vdy1GdW5jdGlvbi1WQi13b3JrLWEtbGlrZS5hc2h4IiB0aXRsZT0iTm93KCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKSAiPk5vdygpPC9hPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5EYXRlUGFydC1GdW5jdGlvbi1WQi13b3JrLWEtbGlrZS5hc2h4IiB0aXRsZT0iRGF0ZVBhcnQoKSBGdW5jdGlvbiAoVkIgd29yay1hLWxpa2UpIj5EYXRlUGFydCgpPC9hPjxiciAvPmRkT2l4vHSNVfGWMZto4FIRAru5BSs=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">DateDiff() Function (VB work-a-like)</h1><small>Modified on 2020/09/16 08:11 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks</small><br /><br />The following is a DateDiff function for calculating the difference of intervals between two dates.<br /><br />It is inspired by the <a class="externallink" href="https://www.w3schools.com/asp/func_datediff.asp" title="VB function of the same name" target="_blank">VB function of the same name</a> but is tweaked slightly from the original. The concept is; calculate the number of specified intervals between the two datetimes. Only whole intervals are counted and are specified with a string:<br />yyyy - Year<br />mm - Calendar Month <br />w - Calendar week (7 days)<br />dd - Day<br />h - Hour<br />m - Minute<br />s - Second<br /><br />If the first date is earlier than the second, the result will be positive otherwise negative.<br /><br />There is little to no error checking so if you supply nonsense you will probably crash it or get rubbish back. <br /><br />Note: The dates are subject to UnixTime constraints (no earlier than 01/01/1970). ISO8601 format is not yet supported.<br /><br /><b>Syntax</b>:<br />=DateDiff(interval,datestr1,datestr2)<br /><br /><b>Examples</b>:<br />Print DateDiff("mm","01-01-1971 00:00:00","01-06-1980 00:00:00") ' show the number of whole months between the dates<br />InvoiceDays=DateDiff("d",InvDate$,Now()) ' calculate the number of days since the invoice was raised<br />Print DateDiff("yyyy","28-02-2010 17:00:00","01-01-1970 00:00:00")' show the number of years between the two dates<br /><br /><b>Dependencies</b>:<br /><ul><li><a class="pagelink" target="_blank" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a></li><li><a class="pagelink" target="_blank" href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime</a><br /></li></ul><br /><b>Code</b>:<br /><pre>
+Function DateDiff(Interval As String,dt1 As String,dt2 As String) As Integer
+		'return the number of whole intervals between two dates
+		'Result is +ve when DT1&lt;DT2
+		'DateDiff ("dd","01/02/2001",Now())  returns the difference in whole days since 1st Feb 2001
+		Local Integer n,s,t,u,v,x,y,z
+		Select Case LCase$(Interval)
+			Case "s"' Seconds
+				DateDiff=UnixTime(dt2)-UnixTime(dt1)
+			Case "m"' Minutes
+				DateDiff=(UnixTime(dt2)-UnixTime(dt1))\60
+			Case "h"' Hours
+				DateDiff=(UnixTime(dt2)-UnixTime(dt1))\3600
+			Case "dd" 'Days
+				DateDiff=(UnixTime(dt2)-UnixTime(dt1))\86400
+			Case "w" 'Weeks
+				DateDiff=(UnixTime(dt2)-UnixTime(dt1))\604800
+			Case "mm"' calendar Months
+				t=UnixTime(dt1)&#58;u=UnixTime(dt2)&#58;s=Sgn(u-t)
+				If s Then
+					dt1=HumanTime(Min(t,u))&#58;dt2=HumanTime(Max(t,u))
+					t=Val(Left$(dt1,2))&#58;u=Val(Mid$(dt1,4,2))&#58;v=Val(Mid$(dt1,7,4))
+					x=Val(Left$(dt2,2))&#58;y=Val(Mid$(dt2,4,2))&#58;z=Val(Mid$(dt2,7,4))
+					for n=v+1 to z
+						DateDiff=DateDiff+12
+					next
+					DateDiff=DateDiff+(y-u)
+					If t&gt;x then DateDiff=DateDiff-1
+				EndIf
+				DateDiff=DateDiff&#42;s
+			Case "yyyy"' Years
+				t=UnixTime(dt1)&#58;u=UnixTime(dt2)&#58;s=Sgn(u-t)
+				If s Then
+					dt1=HumanTime(Min(t,u))&#58;dt2=HumanTime(Max(t,u))
+					t=Val(Left$(dt1,2))&#58;u=Val(Mid$(dt1,4,2))&#58;v=Val(Mid$(dt1,7,4))
+					x=Val(Left$(dt2,2))&#58;y=Val(Mid$(dt2,4,2))&#58;z=Val(Mid$(dt2,7,4))
+					DateDiff=z-v
+					If u&gt;y Then
+						DateDiff=DateDiff-1
+					ElseIf u=y Then
+						If t&gt;x Then DateDiff=DateDiff-1
+					EndIf
+				EndIf
+				DateDiff=DateDiff&#42;s
+			Case Else
+				DateDiff=0
+		End Select
+	End Function
+</pre><br /><b>Bonus!</b> Alternative Day of Week (DoW) function<br />There are a number of Day-of-The-Week (DoW) functions here in this library, but just to flog the idea to death; here is a DoW function using DateDiff. <br /><br />UT0 was a Thursday, so by calculating the number of days between then and a given date, adjusting for the position of Sunday (assuming Sunday=0) and then MODing by 7 (days in a week), we can derive the DoW for any given datetime - thus:<br /><br /><code>Print datediff("dd","01-01-1970 00:00:00","18-01-2018 00:00:00") mod 7 ' should be zero coz both dates are Thursdays</code><br /><br />'...bump along for sunday adjustment<br /><code>Print (4+datediff("dd","01-01-1970 00:00:00","01-01-1970 00:00:00")) mod 7 ' test forUT0 = 4 (thursday)</code><br /><br />'try with today's date...<br /><code>Print (4+datediff("dd","01-01-1970 00:00:00",Now())) mod 7' day today</code><br /><br /><br />If you are using DateDiff() in your code, this has to be about the simplest solution for DoW(). If not, you are better off looking at other examples here in the library as the overhead for DateDiff() is fairly high and difficult to justify for DoW() alone.<br /><br /><pre>
+Function DoW(d$) As Integer
+  DoW=(4+DateDiff("dd","01-01-1970 00&#58;00&#58;00",d$)) mod 7
+End Function
+</pre><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd()</a><br /><a class="pagelink" href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now()</a><br /><a class="pagelink" href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart()</a><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DateDiff-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:19 GMT -->
+</html>

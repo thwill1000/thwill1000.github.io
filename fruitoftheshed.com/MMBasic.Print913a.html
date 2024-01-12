@@ -1,0 +1,249 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driving-LCD-from-MMBasic-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Driving LCD from MMBasic - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Driving-LCD-from-MMBasic-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFm3Y8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RHJpdmluZyBMQ0QgZnJvbSBNTUJhc2ljPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzoyNyBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IENvbnRyb2wsIEVsZWN0cm9uaWNzLCBIYXJkd2FyZSwgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+RGVtb25zdHJhdGVzIGhvdyB0byB0YWxrIHRvIGEgInN0YW5kYXJkIiBMQ0QgZGlzcGxheSBiYXNlZCBvbiB0aGUgSGl0YWNoaSBIRDQ0NzgwIGNvbnRyb2xsZXIgYW5kIGNvbXBhdGlibGVzLiBMYXRlciB2ZXJzaW9ucyBvZiBNTUJhc2ljIGhhdmUgaW5idWlsdCBjb21tYW5kcyB3aGljaCBhcmUgc2ltcGxlIGFuZCBmYXN0ZXIuIElmIHlvdSBoYXZlIGFueXRoaW5nIHRoYXQgaXMgbm9uLXN0YW5kYXJkICg4IGJpdCBidXMsIHNoYXJlZCBidXMgZXRjLikgdGhlbiB0aGVzZSBwaWVjZXMgb2YgY29kZSB3aWxsIGdpdmUgeW91IGEgZ29vZCBpbnNpZ2h0IGludG8gaG93IHRvIGRyaXZlIHRoZSBMQ0QgZGlzY3JlZXRseS4gVGhlIGF0dGFjaGVkIGZpbGUgc2hvd3MgdGhlIGFzc3VtZWQgY29ubmVjdGl2aXR5LjxiciAvPjxiciAvPkxDRC5CQVM8YnIgLz48cHJlPg0KJyBkZW1vbnN0cmF0aW9uIHByb2dyYW0NCicgc2VuZCAyIGxpbmVzIHRvIHRoZSBMQ0QNCkluaXRMQ0QNClByaW50TENEIDEsICIgIEhlbGxvICBXb3JsZCINClByaW50TENEIDIsICIgIE1heGltaXRlIExDRCINCg0KDQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNCicgTENEIGRyaXZlciBmb3IgTU1CYXNpYyAzLjEgb3IgbGF0ZXIgKHVzZXMgZGVmaW5lZCBzdWJyb3V0aW5lcykNCicgR2VvZmYgR3JhaGFtLCBKYW4gMjAxMg0KJw0KJyBXaWxsIGRyaXZlIGEgc3RhbmRhcmQgMTYgeCAyIExDRHMNCicgRm9yIGV4YW1wbGUmIzU4OyAgZnV0dXJsZWMuY29tICAgICAgIExDRDE2WDINCicgICAgICAgICAgICAgICBhbHRyb25pY3MuY29tLmF1ICAgWjcwMDENCicgICAgICAgICAgICAgICBqYXljYXIuY29tLmF1ICAgICAgUVA1NTEyDQonDQonIFRvIHVzZSYjNTg7DQonICAtIFNldHVwIHRoZSBMQ0Qgd2l0aCB0aGUgY29tbWFuZCYjNTg7ICAgIEluaXRMQ0QNCicgIC0gRGlzcGxheSBhIGxpbmUgdXNpbmcgdGhlIGNvbW1hbmQmIzU4OyAgUHJpbnRMQ0QgTGluZU5iciwgVGV4dCQNCicNCicgU2VlIGRvY3VtZW50YXRpb24gKExDRC5QREYpIGZvciB0aGUgc2NoZW1hdGljDQonIE1heGltaXRlIHBpbiAxMSBpcyBSUywgcGluIDEyIGlzIEVODQonIHBpbnMgMTMgdG8gMTYgYXJlIEQ0IHRvIEQ3DQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNCicgSW5pdGlhbGlzZSB0aGUgTENEDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQpTdWIgSW5pdExDRA0KICBGb3IgaSA9IDExIFRvIDE2ICYjNTg7IFNldFBpbiBpLCA5ICYjNTg7IE5leHQgaSAgJyBhbGwgb3BlbiBjb2xsZWN0b3INCiAgTENEX05pYmJsZSAmYW1wO0IwMDExLCAwLCA1ICAgICAgICAgICAgICAgICAgJyByZXNldA0KICBMQ0RfTmliYmxlICZhbXA7QjAwMTEsIDAsIDUgICAgICAgICAgICAgICAgICAnIHJlc2V0DQogIExDRF9OaWJibGUgJmFtcDtCMDAxMSwgMCwgNSAgICAgICAgICAgICAgICAgICcgcmVzZXQNCiAgTENEX05pYmJsZSAmYW1wO0IwMDEwLCAwLCAyICAgICAgICAgICAgICAgICAgJyA0IGJpdCBtb2RlDQogIExDRF9OaWJibGUgJmFtcDtCMDAxMCAmIzU4OyBMQ0RfTmliYmxlICZhbXA7QjExMDAgICAgJyA0IGJpdHMsIDIgbGluZXMNCiAgTENEX05pYmJsZSAmYW1wO0IwMDAwICYjNTg7IExDRF9OaWJibGUgJmFtcDtCMTEwMCAgICAnIGRpc3BsYXkgb24sIG5vIGN1cnNvcg0KICBMQ0RfTmliYmxlICZhbXA7QjAwMDAgJiM1ODsgTENEX05pYmJsZSAmYW1wO0IwMTEwICAgICcgaW5jcmVtZW50IG9uIHdyaXRlDQogIExDRF9OaWJibGUgJmFtcDtCMDAwMCAmIzU4OyBMQ0RfTmliYmxlICZhbXA7QjAwMDEgICAgJyBjbGVhciB0aGUgZGlzcGxheQ0KICBQYXVzZSAyDQpFbmQgU3ViDQoNCg0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KJyBEaXNwbGF5IGEgbGluZSBvbiB0aGUgTENEDQonIGFyZ3VtZW50ICYjMzU7MSBpcyB0aGUgbGluZSB0byBiZSB1c2VkICgxIG9yIDIpDQonIGFyZ3VtZW50ICYjMzU7MiBpcyB0aGUgbGluZSB0byBkaXNwbGF5IChjYW4gYmUgYW55IGxlbmd0aCkNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNClN1YiBQcmludExDRCAoIExpbmVOdW1iZXIsIExpbmUkICkNCiAgTG9jYWwgaSwgYw0KDQogICcgZmlyc3Qgc2VuZCB0aGUgY3Vyc29yIHBvc2l0aW9uIChpbiB0d28gbmliYmxlcykNCiAgTENEX05pYmJsZSAmYW1wO0IxMDAwICsgKExpbmVOdW1iZXIgLSAxKSAmIzQyOyA0ICYjNTg7IExDRF9OaWJibGUgMA0KDQogICcgdGhlbiBzZW5kIHRoZSB0ZXh0IGNoYXJhY3RlciBieSBjaGFyYWN0ZXIgKHR3byBuaWJibGVzIHBlciBjaGFyYWN0ZXIpDQogIEZvciBpID0gMSBUbyAxNg0KICAgIGMgPSBBc2MoTWlkJChMaW5lJCArIFNwYWNlJCgxNiksIGksIDEpKQ0KICAgIExDRF9OaWJibGUgSW50KGMvMTYpLCAxICYjNTg7IExDRF9OaWJibGUgYywgMQ0KICBOZXh0IGkNCkVuZCBTdWINCg0KDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonIFNlbmQgdGhlIGxvd2VyIDQgYml0cyAoY2FsbGVkIGEgbmliYmxlKSB0byB0aGUgTENEDQonIGFyZ3VtZW50ICYjMzU7MSBpcyB0aGUgbmliYmxlIHRvIHNlbmQNCicgYXJndW1lbnQgJiMzNTsyIGlzIHRydWUgaWYgZGF0YSwgZmFsc2UgaWYgY29tbWFuZCAoZGVmYXVsdCBpcyBjb21tYW5kKQ0KJyBhcmd1bWVudCAmIzM1OzMgaXMgZGVsYXkgYWZ0ZXIgdGhlIGRhdGEgaGFzIGJlZW4gc2VudCAoZGVmYXVsdCBpcyB6ZXJvKQ0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KU3ViIExDRF9OaWJibGUgKCBEYXRhLCBGbGFnLCBXYWl0X21TZWMgKQ0KICBQaW4oMTEpID0gRmxhZw0KICBQaW4oMTMpID0gRGF0YSBBbmQgJmFtcDtCMDAwMDAwMDENCiAgUGluKDE0KSA9IERhdGEgQW5kICZhbXA7QjAwMDAwMDEwDQogIFBpbigxNSkgPSBEYXRhIEFuZCAmYW1wO0IwMDAwMDEwMA0KICBQaW4oMTYpID0gRGF0YSBBbmQgJmFtcDtCMDAwMDEwMDANCiAgUGluKDEyKSA9IDEgJiM1ODsgUGluKDEyKSA9IDANCiAgUGF1c2UgV2FpdF9tU2VjDQpFbmQgU3ViDQoNCg0KPC9wcmU+PGJyIC8+TENEMV8xLkJBUzxiciAvPjxwcmU+DQonIGRlbW9uc3RyYXRpb24gcHJvZ3JhbQ0KJyBzZW5kIGxpbmVzIHRvIHRoZSBMQ0QNCicNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNCicgTENEIGRyaXZlciBmb3IgTU1CYXNpYyAzLjEgb3IgbGF0ZXIgKHVzZXMgZGVmaW5lZCBzdWJyb3V0aW5lcykNCicgR2VvZmYgR3JhaGFtLCBKYW4gMjAxMi4NCicgTW9kaWZpZWQgYnkgSmFtZXMgRGVha2lucyB0byB3b3JrIHdpdGggMjAgeCA0IExDRHMsIEZlYiAyMDEyLg0KJyBTaG91bGQgYWxzbyB3b3JrIHdpdGggOCB4IDEgYW5kIG90aGVyIGNvbmZpZ3MsIGJ1dCBub3QgdGVzdGVkLg0KJw0KJyBXaWxsIGRyaXZlIHN0YW5kYXJkIDE2IHggMiBhbmQgMjAgeCA0IExDRHMNCicgRm9yIGV4YW1wbGUmIzU4OyAgZnV0dXJsZWMuY29tICAgICAgIExDRDE2WDINCicgICAgICAgICAgICAgICBhbHRyb25pY3MuY29tLmF1ICAgWjcwMDENCicgICAgICAgICAgICAgICBqYXljYXIuY29tLmF1ICAgICAgUVA1NTEyDQonDQonIFRvIHVzZSYjNTg7DQonICAtIERlZmluZSBMQ0Qgc2l6ZSB3aXRoIHRoZSBjb21tYW5kJiM1ODsgIEluaXRMQ0RWYXJpYWJsZXMgY29sdW1ucywgbGluZXMNCicgIC0gU2V0dXAgdGhlIExDRCB3aXRoIHRoZSBjb21tYW5kJiM1ODsgICAgSW5pdExDRA0KJyAgLSBEaXNwbGF5IGEgbGluZSB1c2luZyB0aGUgY29tbWFuZCYjNTg7ICBQcmludExDRCBMaW5lTmJyLCBUZXh0JA0KJw0KJyBGaWxlIExDRF9MSUIuQkFTIHdpbGwgcHJvdmlkZSBhbiBleHRlbmRlZCByYW5nZSBvZiBmdW5jdGlvbnMuDQonDQonIFNlZSBkb2N1bWVudGF0aW9uIChMQ0QuUERGKSBmb3IgdGhlIHNjaGVtYXRpYw0KJyBNYXhpbWl0ZSBwaW4gMTEgaXMgUlMsIHBpbiAxMiBpcyBFTg0KJyBwaW5zIDEzIHRvIDE2IGFyZSBENCB0byBENw0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KDQpESU0gQ19MaW5lU3RhcnQoNCkJJyBhbiBhcnJheSB0byBob2xkIHRoZSBzdGFydCBhZGRyZXNzZXMgZm9yIGVhY2ggbGluZQ0KQ19MaW5lcyA9IDAJCQknIHZhcmlhYmxlIHRvIGhvbGQgdGhlIG51bWJlciBvZiBsaW5lcyBvbiB0aGUgTENEDQpDX0xpbmVMZW5ndGggPSAwCScgdmFyaWFibGUgdG8gaG9sZCB0aGUgbGluZSBsZW5ndGggb2YgdGhlIExDRA0KJw0KJyAmIzQyOyYjNDI7JiM0MjsmIzQyOyBDaGFuZ2UgdGhlIHBhcmFtZXRlcnMgdG8gaW5kaWNhdGUgd2hldGhlciB5b3UgaGF2ZSBhIDE2IHggMiANCicgJiM0MjsmIzQyOyYjNDI7JiM0Mjsgb3IgYSAyMCB4IDQgTENEIHNjcmVlbi4NCg0KSW5pdExDRFZhcmlhYmxlcygyMCwgNCkJJyAmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7Jmx0OyZsdDsmbHQ7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KDQpJbml0TENEDQoNCicgZGlzcGxheSBzaW1wbGUgbGluZXMsIGJhc2VkIG9uIGhvdyBtYW55IGxpbmVzIHRoZSBMQ0Qgc2NyZWVuIGhhcw0KDQpQcmludExDRCAxLCAiICBIZWxsbyAgV29ybGQiDQpJRiBDX0xpbmVzICZndDsgMSBUSEVOIFByaW50TENEIDIsICIgIE1heGltaXRlIExDRCINCklGIENfTGluZXMgJmd0OyAyIFRIRU4gUHJpbnRMQ0QgMywgIndpdGggYSAyMCB4IDQgTENELCINCklGIENfTGluZXMgJmd0OyAzIFRIRU4gUHJpbnRMQ0QgNCwgInVzaW5nIFN1YnJvdXRpbmVzLiINCkVORElGDQogDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonIEluaXRpYWxpc2UgdGhlIHZhcmlhYmxlcyBmb3IgdGhpcyBhcHBsaWNhdGlvbg0KJyAoQ19QcmVmaXggaW5kaWNhdGVzIGNvbnN0YW50cykuDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQpTVUIgSW5pdExDRFZhcmlhYmxlcyhMQ0RfTGluZUxlbmd0aCwgTENEX0xpbmVzKQ0KDQogICAgQ19MaW5lTGVuZ3RoID0gTENEX0xpbmVMZW5ndGgNCiAgICBDX0xpbmVzID0gTENEX0xpbmVzDQogICAgDQogICAgQ19MaW5lU3RhcnQoMSkgPSAwICAgICAgICAnIFN0YXJ0IGFkZHJlc3MgZm9yIGxpbmUgMQ0KICAgIENfTGluZVN0YXJ0KDIpID0gNjQgICAgICAgJyBTdGFydCBhZGRyZXNzIGZvciBsaW5lIDINCiAgICBDX0xpbmVTdGFydCgzKSA9IDIwICAgICAgICcgU3RhcnQgYWRkcmVzcyBmb3IgbGluZSAzDQogICAgQ19MaW5lU3RhcnQoNCkgPSA4NCAgICAgICAnIFN0YXJ0IGFkZHJlc3MgZm9yIGxpbmUgNA0KDQpFTkQgU1VCDQoNCg0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KJyBJbml0aWFsaXNlIHRoZSBMQ0QgaGFyZHdhcmUNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNClNVQiBJbml0TENEDQogICAgRk9SIGkgPSAxMSBUTyAxNiAmIzU4OyBTRVRQSU4gaSwgOSAmIzU4OyBORVhUIGkJCScgYWxsIG9wZW4gY29sbGVjdG9yDQogICAgTENEX05pYmJsZSAmYW1wO0IwMDExLCAwLCA1CQkJCQkJJyByZXNldA0KICAgIExDRF9OaWJibGUgJmFtcDtCMDAxMSwgMCwgNQkJCQkJCScgcmVzZXQNCiAgICBMQ0RfTmliYmxlICZhbXA7QjAwMTEsIDAsIDUJCQkJCQknIHJlc2V0DQogICAgTENEX05pYmJsZSAmYW1wO0IwMDEwLCAwLCAyCQkJCQkJJyA0IGJpdCBtb2RlDQogICAgTENEX05pYmJsZSAmYW1wO0IwMDEwICYjNTg7IExDRF9OaWJibGUgJmFtcDtCMTEwMAkJJyA0IGJpdHMsIDIgbGluZXMNCiAgICBMQ0RfTmliYmxlICZhbXA7QjAwMDAgJiM1ODsgTENEX05pYmJsZSAmYW1wO0IxMTAwCQknIGRpc3BsYXkgb24sIG5vIGN1cnNvcg0KICAgIExDRF9OaWJibGUgJmFtcDtCMDAwMCAmIzU4OyBMQ0RfTmliYmxlICZhbXA7QjAxMTAJCScgaW5jcmVtZW50IG9uIHdyaXRlDQogICAgTENEX05pYmJsZSAmYW1wO0IwMDAwICYjNTg7IExDRF9OaWJibGUgJmFtcDtCMDAwMSwgMCwgMgknIGNsZWFyIHRoZSBkaXNwbGF5LCBwYXVzZSAyDQpFTkQgU1VCDQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNCicgTW92ZSBjdXJzb3IgdG8gYSBsb2NhdGlvbiBvbiB0aGUgTENEIHNjcmVlbi4NCicgYXJndW1lbnQgJiMzNTsxIGlzIHRoZSBsaW5lIHRvIGJlIHVzZWQgKDEgdG8gNCkNCicgYXJndW1lbnQgJiMzNTsyIGlzIHRoZSBjb2x1bW4gdG8gYmUgdXNlZCAoMSB0byAyMCkgDQonIFRoaXMgU3Vicm91dGluZSBpc24ndCB1c2VkIGJ5IHRoZSBvdGhlciBjb2RlLCBidXQgDQonIGlzIGluY2x1ZGVkIGJlY2F1c2UgaXQncyBzaW1wbGUgYW5kIHVzZWZ1bC4gDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQpTVUIgTENETG9jYXRlKExpbmUsIENvbHVtbikNCglMT0NBTCBjdXJQb3NuDQoNCgljdXJQb3NuID0gMTI4ICsgQ19MaW5lU3RhcnQoTGluZSkgKyBDb2x1bW4gLSAxDQoJTENEX05pYmJsZSBJTlQoY3VyUG9zbi8xNikgJiM1ODsgTENEX05pYmJsZSBjdXJQb3NuDQoNCkVORCBTVUINCg0KDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonIERpc3BsYXkgYSBsaW5lIG9uIHRoZSBMQ0QNCicgYXJndW1lbnQgJiMzNTsxIGlzIHRoZSBsaW5lIHRvIGJlIHVzZWQgKDEgdG8gNCkNCicgYXJndW1lbnQgJiMzNTsyIGlzIHRoZSBsaW5lIHRvIGRpc3BsYXkgKGNhbiBiZSBhbnkgbGVuZ3RoKQ0KJyBOb3RlJiM1ODsgVGhlIHRleHQgaGFzIHRvIGJlIHBhZGRlZCBvdXQgd2l0aCBzcGFjZXMsIG90aGVyd2lzZSANCicgJ29kZCcgY2hhcmFjdGVycyBhcmUgZGlzcGxheWVkIG9uIHRoZSBMQ0QuIA0KJyBUaGUgY29kZSBkb2VzIHRoZSBwYWRkaW5nIGZvciB5b3UuDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQpTVUIgUHJpbnRMQ0QgKCBMaW5lTnVtYmVyLCBMaW5lJCApDQoJTE9DQUwgaSwgYywgZmlsbFNwYWNlcywgZnVsbExpbmUkLCBjdXJQb3NuDQoNCgljdXJQb3NuID0gMTI4ICsgQ19MaW5lU3RhcnQoTGluZU51bWJlcikNCg0KCScgZmlyc3QsIHNlbmQgdGhlIGN1cnNvciBwb3NpdGlvbiAoaW4gdHdvIG5pYmJsZXMpDQoJTENEX05pYmJsZSBJTlQoY3VyUG9zbi8xNikgJiM1ODsgTENEX05pYmJsZSBjdXJQb3NuDQoNCglmaWxsU3BhY2VzID0gQ19MaW5lTGVuZ3RoIC0gTEVOKExpbmUkKSAnIGlzIHRoZSBsaW5lIGZ1bGw/DQoJSUYgZmlsbFNwYWNlcyAmZ3Q7IDAgVEhFTg0KCQlmdWxsTGluZSQgPSBMaW5lJCArIFNQQUNFJChmaWxsU3BhY2VzKQ0KCUVMU0UNCgkJZnVsbExpbmUkID0gTGluZSQNCglFTkRJRg0KDQoJJyB0aGVuIHNlbmQgdGhlIHRleHQgY2hhcmFjdGVyIGJ5IGNoYXJhY3RlciAodHdvIG5pYmJsZXMgcGVyIGNoYXJhY3RlcikNCglGT1IgaSA9IDEgVE8gQ19MaW5lTGVuZ3RoDQoJCWMgPSBBU0MoTUlEJChmdWxsTGluZSQsIGksIDEpKQ0KCQlMQ0RfTmliYmxlIElOVChjLzE2KSwgMSAmIzU4OyBMQ0RfTmliYmxlIGMsIDENCglORVhUIGkNCgkNCkVORCBTVUINCg0KDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonIFNlbmQgdGhlIGxvd2VyIDQgYml0cyAoY2FsbGVkIGEgbmliYmxlKSB0byB0aGUgTENEDQonIGFyZ3VtZW50ICYjMzU7MSBpcyB0aGUgbmliYmxlIHRvIHNlbmQNCicgYXJndW1lbnQgJiMzNTsyIGlzIHRydWUgaWYgZGF0YSwgZmFsc2UgaWYgY29tbWFuZCAoZGVmYXVsdCBpcyBjb21tYW5kKQ0KJyBhcmd1bWVudCAmIzM1OzMgaXMgZGVsYXkgYWZ0ZXIgdGhlIGRhdGEgaGFzIGJlZW4gc2VudCAoZGVmYXVsdCBpcyB6ZXJvKQ0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KU1VCIExDRF9OaWJibGUgKCBEYXRhLCBGbGFnLCBXYWl0X21TZWMgKQ0KICBQSU4oMTEpID0gRmxhZw0KICBQSU4oMTMpID0gRGF0YSBBTkQgJmFtcDtCMDAwMDAwMDENCiAgUElOKDE0KSA9IERhdGEgQU5EICZhbXA7QjAwMDAwMDEwDQogIFBJTigxNSkgPSBEYXRhIEFORCAmYW1wO0IwMDAwMDEwMA0KICBQSU4oMTYpID0gRGF0YSBBTkQgJmFtcDtCMDAwMDEwMDANCiAgUElOKDEyKSA9IDEgJiM1ODsgUElOKDEyKSA9IDANCiAgSUYgV2FpdF9tU2VjICZndDsgMCBUSEVOIFBBVVNFIFdhaXRfbVNlYyAgICAgICAnIG1vZGlmaWVkIDMwLzEvMjAxMi4gUmVzdG9yZSB0byBXYWl0X21TZWMgd2hlbiBQYXVzZSAwIGJ1ZyBjb3JyZWN0ZWQuDQpFTkQgU1VCDQoNCjwvcHJlPmRkzOOZUS9UOUUvGh2ckvh1N0mQuac=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Driving LCD from MMBasic</h1><small>Modified on 2016/12/23 23:27 by Administrator &mdash; Categorized as: Control, Electronics, Hardware, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />Demonstrates how to talk to a "standard" LCD display based on the Hitachi HD44780 controller and compatibles. Later versions of MMBasic have inbuilt commands which are simple and faster. If you have anything that is non-standard (8 bit bus, shared bus etc.) then these pieces of code will give you a good insight into how to drive the LCD discreetly. The attached file shows the assumed connectivity.<br /><br />LCD.BAS<br /><pre>
+' demonstration program
+' send 2 lines to the LCD
+InitLCD
+PrintLCD 1, "  Hello  World"
+PrintLCD 2, "  Maximite LCD"
+
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' LCD driver for MMBasic 3.1 or later (uses defined subroutines)
+' Geoff Graham, Jan 2012
+'
+' Will drive a standard 16 x 2 LCDs
+' For example&#58;  futurlec.com       LCD16X2
+'               altronics.com.au   Z7001
+'               jaycar.com.au      QP5512
+'
+' To use&#58;
+'  - Setup the LCD with the command&#58;    InitLCD
+'  - Display a line using the command&#58;  PrintLCD LineNbr, Text$
+'
+' See documentation (LCD.PDF) for the schematic
+' Maximite pin 11 is RS, pin 12 is EN
+' pins 13 to 16 are D4 to D7
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Initialise the LCD
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+Sub InitLCD
+  For i = 11 To 16 &#58; SetPin i, 9 &#58; Next i  ' all open collector
+  LCD_Nibble &amp;B0011, 0, 5                  ' reset
+  LCD_Nibble &amp;B0011, 0, 5                  ' reset
+  LCD_Nibble &amp;B0011, 0, 5                  ' reset
+  LCD_Nibble &amp;B0010, 0, 2                  ' 4 bit mode
+  LCD_Nibble &amp;B0010 &#58; LCD_Nibble &amp;B1100    ' 4 bits, 2 lines
+  LCD_Nibble &amp;B0000 &#58; LCD_Nibble &amp;B1100    ' display on, no cursor
+  LCD_Nibble &amp;B0000 &#58; LCD_Nibble &amp;B0110    ' increment on write
+  LCD_Nibble &amp;B0000 &#58; LCD_Nibble &amp;B0001    ' clear the display
+  Pause 2
+End Sub
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Display a line on the LCD
+' argument &#35;1 is the line to be used (1 or 2)
+' argument &#35;2 is the line to display (can be any length)
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+Sub PrintLCD ( LineNumber, Line$ )
+  Local i, c
+
+  ' first send the cursor position (in two nibbles)
+  LCD_Nibble &amp;B1000 + (LineNumber - 1) &#42; 4 &#58; LCD_Nibble 0
+
+  ' then send the text character by character (two nibbles per character)
+  For i = 1 To 16
+    c = Asc(Mid$(Line$ + Space$(16), i, 1))
+    LCD_Nibble Int(c/16), 1 &#58; LCD_Nibble c, 1
+  Next i
+End Sub
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Send the lower 4 bits (called a nibble) to the LCD
+' argument &#35;1 is the nibble to send
+' argument &#35;2 is true if data, false if command (default is command)
+' argument &#35;3 is delay after the data has been sent (default is zero)
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+Sub LCD_Nibble ( Data, Flag, Wait_mSec )
+  Pin(11) = Flag
+  Pin(13) = Data And &amp;B00000001
+  Pin(14) = Data And &amp;B00000010
+  Pin(15) = Data And &amp;B00000100
+  Pin(16) = Data And &amp;B00001000
+  Pin(12) = 1 &#58; Pin(12) = 0
+  Pause Wait_mSec
+End Sub
+
+
+</pre><br />LCD1_1.BAS<br /><pre>
+' demonstration program
+' send lines to the LCD
+'
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' LCD driver for MMBasic 3.1 or later (uses defined subroutines)
+' Geoff Graham, Jan 2012.
+' Modified by James Deakins to work with 20 x 4 LCDs, Feb 2012.
+' Should also work with 8 x 1 and other configs, but not tested.
+'
+' Will drive standard 16 x 2 and 20 x 4 LCDs
+' For example&#58;  futurlec.com       LCD16X2
+'               altronics.com.au   Z7001
+'               jaycar.com.au      QP5512
+'
+' To use&#58;
+'  - Define LCD size with the command&#58;  InitLCDVariables columns, lines
+'  - Setup the LCD with the command&#58;    InitLCD
+'  - Display a line using the command&#58;  PrintLCD LineNbr, Text$
+'
+' File LCD_LIB.BAS will provide an extended range of functions.
+'
+' See documentation (LCD.PDF) for the schematic
+' Maximite pin 11 is RS, pin 12 is EN
+' pins 13 to 16 are D4 to D7
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+DIM C_LineStart(4)	' an array to hold the start addresses for each line
+C_Lines = 0			' variable to hold the number of lines on the LCD
+C_LineLength = 0	' variable to hold the line length of the LCD
+'
+' &#42;&#42;&#42;&#42; Change the parameters to indicate whether you have a 16 x 2 
+' &#42;&#42;&#42;&#42; or a 20 x 4 LCD screen.
+
+InitLCDVariables(20, 4)	' &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+InitLCD
+
+' display simple lines, based on how many lines the LCD screen has
+
+PrintLCD 1, "  Hello  World"
+IF C_Lines &gt; 1 THEN PrintLCD 2, "  Maximite LCD"
+IF C_Lines &gt; 2 THEN PrintLCD 3, "with a 20 x 4 LCD,"
+IF C_Lines &gt; 3 THEN PrintLCD 4, "using Subroutines."
+ENDIF
+ 
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Initialise the variables for this application
+' (C_Prefix indicates constants).
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+SUB InitLCDVariables(LCD_LineLength, LCD_Lines)
+
+    C_LineLength = LCD_LineLength
+    C_Lines = LCD_Lines
+    
+    C_LineStart(1) = 0        ' Start address for line 1
+    C_LineStart(2) = 64       ' Start address for line 2
+    C_LineStart(3) = 20       ' Start address for line 3
+    C_LineStart(4) = 84       ' Start address for line 4
+
+END SUB
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Initialise the LCD hardware
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+SUB InitLCD
+    FOR i = 11 TO 16 &#58; SETPIN i, 9 &#58; NEXT i		' all open collector
+    LCD_Nibble &amp;B0011, 0, 5						' reset
+    LCD_Nibble &amp;B0011, 0, 5						' reset
+    LCD_Nibble &amp;B0011, 0, 5						' reset
+    LCD_Nibble &amp;B0010, 0, 2						' 4 bit mode
+    LCD_Nibble &amp;B0010 &#58; LCD_Nibble &amp;B1100		' 4 bits, 2 lines
+    LCD_Nibble &amp;B0000 &#58; LCD_Nibble &amp;B1100		' display on, no cursor
+    LCD_Nibble &amp;B0000 &#58; LCD_Nibble &amp;B0110		' increment on write
+    LCD_Nibble &amp;B0000 &#58; LCD_Nibble &amp;B0001, 0, 2	' clear the display, pause 2
+END SUB
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Move cursor to a location on the LCD screen.
+' argument &#35;1 is the line to be used (1 to 4)
+' argument &#35;2 is the column to be used (1 to 20) 
+' This Subroutine isn't used by the other code, but 
+' is included because it's simple and useful. 
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+SUB LCDLocate(Line, Column)
+	LOCAL curPosn
+
+	curPosn = 128 + C_LineStart(Line) + Column - 1
+	LCD_Nibble INT(curPosn/16) &#58; LCD_Nibble curPosn
+
+END SUB
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Display a line on the LCD
+' argument &#35;1 is the line to be used (1 to 4)
+' argument &#35;2 is the line to display (can be any length)
+' Note&#58; The text has to be padded out with spaces, otherwise 
+' 'odd' characters are displayed on the LCD. 
+' The code does the padding for you.
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+SUB PrintLCD ( LineNumber, Line$ )
+	LOCAL i, c, fillSpaces, fullLine$, curPosn
+
+	curPosn = 128 + C_LineStart(LineNumber)
+
+	' first, send the cursor position (in two nibbles)
+	LCD_Nibble INT(curPosn/16) &#58; LCD_Nibble curPosn
+
+	fillSpaces = C_LineLength - LEN(Line$) ' is the line full?
+	IF fillSpaces &gt; 0 THEN
+		fullLine$ = Line$ + SPACE$(fillSpaces)
+	ELSE
+		fullLine$ = Line$
+	ENDIF
+
+	' then send the text character by character (two nibbles per character)
+	FOR i = 1 TO C_LineLength
+		c = ASC(MID$(fullLine$, i, 1))
+		LCD_Nibble INT(c/16), 1 &#58; LCD_Nibble c, 1
+	NEXT i
+	
+END SUB
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Send the lower 4 bits (called a nibble) to the LCD
+' argument &#35;1 is the nibble to send
+' argument &#35;2 is true if data, false if command (default is command)
+' argument &#35;3 is delay after the data has been sent (default is zero)
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+SUB LCD_Nibble ( Data, Flag, Wait_mSec )
+  PIN(11) = Flag
+  PIN(13) = Data AND &amp;B00000001
+  PIN(14) = Data AND &amp;B00000010
+  PIN(15) = Data AND &amp;B00000100
+  PIN(16) = Data AND &amp;B00001000
+  PIN(12) = 1 &#58; PIN(12) = 0
+  IF Wait_mSec &gt; 0 THEN PAUSE Wait_mSec       ' modified 30/1/2012. Restore to Wait_mSec when Pause 0 bug corrected.
+END SUB
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driving-LCD-from-MMBasic-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:53 GMT -->
+</html>

@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DateAdd-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	DateAdd() Function (VB work-a-like) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.DateAdd-Function-VB-work-a-like" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF3SU8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RGF0ZUFkZCgpIEZ1bmN0aW9uIChWQiB3b3JrLWEtbGlrZSk8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIwLzA5LzE2IDA4OjExIGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBEYXRlcywgVGltZSBhbmQgQ2xvY2tzLCBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz5UaGUgZm9sbG93aW5nIGlzIGEgRGF0ZUFkZCBmdW5jdGlvbiBmb3IgY2FsY3VsYXRpbmcgZGF0ZXMgd2l0aCBpbnRlcnZhbHMgYWRkZWQgKG9yIHN1YnRyYWN0ZWQpLjxiciAvPjxiciAvPkl0IGlzIGluc3BpcmVkIGJ5IHRoZSA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwczovL3d3dy53M3NjaG9vbHMuY29tL2FzcC9mdW5jX2RhdGVhZGQuYXNwIiB0aXRsZT0iVkIgZnVuY3Rpb24gb2YgdGhlIHNhbWUgbmFtZSIgdGFyZ2V0PSJfYmxhbmsiPlZCIGZ1bmN0aW9uIG9mIHRoZSBzYW1lIG5hbWU8L2E+IGJ1dCBpcyB0d2Vha2VkIHNsaWdodGx5IGZyb20gdGhlIG9yaWdpbmFsIGFuZCByZXR1cm5zIGEgZGF0ZXRpbWUgc3RyaW5nIChERC1NTS1ZWVlZIEhIOk1NOlNTKSB3aXRoIHggaW50ZXJ2YWxzIGFkZGVkLiBJbnRlcnZhbHMgYXJlIHNwZWNpZmllZCB3aXRoIGEgc3RyaW5nIGFuZCBhcmU6PGJyIC8+ICB5eXl5IC0gWWVhcjxiciAvPiAgbW0gICAtIENhbGVuZGFyIE1vbnRoIDxiciAvPiAgdyAgICAtIENhbGVuZGFyIHdlZWsgKDcgZGF5cyk8YnIgLz4gIGRkICAgIC0gRGF5PGJyIC8+ICBoICAgIC0gSG91cjxiciAvPiAgbSAgICAtIE1pbnV0ZTxiciAvPiAgcyAgICAtIFNlY29uZDxiciAvPjxiciAvPkJ5IGRlZmF1bHQgdGhlIDxjb2RlPmludGVydmFsPC9jb2RlPiBpcyBhZGRlZCB0byB0aGUgc3VwcGxpZWQgZGF0ZSwgdG8gc3VidHJhY3QgaXQsIG1ha2UgdGhlIDxjb2RlPm51bWJlcm9mPC9jb2RlPiB2YWx1ZSBuZWdhdGl2ZSBlLmcuIHg9LXggb3IgeD14LTIqeDxiciAvPjxiciAvPlRoZXJlIGlzIGxpdHRsZSB0byBubyBlcnJvciBjaGVja2luZyBzbyBpZiB5b3Ugc3VwcGx5IG5vbnNlbnNlIHlvdSB3aWxsIHByb2JhYmx5IGNyYXNoIGl0IG9yIGdldCBydWJiaXNoIGJhY2suIERhdGVzIGFyZSBpbnRyaW5zaWNhbGx5IHRpZWQgd2l0aCBVbml4VGltZSBjb25zdHJhaW50cyBhbmQgYXR0ZW1wdHMgdG8gd29yayB3aXRoIGRhdGVzIGJlZm9yZSAwMS0wMS0xOTcwIHdpbGwgbGlrZWx5IHJldHVybiBqdW5rLjxiciAvPjxiciAvPk5vdGVzOiBEYXRlcyB3aWxsIGRlZmF1bHQgdG8gMXN0IE1hcmNoIGlmIGl0IHdvdWxkIGhhdmUgcmVzdWx0ZWQgaW4gYSBub25zZW5zZSBsZWFwIGRheS4gaS5lLiAyOS0wMi0yMDE2ICsgMSB5ZWFyIGlzIDAxLTAzIChhbmQgbm90IDI5LTAyLTIwMTcpLiBJU084NjAxIGZvcm1hdCAoeXl5eS1tbS1kZCkgaXMgbm90IHlldCBzdXBwb3J0ZWQuIFBhc3NpbmcgYSBub24tcmVjb2duaXplZCBpbnRlcnZhbCB3aWxsIHJldHVybiB0aGUgZW1wdHkgc3RyaW5nICIiLjxiciAvPjxiciAvPjxiPlN5bnRheDwvYj46PGJyIC8+ID1EYXRlQWRkKG51bWJlcm9mLGludGVydmFsLGRhdGVzdHIpPGJyIC8+PGJyIC8+PGI+RXhhbXBsZXM8L2I+OjxiciAvPjxjb2RlPlByaW50IERhdGVBZGQoNywibW0iLCIwMS0wMS0xOTcwIDAwOjAwOjAwIikgIDwvY29kZT4gJyBzaG93IHRoZSBkYXRlIHNldmVuIG1vbnRocyBmcm9tIDFzdCBqYW51YXJ5IDE5NzA8YnIgLz48Y29kZT5JbnZvaWNlRHVlJD1EYXRlQWRkKDMwLCJkIixOb3coKSkgICAgIDwvY29kZT4gICAgICAgICcgc2V0IHRoZSBkdWUgZGF0ZSAzMCBkYXlzIGZyb20gbm93PGJyIC8+PGNvZGU+UHJpbnQgRGF0ZUFkZCgtODUwMDAsIm0iLCIyOC0wMi0yMDEwIDE3OjAwOjAwIik8L2NvZGU+JyBzaG93IHRoZSBkYXRlIDg1MDAwIG1pbnV0ZXMgYmVmb3JlIDI4dGggRmViIDIwMTA8YnIgLz48Y29kZT5EU1RUaW1lJD1EYXRlQWRkKDYwLCJtIixOb3coKSkgPC9jb2RlPiAgICAgICAgICAgICAgICcgQ2FsY3VsYXRlICsxIGRheWxpZ2h0IHNhdmluZyB0aW1lPGJyIC8+PGJyIC8+PGI+RGVwZW5kZW5jaWVzPC9iPjo8YnIgLz48dWw+PGxpPjxhIGNsYXNzPSJwYWdlbGluayIgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Ik1NQmFzaWMuVW5peFRpbWUtb3ItRXBvY2gtVGltZS5hc2h4IiB0aXRsZT0iVW5peFRpbWUgb3IgRXBvY2ggVGltZSI+VW5peFRpbWU8L2E+PC9saT48bGk+PGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5Jc0xlYXBZZWFyLUZ1bmN0aW9uLXRvLWRldGVybWluZS1pZi10aGUtZ2l2ZW4teWVhci1pcy1hLUxlYXAtWWVhci1vbi10aGUtR3JlZ29yaWFuLXdlc3Rlcm4tY2FsZW5kYXIuYXNoeCIgdGl0bGU9IklzTGVhcFllYXIgRnVuY3Rpb24gdG8gZGV0ZXJtaW5lIGlmIHRoZSBnaXZlbiB5ZWFyIGlzIGEgTGVhcCBZZWFyIG9uIHRoZSBHcmVnb3JpYW4gKHdlc3Rlcm4pIGNhbGVuZGFyIj5Jc0xlYXBZZWFyPC9hPjwvbGk+PGxpPjxhIGNsYXNzPSJwYWdlbGluayIgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Ik1NQmFzaWMuWlBhZC1wYWQtYS1udW1iZXItd2l0aC1sZWFkaW5nLXplcm9lcy5hc2h4IiB0aXRsZT0iWlBhZCQoKSAtIHBhZCBhIG51bWJlciB3aXRoIGxlYWRpbmcgemVyb2VzIj5aUGFkJDwvYT48L2xpPjxsaT48YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLkh1bWFuVGltZS1GdW5jdGlvbi10by1yZXR1cm4tYS1odW1hbi1yZWFkYWJsZS1kYXRlLWFuZC10aW1lLWZyb20tYS11bml4dGltZS1udW1iZXIuYXNoeCIgdGl0bGU9Ikh1bWFuVGltZSgpIEZ1bmN0aW9uIHRvIHJldHVybiBhIGh1bWFuIHJlYWRhYmxlIGRhdGUgYW5kIHRpbWUgZnJvbSBhIHVuaXh0aW1lIG51bWJlciI+SHVtYW5UaW1lPC9hPjxiciAvPjwvbGk+PC91bD48YnIgLz48Yj5Db2RlPC9iPjo8YnIgLz48cHJlPg0KICAgCUZ1bmN0aW9uIERhdGVBZGQoTnVtIEFzIEludGVnZXIsSW50ZXJ2YWwgQXMgU3RyaW5nLGR0IEFzIFN0cmluZykgQXMgU3RyaW5nDQoJCSdyZXR1cm4gYSBzdHJpbmcgb2YgdGhlIGRhdGV0aW1lIHdpdGggdGhlIHJlbGV2YW50IHBlcmlvZCBhZGRlZA0KCQknYWRkIC12ZSB0byBzdWJ0cmFjdCBlLmcuDQoJCSdEYXRlQWRkICgyLCJtbSIsTm93KCkpICByZXR1cm5zIHRoZSBkYXRldGltZSB0aW1lIHR3byBtb250aHMgZnJvbSBub3cuDQoJCSdEYXRlQWRkKC0xMDAwLCJkZCIsTm93KCkpIHJldHVybnMgdGhlIGRhdGV0aW1lIGEgdGhvdXNhbmQgZGF5cyBhZ28NCgkJTG9jYWwgSW50ZWdlciB4LHkseg0KDQoJCVNlbGVjdCBDYXNlIExDYXNlJChJbnRlcnZhbCkNCgkJCUNhc2UgInMiJyBTZWNvbmRzDQoJCQkJRGF0ZUFkZD1IdW1hblRpbWUoVW5peFRpbWUoZHQpK051bSkNCgkJCUNhc2UgIm0iJyBNaW51dGVzDQoJCQkJRGF0ZUFkZD1IdW1hblRpbWUoVW5peFRpbWUoZHQpKyhOdW0mIzQyOzYwKSkNCgkJCUNhc2UgImgiJyBIb3Vycw0KCQkJCURhdGVBZGQ9SHVtYW5UaW1lKFVuaXhUaW1lKGR0KSsoTnVtJiM0MjszNjAwKSkNCgkJCUNhc2UgImRkIiAnRGF5cw0KCQkJCURhdGVBZGQ9SHVtYW5UaW1lKFVuaXhUaW1lKGR0KyhOdW0mIzQyOzg2NDAwKSkNCgkJCUNhc2UgInciICdXZWVrcw0KCQkJCURhdGVBZGQ9SHVtYW5UaW1lKFVuaXhUaW1lKGR0KSsoTnVtJiM0Mjs2MDQ4MDApKQ0KCQkJQ2FzZSAibW0iJyBjYWxlbmRhciBNb250aHMNCgkJCQl4PVZhbChNaWQkKGR0LDQsMikpLTEmIzU4OyB5PVZhbChNaWQkKGR0LDcsNCkpJiM1ODsgej1WYWwoTGVmdCQoZHQsMikpDQoJCQkJeD0oKHgrTnVtKSBNb2QgMTIpKzEmIzU4OyB5PXkrTnVtXDEyDQoJCQkJSWYgKHg9MiBBbmQgej0yOSkgQW5kIChOb3QgSXNMZWFwWWVhcih5KSkgVGhlbiAnIGJsdWRnZW9uIGZvciAyOS8wMiBpbiBub24tbGVhcCB5ZWFyDQoJCQkJCXg9MyYjNTg7ej0xDQoJCQkJRW5kSWYNCgkJCQlEYXRlQWRkPVpQYWQkKHosMikrIi0iK1pQYWQkKEFicyh4KSwyKSsiLSIrWnBhZCQoeSw0KSsgUmlnaHQkKGR0JCw5KQ0KCQkJQ2FzZSAieXl5eSInIFllYXJzDQoJCQkJeD1WYWwoTGVmdCQoZHQsMikpJiM1ODsgeT1WYWwoTWlkJChkdCw0LDIpKSYjNTg7IHo9VmFsKE1pZCQoZHQsNyw0KSkmIzU4OyANCgkJCQl6PXorbnVtDQoJCQkJSWYgKHk9MiBBbmQgeD0yOSkgQW5kIChOb3QgSXNMZWFwWWVhcih6KSkgVGhlbiAnIGJsdWRnZW9uIGZvciAyOS8wMiBpbiBub24tbGVhcCB5ZWFyDQoJCQkJCXk9MyYjNTg7eD0xDQoJCQkJRW5kSWYNCgkJCQlEYXRlQWRkPVpQYWQkKHgsMikrIi0iK1pQYWQkKEFicyh5KSwyKSsiLSIrWnBhZCQoeiw0KSsgUmlnaHQkKGR0JCw5KQ0KCQkJQ2FzZSBFbHNlDQoJCQkJRGF0ZUFkZD0iIg0KCQlFbmQgU2VsZWN0DQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48YnIgLz48Yj5TZWUgQWxzbzwvYj46PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLkRhdGVEaWZmLUZ1bmN0aW9uLVZCLXdvcmstYS1saWtlLmFzaHgiIHRpdGxlPSJEYXRlRGlmZigpIEZ1bmN0aW9uIChWQiB3b3JrLWEtbGlrZSkiPkRhdGVEaWZmKCk8L2E+PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLk5vdy1GdW5jdGlvbi1WQi13b3JrLWEtbGlrZS5hc2h4IiB0aXRsZT0iTm93KCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKSAiPk5vdygpPC9hPjxiciAvPjxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5EYXRlUGFydC1GdW5jdGlvbi1WQi13b3JrLWEtbGlrZS5hc2h4IiB0aXRsZT0iRGF0ZVBhcnQoKSBGdW5jdGlvbiAoVkIgd29yay1hLWxpa2UpIj5EYXRlUGFydCgpPC9hPjxiciAvPmRkXfR5+YFnwAUNK2pITa6CLjPMTeE=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">DateAdd() Function (VB work-a-like)</h1><small>Modified on 2020/09/16 08:11 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks, Strings</small><br /><br />The following is a DateAdd function for calculating dates with intervals added (or subtracted).<br /><br />It is inspired by the <a class="externallink" href="https://www.w3schools.com/asp/func_dateadd.asp" title="VB function of the same name" target="_blank">VB function of the same name</a> but is tweaked slightly from the original and returns a datetime string (DD-MM-YYYY HH:MM:SS) with x intervals added. Intervals are specified with a string and are:<br />  yyyy - Year<br />  mm   - Calendar Month <br />  w    - Calendar week (7 days)<br />  dd    - Day<br />  h    - Hour<br />  m    - Minute<br />  s    - Second<br /><br />By default the <code>interval</code> is added to the supplied date, to subtract it, make the <code>numberof</code> value negative e.g. x=-x or x=x-2*x<br /><br />There is little to no error checking so if you supply nonsense you will probably crash it or get rubbish back. Dates are intrinsically tied with UnixTime constraints and attempts to work with dates before 01-01-1970 will likely return junk.<br /><br />Notes: Dates will default to 1st March if it would have resulted in a nonsense leap day. i.e. 29-02-2016 + 1 year is 01-03 (and not 29-02-2017). ISO8601 format (yyyy-mm-dd) is not yet supported. Passing a non-recognized interval will return the empty string "".<br /><br /><b>Syntax</b>:<br /> =DateAdd(numberof,interval,datestr)<br /><br /><b>Examples</b>:<br /><code>Print DateAdd(7,"mm","01-01-1970 00:00:00")  </code> ' show the date seven months from 1st january 1970<br /><code>InvoiceDue$=DateAdd(30,"d",Now())     </code>        ' set the due date 30 days from now<br /><code>Print DateAdd(-85000,"m","28-02-2010 17:00:00")</code>' show the date 85000 minutes before 28th Feb 2010<br /><code>DSTTime$=DateAdd(60,"m",Now()) </code>               ' Calculate +1 daylight saving time<br /><br /><b>Dependencies</b>:<br /><ul><li><a class="pagelink" target="_blank" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a></li><li><a class="pagelink" target="_blank" href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear</a></li><li><a class="pagelink" target="_blank" href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$</a></li><li><a class="pagelink" target="_blank" href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime</a><br /></li></ul><br /><b>Code</b>:<br /><pre>
+   	Function DateAdd(Num As Integer,Interval As String,dt As String) As String
+		'return a string of the datetime with the relevant period added
+		'add -ve to subtract e.g.
+		'DateAdd (2,"mm",Now())  returns the datetime time two months from now.
+		'DateAdd(-1000,"dd",Now()) returns the datetime a thousand days ago
+		Local Integer x,y,z
+
+		Select Case LCase$(Interval)
+			Case "s"' Seconds
+				DateAdd=HumanTime(UnixTime(dt)+Num)
+			Case "m"' Minutes
+				DateAdd=HumanTime(UnixTime(dt)+(Num&#42;60))
+			Case "h"' Hours
+				DateAdd=HumanTime(UnixTime(dt)+(Num&#42;3600))
+			Case "dd" 'Days
+				DateAdd=HumanTime(UnixTime(dt+(Num&#42;86400))
+			Case "w" 'Weeks
+				DateAdd=HumanTime(UnixTime(dt)+(Num&#42;604800))
+			Case "mm"' calendar Months
+				x=Val(Mid$(dt,4,2))-1&#58; y=Val(Mid$(dt,7,4))&#58; z=Val(Left$(dt,2))
+				x=((x+Num) Mod 12)+1&#58; y=y+Num\12
+				If (x=2 And z=29) And (Not IsLeapYear(y)) Then ' bludgeon for 29/02 in non-leap year
+					x=3&#58;z=1
+				EndIf
+				DateAdd=ZPad$(z,2)+"-"+ZPad$(Abs(x),2)+"-"+Zpad$(y,4)+ Right$(dt$,9)
+			Case "yyyy"' Years
+				x=Val(Left$(dt,2))&#58; y=Val(Mid$(dt,4,2))&#58; z=Val(Mid$(dt,7,4))&#58; 
+				z=z+num
+				If (y=2 And x=29) And (Not IsLeapYear(z)) Then ' bludgeon for 29/02 in non-leap year
+					y=3&#58;x=1
+				EndIf
+				DateAdd=ZPad$(x,2)+"-"+ZPad$(Abs(y),2)+"-"+Zpad$(z,4)+ Right$(dt$,9)
+			Case Else
+				DateAdd=""
+		End Select
+	End Function
+</pre><br /><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff()</a><br /><a class="pagelink" href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now()</a><br /><a class="pagelink" href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart()</a><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DateAdd-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:15 GMT -->
+</html>

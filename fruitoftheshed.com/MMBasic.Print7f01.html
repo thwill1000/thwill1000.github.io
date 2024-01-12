@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.PicoMite-MCP4922-DAC-on-SPI by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	PicoMite: MCP4922 DAC on SPI - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.PicoMite-MCP4922-DAC-on-SPI" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFmgk8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UGljb01pdGU6IE1DUDQ5MjIgREFDIG9uIFNQSTwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMjEvMTIvMjkgMTI6MDYgYnkgQ2Fyc3RlbiAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBFbGVjdHJvbmljcywgU1BJPC9zbWFsbD48YnIgLz48YnIgLz5EaWdpdGFsIEFuYWxvZyBDb252ZXJ0ZXIgQ2hpcDogTUNQNDkyMiwgMi1jaGFubmVsLCAxMmJpdCAoYWxzbyBvdGhlciB2ZXJzaW9ucyBhdmFpbGFibGUpPGJyIC8+PGJyIC8+SSB1c2VkIHRoaXMgREFDIGJlZm9yZSBhbmQgdGhpbmsgaXQgaXMgYSBuaWNlIGNoaXAuPGJyIC8+PGJyIC8+RGF0YXNoZWV0OjxiciAvPmh0dHBzOi8vd3d3Lm1vdXNlci5kZS9kYXRhc2hlZXQvMi8yNjgvMjE4OTdhLTcwODA5LnBkZjxiciAvPjxiciAvPkJlIHN1cmUgdG8gZ2V0IHRoZSBhY3RpdmUgTE9XLVBpbnMgTERBQ18gYW5kIFNIRE5fIHJpZ2h0LCBMREFDXyB0byBMT1cvR05EIHdpbGwgdHJpZ2dlciB0aGUgY29udmVyc2lvbiBldmVyeSB0aW1lIHRoZSBDU18gaXMgcmlzZWQsIHNvIHdlIGNhbiBzYXZlIG9uZSBQaW4gb24gdGhlIFBpY29taXRlLiBUaWUgU0hETl90byBWREQgdG8gaGF2ZSB0aGUgY2hpcCB3b3JrLjxiciAvPjxiciAvPjxiciAvPkhlcmUgaXMgc29tZSBjb2RlIHdoaWNoIHdvcmtzIGZvciBtZSBhbmQgbWlnaHQgZ2V0IHlvdSBzdGFydGVkLjxiciAvPjxiciAvPjxiciAvPjxwcmU+DQoNCicgTUNQNDkyMiBEdWFsIDEyYml0IERBQw0KU2V0UGluIEdQMixHUDMsR1A0LFNQSQ0KDQpTZXRQaW4gR1A2LCBET1VUDQpQaW4oR1A2KSA9IDENCg0KU1BJIG9wZW4gNDAwMDAwMCwwLDE2DQoNCkRvDQpGb3IgYSUgPSAwIFRvIDQwOTYtOCBTdGVwIDY0DQoNCicgQ1MgRG93biAoTE9XIEFjdGl2ZSkNClBpbihHUDYpPTANCg0KJyAgREFDbiBXcml0ZSBCdWZmZXIgR2Fpbl8gU2h1dGRvd25fDQonICAgICAgICAgICBEV0JHUw0KanVuayA9IFNQSSgmYW1wO0IwMTExMDAwMDAwMDAwMDAwICsgYSUpICcgMXN0IERBQw0KUGluKEdQNik9MQ0KDQpQaW4oR1A2KT0wDQpqdW5rID0gU1BJKCZhbXA7QjExMTEwMDAwMDAwMDAwMDAgKyBhJSkgJyAybmQgREFDDQoNCicgQ1MNClBpbihHUDYpPTENCg0KJ1ByaW50IGElDQonUGF1c2UgMzAwDQoNCk5leHQgYSUNCkxvb3ANCg0KU1BJIENsb3NlDQoNCjwvcHJlPmRkNbI34EIm1N8CAFicRmoHbpki1O8=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">PicoMite: MCP4922 DAC on SPI</h1><small>Modified on 2021/12/29 12:06 by Carsten &mdash; Categorized as: Electronics, SPI</small><br /><br />Digital Analog Converter Chip: MCP4922, 2-channel, 12bit (also other versions available)<br /><br />I used this DAC before and think it is a nice chip.<br /><br />Datasheet:<br />https://www.mouser.de/datasheet/2/268/21897a-70809.pdf<br /><br />Be sure to get the active LOW-Pins LDAC_ and SHDN_ right, LDAC_ to LOW/GND will trigger the conversion every time the CS_ is rised, so we can save one Pin on the Picomite. Tie SHDN_to VDD to have the chip work.<br /><br /><br />Here is some code which works for me and might get you started.<br /><br /><br /><pre>
+
+' MCP4922 Dual 12bit DAC
+SetPin GP2,GP3,GP4,SPI
+
+SetPin GP6, DOUT
+Pin(GP6) = 1
+
+SPI open 4000000,0,16
+
+Do
+For a% = 0 To 4096-8 Step 64
+
+' CS Down (LOW Active)
+Pin(GP6)=0
+
+'  DACn Write Buffer Gain_ Shutdown_
+'           DWBGS
+junk = SPI(&amp;B0111000000000000 + a%) ' 1st DAC
+Pin(GP6)=1
+
+Pin(GP6)=0
+junk = SPI(&amp;B1111000000000000 + a%) ' 2nd DAC
+
+' CS
+Pin(GP6)=1
+
+'Print a%
+'Pause 300
+
+Next a%
+Loop
+
+SPI Close
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.PicoMite-MCP4922-DAC-on-SPI by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:16 GMT -->
+</html>

@@ -1,0 +1,735 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	CSV format parsing - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=CSV-format-parsing-part-of-the-original-MMBasic-library&amp;NS=MMBasic&amp;HL=mmbasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBMwBR2V0RmlsZS5hc3B4P0ZpbGU9Q1NWUEFSUzNfVFNULnppcCZhbXA7QXNTdHJlYW1BdHRhY2htZW50PTEmYW1wO1Byb3ZpZGVyPVNjcmV3VHVybi5XaWtpLkZpbGVzU3RvcmFnZVByb3ZpZGVyJmFtcDtJc1BhZ2VBdHRhY2htZW50PTEmYW1wO1BhZ2U9TU1CYXNpYy5DU1YtZm9ybWF0LXBhcnNpbmctcGFydC1vZi10aGUtb3JpZ2luYWwtTU1CYXNpYy1saWJyYXJ5CERvd25sb2FkEENTVlBBUlMzX1RTVC56aXAFMTczIEJkZNda7LbsifhUix3+d/ROkuzNWG+D" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login1582.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dCSV-format-parsing-part-of-the-original-MMBasic-library%26NS%3dMMBasic%26HL%3dmmbasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyf79b.html?Page=MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			CSV format parsing
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printf79b.html?Page=MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:22
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages1451.html?Cat=MMBasic.File%20Management" title="File Management">File Management</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fde59cec5-4b1c-49c4-8f70-d701dd3c4e22" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fde59cec5-4b1c-49c4-8f70-d701dd3c4e22');"><a href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic">Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic</a><a href="MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library.html" title="Bubble Sort">Bubble Sort</a><a href="MMBasic.Shell-Sort.html" title="Shell Sort">Shell Sort</a><a href="MMBasic.CR2-Sort-The-Fastest-Search.html" title="Cube Root of Two Sort - fast sort">Cube Root of Two Sort - fast sort</a><a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings">Comb Sort for strings</a></div><div id="f7223e3aa-c8ac-433c-bfd9-4e72968e25af" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f7223e3aa-c8ac-433c-bfd9-4e72968e25af');"><a href="MMBasic.RC4-Encryption-and-Decryption-Functions.html" title="RC4 Encryption and Decryption Functions">RC4 Encryption and Decryption Functions</a><a href="MMBasic.Base64-Mime-Encode-and-Decode-Functions.html" title="Base64 Mime Encode and Decode Functions">Base64 Mime Encode and Decode Functions</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.DigiClock-part-of-the-original-MMBasic-library.html" title="DCF77 DigiClock (MMBasic)">DCF77 DigiClock (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Capacity-Test-part-of-the-original-MMBasic-library.html" title="Battery Capacity Test (MMBasic)">Battery Capacity Test (MMBasic)</a> &raquo; <b><a href="MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library.html" title="CSV format parsing (MMBasic)">CSV format parsing (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.uFormat-and-StrE-provide-flexible-formatting-of-numeric-values.html" title="uFormat$() and StrE$() provide flexible formatting of numeric values (MMBasic)">uFormat$() and StrE$() provide flexible formatting of numeric values (MMBasic)</a> &raquo; <a href="MMBasic.HAMURABI-part-of-the-original-MMBasic-library.html" title="HAMURABI (MMBasic)">HAMURABI (MMBasic)</a> &raquo; <a href="MMBasic.Hi-IQ-Solitaire-part-of-the-original-MMBasic-library.html" title="Hi-IQ (Solitaire) (MMBasic)">Hi-IQ (Solitaire) (MMBasic)</a> &raquo; <a href="MMBasic.Simple-Encryption.html" title="Simple Encryption (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f7223e3aa-c8ac-433c-bfd9-4e72968e25af', this);" id="lnkf7223e3aa-c8ac-433c-bfd9-4e72968e25af" onmouseout="javascript:return __HideDropDown('f7223e3aa-c8ac-433c-bfd9-4e72968e25af');">Simple Encryption (MMBasic)</a> &raquo; <a href="MMBasic.LCD%20Panel%20list.html" title="LCD Panels Summary (MMBasic)">LCD Panels Summary (MMBasic)</a> &raquo; <a href="MMBasic.CONNECT-FOUR-part-of-the-original-MMBasic-library.html" title="MMFOUR.BAS (Connect Four) (MMBasic)">MMFOUR.BAS (Connect Four) (MMBasic)</a> &raquo; <a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fde59cec5-4b1c-49c4-8f70-d701dd3c4e22', this);" id="lnkfde59cec5-4b1c-49c4-8f70-d701dd3c4e22" onmouseout="javascript:return __HideDropDown('fde59cec5-4b1c-49c4-8f70-d701dd3c4e22');">Sort algorithms - A comparison (MMBasic)</a> &raquo; <a href="MMBasic.DigiClock-part-of-the-original-MMBasic-library.html" title="DCF77 DigiClock (MMBasic)">DCF77 DigiClock (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Capacity-Test-part-of-the-original-MMBasic-library.html" title="Battery Capacity Test (MMBasic)">Battery Capacity Test (MMBasic)</a> &raquo; <b><a href="MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library.html" title="CSV format parsing (MMBasic)">CSV format parsing (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><b>CSVPARS1.BAS </b><br /><pre>
+   ' CSV Parsing routine
+   ' CircuitGizmos March 2013
+   ' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+   ' A routine to parse a CSV string
+   ' Optionally specify
+   ' - index to the entry required
+   ' - the delimiter
+   ' - suppress quotes
+
+
+   Print "CSV parsing test"
+   Print
+
+   Print "Data with space and comma"
+   cline$ = "12 0 in,out "
+   Print cline$
+   Print "&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;"
+   Print FIELD$( cline$, 0 )
+   Print FIELD$( cline$, 1 )
+   Print FIELD$( cline$, 2 )
+   Print FIELD$( cline$, 3 )
+   Print FIELD$( cline$, 4 )
+   Print FIELD$( cline$, 5 )
+   Print
+   Print
+
+   Print "Data with space, comma, and tab"
+   cline$ = "12" + Chr$(9) + "0 in,out"
+   Print cline$
+   Print "&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;"
+   Print FIELD$( cline$, 0 )
+   Print FIELD$( cline$, 1 )
+   Print FIELD$( cline$, 2 )
+   Print FIELD$( cline$, 3 )
+   Print FIELD$( cline$, 4 )
+   Print FIELD$( cline$, 5 )
+   Print
+   Print
+
+   Print "Data with just comma"
+   Print cline$
+   Print "&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;"
+   Print FIELD$( cline$, 0, ",")
+   Print FIELD$( cline$, 1, ",")
+   Print FIELD$( cline$, 2, ",")
+   Print
+   Print
+
+   Print "Data with quotes"
+   cline$ = "12," + Chr$(34) + "0 in" + Chr$(34) + ",out,fred," + Chr$(34) + "zest step" + Chr$(34) + ",buh"
+   Print CLINE$
+   Print "&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;"
+   Print FIELD$( cline$, 1 )
+   Print FIELD$( cline$, 2 )
+   Print FIELD$( cline$, 3 )
+   Print FIELD$( cline$, 4 )
+   Print FIELD$( cline$, 5 )
+   Print FIELD$( cline$, 6 )
+   Print
+   Print
+
+   Print "Data with quotes supressed"
+   Print CLINE$
+   Print "&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;"
+   Print FIELD$( cline$, 2,,1 )
+   Print FIELD$( cline$, 5,,1 )
+   Print
+   Print
+
+   Print "Data with quotes"
+   cline$ = Chr$(34) + "0 in" + Chr$(34) + ",out,fred," + Chr$(34) + "zest step" + Chr$(34)
+   Print CLINE$
+   Print "&#95;&#95;&#95;&#95;&#95;&#95;&#95;&#95;"
+   Print FIELD$( cline$, 1 )
+   Print FIELD$( cline$, 2 )
+   Print FIELD$( cline$, 3 )
+   Print FIELD$( cline$, 4 )
+
+
+
+   '&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+   '
+   ' FIELD - CSV field parsing
+   ' field_string$ = String to parse
+   ' field_index   = Index to requested field
+   ' field_delim$  = Optional field delimeters
+   ' field_supress = Suppress quote in quoted field
+   '
+   ' Parsing a CVS string - CircuitGizmos March 2013
+   '&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Function FIELD$( field_string$, field_index, field_delim$, field_supress )
+   Local field_loop
+   Local field_dcount
+   Local field_dloop
+   Local field_length
+   Local field_field$
+
+   field_length = Len(field_string$)
+   field_field$ = ""
+   field_dcount = 1
+   field_loop = 1
+
+   ' Delimiter defaults&#58; SPACE COMMA TAB
+   If field_delim$ = "" Then field_delim$ = " ," + Chr$(9)
+
+   Do
+      field_delim = 0
+      ' Process inside paren (no delimiters)
+      If Mid$( field_string$, field_loop, 1 ) = Chr$(34) Then
+         Do
+            If field_dcount = field_index Then
+               field_field$ = field_field$ + Mid$( field_string$, field_loop, 1 )
+            EndIf
+            field_loop = field_loop + 1
+         Loop Until (Mid$( field_string$, field_loop, 1 ) = Chr$(34)) Or (field_loop &gt; field_length)
+      EndIf
+
+      ' Search through delimiters
+      For field_dloop = 1 To Len(field_delim$)
+         ' If char is a delim
+         If Mid$( field_string$, field_loop, 1 ) = Mid$( field_delim$, field_dloop, 1 ) Then
+            field_dcount = field_dcount + 1
+            field_delim = 1
+         EndIf
+      Next field_dloop
+
+      ' Add to returned string if not delim
+      If field_delim = 0 Then
+         If field_dcount = field_index Then
+            field_field$ = field_field$ + Mid$( field_string$, field_loop, 1 )
+         EndIf
+      EndIf
+
+      field_loop = field_loop + 1
+   Loop Until field_loop &gt; field_length
+
+   ' Suppress quote / return field
+   For field_loop = 1 To Len(field_field$)
+      If (Mid$( field_field$, field_loop, 1 ) = Chr$(34)) And (field_supress &lt;&gt; 0) Then
+         '
+      Else
+         FIELD$ = FIELD$ + Mid$( field_field$, field_loop, 1 )
+      EndIf
+   Next field_loop
+
+End Function
+
+</pre><br /><br /><b>CSVPARS2.BAS </b><br /><pre>
+  
+  ' A version of CSVPARS by TZAdvantage
+  ' March 2013
+  ' A function to parse a CSV string
+  
+  'Required Global variable for GetFieldArray function
+  'Dimension this variable so that it can hold all values
+  Dim GetFieldArray$(12)
+  ' Value is a minimal GPS record
+  Value$ =  "$GPRMC,123519,A,4807.038,N,01131.000,E,022.4,084.4,230394,0 03.1,W&#42;6A"
+  
+  Cls
+  Print "GPS Record&#58;"
+  Print Value$
+  Print
+  
+  N = GetFieldArray(Value$)
+  'A list of all values
+  Print "List of all fields"
+  Print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+  For Index = 0 To N - 1
+    Print Index, GetFieldArray$(Index)
+  Next
+  Print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+  Print
+  
+  'or directly use a field
+  Speed = Val(GetFieldArray$(7))
+  Print "A field used by its index"
+  Print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-"
+  Print "Speed = " Speed
+  Print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-"
+  
+  End
+  
+  
+  '  &#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+  ' GetFieldArray
+  ' A function to split a string into an Array of fields
+  '
+  ' Author&#58;  TZ Advantage
+  ' Date&#58;    5 march 2013
+  ' Version&#58; 1.0
+  '
+  ' This function requires the use of a global variable
+  ' named GetFieldArray$(). It should be dimensioned large
+  ' enough to contain all fields.
+  '
+  ' Best used in situations when all fields are needed as
+  ' it will be the fastest.
+  ' Consider using the function GetField()
+  ' when only one or two fields are needed or speed is of no concern
+  '
+  ' Function parameters&#58;
+  ' Record$&#58;    A string containing the delimited fields
+  ' Delimiter$&#58; (Optional) delimiter character, when omitted a comma is used
+  ' KeepQuotes&#58; (Optional) &#91;0|1&#93;
+  '             Use value 1 if double quotes around field values have to be kept,
+  '             when omitted or value 0 is used double quotes are discarded
+  '  &#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+Function GetFieldArray( Record$, Delimiter$, KeepQuotes )
+  Local Index, Char, InQuote, Count
+  
+  InQuote = 0
+  Count = 0
+  
+  ' If no delimiter is provided use a comma
+  If Delimiter$ = "" Then Delimiter$ = ","
+  
+  ' Loop through all the characters
+  For Index = 1 To Len(Record$)
+    Char = Asc(Mid$(Record$, Index, 1))
+    
+    If Char = 34 Then
+      ' Flip InQuote between 0 and 1.
+      ' A 1 will signal that the next characters
+      ' are within quotes and delimiters should be ignored
+      InQuote = Not InQuote
+    EndIf
+    
+    ' Only check for delimiters when not within two quotes
+    If Not InQuote And Instr(Delimiter$, Chr$(char)) &gt;= 1  Then
+      Count = Count + 1
+    Else
+      
+      ' Only collect characters for the requested field.
+      'Add the character and only add quotes when KeepQuotes is 1
+      If Char &lt;&gt; 34 Or KeepQuotes Then
+        GetFieldArray$(Count) = GetFieldArray$(Count) + Chr$(char)
+      EndIf
+    EndIf
+  Next
+  
+  GetFieldArray = Count + 1
+End Function
+
+</pre><br /><br /><b>CSVPARS3.BAS </b><br /><pre>
+  ' A version of CSVPARS by Andrew Rich VK4TEC
+  ' March 2013
+  ' Subroutine to parse a file of CSV data
+  ' The relevant data must start with $ and end with &#42;
+
+  Open "CSVPars3.tst" For input As 1
+  Max=10
+  Dim Arg$(10)
+  nmea_sentence
+  For i=1 To 10
+    Print i, Arg$(i)
+  Next
+  Close &#35;1
+  End
+
+
+Sub nmea_sentence
+  Do
+    msg$ ="$" ' subroutine start
+    Do While Input$(1, &#35;1) &lt;&gt; "$" &#58; Loop ' wait for the start
+    For i = 0 To max
+      arg$(i) = "" ' clear ready for data
+      Do ' loops until a specific exit
+        x$ = Input$(1, &#35;1)
+        ' Print x$
+        msg$ = msg$ + x$ ' get the character
+        If x$ = "," Then Exit ' new data field, increment i
+        If x$ = "&#42;" Then Return ' we have all the data so return
+        arg$(i) = arg$(i) + x$
+        'Print arg$(i) ' add to the data
+      Loop
+      'Print arg$(i) ' loop back for the next char
+    Next i ' move to the next data field
+    ' Print "Corrupt data..." ' exceeded max data items
+    'Print msg$
+  Loop
+
+End Sub
+
+</pre><br /><br /><b>CSVPARS4.BAS </b><br /><pre>
+  ' CSV Parse by Hugh Buckle
+  ' March 2013
+  ' Parses a CSV string into an array
+  ' It is intended to be used with comma or tab delimiter.
+  ' Loads each variable from a$ into array CSV$()
+  ' Maximum size of the array is preset in CSVMax
+  '
+  ' Limitations&#58;
+  ' - Assumes no quoted strings
+  ' - Consecutive delimiters leave a nul entry in the array
+
+  ' Test using comma delimiter
+  CSVDelimiter$=","
+  a$="one,%,-,two,three,Now is the time,,,/p,1234.56"
+
+  CSVMax=12                ' Get the first 12 values from the CSV file
+  Dim CSV$(CSVMax)
+  ParseCSV(a$,CSVDelimiter$,CSVMax)
+  Print "Cell","Value"
+  Print "&#45;&#45;&#45;&#45;","&#45;&#45;&#45;&#45;-"
+  For i=1 To CSVMax
+    ? i,CSV$(i)
+  Next
+End
+
+Sub ParseCSV(p$,d$,n)
+  ' Parse the CSV valuess into array CSV$()
+  ' Using d$ as the delimiter
+  Local i
+  Strt=1
+  For i=1 To n
+    Ptr=Instr(Strt,p$,d$)
+    If Ptr=0 Then Ptr=Len(a$)+1         'Last item has no delimiter
+    CSV$(i)=Mid$(p$,Strt,Ptr-Strt)
+    If Ptr&gt;=Len(p$) Then Exit For
+    Strt=Ptr+1
+  Next
+End Sub
+
+
+</pre><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='CSVPARS3_TST5154.zip?File=CSVPARS3_TST.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library' title="Download">CSVPARS3_TST.zip</a></td>
+			<td>173 B</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.CSV-format-parsing-part-of-the-original-MMBasic-library.ashx?HL=mmbasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:29:43 GMT -->
+</html>

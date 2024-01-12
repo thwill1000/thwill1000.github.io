@@ -1,0 +1,168 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	One-Wire DS1820 - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF80o8aDEgY2xhc3M9InBhZ2V0aXRsZSI+T25lLVdpcmUgRFMxODIwPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzozOCBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEVudmlyb25tZW50LCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz48cHJlPg0KJzFXRFMxODIwLkJBUyAgICAgMjkgTWFyY2ggMjAxMg0KJ0J5IElhbiBEZWxhbmV5DQoNClBpbk5iciA9IDIwDQoNCkdldFRlbXAgUGluTmJyLCBUZW1wLCBwb3dlciQsIGRldmljZSQsIGNvZGUkDQpQcmludCAiVGhlIHRlbXBlcmF0dXJlIGlzJiM1ODsiIGZvcm1hdCQoVGVtcCwiJSAxLjNmIik7ICIgZGVncmVlcyBDIg0KcHJpbnQgZGV2aWNlJDtjb2RlJDtwb3dlciQNCg0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonIFN1YnJvdXRpbmUgdG8gZ2V0IHRoZSB0ZW1wZXJhdHVyZSBmcm9tIGEgRGFsbGFzIERTMThCMjAvRFMxOFMyMg0KJyAgICBvciBEU1MyMC9EUzE4MjAgZXh0ZXJuYWxseSBvciBwYXJhc2l0ZSBwb3dlcmVkIHZpYSAxLXdpcmUgcHJvdG9jb2wuDQonIFJlcG9ydHMgdGVtcGVyYXR1cmUsIGRldmljZSBmYW1pbHksIFJPTSBDb2RlIGFuZCBQb3dlciBjb25uZWN0aW9uLg0KJyBPbmx5IDEgZGV2aWNlIGFsbG93ZWQgb24gdGhlIGNhYmxlLg0KJyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBJYW5kYXVzDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNCg0KU3ViIEdldFRlbXAgKFBpbk5iciwgVmFsdWUscG93ZXIkLGRldmljZSQsIGNvZGUkKQ0KICAgIExvY2FsIFQxLCBUMiwgdCwgYTEsYTIsYTMsYTQsYTUsYTYsYTcsYTgsIGRldmljZSwgcHJlc2VuY2UsIHBvd2VyDQogICAgTG9jYWwgQ291bnRyZW0sIFQxQywgVENvbnYsIFQxdCwgVDF0MTYsIFZhbHVlMTIsIGEsYixjLGQsZSxmLGcsaA0KDQogICAgVGNvbnY9NzUwICAgICdtYXggdGltZSBtUyBmb3IgdGVtcCBjb252ZXJzaW9uIGluIHBhcmFzaXRlIG1vZGUNCiAgICAgICAgICAgICAgICAgJyBmb3Igc2xvd2VzdCBkZXZpY2UNCg0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonICAgQ2hlY2sgYSBkZXZpY2UgaXMgcHJlc2VudA0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQogICAgT1dSZXNldCBQaW5OYnIscHJlc2VuY2UgICAgICAgICAgICAgICAnIHJlc2V0DQogICAgaWYgcHJlc2VuY2UgPSAwIHRoZW4gICAgICAgICAgICAgICAgICAnIG5vIGRldmljZQ0KICAgICAgICB0ZW1wID0gOTk5Ljk5DQogICAgICAgIGRldmljZSQgPSAiTm8gZGV2aWNlIGZvdW5kISINCiAgICAgICAgY29kZSQgPSAiIg0KICAgICAgICBwb3dlciQgPSAiIg0KICAgICAgICBleGl0IHN1Yg0KICAgIGVuZGlmDQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCicgICBjaGVjayB3aGV0aGVyIHBvd2VyIGV4dGVybmFsIG9yIHBhcmFzaXRpYw0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7Jw0KICAgIE9XUmVzZXQgUGluTmJyLHByZXNlbmNlDQogICAgT1dXcml0ZSBQaW5OYnIsIDEsMiwmYW1wO2hjYywgJmFtcDtoYjQNCiAgICBPV1JlYWQgUGluTmJyLDQsMSxwb3dlcg0KICAgIGlmIHBvd2VyID0gMSB0aGVuIA0KICAgICAgICBwb3dlciQgPSAiIHVzaW5nIEV4dGVybmFsIFBvd2VyLiINCiAgICBlbHNlDQogICAgICAgIHBvd2VyJCA9ICIgdXNpbmcgUGFyYXNpdGljIFBvd2VyLiINCiAgICBlbmRpZg0KDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQonICAgZ2V0IFJPTSBDb2RlIC0gdXNlZnVsIGlmIHlvdSB3YW50IG1vcmUgdGhhbiAxIGRldmljZSBvbiB3aXJlDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQogICAgT1dXcml0ZSBQaW5OYnIsMSwxLCZhbXA7aDMzCQkJJ3JlYWQgUk9NIGNvZGUNCiAgICBPV1JlYWQgUGluTmJyLDAsOCxhMSxhMixhMyxhNCxhNSxhNixhNyxhOA0KICAgIGNvZGUkID0gIiB3aXRoIFJPTSBDb2RlICIrIHN0ciQoYTEpKyIgIitzdHIkKGEyKSsiICIrc3RyJChhMykrIiAiK3N0ciQoYTQpKyIgIg0KICAgIGNvZGUkID0gY29kZSQgKyBzdHIkKGE1KSsiICIrc3RyJChhNikrIiAiK3N0ciQoYTcpKyIgIitzdHIkKGE4KQ0KDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQonICAgZGV0ZXJtaW5lIGRldmljZSBmYW1pbHkgZnJvbSBjb2RlDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQogICAgaWYgYTE9MTYgdGhlbg0KICAgICAgICBkZXZpY2UkID0gIm9uIERTMTgyMC9EUzE4UzIwIg0KICAgIGVsc2VpZiBhMT0zNCB0aGVuDQogICAgICAgIGRldmljZSQgPSAib24gRFMxOFMyMiIgICAgDQogICAgZWxzZWlmIGExPTQwIHRoZW4NCiAgICAgICAgZGV2aWNlJCA9ICJvbiBEUzE4QjIwIg0KICAgIGVsc2UNCiAgICAgICAgZGV2aWNlJCA9ICJOb3Qga25vd24iICAgIA0KICAgIGVuZGlmDQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCicgICByZWFkIHRlbXBlcmF0dXJlDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQogICAgb3dyZXNldCBQaW5OYnIgICAgICAgICAgICAgICAgICAgICAgICAnIHJlc2V0IGJlZm9yZSBjb21tYW5kIChvciB1c2UgZmxhZz05KQ0KICAgIE9XV3JpdGUgUGluTmJyLCA4LCAyLCAmYW1wO2hjYywgJmFtcDtoNDQgICAgICAnIHN0YXJ0IGNvbnZlcnNpb24NCg0KICAgICdyZWFkIGV4dGVybmFsIHdoZW4gYml0IGdvZXMgaGksIGZvciBwYXJhc2l0aWMganVzdCB3YWl0DQogICAgSWYgcG93ZXIgPSAwIFRoZW4NCiAgICAgICAgUGF1c2UgVGNvbnYNCiAgICBFbHNlDQogICAgICAgIHQgPSBUaW1lcg0KICAgICAgICBEbw0KICAgICAgICAgICAgSWYgVGltZXIgLSB0ICZndDsgMTAwMCBUaGVuIEVycm9yICJTZW5zb3Igbm90IHJlc3BvbmRpbmciDQogICAgICAgICAgICBPV1JlYWQgUGluTmJyLCA0ICwgMSAsIGIgICAgICAgICAgICAnIGNvbnZlcnNpb24gZG9uZT8NCiAgICAgICAgTG9vcCBVbnRpbCBiID0gMQ0KICAgIEVuZElmDQoNCiAgICAncmVhZCB0ZW1wZXJhdHVyZSBmcm9tIHNjcmF0Y2hwYWQgYW5kIGNvbnZlcnQgdG8gZGVncmVlcyBDICsgb3IgLQ0KICAgIE9XV3JpdGUgUGluTmJyLCAxLCAyLCAmYW1wO2hjYywgJmFtcDtoYmUgICAgICAnIGNvbW1hbmQgcmVhZCBkYXRhDQogICAgT1dSZWFkIFBpbk5iciwgMiwgMiwgVDEsIFQyICAgICAgICAgICAnIGdldCB0aGUgZGF0YQ0KICAgIE9XUmVzZXQgUGluTmJyDQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OycNCicgICBjYWxjdWxhdGUgdGVtcCBkZXBlbmRpbmcgb24gZGV2aWNlIGluIHVzZQ0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7Jw0KICAgICdOZWVkIHRvIGFuYWx5c2UgdHlwZSBvZiBjaGlwIHRvIGNhbGN1bGF0ZSB0ZW1wIGZyb20gVDEgYW5kIFQyDQogICAgJ1QyIGlzIE1TQiBjb250YWluaW5nIHNpZ24sIFQxIGlzIExTQg0KICAgIGlmIGExPTM0IG9yIGExPTQwIHRoZW4gICAgICAgICAgJ0RTMThTMjIgb3IgRFMxOEIyMCBpcyAxMiBiaXQgDQogICAgICAgIElmIFQyIEFuZCAmYW1wO2IxMDAwIFRoZW4gICAgICAgJ25lZ2F0aXZlIHRlbXANCiAgICAgICAgICAgICdtYWtlIDJzIGNvbXBsZW1lbnQgKDFzIGNvbXBsZW1lbnQrMSkNCiAgICAgICAgICAgIFQyID0gKFQyIHhvciAmYW1wO2IxMTExMTExMSkNCiAgICAgICAgICAgIFQxID0gKFQxIHhvciAmYW1wO2IxMTExMTExMSkrMQ0KICAgICAgICAgICAgaWYgVDE9MSB0aGVuIFQyPVQyKzEgICAgICAgICdhZGQgdGhlIGNhcnJ5IGlmIHJlcXVpcmVkDQogICAgICAgICAgICBWYWx1ZSA9ICgoVDIgQW5kICZhbXA7YjExMSkgJiM0MjsgMjU2ICsgVDEpIC8gMTYNCiAgICAgICAgICAgIFZhbHVlID0gLVZhbHVlDQogICAgICAgIGVsc2UgICAgICAgICAgICAgICAgICAgICAgICAgICAgJ3Bvc2l0aXZlIHRlbXANCiAgICAgICAgICAgIFZhbHVlID0gKChUMiBBbmQgJmFtcDtiMTExKSAmIzQyOyAyNTYgKyBUMSkgLyAxNg0KICAgICAgICBlbmRpZiAgICAgICAgICAgDQogICAgZWxzZWlmIGExPTE2IHRoZW4gICAgICAgICAgICAgICAgICAgJ0RTMThTMjAgb3IgRFMxODIwIGlzIDliaXQgb3IgY2FsYyB0byAxMmJpdA0KICAgICAgICBpZiBUMiBBTkQgJmFtcDtiMTAwMDAwMDAgdGhlbiAgICAgICAnaWYgTVNCIG9mIFQyPTEgdGhlbiBuZWdhdGl2ZQ0KICAgICAgICAgICAgJ1JlYWQgMTJiaXQgcmVzb2x1dGlvbiBhbmQgYWRqdXN0DQogICAgICAgICAgICAncmVhZCBzY3JhdGNocGFkIHVzaW5nIG1hdGNocm9tIHRvIGdldCBDb3VudCBSZW1haW5pbmcgQGJ5dGUgNw0KICAgICAgICAgICAgT1dXcml0ZSBQaW5OYnIsMSw5LCZhbXA7aDU1LGExLGEyLGEzLGE0LGE1LGE2LGE3LGE4ICAncmVhZCBmcm9tIHNjcmF0Y2hwYWQNCiAgICAgICAgICAgIE9XV3JpdGUgUGluTmJyLDAsMSwmYW1wO2hiZQ0KICAgICAgICAgICAgT1dSZWFkIFBpbk5iciwwLDgsYSxiLGMsZCxlLGYsZyxoDQogICAgICAgICAgICBDT1VOVFJFTT1nICAgICAgICAgICAgICAgIA0KICAgICAgICAgICAgJ3RydW5jYXRlIDAuNWRlZyB2YWx1ZSAob3IgdXNlIGludGVnZXIgZGl2aXNpb24gXCkNCiAgICAgICAgICAgIFQxdCA9IFQxIEFORCAmYW1wO2IxMTExMTExMA0KICAgICAgICAgICAgVDF0PVQxdCAvIDIgICAgICAgICAgICAgICAgICAgJ21ha2Ugd2hvbGUgZGVncmVlcw0KICAgICAgICAgICAgJ2FkZCBjb21wZW5zYXRpb24gdmFsdWVzIHJlYWQgZnJvbSBzY3JhdGNocGFkDQogICAgICAgICAgICBUMXQxNj1UMXQmIzQyOzE2ICAgICAgICAgICAgICAgICAgJ21ha2UgbHNiIDEvMTYgZGVncmVlDQogICAgICAgICAgICBWYWx1ZTEyID0gVDF0MTYgLTQgKygxNiAtIENPVU5UUkVNKSAgICAnYWRkIDEyIGJpdCB2YWx1ZQ0KICAgICAgICAgICAgJ3Rha2UgMnMgY29tcGxlbWVudA0KICAgICAgICAgICAgVDFDID0gKFZhbHVlMTIgWE9SICZhbXA7YjExMTExMTExMTExKSArIDEgDQogICAgICAgICAgICBWYWx1ZSA9IFQxQy8xNiAgICAgICAgICAgICAgICAnbWFrZSBkZWNpbWFsIHZhbHVlIGluIGRlZ3JlZXMNCiAgICAgICAgICAgIFZhbHVlID0gLVZhbHVlDQogICAgICAgIGVsc2UgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAncG9zaXRpdmUgdGVtcA0KICAgICAgICAgICAgVmFsdWUgPSBUMSAvIDIgICAgICAgICAgICAgICAgJzliaXQgdmFsdWUgIA0KICAgICAgICAgICAgJ1JlYWQgMTJiaXQgcmVzb2x1dGlvbiBhbmQgYWRqdXN0DQogICAgICAgICAgICAncmVhZCBzY3JhdGNocGFkIHVzaW5nIG1hdGNocm9tDQogICAgICAgICAgICBPV1dyaXRlIFBpbk5iciwxLDksJmFtcDtoNTUsYTEsYTIsYTMsYTQsYTUsYTYsYTcsYTggICdyZWFkIGZyb20gc2NyYXRjaHBhZA0KICAgICAgICAgICAgT1dXcml0ZSBQaW5OYnIsMCwxLCZhbXA7aGJlDQogICAgICAgICAgICBPV1JlYWQgUGluTmJyLDAsOCxhLGIsYyxkLGUsZixnLGgNCiAgICAgICAgICAgIENPVU5UUkVNPWcgICAgICAgICAgICAgICAgDQogICAgICAgICAgICBUMXQgPSBUMSBBTkQgJmFtcDtiMTExMTExMTAgICAgICAndHJ1bmNhdGUgMC41ZGVnKG9yIHVzZSBpbnRlZ2VyIGRpdmlzaW9uIFwpDQogICAgICAgICAgICBWYWx1ZSA9IFQxdC8yDQogICAgICAgICAgICBWYWx1ZSA9IFZhbHVlIC0gMC4yNSArICgxNiAtIENPVU5UUkVNKSAvMTYgICAnMTIgYml0IHZhbHVlDQogICAgICAgIGVuZGlmICAgIA0KICAgIGVuZGlmDQpFbmQgU3ViDQoNCjwvcHJlPmRkEZ2Y1nDrTXxdnnE39oGLAf80TPU=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">One-Wire DS1820</h1><small>Modified on 2016/12/23 23:38 by Administrator &mdash; Categorized as: Environment, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+'1WDS1820.BAS     29 March 2012
+'By Ian Delaney
+
+PinNbr = 20
+
+GetTemp PinNbr, Temp, power$, device$, code$
+Print "The temperature is&#58;" format$(Temp,"% 1.3f"); " degrees C"
+print device$;code$;power$
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Subroutine to get the temperature from a Dallas DS18B20/DS18S22
+'    or DSS20/DS1820 externally or parasite powered via 1-wire protocol.
+' Reports temperature, device family, ROM Code and Power connection.
+' Only 1 device allowed on the cable.
+'                                                 Iandaus
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+Sub GetTemp (PinNbr, Value,power$,device$, code$)
+    Local T1, T2, t, a1,a2,a3,a4,a5,a6,a7,a8, device, presence, power
+    Local Countrem, T1C, TConv, T1t, T1t16, Value12, a,b,c,d,e,f,g,h
+
+    Tconv=750    'max time mS for temp conversion in parasite mode
+                 ' for slowest device
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+'   Check a device is present
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+    OWReset PinNbr,presence               ' reset
+    if presence = 0 then                  ' no device
+        temp = 999.99
+        device$ = "No device found!"
+        code$ = ""
+        power$ = ""
+        exit sub
+    endif
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   check whether power external or parasitic
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    OWReset PinNbr,presence
+    OWWrite PinNbr, 1,2,&amp;hcc, &amp;hb4
+    OWRead PinNbr,4,1,power
+    if power = 1 then 
+        power$ = " using External Power."
+    else
+        power$ = " using Parasitic Power."
+    endif
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   get ROM Code - useful if you want more than 1 device on wire
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    OWWrite PinNbr,1,1,&amp;h33			'read ROM code
+    OWRead PinNbr,0,8,a1,a2,a3,a4,a5,a6,a7,a8
+    code$ = " with ROM Code "+ str$(a1)+" "+str$(a2)+" "+str$(a3)+" "+str$(a4)+" "
+    code$ = code$ + str$(a5)+" "+str$(a6)+" "+str$(a7)+" "+str$(a8)
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   determine device family from code
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    if a1=16 then
+        device$ = "on DS1820/DS18S20"
+    elseif a1=34 then
+        device$ = "on DS18S22"    
+    elseif a1=40 then
+        device$ = "on DS18B20"
+    else
+        device$ = "Not known"    
+    endif
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   read temperature
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    owreset PinNbr                        ' reset before command (or use flag=9)
+    OWWrite PinNbr, 8, 2, &amp;hcc, &amp;h44      ' start conversion
+
+    'read external when bit goes hi, for parasitic just wait
+    If power = 0 Then
+        Pause Tconv
+    Else
+        t = Timer
+        Do
+            If Timer - t &gt; 1000 Then Error "Sensor not responding"
+            OWRead PinNbr, 4 , 1 , b            ' conversion done?
+        Loop Until b = 1
+    EndIf
+
+    'read temperature from scratchpad and convert to degrees C + or -
+    OWWrite PinNbr, 1, 2, &amp;hcc, &amp;hbe      ' command read data
+    OWRead PinNbr, 2, 2, T1, T2           ' get the data
+    OWReset PinNbr
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'   calculate temp depending on device in use
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+    'Need to analyse type of chip to calculate temp from T1 and T2
+    'T2 is MSB containing sign, T1 is LSB
+    if a1=34 or a1=40 then          'DS18S22 or DS18B20 is 12 bit 
+        If T2 And &amp;b1000 Then       'negative temp
+            'make 2s complement (1s complement+1)
+            T2 = (T2 xor &amp;b11111111)
+            T1 = (T1 xor &amp;b11111111)+1
+            if T1=1 then T2=T2+1        'add the carry if required
+            Value = ((T2 And &amp;b111) &#42; 256 + T1) / 16
+            Value = -Value
+        else                            'positive temp
+            Value = ((T2 And &amp;b111) &#42; 256 + T1) / 16
+        endif           
+    elseif a1=16 then                   'DS18S20 or DS1820 is 9bit or calc to 12bit
+        if T2 AND &amp;b10000000 then       'if MSB of T2=1 then negative
+            'Read 12bit resolution and adjust
+            'read scratchpad using matchrom to get Count Remaining @byte 7
+            OWWrite PinNbr,1,9,&amp;h55,a1,a2,a3,a4,a5,a6,a7,a8  'read from scratchpad
+            OWWrite PinNbr,0,1,&amp;hbe
+            OWRead PinNbr,0,8,a,b,c,d,e,f,g,h
+            COUNTREM=g                
+            'truncate 0.5deg value (or use integer division \)
+            T1t = T1 AND &amp;b11111110
+            T1t=T1t / 2                   'make whole degrees
+            'add compensation values read from scratchpad
+            T1t16=T1t&#42;16                  'make lsb 1/16 degree
+            Value12 = T1t16 -4 +(16 - COUNTREM)    'add 12 bit value
+            'take 2s complement
+            T1C = (Value12 XOR &amp;b11111111111) + 1 
+            Value = T1C/16                'make decimal value in degrees
+            Value = -Value
+        else                              'positive temp
+            Value = T1 / 2                '9bit value  
+            'Read 12bit resolution and adjust
+            'read scratchpad using matchrom
+            OWWrite PinNbr,1,9,&amp;h55,a1,a2,a3,a4,a5,a6,a7,a8  'read from scratchpad
+            OWWrite PinNbr,0,1,&amp;hbe
+            OWRead PinNbr,0,8,a,b,c,d,e,f,g,h
+            COUNTREM=g                
+            T1t = T1 AND &amp;b11111110      'truncate 0.5deg(or use integer division \)
+            Value = T1t/2
+            Value = Value - 0.25 + (16 - COUNTREM) /16   '12 bit value
+        endif    
+    endif
+End Sub
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.One-Wire-DS1820-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:08 GMT -->
+</html>

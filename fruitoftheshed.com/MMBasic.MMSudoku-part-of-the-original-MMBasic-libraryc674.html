@@ -1,0 +1,1008 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.MMSudoku-part-of-the-original-MMBasic-library.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:51:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	MMSudoku - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=MMSudoku-part-of-the-original-MMBasic-library&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCAhYEAgEPZBYCZg8VBL4BR2V0RmlsZS5hc3B4P0ZpbGU9bW1zdWRva3UuemlwJmFtcDtBc1N0cmVhbUF0dGFjaG1lbnQ9MSZhbXA7UHJvdmlkZXI9U2NyZXdUdXJuLldpa2kuRmlsZXNTdG9yYWdlUHJvdmlkZXImYW1wO0lzUGFnZUF0dGFjaG1lbnQ9MSZhbXA7UGFnZT1NTUJhc2ljLk1NU3Vkb2t1LXBhcnQtb2YtdGhlLW9yaWdpbmFsLU1NQmFzaWMtbGlicmFyeQhEb3dubG9hZAxtbXN1ZG9rdS56aXAFODE4IEJkAgIPZBYCZg8VBMEBR2V0RmlsZS5hc3B4P0ZpbGU9U3Vkb2t1SW50cm8uemlwJmFtcDtBc1N0cmVhbUF0dGFjaG1lbnQ9MSZhbXA7UHJvdmlkZXI9U2NyZXdUdXJuLldpa2kuRmlsZXNTdG9yYWdlUHJvdmlkZXImYW1wO0lzUGFnZUF0dGFjaG1lbnQ9MSZhbXA7UGFnZT1NTUJhc2ljLk1NU3Vkb2t1LXBhcnQtb2YtdGhlLW9yaWdpbmFsLU1NQmFzaWMtbGlicmFyeQhEb3dubG9hZA9TdWRva3VJbnRyby56aXAHOS40NSBLQmRk+Y4/yYZksi4leLADmgGJqHLSimU=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login6df9.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dMMSudoku-part-of-the-original-MMBasic-library%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.MMSudoku-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyaa89.html?Page=MMBasic.MMSudoku-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			MMSudoku
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printaa89.html?Page=MMBasic.MMSudoku-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:43
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages0dbd.html?Cat=MMBasic.Games" title="Games">Games</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f1fb160ba-6508-4f3e-bc04-dfd5e235664b" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f1fb160ba-6508-4f3e-bc04-dfd5e235664b');"><a href="MMBasic.Ultra-Compact-Logging-with-Flash-Storage-on-small-MicroMites.html" title="Ultra-Compact Logging with Flash Storage on small MicroMites">Ultra-Compact Logging with Flash Storage on small MicroMites</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.CONNECT-FOUR-part-of-the-original-MMBasic-library.html" title="MMFOUR.BAS (Connect Four) (MMBasic)">MMFOUR.BAS (Connect Four) (MMBasic)</a> &raquo; <a href="MMBasic.MMPREY-BAS-part-of-the-original-MMBasic-library.html" title="MMPREY.BAS (MMBasic)">MMPREY.BAS (MMBasic)</a> &raquo; <b><a href="MMBasic.MMSudoku-part-of-the-original-MMBasic-library.html" title="MMSudoku (MMBasic)">MMSudoku (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Micromite-eXtreme-Manual.html" title="Micromite eXtreme 5.4.05 Manual and Firmware (MMBasic)">Micromite eXtreme 5.4.05 Manual and Firmware (MMBasic)</a> &raquo; <a href="MMBasic.Midd-Function-to-replace-a-section-of-a-string-works-like-VB-statement-Mid.html" title="Midd$ Function to replace a section of a string, works like VB statement Mid$()= (MMBasic)">Midd$ Function to replace a section of a string, works like VB statement Mid$()= (MMBasic)</a> &raquo; <a href="MMBasic.MM-Event-part-of-the-original-MMBasic-library.html" title="MM_Event (MMBasic)">MM_Event (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List.html" title="MMBasic - Create/Manipulate Stack, Queue or List (MMBasic)">MMBasic - Create/Manipulate Stack, Queue or List (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-code-pack-to-Read-and-Write-Winbond-Flash-Memories.html" title="MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f1fb160ba-6508-4f3e-bc04-dfd5e235664b', this);" id="lnkf1fb160ba-6508-4f3e-bc04-dfd5e235664b" onmouseout="javascript:return __HideDropDown('f1fb160ba-6508-4f3e-bc04-dfd5e235664b');">MMBasic code-pack to Read and Write Winbond Flash Memories (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-Source-Code-Formatter-part-of-the-original-MMBasic-library.html" title="MMBasic Source Code Formatter (MMBasic)">MMBasic Source Code Formatter (MMBasic)</a> &raquo; <a href="MMBasic.MMBasic-Source-Compression-Utility-CRUNCH-bas-v2-4-part-of-the-original-MMBasic-library.html" title="MMBasic Source Compression Utility (MMBasic)">MMBasic Source Compression Utility (MMBasic)</a> &raquo; <a href="MMBasic.CONNECT-FOUR-part-of-the-original-MMBasic-library.html" title="MMFOUR.BAS (Connect Four) (MMBasic)">MMFOUR.BAS (Connect Four) (MMBasic)</a> &raquo; <a href="MMBasic.MMPREY-BAS-part-of-the-original-MMBasic-library.html" title="MMPREY.BAS (MMBasic)">MMPREY.BAS (MMBasic)</a> &raquo; <b><a href="MMBasic.MMSudoku-part-of-the-original-MMBasic-library.html" title="MMSudoku (MMBasic)">MMSudoku (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />Hello all.<br /><br />Here's SUDOKU for Maximite version 1.0 (final?).<br /><br />Features:<br /><br />Requires MMbasic v3.1.<br />Three types of difficulty: Easy, Medium and Hard.<br />In the empty grid you can enter numbers and key lock.<br />If a number is repeated on the same row or column or box failure is reported.<br />Save and load the game.<br /><br />Sorry the comments were mixed English and Italian. <br /><br />Raros.<br /><br />For comments and suggestions:<br />raros on forum 'The Back Shed'<br />Facebook Raffaele Rotondo<br />Skype raros0101 or raros_eepc<br /><br /><br />Italiano:<br /><br />Salve a Tutti.<br /><br />Ecco il SUDOKU per Maximite versione 1.0 (finale?).<br /><br />Caratteristiche:<br /><br />Richiede MMbasic v3.1.<br />Tre tipi di difficoltà: Facile, Medio e Difficile.<br />Nella griglia vuota si possono inserire dei numeri chiave e bloccarli.<br />Se si ripete un numero sulla stessa riga o colonna o riquadro segnala errore.<br /><br /><br />Salva e carica il gioco.<br /><br /><br /><b>MMSudoku.bas</b>:<br /><pre>
+10 ' SUDOKU v1.0 for Maximite-MMbasic v3.1 by Raros/BFTI
+20 ' Greetings &amp; Thanks to Geoff Graham for free job and great 
+30 ' project of Maximite/MMbasic,
+35 ' To all members of forum The Back Shed,
+40 ' To Digitalquirk for big idea for VCSUDOKU,
+45 ' To Rob Hubbard for music bass of Crazy_Comets.
+50 CLS
+51 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+52 Dim mus1(47)
+53 musindex=0
+54 For t = 0 To 47&#58;Read mus1(t)&#58;Next
+55 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+300 SetTick 125,6500&#58; ' Sound Interrupt
+3000 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3010 ' &#42; Routine SUDOKU v 1.0 16-02-2012
+3030 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3040 Dim a(8,8,1)&#58;Dim b(2,8)&#58;Dim r1(2)&#58;h=1&#58;v=1&#58;aa=9&#58;bb=10
+3050 Cls&#58;Randomize Timer&#58;Font 2,1
+3060 Print"    Sudoku"&#58;Font 1,1
+3070 Print"   from idea by Digitalquirk"
+3080 Print"     for Vic20 application"
+3090 Print" Reworked by Raros for Maximite"&#58;Print&#58;Print
+3100 Print" Please select&#58;"&#58;Print
+3110 Print" ";&#58;Font 1,1,1&#58;Print "f1";&#58;Font 1,1,0&#58;Print" &#58; easy"
+3120 Print" ";&#58;Font 1,1,1&#58;Print "f2";&#58;Font 1,1,0&#58;Print" &#58; medium"
+3130 Print" ";&#58;Font 1,1,1&#58;Print "f3";&#58;Font 1,1,0&#58;Print" &#58; hard"
+3140 Print" ";&#58;Font 1,1,1&#58;Print "f4";&#58;Font 1,1,0&#58;Print" &#58; empty grid"
+3145 Print" ";&#58;Font 1,1,1&#58;Print "f5";&#58;Font 1,1,0&#58;Print" &#58; load previous game"
+3150 a$=Inkey$&#58; If a$="" Then GoTo 3150
+3160 If Asc(a$)=145 Then fu=38&#58;GoTo 3210&#58;'  f1
+3170 If Asc(a$)=146 Then fu=48&#58;GoTo 3210&#58;'  f2
+3180 If Asc(a$)=147 Then fu=57&#58;GoTo 3210&#58;'  f3
+3190 If Asc(a$)=148 Then GoTo 3202&#58;'        f4
+3195 If Asc(a$)=149 Then GoTo 3210&#58;'        f5
+3200 GoTo 3150
+3202 fu=1&#58;For t = 1 To 10
+3204 Font 1,1&#58;Print @(36,180) " Use + and - for Un/Lock Key number "&#58;Pause 300
+3206 Font 1,1,1&#58;Print @(36,180) " Use + and - for Un/Lock Key number "&#58;Pause 300
+3208 Next
+3210 ' Grid generator
+3215 SetTick 0,0&#58;' Stop Sound
+3220 Cls
+3230 GRAFLOAD$="sudokul1.mpf"&#58;GoSub 5700
+3240 ' &#42;&#42;&#42; COLUMN &#42;&#42;&#42;
+3250 lin_or=2&#58;lin_ver=0
+3260 For t = 1 To 3
+3270 Line (lin_or,0)-(lin_or,215),1
+3280 For t1 = 1 To 2
+3290 lin_or=lin_or+12
+3300 For t2 = 0 To 215 Step 2
+3310 Pixel(lin_or,t2)=1
+3320 Next t2
+3330 Next t1
+3340 lin_or=lin_or+12
+3350 Next t
+3360 ' &#42;&#42;&#42; ROW &#42;&#42;&#42;
+3370 Line (lin_or,0)-(lin_or,215),1
+3380 For t = 1 To 3
+3390 Line (2,lin_ver)-(110,lin_ver),1
+3400 For t1 = 1 To 2
+3410 lin_ver=lin_ver+24
+3420 For t2 = 2 To 110 Step 2
+3430 Pixel(t2,lin_ver)=1
+3440 Next t2&#58;Next t1
+3450 lin_ver=lin_ver+24
+3460 Next t
+3470 Line (2,215)-(110,215),1
+3480 ' End Grid generator
+3490 If Asc(a$)=148 Then GoTo 3760&#58;'              Empty grid
+3495 If Asc(a$)=149 Then GoSub 4700&#58;GoTo 3760&#58;'   LOAD Previous Game
+3500 For sr=0 To 8&#58;For sl=0 To 8&#58;Read a(sr,sl,0)&#58;Next sl&#58;Next sr
+3510 sc=0
+3520 For rp=0 To 2
+3530 GoSub 3970
+3540 For sr=0 To 2&#58;For sl=0 To 8&#58;b(sr,sl)=a(sr+sc,sl,0)&#58;Next sl&#58;Next sr
+3550 For sr=0 To 2&#58;For sl=0 To 8&#58;a(sr+sc,sl,0)=b(r1(sr),sl)&#58;Next sl&#58;Next sr
+3560 sc=sc+3&#58;Next rp
+3570 sc=0
+3580 For rp=0 To 2
+3590 GoSub 3970
+3600 For sl=0 To 2&#58;For sr=0 To 8&#58;b(r1(sl),sr)=a(sr,sl+sc,0)&#58;Next sr&#58;Next sl
+3610 For sl=0 To 2&#58;For sr=0 To 8&#58;a(sr,sl+sc,0)=b(sl,sr)&#58;Next sr&#58;Next sl
+3620 sc=sc+3
+3630 Next rp
+3640 For sr=1 To fu
+3650 v=Int(Rnd(1)&#42;9)&#58;h=Int(Rnd(1)&#42;9)
+3660 If a(v,h,0)=0 Then GoTo 3650
+3670 a(v,h,0)=0&#58;Next sr
+3680 '  Write number on grid
+3690 lin_or=6&#58;lin_ver=7
+3700 For sr=0 To 8&#58;For sl=0 To 8
+3710 If a(sr,sl,0)&gt;0 Then Print @(lin_or,lin_ver)Str$(a(sr,sl,0))&#58;a(sr,sl,1)=1&#58;GoSub 4390
+3720 lin_or=lin_or+12&#58;Next sl
+3730 lin_or=6
+3740 lin_ver=lin_ver+24&#58;Next sr
+3750 ' END Write number on grid
+3760 ' &#42;&#42;&#42;&#42; First box in Reverse
+3770 lin_or=6&#58;lin_ver=7&#58;h=1&#58;v=1
+3780 rev=1&#58;GoSub 4410
+3790 Timer=tempo
+3800 Print @(280,37)"v1.0"
+3810 Print @(170,58)"FOR MAXIMITE"
+3820 Print @(140,100)"1-9 Value and 0 for Erase"
+3830 Print @(140,120)"CursorKey for move"
+3835 Print @(140,140)"S for Save game"
+3840 Print @(140,160)"X for Exit"
+3845 Print @(230,204)"TIME&#58;"
+3850 Print @(264,204)Int(Timer/1000)
+3860 a$=Inkey$&#58; If a$="" Then GoTo 3850
+3870 If Asc(a$)=131 And h&lt;9 Then GoSub 4060&#58;' MOVIMENTO a DESTRA
+3880 If Asc(a$)=130 And h&gt;1 Then GoSub 4070&#58;' MOVIMENTO a SINISTRA
+3890 If Asc(a$)=129 And v&lt;9 Then GoSub 4080&#58;' MOVIMENTO in GIU'
+3900 If Asc(a$)=128 And v&gt;1 Then GoSub 4090&#58;' MOVIMENTO in SU'
+3910 If a$="0" Then GoSub 4100&#58;'  CANCELLA
+3920 If Val(a$)&gt;0 And Val(a$)&lt;10 Then GoSub 4120
+3930 If a$="x" Or a$="X" Then GoTo 3960&#58; ' EXIT
+3935 If a$="s" Or a$="S" Then GoSub 4600&#58; ' Save games
+3937 If a$="+" And fu=1 Then If a(v-1,h-1,0)&gt;0 Then a(v-1,h-1,1)=1&#58;GoSub 4390&#58;' is Number Key&#58; LOCK and underscore
+3939 If a$="-" And fu=1 Then a(v-1,h-1,1)=0&#58;GoSub 4405&#58;' is no Number Key&#58; UNLOCK and remove underscore
+3945 GoTo 3850
+3950 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  END  &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3960 Cls&#58;Print&#58;Print "Bye Bye from Raros"&#58;Print&#58;End
+3961 ' Raffaele Rotondo - 82100 Benevento - ITALY
+3962 ' on Facebbok and Skype&#58; raros0101 (also Rotondo Lello - raros_eepc)
+3965 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  END  &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3970 r1(0)=9&#58;r1(1)=9&#58;r1(2)=9
+3980 For sr=0 To 2
+3990 rn=Int(Rnd(1)&#42;3)
+4000 For sl=0 To 2
+4010 If rn=r1(sl) Then GoTo 3990
+4020 Next sl
+4030 r1(sr)=rn&#58;Next sr&#58;Return
+4040 Stop
+4050 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  SUBROUTINE  Cursore &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4060 rev=0&#58;GoSub 4410&#58;lin_or=lin_or+12&#58;h=h+1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO a DESTRA
+4070 rev=0&#58;GoSub 4410&#58;lin_or=lin_or-12&#58;h=h-1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO a SINISTRA
+4080 rev=0&#58;GoSub 4410&#58;lin_ver=lin_ver+24&#58;v=v+1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO in GIU'
+4090 rev=0&#58;GoSub 4410&#58;lin_ver=lin_ver-24&#58;v=v-1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO in SU'
+4100 If a(v-1,h-1,1)=1 Then Return&#58;' NO  una casella con numero chiave
+4110 a(v-1,h-1,0)=0&#58;rev=1&#58;GoSub 4410&#58;Return&#58;'  OK CANCELLA
+4120 If a(v-1,h-1,1)=1 Then Return&#58;' NO  una casella con numero chiave
+4130 '
+4140 For sl=0 To 8
+4150 If Val(a$)=a(v-1,sl,0) Then GoSub 4360&#58;Return&#58;' ERRORE vert
+4160 Next sl
+4170 For sl=0 To 8
+4180 If Val(a$)=a(sl,h-1,0) Then GoSub 4360&#58;Return&#58;' ERRORE orizz
+4190 Next sl
+4200 If v&lt;4 Then aa=0
+4210 If v&gt;3 Then aa=3
+4220 If v&gt;6 Then aa=6
+4230 If h&lt;4 Then bb=0
+4240 If h&gt;3 Then bb=3
+4250 If h&gt;6 Then bb=6
+4260 For sr=0 To 2&#58;For sl=0 To 2
+4270 If Val(a$)=a(aa+sr,bb+sl,0) Then GoSub 4360&#58;Return&#58;' ERRORE QUADR
+4280 Next sl&#58;Next sr
+4290 a(v-1,h-1,0)=Val(a$)&#58;rev=1&#58;GoSub 4410
+4300 For sr=0 To 8&#58;For sl=0 To 8
+4310 If a(sr,sl,0)=0 Then Return
+4320 Next sl&#58;Next sr
+4330 Print @(150,180)" YOU WIN!!!!"
+4335 musindex=17&#58;SetTick 125,6630
+4340 Do While (Inkey$ = "")&#58;Loop
+4350 GoTo 3960&#58; ' &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; EXIT &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+4360 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4370 Print @(lin_or,lin_ver)"E"&#58;Sound 100,300&#58;Pause 1000
+4380 a(v-1,h-1,0)=Val(a$)&#58;rev=1&#58;GoSub 4410&#58;Return
+4390 ' sottolinea i numeri immessi/generati&#58; UNDERSCORE
+4400 Line (lin_or,lin_ver+13)-(lin_or+5,lin_ver+13)&#58;Return
+4405 ' Toglie la sottolinea dei numeri immessi/generati&#58; REMOVE UNDERSCORE
+4406 Line (lin_or,lin_ver+13)-(lin_or+5,lin_ver+13),0&#58;Return
+4410 ' Toggle casella in reverse conservando il contenuto
+4420 Font 1,1,rev
+4430 If a(v-1,h-1,0)=0 Then
+4440 Print @(lin_or,lin_ver)" "
+4450 Else
+4460 Print @(lin_or,lin_ver)Str$(a(v-1,h-1,0))
+4470 EndIf
+4480 Font 1,1&#58;Return
+4490 ' END Toggle casella in reverse
+4500 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4600 ' Save Game (163 variables&#58; a(8,8,1)+Timer/tempo)
+4610 tempo = Timer
+4620 Open "sudoku.sav" For output As 1
+4630 For t = 0 To 1
+4640 For t1 =0 To 8
+4650 For t2=0 To 8
+4660 Print &#35;1,a(t2,t1,t)
+4670 Next t2&#58;Next t1&#58;Next t
+4680 Print &#35;1,Tempo
+4690 Close 1&#58;Return
+4695 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; END Save Game &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4700 ' Load previous Game (163 variables&#58; a(8,8,1)+Timer/tempo)
+4710 Open "sudoku.sav" For input As 1
+4730 For t = 0 To 1
+4740 For t1 =0 To 8
+4750 For t2=0 To 8
+4760 Input &#35;1,a(t2,t1,t)
+4770 Next t2&#58;Next t1&#58;Next t
+4780 Input &#35;1,Tempo
+4790 Close 1
+4800 '      Write number on grid
+4810 lin_or=6&#58;lin_ver=7
+4820 For sr=0 To 8&#58;For sl=0 To 8
+4830 If a(sr,sl,0)&gt;0 Then Print @(lin_or,lin_ver)Str$(a(sr,sl,0))
+4840 If a(sr,sl,1)&gt;0 Then GoSub 4390
+4850 lin_or=lin_or+12&#58;Next sl
+4860 lin_or=6
+4870 lin_ver=lin_ver+24&#58;Next sr
+4878 '     END Write number on grid
+4880 Return
+4890 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; END Load previous Game &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4900 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+5700 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  MPFVIEW by crackerjack 10/2011
+5710 Open GRAFLOAD$ For INPUT As &#35;1
+5720 Line Input &#35;1,ID$&#58;If ID$&lt;&gt;"MPF1" Then GoTo 5910
+5730 Line Input &#35;1,WIDTH$
+5740 Line Input &#35;1,HEIGHT$
+5750 Y=Val(HEIGHT$)
+5760 WIDTH=Val(WIDTH$)-1
+5770 X1=0
+5780 X2=Asc(Input$(1,&#35;1))-1
+5790 PXL=Val(Input$(1,&#35;1))
+5800 Line(X1,Y)-(X2,Y),PXL
+5810 Do
+5820   If X2&gt;=WIDTH Then
+5830     X1=0&#58;Y=Y-1
+5840   Else
+5850     X1=X2+1
+5860   EndIf
+5870   X2=X1+Asc(Input$(1,&#35;1))-1
+5880   PXL=Val(Input$(1,&#35;1))
+5890   Line(X1,Y)-(X2,Y),PXL
+5900 Loop Until Eof(&#35;1)
+5910 Close &#35;1
+5920 Return
+5930 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+6500 ' &#42;&#42;&#42;&#42;&#42; INTERRUPT 1 &#42;&#42;&#42;&#42;&#42;
+6520 'Sound 0,0
+6530 Sound mus1(musindex),90&#58;' 110
+6535 musindex=musindex+1
+6540 If musindex &gt; 16 Then SetTick 125,6600
+6550 IReturn
+6600 ' &#42;&#42;&#42;&#42;&#42; INTERRUPT 2 &#42;&#42;&#42;&#42;&#42;
+6620 'Sound 0,0
+6630 Sound mus1(musindex),120,3&#58;' 110,5
+6635 musindex=musindex+1
+6640 If musindex &gt; 47 Then musindex=16
+6650 IReturn
+6660 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7000 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; Dati per la musica &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7010 ' frequenze musica prima parte (16 note&#58;0-15)
+7011 Data 131,131,131,131,131,0,131,131
+7012 Data 87.3,87.3,87.3,87.3,0,87.3,87.3,87.3
+7013 ' frequenze musica seconda parte (32 note&#58;16-47)
+7014 Data 98,0,0,196,0,87.3,92.5,0
+7016 Data 98,0,0,196,0,196,87.3,92.5
+7018 Data 98,0,0,196,0,0,110,0
+7020 Data 117,117,233,117,131,131,262,131
+7030 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; End Music &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7040 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7500 ' valori preelaborati x Sudoku by 'Digitalquirk'
+7505 Data 2,1,8,6,3,9,4,7,5,5,9,6,8,7,4,1,2,3
+7510 Data 7,4,3,1,5,2,6,8,9,1,5,9,7,6,8,3,4,2
+7520 Data 6,3,4,2,9,5,7,1,8,8,2,7,3,4,1,9,5,6
+7530 Data 9,6,1,5,2,7,8,3,4,4,7,2,9,8,3,5,6,1
+7540 Data 3,8,5,4,1,6,2,9,7
+
+</pre><br /><br /><h1 class="separator"> </h1><br /><b>MMSudoku+Intro.bas</b>:<br /><pre>
+10 ' INTRO &amp; SUDOKU v1.0 for Maximite-MMbasic v3.1 by Raros/BFTI
+20 ' Greetings &amp; Thanks to Geoff Graham for free job and great 
+30 ' project of Maximite/MMbasic,
+35 ' To all members of forum The Back Shed,
+40 ' To Digitalquirk for big idea for VCSUDOKU,
+45 ' To Rob Hubbard for music bass of Crazy_Comets.
+50 CLS
+51 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+52 Dim mus1(47)
+53 musindex=0
+54 For t = 0 To 47&#58;Read mus1(t)&#58;Next
+55 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+60 T1$= " Greetings to all membe"
+62 T2$= "rs forum of The Back She"
+63 T3$= "d from Raros of BLACKFIR"
+64 T4$= "E TEAM ITALY Greetings to all membe"
+68 scroll$ = T1$+T2$+T3$+T4$
+90 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  Load and view BFT3.MPF
+92 GRAFLOAD$="BFT3.MPF"&#58;Gosub 5700
+279 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+300 SetTick 125,6500&#58; ' Provasound4
+310 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+350 Font 2&#58;totchr=83+22
+351 T5$=Space$(22)
+355 for t = 1 to totchr&#58;' 83+22 char la prima volta. Poi 83 
+360 for tt = 13 to 1 step -1&#58;' 13 pixel x char
+365 Print @(tt-13,198) Mid$(T5$+scroll$,t,25)
+367 Print @(305,198)"   "&#58;' per nascondere il primo char su VGA
+368 Pause 10&#58;Next
+370 key$=Inkey$&#58;If key$ &lt;&gt; "" Then Exit For
+372 Next
+375 totchr=83&#58;T5$=""
+380 If key$ = "" Then GoTo 355
+400 SetTick 0,0&#58;scroll$=""
+410 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+1000 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; SCROLL &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+1100 Cls
+1110 '
+1119 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42; Vertical Scroll &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+1120 Font 1,2
+1130 For t = 0 To 90
+1150 Print @(108,t)"PRESENTS"
+1170 Pause 30
+1200 Next
+1210 Pause 800
+1240 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42; Horizzontal Zoom &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+1250 hosu2 = 116&#58;'    Position start HOrizzontal SUdoku
+1251 hosu = hosu2-13&#58;'   "           "        "
+1252 vesu = 120&#58;' Position VErtical SUdoku
+1253 offsch = 13&#58;' Numero pixel tra i caratteri
+1254 pausscrolz = 100
+1255 sudoku$="SUDOKU"
+1399 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+1400 for tt = 1 to 6&#58;' Numero caratteri dello zoom
+1405 hosu=hosu+offsch
+1410 For t = 7 To 0 Step -1&#58;' Zoom decrement
+1420 Font 2,t+1
+1430 Print @(hosu-(t&#42;30),vesu,1) Mid$(sudoku$,tt,1)
+1440 Pause pausscrolz
+1450 Print @(hosu-(t&#42;30),vesu) " "
+1455 Font 2,1&#58;If tt &gt;1 Then Print @(hosu2,vesu,1)Mid$(sudoku$,1,tt-1)
+1460 Next
+1490 Font 2,1&#58;Print @(hosu2,vesu,1)Mid$(sudoku$,1,tt)
+1500 Next&#58;Pause 300
+1510 Font 1,1&#58;Print&#58;Print Tab(21) "For Maximite"
+1600 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; END SCROLL &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+1601 ' Do While (Inkey$ = "")&#58;Loop
+1610 Pause 3000
+3000 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3010 ' &#42; Routine SUDOKU v 1.0 16-02-2012
+3030 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3040 Dim a(8,8,1)&#58;Dim b(2,8)&#58;Dim r1(2)&#58;h=1&#58;v=1&#58;aa=9&#58;bb=10
+3050 Cls&#58;Randomize Timer&#58;Font 2,1
+3060 Print"    Sudoku"&#58;Font 1,1
+3070 Print"   from idea by Digitalquirk"
+3080 Print"     for Vic20 application"
+3090 Print" Reworked by Raros for Maximite"&#58;Print&#58;Print
+3100 Print" Please select&#58;"&#58;Print
+3110 Print" ";&#58;Font 1,1,1&#58;Print "f1";&#58;Font 1,1,0&#58;Print" &#58; easy"
+3120 Print" ";&#58;Font 1,1,1&#58;Print "f2";&#58;Font 1,1,0&#58;Print" &#58; medium"
+3130 Print" ";&#58;Font 1,1,1&#58;Print "f3";&#58;Font 1,1,0&#58;Print" &#58; hard"
+3140 Print" ";&#58;Font 1,1,1&#58;Print "f4";&#58;Font 1,1,0&#58;Print" &#58; empty grid"
+3145 Print" ";&#58;Font 1,1,1&#58;Print "f5";&#58;Font 1,1,0&#58;Print" &#58; load previous game"
+3150 a$=Inkey$&#58; If a$="" Then GoTo 3150
+3160 If Asc(a$)=145 Then fu=38&#58;GoTo 3210&#58;'  f1
+3170 If Asc(a$)=146 Then fu=48&#58;GoTo 3210&#58;'  f2
+3180 If Asc(a$)=147 Then fu=57&#58;GoTo 3210&#58;'  f3
+3190 If Asc(a$)=148 Then GoTo 3202&#58;'        f4
+3195 If Asc(a$)=149 Then GoTo 3210&#58;'        f5
+3200 GoTo 3150
+3202 fu=1&#58;For t = 1 To 10
+3204 Font 1,1&#58;Print @(36,180) " Use + and - for Un/Lock Key number "&#58;Pause 300
+3206 Font 1,1,1&#58;Print @(36,180) " Use + and - for Un/Lock Key number "&#58;Pause 300
+3208 Next
+3210 ' Grid generator
+3220 Cls
+3230 GRAFLOAD$="sudokul1.mpf"&#58;GoSub 5700
+3240 ' &#42;&#42;&#42; COLUMN &#42;&#42;&#42;
+3250 lin_or=2&#58;lin_ver=0
+3260 For t = 1 To 3
+3270 Line (lin_or,0)-(lin_or,215),1
+3280 For t1 = 1 To 2
+3290 lin_or=lin_or+12
+3300 For t2 = 0 To 215 Step 2
+3310 Pixel(lin_or,t2)=1
+3320 Next t2
+3330 Next t1
+3340 lin_or=lin_or+12
+3350 Next t
+3360 ' &#42;&#42;&#42; ROW &#42;&#42;&#42;
+3370 Line (lin_or,0)-(lin_or,215),1
+3380 For t = 1 To 3
+3390 Line (2,lin_ver)-(110,lin_ver),1
+3400 For t1 = 1 To 2
+3410 lin_ver=lin_ver+24
+3420 For t2 = 2 To 110 Step 2
+3430 Pixel(t2,lin_ver)=1
+3440 Next t2&#58;Next t1
+3450 lin_ver=lin_ver+24
+3460 Next t
+3470 Line (2,215)-(110,215),1
+3480 ' End Grid generator
+3490 If Asc(a$)=148 Then GoTo 3760&#58;'              Empty grid
+3495 If Asc(a$)=149 Then GoSub 4700&#58;GoTo 3760&#58;'   LOAD Previous Game
+3500 For sr=0 To 8&#58;For sl=0 To 8&#58;Read a(sr,sl,0)&#58;Next sl&#58;Next sr
+3510 sc=0
+3520 For rp=0 To 2
+3530 GoSub 3970
+3540 For sr=0 To 2&#58;For sl=0 To 8&#58;b(sr,sl)=a(sr+sc,sl,0)&#58;Next sl&#58;Next sr
+3550 For sr=0 To 2&#58;For sl=0 To 8&#58;a(sr+sc,sl,0)=b(r1(sr),sl)&#58;Next sl&#58;Next sr
+3560 sc=sc+3&#58;Next rp
+3570 sc=0
+3580 For rp=0 To 2
+3590 GoSub 3970
+3600 For sl=0 To 2&#58;For sr=0 To 8&#58;b(r1(sl),sr)=a(sr,sl+sc,0)&#58;Next sr&#58;Next sl
+3610 For sl=0 To 2&#58;For sr=0 To 8&#58;a(sr,sl+sc,0)=b(sl,sr)&#58;Next sr&#58;Next sl
+3620 sc=sc+3
+3630 Next rp
+3640 For sr=1 To fu
+3650 v=Int(Rnd(1)&#42;9)&#58;h=Int(Rnd(1)&#42;9)
+3660 If a(v,h,0)=0 Then GoTo 3650
+3670 a(v,h,0)=0&#58;Next sr
+3680 '  Write number on grid
+3690 lin_or=6&#58;lin_ver=7
+3700 For sr=0 To 8&#58;For sl=0 To 8
+3710 If a(sr,sl,0)&gt;0 Then Print @(lin_or,lin_ver)Str$(a(sr,sl,0))&#58;a(sr,sl,1)=1&#58;GoSub 4390
+3720 lin_or=lin_or+12&#58;Next sl
+3730 lin_or=6
+3740 lin_ver=lin_ver+24&#58;Next sr
+3750 ' END Write number on grid
+3760 ' &#42;&#42;&#42;&#42; First box in Reverse
+3770 lin_or=6&#58;lin_ver=7&#58;h=1&#58;v=1
+3780 rev=1&#58;GoSub 4410
+3790 Timer=tempo
+3800 Print @(280,37)"v1.0"
+3810 Print @(170,58)"FOR MAXIMITE"
+3820 Print @(140,100)"1-9 Value and 0 for Erase"
+3830 Print @(140,120)"CursorKey for move"
+3835 Print @(140,140)"S for Save game"
+3840 Print @(140,160)"X for Exit"
+3845 Print @(230,204)"TIME&#58;"
+3850 Print @(264,204)Int(Timer/1000)
+3860 a$=Inkey$&#58; If a$="" Then GoTo 3850
+3870 If Asc(a$)=131 And h&lt;9 Then GoSub 4060&#58;' MOVIMENTO a DESTRA
+3880 If Asc(a$)=130 And h&gt;1 Then GoSub 4070&#58;' MOVIMENTO a SINISTRA
+3890 If Asc(a$)=129 And v&lt;9 Then GoSub 4080&#58;' MOVIMENTO in GIU'
+3900 If Asc(a$)=128 And v&gt;1 Then GoSub 4090&#58;' MOVIMENTO in SU'
+3910 If a$="0" Then GoSub 4100&#58;'  CANCELLA
+3920 If Val(a$)&gt;0 And Val(a$)&lt;10 Then GoSub 4120
+3930 If a$="x" Or a$="X" Then GoTo 3960&#58; ' EXIT
+3935 If a$="s" Or a$="S" Then GoSub 4600&#58; ' Save games
+3937 If a$="+" And fu=1 Then If a(v-1,h-1,0)&gt;0 Then a(v-1,h-1,1)=1&#58;GoSub 4390&#58;' is Number Key&#58; LOCK and underscore
+3939 If a$="-" And fu=1 Then a(v-1,h-1,1)=0&#58;GoSub 4405&#58;' is no Number Key&#58; UNLOCK and remove underscore
+3945 GoTo 3850
+3950 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  END  &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3960 Cls&#58;Print&#58;Print "Bye Bye from Raros"&#58;Print&#58;End
+3961 ' Raffaele Rotondo - 82100 Benevento - ITALY
+3962 ' on Facebbok and Skype&#58; raros0101 (also Rotondo Lello - raros_eepc)
+3965 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  END  &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+3970 r1(0)=9&#58;r1(1)=9&#58;r1(2)=9
+3980 For sr=0 To 2
+3990 rn=Int(Rnd(1)&#42;3)
+4000 For sl=0 To 2
+4010 If rn=r1(sl) Then GoTo 3990
+4020 Next sl
+4030 r1(sr)=rn&#58;Next sr&#58;Return
+4040 Stop
+4050 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  SUBROUTINE  Cursore &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4060 rev=0&#58;GoSub 4410&#58;lin_or=lin_or+12&#58;h=h+1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO a DESTRA
+4070 rev=0&#58;GoSub 4410&#58;lin_or=lin_or-12&#58;h=h-1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO a SINISTRA
+4080 rev=0&#58;GoSub 4410&#58;lin_ver=lin_ver+24&#58;v=v+1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO in GIU'
+4090 rev=0&#58;GoSub 4410&#58;lin_ver=lin_ver-24&#58;v=v-1&#58;rev=1&#58;GoSub 4410&#58;Return&#58;' MOVIMENTO in SU'
+4100 If a(v-1,h-1,1)=1 Then Return&#58;' NO  una casella con numero chiave
+4110 a(v-1,h-1,0)=0&#58;rev=1&#58;GoSub 4410&#58;Return&#58;'  OK CANCELLA
+4120 If a(v-1,h-1,1)=1 Then Return&#58;' NO  una casella con numero chiave
+4130 '
+4140 For sl=0 To 8
+4150 If Val(a$)=a(v-1,sl,0) Then GoSub 4360&#58;Return&#58;' ERRORE vert
+4160 Next sl
+4170 For sl=0 To 8
+4180 If Val(a$)=a(sl,h-1,0) Then GoSub 4360&#58;Return&#58;' ERRORE orizz
+4190 Next sl
+4200 If v&lt;4 Then aa=0
+4210 If v&gt;3 Then aa=3
+4220 If v&gt;6 Then aa=6
+4230 If h&lt;4 Then bb=0
+4240 If h&gt;3 Then bb=3
+4250 If h&gt;6 Then bb=6
+4260 For sr=0 To 2&#58;For sl=0 To 2
+4270 If Val(a$)=a(aa+sr,bb+sl,0) Then GoSub 4360&#58;Return&#58;' ERRORE QUADR
+4280 Next sl&#58;Next sr
+4290 a(v-1,h-1,0)=Val(a$)&#58;rev=1&#58;GoSub 4410
+4300 For sr=0 To 8&#58;For sl=0 To 8
+4310 If a(sr,sl,0)=0 Then Return
+4320 Next sl&#58;Next sr
+4330 Print @(150,180)" YOU WIN!!!!"
+4335 musindex=17&#58;SetTick 125,6630
+4340 Do While (Inkey$ = "")&#58;Loop
+4350 GoTo 3960&#58; ' &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; EXIT &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+4360 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4370 Print @(lin_or,lin_ver)"E"&#58;Sound 100,300&#58;Pause 1000
+4380 a(v-1,h-1,0)=Val(a$)&#58;rev=1&#58;GoSub 4410&#58;Return
+4390 ' sottolinea i numeri immessi/generati&#58; UNDERSCORE
+4400 Line (lin_or,lin_ver+13)-(lin_or+5,lin_ver+13)&#58;Return
+4405 ' Toglie la sottolinea dei numeri immessi/generati&#58; REMOVE UNDERSCORE
+4406 Line (lin_or,lin_ver+13)-(lin_or+5,lin_ver+13),0&#58;Return
+4410 ' Toggle casella in reverse conservando il contenuto
+4420 Font 1,1,rev
+4430 If a(v-1,h-1,0)=0 Then
+4440 Print @(lin_or,lin_ver)" "
+4450 Else
+4460 Print @(lin_or,lin_ver)Str$(a(v-1,h-1,0))
+4470 EndIf
+4480 Font 1,1&#58;Return
+4490 ' END Toggle casella in reverse
+4500 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4600 ' Save Game (163 variables&#58; a(8,8,1)+Timer/tempo)
+4610 tempo = Timer
+4620 Open "sudoku.sav" For output As 1
+4630 For t = 0 To 1
+4640 For t1 =0 To 8
+4650 For t2=0 To 8
+4660 Print &#35;1,a(t2,t1,t)
+4670 Next t2&#58;Next t1&#58;Next t
+4680 Print &#35;1,Tempo
+4690 Close 1&#58;Return
+4695 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; END Save Game &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4700 ' Load previous Game (163 variables&#58; a(8,8,1)+Timer/tempo)
+4710 Open "sudoku.sav" For input As 1
+4730 For t = 0 To 1
+4740 For t1 =0 To 8
+4750 For t2=0 To 8
+4760 Input &#35;1,a(t2,t1,t)
+4770 Next t2&#58;Next t1&#58;Next t
+4780 Input &#35;1,Tempo
+4790 Close 1
+4800 '      Write number on grid
+4810 lin_or=6&#58;lin_ver=7
+4820 For sr=0 To 8&#58;For sl=0 To 8
+4830 If a(sr,sl,0)&gt;0 Then Print @(lin_or,lin_ver)Str$(a(sr,sl,0))
+4840 If a(sr,sl,1)&gt;0 Then GoSub 4390
+4850 lin_or=lin_or+12&#58;Next sl
+4860 lin_or=6
+4870 lin_ver=lin_ver+24&#58;Next sr
+4878 '     END Write number on grid
+4880 Return
+4890 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; END Load previous Game &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+4900 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+5700 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  MPFVIEW by crackerjack 10/2011
+5710 Open GRAFLOAD$ For INPUT As &#35;1
+5720 Line Input &#35;1,ID$&#58;If ID$&lt;&gt;"MPF1" Then GoTo 5910
+5730 Line Input &#35;1,WIDTH$
+5740 Line Input &#35;1,HEIGHT$
+5750 Y=Val(HEIGHT$)
+5760 WIDTH=Val(WIDTH$)-1
+5770 X1=0
+5780 X2=Asc(Input$(1,&#35;1))-1
+5790 PXL=Val(Input$(1,&#35;1))
+5800 Line(X1,Y)-(X2,Y),PXL
+5810 Do
+5820   If X2&gt;=WIDTH Then
+5830     X1=0&#58;Y=Y-1
+5840   Else
+5850     X1=X2+1
+5860   EndIf
+5870   X2=X1+Asc(Input$(1,&#35;1))-1
+5880   PXL=Val(Input$(1,&#35;1))
+5890   Line(X1,Y)-(X2,Y),PXL
+5900 Loop Until Eof(&#35;1)
+5910 Close &#35;1
+5920 Return
+5930 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+6500 ' &#42;&#42;&#42;&#42;&#42; INTERRUPT 1 &#42;&#42;&#42;&#42;&#42;
+6520 'Sound 0,0
+6530 Sound mus1(musindex),90&#58;' 110
+6535 musindex=musindex+1
+6540 If musindex &gt; 16 Then SetTick 125,6600
+6550 IReturn
+6600 ' &#42;&#42;&#42;&#42;&#42; INTERRUPT 2 &#42;&#42;&#42;&#42;&#42;
+6620 'Sound 0,0
+6630 Sound mus1(musindex),120,3&#58;' 110,5
+6635 musindex=musindex+1
+6640 If musindex &gt; 47 Then musindex=16
+6650 IReturn
+6660 '&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7000 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; Dati per la musica &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7010 ' frequenze musica prima parte (16 note&#58;0-15)
+7011 Data 131,131,131,131,131,0,131,131
+7012 Data 87.3,87.3,87.3,87.3,0,87.3,87.3,87.3
+7013 ' frequenze musica seconda parte (32 note&#58;16-47)
+7014 Data 98,0,0,196,0,87.3,92.5,0
+7016 Data 98,0,0,196,0,196,87.3,92.5
+7018 Data 98,0,0,196,0,0,110,0
+7020 Data 117,117,233,117,131,131,262,131
+7030 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42; End Music &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7040 ' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+7500 ' valori preelaborati x Sudoku by 'Digitalquirk'
+7505 Data 2,1,8,6,3,9,4,7,5,5,9,6,8,7,4,1,2,3
+7510 Data 7,4,3,1,5,2,6,8,9,1,5,9,7,6,8,3,4,2
+7520 Data 6,3,4,2,9,5,7,1,8,8,2,7,3,4,1,9,5,6
+7530 Data 9,6,1,5,2,7,8,3,4,4,7,2,9,8,3,5,6,1
+7540 Data 3,8,5,4,1,6,2,9,7
+
+</pre><br /><br /><br /><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='mmsudoku9ef1.zip?File=mmsudoku.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.MMSudoku-part-of-the-original-MMBasic-library' title="Download">mmsudoku.zip</a></td>
+			<td>818 B</td>
+		</tr>
+	
+		<tr class="tablerowalternate">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='SudokuIntro5f32.zip?File=SudokuIntro.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.MMSudoku-part-of-the-original-MMBasic-library' title="Download">SudokuIntro.zip</a></td>
+			<td>9.45 KB</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.MMSudoku-part-of-the-original-MMBasic-library.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:51:16 GMT -->
+</html>

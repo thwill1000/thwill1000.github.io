@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Polar and Rectangular Co-ordinate Conversion Functions - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFqBg8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UG9sYXIgYW5kIFJlY3Rhbmd1bGFyIENvLW9yZGluYXRlIENvbnZlcnNpb24gRnVuY3Rpb25zPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAyMC8wMS8wMyAxNjo1NyBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogRW5jb2RlIGFuZCBEZWNvZGUsIEdyYXBoaWNzLCBNYXRoczwvc21hbGw+PGJyIC8+PGJyIC8+QW55IHBvaW50IG9uIGEgY29udmVudGlvbmFsLCBmbGF0IHBsYW5lIG1heSBiZSBleHByZXNzZWQgaW4gb25lIG9mIHR3byB3YXlzOjxiciAvPjxvbD48YnIgLz48bGk+QSBzZXQgb2YgIlJlY3Rhbmd1bGFyIiAob3IgQ2FydGVzaWFuLCBwbGFuYXIpIGNvLW9yZGluYXRlcyAtIHRoZXNlIHRha2UgdGhlIGZhbWlsaWFyIGZvcm0gb2YgYSBob3Jpem9udGFsIFggYXhpcyBiaXNlY3RlZCBieSBhIHZlcnRpY2FsIFkgYXhpcy4gVGhlIG9yaWdpbiBpcyB1c3VhbGx5IHRoZSBwb2ludCB3aGVyZSB0aGUgdHdvIGxpbmVzIGNyb3NzIGF0IHRoZSB6ZXJvIHZhbHVlIG9mIGJvdGggWCAmIFkuIFRoaXMgaXMgYSB0eXBpY2FsIGNvbXB1dGVyIHNjcmVlbiBsYXlvdXQsIGdyYXBoIHBhcGVyIGV0Yy4uLjwvbGk+PGJyIC8+PGxpPkEgc2V0IG9mICJQb2xhciIgY28tb3JkaW5hdGVzIHdoaWNoIGNvbnNpc3Qgb2YgYW4gYW5nbGUgKFRoZXRhIM64KSBhbmQgYSByYWRpdXMuIEFueSBwb2ludCBvbiB0aGF0IHBsYW5lIGlzIHRoZW4gZXhwcmVzc2VkIGFzIGEgZGlyZWN0aW9uIGFuZCBkaXN0YW5jZSB0byAidHJhdmVsIi48YnIgLz48L2xpPjwvb2w+PGJyIC8+Qm90aCByZWFjaCB0aGUgc2FtZSBjb25jbHVzaW9uLjxiciAvPjxiciAvPkFsbCBjby1vcmRpbmF0ZSBzeXN0ZW1zIHJlcXVpcmUgYW4gb3JpZ2luIC0gYSBwb2ludCBvZiByZWZlcmVuY2UuIFRoaXMgY291bGQgYmUgYSBzcGVjaWZpYyBwb2ludCBvbiB0aGUgcGxhbmUgLUFic29sdXRlLCBvciBzdGFydGluZyBmcm9tIGFub3RoZXIgcG9pbnQgd2hpY2ggY2FuIGJlIGRpZmZlcmVudCBldmVyeSB0aW1lIC1SZWxhdGl2ZS4gRm9yIHRoZSBpbGx1c3RyYXRpb24gYmVsb3csIHdlIHdpbGwgY29uc2lkZXIgdGhlIG9yaWdpbiB0byBiZSB0aGUgYWJzb2x1dGUgcG9pbnQgYXQgd2hpY2ggdGhlIHR3byBheGVzIGJpc2VjdCAtIDAsMCBpbiByZWN0YW5ndWxhciB0ZXJtcy48YnIgLz48YnIgLz5Db25zaWRlciB0aGUgcG9pbnQgMSwxLiBNb3Zpbmcgb25lIHBvaW50IGFsb25nIGJvdGggYXhlcyB3b3VsZCBhcnJpdmUgYXQgdGhhdCBkZXNpcmVkIHBvaW50LCBidXQgeW91IGNvdWxkIGFsc28gZGVjaWRlIGFuIGFuZ2xlIGFuZCBkaXN0YW5jZSA7IHRoZXNlIHBvbGFyIGNvLW9yZGluYXRlcyB3b3VsZCBiZSA0NSBkZWdyZWVzIGFuZCAxLjQxNDIgdW5pdHMuIEJvdGggd291bGQgZGV0ZXJtaW5lIHRoZSBzYW1lIHBvaW50LiBJZiB5b3UgdHJhY2UgYSBsaW5lIGZyb20gdGhlIG9yaWdpbiB0byB0aGlzIHBvaW50LCBpdCB3b3VsZCBiZSBhIGRpYWdvbmFsIGxpbmUgc3RyZXRjaGluZyBpbiBhICJOb3J0aC1FYXN0ZXJseSIgZGlyZWN0aW9uIGZvciBvbmUgInNxdWFyZSIuPGJyIC8+PGJyIC8+PGEgY2xhc3M9InVua25vd25saW5rIiBocmVmPSJNTUJhc2ljLi5hc2h4IiB0aXRsZT0iTU1CYXNpYy4iPjwvYT48aW1nIHNyYz0iR2V0RmlsZS5hc3B4P0ZpbGU9L01NQmFzaWMvaW1hZ2UwMDJhLmdpZiIgYWx0PSJJbWFnZSIgLz48YnIgLz48YnIgLz5UaGUgZm9sbG93aW5nIHR3byBmdW5jdGlvbnMgKGFjdHVhbGx5IFNVQnMgYmVjYXVzZSB0aGV5IHJldHVybiBtb3JlIHRoYW4gb25lIHZhbHVlKSBjb252ZXJ0IGJldHdlZW4gdGhlc2UgdHdvIHN5c3RlbXMuIFRoZSB0aGlyZCBhcmd1bWVudCBpbiBlYWNoIGlzIGFuIG9wdGlvbiB0aGF0IGluZGljYXRlcyB3aGV0aGVyIHRoZSBhbmdsZXMgYXJlIGV4cHJlc3NlZCBpbiBSYWRpYW5zICgwKSBvciBEZWdyZWVzIChub24temVybykuPGJyIC8+PGJyIC8+PGI+U3ludGF4OjwvYj48YnIgLz4gUG9sYXIgKFgsWSYjMDA5MTssb3B0JiMwMDkzOykgIC0gdGhlIG91dHB1dCB3aWxsIGJlIGluIHRoZSB0d28gZ2xvYmFsIHZhcmlhYmxlcyBUaCBhbmQgUjxiciAvPjxiciAvPiBSZWN0IChUaGV0YSxyYWRpdXMmIzAwOTE7LG9wdCYjMDA5MzspICAtIHRoZSBvdXRwdXQgd2lsbCBiZSBpbiB0aGUgdHdvIGdsb2JhbCB2YXJpYWJsZXMgWCBhbmQgWTxiciAvPjxiciAvPjxiPkV4YW1wbGVzOjwvYj48YnIgLz4gUG9sYXIgMTAsMjcsMSA6IFByaW50IFRoLFI8YnIgLz4gPiAyMC4zMjMxICAgICAgICAgMjguNzkyNDxiciAvPjxiciAvPiBSZWN0IDIwLjMsMjguNywxIDogUHJpbnQgWCxZPGJyIC8+ID4gOS45NTcwNSAgICAgICAgIDI2LjkxNzQ8YnIgLz48YnIgLz48YnIgLz48cHJlPg0KJ1ByZWFtYmxlDQoNCglDT05TVCBEZWcyUmFkPTM2MC8oMiYjNDI7UGkpDQoJRGltIEZsb2F0IFRoLFIsWCxZCQ0KDQoNCglTdWIgUG9sYXIoeCBBcyBGbG9hdCx5IEFzIEZsb2F0LG9wdCBBcyBJbnRlZ2VyKSAnIG9wdCAwID0gcmFkaWFucywgTm90IDA9ZGVncmVlcw0KCQlJZiB5PTAgVGhlbiB5PTFlLTYJCSdlbGltaW5hdGVzIGRpdiB6ZXJvIGVycm9ycw0KDQoJCVI9U1FSKFgmIzQyO1grWSYjNDI7WSkNCgkJDQoJCVRoPUF0bihYL1kpDQoJCUlmIFkmbHQ7MCBUaGVuDQoJCQlUaD1UaCtQaQ0KCQlFbHNlSWYgWCZsdDswIFRoZW4gDQoJCQlUaD1UaCsyJiM0MjtQaQ0KCQlFbmRJZg0KCQkNCgkJSWYgb3B0IHRoZW4gDQoJCQlUaD1UaCYjNDI7RGVnMlJhZA0KCQlFbmRJZg0KCQknaGVyZSBUaCBhbmQgUiBjb250YWluIHRoZSBwb2xhciBjby1vcmRpbmF0ZXMNCglFbmQgU3ViDQoJDQoNCglTdWIgUmVjdChUaCBBcyBGbG9hdCxSIEFzIEZsb2F0LG9wdCBBcyBJbnRlZ2VyKSAnIG9wdCAwID0gcmFkaWFucywgTm90IDA9ZGVncmVlcw0KCQlJZiBvcHQgdGhlbiANCgkJCVRoPVRoL0RlZzJSYWQNCgkJRW5kSWYNCgkJDQoJCVk9UiYjNDI7KENvcyhUaCkpDQoJCVg9UiYjNDI7KFNpbihUaCkpDQoJCSdoZXJlIFggYW5kIFkgY29udGFpbiB0aGUgcmVjdGFuZ3VsYXIgY28tb3JkaW5hdGVzDQoJRW5kIFN1Yg0KPC9wcmU+PGJyIC8+PGJyIC8+PGJyIC8+PGJyIC8+PGJyIC8+ZGTj57WXomavgrh+aSZQhNPYmgLPGw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Polar and Rectangular Co-ordinate Conversion Functions</h1><small>Modified on 2020/01/03 16:57 by CaptainBoing &mdash; Categorized as: Encode and Decode, Graphics, Maths</small><br /><br />Any point on a conventional, flat plane may be expressed in one of two ways:<br /><ol><br /><li>A set of "Rectangular" (or Cartesian, planar) co-ordinates - these take the familiar form of a horizontal X axis bisected by a vertical Y axis. The origin is usually the point where the two lines cross at the zero value of both X & Y. This is a typical computer screen layout, graph paper etc...</li><br /><li>A set of "Polar" co-ordinates which consist of an angle (Theta θ) and a radius. Any point on that plane is then expressed as a direction and distance to "travel".<br /></li></ol><br />Both reach the same conclusion.<br /><br />All co-ordinate systems require an origin - a point of reference. This could be a specific point on the plane -Absolute, or starting from another point which can be different every time -Relative. For the illustration below, we will consider the origin to be the absolute point at which the two axes bisect - 0,0 in rectangular terms.<br /><br />Consider the point 1,1. Moving one point along both axes would arrive at that desired point, but you could also decide an angle and distance ; these polar co-ordinates would be 45 degrees and 1.4142 units. Both would determine the same point. If you trace a line from the origin to this point, it would be a diagonal line stretching in a "North-Easterly" direction for one "square".<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="image002a4ef4.gif?File=/MMBasic/image002a.gif" alt="Image" /><br /><br />The following two functions (actually SUBs because they return more than one value) convert between these two systems. The third argument in each is an option that indicates whether the angles are expressed in Radians (0) or Degrees (non-zero).<br /><br /><b>Syntax:</b><br /> Polar (X,Y&#0091;,opt&#0093;)  - the output will be in the two global variables Th and R<br /><br /> Rect (Theta,radius&#0091;,opt&#0093;)  - the output will be in the two global variables X and Y<br /><br /><b>Examples:</b><br /> Polar 10,27,1 : Print Th,R<br /> > 20.3231         28.7924<br /><br /> Rect 20.3,28.7,1 : Print X,Y<br /> > 9.95705         26.9174<br /><br /><br /><pre>
+'Preamble
+
+	CONST Deg2Rad=360/(2&#42;Pi)
+	Dim Float Th,R,X,Y	
+
+
+	Sub Polar(x As Float,y As Float,opt As Integer) ' opt 0 = radians, Not 0=degrees
+		If y=0 Then y=1e-6		'eliminates div zero errors
+
+		R=SQR(X&#42;X+Y&#42;Y)
+		
+		Th=Atn(X/Y)
+		If Y&lt;0 Then
+			Th=Th+Pi
+		ElseIf X&lt;0 Then 
+			Th=Th+2&#42;Pi
+		EndIf
+		
+		If opt then 
+			Th=Th&#42;Deg2Rad
+		EndIf
+		'here Th and R contain the polar co-ordinates
+	End Sub
+	
+
+	Sub Rect(Th As Float,R As Float,opt As Integer) ' opt 0 = radians, Not 0=degrees
+		If opt then 
+			Th=Th/Deg2Rad
+		EndIf
+		
+		Y=R&#42;(Cos(Th))
+		X=R&#42;(Sin(Th))
+		'here X and Y contain the rectangular co-ordinates
+	End Sub
+</pre><br /><br /><br /><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:23 GMT -->
+</html>

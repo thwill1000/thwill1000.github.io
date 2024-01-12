@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Analog-Clock-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:08:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Analog Clock - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Analog-Clock-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF0oABPGgxIGNsYXNzPSJwYWdldGl0bGUiPkFuYWxvZyBDbG9jazwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6MTYgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBEYXRlcywgVGltZSBhbmQgQ2xvY2tzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IFRoZSByZXF1aXJlZCBDTE9DSy5CTVAgaXMgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+T3JpZ2luYWwgY29kZSBieSBFdWdlbmUgVmlsbGFyIChmb3IgdGhlIGNsb2NrKSBhbmQgUmF5IFRob21hcyAoZm9yIHRoZSBkYXkgb2Ygd2VlaykuPGJyIC8+PGJyIC8+TW9kaWZpZWQgZm9yIE1heGltaXRlICBCQVNJQyB2Mi40ICBieSBCb2IgRGV2cmllcywgSnVuZSwgMjAxMTxiciAvPjxiciAvPjxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHA6Ly9nZW9mZmcubmV0L21heGltaXRlLmh0bWwiIHRpdGxlPSJodHRwOi8vZ2VvZmZnLm5ldC9tYXhpbWl0ZS5odG1sIiB0YXJnZXQ9Il9ibGFuayI+aHR0cDovL2dlb2ZmZy5uZXQvbWF4aW1pdGUuaHRtbDwvYT48YnIgLz48YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwOi8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV90b3BpY3MuYXNwP0ZJRD0xNiIgdGl0bGU9Imh0dHA6Ly93d3cudGhlYmFja3NoZWQuY29tL2ZvcnVtL2ZvcnVtX3RvcGljcy5hc3A/RklEPTE2IiB0YXJnZXQ9Il9ibGFuayI+aHR0cDovL3d3dy50aGViYWNrc2hlZC5jb20vZm9ydW0vZm9ydW1fdG9waWNzLmFzcD9GSUQ9MTY8L2E+PGJyIC8+PGJyIC8+UmVnYXJkcyw8YnIgLz5Cb2IgRGV2cmllczxiciAvPkRhbGJ5LCBRTEQsIEF1c3RyYWxpYTxiciAvPjxiciAvPjxiciAvPjxiPk9yaWdpbmFsIGNvZGU8L2I+OjxiciAvPjxwcmU+DQogICAnIEFOQUxPRyBDTE9DSw0KICAgJyBDYXNlIFN0dWR5IFByb2JsZW0gQjMmIzU4OyBQcm9ncmFtIDENCiAgICcgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCiAgICcgd3JpdHRlbiBieSBFdWdlbmUgVmlsbGFyIGh0dHAmIzU4Oy8vc2VhdnNvZnR3YXJlcy5jb2RlZGdyYXBoaWMuY29tL2hvbWVfcGFnZS5odG1sDQogICAnIH4gVGhpcyBwcm9ncmFtIGRyYXdzIGEgdmVyeSBzaW1wbGUgYW5hbG9nIGNsb2NrLg0KICAgJyBtb2RpZmllZCBmb3IgTWF4aW1pdGUgQkFTSUMgYnkgQm9iIERldnJpZXMNCiAgICcmIzQyOyYjNDI7JiM0MjsgbW9kaWZpZWQgYnkgSHVnaCBCdWNrbGUgaW4gRGVjIDIwMTEgdG8gcmVxdWVzdCBhbmQgdmVyaWZ5IGN1cnJlbnQgZGF0ZSBhbmQgdGltZQ0KICAgVGltZXIgPSBWYWwoTGVmdCQoVGltZSQsMikpICYjNDI7IDM2MDAgKyBWYWwoTWlkJChUaW1lJCw0LDIpKSAmIzQyOyA2MCArIFZhbChSaWdodCQoVGltZSQsMikpDQogICAnJiM0MjsmIzQyOyYjNDI7IEdldCBjdXJyZW50IGRhdGUgYW5kIHRpbWUNCiAgICcmIzQyOyYjNDI7JiM0MjsgZGF5cyBpbiBlYWNoIG1vbnRoIHVzZWQgaW4gdGhlIGRhdGUvdGltZSByZXF1ZXN0IHN1YnJvdXRpbmUNCiAgIERhdGEgMzEsMjksMzEsMzAsMzEsMzAsMzEsMzEsMzAsMzEsMzAsMzENCiAgIEdvU3ViIEwwMDQNCiAgICcgQ2xvY2sgYm9yZGVyDQogICBDbHMNCiAgIExpbmUoMCwwKS0oNDgwLDQzMiksMSxCRiYjNTg7TGluZSgxMSwxMiktKDQ2OSw0MjEpLDAsQkYNCiAgIEdvU3ViIEwwMDENCiAgIExvY2F0ZSAyMCwyMCYjNTg7UHJpbnQiTUFYSU1JVEUiDQogICBMb2NhdGUgMjAsMzAmIzU4O1ByaW50Ik1NQkFTSUMgdiI7JiM1ODtHb1N1YiBMMDAyICYjNTg7UHJpbnQgdmVyc2lvbiQ7DQogICBzdGFydD0oTU0uSFJlcy8yKS0oKHBydGxlbiYjNDI7NikvMikmIzU4O3N0b3A9KE1NLkhSZXMvMikrKChwcnRsZW4mIzQyOzYpLzIpLTENCiAgIEZvciB4eD1zdGFydCBUbyBzdG9wJiM1ODtGb3IgeXk9MSBUbyAxMSYjNTg7IFBpeGVsKHh4LHl5KT1Ob3QoUGl4ZWwoeHgseXkpKSYjNTg7IE5leHQgeXkseHgNCiAgIENpcmNsZSgyNDAsMjE2KSwgMjAwLCAxDQogICBDaXJjbGUoMjQwLDIxNiksMTk5LDENCiAgIEZvciBpPTAgVG8gNTkNCiAgIHJhZHM9aSYjNDI7My4xNDE1OTI2NS8zMA0KICAgSWYgaSBNb2QgNSAmbHQ7Jmd0OyAwIFRoZW4NCiAgIHgxPVNpbihyYWRzKSYjNDI7MTk1KzI0MA0KICAgeTE9LUNvcyhyYWRzKSYjNDI7MTk1KzIxNg0KICAgRWxzZQ0KICAgeDE9U2luKHJhZHMpJiM0MjsxOTArMjQwDQogICB5MT0tQ29zKHJhZHMpJiM0MjsxOTArMjE2DQogICBFbmRJZg0KICAgeDI9U2luKHJhZHMpJiM0MjsyMDArMjQwDQogICB5Mj0tQ29zKHJhZHMpJiM0MjsyMDArMjE2DQogICBMaW5lKHgxLHkxKS0oeDIseTIpLDENCiAgIE5leHQgaQ0KICAgJyBQcmV2aW91cyBoYW5kIHBvc2l0aW9ucw0KICAgUEhyWCA9IDI0MCYjNTg7IFBIclkgPSAyMTYNCiAgIFBNblggPSAyNDAmIzU4OyBQTW5ZID0gMjE2DQogICBQU2NYID0gMjQwJiM1ODsgUFNjWSA9IDIxNg0KICAgJyBDbG9jayBkaXNwbGF5IGxvb3ANCiAgIERvDQogICAgICcgV2FpdCBmb3IgYSBzZWNvbmQgdG8gZWxhcHNlDQogICB0JD1UaW1lJCYjNTg7IFRpbWVkID0gVmFsKExlZnQkKHQkLDIpKSAmIzQyOyAzNjAwICsgVmFsKE1pZCQodCQsNCwyKSkgJiM0MjsgNjAgKyBWYWwoUmlnaHQkKHQkLDIpKQ0KICAgRG8NCiAgIFBpbigwKT0wDQogICBQYXVzZSA5OTkNCiAgIFBpbigwKT0xDQogICBMb29wIFVudGlsIEludChUaW1lcikvMTAwMCAmbHQ7Jmd0OyBUaW1lZA0KICAgICAnIENhbGN1bGF0ZSB0aGUgdGltZSB2YWx1ZXMNCiAgIFQkPVRpbWUkJiM1ODtUaW1lTm93ID0gVmFsKExlZnQkKFQkLDIpKSAmIzQyOyAzNjAwICsgVmFsKE1pZCQodCQsNCwyKSkgJiM0MjsgNjAgKyBWYWwoUmlnaHQkKHQkLDIpKQ0KICAgU2Vjb25kID0gVGltZU5vdyBNb2QgNjANCiAgIE1pbnV0ZSA9IChUaW1lTm93IFwgNjApIE1vZCA2MA0KICAgTWludXRlID0gTWludXRlICsgU2Vjb25kIFwgNjANCiAgIEhvdXIgPSBUaW1lTm93IC8gMzYwMA0KICAgICBJZiBIb3VyICZndDs9IDEyIFRoZW4gSG91ciA9IEhvdXIgLSAxMg0KICAgICAnIENvbXB1dGUgdGhlIGFuZ2xlcyAoY29udmVydGVkIHRvIHJhZGlhbnMpDQogICAgIEhyQW5nID0gLjUyMzU5OSAmIzQyOyBIb3VyDQogICAgIE1uQW5nID0gLjEwNDcyICYjNDI7IE1pbnV0ZQ0KICAgICBTY0FuZyA9IC4xMDQ3MiAmIzQyOyBTZWNvbmQNCiAgICAgJyBDb21wdXRlIHRoZSBoYW5kcycgZW5kcG9pbnRzDQogICBIclggPSBTaW4oSHJBbmcpICYjNDI7IDEyMCArIDI0MCYjNTg7IEhyWSA9IDAgLSBDb3MoSHJBbmcpICYjNDI7IDEyMCArIDIxNg0KICAgTW5YID0gU2luKE1uQW5nKSAmIzQyOyAxODAgKyAyNDAmIzU4OyBNblkgPSAwIC0gQ29zKE1uQW5nKSAmIzQyOyAxODAgKyAyMTYNCiAgIFNjWCA9IFNpbihTY0FuZykgJiM0MjsgMTkwICsgMjQwJiM1ODsgU2NZID0gMCAtIENvcyhTY0FuZykgJiM0MjsgMTkwICsgMjE2DQogICAgICcgRXJhc2UgdGhlIHByZXZpb3VzIGhhbmRzDQogICBMaW5lKDI0MCwgMjE2KS0oUEhyeCwgUEhyeSksMA0KICAgTGluZSgyNDAsIDIxNiktKFBNbngsIFBNbnkpLDANCiAgIExpbmUoMjQwLCAyMTYpLShQU2N4LCBQU2N5KSwwDQogICAgICcgRHJhdyB0aGUgY3VycmVudCBoYW5kcw0KICAgTGluZSgyNDAsIDIxNiktKEhyWCwgSHJZKSwxDQogICBMaW5lKDI0MCwgMjE2KS0oTW5YLCBNblkpLDENCiAgIExpbmUoMjQwLCAyMTYpLShTY1gsIFNjWSksMQ0KICAgICAnIFNhdmUgdGhlIGhhbmRzJyBwb3NpdGlvbg0KICAgICBQSHJYID0gSHJYJiM1ODsgUEhyWSA9IEhyWQ0KICAgICBQTW5YID0gTW5YJiM1ODsgUE1uWSA9IE1uWQ0KICAgICBQU2NYID0gU2NYJiM1ODsgUFNjWSA9IFNjWQ0KICAgTG9vcCBVbnRpbCBJbmtleSQgPSBDaHIkKDI3KQ0KICAgRW5kDQpMMDAxJiM1ODsgJ1dlZWtEYXkuYmFzICAgIFJheSBUaG9tYXMgICAgICBTZXB0ZW1iZXIgMjAwMA0KICAgRGltIFR4dERheSQoNykNCiAgIERpbSBUeHRNb250aCQoMTIpDQogICBEYXRhICJTdW5kYXkiLCJNb25kYXkiLCJUdWVzZGF5IiwiV2VkbmVzZGF5IiwiVGh1cnNkYXkiLCJGcmlkYXkiLCJTYXR1cmRheSINCiAgIERhdGEgIkphbnVhcnkiLCJGZWJydWFyeSIsIk1hcmNoIiwiQXByaWwiLCJNYXkiLCJKdW5lIiwiSnVseSINCiAgIERhdGEgIkF1Z3VzdCIsIlNlcHRlbWJlciIsIk9jdG9iZXIiLCJOb3ZlbWJlciIsIkRlY2VtYmVyIg0KICAgRm9yIENvdW50ID0gMCBUbyA2DQogICAgICAgICAgUmVhZCBUeHREYXkkKENvdW50KQ0KICAgTmV4dCBDb3VudA0KICAgRm9yIENvdW50ID0gMCBUbyAxMQ0KICAgICAgICAgIFJlYWQgVHh0TW9udGgkKENvdW50KQ0KICAgTmV4dCBDb3VudA0KICAgVXNlckRhdGUkID0gRGF0ZSQNCiAgICcmIzQyOyYjNDI7JiM0MjsgU3BsaXQgb3V0IHRoZSBkYXksIG1vbnRoIGFuZCB5ZWFyICYjNDI7JiM0MjsmIzQyOw0KICAgRGF5ID0gVmFsKExlZnQkKFVzZXJEYXRlJCwgMikpDQogICBNb250aCA9IFZhbChNaWQkKFVzZXJEYXRlJCwgNCwgMikpDQogICBZZWFyID0gVmFsKFJpZ2h0JChVc2VyRGF0ZSQsIDQpKQ0KICAgT2xkWWVhciA9IFllYXINCiAgIE9sZE1vbnRoPU1vbnRoDQogICAnJiM0MjsmIzQyOyYjNDI7IHN0YXJ0IHRoZSBwcmludCBvdXQNCiAgIFN1ZmZpeCQgPSAidGgiDQogICBJZiBEYXkgTW9kIDEwID0gMSBUaGVuIFN1ZmZpeCQgPSAic3QiDQogICBJZiBEYXkgTW9kIDEwID0gMiBUaGVuIFN1ZmZpeCQgPSAibmQiDQogICBJZiBEYXkgTW9kIDEwID0gMyBUaGVuIFN1ZmZpeCQgPSAicmQiDQogICBJZiBEYXkgJmd0OyAxMCBBbmQgRGF5ICZsdDsgMTQgVGhlbiBTdWZmaXgkID0gInRoIg0KICAgJyYjNDI7JiM0MjsmIzQyOyBGb3IgYW55IGRhdGUgaW4gSmFuIG9yIEZlYiBhZGQgMTIgdG8gdGhlIG1vbnRoIGFuZA0KICAgJyYjNDI7JiM0MjsmIzQyOyBzdWJ0cmFjdCAxIGZyb20gdGhlIHllYXINCiAgIElmIE1vbnRoICZsdDsgMyBUaGVuDQogICAgICAgICAgTW9udGggPSBNb250aCArIDEyDQogICAgICAgICAgWWVhciA9IFllYXIgLSAxDQogICBFbmRJZg0KICAgJyYjNDI7JiM0MjsmIzQyOyBBZGQgMSB0byB0aGUgbW9udGggYW5kIG11bHRpcGx5IGJ5IDIuNjENCiAgICcmIzQyOyYjNDI7JiM0MjsgRHJvcCB0aGUgZnJhY3Rpb24gKG5vdCByb3VuZCkgYWZ0ZXJ3YXJkcw0KICAgTW9udGggPSBNb250aCArIDENCiAgIE1vbnRoID0gRml4KE1vbnRoICYjNDI7IDIuNjEpDQogICAnJiM0MjsmIzQyOyYjNDI7IEFkZCBEYXksIE1vbnRoIGFuZCB0aGUgbGFzdCB0d28gZGlnaXRzIG9mIHRoZSB5ZWFyDQogICBOZXdZZWFyJCA9IFN0ciQoWWVhcikNCiAgIFllYXIgPSBWYWwoUmlnaHQkKE5ld1llYXIkLCAyKSkNCiAgIERNWSA9IERheSArIE1vbnRoICsgWWVhcg0KICAgQ2VudHVyeSA9IFZhbChMZWZ0JChOZXdZZWFyJCwgMikpDQogICAnJiM0MjsmIzQyOyYjNDI7IEFkZCBhIHF1YXJ0ZXIgb2YgdGhlIGxhc3QgdHdvIGRpZ2l0cyBvZiB0aGUgeWVhcg0KICAgJyYjNDI7JiM0MjsmIzQyOyAodHJ1bmNhdGVkIG5vdCByb3VuZGVkKQ0KICAgWWVhciA9IEZpeChZZWFyIC8gNCkNCiAgIERNWSA9IERNWSArIFllYXINCiAgICcmIzQyOyYjNDI7JiM0MjsgQWRkIHRoZSBmb2xsb3dpbmcgZmFjdG9ycyBmb3IgdGhlIHllYXINCiAgIElmIENlbnR1cnkgPSAxOCBUaGVuIENlbnR1cnkgPSAyDQogICBJZiBDZW50dXJ5ID0gMTkgVGhlbiBDZW50dXJ5ID0gMA0KICAgSWYgQ2VudHVyeSA9IDIwIFRoZW4gQ2VudHVyeSA9IDYNCiAgIElmIENlbnR1cnkgPSAyMSBUaGVuIENlbnR1cnkgPSA0DQogICBETVkgPSBETVkgKyBDZW50dXJ5DQogICAnJiM0MjsmIzQyOyYjNDI7IFRoZSBkYXkgb2YgdGhlIHdlZWsgaXMgdGhlIG1vZHVsdXMgb2YgRE1ZIGRpdmlkZWQgYnkgNw0KICAgRE1ZID0gRE1ZIE1vZCA3DQogICBwcnQkPVR4dERheSQoRE1ZKSsiLCAiK1N0ciQoRGF5KStTdWZmaXgkKyIgb2YgIitUeHRNb250aCQoT2xkTW9udGgtMSkrIiwgIitTdHIkKE9sZFllYXIpDQogICBwcnRsZW49TGVuKHBydCQpDQogICBMb2NhdGUgKDQ4MC0ocHJ0bGVuJiM0Mjs2KSkvMiwxJiM1ODtQcmludCBwcnQkDQogICBSZXR1cm4NCkwwMDImIzU4OyB2ZXIkPVN0ciQoTU0uVmVyKQ0KTDAwMyYjNTg7IHZlcnBvcz1JbnN0cih2ZXIkLCIuIikNCiAgIElmIHZlcnBvcyA9IDAgVGhlbiB2ZXIkPXZlciQrIi4wIiYjNTg7R29UbyBMMDAzDQogICB2ZXIxJD1MZWZ0JCh2ZXIkLHZlcnBvcy0xKQ0KICAgdmVyMiQ9TWlkJCh2ZXIkLHZlcnBvcysxLDIpDQogICB2ZXIzJD1SaWdodCQodmVyJCxMZW4odmVyJCktdmVycG9zKQ0KICAgdmVyNCQ9U3RyJChWYWwoTGVmdCQodmVyMyQsMikpKQ0KICAgSWYgTGVuKHZlcjMkKSZndDsyIFRoZW4gdmVyNT1WYWwoUmlnaHQkKHZlcjMkLDIpKSYjNTg7dmVyNSQ9Q2hyJCh2ZXI1KzY0KQ0KICAgdmVyc2lvbiQ9dmVyMSQrIi4iK3ZlcjQkK3ZlcjUkDQogICBSZXR1cm4NCiAgICcmIzQyOyYjNDI7JiM0MjsNCkwwMDQmIzU4OyAnJiM0MjsmIzQyOyYjNDI7IFN1YnJvdXRpbmUgdG8gcmVxdWVzdCBhbmQgdmVyaWZ5IHRoZSBjdXJyZW50IGRhdGUgYW5kIHRpbWUgLSBIdWdoIEJ1Y2tsZSAxMi8yMDExDQogICBDbHMNCiAgICcmIzQyOyYjNDI7JiM0MjsgZGF5cyBpbiBlYWNoIG1vbnRoDQogICBEaW0gRGF5c0luTXRoKDEyKQ0KICAgRm9yIGkgPSAxIFRvIDEyDQogICAgIFJlYWQgRGF5c0luTXRoKGkpDQogICBOZXh0DQogICAnJiM0MjsmIzQyOyYjNDI7DQpMMDA1JiM1ODsgJyYjNDI7JiM0MjsmIzQyOyBBc2sgaWYgZGF0ZSBhbmQgdGltZSB0byBiZSBlbnRlcmVkDQogICBQcmludCAiU3lzdGVtIGRhdGUgJmFtcDsgdGltZSBhcmUgIiBEYXRlJCAiICIgVGltZSQNCiAgIElucHV0ICJEbyB5b3Ugd2lzaCB0byBjaGFuZ2UgdGhlbSAoeS9uKSI7IFJlcGx5JA0KICAgSWYgTENhc2UkKFJlcGx5JCkgPSAibiIgVGhlbg0KICAgICBSZXR1cm4NCiAgIEVsc2VJZiBMQ2FzZSQoUmVwbHkkKSAmbHQ7Jmd0OyAieSIgVGhlbg0KICAgICBQcmludCAiIFNvcnJ5IEkgZGlkbid0IHVuZGVyc3RhbmQgeW91ciByZXBseS4gUGxlYXNlIGFuc3dlciBZIG9yIE4iDQogICAgIEdvVG8gTDAwNQ0KICAgRW5kSWYNCiAgICcmIzQyOyYjNDI7JiM0MjsNCkwwMDYmIzU4OyAnJiM0MjsmIzQyOyYjNDI7IGFzayBmb3IgY3VycmVudCBkYXRlDQogICBJbnB1dCAiRW50ZXIgZGF0ZSBkZC1tbS15eXl5IjsgcmVwbHkkDQogICBpID0gSW5zdHIoMSxyZXBseSQsIi0iKQ0KICAgSWYgaSAmZ3Q7IDEgVGhlbg0KICAgICBkYXkgPSBWYWwoTGVmdCQocmVwbHkkLGktMSkpDQogICBFbHNlDQogICAgIFByaW50ICJQbGVhc2UgdXNlIGZvcm1hdCBkZC1tbS15eS4iDQogICAgIFByaW50DQogICAgIEdvVG8gTDAwNg0KICAgRW5kSWYNCiAgIGogPSBJbnN0cihpKzEscmVwbHkkLCItIikNCiAgIElmIGogJmd0OyBpICsgMSBUaGVuDQogICAgIG1vbnRoID0gVmFsKE1pZCQocmVwbHkkLGkrMSxqLWktMSkpDQogICAgIHllYXIgPSBWYWwoUmlnaHQkKHJlcGx5JCwgTGVuKHJlcGx5JCkgLSBqKSkNCiAgIEVuZElmDQogICBJZiBNb250aCAmbHQ7IDEgT3IgTW9udGggJmd0OyAxMiBUaGVuDQogICAgIFByaW50ICJNb250aCBlcnJvci4gUGxlYXNlIHVzZSBmb3JtYXQgZGQtbW0teXl5eSINCiAgICAgUHJpbnQNCiAgICAgR29UbyBMMDA2DQogICBFbmRJZg0KICAgSWYgZGF5ICZsdDsgMSBPciBkYXkgJmd0OyBEYXlzSW5NdGgoTW9udGgpIFRoZW4NCiAgICAgIFByaW50ICJEYXkgZXJyb3IuIFBsZWFzZSB1c2UgZm9ybWF0IGRkLW1tLXl5eXkiDQogICAgICBQcmludA0KICAgICAgR29UbyBMMDA2DQogICBFbmRJZg0KICAgJyYjNDI7JiM0MjsmIzQyOyBsZWFwIHllYXJzIGFyZSBldmVubHkgZGl2aXNpYmxlIGJ5IDQNCiAgICcmIzQyOyYjNDI7JiM0MjsgaG93ZXZlciB0aG9zZSBldmVubHkgZGl2aXNpYmxlIGJ5IDEwMCBhcmUgbm90IHVubGVzcyB0aGV5IGFyZSBldmVubHkgZGl2aXNpYmxlIGJ5IDQwMA0KICAgSWYgbW9udGggPSAyIEFuZCBkYXkgJmd0OyAyOCBUaGVuDQogICAgIElmIHllYXIgTW9kIDQgJmx0OyZndDsgMCBPciB5ZWFyLzEwMCBNb2QgNCAmbHQ7Jmd0OyAwIFRoZW4NCiAgICAgICBQcmludCB5ZWFyICIgaXMgbm90IGEgbGVhcCB5ZWFyLiINCiAgICAgICBQcmludA0KICAgICAgIEdvVG8gTDAwNg0KICAgICBFbmRJZg0KICAgRW5kSWYNCiAgIERhdGUkID0gcmVwbHkkDQogICAnJiM0MjsmIzQyOyYjNDI7DQpMMDA3JiM1ODsgJyYjNDI7JiM0MjsmIzQyOyBBc2sgZm9yIGN1cnJlbnQgdGltZQ0KICAgSW5wdXQgIkVudGVyIHRpbWUgaGgmIzU4O21tJiM5MTsmIzU4O3NzJiM5MzsgIjsgcmVwbHkkDQogICBpICA9IEluc3RyKDEscmVwbHkkLCImIzU4OyIpDQogICBJZiBpICZndDsgMSBUaGVuDQogICAgIGhvdXIgPSBWYWwoTGVmdCQocmVwbHkkLGktMSkpDQogICBFbHNlDQogICAgIFByaW50ICJQbGVhc2UgdXNlIGZvcm1hdCBoaCYjNTg7bW0mIzkxOyYjNTg7c3MmIzkzOyINCiAgICAgUHJpbnQNCiAgICAgR29UbyBMMDA3DQogICBFbmRJZg0KICAgaiA9IEluc3RyKGkrMSxyZXBseSQsIiYjNTg7IikNCiAgICcmIzQyOyYjNDI7JiM0MjsgaWYgbm8gc2Vjb25kIGNvbG9uIHRoZW4gc2Vjb25kcyBoYXZlIGJlZW4gb21pdHRlZA0KICAgSWYgaiA9IDAgVGhlbg0KICAgICBtaW51dGUgPSBWYWwoUmlnaHQkKFJlcGx5JCwgTGVuKHJlcGx5JCkgLSBpKSkNCiAgICAgc2Vjb25kID0gMA0KICAgRWxzZQ0KICAgICBtaW51dGUgPSBWYWwoTWlkJChyZXBseSQsaSsxLGotaS0xKSkNCiAgICAgc2Vjb25kID0gVmFsKFJpZ2h0JChyZXBseSQsIExlbihyZXBseSQpIC0gaikpDQogICBFbmRJZg0KICAgSWYgaG91ciAmbHQ7IDAgT3IgSG91ciAmZ3Q7IDI0IE9yIG1pbnV0ZSAmbHQ7IDAgIE9yIG1pbnV0ZSAmZ3Q7IDU5IE9yIHNlY29uZCAmbHQ7IDAgT3Igc2Vjb25kICZndDsgNTkgVGhlbg0KICAgICBQcmludCAiVGltZSBlcnJvci4gUGxlYXNlIHVzZSBmb3JtYXQgaGgmIzU4O21tJiM5MTsmIzU4O3NzJiM5Mzsgd2hlcmUgc2Vjb25kcyBhcmUgb3B0aW9uYWwuIg0KICAgICBQcmludA0KICAgICBHb1RvIEwwMDcNCiAgIEVuZElmDQogICBUaW1lJCA9IHJlcGx5JA0KICAgUmV0dXJuDQogICAnJiM0MjsmIzQyOyYjNDI7IEVuZCBIQiBtb2QgMTIvMjAxMQ0KDQoNCjwvcHJlPjxiciAvPjxiciAvPjxiPk1vZGlmaWVkIGNvZGU8L2I+OjxiciAvPjxwcmU+DQogICAnIEFOQUxPRyBDTE9DSw0KICAgJyBDYXNlIFN0dWR5IFByb2JsZW0gQjMmIzU4OyBQcm9ncmFtIDENCiAgICcgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCiAgICcgd3JpdHRlbiBieSBFdWdlbmUgVmlsbGFyIGh0dHAmIzU4Oy8vc2VhdnNvZnR3YXJlcy5jb2RlZGdyYXBoaWMuY29tL2hvbWVfcGFnZS5odG1sDQogICAnIH4gVGhpcyBwcm9ncmFtIGRyYXdzIGEgdmVyeSBzaW1wbGUgYW5hbG9nIGNsb2NrLg0KICAgJyBtb2RpZmllZCBmb3IgTWF4aW1pdGUgQkFTSUMgYnkgQm9iIERldnJpZXMNCiAgICcgbW9kaWZpZWQgZm9yIGNvbG91ciBieSBHZW9mZiBHcmFoYW0NCg0KICAgSWYgTU0uRGV2aWNlJCAmbHQ7Jmd0OyAiQ29sb3VyIE1heGltaXRlIiBUaGVuDQogICAgICBQcmludCAiVGhpcyBwcm9ncmFtIHJlcXVpcmVzIHRoZSBDb2xvdXIgTWF4aW1pdGUiDQogICAgICBFbmQNCiAgIEVuZElmDQoNCiAgIFRpbWVyID0gVmFsKExlZnQkKFRpbWUkLDIpKSAmIzQyOyAzNjAwICsgVmFsKE1pZCQoVGltZSQsNCwyKSkgJiM0MjsgNjAgKyBWYWwoUmlnaHQkKFRpbWUkLDIpKQ0KICAgJyBDbG9jayBib3JkZXINCiAgIE1vZGUgMw0KICAgQ2xzDQogICBMaW5lKDAsMCktKDQ4MCw0MzIpLEN5YW4sQkYmIzU4O0xpbmUoMTEsMTIpLSg0NjksNDIxKSwwLEJGDQogICBHb1N1YiBMMDAxDQogICBDb2xvdXIgR3JlZW4NCiAgIExvY2F0ZSAyMCwyMCYjNTg7UHJpbnQgIk1BWElNSVRFIg0KICAgTG9jYXRlIDIwLDMwJiM1ODtQcmludCAiTU1CQVNJQyB2IjsmIzU4O0dvU3ViIEwwMDIgJiM1ODtQcmludCB2ZXJzaW9uJDsNCiAgIENvbG91ciBXaGl0ZQ0KICAgQ2lyY2xlKDI0MCwyMTYpLCAyMDAsIFllbGxvdw0KICAgQ2lyY2xlKDI0MCwyMTYpLDE5OSwgWWVsbG93DQogICBGb3IgaT0wIFRvIDU5DQogICByYWRzPWkmIzQyOzMuMTQxNTkyNjUvMzANCiAgIElmIGkgTW9kIDUgJmx0OyZndDsgMCBUaGVuDQogICB4MT1TaW4ocmFkcykmIzQyOzE5NSsyNDANCiAgIHkxPS1Db3MocmFkcykmIzQyOzE5NSsyMTYNCiAgIEVsc2UNCiAgIHgxPVNpbihyYWRzKSYjNDI7MTkwKzI0MA0KICAgeTE9LUNvcyhyYWRzKSYjNDI7MTkwKzIxNg0KICAgRW5kSWYNCiAgIHgyPVNpbihyYWRzKSYjNDI7MjAwKzI0MA0KICAgeTI9LUNvcyhyYWRzKSYjNDI7MjAwKzIxNg0KICAgTGluZSh4MSx5MSktKHgyLHkyKSxZZWxsb3cNCiAgIE5leHQgaQ0KICAgJyBQcmV2aW91cyBoYW5kIHBvc2l0aW9ucw0KICAgUEhyWCA9IDI0MCYjNTg7IFBIclkgPSAyMTYNCiAgIFBNblggPSAyNDAmIzU4OyBQTW5ZID0gMjE2DQogICBQU2NYID0gMjQwJiM1ODsgUFNjWSA9IDIxNg0KICAgJyBDbG9jayBkaXNwbGF5IGxvb3ANCiAgIERvDQogICAgICcgV2FpdCBmb3IgYSBzZWNvbmQgdG8gZWxhcHNlDQogICB0JD1UaW1lJCYjNTg7IFRpbWVkID0gVmFsKExlZnQkKHQkLDIpKSAmIzQyOyAzNjAwICsgVmFsKE1pZCQodCQsNCwyKSkgJiM0MjsgNjAgKyBWYWwoUmlnaHQkKHQkLDIpKQ0KICAgRG8NCiAgIFBpbigwKT0wDQogICBQYXVzZSA5OTkNCiAgIFBpbigwKT0xDQogICBMb29wIFVudGlsIEludChUaW1lcikvMTAwMCAmbHQ7Jmd0OyBUaW1lZA0KICAgICAnIENhbGN1bGF0ZSB0aGUgdGltZSB2YWx1ZXMNCiAgIFQkPVRpbWUkJiM1ODtUaW1lTm93ID0gVmFsKExlZnQkKFQkLDIpKSAmIzQyOyAzNjAwICsgVmFsKE1pZCQodCQsNCwyKSkgJiM0MjsgNjAgKyBWYWwoUmlnaHQkKHQkLDIpKQ0KICAgU2Vjb25kID0gVGltZU5vdyBNb2QgNjANCiAgIE1pbnV0ZSA9IChUaW1lTm93IFwgNjApIE1vZCA2MA0KICAgTWludXRlID0gTWludXRlICsgU2Vjb25kIFwgNjANCiAgIEhvdXIgPSBUaW1lTm93IC8gMzYwMA0KICAgICBJZiBIb3VyICZndDs9IDEyIFRoZW4gSG91ciA9IEhvdXIgLSAxMg0KICAgICAnIENvbXB1dGUgdGhlIGFuZ2xlcyAoY29udmVydGVkIHRvIHJhZGlhbnMpDQogICAgIEhyQW5nID0gLjUyMzU5OSAmIzQyOyAoSG91ciArIE1pbnV0ZS82MCkNCiAgICAgTW5BbmcgPSAuMTA0NzIgJiM0MjsgKE1pbnV0ZSArIFNlY29uZC82MCkNCiAgICAgU2NBbmcgPSAuMTA0NzIgJiM0MjsgU2Vjb25kDQogICAgICcgQ29tcHV0ZSB0aGUgaGFuZHMnIGVuZHBvaW50cw0KICAgSHJYID0gU2luKEhyQW5nKSAmIzQyOyAxMjAgKyAyNDAmIzU4OyBIclkgPSAwIC0gQ29zKEhyQW5nKSAmIzQyOyAxMjAgKyAyMTYNCiAgIE1uWCA9IFNpbihNbkFuZykgJiM0MjsgMTgwICsgMjQwJiM1ODsgTW5ZID0gMCAtIENvcyhNbkFuZykgJiM0MjsgMTgwICsgMjE2DQogICBTY1ggPSBTaW4oU2NBbmcpICYjNDI7IDE5MCArIDI0MCYjNTg7IFNjWSA9IDAgLSBDb3MoU2NBbmcpICYjNDI7IDE5MCArIDIxNg0KDQogICAgICcgbWFrZSB0aGUgdGljayBzb3VuZA0KICAgICBTb3VuZCAzMDAwLCA1LCAxDQoNCiAgICAgJyBEcmF3IHRoZSBjdXJyZW50IGhhbmRzDQogICAgICcgd2UgZXJhc2UgdGhlbiBpbW1lZGlhdGVseSByZWRyYXcgdG8gYXZvaWQgZmxpY2tlcg0KICAgICAnIHRoZW4gb25lIGZpbmFsIHJlZHJhdyBpbmNhc2UgdGhlIGhhbmRzIG92ZXJsYXBwZWQNCiAgIExpbmUoMjQwLCAyMTYpLShQU2N4LCBQU2N5KSwwICAgICAnIEVyYXNlIHRoZSBwcmV2aW91cyBzZWNvbmQgaGFuZA0KICAgTGluZSgyNDAsIDIxNiktKFNjWCwgU2NZKSxSZWQgICAgICcgRHJhdyB0aGUgc2Vjb25kIGhhbmQNCiAgIExpbmUoMjQwLCAyMTYpLShQTW54LCBQTW55KSwwICAgICAnIEVyYXNlIHRoZSBwcmV2aW91cyBtaW51dGUgaGFuZA0KICAgTGluZSgyNDAsIDIxNiktKE1uWCwgTW5ZKSxQdXJwbGUgICcgRHJhdyB0aGUgbWludXRlIGhhbmQNCiAgIExpbmUoMjQwLCAyMTYpLShQSHJ4LCBQSHJ5KSwwICAgICAnIEVyYXNlIHRoZSBwcmV2aW91cyBob3VyIGhhbmQNCiAgIExpbmUoMjQwLCAyMTYpLShIclgsIEhyWSksUHVycGxlICAnIERyYXcgdGhlIGhvdXIgaGFuZA0KDQogICAgICcgU2F2ZSB0aGUgaGFuZHMnIHBvc2l0aW9uDQogICAgIFBIclggPSBIclgmIzU4OyBQSHJZID0gSHJZDQogICAgIFBNblggPSBNblgmIzU4OyBQTW5ZID0gTW5ZDQogICAgIFBTY1ggPSBTY1gmIzU4OyBQU2NZID0gU2NZDQogICBMb29wIFVudGlsIElua2V5JCA9IENociQoMjcpDQogICBFbmQNCkwwMDEmIzU4OyAnV2Vla0RheS5iYXMgICAgUmF5IFRob21hcyAgICAgIFNlcHRlbWJlciAyMDAwDQogICBEaW0gVHh0RGF5JCg3KQ0KICAgRGltIFR4dE1vbnRoJCgxMikNCiAgIERhdGEgIlN1bmRheSIsIk1vbmRheSIsIlR1ZXNkYXkiLCJXZWRuZXNkYXkiLCJUaHVyc2RheSIsIkZyaWRheSIsIlNhdHVyZGF5Ig0KICAgRGF0YSAiSmFudWFyeSIsIkZlYnJ1YXJ5IiwiTWFyY2giLCJBcHJpbCIsIk1heSIsIkp1bmUiLCJKdWx5Ig0KICAgRGF0YSAiQXVndXN0IiwiU2VwdGVtYmVyIiwiT2N0b2JlciIsIk5vdmVtYmVyIiwiRGVjZW1iZXIiDQogICBGb3IgQ291bnQgPSAwIFRvIDYNCiAgICAgICAgICBSZWFkIFR4dERheSQoQ291bnQpDQogICBOZXh0IENvdW50DQogICBGb3IgQ291bnQgPSAwIFRvIDExDQogICAgICAgICAgUmVhZCBUeHRNb250aCQoQ291bnQpDQogICBOZXh0IENvdW50DQogICBVc2VyRGF0ZSQgPSBEYXRlJA0KICAgJyYjNDI7JiM0MjsmIzQyOyBTcGxpdCBvdXQgdGhlIGRheSwgbW9udGggYW5kIHllYXIgJiM0MjsmIzQyOyYjNDI7DQogICBEYXkgPSBWYWwoTGVmdCQoVXNlckRhdGUkLCAyKSkNCiAgIE1vbnRoID0gVmFsKE1pZCQoVXNlckRhdGUkLCA0LCAyKSkNCiAgIFllYXIgPSBWYWwoUmlnaHQkKFVzZXJEYXRlJCwgNCkpDQogICBPbGRZZWFyID0gWWVhcg0KICAgT2xkTW9udGg9TW9udGgNCiAgICcmIzQyOyYjNDI7JiM0Mjsgc3RhcnQgdGhlIHByaW50IG91dA0KICAgU3VmZml4JCA9ICJ0aCINCiAgIElmIERheSBNb2QgMTAgPSAxIFRoZW4gU3VmZml4JCA9ICJzdCINCiAgIElmIERheSBNb2QgMTAgPSAyIFRoZW4gU3VmZml4JCA9ICJuZCINCiAgIElmIERheSBNb2QgMTAgPSAzIFRoZW4gU3VmZml4JCA9ICJyZCINCiAgIElmIERheSAmZ3Q7IDEwIEFuZCBEYXkgJmx0OyAxNCBUaGVuIFN1ZmZpeCQgPSAidGgiDQogICAnJiM0MjsmIzQyOyYjNDI7IEZvciBhbnkgZGF0ZSBpbiBKYW4gb3IgRmViIGFkZCAxMiB0byB0aGUgbW9udGggYW5kDQogICAnJiM0MjsmIzQyOyYjNDI7IHN1YnRyYWN0IDEgZnJvbSB0aGUgeWVhcg0KICAgSWYgTW9udGggJmx0OyAzIFRoZW4NCiAgICAgICAgICBNb250aCA9IE1vbnRoICsgMTINCiAgICAgICAgICBZZWFyID0gWWVhciAtIDENCiAgIEVuZElmDQogICAnJiM0MjsmIzQyOyYjNDI7IEFkZCAxIHRvIHRoZSBtb250aCBhbmQgbXVsdGlwbHkgYnkgMi42MQ0KICAgJyYjNDI7JiM0MjsmIzQyOyBEcm9wIHRoZSBmcmFjdGlvbiAobm90IHJvdW5kKSBhZnRlcndhcmRzDQogICBNb250aCA9IE1vbnRoICsgMQ0KICAgTW9udGggPSBGaXgoTW9udGggJiM0MjsgMi42MSkNCiAgICcmIzQyOyYjNDI7JiM0MjsgQWRkIERheSwgTW9udGggYW5kIHRoZSBsYXN0IHR3byBkaWdpdHMgb2YgdGhlIHllYXINCiAgIE5ld1llYXIkID0gU3RyJChZZWFyKQ0KICAgWWVhciA9IFZhbChSaWdodCQoTmV3WWVhciQsIDIpKQ0KICAgRE1ZID0gRGF5ICsgTW9udGggKyBZZWFyDQogICBDZW50dXJ5ID0gVmFsKExlZnQkKE5ld1llYXIkLCAyKSkNCiAgICcmIzQyOyYjNDI7JiM0MjsgQWRkIGEgcXVhcnRlciBvZiB0aGUgbGFzdCB0d28gZGlnaXRzIG9mIHRoZSB5ZWFyDQogICAnJiM0MjsmIzQyOyYjNDI7ICh0cnVuY2F0ZWQgbm90IHJvdW5kZWQpDQogICBZZWFyID0gRml4KFllYXIgLyA0KQ0KICAgRE1ZID0gRE1ZICsgWWVhcg0KICAgJyYjNDI7JiM0MjsmIzQyOyBBZGQgdGhlIGZvbGxvd2luZyBmYWN0b3JzIGZvciB0aGUgeWVhcg0KICAgSWYgQ2VudHVyeSA9IDE4IFRoZW4gQ2VudHVyeSA9IDINCiAgIElmIENlbnR1cnkgPSAxOSBUaGVuIENlbnR1cnkgPSAwDQogICBJZiBDZW50dXJ5ID0gMjAgVGhlbiBDZW50dXJ5ID0gNg0KICAgSWYgQ2VudHVyeSA9IDIxIFRoZW4gQ2VudHVyeSA9IDQNCiAgIERNWSA9IERNWSArIENlbnR1cnkNCiAgICcmIzQyOyYjNDI7JiM0MjsgVGhlIGRheSBvZiB0aGUgd2VlayBpcyB0aGUgbW9kdWx1cyBvZiBETVkgZGl2aWRlZCBieSA3DQogICBETVkgPSBETVkgTW9kIDcNCiAgIHBydCQ9VHh0RGF5JChETVkpKyIsICIrU3RyJChEYXkpK1N1ZmZpeCQrIiBvZiAiK1R4dE1vbnRoJChPbGRNb250aC0xKSsiLCAiK1N0ciQoT2xkWWVhcikNCiAgIHBydGxlbj1MZW4ocHJ0JCkNCiAgIExvY2F0ZSAoNDgwLShwcnRsZW4mIzQyOzYpKS8yLDAmIzU4O1ByaW50IENMUiQoQmxhY2ssIEN5YW4pIHBydCQNCiAgIFJldHVybg0KTDAwMiYjNTg7IHZlciQ9U3RyJChNTS5WZXIpDQpMMDAzJiM1ODsgdmVycG9zPUluc3RyKHZlciQsIi4iKQ0KICAgSWYgdmVycG9zID0gMCBUaGVuIHZlciQ9dmVyJCsiLjAiJiM1ODtHb1RvIEwwMDMNCiAgIHZlcjEkPUxlZnQkKHZlciQsdmVycG9zLTEpDQogICB2ZXIyJD1NaWQkKHZlciQsdmVycG9zKzEsMikNCiAgIHZlcjMkPVJpZ2h0JCh2ZXIkLExlbih2ZXIkKS12ZXJwb3MpDQogICB2ZXI0JD1TdHIkKFZhbChMZWZ0JCh2ZXIzJCwyKSkpDQogICBJZiBMZW4odmVyMyQpJmd0OzIgVGhlbiB2ZXI1PVZhbChSaWdodCQodmVyMyQsMikpJiM1ODt2ZXI1JD1DaHIkKHZlcjUrNjQpDQogICB2ZXJzaW9uJD12ZXIxJCsiLiIrdmVyNCQrdmVyNSQNCiAgIFJldHVybg0KDQo8L3ByZT5kZAhhTyWAfUzmJoMUgVxtXub+p/2S" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Analog Clock</h1><small>Modified on 2016/12/23 23:16 by Administrator &mdash; Categorized as: Dates, Time and Clocks, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required CLOCK.BMP is available in the attachments tab (top right).<br /><br />Original code by Eugene Villar (for the clock) and Ray Thomas (for the day of week).<br /><br />Modified for Maximite  BASIC v2.4  by Bob Devries, June, 2011<br /><br /><a class="externallink" href="http://geoffg.net/maximite.html" title="http://geoffg.net/maximite.html" target="_blank">http://geoffg.net/maximite.html</a><br /><a class="externallink" href="http://www.thebackshed.com/forum/forum_topics.asp?FID=16" title="http://www.thebackshed.com/forum/forum_topics.asp?FID=16" target="_blank">http://www.thebackshed.com/forum/forum_topics.asp?FID=16</a><br /><br />Regards,<br />Bob Devries<br />Dalby, QLD, Australia<br /><br /><br /><b>Original code</b>:<br /><pre>
+   ' ANALOG CLOCK
+   ' Case Study Problem B3&#58; Program 1
+   ' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+   ' written by Eugene Villar http&#58;//seavsoftwares.codedgraphic.com/home_page.html
+   ' ~ This program draws a very simple analog clock.
+   ' modified for Maximite BASIC by Bob Devries
+   '&#42;&#42;&#42; modified by Hugh Buckle in Dec 2011 to request and verify current date and time
+   Timer = Val(Left$(Time$,2)) &#42; 3600 + Val(Mid$(Time$,4,2)) &#42; 60 + Val(Right$(Time$,2))
+   '&#42;&#42;&#42; Get current date and time
+   '&#42;&#42;&#42; days in each month used in the date/time request subroutine
+   Data 31,29,31,30,31,30,31,31,30,31,30,31
+   GoSub L004
+   ' Clock border
+   Cls
+   Line(0,0)-(480,432),1,BF&#58;Line(11,12)-(469,421),0,BF
+   GoSub L001
+   Locate 20,20&#58;Print"MAXIMITE"
+   Locate 20,30&#58;Print"MMBASIC v";&#58;GoSub L002 &#58;Print version$;
+   start=(MM.HRes/2)-((prtlen&#42;6)/2)&#58;stop=(MM.HRes/2)+((prtlen&#42;6)/2)-1
+   For xx=start To stop&#58;For yy=1 To 11&#58; Pixel(xx,yy)=Not(Pixel(xx,yy))&#58; Next yy,xx
+   Circle(240,216), 200, 1
+   Circle(240,216),199,1
+   For i=0 To 59
+   rads=i&#42;3.14159265/30
+   If i Mod 5 &lt;&gt; 0 Then
+   x1=Sin(rads)&#42;195+240
+   y1=-Cos(rads)&#42;195+216
+   Else
+   x1=Sin(rads)&#42;190+240
+   y1=-Cos(rads)&#42;190+216
+   EndIf
+   x2=Sin(rads)&#42;200+240
+   y2=-Cos(rads)&#42;200+216
+   Line(x1,y1)-(x2,y2),1
+   Next i
+   ' Previous hand positions
+   PHrX = 240&#58; PHrY = 216
+   PMnX = 240&#58; PMnY = 216
+   PScX = 240&#58; PScY = 216
+   ' Clock display loop
+   Do
+     ' Wait for a second to elapse
+   t$=Time$&#58; Timed = Val(Left$(t$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Do
+   Pin(0)=0
+   Pause 999
+   Pin(0)=1
+   Loop Until Int(Timer)/1000 &lt;&gt; Timed
+     ' Calculate the time values
+   T$=Time$&#58;TimeNow = Val(Left$(T$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Second = TimeNow Mod 60
+   Minute = (TimeNow \ 60) Mod 60
+   Minute = Minute + Second \ 60
+   Hour = TimeNow / 3600
+     If Hour &gt;= 12 Then Hour = Hour - 12
+     ' Compute the angles (converted to radians)
+     HrAng = .523599 &#42; Hour
+     MnAng = .10472 &#42; Minute
+     ScAng = .10472 &#42; Second
+     ' Compute the hands' endpoints
+   HrX = Sin(HrAng) &#42; 120 + 240&#58; HrY = 0 - Cos(HrAng) &#42; 120 + 216
+   MnX = Sin(MnAng) &#42; 180 + 240&#58; MnY = 0 - Cos(MnAng) &#42; 180 + 216
+   ScX = Sin(ScAng) &#42; 190 + 240&#58; ScY = 0 - Cos(ScAng) &#42; 190 + 216
+     ' Erase the previous hands
+   Line(240, 216)-(PHrx, PHry),0
+   Line(240, 216)-(PMnx, PMny),0
+   Line(240, 216)-(PScx, PScy),0
+     ' Draw the current hands
+   Line(240, 216)-(HrX, HrY),1
+   Line(240, 216)-(MnX, MnY),1
+   Line(240, 216)-(ScX, ScY),1
+     ' Save the hands' position
+     PHrX = HrX&#58; PHrY = HrY
+     PMnX = MnX&#58; PMnY = MnY
+     PScX = ScX&#58; PScY = ScY
+   Loop Until Inkey$ = Chr$(27)
+   End
+L001&#58; 'WeekDay.bas    Ray Thomas      September 2000
+   Dim TxtDay$(7)
+   Dim TxtMonth$(12)
+   Data "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+   Data "January","February","March","April","May","June","July"
+   Data "August","September","October","November","December"
+   For Count = 0 To 6
+          Read TxtDay$(Count)
+   Next Count
+   For Count = 0 To 11
+          Read TxtMonth$(Count)
+   Next Count
+   UserDate$ = Date$
+   '&#42;&#42;&#42; Split out the day, month and year &#42;&#42;&#42;
+   Day = Val(Left$(UserDate$, 2))
+   Month = Val(Mid$(UserDate$, 4, 2))
+   Year = Val(Right$(UserDate$, 4))
+   OldYear = Year
+   OldMonth=Month
+   '&#42;&#42;&#42; start the print out
+   Suffix$ = "th"
+   If Day Mod 10 = 1 Then Suffix$ = "st"
+   If Day Mod 10 = 2 Then Suffix$ = "nd"
+   If Day Mod 10 = 3 Then Suffix$ = "rd"
+   If Day &gt; 10 And Day &lt; 14 Then Suffix$ = "th"
+   '&#42;&#42;&#42; For any date in Jan or Feb add 12 to the month and
+   '&#42;&#42;&#42; subtract 1 from the year
+   If Month &lt; 3 Then
+          Month = Month + 12
+          Year = Year - 1
+   EndIf
+   '&#42;&#42;&#42; Add 1 to the month and multiply by 2.61
+   '&#42;&#42;&#42; Drop the fraction (not round) afterwards
+   Month = Month + 1
+   Month = Fix(Month &#42; 2.61)
+   '&#42;&#42;&#42; Add Day, Month and the last two digits of the year
+   NewYear$ = Str$(Year)
+   Year = Val(Right$(NewYear$, 2))
+   DMY = Day + Month + Year
+   Century = Val(Left$(NewYear$, 2))
+   '&#42;&#42;&#42; Add a quarter of the last two digits of the year
+   '&#42;&#42;&#42; (truncated not rounded)
+   Year = Fix(Year / 4)
+   DMY = DMY + Year
+   '&#42;&#42;&#42; Add the following factors for the year
+   If Century = 18 Then Century = 2
+   If Century = 19 Then Century = 0
+   If Century = 20 Then Century = 6
+   If Century = 21 Then Century = 4
+   DMY = DMY + Century
+   '&#42;&#42;&#42; The day of the week is the modulus of DMY divided by 7
+   DMY = DMY Mod 7
+   prt$=TxtDay$(DMY)+", "+Str$(Day)+Suffix$+" of "+TxtMonth$(OldMonth-1)+", "+Str$(OldYear)
+   prtlen=Len(prt$)
+   Locate (480-(prtlen&#42;6))/2,1&#58;Print prt$
+   Return
+L002&#58; ver$=Str$(MM.Ver)
+L003&#58; verpos=Instr(ver$,".")
+   If verpos = 0 Then ver$=ver$+".0"&#58;GoTo L003
+   ver1$=Left$(ver$,verpos-1)
+   ver2$=Mid$(ver$,verpos+1,2)
+   ver3$=Right$(ver$,Len(ver$)-verpos)
+   ver4$=Str$(Val(Left$(ver3$,2)))
+   If Len(ver3$)&gt;2 Then ver5=Val(Right$(ver3$,2))&#58;ver5$=Chr$(ver5+64)
+   version$=ver1$+"."+ver4$+ver5$
+   Return
+   '&#42;&#42;&#42;
+L004&#58; '&#42;&#42;&#42; Subroutine to request and verify the current date and time - Hugh Buckle 12/2011
+   Cls
+   '&#42;&#42;&#42; days in each month
+   Dim DaysInMth(12)
+   For i = 1 To 12
+     Read DaysInMth(i)
+   Next
+   '&#42;&#42;&#42;
+L005&#58; '&#42;&#42;&#42; Ask if date and time to be entered
+   Print "System date &amp; time are " Date$ " " Time$
+   Input "Do you wish to change them (y/n)"; Reply$
+   If LCase$(Reply$) = "n" Then
+     Return
+   ElseIf LCase$(Reply$) &lt;&gt; "y" Then
+     Print " Sorry I didn't understand your reply. Please answer Y or N"
+     GoTo L005
+   EndIf
+   '&#42;&#42;&#42;
+L006&#58; '&#42;&#42;&#42; ask for current date
+   Input "Enter date dd-mm-yyyy"; reply$
+   i = Instr(1,reply$,"-")
+   If i &gt; 1 Then
+     day = Val(Left$(reply$,i-1))
+   Else
+     Print "Please use format dd-mm-yy."
+     Print
+     GoTo L006
+   EndIf
+   j = Instr(i+1,reply$,"-")
+   If j &gt; i + 1 Then
+     month = Val(Mid$(reply$,i+1,j-i-1))
+     year = Val(Right$(reply$, Len(reply$) - j))
+   EndIf
+   If Month &lt; 1 Or Month &gt; 12 Then
+     Print "Month error. Please use format dd-mm-yyyy"
+     Print
+     GoTo L006
+   EndIf
+   If day &lt; 1 Or day &gt; DaysInMth(Month) Then
+      Print "Day error. Please use format dd-mm-yyyy"
+      Print
+      GoTo L006
+   EndIf
+   '&#42;&#42;&#42; leap years are evenly divisible by 4
+   '&#42;&#42;&#42; however those evenly divisible by 100 are not unless they are evenly divisible by 400
+   If month = 2 And day &gt; 28 Then
+     If year Mod 4 &lt;&gt; 0 Or year/100 Mod 4 &lt;&gt; 0 Then
+       Print year " is not a leap year."
+       Print
+       GoTo L006
+     EndIf
+   EndIf
+   Date$ = reply$
+   '&#42;&#42;&#42;
+L007&#58; '&#42;&#42;&#42; Ask for current time
+   Input "Enter time hh&#58;mm&#91;&#58;ss&#93; "; reply$
+   i  = Instr(1,reply$,"&#58;")
+   If i &gt; 1 Then
+     hour = Val(Left$(reply$,i-1))
+   Else
+     Print "Please use format hh&#58;mm&#91;&#58;ss&#93;"
+     Print
+     GoTo L007
+   EndIf
+   j = Instr(i+1,reply$,"&#58;")
+   '&#42;&#42;&#42; if no second colon then seconds have been omitted
+   If j = 0 Then
+     minute = Val(Right$(Reply$, Len(reply$) - i))
+     second = 0
+   Else
+     minute = Val(Mid$(reply$,i+1,j-i-1))
+     second = Val(Right$(reply$, Len(reply$) - j))
+   EndIf
+   If hour &lt; 0 Or Hour &gt; 24 Or minute &lt; 0  Or minute &gt; 59 Or second &lt; 0 Or second &gt; 59 Then
+     Print "Time error. Please use format hh&#58;mm&#91;&#58;ss&#93; where seconds are optional."
+     Print
+     GoTo L007
+   EndIf
+   Time$ = reply$
+   Return
+   '&#42;&#42;&#42; End HB mod 12/2011
+
+
+</pre><br /><br /><b>Modified code</b>:<br /><pre>
+   ' ANALOG CLOCK
+   ' Case Study Problem B3&#58; Program 1
+   ' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+   ' written by Eugene Villar http&#58;//seavsoftwares.codedgraphic.com/home_page.html
+   ' ~ This program draws a very simple analog clock.
+   ' modified for Maximite BASIC by Bob Devries
+   ' modified for colour by Geoff Graham
+
+   If MM.Device$ &lt;&gt; "Colour Maximite" Then
+      Print "This program requires the Colour Maximite"
+      End
+   EndIf
+
+   Timer = Val(Left$(Time$,2)) &#42; 3600 + Val(Mid$(Time$,4,2)) &#42; 60 + Val(Right$(Time$,2))
+   ' Clock border
+   Mode 3
+   Cls
+   Line(0,0)-(480,432),Cyan,BF&#58;Line(11,12)-(469,421),0,BF
+   GoSub L001
+   Colour Green
+   Locate 20,20&#58;Print "MAXIMITE"
+   Locate 20,30&#58;Print "MMBASIC v";&#58;GoSub L002 &#58;Print version$;
+   Colour White
+   Circle(240,216), 200, Yellow
+   Circle(240,216),199, Yellow
+   For i=0 To 59
+   rads=i&#42;3.14159265/30
+   If i Mod 5 &lt;&gt; 0 Then
+   x1=Sin(rads)&#42;195+240
+   y1=-Cos(rads)&#42;195+216
+   Else
+   x1=Sin(rads)&#42;190+240
+   y1=-Cos(rads)&#42;190+216
+   EndIf
+   x2=Sin(rads)&#42;200+240
+   y2=-Cos(rads)&#42;200+216
+   Line(x1,y1)-(x2,y2),Yellow
+   Next i
+   ' Previous hand positions
+   PHrX = 240&#58; PHrY = 216
+   PMnX = 240&#58; PMnY = 216
+   PScX = 240&#58; PScY = 216
+   ' Clock display loop
+   Do
+     ' Wait for a second to elapse
+   t$=Time$&#58; Timed = Val(Left$(t$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Do
+   Pin(0)=0
+   Pause 999
+   Pin(0)=1
+   Loop Until Int(Timer)/1000 &lt;&gt; Timed
+     ' Calculate the time values
+   T$=Time$&#58;TimeNow = Val(Left$(T$,2)) &#42; 3600 + Val(Mid$(t$,4,2)) &#42; 60 + Val(Right$(t$,2))
+   Second = TimeNow Mod 60
+   Minute = (TimeNow \ 60) Mod 60
+   Minute = Minute + Second \ 60
+   Hour = TimeNow / 3600
+     If Hour &gt;= 12 Then Hour = Hour - 12
+     ' Compute the angles (converted to radians)
+     HrAng = .523599 &#42; (Hour + Minute/60)
+     MnAng = .10472 &#42; (Minute + Second/60)
+     ScAng = .10472 &#42; Second
+     ' Compute the hands' endpoints
+   HrX = Sin(HrAng) &#42; 120 + 240&#58; HrY = 0 - Cos(HrAng) &#42; 120 + 216
+   MnX = Sin(MnAng) &#42; 180 + 240&#58; MnY = 0 - Cos(MnAng) &#42; 180 + 216
+   ScX = Sin(ScAng) &#42; 190 + 240&#58; ScY = 0 - Cos(ScAng) &#42; 190 + 216
+
+     ' make the tick sound
+     Sound 3000, 5, 1
+
+     ' Draw the current hands
+     ' we erase then immediately redraw to avoid flicker
+     ' then one final redraw incase the hands overlapped
+   Line(240, 216)-(PScx, PScy),0     ' Erase the previous second hand
+   Line(240, 216)-(ScX, ScY),Red     ' Draw the second hand
+   Line(240, 216)-(PMnx, PMny),0     ' Erase the previous minute hand
+   Line(240, 216)-(MnX, MnY),Purple  ' Draw the minute hand
+   Line(240, 216)-(PHrx, PHry),0     ' Erase the previous hour hand
+   Line(240, 216)-(HrX, HrY),Purple  ' Draw the hour hand
+
+     ' Save the hands' position
+     PHrX = HrX&#58; PHrY = HrY
+     PMnX = MnX&#58; PMnY = MnY
+     PScX = ScX&#58; PScY = ScY
+   Loop Until Inkey$ = Chr$(27)
+   End
+L001&#58; 'WeekDay.bas    Ray Thomas      September 2000
+   Dim TxtDay$(7)
+   Dim TxtMonth$(12)
+   Data "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+   Data "January","February","March","April","May","June","July"
+   Data "August","September","October","November","December"
+   For Count = 0 To 6
+          Read TxtDay$(Count)
+   Next Count
+   For Count = 0 To 11
+          Read TxtMonth$(Count)
+   Next Count
+   UserDate$ = Date$
+   '&#42;&#42;&#42; Split out the day, month and year &#42;&#42;&#42;
+   Day = Val(Left$(UserDate$, 2))
+   Month = Val(Mid$(UserDate$, 4, 2))
+   Year = Val(Right$(UserDate$, 4))
+   OldYear = Year
+   OldMonth=Month
+   '&#42;&#42;&#42; start the print out
+   Suffix$ = "th"
+   If Day Mod 10 = 1 Then Suffix$ = "st"
+   If Day Mod 10 = 2 Then Suffix$ = "nd"
+   If Day Mod 10 = 3 Then Suffix$ = "rd"
+   If Day &gt; 10 And Day &lt; 14 Then Suffix$ = "th"
+   '&#42;&#42;&#42; For any date in Jan or Feb add 12 to the month and
+   '&#42;&#42;&#42; subtract 1 from the year
+   If Month &lt; 3 Then
+          Month = Month + 12
+          Year = Year - 1
+   EndIf
+   '&#42;&#42;&#42; Add 1 to the month and multiply by 2.61
+   '&#42;&#42;&#42; Drop the fraction (not round) afterwards
+   Month = Month + 1
+   Month = Fix(Month &#42; 2.61)
+   '&#42;&#42;&#42; Add Day, Month and the last two digits of the year
+   NewYear$ = Str$(Year)
+   Year = Val(Right$(NewYear$, 2))
+   DMY = Day + Month + Year
+   Century = Val(Left$(NewYear$, 2))
+   '&#42;&#42;&#42; Add a quarter of the last two digits of the year
+   '&#42;&#42;&#42; (truncated not rounded)
+   Year = Fix(Year / 4)
+   DMY = DMY + Year
+   '&#42;&#42;&#42; Add the following factors for the year
+   If Century = 18 Then Century = 2
+   If Century = 19 Then Century = 0
+   If Century = 20 Then Century = 6
+   If Century = 21 Then Century = 4
+   DMY = DMY + Century
+   '&#42;&#42;&#42; The day of the week is the modulus of DMY divided by 7
+   DMY = DMY Mod 7
+   prt$=TxtDay$(DMY)+", "+Str$(Day)+Suffix$+" of "+TxtMonth$(OldMonth-1)+", "+Str$(OldYear)
+   prtlen=Len(prt$)
+   Locate (480-(prtlen&#42;6))/2,0&#58;Print CLR$(Black, Cyan) prt$
+   Return
+L002&#58; ver$=Str$(MM.Ver)
+L003&#58; verpos=Instr(ver$,".")
+   If verpos = 0 Then ver$=ver$+".0"&#58;GoTo L003
+   ver1$=Left$(ver$,verpos-1)
+   ver2$=Mid$(ver$,verpos+1,2)
+   ver3$=Right$(ver$,Len(ver$)-verpos)
+   ver4$=Str$(Val(Left$(ver3$,2)))
+   If Len(ver3$)&gt;2 Then ver5=Val(Right$(ver3$,2))&#58;ver5$=Chr$(ver5+64)
+   version$=ver1$+"."+ver4$+ver5$
+   Return
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Analog-Clock-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:08:35 GMT -->
+</html>

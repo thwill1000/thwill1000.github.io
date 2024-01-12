@@ -1,0 +1,245 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Driving a Parallel Printer - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFkWQ8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RHJpdmluZyBhIFBhcmFsbGVsIFByaW50ZXI8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzIzIDIzOjI3IGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogQ29udHJvbCwgSGFyZHdhcmUsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPjxiPlByaW50ZXIuYmFzPC9iPjxiciAvPjxwcmU+DQonJiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOw0KJ0RPVC1NQVRSSVggUFJJTlRFUiBST1VUSU5FDQoNCidDb25jZXB0IGJ5IENpcmN1aXRHaXptb3Mgd2l0aCBCVVNZIGxpbmUgc3VnZ2VzdGlvbnMgYnkgcm9iZXJ0LnJvemVlDQonb2YgVEJTIGZvcnVtcyAtIFRoYW5rcyBndXlzIQ0KDQonRlVMTCBJTkZPUk1BVElPTiBUSFJFQUQgQ0FOIEJFIEZPVU5EIEhFUkUmIzU4Ow0KJ2h0dHAmIzU4Oy8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTY1MjAmYW1wO1BOPTAmYW1wO1RQTj0xDQoNCidWZXJzaW9uIDEuMCAtIEluaXRpYWwgc3VibWlzc2lvbiB0byBsaWJyYXJ5Lg0KDQonV29ya3Mgd2l0aCBCL1cgTU0sIENvbG91ciBNTSwgYW5kIE1pY3JvTWl0ZS4NCicmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7DQoNCidUaGlzIHJvdXRpbmUgd2FzIGRldmVsb3BlZCBvdXQgb2YgQ2lyY3VpdEdpem1vcyBvcmlnbmFsIGlkZWEgdG8gdXNlIGENCidkb3QtbWF0cml4IHByaW50ZXIgd2l0aGluIE1NQmFzaWMuICBJIGhhdmUgcmVmaW5lZCB0aGUgcm91dGluZSwgYW5kDQonaW5jb3Jwb3JhdGVkIGlkZWFzIGZyb20gb3RoZXJzIGFuZCBtYWtlIHVzZSBvZiB0aGUgQlVTWSBsaW5lIGZyb20gdGhlDQoncHJpbnRlciB0byBlbnN1cmUgdGhhdCBkYXRhIGlzIGNsb2NrZWQgdG8gdGhlIHByaW50ZXIgY29ycmVjdGx5LCBzbyB0aGF0DQonbm8gaW5jb3JyZWN0IHByaW50b3V0cyByZXN1bHQgb2Ygc2VuZGluZyBkYXRhIHRvIHRoZSBwcmludGVyIGZhc3RlciB0aGFuDQondGhlIHByaW50ZXIgY2FuIGRlYWwgd2l0aCBpdC4NCg0KJ0FueSBkYXRhIHlvdSB3YW50IHByaW50ZWQsIGlzIHNlbnQgdG8gdGhlIHN1YnJvdXRpbmUgaW4gUCQuICBUaGUgc3ViIHdpbGwNCidjbG9jayB0aGUgZGF0YSB0byB0aGUgcHJpbnRlciBtYWtpbmcgdXNlIG9mIHRoZSBCVVNZIGxpbmUsIGFuZCB0aGVuIHJldHVybg0KJ3RvIHRoZSBtYWluIHByb2dyYW0uDQoNCidJIGFtIHVzaW5nIHBvcnQgRCBmb3IgdGhpcywgYnV0IHlvdSBjb3VsZCB1c2Ugb3RoZXIgcGlucy4NCidJVCBJUyBWSVRBTCB0aGF0IHlvdSBzZWxlY3QgNXYgdG9sZXJhbnQgcGlucyBmb3IgeW91ciBwcmludGVyIGNvbnRyb2wNCidwb3J0LCBhcyB0aGUgcGFyYWxsZWwtcHJpbnRlciBzdGFuZGFyZCBpcyB0aGF0IGFsbCBkYXRhIGxpbmVzIGFyZSBpZGxlLWhpZ2gNCidhdCA1diwgYW5kIGlmIHlvdSBjb25uZWN0IHRoZXNlIHRvIGFueSBNTSAzdjMgcGlucywgeW91IHdpbGwga2lsbCB0aGUgTU0gY2hpcC4NCg0KJ1lPVSBIQVZFIEJFRU4gV0FSTkVEIQ0KDQonSW4gbXkgZXhhbXBsZSwgSSBhbSB1c2luZyBwb3J0IEQyLUQxMyBmb3IgdGhlIHByaW50ZXIgaW50ZXJmYWNlLg0KJ0QyLUQ5IGlzIHRoZSA4LWJpdCBwYXJhbGxlbCBkYXRhIGJ1cyhkYXRhIDAgdGhyb3VnaCBkYXRhIDcpLCBEMTAgaXMNCid0aGUgU1RST0JFIGxpbmUsIGFuZCBEMTEgaXMgdGhlIFJFU0VUIGxpbmUgdXNlZCB0byByZXNldCB0aGUgcHJpbnRlciB3aGVuDQoneW91IGZpcnN0IHJ1biB0aGUgY29kZS4gIEQxMiBpcyB0aGUgQlVTWSBsaW5lLCBhbmQgRDEzIGlzIHRoZSBQQVBFUiBPVVQgbGluZQ0KJ3doaWNoIGlzIG5vdCBjdXJyZW50bHkgdXNlZCBpbiB0aGlzIHZlcnNpb24gb2YgdGhlIGNvZGUoYnV0IHdpbGwgYmUgbGF0ZXIpLg0KDQonV2hhdCBoYXBwZW5zIHdpdGggdGhlIHVzZSBvZiB0aGUgQlVTWSBsaW5lLCBpcyB0aGF0IHRoZSBjb2RlIHNlbmRzIGEgYnl0ZSB0bw0KJ3RoZSBwcmludGVyLCB0aGVuIHdhaXRzIGZvciB0aGUgcHJpbnRlciBpdHNlbGYgdG8gc2lnbmFsIHRoYXQgaXQgaXMgTk9UIGJ1c3kNCicoaW4gb3RoZXIgd29yZHMsIHRoYXQgaXQgaXMgcmVhZHkgZm9yIGFub3RoZXIgYnl0ZSBvZiBkYXRhKSwgdGhlbiBpdCBjbG9ja3MNCidhbm90aGVyIGJ5dGUgdG8gdGhlIHByaW50ZXIuICBPbmx5IG9uY2UgdGhlIGZ1bGwgbWVzc2FnZSBoYXMgYmVlbiBzZW50LCBhbmQNCid0aGVuIHlvdSBzZW5kIHRoZSBwcmludGVyIGEgQ1IoZGVjaW1hbCAxMyksIGRvZXMgdGhlIHByaW50ZXIgYWN0dWFsbHkgcHJpbnQNCidvdXQgd2hhdCBoYXMgYmVlbiBjbG9ja2VkIGludG8gaXRzIGRhdGEgYnVmZmVyIHVwIHRvIHRoYXQgcG9pbnQuDQoNCidEaWZmZXJlbnQgcHJpbnRlcnMgaGF2ZSBkaWZmZXJlbnQgZGF0YSBidWZmZXIgc2l6ZXMsIHNvIHlvdSB3aWxsIG5lZWQgdG8NCidjaGVjayB0aGlzIHdpdGggeW91ciBzcGVjaWZpYyBwcmludGVyIGlmIHlvdXIgbWVzc2FnZXMgYXJlIGV4cGVjdGVkIHRvIGJlDQonbG9uZy4gIE1vc3QgcHJpbnRlcnMgY2FuIGFjY2VwdCB1cCB0byA4MCBieXRlcyhjaGFyYWN0ZXJzKSB3aXRob3V0IGFueQ0KJ2tpbmQgb2YgYnVmZmVyIG92ZXJydW4uICANCg0KJ0FzIGZvciB0aGUgY2lyY3VpdCwgeW91IHNob3VsZCBwdXQgYSAxMDAtb2htIHJlc2lzdG9yIGluIHNlcmllcyB3aXRoIEFMTA0KJ2RhdGEgYW5kIGNvbnRyb2wgcGlucyBpbiB1c2UsIHRvIGxpbWl0IHRoZSBjdXJyZW50IGludG8gb3Igb3V0IG9mIHRoZQ0KJ01NIHBvcnQuICBUaGVyZSBpcyBubyBuZWVkIGZvciBhbnkga2luZCBvZiBwdWxsLXVwIG9uIHRoZSBwcmludGVyLXBvcnQNCidhcyB0aGlzIGlzIHRha2VuIGNhcmUgb2YgYnkgdGhlIHByaW50ZXIgZWxlY3Ryb25pY3MuDQoNCidJdCBpcyBpbXBvcnRhbnQgdGhhdCB5b3Ugc2V0IHRoZSBwb3J0IHRvIG9wZW4tY29sbGVjdG9yIG91dHB1dHMoeHgsOSksIA0KJ2FzIHRoaXMgYWxvbmcgd2l0aCB0aGUgMTAwUiByZXNpc3RvcnMsIGxpbWl0cyB0aGUgY3VycmVudCBvbiBhbnkgb25lDQoncHJpbnRlciBsaW5lLg0KDQonVXNlYWdlIGlzIHNpbXBsZSYjNTg7IENhbGwgUFJJTlRFUihQJCksIHdoZXJlIFAkIGlzIHRoZSB0ZXh0IHlvdSB3YW50IHRoZQ0KJ3ByaW50ZXIgdG8gcHJpbnQgb3V0LiAgR2VuZXJhbGx5IHNwZWFraW5nLCB0aGUgcm91dGluZSByZXR1cm5zIHdpdGhpbg0KJzI1MG1zIGZvciBhIHN0YW5kYXJkIDgwIGNoYXJhY3RlciBsaW5lLCBidXQgaWYgdGltaW5nIGlzIGltcG9ydGFudCwgdGhlbg0KJ3lvdSB3aWxsIG5lZWQgdG8gY2hlY2sgdGhpcyBhc3BlY3QgQkVGT1JFIHVzaW5nIHRoaXMgcm91dGluZS4NCg0KJ0dyb2dzdGVyIEAgVGhlIEJhY2tzaGVkIEZvcnVtcyAtIDA4LzA2LzIwMTQsIDgmIzU4OzUyUE0NCg0KDQoNCicmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7IFBVVCBUSElTIEFUIFRIRSBTVEFSVCBPRiBZT1VSIENPREUsIFRPIElOSVRJQUxJWkUgVEhFIFBSSU5URVIgJiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOw0KDQpzZXRwaW4gRDIsOSYjNTg7c2V0cGluIEQzLDkmIzU4O3NldHBpbiBENCw5JiM1ODtzZXRwaW4gRDUsOSYjNTg7c2V0cGluIEQ2LDkNCnNldHBpbiBENyw5JiM1ODtzZXRwaW4gRDgsOSYjNTg7c2V0cGluIEQ5LDkmIzU4O3NldHBpbiBEMTAsOSYjNTg7cGluKEQxMCk9MQ0Kc2V0cGluIEQxMSw5JiM1ODtzZXRwaW4gRDEyLDImIzU4O3NldHBpbiBEMTMsMiYjNTg7cG9ydChEMiw4KT0xDQpwaW4oRDExKT0xJiM1ODtwYXVzZSAxJiM1ODtwdWxzZSBEMTEsMSYjNTg7cGF1c2UgMQ0KDQoNCicgJiMxMjM7TUFJTiBDT0RFIEhFUkUmIzEyNTsNCg0KDQonJiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOw0KJ1BSSU5URVIgU1VCUk9VVElORSBDT0RFDQonJiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOw0KDQpzdWIgUFJJTlRFUiAoUCQpDQogIFBPJD1QJCArIGNociQoMTApDQogIGZvciBYPTEgdG8gbGVuKFBPJCkNCiAgICBkbyYjNTg7bG9vcCB1bnRpbCBwaW4oRDEyKT0wDQogICAgQyQ9bWlkJChQTyQsWCwxKQ0KICAgIHBvcnQoRDIsOCk9YXNjKEMkKQ0KICAgIHBhdXNlIDEmIzU4O3B1bHNlIEQxMCwxDQogIG5leHQNCmVuZCBzdWIgIA0KPC9wcmU+PGJyIC8+PGI+cHJpbnRlcjIuYmFzPC9iPjxiciAvPjxwcmU+DQonJiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyANCidET1QtTUFUUklYIFBSSU5URVIgUk9VVElORSANCg0KJ0NvbmNlcHQgYnkgQ2lyY3VpdEdpem1vcyB3aXRoIEJVU1kgbGluZSBzdWdnZXN0aW9ucyBieSByb2JlcnQucm96ZWUgDQonb2YgVEJTIGZvcnVtcyAtIFRoYW5rcyBndXlzISANCg0KJ0ZVTEwgSU5GT1JNQVRJT04gVEhSRUFEIENBTiBCRSBGT1VORCBIRVJFJiM1ODsgDQogJ2h0dHAmIzU4Oy8vd3d3LnRoZWJhY2tzaGVkLmNvbS9mb3J1bS9mb3J1bV9wb3N0cy5hc3A/VElEPTY1MjAmYW1wO1AgTj0wJmFtcDtUUE49MSANCg0KJ1ZlcnNpb24gMS4wIC0gSW5pdGlhbCBzdWJtaXNzaW9uIHRvIGxpYnJhcnkuDQonVmVyc2lvbiAxLjEgLSBEZXNjcmlwdGlvbiB0ZXh0IHJld3JpdGUgYnkgcm9iZXJ0LnJvemVlDQonICAgICAgICAgICAgICBBZGQgQlVTWSB0aW1lb3V0LiAgQWRkIFBhcGVyLU91dCB0aW1lb3V0Lg0KDQonV29ya3Mgd2l0aCBCL1cgTU0gYW5kIENvbG91ciBNTS4gIE5vdCAiT2ZmaWNpYWxseSIgc3VwcG9ydGVkIG9uIHRoZSBNaWNyb01pdGUuIA0KJyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyANCg0KJ1RoaXMgcm91dGluZSB3YXMgZGV2ZWxvcGVkIG91dCBvZiBDaXJjdWl0R2l6bW9zIG9yaWduYWwgaWRlYSB0byB1c2UgYSANCidkb3QtbWF0cml4IHByaW50ZXIgd2l0aGluIE1NQmFzaWMuICBJIGhhdmUgcmVmaW5lZCB0aGUgcm91dGluZSwgDQonaW5jb3Jwb3JhdGluZyBpZGVhcyBmcm9tIG90aGVycyBhbmQgbWFrZSB1c2Ugb2YgdGhlIEJVU1kgbGluZSBmcm9tIHRoZSANCidwcmludGVyIHRvIGVuc3VyZSB0aGF0IGRhdGEgaXMgY2xvY2tlZCB0byB0aGUgcHJpbnRlciBvbmx5IHdoZW4gaXQgaXMgDQonbm90IGJ1c3kgLSB0aGlzIGVuc3VyZXMgbm8gaW5jb3JyZWN0IHByaW50b3V0cyByZXN1bHQgZnJvbSBzZW5kaW5nIGRhdGEgDQondG8gdGhlIHByaW50ZXIgZmFzdGVyIHRoYW4gdGhlIHByaW50ZXIgY2FuIGRlYWwgd2l0aCBpdC4gDQoNCidBbnkgZGF0YSB5b3Ugd2FudCBwcmludGVkIGlzIHNlbnQgdG8gdGhlIHN1YnJvdXRpbmUgaW4gUCQuICBUaGUgc3ViIHdpbGwgDQonY2xvY2sgdGhlIGRhdGEgdG8gdGhlIHByaW50ZXIgbWFraW5nIHVzZSBvZiB0aGUgQlVTWSBsaW5lLCBhbmQgdGhlbiByZXR1cm4gDQondG8gdGhlIG1haW4gcHJvZ3JhbS4gIE5PVEUmIzU4OyB0aGUgc3Vicm91dGluZSB3aWxsIGxvb3AgZm9yZXZlciB3aGlsZSB0aGUgDQoncHJpbnRlciByZW1haW5zIEJVU1ksIHNvIGlmIHRoaXMgaXMgbGlrZWx5IHRvIGhhcHBlbiAoYW4gZXhhbXBsZSBpcyBpZiB0aGUgDQoncGFwZXIgcnVucyBvdXQpIGl0IHdvdWxkIGJlIGEgZ29vZCBpZGVhIHRvIGFkZCBzb21lIHNvcnQgb2YgdGltZW91dCB0byB0aGUgDQonZG8mIzU4O2xvb3AgcGFydCBvZiB0aGUgY29kZSBhbmQgc3VpdGFibGUgZXJyb3IgcmVwb3J0aW5nLiANCg0KJ0kgYW0gdXNpbmcgcG9ydCBEIGZvciB0aGlzLCBidXQgeW91IGNvdWxkIHVzZSBvdGhlciBwaW5zLiANCidJVCBJUyBWSVRBTCB0aGF0IHlvdSBzZWxlY3QgNXYgdG9sZXJhbnQgcGlucyBmb3IgYW55IHBpbnMgdGhhdCB0aGUgcHJpbnRlciANCid3aWxsIGJlIGRyaXZpbmcgaXRzZWxmIC0gQlVTWSBhbmQgUEFQRVIgT1VULiAgdGhlIHBhcmFsbGVsLXByaW50ZXIgc3RhbmRhcmQgaXMgDQondGhhdCBhbGwgZGF0YSBsaW5lcyBzb3VyY2VkIGZyb20gdGhlIHByaW50ZXIgYXJlIGlkbGUtaGlnaCBhdCA1diwgYW5kIGlmIHlvdSANCidjb25uZWN0IHRoZXNlIGRpcmVjdGx5IHRvIGFueSBNTSAzdjMgcGlucywgeW91IHdpbGwga2lsbCB0aGUgTU0gY2hpcC4gIEZvciANCidvdXRwdXQgcGlucyAoZGF0YSAwLi43LCBTVFJPQkUsIFJFU0VUKSB0aGluZ3MgYmVjb21lcyBtb3JlIGNvbXBsaWNhdGVkLiAgaWYgNXYgDQondG9sZXJhbnQgcGlucyBhcmUgdXNlZCB3aXRoIG9wZW4tY29sbGVjdG9yIG91dHB1dHMgdGhlcmUgaXMgbm8gaXNzdWUsIGJ1dCB0aGlzIA0KJ2lzIG5vdCBndWFyYW50ZWVkIHRvIGRyaXZlIGV2ZXJ5IHByaW50ZXIgKGhvd2V2ZXIsIGl0IHNob3VsZCBiZSBvayB3aXRoIG1vc3QpLiANCidpZiBwaW5zIGFyZSBub3QgZHJpdmVuIGFzIG9wZW4gY29sbGVjdG9yLCB0aGVyZSBpcyB0aGUgcG9zc2liaWxpdHkgb2YgY3VycmVudCANCidmbG93aW5nIGJhY2sgdGhyb3VnaCB0aGUgTU0ncyBpbnRlcm5hbCBwcm90ZWN0aW9uIGRpb2RlcyBsaWZ0aW5nIFZjYyBhYm92ZSAgDQonM3YzLiAgaW4gdGhpcyBjYXNlIGNvbnNpZGVyIHVzaW5nIGEgbGV2ZWwtc2hpZnRpbmcgYnVmZmVyLiANCg0KJ2l0IGlzIHJlY29tbWVuZGVkIHRoYXQgMTAwUiByZXNpc3RvcnMgYmUgcGxhY2VkIGluIHNlcmllcyB3aXRoIGFsbCBsaW5lIChib3RoIA0KJ2lucHV0IGFuZCBvdXRwdXQpIGFzIGFuIGV4dHJhIGxheWVyIG9mIHByb3RlY3Rpb24uIA0KJ1lPVSBIQVZFIEJFRU4gV0FSTkVEISANCg0KJ0luIG15IGV4YW1wbGUsIEkgYW0gdXNpbmcgcG9ydCBEMi1EMTMgZm9yIHRoZSBwcmludGVyIGludGVyZmFjZS4gDQonRDItRDkgaXMgdGhlIDgtYml0IHBhcmFsbGVsIGRhdGEgYnVzIChkYXRhIDAgdGhyb3VnaCBkYXRhIDcpLCBEMTAgaXMgDQondGhlIFNUUk9CRSBsaW5lLCBhbmQgRDExIGlzIHRoZSBSRVNFVCBsaW5lIHVzZWQgdG8gcmVzZXQgdGhlIHByaW50ZXIgd2hlbiANCid5b3UgZmlyc3QgcnVuIHRoZSBjb2RlLiAgRDEyIGlzIHRoZSBCVVNZIGxpbmUsIGFuZCBEMTMgaXMgdGhlIFBBUEVSIE9VVCBsaW5lIA0KJ3doaWNoIGlzIG5vdCBjdXJyZW50bHkgdXNlZCBpbiB0aGlzIHZlcnNpb24gb2YgdGhlIGNvZGUgKGJ1dCBtYXkgYmUgbGF0ZXIpLiANCg0KJ1doYXQgaGFwcGVucyB3aXRoIHRoZSB1c2Ugb2YgdGhlIEJVU1kgbGluZSwgaXMgdGhhdCB0aGUgY29kZSB3YWl0cyBmb3IgdGhlIA0KJ3ByaW50ZXIgdG8gc2lnbmFsIHRoYXQgaXQgaXMgTk9UIGJ1c3kgKGluIG90aGVyIHdvcmRzLCB0aGF0IGl0IGlzIHJlYWR5IGZvciANCidhbm90aGVyIGJ5dGUgb2YgZGF0YSkgQkVGT1JFIGVhY2ggYnl0ZSBpcyBzZW50LiAgV2hlbiBleGFjdGx5IGNoYXJhY3RlcnMgYXJlIA0KJ3ByaW50ZWQgZGVwZW5kcyB1cG9uIHRoZSBwcmludGVyIGFuZCBpdHMgYnVmZmVyIHNpemUuICBTb21lIHByaW50ZXJzIG1heSBwcmludCANCidjaGFyYWN0ZXJzIGFzIHRoZXkgYXJyaXZlLCBzb21lIG1heSBidWZmZXIgYSBvbmUgb3IgdHdvLCBzb21lIG1heSBidWZmZXIgYSANCid3aG9sZSBsaW5lIG9yIG1vcmUgYW5kIG9ubHkgcHJpbnQgd2hlbiBhIENSIG9yIExGIGlzIHJlY2VpdmVkLiAgIA0KDQonQXMgZm9yIHRoZSBjaXJjdWl0LCB5b3Ugc2hvdWxkIHB1dCBhIDEwMC1vaG0gcmVzaXN0b3IgaW4gc2VyaWVzIHdpdGggQUxMIA0KJ2RhdGEgYW5kIGNvbnRyb2wgcGlucyBpbiB1c2UsIHRvIGxpbWl0IGFueSBjdXJyZW50IGludG8gb3Igb3V0IG9mIHRoZSANCidNTSBwb3J0LiAgVGhlcmUgaXMgbm8gbmVlZCBmb3IgYW55IGtpbmQgb2YgcHVsbC11cCBvbiB0aGUgcHJpbnRlci1wb3J0IA0KJ2FzIHRoaXMgaXMgdGFrZW4gY2FyZSBvZiBieSB0aGUgcHJpbnRlciBlbGVjdHJvbmljcy4gV2hpbGUgdGhlIElFRUUxMjg0IA0KJ3NwZWNpZmljYXRpb25zIHNheSBkcml2ZW4gbGluZXMgbmVlZCB0byBiZSBhYmxlIHRvIHNpbmsgQU5EIHNvdXJjZSB1cCB0byANCicxNG1BLCB0aGUgaW5wdXQgY3VycmVudCBpcyB1c3VhbGx5IGp1c3QgYSBUVEwgbG9hZCB3aXRoIHNvbWV0aGluZyBsaWtlIA0KJzEwayBwdWxsdXBzIHdpdGhpbiB0aGUgcHJpbnRlci4gDQoNCicvLy8vLy8vLy8vLy8vLy8vIA0KJ0l0IGlzIGltcG9ydGFudCB0aGF0IHlvdSBzZXQgdGhlIHBvcnQgdG8gb3Blbi1jb2xsZWN0b3Igb3V0cHV0cyh4eCw5KSwgIA0KJ2FzIHRoaXMgYWxvbmcgd2l0aCB0aGUgMTAwUiByZXNpc3RvcnMsIGxpbWl0cyB0aGUgY3VycmVudCBvbiBhbnkgb25lIA0KJ3ByaW50ZXIgbGluZS4gDQonLy8vLy8vLy8vLy8vLy8vLyAobm90IGEgc29sdXRpb24gd2l0aCBhIG1pY3JvbWl0ZSkgDQoNCidVc2FnZSBpcyBzaW1wbGUmIzU4OyBDYWxsIFBSSU5URVIoUCQsVCxDUixMRiksIHdoZXJlIFAkIGlzIHRoZSB0ZXh0IHlvdSB3YW50IHRoZSANCidwcmludGVyIHRvIHByaW50IG91dCwgYW5kIFQgaXMgdGhlIHRpbWVvdXQgaW4gbXMgd2hlbiB0aGUgc3ViIHdpbGwgZW5kIGlmIHRoZQ0KJ3ByaW50ZXIgaGFzIGJlZW4gZGVsYXllZCB0b28gbG9uZy4gIENSIGlzIDEgaWYgeW91IHdhbnQgYSBDUiBhZGRlZCB0byBQJCwgTEYgaXMNCicxIGlmIHlvdSB3YW50IGEgTEYgYWRkZWQgdG8gUCQuICBHZW5lcmFsbHkgc3BlYWtpbmcsIHRoZSByb3V0aW5lIHJldHVybnMgd2l0aGluIA0KJzI1MG1zIGZvciBhIHN0YW5kYXJkIDgwIGNoYXJhY3RlciBsaW5lLCBidXQgaWYgdGltaW5nIGlzIGltcG9ydGFudCwgdGhlbiANCid5b3Ugd2lsbCBuZWVkIHRvIGNoZWNrIHRoaXMgYXNwZWN0IEJFRk9SRSB1c2luZyB0aGlzIHJvdXRpbmUuDQonRE8gTk9UIGlnbm9yZSBhbnkgYXJndW1lbnRzIC0geW91IG11c3Qgc3VwcGx5IHRoZSByZWxldmFudCBkYXRhLg0KDQoNCidHcm9nc3RlciBAIFRoZSBCYWNrc2hlZCBGb3J1bXMuDQonMDgvMDYvMjAxNCwgOCYjNTg7NTJQTShWIDEuMCkNCicxOC8wNi8yMDE0LCA3JiM1ODswMVBNKFYgMS4xKQ0KDQoNCg0KJyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsgUFVUIFRISVMgQVQgVEhFIFNUQVJUIE9GIFlPVVIgQ09ERSwgVE8gSU5JVElBTElaRSBUSEUgUFJJTlRFUiAmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7IA0KDQpzZXRwaW4gRDIsOSYjNTg7IHNldHBpbiBEMyw5JiM1ODsgc2V0cGluIEQ0LDkmIzU4OyBzZXRwaW4gRDUsOSANCnNldHBpbiBENiw5JiM1ODsgc2V0cGluIEQ3LDkmIzU4OyBzZXRwaW4gRDgsOSYjNTg7IHNldHBpbiBEOSw5IA0KcG9ydChEMiw4KT0xIHBpbihEMTApPTEmIzU4OyBzZXRwaW4gRDEwLDkgDQoNCnBpbihEMTEpPTEmIzU4OyBzZXRwaW4gRDExLDkmIzU4OyBwYXVzZSAxJiM1ODtwdWxzZSBEMTEsMSYjNTg7cGF1c2UgMSAgICAgICcgcmVzZXQgcHJpbnRlciANCg0Kc2V0cGluIEQxMiwyJiM1ODsgc2V0cGluIEQxMywyICAgICAgJyB0aGVzZSBhcmUgaW5wdXRzIGFuZCBtdXN0IGJlIDV2IHRvbGVyYW50IA0KDQoNCicgJiMxMjM7TUFJTiBDT0RFIEhFUkUmIzEyNTsgDQoNCg0KJyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsgDQonUFJJTlRFUiBTVUJST1VUSU5FIENPREUgDQonJiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyANCg0Kc3ViIFBSSU5URVIgKFAkLFQsQ1IsTEYpIA0KICBZPTAmIzU4O1RPRT0wJiM1ODtQT0U9MCYjNTg7VD1UJiM0MjsyJiM1ODtQTyQ9UCQNCiAgSWYgQ1I9MSBhbmQgTEY9MCB0aGVuIFBPJD1QJCArIGNociQoMTMpDQogIElmIENSPTAgYW5kIExGPTEgdGhlbiBQTyQ9UCQgKyBjaHIkKDEwKQ0KICBJZiBDUj0xIGFuZCBMRj0xIHRoZW4gUE8kPVAkICsgY2hyJCgxMykgKyBjaHIkKDEwKQ0KICBmb3IgWD0xIHRvIGxlbihQTyQpIA0KICAgIGRvDQogICAgICBwYXVzZSAwLjUNCiAgICAgIFk9WSsxDQogICAgbG9vcCB1bnRpbCBwaW4oRDEyKT0wIG9yIFk9VCBvciBwaW4oRDEzKT0xDQogICAgSWYgWT1UIHRoZW4gVE9FPTEmIzU4O2V4aXQgc3ViICdDaGVjayBUT0Ugb25jZSB0aGUgc3ViIGVuZHMsIHRvIHNlZSBpZiB0aGVyZSB3YXMgYSBUaW1lT3V0IEVycm9yLg0KICAgIElmIHBpbihEMTMpPTEgdGhlbiBQT0U9MSYjNTg7ZXhpdCBzdWIgJ0NoZWNrIFBPRSBvbmNlIHRoZSBzdWIgZW5kcywgdG8gc2VlIGlmIHRoZXJlIHdhcyBhIFBhcGVyT3V0IEVycm9yLg0KICAgIEMkPW1pZCQoUE8kLFgsMSkgDQogICAgcG9ydChEMiw4KT1hc2MoQyQpIA0KICAgIHBhdXNlIDEmIzU4O3B1bHNlIEQxMCwxJiM1ODtZPTANCiAgbmV4dCANCmVuZCBzdWIgICANCg0KPC9wcmU+ZGRfSS0ipjgcrD6a3rK1QImxQfS4Jg==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Driving a Parallel Printer</h1><small>Modified on 2016/12/23 23:27 by Administrator &mdash; Categorized as: Control, Hardware, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><b>Printer.bas</b><br /><pre>
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+'DOT-MATRIX PRINTER ROUTINE
+
+'Concept by CircuitGizmos with BUSY line suggestions by robert.rozee
+'of TBS forums - Thanks guys!
+
+'FULL INFORMATION THREAD CAN BE FOUND HERE&#58;
+'http&#58;//www.thebackshed.com/forum/forum_posts.asp?TID=6520&amp;PN=0&amp;TPN=1
+
+'Version 1.0 - Initial submission to library.
+
+'Works with B/W MM, Colour MM, and MicroMite.
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+
+'This routine was developed out of CircuitGizmos orignal idea to use a
+'dot-matrix printer within MMBasic.  I have refined the routine, and
+'incorporated ideas from others and make use of the BUSY line from the
+'printer to ensure that data is clocked to the printer correctly, so that
+'no incorrect printouts result of sending data to the printer faster than
+'the printer can deal with it.
+
+'Any data you want printed, is sent to the subroutine in P$.  The sub will
+'clock the data to the printer making use of the BUSY line, and then return
+'to the main program.
+
+'I am using port D for this, but you could use other pins.
+'IT IS VITAL that you select 5v tolerant pins for your printer control
+'port, as the parallel-printer standard is that all data lines are idle-high
+'at 5v, and if you connect these to any MM 3v3 pins, you will kill the MM chip.
+
+'YOU HAVE BEEN WARNED!
+
+'In my example, I am using port D2-D13 for the printer interface.
+'D2-D9 is the 8-bit parallel data bus(data 0 through data 7), D10 is
+'the STROBE line, and D11 is the RESET line used to reset the printer when
+'you first run the code.  D12 is the BUSY line, and D13 is the PAPER OUT line
+'which is not currently used in this version of the code(but will be later).
+
+'What happens with the use of the BUSY line, is that the code sends a byte to
+'the printer, then waits for the printer itself to signal that it is NOT busy
+'(in other words, that it is ready for another byte of data), then it clocks
+'another byte to the printer.  Only once the full message has been sent, and
+'then you send the printer a CR(decimal 13), does the printer actually print
+'out what has been clocked into its data buffer up to that point.
+
+'Different printers have different data buffer sizes, so you will need to
+'check this with your specific printer if your messages are expected to be
+'long.  Most printers can accept up to 80 bytes(characters) without any
+'kind of buffer overrun.  
+
+'As for the circuit, you should put a 100-ohm resistor in series with ALL
+'data and control pins in use, to limit the current into or out of the
+'MM port.  There is no need for any kind of pull-up on the printer-port
+'as this is taken care of by the printer electronics.
+
+'It is important that you set the port to open-collector outputs(xx,9), 
+'as this along with the 100R resistors, limits the current on any one
+'printer line.
+
+'Useage is simple&#58; Call PRINTER(P$), where P$ is the text you want the
+'printer to print out.  Generally speaking, the routine returns within
+'250ms for a standard 80 character line, but if timing is important, then
+'you will need to check this aspect BEFORE using this routine.
+
+'Grogster @ The Backshed Forums - 08/06/2014, 8&#58;52PM
+
+
+
+'&#61;&#61;&#61;&#61;&#61; PUT THIS AT THE START OF YOUR CODE, TO INITIALIZE THE PRINTER &#61;&#61;&#61;&#61;&#61;
+
+setpin D2,9&#58;setpin D3,9&#58;setpin D4,9&#58;setpin D5,9&#58;setpin D6,9
+setpin D7,9&#58;setpin D8,9&#58;setpin D9,9&#58;setpin D10,9&#58;pin(D10)=1
+setpin D11,9&#58;setpin D12,2&#58;setpin D13,2&#58;port(D2,8)=1
+pin(D11)=1&#58;pause 1&#58;pulse D11,1&#58;pause 1
+
+
+' &#123;MAIN CODE HERE&#125;
+
+
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+'PRINTER SUBROUTINE CODE
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+
+sub PRINTER (P$)
+  PO$=P$ + chr$(10)
+  for X=1 to len(PO$)
+    do&#58;loop until pin(D12)=0
+    C$=mid$(PO$,X,1)
+    port(D2,8)=asc(C$)
+    pause 1&#58;pulse D10,1
+  next
+end sub  
+</pre><br /><b>printer2.bas</b><br /><pre>
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+'DOT-MATRIX PRINTER ROUTINE 
+
+'Concept by CircuitGizmos with BUSY line suggestions by robert.rozee 
+'of TBS forums - Thanks guys! 
+
+'FULL INFORMATION THREAD CAN BE FOUND HERE&#58; 
+ 'http&#58;//www.thebackshed.com/forum/forum_posts.asp?TID=6520&amp;P N=0&amp;TPN=1 
+
+'Version 1.0 - Initial submission to library.
+'Version 1.1 - Description text rewrite by robert.rozee
+'              Add BUSY timeout.  Add Paper-Out timeout.
+
+'Works with B/W MM and Colour MM.  Not "Officially" supported on the MicroMite. 
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+
+'This routine was developed out of CircuitGizmos orignal idea to use a 
+'dot-matrix printer within MMBasic.  I have refined the routine, 
+'incorporating ideas from others and make use of the BUSY line from the 
+'printer to ensure that data is clocked to the printer only when it is 
+'not busy - this ensures no incorrect printouts result from sending data 
+'to the printer faster than the printer can deal with it. 
+
+'Any data you want printed is sent to the subroutine in P$.  The sub will 
+'clock the data to the printer making use of the BUSY line, and then return 
+'to the main program.  NOTE&#58; the subroutine will loop forever while the 
+'printer remains BUSY, so if this is likely to happen (an example is if the 
+'paper runs out) it would be a good idea to add some sort of timeout to the 
+'do&#58;loop part of the code and suitable error reporting. 
+
+'I am using port D for this, but you could use other pins. 
+'IT IS VITAL that you select 5v tolerant pins for any pins that the printer 
+'will be driving itself - BUSY and PAPER OUT.  the parallel-printer standard is 
+'that all data lines sourced from the printer are idle-high at 5v, and if you 
+'connect these directly to any MM 3v3 pins, you will kill the MM chip.  For 
+'output pins (data 0..7, STROBE, RESET) things becomes more complicated.  if 5v 
+'tolerant pins are used with open-collector outputs there is no issue, but this 
+'is not guaranteed to drive every printer (however, it should be ok with most). 
+'if pins are not driven as open collector, there is the possibility of current 
+'flowing back through the MM's internal protection diodes lifting Vcc above  
+'3v3.  in this case consider using a level-shifting buffer. 
+
+'it is recommended that 100R resistors be placed in series with all line (both 
+'input and output) as an extra layer of protection. 
+'YOU HAVE BEEN WARNED! 
+
+'In my example, I am using port D2-D13 for the printer interface. 
+'D2-D9 is the 8-bit parallel data bus (data 0 through data 7), D10 is 
+'the STROBE line, and D11 is the RESET line used to reset the printer when 
+'you first run the code.  D12 is the BUSY line, and D13 is the PAPER OUT line 
+'which is not currently used in this version of the code (but may be later). 
+
+'What happens with the use of the BUSY line, is that the code waits for the 
+'printer to signal that it is NOT busy (in other words, that it is ready for 
+'another byte of data) BEFORE each byte is sent.  When exactly characters are 
+'printed depends upon the printer and its buffer size.  Some printers may print 
+'characters as they arrive, some may buffer a one or two, some may buffer a 
+'whole line or more and only print when a CR or LF is received.   
+
+'As for the circuit, you should put a 100-ohm resistor in series with ALL 
+'data and control pins in use, to limit any current into or out of the 
+'MM port.  There is no need for any kind of pull-up on the printer-port 
+'as this is taken care of by the printer electronics. While the IEEE1284 
+'specifications say driven lines need to be able to sink AND source up to 
+'14mA, the input current is usually just a TTL load with something like 
+'10k pullups within the printer. 
+
+'//////////////// 
+'It is important that you set the port to open-collector outputs(xx,9),  
+'as this along with the 100R resistors, limits the current on any one 
+'printer line. 
+'//////////////// (not a solution with a micromite) 
+
+'Usage is simple&#58; Call PRINTER(P$,T,CR,LF), where P$ is the text you want the 
+'printer to print out, and T is the timeout in ms when the sub will end if the
+'printer has been delayed too long.  CR is 1 if you want a CR added to P$, LF is
+'1 if you want a LF added to P$.  Generally speaking, the routine returns within 
+'250ms for a standard 80 character line, but if timing is important, then 
+'you will need to check this aspect BEFORE using this routine.
+'DO NOT ignore any arguments - you must supply the relevant data.
+
+
+'Grogster @ The Backshed Forums.
+'08/06/2014, 8&#58;52PM(V 1.0)
+'18/06/2014, 7&#58;01PM(V 1.1)
+
+
+
+'&#61;&#61;&#61;&#61;&#61; PUT THIS AT THE START OF YOUR CODE, TO INITIALIZE THE PRINTER &#61;&#61;&#61;&#61;&#61; 
+
+setpin D2,9&#58; setpin D3,9&#58; setpin D4,9&#58; setpin D5,9 
+setpin D6,9&#58; setpin D7,9&#58; setpin D8,9&#58; setpin D9,9 
+port(D2,8)=1 pin(D10)=1&#58; setpin D10,9 
+
+pin(D11)=1&#58; setpin D11,9&#58; pause 1&#58;pulse D11,1&#58;pause 1      ' reset printer 
+
+setpin D12,2&#58; setpin D13,2      ' these are inputs and must be 5v tolerant 
+
+
+' &#123;MAIN CODE HERE&#125; 
+
+
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+'PRINTER SUBROUTINE CODE 
+'&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61; 
+
+sub PRINTER (P$,T,CR,LF) 
+  Y=0&#58;TOE=0&#58;POE=0&#58;T=T&#42;2&#58;PO$=P$
+  If CR=1 and LF=0 then PO$=P$ + chr$(13)
+  If CR=0 and LF=1 then PO$=P$ + chr$(10)
+  If CR=1 and LF=1 then PO$=P$ + chr$(13) + chr$(10)
+  for X=1 to len(PO$) 
+    do
+      pause 0.5
+      Y=Y+1
+    loop until pin(D12)=0 or Y=T or pin(D13)=1
+    If Y=T then TOE=1&#58;exit sub 'Check TOE once the sub ends, to see if there was a TimeOut Error.
+    If pin(D13)=1 then POE=1&#58;exit sub 'Check POE once the sub ends, to see if there was a PaperOut Error.
+    C$=mid$(PO$,X,1) 
+    port(D2,8)=asc(C$) 
+    pause 1&#58;pulse D10,1&#58;Y=0
+  next 
+end sub   
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driving-a-Parallel-Printer-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:51 GMT -->
+</html>

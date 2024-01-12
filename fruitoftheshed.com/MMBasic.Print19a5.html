@@ -1,0 +1,46 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DatePart-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	DatePart() Function (VB work-a-like) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.DatePart-Function-VB-work-a-like" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF4xM8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RGF0ZVBhcnQoKSBGdW5jdGlvbiAoVkIgd29yay1hLWxpa2UpPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxOC8wNS8wMyAxNTo1MCBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogRGF0ZXMsIFRpbWUgYW5kIENsb2NrcywgU3RyaW5nczwvc21hbGw+PGJyIC8+PGJyIC8+VGhlIGZvbGxvd2luZyBpcyBhIERhdGVQYXJ0IGZ1bmN0aW9uIGZvciByZXR1cm5pbmcgdGhlIG51bWVyaWNhbCB2YWx1ZSBvZiBwYXJ0IG9mIHRoZSBzdXBwbGllZCBkYXRldGltZS48YnIgLz48YnIgLz5JdCBpcyBpbnNwaXJlZCBieSB0aGUgVkIgZnVuY3Rpb24gb2YgdGhlIHNhbWUgbmFtZSBidXQgaXMgdHdlYWtlZCBzbGlnaHRseSBmcm9tIHRoZSBvcmlnaW5hbCBpbiB0aGF0IG9ubHkgYSBzdWJzZXQgb2YgaW50ZXJ2YWxzIGFyZSBzdXBwb3J0ZWQgYXMgZm9sbG93czs8YnIgLz48YnIgLz55eXl5IC0gWWVhcjxiciAvPm1tIC0gTW9udGggPGJyIC8+ZGQgLSBEYXk8YnIgLz5oIC0gSG91cjxiciAvPm0gLSBNaW51dGU8YnIgLz5zIC0gU2Vjb25kPGJyIC8+PGJyIC8+SXQgaXMgZWFzeSBlbm91Z2ggdG8gZGVyaXZlIHRoZXNlIHZhbHVlcyB5b3Vyc2VsZiBieSBzbGljaW5nIHRoZSBzdHJpbmcgYW5kIHJldHVybmluZyB0aGUgVmFsKCkgYnV0IERhdGVQYXJ0IGRyYXdzIGFsbCB0aGUgdmFyaW91cyBzZWN0aW9ucyBpbnRvIG9uZSB1c2VmdWwgYW5kIGNvbXBhY3QgZnVuY3Rpb24gdGh1cyBlbGltaW5hdGluZyBlcnJvcnMgZnJvbSBleHRyYWN0aW5nIHRoZSB3cm9uZyBzdWIgc3RyaW5nIGV0YyBvciBieSBoYXZpbmcgdG8gcmVtZW1iZXIgd2hlcmUgdGhlIHJlbGV2YW50IHNlY3Rpb24gYXBwZWFycyBpbiB0aGUgZGF0ZXRpbWUgc3RyaW5nLjxiciAvPjxiciAvPlRoZXJlIGlzIG5vIGVycm9yIGNoZWNraW5nIHNvIGlmIHlvdSBzdXBwbHkgbm9uc2Vuc2UgeW91IHdpbGwgcHJvYmFibHkgY3Jhc2ggaXQgb3IgZ2V0IHJ1YmJpc2ggYmFjay4gSXQgb25seSB3b3JrcyByZWxpYWJseSB3aXRoIGRhdGV0aW1lcyBmb3JtYXR0ZWQgYXMgIGJlbG93LjxiciAvPjxiciAvPjxiPk5vdGVzOjwvYj48YnIgLz5EYXRlVGltZXMgbXVzdCBjb25mb3JtIHRvIHRoZSBmb3JtYXQgREQtTU0tWVlZWSBISDpNTTpTUyAgZS5nLiAyNS0xMi0yMDA1IDE5OjI1OjQ1PGJyIC8+SW50ZXJuYXRpb25hbCBzb3J0IGZvcm1hdCBmb3IgZGF0ZXMgKFlZWVktTU0tREQpIGlzIG5vdCBzdXBwb3J0ZWQgKHlldCk8YnIgLz48YnIgLz48Yj5TeW50YXg6PC9iPjxiciAvPj1EYXRlUGFydChJbnRlcnZhbCxEYXRlU3RyKTxiciAvPjxiciAvPjxiPkV4YW1wbGVzOjwvYj48YnIgLz5QcmludCBEYXRlUGFydCgibW0iLCIwMS0wMS0xOTcwIDAwOjAwOjAwIikgJyByZXR1cm5zIDE8YnIgLz5Ib3VyPURhdGVQYXJ0KCJoIixOb3coKSkgJyBnZXQgdGhlIGhvdXIgb2YgdGhlIGN1cnJlbnQgdGltZTxiciAvPkxhc3RZZWFyPURhdGVQYXJ0KCJ5eXl5IixOb3coKSktMSAnIHByZXZpb3VzIHllYXIgZnJvbSB0b2RheTxiciAvPjxiciAvPjxiPkRlcGVuZGVuY2llczo8L2I+PGJyIC8+Tm9uZTxiciAvPjxiciAvPjxwcmU+DQoJRnVuY3Rpb24gRGF0ZVBhcnQoSW50ZXJ2YWwgQXMgU3RyaW5nLGR0IEFzIFN0cmluZykgQXMgSW50ZWdlcg0KCQlTZWxlY3QgQ2FzZSBMQ2FzZSQoSW50ZXJ2YWwpDQoJCQlDYXNlICJzIicgU2Vjb25kcw0KCQkJCURhdGVQYXJ0PVZhbChSaWdodCQoZHQsMikpDQoJCQlDYXNlICJtIicgTWludXRlcw0KCQkJCURhdGVQYXJ0PVZhbChNaWQkKGR0LDE1LDIpKQ0KCQkJQ2FzZSAiaCInIEhvdXJzDQoJCQkJRGF0ZVBhcnQ9VmFsKE1pZCQoZHQsMTIsMikpDQoJCQlDYXNlICJkZCIgJ0RheXMNCgkJCQlEYXRlUGFydD1WYWwoTGVmdCQoZHQsMikpCQkNCgkJCUNhc2UgIm1tIicgY2FsZW5kYXIgTW9udGgNCgkJCQlEYXRlUGFydD1WYWwoTWlkJChkdCw0LDIpKQ0KCQkJQ2FzZSAieXl5eSInIFllYXINCgkJCQlEYXRlUGFydD1WYWwoTWlkJChkdCw3LDQpKQ0KCQkJQ2FzZSBFbHNlDQoJCQkJRGF0ZVBhcnQ9MA0KCQlFbmQgU2VsZWN0DQoJRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48Yj5TZWUgQWxzbzwvYj46PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLkRhdGVBZGQtRnVuY3Rpb24tVkItd29yay1hLWxpa2UuYXNoeCIgdGl0bGU9IkRhdGVBZGQoKSBGdW5jdGlvbiAoVkIgd29yay1hLWxpa2UpIj5EYXRlQWRkKCk8L2E+PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLkRhdGVEaWZmLUZ1bmN0aW9uLVZCLXdvcmstYS1saWtlLmFzaHgiIHRpdGxlPSJEYXRlRGlmZigpIEZ1bmN0aW9uIChWQiB3b3JrLWEtbGlrZSkiPkRhdGVEaWZmKCk8L2E+PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLk5vdy1GdW5jdGlvbi1WQi13b3JrLWEtbGlrZS5hc2h4IiB0aXRsZT0iTm93KCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKSAiPk5vdygpPC9hPjxiciAvPjxiciAvPjxiciAvPjxiciAvPmRkqZayS9Tv8UuUdbRp7w1klOCIFdY=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">DatePart() Function (VB work-a-like)</h1><small>Modified on 2018/05/03 15:50 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks, Strings</small><br /><br />The following is a DatePart function for returning the numerical value of part of the supplied datetime.<br /><br />It is inspired by the VB function of the same name but is tweaked slightly from the original in that only a subset of intervals are supported as follows;<br /><br />yyyy - Year<br />mm - Month <br />dd - Day<br />h - Hour<br />m - Minute<br />s - Second<br /><br />It is easy enough to derive these values yourself by slicing the string and returning the Val() but DatePart draws all the various sections into one useful and compact function thus eliminating errors from extracting the wrong sub string etc or by having to remember where the relevant section appears in the datetime string.<br /><br />There is no error checking so if you supply nonsense you will probably crash it or get rubbish back. It only works reliably with datetimes formatted as  below.<br /><br /><b>Notes:</b><br />DateTimes must conform to the format DD-MM-YYYY HH:MM:SS  e.g. 25-12-2005 19:25:45<br />International sort format for dates (YYYY-MM-DD) is not supported (yet)<br /><br /><b>Syntax:</b><br />=DatePart(Interval,DateStr)<br /><br /><b>Examples:</b><br />Print DatePart("mm","01-01-1970 00:00:00") ' returns 1<br />Hour=DatePart("h",Now()) ' get the hour of the current time<br />LastYear=DatePart("yyyy",Now())-1 ' previous year from today<br /><br /><b>Dependencies:</b><br />None<br /><br /><pre>
+	Function DatePart(Interval As String,dt As String) As Integer
+		Select Case LCase$(Interval)
+			Case "s"' Seconds
+				DatePart=Val(Right$(dt,2))
+			Case "m"' Minutes
+				DatePart=Val(Mid$(dt,15,2))
+			Case "h"' Hours
+				DatePart=Val(Mid$(dt,12,2))
+			Case "dd" 'Days
+				DatePart=Val(Left$(dt,2))		
+			Case "mm"' calendar Month
+				DatePart=Val(Mid$(dt,4,2))
+			Case "yyyy"' Year
+				DatePart=Val(Mid$(dt,7,4))
+			Case Else
+				DatePart=0
+		End Select
+	End Function
+</pre><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like)">DateAdd()</a><br /><a class="pagelink" href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff()</a><br /><a class="pagelink" href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now()</a><br /><br /><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DatePart-Function-VB-work-a-like by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:21 GMT -->
+</html>

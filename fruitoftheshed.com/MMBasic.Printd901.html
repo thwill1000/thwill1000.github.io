@@ -1,0 +1,60 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Base64-Mime-Encode-and-Decode-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:13:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Base64 Mime Encode and Decode Functions - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Base64-Mime-Encode-and-Decode-Functions" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFgBI8aDEgY2xhc3M9InBhZ2V0aXRsZSI+QmFzZTY0IE1pbWUgRW5jb2RlIGFuZCBEZWNvZGUgRnVuY3Rpb25zPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8xNyAxOTo0NCBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogRW5jb2RlIGFuZCBEZWNvZGUsIFN0cmluZ3M8L3NtYWxsPjxiciAvPjxiciAvPkJhc2UgNjQgZW5jb2RpbmcgaXMgYSBtZXRob2Qgb2YgcGFzc2luZyBiaW5hcnkgZGF0YSBiZXR3ZWVuIHN5c3RlbXMgdGhhdCBub3JtYWxseSBvbmx5IGFjY2VwdCAidHlwZWFibGUiIGNoYXJhY3RlcnMgZS5nLiBiaW5hcnkgYXR0YWNobWVudHMgdG8gZW1haWxzIGV0Yy4gPGJyIC8+SXQgYWxzbyBwcm92aWRlcyBhIGdvb2QgbWV0aG9kIG9mIG9iZnVzY2F0aW5nIHNlbnNpdGl2ZSBkYXRhIGFsdGhvdWdoIGl0IGlzIG5vdCBlbmNyeXB0aW9uIChpdCBpcyBlYXNpbHkgZGVjb2RlZCB3aXRob3V0IGEga2V5KS48YnIgLz48YnIgLz5CNjRFbmMkKCkgcmV0dXJucyBhIEJhc2U2NCBlbmNvZGVkIHZlcnNpb24gb2YgdGhlIG9yaWdpbmFsIGlucHV0IHN0cmluZy4gPGI+Tm90ZTwvYj46IEI2NCBlbmNvZGVkIHN0cmluZ3MgaGF2ZSBhLCByb3VnaGx5LCAzMyUgaW5jcmVhc2UgaW4gc2l6ZSBvdmVyIHRoZSBvcmlnaW5hbC48YnIgLz5CNjREZWMkKCkgZGVjb2RlcyBhIEJhc2U2NCBzdHJpbmcgYmFjayB0byBpdHMgb3JpZ2luYWwgZGF0YS48YnIgLz48YnIgLz48YnIgLz48Yj5TeW50YXg8L2I+OjxiciAvPiAgICBhJD1CNjRFbmMkKGV4cHJlc3Npb24pIDxiciAvPiAgICBiJD1CNjREZWMkKGV4cHJlc3Npb24pPGJyIC8+PGJyIC8+PGI+RXhhbXBsZTwvYj46PGJyIC8+CWEkPUI2NEVuYyQocGxhaW5fdGV4dF9wYXNzd29yZCQpIDxiciAvPglteV9qcGVnJD1CNjREZWMkKGVtYWlsX2F0dGFjaG1lbnQkKTxiciAvPgk8YnIgLz48Yj5Bc3N1bXB0aW9uczwvYj46PGJyIC8+ICAgIDxwcmU+DQogICAgT1BUSU9OIEJBU0UgMA0KICAgIENPTlNUIE1pbWUkPSJBQkNERUZHSElKS0xNTk9QUVJTVFVWV1hZWmFiY2RlZmdoaWprbG1ub3BxcnN0dXZ3eHl6MDEyMzQ1Njc4OSsvIjwvcHJlPjxiciAvPkNvZGU6PGJyIC8+PHByZT4gIEZVTkNUSU9OIEI2NEVuYyQoeCQpDQogICAgTE9DQUwgSU5URUdFUiBjMSxjMixjMyx3MSx3Mix3Myx3NCxuDQogICAgTE9DQUwgU1RSSU5HIHNvJA0KICAgIEZPUiBuPTEgVE8gTEVOKHgkKSBTVEVQIDMNCiAgICAgIGMxPUFTQyhNSUQkKHgkLG4sMSkpJiM1ODsgYzI9QVNDKE1JRCQoeCQsbisxLDEpK0NIUiQoMCkpJiM1ODsgYzM9QVNDKE1JRCQoeCQsbisyLDEpK0NIUiQoMCkpJiM1ODsgdzE9SU5UKGMxLzQpJiM1ODsgdzI9KGMxIEFORCAzKSYjNDI7MTYrSU5UKGMyLzE2KQ0KICAgICAgSUYgTEVOKHgkKSZndDs9bisxIFRIRU4gdzM9KGMyIEFORCAxNSkmIzQyOzQrSU5UKGMzLzY0KSBFTFNFIHczPS0xDQogICAgICBJRiBMRU4oeCQpJmd0Oz1uKzIgVEhFTiB3ND1jMyBBTkQgNjMgRUxTRSB3ND0tMQ0KICAgICAgc28kPXNvJCtNRSQodzEpK01FJCh3MikrTUUkKHczKStNRSQodzQpDQogICAgTkVYVA0KICAgIEI2NEVuYyQ9c28kKyImIzYxOyYjNjE7Ig0KICBFTkQgRlVOQ1RJT04NCg0KICBGVU5DVElPTiBCNjREZWMkKHgkKQ0KICAgIExPQ0FMIElOVEVHRVIgIHcxLHcyLHczLHc0LG4NCiAgICBMT0NBTCBTVFJJTkcgc28kDQogICAgRk9SIG49MSBUTyBMRU4oeCQpIFNURVAgNA0KICAgICAgdzE9TUQoTUlEJCh4JCxuLDEpKSYjNTg7IHcyPU1EKE1JRCQoeCQsbisxLDEpKSYjNTg7IHczPU1EKE1JRCQoeCQsbisyLDEpKSYjNTg7IHc0PU1EKE1JRCQoeCQsbiszLDEpKSAgICAgICAgICAgIA0KICAgICAgSUYgdzImZ3Q7PTAgVEhFTiBzbyQ9c28kK0NIUiQoKCh3MSYjNDI7NCtJTlQodzIvMTYpKSBBTkQgMjU1KSkNCiAgICAgIElGIHczJmd0Oz0wIFRIRU4gc28kPXNvJCtDSFIkKCgodzImIzQyOzE2K0lOVCh3My80KSkgQU5EIDI1NSkpDQogICAgICBJRiB3NCZndDs9MCBUSEVOIHNvJD1zbyQrQ0hSJCgoKHczJiM0Mjs2NCt3NCkgQU5EIDI1NSkpDQogICAgTkVYVA0KICAgIEI2NERlYyQ9c28kDQogIEVORCBGVU5DVElPTg0KDQonIHN1cHBvcnQgZnVuY3Rpb25zDQogIEZVTkNUSU9OIE1FJChpKQ0KICAgIElGIGkmZ3Q7PTAgVEhFTiBNRSQ9TUlEJChNaW1lJCxpKzEsIDEpIEVMU0UgTUUkPSIiDQogIEVORCBGVU5DVElPTg0KICANCiAgRlVOQ1RJT04gTUQoeCQpDQogICAgSUYgTEVOKHgkKT0wIFRIRU4gTUQ9LTEgRUxTRSBNRD1JTlNUUihNaW1lJCx4JCktMQ0KICBFTkQgRlVOQ1RJT048L3ByZT48YnIgLz5kZCXF9mvKYII39+rBx/30s+D33q/3" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Base64 Mime Encode and Decode Functions</h1><small>Modified on 2016/12/17 19:44 by CaptainBoing &mdash; Categorized as: Encode and Decode, Strings</small><br /><br />Base 64 encoding is a method of passing binary data between systems that normally only accept "typeable" characters e.g. binary attachments to emails etc. <br />It also provides a good method of obfuscating sensitive data although it is not encryption (it is easily decoded without a key).<br /><br />B64Enc$() returns a Base64 encoded version of the original input string. <b>Note</b>: B64 encoded strings have a, roughly, 33% increase in size over the original.<br />B64Dec$() decodes a Base64 string back to its original data.<br /><br /><br /><b>Syntax</b>:<br />    a$=B64Enc$(expression) <br />    b$=B64Dec$(expression)<br /><br /><b>Example</b>:<br />	a$=B64Enc$(plain_text_password$) <br />	my_jpeg$=B64Dec$(email_attachment$)<br />	<br /><b>Assumptions</b>:<br />    <pre>
+    OPTION BASE 0
+    CONST Mime$="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/"</pre><br />Code:<br /><pre>  FUNCTION B64Enc$(x$)
+    LOCAL INTEGER c1,c2,c3,w1,w2,w3,w4,n
+    LOCAL STRING so$
+    FOR n=1 TO LEN(x$) STEP 3
+      c1=ASC(MID$(x$,n,1))&#58; c2=ASC(MID$(x$,n+1,1)+CHR$(0))&#58; c3=ASC(MID$(x$,n+2,1)+CHR$(0))&#58; w1=INT(c1/4)&#58; w2=(c1 AND 3)&#42;16+INT(c2/16)
+      IF LEN(x$)&gt;=n+1 THEN w3=(c2 AND 15)&#42;4+INT(c3/64) ELSE w3=-1
+      IF LEN(x$)&gt;=n+2 THEN w4=c3 AND 63 ELSE w4=-1
+      so$=so$+ME$(w1)+ME$(w2)+ME$(w3)+ME$(w4)
+    NEXT
+    B64Enc$=so$+"&#61;&#61;"
+  END FUNCTION
+
+  FUNCTION B64Dec$(x$)
+    LOCAL INTEGER  w1,w2,w3,w4,n
+    LOCAL STRING so$
+    FOR n=1 TO LEN(x$) STEP 4
+      w1=MD(MID$(x$,n,1))&#58; w2=MD(MID$(x$,n+1,1))&#58; w3=MD(MID$(x$,n+2,1))&#58; w4=MD(MID$(x$,n+3,1))            
+      IF w2&gt;=0 THEN so$=so$+CHR$(((w1&#42;4+INT(w2/16)) AND 255))
+      IF w3&gt;=0 THEN so$=so$+CHR$(((w2&#42;16+INT(w3/4)) AND 255))
+      IF w4&gt;=0 THEN so$=so$+CHR$(((w3&#42;64+w4) AND 255))
+    NEXT
+    B64Dec$=so$
+  END FUNCTION
+
+' support functions
+  FUNCTION ME$(i)
+    IF i&gt;=0 THEN ME$=MID$(Mime$,i+1, 1) ELSE ME$=""
+  END FUNCTION
+  
+  FUNCTION MD(x$)
+    IF LEN(x$)=0 THEN MD=-1 ELSE MD=INSTR(Mime$,x$)-1
+  END FUNCTION</pre><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Base64-Mime-Encode-and-Decode-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:13:35 GMT -->
+</html>

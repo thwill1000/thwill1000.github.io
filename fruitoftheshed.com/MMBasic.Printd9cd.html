@@ -1,0 +1,521 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DigiClock-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	DCF77 DigiClock - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.DigiClock-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFgnc8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RENGNzcgRGlnaUNsb2NrPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzoyNiBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IERhdGVzLCBUaW1lIGFuZCBDbG9ja3MsIEdQUywgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBUaGUgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PHByZT4NCicgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Ow0KJw0KJyAgICAgIERpZ2lDbG9jayBmb3IgRHluYU1pdGUgLyBNYXhtaXRlDQonDQonICAgICAgT25lIE1heGltaXRlIGRyaXZlcyBvbmUgc2NyZWVuLCB0aHJlZSBzY3JlZW5zIG1ha2Ugb25lIERpZ2lDbG9jaw0KJyAgICAgIEVhY2ggc2NyZWVuIGlzIGRpc3BsYXlpbmcgdHdvIGRpZ2l0cywgZWl0aGVyIEhILCBNTSBvciBTUy4NCicNCicJICAgVGhpcyBwcm9ncmFtIHVzZXMgVjQuNEIgb2YgdGhlIE1NQmFzaWMgbGFuZ3VhZ2UsIHNvIHRoZSBEdWlub21NaXRlcyBoYXZlDQonICAgICAgdG8gYmUgZmxhc2hlZCB3aXRoIHRoZSBtb3N0IHJlY2VudCBmaXJtd2FyZS4gDQonDQonICAgICAgVGhlIGNsb2NrIGlzIGF1dG9tYXRpY2FsbHkgc2V0IHZpYSBEQ0Y3NyAoQ29ucmFkIFJlY2VpdmVyKQ0KJyAJICAgaHR0cCYjNTg7Ly93d3cuY29ucmFkLmRlL2NlL2RlL3Byb2R1Y3QvNjQxMTM4L0MtQ29udHJvbC1EQ0YtRW1wZmFlbmdlcnBsYXRpbmUNCicNCicJICAgV2lyaW5nJiM1ODsgVGhlIGZpcnN0IGRldmljZSAoU0VDT05EKSBuZWVkcyB0byByZWNlaXZlIHRoZSBEQ0Ygc2lnbmFsIG9uIFBpbiAxDQonCSAgIFRoZSBvdGhlciBkZXZpY2VzIGdldCB0aGVpciB0aW1lIHZpYSBhIFVBUlQgY29ubmVjdGlvbiBvbiBDT00xLiBTbyBjb25uZWN0IFBpbiAxNg0KJwkgICBvZiB0aGUgU0VDT05EIGJvYXJkIHRvIHBpbiAxNSBvbiB0aGUgTUlOVVRFIGFuZCBIT1VSIGJvYXJkLg0KJw0KJyAgICAgICAgICAgICAoRXh0ZXJuYWwgVmlldykNCicNCicgICAgICAgICAgICAgKyBHTkQgZm9yIERDRiBCb2FyZA0KJyAgICAgICAgICAgICB8DQonICAgICAgICAgICAgIHwNCicgICAgICAgICAgICAgfA0KJyAgICAgICAgICAgICB8ICAgMSAgRENGIEluIGZvciBTRUNPTkQgbW9kdWxlDQonICAgICAgICAgICAgICsgICArDQonICAgICAgICAgICAgIG8gbyBvIG8gbyBvIG8gbyBvIG8gbyBvIG8NCicNCicgICAgICAgICAgICAgbyBvIG8gbyBvIG8gbyBvIG8gbyBvIG8gbw0KJyAgICAgICAgICAgICAgIF4gICAgICAgICBeICsNCicgICAgICAgICAgICAgICB8ICAgICAgICAgfCAxNSBSeCBDb25uZWN0IHRvIFR4IG9mIFNFQ09ORCBNb2R1bGUNCicgICAgICAgICAgICAgICB8ICAgICAgICAgKw0KJyAgICAgICAgICAgICAgIHwgICAgICAgICAxNiBUeCBDb25uZWN0IHRvIFJ4IG9mIE1JTlVURSBhbmQgSE9VUiBNb2R1bGUNCicgICAgICAgICAgICAgICB8DQonICAgICAgICAgICAgICAgKyAzLjNWIGZvciBEQ0YgQm9hcmQNCicJDQonCSAgIFlvdSB3aWxsIG5lZWQgYSAxMCBrT2htIFB1bGx1cCBiZXR3ZWVuIFZjYyBhbmQgdGhlIG5vbi1pbnZlcnRpbmcgb3V0cHV0IG9mDQonIAkgICB0aGUgRENGIG1vZHVsZSAocHVsbGluZyBoaWdoIHRvIDMuM1YpIGFzIHRoZSBtb2R1bGUgaGFzIG9wZW4gY29sbGVjdG9yDQonCSAgIG91dHB1dHMuDQonDQonICAgICAgVGFrZSBhIGxvb2sgYXQgIkR1aW5vTWl0ZSBNTUJhc2ljIFJlYWRNZS5wZGYiIGZvciBtb3JlIGluZm8uDQonIA0KJwkgICBUaGUgYml0bWFwcyBhbmQgYWxsIGJhc2ljIGZpbGVzIGhhdmUgdG8gYmUgY29waWVkIHRvIHRoZSBTRCBjYXJkLCBjaGFuZ2UNCicgICAgICB0aGUgRGlzcGxheU1vZGUgdmFyaWFibGUgZm9yIGVhY2ggYm9hcmQgYWNjb3JkaW5nbHkuDQonDQonCSAgIFlvdSBjYW4gb2YgY291cnNlIHJlcGxhY2UgdGhlIGNsb2NrIGltYWdlcyBieSB5b3VyIG93biBvbmVzLCBidXQgc3RpY2sgdG8gDQonICAgICAgdGhlIHNpemUgYW5kIHRoZSBCTVAgZm9ybWF0IC0gc29tZSBCTVAgc2l6ZXMgbWFrZSB1Z2x5IGJpdCBub2lzZSBhdCB0aGUgZW5kLg0KJw0KJyAJICAgdjIuMCB3cml0dGVuIGluIDIwMTQgYnkgVGltIEhhZ2VtYW5uICh0aW1Ad2F5Mi5uZXQpDQonDQonCSAgIFVzZSB0aGlzIGNvZGUgZnJlZSBvZiBjaGFyZ2UgZm9yIHByaXZhdGUgb3IgZWR1Y2F0aW9uYWwgdXNlcy4gQXNrIGZvcg0KJyAgICAgIHBlcm1pc3Npb24gaW4gY2FzZSBvZiBjb21tZXJjaWFsIHVzYWdlLg0KJw0KJyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQoNCkRpc3BsYXlNb2RlID0gMiAgICAgICAgICAgICAgICAgICAgICcgMCYjNTg7IEhILCAxJiM1ODsgTU0sIDImIzU4O1NTDQpEaWdpdFkgPSA1MCAgICAgICAgICAgICAgICAgICAgICAgICAnIFkgcG9zIG9mIGJvdGggZGlnaXRzDQpEaWdpdExYID0gNTMgICAgICAgICAgICAgICAgICAgICAgICAnIFggcG9zIG9mIGxlZnQgZGlnaXQNCkRpZ2l0UlggPSAyNTAgICAgICAgICAgICAgICAgICAgICAgICcgWCBwb3Mgb2YgcmlnaHQgZGlnaXQNCkRDRlBpbiA9IDEgICAgICAgICAgICAgICAgICAgICAgICAgICcgUGluIGZvciB0aGUgRENGNzcgc2lnbmFsDQpTaWduYWxZID0gMzAwCQkJCQkJJyBQb3NpdGlvbiBvZiB0aGUgc2VhcmNoIHNpZ25hbCBsaW5lDQpTaWduYWxIZWlnaHQgPSAyMAkJCQkJJyBQdWxzZSBoZWlnaHQgb24gc2NyZWVuDQoNCicNCicgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstIGluaXRpYWxpemF0aW9uDQonDQoNCldhaXRpbmdGb3JUaW1lID0gMQ0KRmlyc3RTeW5jRm91bmQgPSAwDQpPbGRTaWduYWxZID0gU2lnbmFsWQ0KDQpvbGRzaWduYWwgPSAxDQoNCkRpbSBkY2ZiaXQoNjApDQoNCicgJiM0NTsmIzQ1Oy0gY29uZmlndXJlIHBpbiBhcyBpbnB1dA0KDQpTZXRQaW4gRENGUGluLCAyDQoNCmNscw0KDQonDQonICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LSB3ZWxjb21lIHNjcmVlbg0KJw0KDQpwcmludCAiV2VsY29tZSB0byBEQ2xvY2sgdjIuMCINCnByaW50ICImIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyINCnByaW50DQpwcmludCAiU3RhcnRpbmcgdGltZSBzeW5jLiINCnByaW50DQoNCmlmIERpc3BsYXlNb2RlID0gMiB0aGVuDQoJcHJpbnQgIlRoaXMgaXMgdGhlICdTRUNPTkQnIGFuZCB0aGUgRENGNzcgVW5pdCINCmVuZGlmDQoNCmlmIERpc3BsYXlNb2RlID0gMSB0aGVuDQoJcHJpbnQgIlRoaXMgaXMgdGhlICdNSU5VVEUnIFVuaXQiDQplbmRpZg0KDQppZiBEaXNwbGF5TW9kZSA9IDAgdGhlbg0KCXByaW50ICJUaGlzIGlzIHRoZSAnSE9VUicgVW5pdCINCmVuZGlmDQoNCicNCicgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstIG1haW4gcHJvZ3JhbQ0KJw0KDQppZiBEaXNwbGF5TW9kZSA9IDIgdGhlbg0KDQoJRGlzcGxheVNlY29uZEFuZFNlbmREQ0YNCgkNCmVsc2UNCg0KCURpc3BsYXlEaWdpdEFuZFJlY2VpdmVEQ0YNCg0KZW5kaWYNCg0KJyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCg0Kc3ViIERpc3BsYXlTZWNvbmRBbmRTZW5kRENGDQoNCgknICYjNDU7JiM0NTstIHNldHVwIHRoZSB0aWNrZXIgZm9yIHRoZSBEQ0Ygc2lnbmFsDQoNCglTZXRUaWNrIDEwLCBDaGVja0RDRjc3DQoNCgknICYjNDU7JiM0NTstIGNvbTEmIzU4OyBSeCBpcyBwaW4gMTUsIFR4IGlzIHBpbiAxNg0KCQ0KCU9QRU4gIkNPTTEmIzU4OzQ4MDAiIEFTICYjMzU7MQ0KDQoJRG8NCgkJICAgJyAmIzQ1OyYjNDU7LSBkZWZlcnJlZCBhY3Rpb25zDQoNCgkJICAgaWYgRG9DbHMgPSAxIHRoZW4NCgkJCQljbHMNCgkJCQlEb0NscyA9IDANCgkJICAgZW5kaWYNCgkJDQoJCSAgIGlmIFVwZGF0ZUxhc3RTeW5jID0gMSB0aGVuDQoJCQkJcHJpbnQgQCgwLDQxNSkgIkxhc3Qgc3luY2VkJiM1ODsgIjtMYXN0U3luYyQ7IiAgICAgICAgICAgICAgICAgIjsNCgkJCQlVcGRhdGVMYXN0U3luYyA9IDANCgkJICAgZW5kaWYNCg0KDQoJCSAgIGN1cnJ0JCA9IFRpbWUkDQoNCgkJICAgJyAmIzQ1OyYjNDU7LSB3aGVuIHRpbWUgY2hhbmdlZA0KDQoJCSAgIElmIGN1cnJ0JCAmbHQ7Jmd0OyBvbGR0JCBUaGVuDQoJICAgCSAgIA0KCQkJCSAgczEgPSBWYWwoTWlkJChjdXJydCQsNywxKSkNCgkJCQkgIHMyID0gVmFsKE1pZCQoY3VycnQkLDgsMSkpDQoNCgkJCQkgICcgJiM0NTsmIzQ1Oy0gbWFpbiBwcm9ncmFtDQoNCgkJCQkgIElmIFdhaXRpbmdGb3JUaW1lID0gMCBUaGVuDQoNCgkJCQkJCXByaW50ICYjMzU7MSwiVFQiO2N1cnJ0JA0KDQoJCQkJCQknICYjNDU7JiM0NTstIG1haW4gZGlzcGxheSByb3V0aW5lDQoJCQ0KCQkJCQkJUHJpbnREaWdpdCBEaWdpdExYLCBEaWdpdFksIHMxDQoJCQkJCQlQcmludERpZ2l0IERpZ2l0UlgsIERpZ2l0WSwgczINCg0KCQkJCSAgRW5kSWYNCg0KCQkJCSAgJyAmIzQ1OyYjNDU7LSBzYXZlIHRpbWUgZm9yIGNvbXBhcmUNCg0KCQkJCSAgb2xkdCQgPSBjdXJydCQNCg0KCQkgICBFbmRJZg0KDQoJCSAgICcgJiM0NTsmIzQ1Oy0gd2FpdCBhIGJpdA0KDQoJCSAgIFBhdXNlIDUwDQoJTG9vcA0KDQplbmQgc3ViDQoNCicgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstDQoNClN1YglEaXNwbGF5RGlnaXRBbmRSZWNlaXZlRENGDQoNCgknICYjNDU7JiM0NTstIGNvbTEmIzU4OyBSeCBpcyBwaW4gMTUsIFR4IGlzIHBpbiAxNg0KCQ0KCU9QRU4gIkNPTTEmIzU4OzQ4MDAiIEFTICYjMzU7MQ0KDQoJZG8NCgkJaWYgTE9DKCYjMzU7MSkgJmx0OyZndDsgMCB0aGVuDQoJCQkNCgkJCScgJiM0NTsmIzQ1OyYjNDU7JiM0NTsgcmVhZCBzZXJpYWwgaW5wdXQNCgkJCQ0KCQkJYSQgPSBpbnB1dCQoNTAsJiMzNTsxKQ0KCQkJDQoJCQknICYjNDU7JiM0NTsmIzQ1OyYjNDU7IGFkZCB0byB0aGUgcmVjZWl2ZSB1ZmZlcg0KCQkJDQoJCQlyJCA9IHIkICsgYSQNCgkJDQoJCQkncHJpbnQgIiciO3IkOyInIg0KCQkJDQoJCQknICYjNDU7JiM0NTsmIzQ1OyYjNDU7IG5vdyBwcm9jZXNzDQoJCQkNCgkJCWNocjEzID0gaW5zdHIociQsY2hyJCgxMykpDQoJCQlpZiBjaHIxMyAmbHQ7Jmd0OyAwIHRoZW4NCgkJDQoJCQkJJyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyB3ZSBmb3VuZCBhIENSDQoJCQkNCgkJCQljb21tYW5kJCA9IGxlZnQkKHIkLGNocjEzKQ0KCQkJCQ0KCQkJCWNtZCQgCT0gbGVmdCQoY29tbWFuZCQsMikNCgkJCQlwYXJhbSQJPSBtaWQkKGNvbW1hbmQkLDMpDQoJCQkNCgkJCQljb21tYW5kZm91bmQgPSAwDQoJCQkJaWYgY21kJD0iVFQiIHRoZW4NCgkJCQkNCgkJCQkgICAJY29tbWFuZGZvdW5kID0gMQ0KCQkJCQkNCgkJCQkJaDEgPSBWYWwoTWlkJChwYXJhbSQsMSwxKSkNCgkJCQkJaDIgPSBWYWwoTWlkJChwYXJhbSQsMiwxKSkNCgkJCQkJbTEgPSBWYWwoTWlkJChwYXJhbSQsNCwxKSkNCgkJCQkJbTIgPSBWYWwoTWlkJChwYXJhbSQsNSwxKSkNCg0KCQkJCQknICYjNDU7JiM0NTstIG1haW4gZGlzcGxheSByb3V0aW5lDQoJCQkJCQ0KCQkJCQlpZiBGaXJzdENMUyA9IDAgdGhlbg0KCQkJCQkJY2xzDQoJCQkJCQlGaXJzdENMUyA9IDENCgkJCQkJZW5kaWYNCg0KCQkJCQlJZiBEaXNwbGF5TW9kZSA9IDAgVGhlbg0KCQkJCQkJUHJpbnREaWdpdCBEaWdpdExYLCBEaWdpdFksIGgxDQoJCQkJCQlQcmludERpZ2l0IERpZ2l0UlgsIERpZ2l0WSwgaDINCgkJCQkJRWxzZSANCgkJCQkJCVByaW50RGlnaXQgRGlnaXRMWCwgRGlnaXRZLCBtMQ0KCQkJCQkJUHJpbnREaWdpdCBEaWdpdFJYLCBEaWdpdFksIG0yDQoJCQkJCUVuZElmDQoJCQkJCQkJIA0KCQkJCWVuZGlmDQoJCQkJDQoJCQkJaWYgY29tbWFuZGZvdW5kID0gMCB0aGVuDQoJCQkJCSdwcmludCAiRXJyb3ImIzU4OyBjb21tYW5kICI7Y29tbWFuZCQ7IiBpcyBpbnZhbGlkIg0KCQkJCQ0KCQkJCWVuZGlmDQoJCQkJDQoJCQkJciQgPSAiIg0KCQkJZW5kaWYNCg0KCQllbHNlDQoJCQlQYXVzZSA1MA0KCQllbmRpZg0KCWxvb3ANCgkNCg0KZW5kIHN1Yg0KDQonICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KDQpTdWIgUHJpbnREaWdpdCAoeCx5LHYpDQoNCiAgICAgICBiaXRtYXBuYW1lJCA9IFN0ciQodikgKyAiLmJtcCINCiAgICAgICBMb2FkQk1QIGJpdG1hcG5hbWUkLCB4LCB5DQoNCkVuZCBTdWINCg0KDQonICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KDQpTdWIgQ2hlY2tEQ0Y3Nw0KDQogICAgICAgJyAmIzQ1OyYjNDU7LSBidWZmZXIgdGhlIHNpZ25hbCB0byBhdm9pZCBnbGl0Y2hlcw0KDQogICAgICAgc2lnbmFsID0gUGluKERDRlBpbikgDQogICAgICAgICAgICANCiAgICAgICAnICYjNDU7JiM0NTstIHVwZGF0ZSB0aGUgY291bnRlcnMNCiAgICAgICAgIA0KICAgICAgIGlmIHNpZ25hbCA9IDEgb3IgaWdub3JlcHVsc2UgPSAxIHRoZW4NCiAgICAgICAJCWhpZ2hjb3VudCA9IGhpZ2hjb3VudCArIDENCiAgICAgICBlbHNlDQoJCQlsb3djb3VudCA9IGxvd2NvdW50ICsgMQkNCgkgICBlbmRpZiAgIAkNCg0KCSAgICcgJiM0NTsmIzQ1Oy0gaW4gc2VhcmNoIG1vZGUsIGRpc3BsYXkgYSBmYW5jeSBvc2NpIGxpa2UgZ3JhcGhpYw0KCSAgIA0KCQlpZiBXYWl0aW5nRm9yVGltZSA9IDEgdGhlbg0KDQoJCQknICYjNDU7JiM0NTstIGNsZWFyIG9sZCBsaW5lDQoJCQkNCgkJCUxpbmUgKFNpZ25hbFgsU2lnbmFsWSkgLSAoU2lnbmFsWCxTaWduYWxZLVNpZ25hbEhlaWdodCksMA0KCQkJDQoJCQknICYjNDU7JiM0NTstIGRyYXcgbmV3IGxpbmUNCgkJCQ0KCQkJTmV3U2lnbmFsWSA9IFNpZ25hbFktc2lnbmFsJiM0MjtTaWduYWxIZWlnaHQNCgkJCUxpbmUgKFNpZ25hbFgsT2xkU2lnbmFsWSkgLSAoU2lnbmFsWCxOZXdTaWduYWxZKSwxDQoJCQlPbGRTaWduYWxZID0gTmV3U2lnbmFsWQ0KCQkJDQoJCQknICYjNDU7JiM0NTstIGRvIHRoZSBYIHdhcnAgYXJvdW5kDQoJCQkNCgkJCVNpZ25hbFggPSBTaWduYWxYICsgMQ0KCQkJaWYgKFNpZ25hbFggJmd0OyBNTS5IUkVTKSB0aGVuIA0KCQkJCVNpZ25hbFggPSAwDQoJCQllbmRpZg0KCQkJDQoJCWVuZGlmDQoNCgkgICAnICYjNDU7JiM0NTstIGZhbGxpbmcgZWRnZQ0KCSAgIA0KCSAgIGlmIG9sZHNpZ25hbCA9IDEgYW5kIHNpZ25hbCA9IDAgdGhlbg0KDQoJCQknICYjNDU7JiM0NTstIHRoaXMgaXMgdGhlIGZhbGxpbmcgZWRnZQ0KDQoJCQkncHJpbnQgIkxvd2NudCI7bG93Y291bnQ7IiAgSGlnaGNudCI7aGlnaGNvdW50DQoNCgkJCScgJiM0NTsmIzQ1Oy0gZmlsdGVyIG91dCB2ZXJ5IHNtYWxsIHB1bHNlcw0KDQoJCQlpZiBoaWdoY291bnQgJmx0OyA3IHRoZW4NCgkJCQlpZ25vcmVwdWxzZSA9IDENCgkJCQkNCgkJCQkncHJpbnQgIklnbm9yZSBwdWxzZSAtIHRvbyBzbWFsbCINCgkJCQ0KCQkJZWxzZQ0KCQkJCSAgIAkJCQ0KCQkJCWlmIGxvd2NvdW50ICZndDsgMTIwIHRoZW4NCg0KCQkJCQkncHJpbnQgIkxvd2NvdW50IGRldGVjdGVkIg0KCQkJCQkNCgkJCQkJJyAmIzQ1OyYjNDU7LSB0d28gY2FzZXMmIzU4OyB3ZSBmb3VuZCB0aGUgc3luYyBhbmQgY29tcGxldGVkIHRoZSBmdWxsIGRhdGFncmFtDQoJCQkJCScgICAgICAgICAgICAgICAgb3Igd2UgZm91bmQgdGhlIGZpcnN0IHN5bmMgaGF2aW5nIHJlYWQgb25seSBydWJiaXNoDQoNCgkJCQkJSWYgRmlyc3RTeW5jRm91bmQgPSAxIFRoZW4NCg0KCQkJCQkJICAgJyAmIzQ1OyYjNDU7LSB0aGUgaXMgdGhlbiB0aGUgMm5kLCAzcmQsLi4uIHN5bmMuDQoNCgkJCQkJCSAgIFByb2Nlc3NEQ0ZUaW1lDQoNCgkJCQkJRWxzZQ0KCQkJCQkJICAgJyAmIzQ1OyYjNDU7LSBvaywgbm93IHdlIGdvdCB0aGUgZmlyc3Qgb25lIQ0KDQoJCQkJCQkgICBGaXJzdFN5bmNGb3VuZCA9IDENCgkJCQkJICAgDQoJCQkJCQkgICBpZiBXYWl0aW5nRm9yVGltZSA9IDEgdGhlbg0KCQkJCQkJCQlwcmludCBAKDAsMTUwKSAiRmlyc3QgbWludXRlIGJyZWFrIGZvdW5kLi4ubm93IHJlY2VpdmluZyB0aW1lLi4uIjtzcGMoNDApDQoJCQkJCQkgICBlbmRpZg0KCQkJCQ0KCQkJCQlFbmRJZg0KDQoJCQkJCScgJiM0NTsmIzQ1Oy0gdGhlIG5leHQgYml0IHdpbGwgYmUgYml0IDEsIHdlIGlnbm9yZSBiaXQgNjAgJiM0NTsmIzQ1OyZndDsgYW55d2F5IDANCg0KCQkJCQliaXRpbmRleCA9IDENCgkJCQ0KCQkJCWVsc2UNCg0KCQkJCQkncHJpbnQgIlB1bHNlIGRldGVjdGVkIg0KCQkJDQoJCQkJCScgJiM0NTsmIzQ1Oy0gb25seSBwcm9jZXNzLCBpZiB3ZSBjb21wbGV0ZWQgdGhlIGZpcnN0IHJvdW5kDQoNCgkJCQkJSWYgRmlyc3RTeW5jRm91bmQgPSAxIFRoZW4NCg0KCQkJCQkJaWYgV2FpdGluZ0ZvclRpbWUgPSAxIHRoZW4NCgkJCQkJCQlwcmludCBAKDAsMTUwKSAiUmVjZWl2aW5nIGJpdCBudW1iZXIiO2JpdGluZGV4OyIgb2YgNTgiO3NwYyg0MCkNCgkJCQkJCWVuZGlmDQoNCgkJCQkJCUlmIGJpdGluZGV4ICZsdDs9IDYwIFRoZW4NCgkJCQ0KCQkJCQkJICAgJyAmIzQ1OyYjNDU7LSBtb3JlIHRoYW4gMTAwIG1zPyBUaGUgdGhpcyBpcyBhICIxIg0KDQoJCQkJCQkgICBJZiBoaWdoY291bnQgJmd0OyAxMCBUaGVuDQoJCQkJCQkJCSAgZGNmYml0KGJpdGluZGV4KSA9IDENCgkJCQkJCSAgIEVsc2UNCgkJCQkJCQkJICBkY2ZiaXQoYml0aW5kZXgpID0gMA0KCQkJCQkJICAgRW5kSWYNCgkJCQkJCQ0KCQkJCQkJICAgJ1ByaW50ICJCSVQgJiM1ODsiLCBkY2ZiaXQoYml0aW5kZXgpDQoJCQkJCSAgIA0KCQkJCQkJICAgYml0aW5kZXggPSBiaXRpbmRleCArIDENCgkJCQkJCUVsc2UNCg0KCQkJCQkJICBpZiBXYWl0aW5nRm9yVGltZSA9IDEgdGhlbg0KCQkJCQkJCQlwcmludCBAKDAsMTUwKSAiTG9zdCBzeW5jLiBUcnkgYWdhaW4uIjtzcGMoNDApDQoJCQkJCQkgIGVuZGlmDQoJCQkJCQkJCQkJCQkJDQoJCQkJCQkgICcgJiM0NTsmIzQ1Oy0gc29tZXRoaW5nIHdhcyB3cm9uZy4gUmVzdGFydCBzeW5jIA0KCQkJCQkNCgkJCQkJCSAgRmlyc3RTeW5jRm91bmQgPSAwDQoJCQkJCQlFbmRJZg0KCQkJCQlFbmRJZiAgICANCgkJCQllbmRpZg0KICAgIAkNCiAgICAJICAgCQlsb3djb3VudCA9IDANCgkJCQloaWdoY291bnQgPSAwCQ0KCQkJCWlnbm9yZXB1bHNlID0gMA0KDQoJCQllbmRpZg0KCSAgIGVuZGlmDQoJICAgCSAgIA0KCSAgIG9sZHNpZ25hbCA9IHNpZ25hbA0KRW5kIFN1Yg0KDQonICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KDQpTdWIgUHJvY2Vzc0RDRlRpbWUNCg0KICAgICAgIGlkeCA9IDIxDQogICAgICAgbW0gPSBkY2ZiaXQoaWR4KSArIGRjZmJpdChpZHgrMSkmIzQyOzIgKyBkY2ZiaXQoaWR4KzIpJiM0Mjs0ICsgZGNmYml0KGlkeCszKSYjNDI7OCArIGRjZmJpdChpZHgrNCkmIzQyOzEwICsgZGNmYml0KGlkeCs1KSYjNDI7MjAgKyBkY2ZiaXQoaWR4KzYpJiM0Mjs0MA0KDQogICAgICAgcDEgPSBQYXJ0eSgyMSwyOCkNCg0KICAgICAgIGlkeCA9IDI5DQogICAgICAgaGggPSBkY2ZiaXQoaWR4KSArIGRjZmJpdChpZHgrMSkmIzQyOzIgKyBkY2ZiaXQoaWR4KzIpJiM0Mjs0ICsgZGNmYml0KGlkeCszKSYjNDI7OCArIGRjZmJpdChpZHgrNCkmIzQyOzEwICsgZGNmYml0KGlkeCs1KSYjNDI7MjANCg0KICAgICAgIHAyID0gUGFydHkoMjksMzUpDQoNCiAgICAgICBpZHggPSAzNg0KICAgICAgIGRkID0gZGNmYml0KGlkeCkgKyBkY2ZiaXQoaWR4KzEpJiM0MjsyICsgZGNmYml0KGlkeCsyKSYjNDI7NCArIGRjZmJpdChpZHgrMykmIzQyOzggKyBkY2ZiaXQoaWR4KzQpJiM0MjsxMCArIGRjZmJpdChpZHgrNSkmIzQyOzIwDQoNCiAgICAgICBpZHggPSA0NQ0KICAgICAgIG1vID0gZGNmYml0KGlkeCkgKyBkY2ZiaXQoaWR4KzEpJiM0MjsyICsgZGNmYml0KGlkeCsyKSYjNDI7NCArIGRjZmJpdChpZHgrMykmIzQyOzggKyBkY2ZiaXQoaWR4KzQpJiM0MjsxMA0KDQogICAgICAgaWR4ID0gNTANCiAgICAgICB5eSA9IGRjZmJpdChpZHgpICsgZGNmYml0KGlkeCsxKSYjNDI7MiArIGRjZmJpdChpZHgrMikmIzQyOzQgKyBkY2ZiaXQoaWR4KzMpJiM0Mjs4ICsgZGNmYml0KGlkeCs0KSYjNDI7MTAgKyBkY2ZiaXQoaWR4KzUpJiM0MjsyMCArIGRjZmJpdChpZHgrNikmIzQyOzQwICsgZGNmYml0KGlkeCs3KSYjNDI7ODANCg0KICAgICAgIHAzID0gUGFydHkoMzYsNTgpDQoNCiAgICAgICAnUHJpbnQgIi8vLy8vLy8vLy8vLyB0aW1lIiwgaGggLCBtbSwgZGQsbW8seXkscDEscDIscDMNCg0KICAgICAgICcgJiM0NTsmIzQ1Oy0gbm93IGRvIHNvbWUgY2hlY2tzDQoNCiAgICAgICBkY2ZlcnIgPSAwDQoNCiAgICAgICBJZiBGaXgocDEvMikgJmx0OyZndDsgcDEvMiBUaGVuDQogICAgICAgICAgICAgIGRjZmVyciA9IDENCiAgICAgICBFbmRJZg0KDQogICAgICAgSWYgRml4KHAyLzIpICZsdDsmZ3Q7IHAyLzIgVGhlbg0KICAgICAgICAgICAgICBkY2ZlcnIgPSAxDQogICAgICAgRW5kSWYNCg0KICAgICAgIElmIEZpeChwMy8yKSAmbHQ7Jmd0OyBwMy8yIFRoZW4NCiAgICAgICAgICAgICAgZGNmZXJyID0gMQ0KICAgICAgIEVuZElmDQoNCiAgICAgICBJZiBtbyZsdDsxIE9yIG1vJmd0OzEyIFRoZW4NCiAgICAgICAgICAgICAgZGNmZXJyID0gMQ0KICAgICAgIEVuZElmDQoNCiAgICAgICBJZiBkZCZsdDsxIE9yIGRkJmd0OzMxIFRoZW4NCiAgICAgICAgICAgICAgZGNmZXJyID0gMQ0KICAgICAgIEVuZElmDQoNCiAgICAgICBJZiBtbSZndDs1OSBUaGVuDQogICAgICAgICAgICAgIGRjZmVyciA9IDENCiAgICAgICBFbmRJZg0KDQogICAgICAgSWYgaGgmZ3Q7MjMgVGhlbg0KICAgICAgICAgICAgICBkY2ZlcnIgPSAxDQogICAgICAgRW5kSWYNCg0KICAgICAgIElmIHl5Jmd0OzI1IFRoZW4NCiAgICAgICAgICAgICAgZGNmZXJyID0gMQ0KICAgICAgIEVuZElmDQoNCiAgICAgICAnICYjNDU7JiM0NTstIG5vdyBwcm9jZXNzDQoNCiAgICAgICBJZiBkY2ZlcnIgPSAwIFRoZW4NCg0KICAgICAgICAgICAgICBUaW1lJCA9IFN0ciQoaGgpKyImIzU4OyIrU3RyJChtbSkrIiYjNTg7MDAiDQogICAgICAgICAgICAgIA0KICAgICAgICAgICAgICBpZiBXYWl0aW5nRm9yVGltZSA9IDEgdGhlbg0KICAgICAgICAgICAgICAJV2FpdGluZ0ZvclRpbWUgPSAwDQogICAgICAgICAgICANCiAgICAgICAgICAgIAknICYjNDU7JiM0NTstIGRlZmVycmVkIENMUyAtIHdpbGwgb3RoZXJ3aXNlIGdldCB1cyBvdXQgb2Ygc3luYw0KICAgICAgICAgICAgCSAgCQ0KICAgICAgICAgICAgICAJRG9DbHMgPSAxDQogICAgICAgICAgICAgIGVuZGlmDQogICAgICAgICAgICAgIA0KICAgICAgICAgICAgICAnICYjNDU7JiM0NTstIGRlZmVycmVkIFBSSU5UIC0gd2lsbCBvdGhlcndpc2UgZ2V0IHVzIG91dCBvZiBzeW5jDQogICAgICAgICAgICAgIA0KICAgICAgICAgICAgICBVcGRhdGVMYXN0U3luYyA9IDENCiAgICAgICAgICAgICAgTGFzdFN5bmMkID0gdGltZSQNCiAgICAgICAgICAgICAgDQogICAgICAgRW5kSWYNCg0KRW5kIFN1Yg0KDQonICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KDQpGdW5jdGlvbiBQYXJ0eShpZHhhLGlkeGUpDQoNCiAgICAgICBwID0gMA0KICAgICAgIEZvciBpID0gaWR4YSBUbyBpZHhlDQogICAgICAgICAgICAgIHAgPSBwICsgZGNmYml0KGkpDQogICAgICAgTmV4dCBpDQoNCiAgICAgICBQYXJ0eSA9IHANCkVuZCBGdW5jdGlvbg0KDQo8L3ByZT5kZLOUUflXlbqgyC8tAxQQEvTFoQJC" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">DCF77 DigiClock</h1><small>Modified on 2016/12/23 23:26 by Administrator &mdash; Categorized as: Dates, Time and Clocks, GPS, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+'
+'      DigiClock for DynaMite / Maxmite
+'
+'      One Maximite drives one screen, three screens make one DigiClock
+'      Each screen is displaying two digits, either HH, MM or SS.
+'
+'	   This program uses V4.4B of the MMBasic language, so the DuinomMites have
+'      to be flashed with the most recent firmware. 
+'
+'      The clock is automatically set via DCF77 (Conrad Receiver)
+' 	   http&#58;//www.conrad.de/ce/de/product/641138/C-Control-DCF-Empfaengerplatine
+'
+'	   Wiring&#58; The first device (SECOND) needs to receive the DCF signal on Pin 1
+'	   The other devices get their time via a UART connection on COM1. So connect Pin 16
+'	   of the SECOND board to pin 15 on the MINUTE and HOUR board.
+'
+'             (External View)
+'
+'             + GND for DCF Board
+'             |
+'             |
+'             |
+'             |   1  DCF In for SECOND module
+'             +   +
+'             o o o o o o o o o o o o o
+'
+'             o o o o o o o o o o o o o
+'               ^         ^ +
+'               |         | 15 Rx Connect to Tx of SECOND Module
+'               |         +
+'               |         16 Tx Connect to Rx of MINUTE and HOUR Module
+'               |
+'               + 3.3V for DCF Board
+'	
+'	   You will need a 10 kOhm Pullup between Vcc and the non-inverting output of
+' 	   the DCF module (pulling high to 3.3V) as the module has open collector
+'	   outputs.
+'
+'      Take a look at "DuinoMite MMBasic ReadMe.pdf" for more info.
+' 
+'	   The bitmaps and all basic files have to be copied to the SD card, change
+'      the DisplayMode variable for each board accordingly.
+'
+'	   You can of course replace the clock images by your own ones, but stick to 
+'      the size and the BMP format - some BMP sizes make ugly bit noise at the end.
+'
+' 	   v2.0 written in 2014 by Tim Hagemann (tim@way2.net)
+'
+'	   Use this code free of charge for private or educational uses. Ask for
+'      permission in case of commercial usage.
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+DisplayMode = 2                     ' 0&#58; HH, 1&#58; MM, 2&#58;SS
+DigitY = 50                         ' Y pos of both digits
+DigitLX = 53                        ' X pos of left digit
+DigitRX = 250                       ' X pos of right digit
+DCFPin = 1                          ' Pin for the DCF77 signal
+SignalY = 300						' Position of the search signal line
+SignalHeight = 20					' Pulse height on screen
+
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- initialization
+'
+
+WaitingForTime = 1
+FirstSyncFound = 0
+OldSignalY = SignalY
+
+oldsignal = 1
+
+Dim dcfbit(60)
+
+' &#45;&#45;- configure pin as input
+
+SetPin DCFPin, 2
+
+cls
+
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- welcome screen
+'
+
+print "Welcome to DClock v2.0"
+print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+print
+print "Starting time sync."
+print
+
+if DisplayMode = 2 then
+	print "This is the 'SECOND' and the DCF77 Unit"
+endif
+
+if DisplayMode = 1 then
+	print "This is the 'MINUTE' Unit"
+endif
+
+if DisplayMode = 0 then
+	print "This is the 'HOUR' Unit"
+endif
+
+'
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- main program
+'
+
+if DisplayMode = 2 then
+
+	DisplaySecondAndSendDCF
+	
+else
+
+	DisplayDigitAndReceiveDCF
+
+endif
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+sub DisplaySecondAndSendDCF
+
+	' &#45;&#45;- setup the ticker for the DCF signal
+
+	SetTick 10, CheckDCF77
+
+	' &#45;&#45;- com1&#58; Rx is pin 15, Tx is pin 16
+	
+	OPEN "COM1&#58;4800" AS &#35;1
+
+	Do
+		   ' &#45;&#45;- deferred actions
+
+		   if DoCls = 1 then
+				cls
+				DoCls = 0
+		   endif
+		
+		   if UpdateLastSync = 1 then
+				print @(0,415) "Last synced&#58; ";LastSync$;"                 ";
+				UpdateLastSync = 0
+		   endif
+
+
+		   currt$ = Time$
+
+		   ' &#45;&#45;- when time changed
+
+		   If currt$ &lt;&gt; oldt$ Then
+	   	   
+				  s1 = Val(Mid$(currt$,7,1))
+				  s2 = Val(Mid$(currt$,8,1))
+
+				  ' &#45;&#45;- main program
+
+				  If WaitingForTime = 0 Then
+
+						print &#35;1,"TT";currt$
+
+						' &#45;&#45;- main display routine
+		
+						PrintDigit DigitLX, DigitY, s1
+						PrintDigit DigitRX, DigitY, s2
+
+				  EndIf
+
+				  ' &#45;&#45;- save time for compare
+
+				  oldt$ = currt$
+
+		   EndIf
+
+		   ' &#45;&#45;- wait a bit
+
+		   Pause 50
+	Loop
+
+end sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub	DisplayDigitAndReceiveDCF
+
+	' &#45;&#45;- com1&#58; Rx is pin 15, Tx is pin 16
+	
+	OPEN "COM1&#58;4800" AS &#35;1
+
+	do
+		if LOC(&#35;1) &lt;&gt; 0 then
+			
+			' &#45;&#45;&#45;&#45; read serial input
+			
+			a$ = input$(50,&#35;1)
+			
+			' &#45;&#45;&#45;&#45; add to the receive uffer
+			
+			r$ = r$ + a$
+		
+			'print "'";r$;"'"
+			
+			' &#45;&#45;&#45;&#45; now process
+			
+			chr13 = instr(r$,chr$(13))
+			if chr13 &lt;&gt; 0 then
+		
+				' &#45;&#45;&#45;&#45; we found a CR
+			
+				command$ = left$(r$,chr13)
+				
+				cmd$ 	= left$(command$,2)
+				param$	= mid$(command$,3)
+			
+				commandfound = 0
+				if cmd$="TT" then
+				
+				   	commandfound = 1
+					
+					h1 = Val(Mid$(param$,1,1))
+					h2 = Val(Mid$(param$,2,1))
+					m1 = Val(Mid$(param$,4,1))
+					m2 = Val(Mid$(param$,5,1))
+
+					' &#45;&#45;- main display routine
+					
+					if FirstCLS = 0 then
+						cls
+						FirstCLS = 1
+					endif
+
+					If DisplayMode = 0 Then
+						PrintDigit DigitLX, DigitY, h1
+						PrintDigit DigitRX, DigitY, h2
+					Else 
+						PrintDigit DigitLX, DigitY, m1
+						PrintDigit DigitRX, DigitY, m2
+					EndIf
+							 
+				endif
+				
+				if commandfound = 0 then
+					'print "Error&#58; command ";command$;" is invalid"
+				
+				endif
+				
+				r$ = ""
+			endif
+
+		else
+			Pause 50
+		endif
+	loop
+	
+
+end sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub PrintDigit (x,y,v)
+
+       bitmapname$ = Str$(v) + ".bmp"
+       LoadBMP bitmapname$, x, y
+
+End Sub
+
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub CheckDCF77
+
+       ' &#45;&#45;- buffer the signal to avoid glitches
+
+       signal = Pin(DCFPin) 
+            
+       ' &#45;&#45;- update the counters
+         
+       if signal = 1 or ignorepulse = 1 then
+       		highcount = highcount + 1
+       else
+			lowcount = lowcount + 1	
+	   endif   	
+
+	   ' &#45;&#45;- in search mode, display a fancy osci like graphic
+	   
+		if WaitingForTime = 1 then
+
+			' &#45;&#45;- clear old line
+			
+			Line (SignalX,SignalY) - (SignalX,SignalY-SignalHeight),0
+			
+			' &#45;&#45;- draw new line
+			
+			NewSignalY = SignalY-signal&#42;SignalHeight
+			Line (SignalX,OldSignalY) - (SignalX,NewSignalY),1
+			OldSignalY = NewSignalY
+			
+			' &#45;&#45;- do the X warp around
+			
+			SignalX = SignalX + 1
+			if (SignalX &gt; MM.HRES) then 
+				SignalX = 0
+			endif
+			
+		endif
+
+	   ' &#45;&#45;- falling edge
+	   
+	   if oldsignal = 1 and signal = 0 then
+
+			' &#45;&#45;- this is the falling edge
+
+			'print "Lowcnt";lowcount;"  Highcnt";highcount
+
+			' &#45;&#45;- filter out very small pulses
+
+			if highcount &lt; 7 then
+				ignorepulse = 1
+				
+				'print "Ignore pulse - too small"
+			
+			else
+				   			
+				if lowcount &gt; 120 then
+
+					'print "Lowcount detected"
+					
+					' &#45;&#45;- two cases&#58; we found the sync and completed the full datagram
+					'                or we found the first sync having read only rubbish
+
+					If FirstSyncFound = 1 Then
+
+						   ' &#45;&#45;- the is then the 2nd, 3rd,... sync.
+
+						   ProcessDCFTime
+
+					Else
+						   ' &#45;&#45;- ok, now we got the first one!
+
+						   FirstSyncFound = 1
+					   
+						   if WaitingForTime = 1 then
+								print @(0,150) "First minute break found...now receiving time...";spc(40)
+						   endif
+				
+					EndIf
+
+					' &#45;&#45;- the next bit will be bit 1, we ignore bit 60 &#45;&#45;&gt; anyway 0
+
+					bitindex = 1
+			
+				else
+
+					'print "Pulse detected"
+			
+					' &#45;&#45;- only process, if we completed the first round
+
+					If FirstSyncFound = 1 Then
+
+						if WaitingForTime = 1 then
+							print @(0,150) "Receiving bit number";bitindex;" of 58";spc(40)
+						endif
+
+						If bitindex &lt;= 60 Then
+			
+						   ' &#45;&#45;- more than 100 ms? The this is a "1"
+
+						   If highcount &gt; 10 Then
+								  dcfbit(bitindex) = 1
+						   Else
+								  dcfbit(bitindex) = 0
+						   EndIf
+						
+						   'Print "BIT &#58;", dcfbit(bitindex)
+					   
+						   bitindex = bitindex + 1
+						Else
+
+						  if WaitingForTime = 1 then
+								print @(0,150) "Lost sync. Try again.";spc(40)
+						  endif
+													
+						  ' &#45;&#45;- something was wrong. Restart sync 
+					
+						  FirstSyncFound = 0
+						EndIf
+					EndIf    
+				endif
+    	
+    	   		lowcount = 0
+				highcount = 0	
+				ignorepulse = 0
+
+			endif
+	   endif
+	   	   
+	   oldsignal = signal
+End Sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Sub ProcessDCFTime
+
+       idx = 21
+       mm = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20 + dcfbit(idx+6)&#42;40
+
+       p1 = Party(21,28)
+
+       idx = 29
+       hh = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20
+
+       p2 = Party(29,35)
+
+       idx = 36
+       dd = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20
+
+       idx = 45
+       mo = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10
+
+       idx = 50
+       yy = dcfbit(idx) + dcfbit(idx+1)&#42;2 + dcfbit(idx+2)&#42;4 + dcfbit(idx+3)&#42;8 + dcfbit(idx+4)&#42;10 + dcfbit(idx+5)&#42;20 + dcfbit(idx+6)&#42;40 + dcfbit(idx+7)&#42;80
+
+       p3 = Party(36,58)
+
+       'Print "//////////// time", hh , mm, dd,mo,yy,p1,p2,p3
+
+       ' &#45;&#45;- now do some checks
+
+       dcferr = 0
+
+       If Fix(p1/2) &lt;&gt; p1/2 Then
+              dcferr = 1
+       EndIf
+
+       If Fix(p2/2) &lt;&gt; p2/2 Then
+              dcferr = 1
+       EndIf
+
+       If Fix(p3/2) &lt;&gt; p3/2 Then
+              dcferr = 1
+       EndIf
+
+       If mo&lt;1 Or mo&gt;12 Then
+              dcferr = 1
+       EndIf
+
+       If dd&lt;1 Or dd&gt;31 Then
+              dcferr = 1
+       EndIf
+
+       If mm&gt;59 Then
+              dcferr = 1
+       EndIf
+
+       If hh&gt;23 Then
+              dcferr = 1
+       EndIf
+
+       If yy&gt;25 Then
+              dcferr = 1
+       EndIf
+
+       ' &#45;&#45;- now process
+
+       If dcferr = 0 Then
+
+              Time$ = Str$(hh)+"&#58;"+Str$(mm)+"&#58;00"
+              
+              if WaitingForTime = 1 then
+              	WaitingForTime = 0
+            
+            	' &#45;&#45;- deferred CLS - will otherwise get us out of sync
+            	  	
+              	DoCls = 1
+              endif
+              
+              ' &#45;&#45;- deferred PRINT - will otherwise get us out of sync
+              
+              UpdateLastSync = 1
+              LastSync$ = time$
+              
+       EndIf
+
+End Sub
+
+' &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+Function Party(idxa,idxe)
+
+       p = 0
+       For i = idxa To idxe
+              p = p + dcfbit(i)
+       Next i
+
+       Party = p
+End Function
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.DigiClock-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:28 GMT -->
+</html>

@@ -1,0 +1,396 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Sign-Extend-an-Integer.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:57:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Sign Extend an Integer - Fruit Of The Shed
+</title><meta name="keywords" content="Sign, Extend, DS3231" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Sign-Extend-an-Integer&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login8390.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dSign-Extend-an-Integer%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Sign-Extend-an-Integer266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History1e02.html?Page=MMBasic.Sign-Extend-an-Integer">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Sign Extend an Integer
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print1e02.html?Page=MMBasic.Sign-Extend-an-Integer" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2018/02/01 12:59
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagese076.html?Cat=MMBasic.Control" title="Control">Control</a>, <a href="MMBasic.AllPages5ce5.html?Cat=MMBasic.Electronics" title="Electronics">Electronics</a>, <a href="MMBasic.AllPages834c.html?Cat=MMBasic.Encode%20and%20Decode" title="Encode and Decode">Encode and Decode</a>, <a href="MMBasic.AllPages9386.html?Cat=MMBasic.Hardware" title="Hardware">Hardware</a>, <a href="MMBasic.AllPagesc605.html?Cat=MMBasic.i2c" title="i2c">i2c</a>, <a href="MMBasic.AllPagesd44d.html?Cat=MMBasic.Maths" title="Maths">Maths</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="ff1a7f806-dd0c-4739-ada0-b6fea1f0a586" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('ff1a7f806-dd0c-4739-ada0-b6fea1f0a586');"></div><div id="f693cf1f7-e3b1-4de0-a4ae-7cc7ea21fa08" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f693cf1f7-e3b1-4de0-a4ae-7cc7ea21fa08');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="fad73c14c-607a-4a0b-a72f-e637375a537d" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fad73c14c-607a-4a0b-a72f-e637375a537d');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="sa821a39c-2780-431a-af2f-a2c363504216" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sa821a39c-2780-431a-af2f-a2c363504216');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers.html" title="SHIFT or ROTATE an array of integers (MMBasic)">SHIFT or ROTATE an array of integers (MMBasic)</a> &raquo; <a href="MMBasic.Short-range-radio-network-not-WiFi-SLAVE-module-Uses-cheapie-433MHz-modules-or-HC-12.html" title="Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)">Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)</a> &raquo; <b><a href="MMBasic.Sign-Extend-an-Integer.html" title="Sign Extend an Integer (MMBasic)">Sign Extend an Integer (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.VB-Work-a-like-REPLACE-Function.html" title="REPLACE$ Function (VB work-a-like) (MMBasic)">REPLACE$ Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.REVERSE-BAS-part-of-the-original-MMBasic-library.html" title="REVERSE.BAS (MMBasic)">REVERSE.BAS (MMBasic)</a> &raquo; <a href="MMBasic.RTC-DOW-BAS-part-of-the-original-MMBasic-library.html" title="RTC-DOW.BAS (MMBasic)">RTC-DOW.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Sample-AUTORUN-BAS-file-part-of-the-original-MMBasic-library.html" title="Sample AUTORUN.BAS (MMBasic)">Sample AUTORUN.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack (MMBasic)">Sensible Cartesian Co-ordinate graphics pack (MMBasic)</a> &raquo; <a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fad73c14c-607a-4a0b-a72f-e637375a537d', this);" id="lnkfad73c14c-607a-4a0b-a72f-e637375a537d" onmouseout="javascript:return __HideDropDown('fad73c14c-607a-4a0b-a72f-e637375a537d');">Shape drawing for Complex Lines and Polygons (MMBasic)</a> &raquo; <a href="MMBasic.Shell-Sort.html" title="Shell Sort (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f693cf1f7-e3b1-4de0-a4ae-7cc7ea21fa08', this);" id="lnkf693cf1f7-e3b1-4de0-a4ae-7cc7ea21fa08" onmouseout="javascript:return __HideDropDown('f693cf1f7-e3b1-4de0-a4ae-7cc7ea21fa08');">Shell Sort (MMBasic)</a> &raquo; <a href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers.html" title="SHIFT or ROTATE an array of integers (MMBasic)">SHIFT or ROTATE an array of integers (MMBasic)</a> &raquo; <a href="MMBasic.Short-range-radio-network-not-WiFi-SLAVE-module-Uses-cheapie-433MHz-modules-or-HC-12.html" title="Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)">Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)</a> &raquo; <b><a href="MMBasic.Sign-Extend-an-Integer.html" title="Sign Extend an Integer (MMBasic)">Sign Extend an Integer (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		Often times a value stored somewhere may not be the same width as an MMBasic Integer variable, being commonly 8, 9 or 16 bits wide. For example, the temperature register (&H11) of the popular DS3231 RTC chip is a two's-compliment byte. Reading (theoretically) +127 to -128C.<br /><br />If this number is placed directly in an integer variable without sign extending bit 7 through to the end of the integer (bit 63) the temperature will be incorrect if negative - it will read over 128C. It is necessary to extend bit 7 of the register through the remaining 56 bits to obtain a true 64-bit integer value of the reading that will play nicely with integer maths... Of course this isn't necessary if you are not expecting sub-zero temperatures and are OK with taking the chance.<br /><br />The following function will return a value sign-extended from any given bit. There is no error checking - if you feed it rubbish or try to crash it you'll probably succeed.<br /><br /><b>Syntax:</b><br />=SgnX(Bit,Value)<br /><br /><b>Examples:</b> (better understood looking at the binary)<br /><code>Print Bin$(SgnX(7,&h7f),64)</code><br /><pre><br />0000000000000000000000000000000000000000000000000000000001111111<br />                                                        ^        bit 7<br /></pre><br /><code>Print Bin$(SgnX(7,&h8f),64)</code><br /><pre><br />1111111111111111111111111111111111111111111111111111111110001111<br />                                                        ^        bit 7<br /></pre><br />Consider the following:<br /><code><br />RTC GetReg 17,x<br /></code><br />Here x contains the 8-bit, two's compliment value for the temperature but as the remaining (top) 56 bits of x are zero, the value will always be treated as positive by MMBasic. Imagine the value read was 254 (&hFE), which is -2 degrees (bit 7 is set). When assigned to the variable x, it will be treated as the absolute value of the register - positive 254 (bit 63 is 0 = positive, and all the bits in between). <br /><br /><code>Print Bin$(x,64)<br />0000000000000000000000000000000000000000000000000000000011111110</code><br /><br />To correct this, the sign of the register value (bit 7) needs to be extended through (copied-to) the remaining 56 bits up to bit 63 which then makes the integer variable x hold the equivalent 64 bit version of the value:<br /><code><br />x=SgnX(7,x)<br /><br />Print Bin$(x,64)<br />1111111111111111111111111111111111111111111111111111111111111110<br /><br />Print x<br />-2</code><br /><br /><br />As another example, if a value read is 9 bits (maybe from serial comms) which is to be interpreted as two's compliment 8 bits for the value plus sign bit, simply extend bit 9, or for a traditional 16 bit signed integer, extend bit 15. The function will take any bit as the sign and return a correctly formatted 8 byte MMbasic integer.<br /><br /><b>Code:</b><br /><pre>
+	Function SgnX(b As Integer,v As Integer) As Integer' sign extend bit b of value v
+		If v And 2^b Then 'extend 1
+			SgnX=v Or (-1 &lt;&lt; (b+1))
+		Else 'extend 0
+			SgnX= v And ((2^(b+1))-1)
+		EndIf
+	End Function
+</pre><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Sign-Extend-an-Integer.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:57:08 GMT -->
+</html>

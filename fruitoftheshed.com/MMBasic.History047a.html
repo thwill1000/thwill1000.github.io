@@ -1,0 +1,152 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.DateAdd-Function-VB-work-a-like&Revision=00000 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:06:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.DateAdd-Function-VB-work-a-like&amp;Revision=00000" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAUxUGFnZSBIaXN0b3J5OiBEYXRlQWRkKCkgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKWQCBQ8QZBAVAgExATAVAgExATAUKwMCZ2dkZAIHDxBkEBUDB0N1cnJlbnQBMQEwFQMHQ3VycmVudAExATAUKwMDZ2dnZGQCCw8WAh8ABZoiPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+JmxhcXVvOyBPbGRlciBSZXZpc2lvbiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5EYXRlQWRkLUZ1bmN0aW9uLVZCLXdvcmstYS1saWtlIj5CYWNrIHRvIFBhZ2UgSGlzdG9yeTwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuRGF0ZUFkZC1GdW5jdGlvbi1WQi13b3JrLWEtbGlrZSZhbXA7UmV2aXNpb249MDAwMDEiPk5ld2VyIFJldmlzaW9uICZyYXF1bzs8L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAxOC8wMS8wMiAxNzoyODwvaDM+PGJyIC8+VGhlIGZvbGxvd2luZyBpcyBhIERhdGVBZGQgZnVuY3Rpb24gZm9yIGNhbGN1bGF0aW5nIGRhdGVzIHdpdGggeCBpbnRlcnZhbHMgYWRkZWQgKG9yIHN1YnRyYWN0ZWQpLjxiciAvPjxiciAvPkl0IGlzIGluc3BpcmVkIGJ5IHRoZSA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwczovL3d3dy53M3NjaG9vbHMuY29tL2FzcC9mdW5jX2RhdGVhZGQuYXNwIiB0aXRsZT0iVkIgZnVuY3Rpb24gb2YgdGhlIHNhbWUgbmFtZSIgdGFyZ2V0PSJfYmxhbmsiPlZCIGZ1bmN0aW9uIG9mIHRoZSBzYW1lIG5hbWU8L2E+IGJ1dCBpcyB0d2Vha2VkIHNsaWdodGx5IGZyb20gdGhlIG9yaWdpbmFsLiBUaGUgY29uY2VwdCBpczsgcmV0dXJuIGEgZGF0ZXRpbWUgc3RyaW5nIChERC1NTS1ZWVlZIEhIOk1NOlNTKSB3aXRoIHggaW50ZXJ2YWxzIGFkZGVkLiBJbnRlcnZhbHMgYXJlIHNwZWNpZmllZCB3aXRoIGEgc3RyaW5nIGFuZCBhcmU6PGJyIC8+ICB5eXl5IC0gWWVhcjxiciAvPiAgbW0gICAtIENhbGVuZGFyIE1vbnRoIDxiciAvPiAgZGQgICAgLSBEYXk8YnIgLz4gIGggICAgLSBIb3VyPGJyIC8+ICBtICAgIC0gTWludXRlPGJyIC8+ICBzICAgIC0gU2Vjb25kPGJyIC8+PGJyIC8+QnkgZGVmYXVsdCB0aGUgPGNvZGU+aW50ZXJ2YWw8L2NvZGU+IGlzIGFkZGVkIHRvIHRoZSBzdXBwbGllZCBkYXRlLCB0byBzdWJ0cmFjdCBpdCwgbWFrZSB0aGUgPGNvZGU+bnVtYmVyb2Y8L2NvZGU+IHZhbHVlIG5lZ2F0aXZlIGUuZy4geD0teCBvciB4PXgtMip4PGJyIC8+PGJyIC8+VGhlcmUgaXMgbGl0dGxlIHRvIG5vIGVycm9yIGNoZWNraW5nIHNvIGlmIHlvdSBzdXBwbHkgbm9uc2Vuc2UgeW91IHdpbGwgcHJvYmFibHkgY3Jhc2ggaXQgb3IgZ2V0IHJ1YmJpc2ggYmFjay48YnIgLz48YnIgLz5Ob3RlczogZGF0ZXMgd2lsbCBkZWZhdWx0IHRvIDFzdCBNYXJjaCBpZiBpdCB3b3VsZCBoYXZlIHJlc3VsdGVkIGluIGEgbm9uc2Vuc2UgbGVhcCBkYXkuIGkuZS4gMjktMDItMjAxNiArIDEgeWVhciBpcyAwMS0wMyAoYW5kIG5vdCAyOS0wMi0yMDE3KS4gSW50ZXJuYXRpb25hbCBzb3J0IGZvcm1hdCAoeXl5eS1tbS1kZCkgaXMgbm90IGN1cnJlbnRseSBzdXBwb3J0ZWQuPGJyIC8+PGJyIC8+PGI+U3ludGF4PC9iPjo8YnIgLz4gPURhdGVBZGQobnVtYmVyb2YsaW50ZXJ2YWwsZGF0ZXN0cik8YnIgLz48YnIgLz48Yj5FeGFtcGxlczwvYj46PGJyIC8+PGNvZGU+UHJpbnQgRGF0ZUFkZCg3LCJtbSIsIjAxLTAxLTE5NzAgMDA6MDA6MDAiKSAgPC9jb2RlPiAnIHNob3cgdGhlIGRhdGUgc2V2ZW4gbW9udGhzIGZyb20gMXN0IGphbnVhcnkgMTk3MDxiciAvPjxjb2RlPkludm9pY2VEdWUkPURhdGVBZGQoMzAsImQiLE5vdygpKSAgICAgPC9jb2RlPiAgICAgICAgJyBzZXQgdGhlIGR1ZSBkYXRlIDMwIGRheXMgZnJvbSBub3c8YnIgLz48Y29kZT5QcmludCBEYXRlQWRkKC04NTAwMCwibSIsIjI4LTAyLTIwMTAgMTc6MDA6MDAiKTwvY29kZT4nIHNob3cgdGhlIGRhdGUgODUwMDAgbWludXRlcyBiZWZvcmUgMjh0aCBGZWIgMjAxMDxiciAvPjxjb2RlPkRTVFRpbWUkPURhdGVBZGQoNjAsIm0iLE5vdygpKSA8L2NvZGU+ICAgICAgICAgICAgICAgJyBDYWxjdWxhdGUgKzEgZGF5bGlnaHQgc2F2aW5nIHRpbWU8YnIgLz48YnIgLz48Yj5EZXBlbmRlbmNpZXM8L2I+OjxiciAvPjx1bD48bGk+PGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5Vbml4VGltZS1vci1FcG9jaC1UaW1lLmFzaHgiIHRpdGxlPSJVbml4VGltZSBvciBFcG9jaCBUaW1lIj5Vbml4VGltZTwvYT48L2xpPjxsaT48YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLklzTGVhcFllYXItRnVuY3Rpb24tdG8tZGV0ZXJtaW5lLWlmLXRoZS1naXZlbi15ZWFyLWlzLWEtTGVhcC1ZZWFyLW9uLXRoZS1HcmVnb3JpYW4td2VzdGVybi1jYWxlbmRhci5hc2h4IiB0aXRsZT0iSXNMZWFwWWVhciBGdW5jdGlvbiB0byBkZXRlcm1pbmUgaWYgdGhlIGdpdmVuIHllYXIgaXMgYSBMZWFwIFllYXIgb24gdGhlIEdyZWdvcmlhbiAod2VzdGVybikgY2FsZW5kYXIiPklzTGVhcFllYXI8L2E+PC9saT48bGk+PGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5aUGFkLXBhZC1hLW51bWJlci13aXRoLWxlYWRpbmctemVyb2VzLmFzaHgiIHRpdGxlPSJaUGFkJCgpIC0gcGFkIGEgbnVtYmVyIHdpdGggbGVhZGluZyB6ZXJvZXMiPlpQYWQkPC9hPjwvbGk+PGxpPjxhIGNsYXNzPSJwYWdlbGluayIgdGFyZ2V0PSJfYmxhbmsiIGhyZWY9Ik1NQmFzaWMuSHVtYW5UaW1lLUZ1bmN0aW9uLXRvLXJldHVybi1hLWh1bWFuLXJlYWRhYmxlLWRhdGUtYW5kLXRpbWUtZnJvbS1hLXVuaXh0aW1lLW51bWJlci5hc2h4IiB0aXRsZT0iSHVtYW5UaW1lKCkgRnVuY3Rpb24gdG8gcmV0dXJuIGEgaHVtYW4gcmVhZGFibGUgZGF0ZSBhbmQgdGltZSBmcm9tIGEgdW5peHRpbWUgbnVtYmVyIj5IdW1hblRpbWU8L2E+PGJyIC8+PC9saT48L3VsPjxiciAvPjxiPkNvZGU8L2I+OjxiciAvPjxwcmU+DQogICAJRnVuY3Rpb24gRGF0ZUFkZChOdW0gQXMgSW50ZWdlcixJbnRlcnZhbCBBcyBTdHJpbmcsZHQgQXMgU3RyaW5nKSBBcyBTdHJpbmcNCgkJJ3JldHVybiBhIHN0cmluZyBvZiB0aGUgZGF0ZXRpbWUgd2l0aCB0aGUgcmVsZXZhbnQgcGVyaW9kIGFkZGVkDQoJCSdhZGQgLXZlIHRvIHN1YnRyYWN0IGUuZy4NCgkJJ0RhdGVBZGQgKDIsIm1tIixOb3coKSkgIHJldHVybnMgdGhlIGRhdGV0aW1lIHRpbWUgdHdvIG1vbnRocyBmcm9tIG5vdy4NCgkJJ0RhdGVBZGQoLTEwMDAsImRkIixOb3coKSkgcmV0dXJucyB0aGUgZGF0ZXRpbWUgYSB0aG91c2FuZCBkYXlzIGFnbw0KCQlMb2NhbCBJbnRlZ2VyIHV0LHgseSx6DQoJCUxvY2FsIFN0cmluZyBhJA0KCQkNCgkJYSQ9ZHQgJyBkdCBkZXN0cm95ZWQgYnkgdW5peHRpbWUNCgkJdXQ9VW5peFRpbWUoYSQpDQoNCgkJU2VsZWN0IENhc2UgTENhc2UkKEludGVydmFsKQ0KCQkJY2FzZSAicyInIFNlY29uZHMNCgkJCQlEYXRlQWRkPUh1bWFuVGltZSh1dCtOdW0pDQoJCQljYXNlICJtIicgTWludXRlcw0KCQkJCURhdGVBZGQ9SHVtYW5UaW1lKHV0KyhOdW0mIzQyOzYwKSkNCgkJCWNhc2UgImgiJyBIb3Vycw0KCQkJCURhdGVBZGQ9SHVtYW5UaW1lKHV0KyhOdW0mIzQyOzM2MDApKQ0KCQkJY2FzZSAiZGQiICdEYXlzDQoJCQkJRGF0ZUFkZD1IdW1hblRpbWUodXQrKE51bSYjNDI7ODY0MDApKQ0KCQkJY2FzZSAibW0iJyBjYWxlbmRhciBNb250aHMNCgkJCQl4PVZhbChNaWQkKGR0LDQsMikpLTEmIzU4OyB5PVZhbChNaWQkKGR0LDcsNCkpJiM1ODsgej1WYWwoTGVmdCQoZHQsMikpDQoJCQkJeD0oKHgrTnVtKSBNb2QgMTIpKzEmIzU4OyB5PXkrTnVtXDEyDQoJCQkJSWYgKHg9MiBBbmQgej0yOSkgQW5kIChOb3QgSXNMZWFwWWVhcih5KSkgVGhlbiAnIGJsdWRnZW9uIGZvciAyOS8wMiBpbiBub24tbGVhcCB5ZWFyDQoJCQkJCXg9MyYjNTg7ej0xDQoJCQkJRW5kSWYNCgkJCQlEYXRlQWRkPVpQYWQkKHosMikrIi0iK1pQYWQkKEFicyh4KSwyKSsiLSIrWnBhZCQoeSw0KSsgUmlnaHQkKGR0JCw5KQ0KCQkJY2FzZSAieXl5eSInIFllYXJzDQoJCQkJeD1WYWwoTGVmdCQoZHQsMikpJiM1ODsgeT1WYWwoTWlkJChkdCw0LDIpKSYjNTg7IHo9VmFsKE1pZCQoZHQsNyw0KSkmIzU4OyANCgkJCQl6PXorbnVtDQoJCQkJSWYgKHk9MiBBbmQgeD0yOSkgQW5kIChOb3QgSXNMZWFwWWVhcih6KSkgVGhlbiANCgkJCQkJeT0zJiM1ODt4PTENCgkJCQlFbmRJZg0KCQkJCURhdGVBZGQ9WlBhZCQoeCwyKSsiLSIrWlBhZCQoQWJzKHkpLDIpKyItIitacGFkJCh6LDQpKyBSaWdodCQoZHQkLDkpDQoJCQlDYXNlIEVsc2UNCgkJCQlEYXRlQWRkPSIiDQoJCUVuZCBTZWxlY3QNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPmRkdVStXcrGrvpOpPY+3hF4d3FHQS0=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwL40ZfrAwK9z/TSAwKiz/TSAwK3j57gBwLC5ta/BQLd5ta/BQL9yYWiCUKm7iexUIBgoKb/UD+chvA4CR8a" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login8de1.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.DateAdd-Function-VB-work-a-like%26Revision%3d00000" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: DateAdd() Function (VB work-a-like)</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b>&laquo; Older Revision - <a href="MMBasic.Historyf263.html?Page=MMBasic.DateAdd-Function-VB-work-a-like">Back to Page History</a> - <a href="MMBasic.Historyf872.html?Page=MMBasic.DateAdd-Function-VB-work-a-like&amp;Revision=00001">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/01/02 17:28</h3><br />The following is a DateAdd function for calculating dates with x intervals added (or subtracted).<br /><br />It is inspired by the <a class="externallink" href="https://www.w3schools.com/asp/func_dateadd.asp" title="VB function of the same name" target="_blank">VB function of the same name</a> but is tweaked slightly from the original. The concept is; return a datetime string (DD-MM-YYYY HH:MM:SS) with x intervals added. Intervals are specified with a string and are:<br />  yyyy - Year<br />  mm   - Calendar Month <br />  dd    - Day<br />  h    - Hour<br />  m    - Minute<br />  s    - Second<br /><br />By default the <code>interval</code> is added to the supplied date, to subtract it, make the <code>numberof</code> value negative e.g. x=-x or x=x-2*x<br /><br />There is little to no error checking so if you supply nonsense you will probably crash it or get rubbish back.<br /><br />Notes: dates will default to 1st March if it would have resulted in a nonsense leap day. i.e. 29-02-2016 + 1 year is 01-03 (and not 29-02-2017). International sort format (yyyy-mm-dd) is not currently supported.<br /><br /><b>Syntax</b>:<br /> =DateAdd(numberof,interval,datestr)<br /><br /><b>Examples</b>:<br /><code>Print DateAdd(7,"mm","01-01-1970 00:00:00")  </code> ' show the date seven months from 1st january 1970<br /><code>InvoiceDue$=DateAdd(30,"d",Now())     </code>        ' set the due date 30 days from now<br /><code>Print DateAdd(-85000,"m","28-02-2010 17:00:00")</code>' show the date 85000 minutes before 28th Feb 2010<br /><code>DSTTime$=DateAdd(60,"m",Now()) </code>               ' Calculate +1 daylight saving time<br /><br /><b>Dependencies</b>:<br /><ul><li><a class="pagelink" target="_blank" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a></li><li><a class="pagelink" target="_blank" href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear</a></li><li><a class="pagelink" target="_blank" href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$</a></li><li><a class="pagelink" target="_blank" href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime</a><br /></li></ul><br /><b>Code</b>:<br /><pre>
+   	Function DateAdd(Num As Integer,Interval As String,dt As String) As String
+		'return a string of the datetime with the relevant period added
+		'add -ve to subtract e.g.
+		'DateAdd (2,"mm",Now())  returns the datetime time two months from now.
+		'DateAdd(-1000,"dd",Now()) returns the datetime a thousand days ago
+		Local Integer ut,x,y,z
+		Local String a$
+		
+		a$=dt ' dt destroyed by unixtime
+		ut=UnixTime(a$)
+
+		Select Case LCase$(Interval)
+			case "s"' Seconds
+				DateAdd=HumanTime(ut+Num)
+			case "m"' Minutes
+				DateAdd=HumanTime(ut+(Num&#42;60))
+			case "h"' Hours
+				DateAdd=HumanTime(ut+(Num&#42;3600))
+			case "dd" 'Days
+				DateAdd=HumanTime(ut+(Num&#42;86400))
+			case "mm"' calendar Months
+				x=Val(Mid$(dt,4,2))-1&#58; y=Val(Mid$(dt,7,4))&#58; z=Val(Left$(dt,2))
+				x=((x+Num) Mod 12)+1&#58; y=y+Num\12
+				If (x=2 And z=29) And (Not IsLeapYear(y)) Then ' bludgeon for 29/02 in non-leap year
+					x=3&#58;z=1
+				EndIf
+				DateAdd=ZPad$(z,2)+"-"+ZPad$(Abs(x),2)+"-"+Zpad$(y,4)+ Right$(dt$,9)
+			case "yyyy"' Years
+				x=Val(Left$(dt,2))&#58; y=Val(Mid$(dt,4,2))&#58; z=Val(Mid$(dt,7,4))&#58; 
+				z=z+num
+				If (y=2 And x=29) And (Not IsLeapYear(z)) Then 
+					y=3&#58;x=1
+				EndIf
+				DateAdd=ZPad$(x,2)+"-"+ZPad$(Abs(y),2)+"-"+Zpad$(z,4)+ Right$(dt$,9)
+			Case Else
+				DateAdd=""
+		End Select
+	End Function
+</pre><br />
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.DateAdd-Function-VB-work-a-like&Revision=00000 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:06:26 GMT -->
+</html>

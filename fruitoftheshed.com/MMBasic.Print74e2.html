@@ -1,0 +1,82 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Deeply-Recursive-Ackermann-Function-with-Memoization by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Deeply Recursive Ackermann Function with Memoization - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Deeply-Recursive-Ackermann-Function-with-Memoization" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFiCc8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RGVlcGx5IFJlY3Vyc2l2ZSBBY2tlcm1hbm4gRnVuY3Rpb24gd2l0aCBNZW1vaXphdGlvbjwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMjAvMDkvMTMgMDI6NDEgYnkgU3RldmUgSm9obnNvbiAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBBUk1NaXRlLCBBcnJheXMsIE1hdGhzLCBNZW1vcnksIFByb2dyYW0gRmxvdywgUmVjdXJzaW9uPC9zbWFsbD48YnIgLz48YnIgLz5XaWxoZWxtIEFja2VybWFubiBleHBsb3JlZCByZWN1cnNpdmUgZnVuY3Rpb25zLCBzdWNoIGFzIEZpYm9uYWNjaSwgYnV0IGxvb2tlZCBmdXJ0aGVyIGF0IG11Y2ggbW9yZSBjb21wbGljYXRlZCwgcG90ZW50aWFsbHkgZG91Ymx5IHJlY3Vyc2l2ZSBmdW5jdGlvbnMuICBIZSBpbnZlbnRlZCB0aGUgPGEgY2xhc3M9ImV4dGVybmFsbGluayIgaHJlZj0iaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvQWNrZXJtYW5uX2Z1bmN0aW9uIiB0aXRsZT0iQWNrZXJtYW5uIEZ1bmN0aW9uIiB0YXJnZXQ9Il9ibGFuayI+QWNrZXJtYW5uIEZ1bmN0aW9uPC9hPiwgd2hpY2ggZ3Jvd3MgbWVtb3J5IGFuZCBzdGFjayB1c2UgKG11Y2ghKSBmYXN0ZXIgdGhhbiBleHBvbmVudGlhbC48YnIgLz5Nb3JlIHJlY2VudGx5LCBwZW9wbGUgaGF2ZSBzcGVkIHVwIHRoZSBldmFsdWF0aW9uIG9mIHRoZSBBY2tlcm1hbm4gZnVuY3Rpb24gYnkgPGEgY2xhc3M9ImV4dGVybmFsbGluayIgaHJlZj0iaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvTWVtb2l6YXRpb24iIHRpdGxlPSJtZW1vaXphdGlvbiIgdGFyZ2V0PSJfYmxhbmsiPm1lbW9pemF0aW9uPC9hPi4gIFJlY29nbml6aW5nIHRoYXQgc3VjaCBhIGRlZXBseSByZWN1cnNpdmUgYWxnb3JpdGhtIG9mdGVuIGNvdmVycyB0aGUgc2FtZSBldmFsdWF0aW9ucyBtYW55LCBtYW55IHRpbWVzLCBtZW1vaXphdGlvbiBzdG9yZXMgZXZhbHVhdGVkIHJlc3VsdHMsIGFuZCBhbGxvd3MgYSBub24tbmFpdmUgYWxnb3JpdGhtIHRvIGRldGVybWluZSB3aGV0aGVyIGZ1cnRoZXIgcmVjdXJzaW9uIGlzIG5lZWRlZC4gIFRoaXMgbW1CYXNpYyBpbXBsZW1lbnRhdGlvbiB1c2VzIG1lbW9pemF0aW9uIHRvIGV2YWx1YXRlIHRoZSBBY2tlcm1hbm4gZnVuY3Rpb24uPGJyIC8+QmVjYXVzZSBvZiB0aGUgZGVzaWduIG9mIHRoZSBmdW5jdGlvbiwgZXZhbHVhdGlvbiBncm93cyBtdWNoIGZhc3RlciAidmVydGljYWxseSIgdGhhbiAiaG9yaXpvbnRhbGx5Ii4gIFRoZSBBY2tlcm1hbm4gbWVtb2l6YXRpb24gYXJyYXkgaXMgZGVmaW5lZCBmaXZlIHRpbWVzIGRlZXBlciB0aGFuIGl0IGlzIHdpZGUuPGJyIC8+bW1CYXNpYydzIG93biBpbXBsZW1lbnRhdGlvbiBsaW1pdHMgcmVjdXJzaXZlIGNhbGxzIHRvIH4xMDAgZGVlcC4gIE9uY2UgaXQgZ2V0cyB0aGF0IGRlZXAsIHRoZSBwcm9ncmFtIHdpbGwgY3Jhc2guPGJyIC8+PGJyIC8+PHByZT4nICYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOw0KJyAgIERlZXBseSBSZWN1cnNpdmUgQWNrZXJtYW5uIFNlcXVlbmNlIHVzaW5nIE1lbW9pemF0aW9uIGluIE1NQmFzaWMNCicgICBTZWUgaHR0cHMmIzU4Oy8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0Fja2VybWFubl9mdW5jdGlvbiBmb3IgbW9yZSBpbmZvcm1hdGlvbg0KJyAgIFN0ZXZlbiBGLiBKb2huc29uICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgU2VwdGVtYmVyIDIwMjANCicNCicgICBBKG0sIG4pJiM1ODsgIG0gPSAwCSAgICBBKDAsIG4pID0gbisxICAgICAgICAgICAgICAgIChObyByZWN1cnNpb24gICAgKQ0KJyAgICAgICAgICAgICBtICZndDsgMCwgbiA9IDAgIEEobSwgMCkgPSBBKG0tMSwgMSkgICAgICAgICAgKFNpbmdsZSByZWN1cnNpb24pDQonICAgICAgICAgICAgIE90aGVyd2lzZSAgICAgQShtLCBuKSA9IEEobS0xLCBBKG0sIG4tMSkpICAoRG91YmxlIHJlY3Vyc2lvbikNCicgJiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7DQoNCicgJiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsgIEluaXRpYWxpemF0aW9uIFNlY3Rpb24gICAmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7DQpPcHRpb24gQkFTRSAwICYjNTg7IE9QVElPTiBFWFBMSUNJVA0KRGltIElOVEVHRVIgaSwgaiwgTWVtQWNrKDIwLDEwMDApJyBBbGxvY2F0ZSBzcGFjZSBmb3IgUmVzdWx0cw0KDQpGb3IgaT0wIHRvIDE5DQogIEZvciBqPTAgdG8gOTk5DQogICAgTWVtQWNrKGksaik9LTk5ICAnIGluZGljYXRlIHRoYXQgdGhpcyBpcyBub3QgeWV0IGV2YWx1YXRlZA0KICBOZXh0IGoNCk5leHQgaQ0KDQonICYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7ICAgRnVuY3Rpb24gRGVmaW5pdGlvbnMgICAmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsNCkZ1bmN0aW9uIEFjayhtLCBuKSBBcyBJTlRFR0VSICcgSW1wbGVtZW50cyBBY2tlcm1hbm4gRnVuY3Rpb24NCg0KICBJZiAobT0wKSBUaGVuICAgICAgICAgICAgICAgICAgICAgICAgJyBTaW1wbGVzdCBjYXNlIC0gbm8gcmVjdXJzaW9uDQogICAgTWVtQWNrKG0sbikgPSBuKzEgICAgICAgICAgICAgICAgICAnIE1lbW9pemUgaXQhDQogIA0KICBFbHNlSWYgKChtJmd0OzApIEFuZCAobj0wKSkgVGhlbiAgICAgICAgJyBNZWRpdW0gY2FzZSAtIHNpbmdsZSByZWN1cnNpb24NCiAgICBJZiBNZW1BY2sobS0xLDEpICZsdDsgMCBUaGVuICAgICAgICAgICcgQ2hlY2sgdG8gc2VlIGlmIHZhbHVlIGFscmVhZHkgdGhlcmUNCiAgICAgIE1lbUFjayhtLG4pID0gQWNrKG0tMSwxKSAgICAgICAgICcgQ2FsY3VsYXRlLCB0aGVuIE1lbW9pemUgaXQNCiAgICBFbHNlDQogICAgICBNZW1BY2sobSxuKSA9IE1lbUFjayhtLTEsMSkgICAgICAnIE1lbW9pemUgdGhlIGV4aXN0aW5nIHZhbHVlDQogICAgRW5kSWYNCg0KICBFbHNlICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJyBNb3N0IGNvbXBsaWNhdGVkIC0gcG90ZW50aWFsIGRvdWJsZSByZWN1cnNpb24NCiAgICBJZiBNZW1BY2sobSwgbi0xKSAmbHQ7IDAgVGhlbiBNZW1BY2sobSwgbi0xKSA9IEFjayhtLCBuLTEpICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICcgU2VlIGlmIFJpZ2h0IEhhbmQgYWxyZWFkeSBldmFsdWF0ZWQNCiAgICBJZiBNZW1BY2sobS0xLCBNZW1BY2sobSwgbi0xKSkgJmx0OyAwIFRoZW4gTWVtQWNrKG0tMSwgTWVtQWNrKG0sIG4tMSkpID0gQWNrKG0tMSwgTWVtQWNrKG0sIG4tMSkpICcgQ2hlY2sgZm9yIExlZnQgSGFuZCB2YWx1ZQ0KICAgIE1lbUFjayhtLG4pID0gTWVtQWNrKG0tMSxNZW1BY2sobSwgbi0xKSkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgJyBNZW1vaXplIGl0IQ0KDQogIEVuZGlmDQoNCiAgQWNrID0gTWVtQWNrKG0sbikgICAgICAgICAgICAgICAgICAgICcgU2V0IHJldHVybiB2YWx1ZSBmb3IgZnVuY3Rpb24gdG8gbWVtb2l6ZWQgdmFsdWUNCg0KRW5kIEZ1bmN0aW9uDQoNCicgJiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsgICBNYWluIEJvZHkgb2YgUHJvZ3JhbSAgICYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOyYjNDI7JiM0MjsmIzQyOw0KDQpDTFMNClByaW50ICJQcmVzcyBDdHJsLUMgdG8gaW50ZXJydXB0IGV4ZWN1dGlvbiINCg0KRm9yIGkgPSAwIHRvIDkNCiAgRm9yIGogPSAwIHRvIDkNCiAgICBQcmludCAiICAgQWNrKCI7IGk7ICIsICI7IGo7ICIgKSYjNTg7ICI7IEFjayhpLGopDQogIE5leHQgag0KTmV4dCBpDQoNCkVuZDwvcHJlPmRklckpM65ok0MF1XoxY5pA5xMhtjE=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Deeply Recursive Ackermann Function with Memoization</h1><small>Modified on 2020/09/13 02:41 by Steve Johnson &mdash; Categorized as: ARMMite, Arrays, Maths, Memory, Program Flow, Recursion</small><br /><br />Wilhelm Ackermann explored recursive functions, such as Fibonacci, but looked further at much more complicated, potentially doubly recursive functions.  He invented the <a class="externallink" href="https://en.wikipedia.org/wiki/Ackermann_function" title="Ackermann Function" target="_blank">Ackermann Function</a>, which grows memory and stack use (much!) faster than exponential.<br />More recently, people have sped up the evaluation of the Ackermann function by <a class="externallink" href="https://en.wikipedia.org/wiki/Memoization" title="memoization" target="_blank">memoization</a>.  Recognizing that such a deeply recursive algorithm often covers the same evaluations many, many times, memoization stores evaluated results, and allows a non-naive algorithm to determine whether further recursion is needed.  This mmBasic implementation uses memoization to evaluate the Ackermann function.<br />Because of the design of the function, evaluation grows much faster "vertically" than "horizontally".  The Ackermann memoization array is defined five times deeper than it is wide.<br />mmBasic's own implementation limits recursive calls to ~100 deep.  Once it gets that deep, the program will crash.<br /><br /><pre>' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+'   Deeply Recursive Ackermann Sequence using Memoization in MMBasic
+'   See https&#58;//en.wikipedia.org/wiki/Ackermann_function for more information
+'   Steven F. Johnson                                          September 2020
+'
+'   A(m, n)&#58;  m = 0	    A(0, n) = n+1                (No recursion    )
+'             m &gt; 0, n = 0  A(m, 0) = A(m-1, 1)          (Single recursion)
+'             Otherwise     A(m, n) = A(m-1, A(m, n-1))  (Double recursion)
+' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+
+' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;  Initialization Section   &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+Option BASE 0 &#58; OPTION EXPLICIT
+Dim INTEGER i, j, MemAck(20,1000)' Allocate space for Results
+
+For i=0 to 19
+  For j=0 to 999
+    MemAck(i,j)=-99  ' indicate that this is not yet evaluated
+  Next j
+Next i
+
+' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;   Function Definitions   &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+Function Ack(m, n) As INTEGER ' Implements Ackermann Function
+
+  If (m=0) Then                        ' Simplest case - no recursion
+    MemAck(m,n) = n+1                  ' Memoize it!
+  
+  ElseIf ((m&gt;0) And (n=0)) Then        ' Medium case - single recursion
+    If MemAck(m-1,1) &lt; 0 Then          ' Check to see if value already there
+      MemAck(m,n) = Ack(m-1,1)         ' Calculate, then Memoize it
+    Else
+      MemAck(m,n) = MemAck(m-1,1)      ' Memoize the existing value
+    EndIf
+
+  Else                                 ' Most complicated - potential double recursion
+    If MemAck(m, n-1) &lt; 0 Then MemAck(m, n-1) = Ack(m, n-1)                                        ' See if Right Hand already evaluated
+    If MemAck(m-1, MemAck(m, n-1)) &lt; 0 Then MemAck(m-1, MemAck(m, n-1)) = Ack(m-1, MemAck(m, n-1)) ' Check for Left Hand value
+    MemAck(m,n) = MemAck(m-1,MemAck(m, n-1))                                                       ' Memoize it!
+
+  Endif
+
+  Ack = MemAck(m,n)                    ' Set return value for function to memoized value
+
+End Function
+
+' &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;   Main Body of Program   &#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;&#42;
+
+CLS
+Print "Press Ctrl-C to interrupt execution"
+
+For i = 0 to 9
+  For j = 0 to 9
+    Print "   Ack("; i; ", "; j; " )&#58; "; Ack(i,j)
+  Next j
+Next i
+
+End</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Deeply-Recursive-Ackermann-Function-with-Memoization by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:32 GMT -->
+</html>

@@ -1,0 +1,75 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.RC4-Encryption-and-Decryption-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	RC4 Encryption and Decryption Functions - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.RC4-Encryption-and-Decryption-Functions" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFsBo8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UkM0IEVuY3J5cHRpb24gYW5kIERlY3J5cHRpb24gRnVuY3Rpb25zPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAyMS8xMS8xMiAxMToxNCBieSBDYXB0YWluQm9pbmcgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogRW5jb2RlIGFuZCBEZWNvZGUsIE1hdGhzLCBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz5XaGVuIHNlbmRpbmcgZGF0YSBiZXR3ZWVuIHVuaXRzLCB0aGUgZGF0YSBzaG91bGQgYmUgZW5jcnlwdGVkLCBubyBtYXR0ZXIgaG93IHRyaXZpYWwuIEl0IHNlZW1zIHRoZXJlIGFyZSBtaXNjcmVhbnRzIHdobyBsaWtlIHRvIGNyZWF0ZSBoYXZvYyBhbHRob3VnaCBpdCBpcyBzaW1pbGFybHkgdHJpdmlhbCBpbiBpbXBhY3Qgb24gdGhlICJiaWcgcGljdHVyZSIgLSB0aGUgbWVudGFsIGNoYWxsZW5nZSBzZWVtcyB0byBiZSB0aGUgZ29hbC48YnIgLz48YnIgLz5UaGUgUkM0IEVuY3J5cHRpb24gQWxnb3JpdGhtLCBpcyBhIHNoYXJlZCBrZXkgbWV0aG9kIHJlcXVpcmluZyBhIHNlY3VyZSBleGNoYW5nZSBvZiBhIHNoYXJlZCBrZXkgaS5lLiBib3RoIHNpZGVzIG9mIHRoZSBlbmNvZGUvZGVjb2RlIG11c3QgcG9zc2VzcyB0aGUga2V5LiBSQzQgaXMgdGVybWVkICJzeW1tZXRyaWNhbCIgLSB0aGF0IGlzIHRoZSBzYW1lIGtleSBpcyB1c2VkIHRvIGJvdGggZW5jcnlwdCBhbmQgZGVjcnlwdC4gSXQgaXMgbm93IGNvbnNpZGVyZWQgYSBkZXByZWNhdGVkIG1ldGhvZCBmb3IgcmVhbGx5IHN0cm9uZyBlbmNyeXB0aW9uIGJ1dCBpcyBzdGlsbCB2aWFibGUgd2l0aCBhIHN1aXRhYmx5IGNvbXBsZXgga2V5IChhdCBsZWFzdCAzMCBjaGFyYWN0ZXJzKS4gVG8gZnVydGhlciBoYXJkZW4gdGhpbmdzLCBpdCBpcyBwb3NzaWJsZSB0byBoYXZlIGRpZmZlcmVudCBrZXlzLiBZb3UgY291bGQgZWFzaWx5IG1vZGlmeSB0aGUgYmVsb3cgY29kZSB0byBoYXZlIG9uZSB1c2VkIGZvciBkZWNyeXB0aW5nIGEgcGFja2V0IGFuZCBhbm90aGVyIGZvciBzZW5kaW5nLiBGdXJ0aGVyIHlvdSBjb3VsZCBoYXZlIHNlcGFyYXRlIHBhY2tldHMgZm9yIGVhY2ggcmVjaXBpZW50LCBlLmcuIGluIGEgbmV0d29yayBvZiAxMCB1bml0cywgZWFjaCBjb3VsZCBoYXZlIGEgcGFpciBvZiBrZXlzIHRoYXQgaXQgdXNlcyB3aGVuIHRhbGtpbmcgdG8gZWFjaCBvZiB0aGUgb3RoZXIgZGV2aWNlcy4gMjAga2V5cyBpbiB0b3RhbCBidXQgdmVyeSBlYXN5IHRvIGtlZXAgdHJhY2sgb2Ygd2hpY2ggdG8gdXNlLiBFdmVuIHdpdGggYSBkZXByZWNhdGVkIGVuY3J5cHRpb24sIHRoaXMgd291bGQgbWFrZSBpdCBhbG1vc3QgaW1wb3NzaWJsZSBmb3IgYW55IHNub29wZXIgdG8gbWFrZSBoZWFkIG9yIHRhaWwgb2Ygd2hhdCBoZSB3YXMgc2VlaW5nIG9uIHRoZSBuZXR3b3JrLjxiciAvPjxiciAvPlJDNCQoKSByZXR1cm5zIGEgaGV4YWRlY2ltYWwgc3RyaW5nIG9mIHRoZSBvcmlnaW5hbCBpbnB1dCBleHByZXNzaW9uLiBOb3RlOiBUaGUgZW5jcnlwdGVkIHN0cmluZyBoYXMgYSAxMDAlIG92ZXJoZWFkIGluIHNpemUgb3ZlciB0aGUgb3JpZ2luYWwgaS5lLiBpdCB3aWxsIGJlIHR3aWNlIHRoZSBsZW5ndGggb2YgdGhlIGlucHV0IHN0cmluZy48YnIgLz48YnIgLz5VblJDNCQoKSBkZWNvZGVzIGEgcHJldmlvdXNseSBlbmNyeXB0ZWQgaGV4Y2FkZWNpbWFsIHN0cmluZyBhbmQgcmV0dXJucyB0aGUgb3JpZ2luYWwgc3RyaW5nLjxiciAvPjxiciAvPjxiPlN5bnRheDwvYj46PGJyIC8+ICAgIFJDNCQoZXhwcmVzc2lvbikgPGJyIC8+ICAgIFVuUkM0JChleHByZXNzaW9uKTxiciAvPjxiciAvPjxiPkV4YW1wbGU8L2I+OjxiciAvPiAgICBhJD1SQzQkKCJUaGUgcXVpY2sgYnJvd24gZm94IikgPGJyIC8+ICAgIGIkPVVuUkM0JChlbmNyeXB0ZWRfZGF0YSQpPGJyIC8+CTxiciAvPjxiPkNvZGU8L2I+OjxiciAvPjxwcmU+CU9QVElPTiBCQVNFIDANCg0KJ29wdGltaXplZCB2ZXJzaW9uIDEyTk9WMjAyMQ0KJ2NoYW5nZSB0aGlzIGtleSB0byB3aGF0ZXZlciB5b3UgbGlrZSBidXQgaXQgc2hvdWxkIGJlIGNvbXBsZXgNCidhdCBsZWFzdCAzMCBjaGFyYWN0ZXJzIGxvbmcgYW5kIGRvbid0IGxvc2UgaXQhIFRvIGluY3JlYXNlIHNlY3VyaXR5LA0KJ3lvdSBjb3VsZCB1c2UgQmFzZTY0IGVuY29kaW5nIHRvIG9iZnVzY2F0ZSBpdCBpbiB5b3VyIGNvZGUuDQonSXQgd29uJ3Qgc3RvcCBhIGRldGVybWluZWQgc25vb3BlciBidXQgd2h5IG1ha2UgaXQgZWFzeSBmb3IgdGhlbT8NCidTdWl0YWJsZSBCNjQgcm91dGluZXMgYXJlIGF2YWlsYWJsZSBpbiB0aGlzIG5hbWVzcGFjZQ0KCUNPTlNUIFJDNEtFWSQ9IiZndDs0ITF4NHEzejQrNyU0JiMxMjM7OT81XDNIaEheNSQ5PTZAMX42LDdfN3wxKTcnMyYjOTM7NyYjOTE7OSYjNTg7OCZsdDszJiM0Mjs4UzlJOWw3WjFlVDByMSINCg0KCUZ1bmN0aW9uIFJDNCQoeiQpDQoJCUxvY2FsIFN0cmluZyBvDQoJCUxvY2FsIEludGVnZXIgaSxqLHgseSx0LHQxLHMoMjU1KSxrKDI1NSkNCgkJRm9yIGk9MCBUbyAyNTUmIzU4O3MoaSk9aSYjNTg7TmV4dA0KCQlqPTEmIzU4O3Q9TGVuKFJDNGtleSQpDQoJCUZvciBpPTAgVG8gMjU1DQoJCQlpZiBqJmd0O3QgVGhlbiBqPTENCgkJCWsoaSk9UGVlayhWYXIgUkM0a2V5JCxqKSYjNTg7aj1qKzENCgkJTmV4dA0KCQlqPTANCgkJRm9yIGk9MCBUbyAyNTUNCgkJCWo9KGorcyhpKStrKGkpKSBNb2QgJmFtcDtoMTAwDQoJCQl0PXMoaSkmIzU4O3MoaSk9cyhqKSYjNTg7cyhqKT10DQoJCU5leHQNCgkJaT0wJiM1ODtqPTANCgkJRm9yIHg9MSBUbyBMZW4oeiQpDQoJCQlpPShpKzEpIE1vZCAmYW1wO2gxMDAmIzU4O2o9KGorcyhpKSkgTW9kICZhbXA7aDEwMA0KCQkJdDE9cyhpKSYjNTg7cyhpKT1zKGopJiM1ODtzKGopPXQxDQoJCQl0PShzKGkpKyhzKGopIE1vZCAmYW1wO2gxMDApKSBNb2QgJmFtcDtoMTAwJiM1ODt5PXModCkNCgkJCW89bytDaHIkKFBlZWsoVmFyIHokLHgpIFhvciB5KQ0KCQlOZXh0DQoJCVJDNCQ9IiINCgkJRm9yIHg9MSBUbyBMZW4obykNCgkJCVJDNCQ9UkM0JCtIZXgkKFBlZWsoVmFyIG8seCksMikJCQkNCgkJTmV4dA0KCUVuZCBGdW5jdGlvbg0KDQoJRnVuY3Rpb24gVW5SQzQkKHokKQ0KCQlMb2NhbCBTdHJpbmcgYw0KCQlMb2NhbCBJbnRlZ2VyIG4NCgkJRm9yIG49MSBUbyBMZW4oeiQpIFN0ZXAgMg0KCQkJYz1jK0NociQoVmFsKCImYW1wO2giK01pZCQoeiQsbiwyKSkpDQoJCU5leHQNCgkJYz1SQzQkKGMpDQoJCUZvciBuPTEgVG8gTGVuKGMpIFN0ZXAgMgkJCQ0KCQkJVW5SQzQkPVVuUkM0JCtDaHIkKFZhbCgiJmFtcDtoIitNaWQkKGMsbiwyKSkpCQkJDQoJCU5leHQNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiciAvPjxiciAvPjxiciAvPiAgPGJyIC8+ZGS7pzhHQKQAWQX3ZydL7MMra5Ngcg==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">RC4 Encryption and Decryption Functions</h1><small>Modified on 2021/11/12 11:14 by CaptainBoing &mdash; Categorized as: Encode and Decode, Maths, Strings</small><br /><br />When sending data between units, the data should be encrypted, no matter how trivial. It seems there are miscreants who like to create havoc although it is similarly trivial in impact on the "big picture" - the mental challenge seems to be the goal.<br /><br />The RC4 Encryption Algorithm, is a shared key method requiring a secure exchange of a shared key i.e. both sides of the encode/decode must possess the key. RC4 is termed "symmetrical" - that is the same key is used to both encrypt and decrypt. It is now considered a deprecated method for really strong encryption but is still viable with a suitably complex key (at least 30 characters). To further harden things, it is possible to have different keys. You could easily modify the below code to have one used for decrypting a packet and another for sending. Further you could have separate packets for each recipient, e.g. in a network of 10 units, each could have a pair of keys that it uses when talking to each of the other devices. 20 keys in total but very easy to keep track of which to use. Even with a deprecated encryption, this would make it almost impossible for any snooper to make head or tail of what he was seeing on the network.<br /><br />RC4$() returns a hexadecimal string of the original input expression. Note: The encrypted string has a 100% overhead in size over the original i.e. it will be twice the length of the input string.<br /><br />UnRC4$() decodes a previously encrypted hexcadecimal string and returns the original string.<br /><br /><b>Syntax</b>:<br />    RC4$(expression) <br />    UnRC4$(expression)<br /><br /><b>Example</b>:<br />    a$=RC4$("The quick brown fox") <br />    b$=UnRC4$(encrypted_data$)<br />	<br /><b>Code</b>:<br /><pre>	OPTION BASE 0
+
+'optimized version 12NOV2021
+'change this key to whatever you like but it should be complex
+'at least 30 characters long and don't lose it! To increase security,
+'you could use Base64 encoding to obfuscate it in your code.
+'It won't stop a determined snooper but why make it easy for them?
+'Suitable B64 routines are available in this namespace
+	CONST RC4KEY$="&gt;4!1x4q3z4+7%4&#123;9?5\3HhH^5$9=6@1~6,7_7|1)7'3&#93;7&#91;9&#58;8&lt;3&#42;8S9I9l7Z1eT0r1"
+
+	Function RC4$(z$)
+		Local String o
+		Local Integer i,j,x,y,t,t1,s(255),k(255)
+		For i=0 To 255&#58;s(i)=i&#58;Next
+		j=1&#58;t=Len(RC4key$)
+		For i=0 To 255
+			if j&gt;t Then j=1
+			k(i)=Peek(Var RC4key$,j)&#58;j=j+1
+		Next
+		j=0
+		For i=0 To 255
+			j=(j+s(i)+k(i)) Mod &amp;h100
+			t=s(i)&#58;s(i)=s(j)&#58;s(j)=t
+		Next
+		i=0&#58;j=0
+		For x=1 To Len(z$)
+			i=(i+1) Mod &amp;h100&#58;j=(j+s(i)) Mod &amp;h100
+			t1=s(i)&#58;s(i)=s(j)&#58;s(j)=t1
+			t=(s(i)+(s(j) Mod &amp;h100)) Mod &amp;h100&#58;y=s(t)
+			o=o+Chr$(Peek(Var z$,x) Xor y)
+		Next
+		RC4$=""
+		For x=1 To Len(o)
+			RC4$=RC4$+Hex$(Peek(Var o,x),2)			
+		Next
+	End Function
+
+	Function UnRC4$(z$)
+		Local String c
+		Local Integer n
+		For n=1 To Len(z$) Step 2
+			c=c+Chr$(Val("&amp;h"+Mid$(z$,n,2)))
+		Next
+		c=RC4$(c)
+		For n=1 To Len(c) Step 2			
+			UnRC4$=UnRC4$+Chr$(Val("&amp;h"+Mid$(c,n,2)))			
+		Next
+	End Function
+</pre><br /><br /><br /><br />  <br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.RC4-Encryption-and-Decryption-Functions by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:00 GMT -->
+</html>

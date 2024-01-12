@@ -1,0 +1,79 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:16:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	HumanTime() Function to return a human readable date and time from a unixtime number - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFxRo8aDEgY2xhc3M9InBhZ2V0aXRsZSI+SHVtYW5UaW1lKCkgRnVuY3Rpb24gdG8gcmV0dXJuIGEgaHVtYW4gcmVhZGFibGUgZGF0ZSBhbmQgdGltZSBmcm9tIGEgdW5peHRpbWUgbnVtYmVyPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxOC8xMi8xNCAxMzoxMCBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IERhdGVzLCBUaW1lIGFuZCBDbG9ja3MsIEVuY29kZSBhbmQgRGVjb2RlLCBNYXRocywgU3RyaW5nczwvc21hbGw+PGJyIC8+PGJyIC8+VGhpcyBmdW5jdGlvbiByZXR1cm5zIGEgc3RyaW5nIHdoaWNoIGlzIHRoZSBjb21iaW5lZCBkYXRlIGFuZCB0aW1lIGZyb20gdGhlIHVuaXh0aW1lIG51bWJlciBwcm92aWRlZC4gSXQgaXMgdGhlIGNvdW50ZXJwYXJ0IG9mIHRoZSA8YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLlVuaXhUaW1lLW9yLUVwb2NoLVRpbWUuYXNoeCIgdGl0bGU9IlVuaXhUaW1lIG9yIEVwb2NoIFRpbWUiPlVuaXhUaW1lPC9hPiBmdW5jdGlvbiAtIEh1bWFudGltZSgpIGFuZCBVbml4dGltZSgpIHRyYW5zbGF0ZSBlYWNoLW90aGVycyBvdXRwdXRzLjxiciAvPjxiciAvPkEgZm9ybWF0IG9wdGlvbiBmb3JtYXRzIHRoZSBkYXRlIHBhcnQgYXMgZm9sbG93czo8YnIgLz48dWw+PGxpPkRELU1NLVlZWVkgd2hlbiBvcHQ9MCBvciBvbWl0dGVkICh0aGlzIG1hdGNoZXMgREFURSQpPC9saT48bGk+WVlZWS1NTS1ERCB3aGVuIG9wdDw+MCA8YnIgLz48L2xpPjwvdWw+PGJyIC8+VGhlIG9wdGlvbiBjYW4gYmUgb21pdHRlZCBpZiByZXF1aXJlZDxiciAvPjxiciAvPjxiPlN5bnRheDo8L2I+PGJyIC8+SHVtYW5UaW1lKHV0JiMwMDkxOyxvcHRpb24mIzAwOTM7KTxiciAvPjxiciAvPjxiPkV4YW1wbGUgVXNhZ2U6PC9iPjxiciAvPjxjb2RlPlByaW50IEh1bWFuVGltZSh1dF9mcm9tX2xvZywxKTwvY29kZT48YnIgLz5vcjxiciAvPjxjb2RlPlByaW50IEh1bWFuVGltZSh1dF9teV9iaXJ0aGRheSk8L2NvZGU+PGJyIC8+PGJyIC8+PGI+RGVwZW5kZW5jaWVzOjwvYj4gVGhlIGZvbGxvd2luZyBmdW5jdGlvbnMgbXVzdCBiZSBpbmNsdWRlZCBpbiB5b3VyIHByb2dyYW0gZm9yIEh1bWFuVGltZSgpIHRvIHdvcmsgY29ycmVjdGx5Li4uPGJyIC8+PHVsPjxsaT48YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLklzTGVhcFllYXItRnVuY3Rpb24tdG8tZGV0ZXJtaW5lLWlmLXRoZS1naXZlbi15ZWFyLWlzLWEtTGVhcC1ZZWFyLW9uLXRoZS1HcmVnb3JpYW4td2VzdGVybi1jYWxlbmRhci5hc2h4IiB0aXRsZT0iSXNMZWFwWWVhciBGdW5jdGlvbiB0byBkZXRlcm1pbmUgaWYgdGhlIGdpdmVuIHllYXIgaXMgYSBMZWFwIFllYXIgb24gdGhlIEdyZWdvcmlhbiAod2VzdGVybikgY2FsZW5kYXIiPklzTGVhcFllYXIgRnVuY3Rpb248L2E+PC9saT48bGk+PGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5aUGFkLXBhZC1hLW51bWJlci13aXRoLWxlYWRpbmctemVyb2VzLmFzaHgiIHRpdGxlPSJaUGFkJCgpIC0gcGFkIGEgbnVtYmVyIHdpdGggbGVhZGluZyB6ZXJvZXMiPlpQYWQkPC9hPjxiciAvPjwvbGk+PC91bD48YnIgLz48YnIgLz48cHJlPg0KDQogIEZ1bmN0aW9uIEh1bWFuVGltZShVVVQgQXMgSW50ZWdlcixvcHQgQXMgSW50ZWdlcikgQXMgU3RyaW5nDQogICAgJyB0YWtlIHNlY29uZHMgc2luY2UgMTk3MC0wMS0wMSAodW5peHRpbWUpIGFuZCBjb252ZXJ0cyB0byBhIGh1bWFuIGZvcm0gZGF0ZS90aW1lIGFzDQogICAgJyBpZiBvcHQ9MCAob3Igbm90IHNwZWNpZmllZCkgdGhlIGZvcm1hdCBpcyBkZC1tbS15eXl5IGhoJiM1ODttbSYjNTg7c3MiIHRvIG1hdGNoIHRoZSBmb3JtYXQgb2YgREFURSQNCiAgICAnIGlmIG9wdCZsdDsmZ3Q7MCB0aGUgZGF0ZSBwYXJ0IGlzIHJldHVybmVkIGFzIHl5eXktbW0tZGQgdG8gYWlkIHNvcnRpbmcgYW5kIGF2b2lkDQogICAgTG9jYWwgaW50ZWdlciBkLG0scyx5LHosVVQNCiAgICBVVD1VVVQgJ3ByZXNlcnZlIG9yaWdpbmFsIGFyZ3VtZW50DQogICAgSWYgVVQmbHQ7MCBUaGVuIEh1bWFuVGltZSQ9IiImIzU4O0V4aXQgRnVuY3Rpb24NCiAgICB5PTE5NzAmIzU4O2Q9VVRcODY0MDAmIzU4O3M9VVQgTW9kIDg2NDAwDQogICAgRG8NCiAgICAgIHo9MzY1K0lzTGVhcFllYXIoeSkNCiAgICAgIElmIGQmZ3Q7PXogVGhlbg0KICAgICAgICBkPWQteiYjNTg7eT15KzENCiAgICAgIEVsc2UNCiAgICAgICAgRXhpdCBEbw0KICAgICAgRW5kSWYNCiAgICBMb29wDQogICAgJ2hlcmUsIFkgaXMgdGhlIGN1cnJlbnQgeWVhciBhbmQgZCB0aGUgcmVtYWluaW5nIGRheXMNCiAgICBtPTEnIHN0YXJ0IGF0IGphbnVhcnkNCiAgICAnIGRheXMgYmV0d2VlbiB0aGUgc3RhcnQgb2YgdGhlIHllYXIgYW5kIHRoZSBjdXJyZW50IG1vbnRoDQogICAgRG8NCiAgICAgIHo9MA0KICAgICAgU2VsZWN0IENhc2UgbQ0KICAgICAgICBDYXNlIDEsMyw1LDcsOCwxMA0KICAgICAgICAgIElmIGQmZ3Q7PTMxIFRoZW4gZD1kLTMxJiM1ODt6PTENCiAgICAgICAgQ2FzZSAyDQogICAgICAgICAgSWYgSXNMZWFwWWVhcih5KVRoZW4NCiAgICAgICAgICAgIElmIGQmZ3Q7PTI5IFRoZW4gZD1kLTI5JiM1ODt6PTENCiAgICAgICAgICBFbHNlDQogICAgICAgICAgICBJZiBkJmd0Oz0yOCBUaGVuIGQ9ZC0yOCYjNTg7ej0xDQogICAgICAgICAgRW5kSWYNCiAgICAgICAgQ2FzZSA0LDYsOSwxMQ0KICAgICAgICAgIElmIGQmZ3Q7PTMwIFRoZW4gZD1kLTMwJiM1ODt6PTENCiAgICAgIEVuZCBTZWxlY3QNCg0KICAgICAgSWYgej0xIFRoZW4NCiAgICAgICAgbT1tKzENCiAgICAgIEVsc2UNCiAgICAgICAgZD1kKzEmIzU4O0V4aXQgRG8gJ2ZpcnN0IGRheSBpcyAxIG5vdCAwDQogICAgICBFbmRJZg0KICAgIExvb3ANCg0KICAgIElmIG9wdCZsdDsmZ3Q7MCBUaGVuDQogICAgICBIdW1hblRpbWUkPVN0ciQoeSkrIi0iK1pQYWQkKG0sMikrIi0iK1pQYWQkKGQsMikNCiAgICBFbHNlDQogICAgICBIdW1hblRpbWUkPVpQYWQkKGQsMikrIi0iK1pQYWQkKG0sMikrIi0iK1N0ciQoeSkNCiAgICBFbmRJZg0KICAgIHk9c1wzNjAwJiM1ODtzPXMteSYjNDI7MzYwMA0KICAgIG09c1w2MCYjNTg7cz1zLW0mIzQyOzYwDQogICAgSHVtYW5UaW1lJD1IdW1hblRpbWUkKyIgIitaUGFkJCh5LDIpKyImIzU4OyIrWlBhZCQobSwyKSsiJiM1ODsiK1pQYWQkKHMsMikNCiAgRW5kIEZ1bmN0aW9uDQo8L3ByZT48YnIgLz48Yj5TZWUgQWxzbzwvYj46PGJyIC8+PGEgY2xhc3M9InBhZ2VsaW5rIiBocmVmPSJNTUJhc2ljLlVuaXhUaW1lLW9yLUVwb2NoLVRpbWUuYXNoeCIgdGl0bGU9IlVuaXhUaW1lIG9yIEVwb2NoIFRpbWUiPlVuaXhUaW1lKCk8L2E+PGJyIC8+ZGQ2X09NbEQoYn+Q0lzZVp08s2zEJA==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">HumanTime() Function to return a human readable date and time from a unixtime number</h1><small>Modified on 2018/12/14 13:10 by Administrator &mdash; Categorized as: Dates, Time and Clocks, Encode and Decode, Maths, Strings</small><br /><br />This function returns a string which is the combined date and time from the unixtime number provided. It is the counterpart of the <a class="pagelink" target="_blank" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a> function - Humantime() and Unixtime() translate each-others outputs.<br /><br />A format option formats the date part as follows:<br /><ul><li>DD-MM-YYYY when opt=0 or omitted (this matches DATE$)</li><li>YYYY-MM-DD when opt<>0 <br /></li></ul><br />The option can be omitted if required<br /><br /><b>Syntax:</b><br />HumanTime(ut&#0091;,option&#0093;)<br /><br /><b>Example Usage:</b><br /><code>Print HumanTime(ut_from_log,1)</code><br />or<br /><code>Print HumanTime(ut_my_birthday)</code><br /><br /><b>Dependencies:</b> The following functions must be included in your program for HumanTime() to work correctly...<br /><ul><li><a class="pagelink" target="_blank" href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function</a></li><li><a class="pagelink" target="_blank" href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$</a><br /></li></ul><br /><br /><pre>
+
+  Function HumanTime(UUT As Integer,opt As Integer) As String
+    ' take seconds since 1970-01-01 (unixtime) and converts to a human form date/time as
+    ' if opt=0 (or not specified) the format is dd-mm-yyyy hh&#58;mm&#58;ss" to match the format of DATE$
+    ' if opt&lt;&gt;0 the date part is returned as yyyy-mm-dd to aid sorting and avoid
+    Local integer d,m,s,y,z,UT
+    UT=UUT 'preserve original argument
+    If UT&lt;0 Then HumanTime$=""&#58;Exit Function
+    y=1970&#58;d=UT\86400&#58;s=UT Mod 86400
+    Do
+      z=365+IsLeapYear(y)
+      If d&gt;=z Then
+        d=d-z&#58;y=y+1
+      Else
+        Exit Do
+      EndIf
+    Loop
+    'here, Y is the current year and d the remaining days
+    m=1' start at january
+    ' days between the start of the year and the current month
+    Do
+      z=0
+      Select Case m
+        Case 1,3,5,7,8,10
+          If d&gt;=31 Then d=d-31&#58;z=1
+        Case 2
+          If IsLeapYear(y)Then
+            If d&gt;=29 Then d=d-29&#58;z=1
+          Else
+            If d&gt;=28 Then d=d-28&#58;z=1
+          EndIf
+        Case 4,6,9,11
+          If d&gt;=30 Then d=d-30&#58;z=1
+      End Select
+
+      If z=1 Then
+        m=m+1
+      Else
+        d=d+1&#58;Exit Do 'first day is 1 not 0
+      EndIf
+    Loop
+
+    If opt&lt;&gt;0 Then
+      HumanTime$=Str$(y)+"-"+ZPad$(m,2)+"-"+ZPad$(d,2)
+    Else
+      HumanTime$=ZPad$(d,2)+"-"+ZPad$(m,2)+"-"+Str$(y)
+    EndIf
+    y=s\3600&#58;s=s-y&#42;3600
+    m=s\60&#58;s=s-m&#42;60
+    HumanTime$=HumanTime$+" "+ZPad$(y,2)+"&#58;"+ZPad$(m,2)+"&#58;"+ZPad$(s,2)
+  End Function
+</pre><br /><b>See Also</b>:<br /><a class="pagelink" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime()</a><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:16:57 GMT -->
+</html>

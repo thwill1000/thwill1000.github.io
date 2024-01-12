@@ -1,0 +1,505 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Colour-Demos-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Colour Demos - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Colour-Demos-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF1osBPGgxIGNsYXNzPSJwYWdldGl0bGUiPkNvbG91ciBEZW1vczwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6MjUgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBHcmFwaGljcywgTWF0aHMsIFNvdW5kcywgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+RGVtb25zdHJhdGlvbiBwcm9ncmFtcyBmb3IgdGhlIENvbG91ciBNYXhpbWl0ZTo8YnIgLz48YnIgLz48Yj5DTU00X1RTVC5CQVM8L2I+PGJyIC8+QSB0ZXN0IHByb2dyYW0gdGhhdCBkZW1vbnN0cmF0ZXMgdmFyaW91cyBncmFwaGljcyBvbiB0aGUgQ29sb3VyIE1heGltaXRlIHJ1bm5pbmcgaW4gTU9ERSA0LiBUaGVzZSBpbmNsdWRlIGNvbG91cmVkIGxpbmVzLCBib3hlcywgY2lyY2xlcyBhbmQgbW92aW5nIGltYWdlcyBvbiB0aGUgc2NyZWVuIHVzaW5nIHRoZSBCTElUIGNvbW1hbmQuPGJyIC8+PGJyIC8+PHByZT4NCidHcmFwaGljIHRlc3QgZm9yIENvbG91ck1NIFY0LjAgRmluYWwgUmVsZWFzZS4NCidNdWxsZXIgRmFicmljZQ0KJzIwMTINCidUaGlzIHByb2dyYW0ganVzdCBzaG93IGFsbCBncmFwaGljcyBmdW5jdGlvbnMuDQonVGhhdCBpcyAmIzU4Ow0KJ1BpeGVscw0KJ0xpbmVzDQonQm94DQonRmlsbGVkIEJveA0KJ0NpcmNsZXMNCidGaWxsZWQgQ2lyY2xlDQonYW5kIHRoZSBuZXcgQmxpdHRlciAhIQ0KDQonZGVjbGFyZSBzb21lIGFycmF5cw0KRGltIHB4MSgxMCkNCkRpbSBweDIoMTApDQpEaW0gcHkxKDEwKQ0KRGltIHB5MigxMCkNCkRpbSBveDEoMTApDQpEaW0gb3gyKDEwKQ0KRGltIG95MSgxMCkNCkRpbSBveTIoMTApDQpEaW0gZHgxKDEwKQ0KRGltIGR4MigxMCkNCkRpbSBkeTEoMTApDQpEaW0gZHkyKDEwKQ0KJ0dhbWUgR3JhcGhpYyBNb2RlIDI0MCB4IDIxNiBpbiA4IGNvbG9ycw0KTW9kZSA0DQonY2xlYXIgdGhlIHNjcmVlbg0KQ2xzDQonR2VuZXJpYyBwaXhlbHMgZ3JhcGhpY3MNCkZvciBhID0gMSBUbyAyMDAwDQogeCA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5ID0gSW50KFJuZCAmIzQyOyBNTS5WUmVzKQ0KIFBpeGVsKHgseSkgPSBJbnQoUm5kICYjNDI7IDgpDQpOZXh0IGENClByaW50IEAoMCwwKSAiMjAwMCBQaXhlbHMiDQpEbyBXaGlsZSBJbmtleSQgPSAiIiAmIzU4OyBMb29wDQpSYW5kb21pemUgVGltZXINCidjbGVhciB0aGUgc2NyZWVuDQonQ2xzDQpib3hfZXJhc2UNCidMaW5lcw0KRm9yIGEgPSAxIFRvIDIwMDANCiB4MSA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MSA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiB4MiA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MiA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiBMaW5lICh4MSx5MSktKHgyLHkyKSxJbnQoUm5kICYjNDI7IDgpDQpOZXh0IGENClByaW50IEAoMCwwKSAiMjAwMCBMaW5lcyINCkRvIFdoaWxlIElua2V5JCA9ICIiICYjNTg7IExvb3ANCidjbGVhciB0aGUgc2NyZWVuDQonQ2xzDQpib3hfZXJhc2UNCidCb3gncw0KRm9yIGEgPSAxIFRvIDIwMDANCiB4MSA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MSA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiB4MiA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MiA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiBMaW5lICh4MSx5MSktKHgyLHkyKSxJbnQoUm5kICYjNDI7IDgpLGINCk5leHQgYQ0KUHJpbnQgQCgwLDApICIyMDAwIEJveCINCkRvIFdoaWxlIElua2V5JCA9ICIiICYjNTg7IExvb3ANCidjbGVhciB0aGUgc2NyZWVuDQonQ2xzDQpib3hfZXJhc2UNCidGaWxsZWQgQm94J3MNCkZvciBhID0gMSBUbyAyMDANCiB4MSA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MSA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiB4MiA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MiA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiBMaW5lICh4MSx5MSktKHgyLHkyKSxJbnQoUm5kICYjNDI7IDgpLGJmDQpOZXh0IGENClByaW50IEAoMCwwKSAiMjAwIEZpbGxlZCBCb3giDQpEbyBXaGlsZSBJbmtleSQgPSAiIiAmIzU4OyBMb29wDQonY2xlYXIgdGhlIHNjcmVlbg0KJ0Nscw0KYm94X2VyYXNlDQonQ2lyY2xlcw0KRm9yIGEgPSAxIFRvIDIwMDANCiB4MSA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MSA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiByID0gSW50KFJuZCAmIzQyOyAoTU0uSFJlcy80KSkNCiBDaXJjbGUgKHgxLHkxKSxyLEludChSbmQgJiM0MjsgOCkNCk5leHQgYQ0KUHJpbnQgQCgwLDApICIyMDAwIENpcmNsZXMiDQpEbyBXaGlsZSBJbmtleSQgPSAiIiAmIzU4OyBMb29wDQonY2xlYXIgdGhlIHNjcmVlbg0KJ0Nscw0KYm94X2VyYXNlDQonRmlsbGVkIENpcmNsZXMNCkZvciBhID0gMSBUbyAyMDANCiB4MSA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiB5MSA9IEludChSbmQgJiM0MjsgTU0uVlJlcykNCiByID0gSW50KFJuZCAmIzQyOyAoTU0uSFJlcy80KSkNCiBDaXJjbGUgKHgxLHkxKSxyLEludChSbmQgJiM0MjsgOCksZg0KTmV4dCBhDQpQcmludCBAKDAsMCkgIjIwMCBGaWxsZWQgQ2lyY2xlcyINCkRvIFdoaWxlIElua2V5JCA9ICIiICYjNTg7IExvb3ANCidjbGVhciB0aGUgc2NyZWVuDQonQ2xzDQpib3hfZXJhc2UNCidMaW5lIFNhdmVyDQpGb3IgYSA9IDEgVG8gNw0KIG94MShhKSA9IDANCiBveTEoYSkgPSAwDQogb3gyKGEpID0gMA0KIG95MihhKSA9IDANCiBweDEoYSkgPSBJbnQoUm5kICYjNDI7IE1NLkhSZXMpDQogcHkxKGEpID0gSW50KFJuZCAmIzQyOyBNTS5WUmVzKQ0KIHB4MihhKSA9IEludChSbmQgJiM0MjsgTU0uSFJlcykNCiBweTIoYSkgPSBJbnQoUm5kICYjNDI7IE1NLlZSZXMpDQogZHgxKGEpID0gKFJuZCAmIzQyOyA1KSArIDMNCiBkeTEoYSkgPSAoUm5kICYjNDI7IDUpICsgMw0KIGR4MihhKSA9IChSbmQgJiM0MjsgNSkgKyAzDQogZHkyKGEpID0gKFJuZCAmIzQyOyA1KSArIDMNCk5leHQgYQ0KRG8gV2hpbGUgSW5rZXkkID0gIiINCiBGb3IgYSA9IDEgVG8gNw0KICBweDEoYSkgPSBweDEoYSkgKyBkeDEoYSkNCiAgcHkxKGEpID0gcHkxKGEpICsgZHkxKGEpDQogIHB4MihhKSA9IHB4MihhKSArIGR4MihhKQ0KICBweTIoYSkgPSBweTIoYSkgKyBkeTIoYSkNCiAgSWYgcHgxKGEpICZndDsgTU0uSFJlcyAtIGR4MShhKSBUaGVuIGR4MShhKSA9IC0oKFJuZCAmIzQyOyA1KSArIDMpDQogIElmIHB5MShhKSAmZ3Q7IE1NLlZSZXMgLSBkeTEoYSkgVGhlbiBkeTEoYSkgPSAtKChSbmQgJiM0MjsgNSkgKyAzKQ0KICBJZiBweDEoYSkgJmx0OyBBYnMoZHgxKGEpKSBUaGVuIGR4MShhKSA9IChSbmQgJiM0MjsgNSkgKyAzDQogIElmIHB5MShhKSAmbHQ7IEFicyhkeTEoYSkpIFRoZW4gZHkxKGEpID0gKFJuZCAmIzQyOyA1KSArIDMNCiAgSWYgcHgyKGEpICZndDsgTU0uSFJlcyAtIGR4MihhKSBUaGVuIGR4MihhKSA9IC0oKFJuZCAmIzQyOyA1KSArIDMpDQogIElmIHB5MihhKSAmZ3Q7IE1NLlZSZXMgLSBkeTIoYSkgVGhlbiBkeTIoYSkgPSAtKChSbmQgJiM0MjsgNSkgKyAzKQ0KICBJZiBweDIoYSkgJmx0OyBBYnMoZHgyKGEpKSBUaGVuIGR4MihhKSA9IChSbmQgJiM0MjsgNSkgKyAzDQogIElmIHB5MihhKSAmbHQ7IEFicyhkeTIoYSkpIFRoZW4gZHkyKGEpID0gKFJuZCAmIzQyOyA1KSArIDMNCiAgTGluZSAob3gxKGEpLG95MShhKSktKG94MihhKSxveTIoYSkpLDANCiAgTGluZSAocHgxKGEpLHB5MShhKSktKHB4MihhKSxweTIoYSkpLGENCiAgb3gxKGEpID0gcHgxKGEpDQogIG95MShhKSA9IHB5MShhKQ0KICBveDIoYSkgPSBweDIoYSkNCiAgb3kyKGEpID0gcHkyKGEpDQogTmV4dCBhDQpMb29wDQonY2xlYXIgdGhlIHNjcmVlbg0KJ0Nscw0KYm94X2VyYXNlDQonQmxpdHRlcg0KRm9yIGEgPSAwIFRvIE1NLkhSZXMgLSAxNiBTdGVwIDE2DQogRm9yIGIgPSAwIFRvIE1NLlZSZXMgLSAxNiBTdGVwIDE2DQogIExpbmUoYSxiKS0oYSsxNSxiKzE1KSxJbnQoUm5kICYjNDI7IDcpICsgMSxiZg0KICBMaW5lKGEsYiktKGErMTUsYisxNSksMCxiDQogTmV4dCBiDQpOZXh0IGENCkZvciBhID0gMCBUbyBNTS5WUmVzIC0gMTYgU3RlcCAzMg0KIEZvciBiID0gMCBUbyBNTS5IUmVzICsgMTYNCiAgQkxJVCAwLGEsMSxhLE1NLkhSZXMsMTYNCiAgQkxJVCAwLGEgKyAxNiwtMSxhICsgMTYsTU0uSFJlcywxNg0KIE5leHQgYg0KTmV4dCBhDQpGb3IgYSA9IDAgVG8gTU0uSFJlcyAtIDE2IFN0ZXAgMTYNCiBGb3IgYiA9IDAgVG8gTU0uVlJlcyAtIDE2IFN0ZXAgMTYNCiAgTGluZShhLGIpLShhKzE1LGIrMTUpLEludChSbmQgJiM0MjsgNykgKyAxLGJmDQogIExpbmUoYSxiKS0oYSsxNSxiKzE1KSwwLGINCiBOZXh0IGINCk5leHQgYQ0KRm9yIGEgPSAwIFRvIE1NLkhSZXMgLSAxNiBTdGVwIDMyDQogRm9yIGIgPSAwIFRvIE1NLlZSZXMgKyAxNg0KICBCTElUIGEsMCxhLDEsMTYsTU0uVlJlcw0KICBCTElUIGEgKyAxNiwwLGEgKyAxNiwtMSwxNixNTS5WUmVzDQogTmV4dCBiDQpOZXh0IGENCkZvciBhID0gMCBUbyBNTS5IUmVzIC0gMTYgU3RlcCAxNg0KIEZvciBiID0gMCBUbyBNTS5WUmVzIC0gMTYgU3RlcCAxNg0KICBMaW5lKGEsYiktKGErMTUsYisxNSksSW50KFJuZCAmIzQyOyA3KSArIDEsYmYNCiAgTGluZShhLGIpLShhKzE1LGIrMTUpLDAsYg0KIE5leHQgYg0KTmV4dCBhDQpGb3IgYSA9IDAgVG8gTU0uSFJlcyArIDE2DQogQkxJVCAwLDAsMSwwLE1NLkhSZXMsMTYNCiBCTElUIDAsMTYsLTEsMTYsTU0uSFJlcywxNg0KIEJMSVQgMCwzMiwxLDMyLE1NLkhSZXMsMTYNCiBCTElUIDAsNDgsLTEsNDgsTU0uSFJlcywxNg0KIEJMSVQgMCw2NCwxLDY0LE1NLkhSZXMsMTYNCiBCTElUIDAsODAsLTEsODAsTU0uSFJlcywxNg0KIEJMSVQgMCw5NiwxLDk2LE1NLkhSZXMsMTYNCjggQkxJVCAwLDExMiwtMSwxMTIsTU0uSFJlcywxNg0KIEJMSVQgMCwxMjgsMSwxMjgsTU0uSFJlcywxNg0KIEJMSVQgMCwxNDQsLTEsMTQ0LE1NLkhSZXMsMTYNCiBCTElUIDAsMTYwLDEsMTYwLE1NLkhSZXMsMTYNCiBCTElUIDAsMTc2LC0xLDE3NixNTS5IUmVzLDE2DQogQkxJVCAwLDE5MiwxLDE5MixNTS5IUmVzLDE2DQogQkxJVCAwLDIwOCwtMSwyMDgsTU0uSFJlcywxNg0KIEJMSVQgMCwyMjQsMSwyMjQsTU0uSFJlcywxNg0KTmV4dCBhDQpGb3IgYSA9IDAgVG8gTU0uSFJlcyAtIDE2IFN0ZXAgMTYNCiBGb3IgYiA9IDAgVG8gTU0uVlJlcyAtIDE2IFN0ZXAgMTYNCiAgTGluZShhLGIpLShhKzE1LGIrMTUpLEludChSbmQgJiM0MjsgNykgKyAxLGJmDQogIExpbmUoYSxiKS0oYSsxNSxiKzE1KSwwLGINCiBOZXh0IGINCk5leHQgYQ0KRm9yIGEgPSAwIFRvIE1NLlZSZXMgKyAxNg0KIEJMSVQgMCwwLDAsMSwxNixNTS5WUmVzDQogQkxJVCAxNiwwLDE2LC0xLDE2LE1NLlZSZXMNCiBCTElUIDMyLDAsMzIsMSwxNixNTS5WUmVzDQogQkxJVCA0OCwwLDQ4LC0xLDE2LE1NLlZSZXMNCiBCTElUIDY0LDAsNjQsMSwxNixNTS5WUmVzDQogQkxJVCA4MCwwLDgwLC0xLDE2LE1NLlZSZXMNCiBCTElUIDk2LDAsOTYsMSwxNixNTS5WUmVzDQogQkxJVCAxMTIsMCwxMTIsLTEsMTYsTU0uVlJlcw0KIEJMSVQgMTI4LDAsMTI4LDEsMTYsTU0uVlJlcw0KIEJMSVQgMTQ0LDAsMTQ0LC0xLDE2LE1NLlZSZXMNCiBCTElUIDE2MCwwLDE2MCwxLDE2LE1NLlZSZXMNCiBCTElUIDE3NiwwLDE3NiwtMSwxNixNTS5WUmVzDQogQkxJVCAxOTIsMCwxOTIsMSwxNixNTS5WUmVzDQogQkxJVCAyMDgsMCwyMDgsLTEsMTYsTU0uVlJlcw0KIEJMSVQgMjI0LDAsMjI0LDEsMTYsTU0uVlJlcw0KIEJMSVQgMjQwLDAsMjQwLC0xLDE2LE1NLlZSZXMNCk5leHQgYQ0KUHJpbnQgQCg1MCw5MCkgIkVuZCBvZiBHcmFwaGljcyB0ZXN0IC4uLiINCkRvIFdoaWxlIElua2V5JCA9ICIiICYjNTg7IExvb3ANCmJveF9lcmFzZQ0KRW5kDQoNClN1YiBib3hfZXJhc2UNCiAnZXJhc2UgdGhlIHNjcmVlbiB3aXRoIGJsYWNrIGJveCdzDQogTG9jYWwgag0KIEZvciBqID0gMCBUbyBJbnQoTU0uSFJlcyAvIDIpICsgMiBTdGVwIDINCiAgTGluZShqLGopLShNTS5IUmVzIC0gaixNTS5WUmVzIC0gaiksMCxiDQogIFBhdXNlIDE1DQogTmV4dCBqDQogRm9yIGogPSBJbnQoTU0uSFJlcyAvIDIpICsgMiBUbyAwIFN0ZXAgLTENCiAgTGluZShqLGopLShNTS5IUmVzIC0gaixNTS5WUmVzIC0gaiksMCxiDQogIFBhdXNlIDEwDQogTmV4dCBqDQpFbmQgU3ViDQoNCjwvcHJlPjxiciAvPjxoMSBjbGFzcz0ic2VwYXJhdG9yIj4gPC9oMT48YnIgLz48Yj5DT0xPVVItMS5CQVM8L2I+PGJyIC8+V2lsbCBkcmF3IHJhbmRvbSBjaXJjbGVzIGZpbGxlZCB3aXRoIGNvbG91cjxiciAvPjxiciAvPjxwcmU+DQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonIERlbW9uc3RyYXRpb24gb2YgQ29sb3VyIE1NQmFzaWMNCicgR2VvZmYgR3JhaGFtLCAgSnVuZSAyMDEyDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQoNCklmIE1NLkRldmljZSQgJmx0OyZndDsgIkNvbG91ciBNYXhpbWl0ZSIgVGhlbg0KICBQcmludCAiVGhpcyBkZW1vbnN0cmF0aW9uIGlzIGludGVuZGVkIHRvIHJ1biBvbiBhIENvbG91ciBNYXhpbWl0ZSINCiAgRW5kDQpFbmRJZg0KDQpNb2RlIDMNCkNscw0KY3ggPSBNTS5IUmVzLzIgJiM1ODsgY3kgPSBNTS5WUmVzLzINCg0KJyBkcmF3IHJhbmRvbSBjaXJjbGVzIHdpdGggc21hbGxlciBjaXJjbGVzIG5lYXIgdG8gdGhlIGNlbnRyZQ0KRG8NCiAgeCA9IFJuZCAmIzQyOyBNTS5IUmVzICAgICAgICAgICAgICAgICAgICAgICAgICAgICcgaG9yaXogY2VudGVyIG9mIHRoZSBjaXJjbGUNCiAgeSA9IFJuZCAmIzQyOyBNTS5WUmVzICAgICAgICAgICAgICAgICAgICAgICAgICAgICcgdmVydCBjZW50ZXIgb2YgdGhlIGNpcmNsZQ0KICBEbw0KICAgIGMgPSBJbnQoUm5kICYjNDI7IDYpICsgMSAgICAgICAgICAgICAgICAgICAgICAgJyB0aGUgY29sb3VyDQogIExvb3AgVW50aWwgUGl4ZWwoeCwgeSkgJmx0OyZndDsgYyAgICAgICAgICAgICAgICAgICcgbXVzdCBiZSBkaWZmZXJlbnQNCiAgZCA9IFNxcihBYnMoeC1jeCleMiArIEFicyh5LWN5KV4yKSAgICAgICAgICAgJyBkaXN0YW5jZSBmcm9tIHRoZSBjZW50cmUNCiAgciA9IFJuZCAmIzQyOyBkLzggKyAyICsgZC8xNCAgICAgICAgICAgICAgICAgICAgICcgcmFkaXVzDQogIENpcmNsZSAoeCx5KSwgciwgYywgZiAgICAgICAgICAgICAgICAgICAgICAgICcgZHJhdyB0aGUgc3BoZXJlDQogIElmIHIgJmd0OyBSbmQmIzQyOzggKyAxMyBUaGVuIENpcmNsZSAoeCx5KSwgcisxLCAwICAnIGRyYXcgdGhlIGVkZ2UgaW4gYmxhY2sNCiAgSWYgSW5rZXkkICZsdDsmZ3Q7ICIiIFRoZW4gRW5kDQpMb29wDQoNCjwvcHJlPjxiciAvPjxoMSBjbGFzcz0ic2VwYXJhdG9yIj4gPC9oMT48YnIgLz48Yj5DT0xPVVItMi5CQVM8L2I+CTxiciAvPldpbGwgc2hvdyBob3cgdGhlIE1PREUgY29tbWFuZCBjYW4gYmUgdXNlZDxiciAvPjxiciAvPjxwcmU+DQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNCicgRGVtb25zdHJhdGlvbiBvZiB0aGUgY29sb3VyIG1vZGVzIGluIENvbG91ciBNTUJhc2ljDQonIEdlb2ZmIEdyYWhhbSAgTWF5IDIwMTINCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KDQpEYXRhICJCbGFjayAiLCAiIEJsdWUgIiwgIkdyZWVuICIsICIgQ3lhbiAiDQpEYXRhICIgUmVkICAiLCAiUHVycGxlIiwgIlllbGxvdyIsICJXaGl0ZSAiDQpEYXRhIFJlZCwgWWVsbG93LCBHcmVlbiwgUmVkLCBCbHVlLCBQdXJwbGUsICAgIFJlZCwgQ3lhbiwgV2hpdGUNCkRhdGEgR3JlZW4sIEN5YW4sIEJsdWUsICBHcmVlbiwgUHVycGxlLCBXaGl0ZSwgWWVsbG93LCBCbHVlLCBXaGl0ZQ0KRGltIGMkKDgpDQpEaW0gcCg5LCAyKQ0KRm9yIGkgPSAwIFRvIDcmIzU4OyBSZWFkIGMkKGkpICYjNTg7IE5leHQNCkZvciBpID0gMSBUbyA2JiM1ODsgRm9yIGogPSAwIFRvIDIgJiM1ODsgUmVhZCBwKGksIGopICAmIzU4OyBOZXh0IGksIGoNCg0KT3B0aW9uIHVzYiBvZmYNCkNscw0KbXNwYyA9IDMxDQpNb2RlIDMNCkNvbG91ciA3DQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNClByaW50ICJNb25vY2hyb21lIE1vZGUiOw0KTGluZSAoMCwgTU0uVlBvcysxMCktKE1NLkhQb3MtMiwgTU0uVlBvcysxMCksIDcNCkxvY2F0ZSAwLCBNTS5WUG9zICsgNQ0KUHJpbnQgIkFueSBvbmUgY29sb3VyIGNhbiBiZSBzZWxlY3RlZCBmb3IgYWxsIG91dHB1dCYjNTg7Ig0KTG9jYXRlIDAsIE1NLlZQb3MgKyA1DQpGb3IgaSA9IEJsdWUgVG8gV2hpdGUNCiAgQ29sb3VyIGkNCiAgUHJpbnQgIiBNT0RFIDEsIiBTdHIkKGkpICIgICI7DQpOZXh0DQpQcmludA0KRm9yIGkgPSBCbHVlIFRvIFdoaXRlDQogIENvbG91ciBpDQogIFByaW50ICIgICIgYyQoaSkgIiAgICI7DQpOZXh0DQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsNClByaW50IEAoMCwgTU0uVlBvcyArIG1zcGMpICJGb3VyIGNvbG91ciBtb2RlIjsNCkxpbmUgKDAsIE1NLlZQb3MrMTApLShNTS5IUG9zLTIsIE1NLlZQb3MrMTApLCA3DQpMb2NhdGUgMCwgTU0uVlBvcyArIDUNClByaW50ICJTaXggY29sb3VyIHBhbGV0dGVzIHRvIGNob3NlIGZyb20uIg0KUHJpbnQgIkVhY2ggcGFsZXR0ZSBjb25zaXN0cyBvZiB0aHJlZSBjb2xvdXJzIHBsdXMgYmxhY2smIzU4OyIgOw0KRm9yIGkgPSAxIFRvIDYNCiAgUHJpbnQgQCgyMCwgTU0uVlBvcyArIDE3KSAiUGFsZXR0ZSIgaSAiICBNT0RFIDIsIiBTdHIkKGkpICIgICAiOw0KICBGb3IgaiA9IDAgVG8gMg0KICAgIENvbG91ciBCbGFjaywgcChpLCBqKQ0KICAgIFByaW50ICIgICAgICAiOw0KICAgIENvbG91ciBXaGl0ZSwgQmxhY2sNCiAgICBQcmludCAiICI7DQogIE5leHQNCiAgUHJpbnQgIiAgICgiOw0KICBGb3IgaiA9IDAgVG8gMg0KICAgIENvbG91ciBwKGksIGopDQogICAgUHJpbnQgIiAiIGMkKHAoaSwgaikpICIgIjsNCiAgTmV4dA0KICBDb2xvdXIgV2hpdGUNCiAgUHJpbnQgIikiOw0KTmV4dA0KDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQpQcmludCBAKDAsIE1NLlZQb3MgKyBtc3BjKSAiRWlnaHQgY29sb3VyIG1vZGUiOw0KTGluZSAoMCwgTU0uVlBvcysxMCktKE1NLkhQb3MtMiwgTU0uVlBvcysxMCksIDcNCkxvY2F0ZSAwLCBNTS5WUG9zICsgNQ0KUHJpbnQgIk1PREUgMyAgICBBbGwgY29sb3VycyBjYW4gYmUgdXNlZCBzaW11bHRhbmVvdXNseSINCmxpbmUzID0gTU0uVlBvcw0KaGVpZ2h0MyA9IDQwDQpGb3IgaSA9IDAgVG8gTU0uSFJlcw0KICBJZiAoaSBcIChNTS5IUmVzXDgpKSArIDEgJmd0OyA3IFRoZW4gRXhpdCBGb3INCiAgTGluZSAoaSwgbGluZTMpLShpICsgaGVpZ2h0MywgbGluZTMgKyBoZWlnaHQzKSwgKGkgXCAoTU0uSFJlc1w4KSkgKyAxDQpOZXh0DQoNCg0KJiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7Jw0KUHJpbnQgQCgwLCBNTS5WUG9zICsgbXNwYykgIjI0MHgyMTYgZWlnaHQgY29sb3VyIG1vZGUiOw0KTGluZSAoMCwgTU0uVlBvcysxMCktKE1NLkhQb3MtMiwgTU0uVlBvcysxMCksIDcNCkxvY2F0ZSAwLCBNTS5WUG9zICsgNQ0KUHJpbnQgIk1PREUgNCAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIChwcmVzcyBhbnkga2V5IHRvIGV4aXQpJiM1ODsiDQpGb250IDEsIDINCnAkID0gIiAgQWxsIEVpZ2h0IENvbG91cnMgIDI0MHgyMTYgUGl4ZWxzIg0KcCQgPSBwJCArIENociQoMTMpICsgQ2hyJCgxMCkgKyAiICBIaWdoIFNwZWVkICAgIE1heGltdW0gRnJlZSBNZW1vcnkiDQpsaW5lNCA9IE1NLlZQb3MNCkRvDQogIExvY2F0ZSAwLCBsaW5lNA0KICBGb3IgaSA9IDEgVG8gTGVuKHAkKQ0KICAgIENvbG91ciAoUm5kICYjNDI7IDYpICsgMQ0KICAgIFByaW50IE1pZCQocCQsIGksIDEpOw0KICAgIElmIGkgTW9kIDEyID0gMCBUaGVuDQogICAgICBCTElUIDAsIGxpbmUzLCAxLCBsaW5lMywgTU0uSFJlcy0yLCBoZWlnaHQzICsgMQ0KICAgICAgQkxJVCBNTS5IUmVzIC0gMiwgbGluZTMsIDAsIGxpbmUzLCAxLCBoZWlnaHQzICsgMQ0KICAgIEVuZElmDQogIE5leHQgaQ0KTG9vcCBVbnRpbCBJbmtleSQgJmx0OyZndDsgIiINCkNvbG91ciBXaGl0ZQ0KT3B0aW9uIHVzYiBvbg0KUHJpbnQNCicgU2F2ZUJNUCAidC5ibXAiDQoNCjwvcHJlPjxiciAvPjxoMSBjbGFzcz0ic2VwYXJhdG9yIj4gPC9oMT48YnIgLz48Yj5NVVNJQy5CQVM8L2I+PGJyIC8+V2lsbCBwbGF5IGEgc2VxdWVuY2Ugb2YgbXVzaWMgZmlsZXMgRmlyc3QgaXQgd2lsbCBjb3B5IHRoZSBmaWxlcyB0byBkcml2ZSBBOiBUaGVuIGl0IHdpbGwgcGxheSB0aGUgZmlyc3QuIFRvIHBsYXkgdGhlIG5leHQgcHJlc3Mgc3BhY2UuIDxiPk5PVEU8L2I+OiBUaGUgdGhyZWUgTU9EIGZpbGVzIGFyZSBpbiB0aGUgTU9Ecy56aXAgZmlsZSBpbiB0aGUgYXR0YWNobWVudHMgKCJ1cmV0aHJhIiBGcmFua2xpbiBMT0wpLjxiciAvPjxiciAvPjxwcmU+DQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQonDQonIERlbW9uc3RyYXRpb24gb2YgdGhlIG11c2ljIHBsYXlpbmcgYWJpbGl0eSBvZiB0aGUgTWF4aW1pdGUNCicNCicgR2VvZmYgR3JhaGFtICAgSnVseSAyMDEyDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsnDQoNCg0KJyBGaXJzdCwgY2hlY2sgaWYgdGhlIE1PRCBmaWxlcyBhcmUgb24gZHJpdmUgQSYjNTg7IGFuZCBpZiBub3QuIGNvcHkgdGhlbQ0KJw0KRm9yIGkgPSAxIFRvIDMNCiAgT3B0aW9uIGVycm9yIGNvbnRpbnVlDQogIE9wZW4gIkEmIzU4O1QiICsgQ2hyJCg0OCArIGkpICsgIi5Nb2QiIEZvciBpbnB1dCBBcyAmIzM1OzENCiAgSWYgTU0uRXJybm8gVGhlbg0KICAgIE9wdGlvbiBlcnJvciBhYm9ydA0KICAgIElmIGkgPSAxIFRoZW4NCiAgICAgIFByaW50ICJUaGlzIHByb2dyYW0gd2lsbCBjb3B5IHRocmVlIGZpbGVzIHRvIGRyaXZlIEEmIzU4OyINCiAgICAgIFByaW50ICJUaGUgc2NyZWVuIHdpbGwgZ28gYmxhbmsgZm9yIGEgd2hpbGUgc28gcGxlYXNlIGJlIHBhdGllbnQiDQogICAgICBJbnB1dCAiUHJlc3MgRU5URVIgdG8gY29udGludWUuLi4iLCB0JA0KICAgIEVuZElmDQogICAgQ29weSAiQiYjNTg7VCIgKyBDaHIkKDQ4ICsgaSkgKyAiLk1vZCIgVG8gIkEmIzU4OyINCiAgRWxzZQ0KICAgIE9wdGlvbiBlcnJvciBhYm9ydA0KICAgIENsb3NlICYjMzU7MQ0KICBFbmRJZg0KTmV4dCBpDQoNCg0KJyBQbGF5IGVhY2ggZmlsZSBpbiBhIHJlcGVhdGluZyBzZXF1ZW5jZQ0KaSA9IDENCkRvDQogIFBsYXlNT0QgIkEmIzU4O1QiICsgQ2hyJCg0OCArIGkpICsgIi5Nb2QiDQogIENscyAmIzU4OyBDb2xvdXIgNiAmIzU4OyBQcmludCAiUGxheWluZyYjNTg7ICAiICJUIiArIENociQoNDggKyBpKSArICIuTU9EIg0KICBQcmludCAiUHJlc3MgYW55IGtleSB0byBzZWxlY3QgdGhlIG5leHQgZmlsZSBvciBDVFJMLUMgdG8gaGFsdC4uLiINCiAgUHJpbnQNCiAgUHJpbnQgIldoaWxlIHRoZSBtdXNpYyBpcyBwbGF5aW5nIE1NQmFzaWMgd2lsbCBjYWxjdWxhdGUgdGhlIHRhYmxlIG9mIHByaW1lIG51bWJlcnMuIg0KICBQcmludCAiVGhpcyAiOw0KICBQcmludCAiZGVtb25zdHJhdGVzIHRoYXQgdGhlIG11c2ljIGlzIGJlaW5nIHN5bnRoZXNpc2VkIGluIHRoZSBiYWNrZ3JvdW5kLiINCiAgUHJpbnQNCiAgR29TdWIgRG9QcmltZXMNCicgIERvICYjNTg7IExvb3AgV2hpbGUgSW5rZXkkID0gIiINCiAgaSA9IGkgKyAxDQogIElmIGkgJmd0OyAzIFRoZW4gaSA9IDENCkxvb3ANCg0KDQonIENhbGN1bGF0ZSB0aGUgdGFibGUgb2YgcHJpbWUgbnVtYmVycw0KJyBSZXR1cm4gdG8gdGhlIGNhbGxlciBpZiBhbnkga2V5IGhhcyBiZWVuIHByZXNzZWQNCicNCkRvUHJpbWVzJiM1ODsNCkNvbG91ciAyDQpuID0gMQ0KUHJpbnQgIiAgICAgICAyIjsNCkRvDQpza2lwJiM1ODsNCiAgbiA9IG4gKyAyDQogIEZvciBkID0gMyBUbyBTcXIobikNCiAgICBJZiBJbmtleSQgJmx0OyZndDsgIiIgVGhlbiBSZXR1cm4NCiAgICBJZiBuIE1vZCBkID0gMCBUaGVuIEdvVG8gc2tpcA0KICBOZXh0IGQNCiAgUHJpbnQgIiAiIEZvcm1hdCQobiwgIiU3ZyIpOw0KICBJZiBNTS5WUG9zICZndDsgTU0uVlJlcyAtIDM2IFRoZW4NCiAgICBCTElUIDAsIDg0LCAwLCA3MiwgTU0uSFJlcywgTU0uVlJlcyAtIDg0DQogICAgT3B0aW9uIHVzYiBvZmYNCiAgICBMb2NhdGUgTU0uSFBvcywgTU0uVlBvcyAtIDEyDQogICAgT3B0aW9uIHVzYiBvbg0KICBFbmRJZg0KTG9vcA0KDQo8L3ByZT48YnIgLz48aDEgY2xhc3M9InNlcGFyYXRvciI+IDwvaDE+PGJyIC8+PGI+SlVMSUEuQkFTPC9iPjxiciAvPlRoaXMgd2lsbCBwbG90IHRoZSBKdWxpYSBzZXQgb24gdGhlIENvbG91ciBNYXhpbWl0ZS4gVGhlIEp1bGlhIHNldCBpcyBtYXRoZW1hdGljYWxseSBzaW1pbGFyIHRvIHRoZSBtb3JlIGZhbW91cyBNYW5kZWxicm90IHNldCBhbmQgY2FuIGdlbmVyYXRlIHNvbWUgYmVhdXRpZnVsIGltYWdlcy4gIEJlIHBhdGllbnQgYXMgaXQgdGFrZXMgYWJvdXQgMTUgbWludXRlcyB0byBjYWxjdWxhdGUuICBGb3IgbW9yZSBzZWU6IDxhIGNsYXNzPSJleHRlcm5hbGxpbmsiIGhyZWY9Imh0dHA6Ly93d3cudGhlYmFja3NoZWQuY29tL2ZvcnVtL2ZvcnVtX3Bvc3RzLmFzcD9USUQ9NTEwMyIgdGl0bGU9Imh0dHA6Ly93d3cudGhlYmFja3NoZWQuY29tL2ZvcnVtL2ZvcnVtX3Bvc3RzLmFzcD9USUQ9NTEwMyIgdGFyZ2V0PSJfYmxhbmsiPmh0dHA6Ly93d3cudGhlYmFja3NoZWQuY29tL2ZvcnVtL2ZvcnVtX3Bvc3RzLmFzcD9USUQ9NTEwMzwvYT48YnIgLz48YnIgLz48cHJlPg0KJ0pVTElBLkJBUyAtIERyYXdzIEp1bGlhIHNldCBmcmFjdGFsIGltYWdlcw0KJ2J5IGxva2kNCg0KTW9kZSAzDQpDbHMNCg0KJ1NwZWNpZnkgaW5pdGlhbCB2YWx1ZXMNClJlYWxPZmZzZXQgPSAtMS4zMA0KSW1hZ2luT2Zmc2V0ID0gLTEuMjINCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQyOw0KJ1NldCB0aGUgSnVsaWEgc2V0IGNvbnN0YW50ICYjOTE7ZWcgQyA9IC0xLjIgKyAwLjhpJiM5MzsNCkNSZWFsVmFsID0gLTAuNzgNCkNJbWFnVmFsID0gLTAuMjANCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQyOw0KTUFYSVQ9ODAgJ21heCBpdGVyYXRpb25zDQpQaXhlbFdpZHRoID0gTU0uSFJlcw0KUGl4ZWxIZWlnaHQgPSBNTS5WUmVzDQpHQVAgPSBQaXhlbEhlaWdodCAvIFBpeGVsV2lkdGgNClNJWkUgPSAyLjUwDQpYRGVsdGEgPSBTSVpFIC8gUGl4ZWxXaWR0aA0KWURlbHRhID0gKFNJWkUgJiM0MjsgR0FQKSAvIFBpeGVsSGVpZ2h0DQoNCidMb29wIHByb2Nlc3NpbmcgLSB2aXNpdCBldmVyeSBwaXhlbA0KRm9yIFggPSAwIFRvIChQaXhlbFdpZHRoIC0gMSkNCiAgQ1ggPSBYICYjNDI7IFhkZWx0YSArIFJlYWxPZmZzZXQNCiAgRm9yIFkgPSAwIFRvIChQaXhlbEhlaWdodCAtIDEpDQogICAgQ1kgPSBZICYjNDI7IFlEZWx0YSArIEltYWdpbk9mZnNldA0KICAgIFpyID0gQ1gNCiAgICBaaSA9IENZDQogICAgQ09VTlQgPSAwDQogICAgJ0JlZ2luIEl0ZXJhdGlvbiBsb29wDQogICAgRG8gV2hpbGUgKCggQ09VTlQgJmx0Oz0gTUFYSVQgKSBBbmQgKCggWnIgJiM0MjsgWnIgKyBaaSAmIzQyOyBaaSApICZsdDsgNCApKQ0KICAgICAgbmV3X1pyID0gWnIgJiM0MjsgWnIgLSBaaSAmIzQyOyBaaSArIENSZWFsVmFsDQogICAgICBuZXdfWmkgPSAyICYjNDI7IFpyICYjNDI7IFppICsgQ0ltYWdWYWwNCiAgICAgIFpyID0gbmV3X1pyDQogICAgICBaaSA9IG5ld19aaQ0KICAgICAgQ09VTlQgPSBDT1VOVCArIDENCiAgICBMb29wDQogICAgUGl4ZWwoWCxZKSA9IENPVU5UIE1vZCA4DQogIE5leHQgWQ0KTmV4dCBYDQpEbw0KICBhJCA9IElua2V5JA0KTG9vcCBXaGlsZSBhJCA9ICIiDQoNCjwvcHJlPjxiciAvPmRkrjWBsWlfarsaHZDAiQb3I7ZGLDI=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Colour Demos</h1><small>Modified on 2016/12/23 23:25 by Administrator &mdash; Categorized as: Graphics, Maths, Sounds, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />Demonstration programs for the Colour Maximite:<br /><br /><b>CMM4_TST.BAS</b><br />A test program that demonstrates various graphics on the Colour Maximite running in MODE 4. These include coloured lines, boxes, circles and moving images on the screen using the BLIT command.<br /><br /><pre>
+'Graphic test for ColourMM V4.0 Final Release.
+'Muller Fabrice
+'2012
+'This program just show all graphics functions.
+'That is &#58;
+'Pixels
+'Lines
+'Box
+'Filled Box
+'Circles
+'Filled Circle
+'and the new Blitter !!
+
+'declare some arrays
+Dim px1(10)
+Dim px2(10)
+Dim py1(10)
+Dim py2(10)
+Dim ox1(10)
+Dim ox2(10)
+Dim oy1(10)
+Dim oy2(10)
+Dim dx1(10)
+Dim dx2(10)
+Dim dy1(10)
+Dim dy2(10)
+'Game Graphic Mode 240 x 216 in 8 colors
+Mode 4
+'clear the screen
+Cls
+'Generic pixels graphics
+For a = 1 To 2000
+ x = Int(Rnd &#42; MM.HRes)
+ y = Int(Rnd &#42; MM.VRes)
+ Pixel(x,y) = Int(Rnd &#42; 8)
+Next a
+Print @(0,0) "2000 Pixels"
+Do While Inkey$ = "" &#58; Loop
+Randomize Timer
+'clear the screen
+'Cls
+box_erase
+'Lines
+For a = 1 To 2000
+ x1 = Int(Rnd &#42; MM.HRes)
+ y1 = Int(Rnd &#42; MM.VRes)
+ x2 = Int(Rnd &#42; MM.HRes)
+ y2 = Int(Rnd &#42; MM.VRes)
+ Line (x1,y1)-(x2,y2),Int(Rnd &#42; 8)
+Next a
+Print @(0,0) "2000 Lines"
+Do While Inkey$ = "" &#58; Loop
+'clear the screen
+'Cls
+box_erase
+'Box's
+For a = 1 To 2000
+ x1 = Int(Rnd &#42; MM.HRes)
+ y1 = Int(Rnd &#42; MM.VRes)
+ x2 = Int(Rnd &#42; MM.HRes)
+ y2 = Int(Rnd &#42; MM.VRes)
+ Line (x1,y1)-(x2,y2),Int(Rnd &#42; 8),b
+Next a
+Print @(0,0) "2000 Box"
+Do While Inkey$ = "" &#58; Loop
+'clear the screen
+'Cls
+box_erase
+'Filled Box's
+For a = 1 To 200
+ x1 = Int(Rnd &#42; MM.HRes)
+ y1 = Int(Rnd &#42; MM.VRes)
+ x2 = Int(Rnd &#42; MM.HRes)
+ y2 = Int(Rnd &#42; MM.VRes)
+ Line (x1,y1)-(x2,y2),Int(Rnd &#42; 8),bf
+Next a
+Print @(0,0) "200 Filled Box"
+Do While Inkey$ = "" &#58; Loop
+'clear the screen
+'Cls
+box_erase
+'Circles
+For a = 1 To 2000
+ x1 = Int(Rnd &#42; MM.HRes)
+ y1 = Int(Rnd &#42; MM.VRes)
+ r = Int(Rnd &#42; (MM.HRes/4))
+ Circle (x1,y1),r,Int(Rnd &#42; 8)
+Next a
+Print @(0,0) "2000 Circles"
+Do While Inkey$ = "" &#58; Loop
+'clear the screen
+'Cls
+box_erase
+'Filled Circles
+For a = 1 To 200
+ x1 = Int(Rnd &#42; MM.HRes)
+ y1 = Int(Rnd &#42; MM.VRes)
+ r = Int(Rnd &#42; (MM.HRes/4))
+ Circle (x1,y1),r,Int(Rnd &#42; 8),f
+Next a
+Print @(0,0) "200 Filled Circles"
+Do While Inkey$ = "" &#58; Loop
+'clear the screen
+'Cls
+box_erase
+'Line Saver
+For a = 1 To 7
+ ox1(a) = 0
+ oy1(a) = 0
+ ox2(a) = 0
+ oy2(a) = 0
+ px1(a) = Int(Rnd &#42; MM.HRes)
+ py1(a) = Int(Rnd &#42; MM.VRes)
+ px2(a) = Int(Rnd &#42; MM.HRes)
+ py2(a) = Int(Rnd &#42; MM.VRes)
+ dx1(a) = (Rnd &#42; 5) + 3
+ dy1(a) = (Rnd &#42; 5) + 3
+ dx2(a) = (Rnd &#42; 5) + 3
+ dy2(a) = (Rnd &#42; 5) + 3
+Next a
+Do While Inkey$ = ""
+ For a = 1 To 7
+  px1(a) = px1(a) + dx1(a)
+  py1(a) = py1(a) + dy1(a)
+  px2(a) = px2(a) + dx2(a)
+  py2(a) = py2(a) + dy2(a)
+  If px1(a) &gt; MM.HRes - dx1(a) Then dx1(a) = -((Rnd &#42; 5) + 3)
+  If py1(a) &gt; MM.VRes - dy1(a) Then dy1(a) = -((Rnd &#42; 5) + 3)
+  If px1(a) &lt; Abs(dx1(a)) Then dx1(a) = (Rnd &#42; 5) + 3
+  If py1(a) &lt; Abs(dy1(a)) Then dy1(a) = (Rnd &#42; 5) + 3
+  If px2(a) &gt; MM.HRes - dx2(a) Then dx2(a) = -((Rnd &#42; 5) + 3)
+  If py2(a) &gt; MM.VRes - dy2(a) Then dy2(a) = -((Rnd &#42; 5) + 3)
+  If px2(a) &lt; Abs(dx2(a)) Then dx2(a) = (Rnd &#42; 5) + 3
+  If py2(a) &lt; Abs(dy2(a)) Then dy2(a) = (Rnd &#42; 5) + 3
+  Line (ox1(a),oy1(a))-(ox2(a),oy2(a)),0
+  Line (px1(a),py1(a))-(px2(a),py2(a)),a
+  ox1(a) = px1(a)
+  oy1(a) = py1(a)
+  ox2(a) = px2(a)
+  oy2(a) = py2(a)
+ Next a
+Loop
+'clear the screen
+'Cls
+box_erase
+'Blitter
+For a = 0 To MM.HRes - 16 Step 16
+ For b = 0 To MM.VRes - 16 Step 16
+  Line(a,b)-(a+15,b+15),Int(Rnd &#42; 7) + 1,bf
+  Line(a,b)-(a+15,b+15),0,b
+ Next b
+Next a
+For a = 0 To MM.VRes - 16 Step 32
+ For b = 0 To MM.HRes + 16
+  BLIT 0,a,1,a,MM.HRes,16
+  BLIT 0,a + 16,-1,a + 16,MM.HRes,16
+ Next b
+Next a
+For a = 0 To MM.HRes - 16 Step 16
+ For b = 0 To MM.VRes - 16 Step 16
+  Line(a,b)-(a+15,b+15),Int(Rnd &#42; 7) + 1,bf
+  Line(a,b)-(a+15,b+15),0,b
+ Next b
+Next a
+For a = 0 To MM.HRes - 16 Step 32
+ For b = 0 To MM.VRes + 16
+  BLIT a,0,a,1,16,MM.VRes
+  BLIT a + 16,0,a + 16,-1,16,MM.VRes
+ Next b
+Next a
+For a = 0 To MM.HRes - 16 Step 16
+ For b = 0 To MM.VRes - 16 Step 16
+  Line(a,b)-(a+15,b+15),Int(Rnd &#42; 7) + 1,bf
+  Line(a,b)-(a+15,b+15),0,b
+ Next b
+Next a
+For a = 0 To MM.HRes + 16
+ BLIT 0,0,1,0,MM.HRes,16
+ BLIT 0,16,-1,16,MM.HRes,16
+ BLIT 0,32,1,32,MM.HRes,16
+ BLIT 0,48,-1,48,MM.HRes,16
+ BLIT 0,64,1,64,MM.HRes,16
+ BLIT 0,80,-1,80,MM.HRes,16
+ BLIT 0,96,1,96,MM.HRes,16
+8 BLIT 0,112,-1,112,MM.HRes,16
+ BLIT 0,128,1,128,MM.HRes,16
+ BLIT 0,144,-1,144,MM.HRes,16
+ BLIT 0,160,1,160,MM.HRes,16
+ BLIT 0,176,-1,176,MM.HRes,16
+ BLIT 0,192,1,192,MM.HRes,16
+ BLIT 0,208,-1,208,MM.HRes,16
+ BLIT 0,224,1,224,MM.HRes,16
+Next a
+For a = 0 To MM.HRes - 16 Step 16
+ For b = 0 To MM.VRes - 16 Step 16
+  Line(a,b)-(a+15,b+15),Int(Rnd &#42; 7) + 1,bf
+  Line(a,b)-(a+15,b+15),0,b
+ Next b
+Next a
+For a = 0 To MM.VRes + 16
+ BLIT 0,0,0,1,16,MM.VRes
+ BLIT 16,0,16,-1,16,MM.VRes
+ BLIT 32,0,32,1,16,MM.VRes
+ BLIT 48,0,48,-1,16,MM.VRes
+ BLIT 64,0,64,1,16,MM.VRes
+ BLIT 80,0,80,-1,16,MM.VRes
+ BLIT 96,0,96,1,16,MM.VRes
+ BLIT 112,0,112,-1,16,MM.VRes
+ BLIT 128,0,128,1,16,MM.VRes
+ BLIT 144,0,144,-1,16,MM.VRes
+ BLIT 160,0,160,1,16,MM.VRes
+ BLIT 176,0,176,-1,16,MM.VRes
+ BLIT 192,0,192,1,16,MM.VRes
+ BLIT 208,0,208,-1,16,MM.VRes
+ BLIT 224,0,224,1,16,MM.VRes
+ BLIT 240,0,240,-1,16,MM.VRes
+Next a
+Print @(50,90) "End of Graphics test ..."
+Do While Inkey$ = "" &#58; Loop
+box_erase
+End
+
+Sub box_erase
+ 'erase the screen with black box's
+ Local j
+ For j = 0 To Int(MM.HRes / 2) + 2 Step 2
+  Line(j,j)-(MM.HRes - j,MM.VRes - j),0,b
+  Pause 15
+ Next j
+ For j = Int(MM.HRes / 2) + 2 To 0 Step -1
+  Line(j,j)-(MM.HRes - j,MM.VRes - j),0,b
+  Pause 10
+ Next j
+End Sub
+
+</pre><br /><h1 class="separator"> </h1><br /><b>COLOUR-1.BAS</b><br />Will draw random circles filled with colour<br /><br /><pre>
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Demonstration of Colour MMBasic
+' Geoff Graham,  June 2012
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+If MM.Device$ &lt;&gt; "Colour Maximite" Then
+  Print "This demonstration is intended to run on a Colour Maximite"
+  End
+EndIf
+
+Mode 3
+Cls
+cx = MM.HRes/2 &#58; cy = MM.VRes/2
+
+' draw random circles with smaller circles near to the centre
+Do
+  x = Rnd &#42; MM.HRes                            ' horiz center of the circle
+  y = Rnd &#42; MM.VRes                            ' vert center of the circle
+  Do
+    c = Int(Rnd &#42; 6) + 1                       ' the colour
+  Loop Until Pixel(x, y) &lt;&gt; c                  ' must be different
+  d = Sqr(Abs(x-cx)^2 + Abs(y-cy)^2)           ' distance from the centre
+  r = Rnd &#42; d/8 + 2 + d/14                     ' radius
+  Circle (x,y), r, c, f                        ' draw the sphere
+  If r &gt; Rnd&#42;8 + 13 Then Circle (x,y), r+1, 0  ' draw the edge in black
+  If Inkey$ &lt;&gt; "" Then End
+Loop
+
+</pre><br /><h1 class="separator"> </h1><br /><b>COLOUR-2.BAS</b>	<br />Will show how the MODE command can be used<br /><br /><pre>
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Demonstration of the colour modes in Colour MMBasic
+' Geoff Graham  May 2012
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+Data "Black ", " Blue ", "Green ", " Cyan "
+Data " Red  ", "Purple", "Yellow", "White "
+Data Red, Yellow, Green, Red, Blue, Purple,    Red, Cyan, White
+Data Green, Cyan, Blue,  Green, Purple, White, Yellow, Blue, White
+Dim c$(8)
+Dim p(9, 2)
+For i = 0 To 7&#58; Read c$(i) &#58; Next
+For i = 1 To 6&#58; For j = 0 To 2 &#58; Read p(i, j)  &#58; Next i, j
+
+Option usb off
+Cls
+mspc = 31
+Mode 3
+Colour 7
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+Print "Monochrome Mode";
+Line (0, MM.VPos+10)-(MM.HPos-2, MM.VPos+10), 7
+Locate 0, MM.VPos + 5
+Print "Any one colour can be selected for all output&#58;"
+Locate 0, MM.VPos + 5
+For i = Blue To White
+  Colour i
+  Print " MODE 1," Str$(i) "  ";
+Next
+Print
+For i = Blue To White
+  Colour i
+  Print "  " c$(i) "   ";
+Next
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+Print @(0, MM.VPos + mspc) "Four colour mode";
+Line (0, MM.VPos+10)-(MM.HPos-2, MM.VPos+10), 7
+Locate 0, MM.VPos + 5
+Print "Six colour palettes to chose from."
+Print "Each palette consists of three colours plus black&#58;" ;
+For i = 1 To 6
+  Print @(20, MM.VPos + 17) "Palette" i "  MODE 2," Str$(i) "   ";
+  For j = 0 To 2
+    Colour Black, p(i, j)
+    Print "      ";
+    Colour White, Black
+    Print " ";
+  Next
+  Print "   (";
+  For j = 0 To 2
+    Colour p(i, j)
+    Print " " c$(p(i, j)) " ";
+  Next
+  Colour White
+  Print ")";
+Next
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+Print @(0, MM.VPos + mspc) "Eight colour mode";
+Line (0, MM.VPos+10)-(MM.HPos-2, MM.VPos+10), 7
+Locate 0, MM.VPos + 5
+Print "MODE 3    All colours can be used simultaneously"
+line3 = MM.VPos
+height3 = 40
+For i = 0 To MM.HRes
+  If (i \ (MM.HRes\8)) + 1 &gt; 7 Then Exit For
+  Line (i, line3)-(i + height3, line3 + height3), (i \ (MM.HRes\8)) + 1
+Next
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+Print @(0, MM.VPos + mspc) "240x216 eight colour mode";
+Line (0, MM.VPos+10)-(MM.HPos-2, MM.VPos+10), 7
+Locate 0, MM.VPos + 5
+Print "MODE 4                                          (press any key to exit)&#58;"
+Font 1, 2
+p$ = "  All Eight Colours  240x216 Pixels"
+p$ = p$ + Chr$(13) + Chr$(10) + "  High Speed    Maximum Free Memory"
+line4 = MM.VPos
+Do
+  Locate 0, line4
+  For i = 1 To Len(p$)
+    Colour (Rnd &#42; 6) + 1
+    Print Mid$(p$, i, 1);
+    If i Mod 12 = 0 Then
+      BLIT 0, line3, 1, line3, MM.HRes-2, height3 + 1
+      BLIT MM.HRes - 2, line3, 0, line3, 1, height3 + 1
+    EndIf
+  Next i
+Loop Until Inkey$ &lt;&gt; ""
+Colour White
+Option usb on
+Print
+' SaveBMP "t.bmp"
+
+</pre><br /><h1 class="separator"> </h1><br /><b>MUSIC.BAS</b><br />Will play a sequence of music files First it will copy the files to drive A: Then it will play the first. To play the next press space. <b>NOTE</b>: The three MOD files are in the MODs.zip file in the attachments ("urethra" Franklin LOL).<br /><br /><pre>
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+'
+' Demonstration of the music playing ability of the Maximite
+'
+' Geoff Graham   July 2012
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;'
+
+
+' First, check if the MOD files are on drive A&#58; and if not. copy them
+'
+For i = 1 To 3
+  Option error continue
+  Open "A&#58;T" + Chr$(48 + i) + ".Mod" For input As &#35;1
+  If MM.Errno Then
+    Option error abort
+    If i = 1 Then
+      Print "This program will copy three files to drive A&#58;"
+      Print "The screen will go blank for a while so please be patient"
+      Input "Press ENTER to continue...", t$
+    EndIf
+    Copy "B&#58;T" + Chr$(48 + i) + ".Mod" To "A&#58;"
+  Else
+    Option error abort
+    Close &#35;1
+  EndIf
+Next i
+
+
+' Play each file in a repeating sequence
+i = 1
+Do
+  PlayMOD "A&#58;T" + Chr$(48 + i) + ".Mod"
+  Cls &#58; Colour 6 &#58; Print "Playing&#58;  " "T" + Chr$(48 + i) + ".MOD"
+  Print "Press any key to select the next file or CTRL-C to halt..."
+  Print
+  Print "While the music is playing MMBasic will calculate the table of prime numbers."
+  Print "This ";
+  Print "demonstrates that the music is being synthesised in the background."
+  Print
+  GoSub DoPrimes
+'  Do &#58; Loop While Inkey$ = ""
+  i = i + 1
+  If i &gt; 3 Then i = 1
+Loop
+
+
+' Calculate the table of prime numbers
+' Return to the caller if any key has been pressed
+'
+DoPrimes&#58;
+Colour 2
+n = 1
+Print "       2";
+Do
+skip&#58;
+  n = n + 2
+  For d = 3 To Sqr(n)
+    If Inkey$ &lt;&gt; "" Then Return
+    If n Mod d = 0 Then GoTo skip
+  Next d
+  Print " " Format$(n, "%7g");
+  If MM.VPos &gt; MM.VRes - 36 Then
+    BLIT 0, 84, 0, 72, MM.HRes, MM.VRes - 84
+    Option usb off
+    Locate MM.HPos, MM.VPos - 12
+    Option usb on
+  EndIf
+Loop
+
+</pre><br /><h1 class="separator"> </h1><br /><b>JULIA.BAS</b><br />This will plot the Julia set on the Colour Maximite. The Julia set is mathematically similar to the more famous Mandelbrot set and can generate some beautiful images.  Be patient as it takes about 15 minutes to calculate.  For more see: <a class="externallink" href="http://www.thebackshed.com/forum/forum_posts.asp?TID=5103" title="http://www.thebackshed.com/forum/forum_posts.asp?TID=5103" target="_blank">http://www.thebackshed.com/forum/forum_posts.asp?TID=5103</a><br /><br /><pre>
+'JULIA.BAS - Draws Julia set fractal images
+'by loki
+
+Mode 3
+Cls
+
+'Specify initial values
+RealOffset = -1.30
+ImaginOffset = -1.22
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#42;
+'Set the Julia set constant &#91;eg C = -1.2 + 0.8i&#93;
+CRealVal = -0.78
+CImagVal = -0.20
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#42;
+MAXIT=80 'max iterations
+PixelWidth = MM.HRes
+PixelHeight = MM.VRes
+GAP = PixelHeight / PixelWidth
+SIZE = 2.50
+XDelta = SIZE / PixelWidth
+YDelta = (SIZE &#42; GAP) / PixelHeight
+
+'Loop processing - visit every pixel
+For X = 0 To (PixelWidth - 1)
+  CX = X &#42; Xdelta + RealOffset
+  For Y = 0 To (PixelHeight - 1)
+    CY = Y &#42; YDelta + ImaginOffset
+    Zr = CX
+    Zi = CY
+    COUNT = 0
+    'Begin Iteration loop
+    Do While (( COUNT &lt;= MAXIT ) And (( Zr &#42; Zr + Zi &#42; Zi ) &lt; 4 ))
+      new_Zr = Zr &#42; Zr - Zi &#42; Zi + CRealVal
+      new_Zi = 2 &#42; Zr &#42; Zi + CImagVal
+      Zr = new_Zr
+      Zi = new_Zi
+      COUNT = COUNT + 1
+    Loop
+    Pixel(X,Y) = COUNT Mod 8
+  Next Y
+Next X
+Do
+  a$ = Inkey$
+Loop While a$ = ""
+
+</pre><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Colour-Demos-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:33 GMT -->
+</html>

@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:29 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	SPLIT subroutine - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFhSA8aDEgY2xhc3M9InBhZ2V0aXRsZSI+U1BMSVQgc3Vicm91dGluZTwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6NDUgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBTdHJpbmdzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz48cHJlPg0KICAnIFN1YnJvdXRpbmUgdG8gc3BsaXQgYSBkZWxpbWl0ZWQgc3RyaW5nIG9mIGNoYXJhY3RlcnMgaW50byBpbmRpdmlkdWFsDQogICcgc3Vic3RyaW5ncyBhbmQgcmV0dXJuIHRob3NlIHN1YnN0cmluZ3MgaW4gYSBzdHJpbmcgYXJyYXkuDQogICcgQXMgeW91IGNhbid0IHBhc3MgYXJyYXlzIGluIE1NIEJhc2ljLCB0aGUgcmV0dXJuZWQgYXJyYXkgd2lsbCBhbHdheXMNCiAgJyBiZSBuYW1lZCBzcGxpdHVwJCgpDQogICcgVGhlIHByb2dyYW0gYXV0b21hdGljYWxseSBjYWxjdWxhdGVzIHRoZSBudW1iZXIgb2Ygc3Vic3RyaW5ncyBpbiB0aGUgc3RyaW5nDQogICcgYW5kIHRoZSBzaXplIG9mIHRoZSBsYXJnZXN0IHN1YnN0cmluZywgdGhlbiBzY2FsZXMgdGhlIGFycmF5IGFjY29yZGluZ2x5Lg0KICAnIFRoZSBudW1iZXIgb2Ygc3Vic3RyaW5ncyBpcyByZXR1cm5lZCBpbiBhcnJheSBwb3NpdGlvbiAwIGFuZCB0aGUgbWF4aW11bQ0KICAnIGxlbmd0aCBvZiBlYWNoIHN1YnN0cmluZyBpcyByZXR1cm5lZCBpbiBhcnJheSBwb3NpdGlvbiAxDQogIA0KICBQcmludCAiVGVzdGluZyBjb2RlIGZvciBzcGxpdCQgc3Vicm91dGluZSINCiAgUHJpbnQNCiAgUHJpbnQgIlRlc3Qgc3RyaW5nIGlzICAnYWJjLGRlZmcsaGlqa2wsKzEyMy42NzgsLTUnIHdpdGggY29tbWEgZGVsaW1pdGVyIg0KICBhJD0iYWJjLGRlZmcsaGlqa2wsKzEyMy42NzgsLTUiDQogIFByaW50ICJVc2FnZSBpcyAgU1BMSVQkIGFyZyQsZGVsaW1pdGVyJCINCiAgDQogIHNwbGl0JCBhJCwiLCINCiAgDQogIFByaW50ICJUaGUgc3BsaXR1cCBhcnJheSB0aGF0IGlzIGNyZWF0ZWQgaXMgYSBvbmUgZGltZW5zaW9uYWwgYXJyYXkgdGhhdCBpcyAiDQogIFByaW50ICJ0aGUgbnVtYmVyIG9mIHN1YnN0cmluZ3MgaW4gdGhlIGFyZ3VtZW50IHN0cmluZyArIDIgaW4gZGVwdGgsICINCiAgUHJpbnQgImVhY2ggb2Ygd2hpY2ggZXF1YWxzIHRoZSBsYXJnZXN0IHN1YnN0cmluZyBpbiBjaGFyYWN0ZXJzIGxvbmciDQogIFByaW50ICJTcGxpdHVwJCgwKSBoYXMgdGhlIG51bWJlciBvZiBzdWJzdHJpbmdzIGV4dHJhY3RlZCBpbiBpdCINCiAgUHJpbnQgIlNwbGl0dXAkKDEpIGlzIHRoZSBtYXhpbXVtIHN0cmluZyBsZW5ndGggb2YgYW55IHN1YnN0cmluZyINCiAgUHJpbnQgIlNwbGl0dXAkKDIpIHRocm91Z2ggU3BsaXR1cCQobikgY29udGFpbiB0aGUgZGVsaW1pdGVkIHN1YnN0cmluZ3MiDQogIFByaW50ICIgb2YgdGhlIGFyZ3VtZW50IHN0cmluZyINCiAgUHJpbnQNCiAgUHJpbnQgIlRlc3QgcnVuIg0KICBQcmludCAiRmlyc3Qgc3Vic3RyaW5nIG9mIGFyZ3VtZW50IHN0cmluZyBhdCBwb3NpdGlvbiAyIGlzICIsc3BsaXR1cCQoMikNCiAgUHJpbnQgIlNlY29uZCBzdWJzdHJpbmcgb2YgYXJndW1lbnQgc3RyaW5nIGF0IHBvc2l0aW9uIDMgaXMgIixzcGxpdHVwJCgzKQ0KICBQcmludCAiVGhpcmQgc3Vic3RyaW5nIG9mIGFyZ3VtZW50IHN0cmluZyBhdCBwb3NpdGlvbiA0IGlzICIsc3BsaXR1cCQoNCkNCiAgUHJpbnQgIkZvdXJ0aCBzdWJzdHJpbmcgb2YgYXJndW1lbnQgc3RyaW5nIGF0IHBvc2l0aW9uIDUgaXMgIixzcGxpdHVwJCg1KQ0KICBQcmludCAiRmlmdGggc3Vic3RyaW5nIG9mIGFyZ3VtZW50IHN0cmluZyBhdCBwb3NpdGlvbiA2IGlzICIsc3BsaXR1cCQoNikNCiAgJyBFbmQgb2YgdGVzdCBjb2RlDQogIA0KICAnIFNQTElUIHN1YnJvdXRpbmUNClN1YiBzcGxpdCQoYXJnMSQsYXJnMiQpDQogICcgYXJnMSQgaXMgdGhlIHN0cmluZyB0byBiZSBzcGxpdA0KICAnIGFyZzIkIGlzIHRoZSBkZWxpbWl0ZXIgdG8gc3BsaXQgb24NCiAgTG9jYWwgd2hvbGUkLGRlbGltJA0KICBMb2NhbCBudW1lbHMsbWF4bGVuLHdob2xlbGVuLGVsbGVuDQogIHdob2xlJD1hcmcxJA0KICBkZWxpbSQ9YXJnMiQNCiAgSWYgSW5zdHIod2hvbGUkLGRlbGltJCkgJmx0OyZndDsgMCBUaGVuDQogICAgbnVtZWxzID0gMSAgICAgICAgICAgICAgICAgICAgICAgICAnIGRlbGltaXRlciBmb3VuZA0KICAgIG1heGxlbiA9IDENCiAgICBEbyBXaGlsZSBJbnN0cih3aG9sZSQsZGVsaW0kKSAmbHQ7Jmd0OyAwICcgbm93IGNvdW50IHVwIGVsZW1lbnRzDQogICAgICBlbGxlbiA9IEluc3RyKHdob2xlJCxkZWxpbSQpLTEgICAnIGFuZCBtYXhpbXVtIHNpemUgc28gd2UNCiAgICAgIElmIGVsbGVuICZndDsgbWF4bGVuIFRoZW4NCiAgICAgICAgbWF4bGVuID0gZWxsZW4gICAgICAgICAgICAgICAgICcgY2FuIGRpbWVuc2lvbiBhcnJheQ0KICAgICAgRW5kSWYNCiAgICAgIG51bWVscyA9IG51bWVscyArIDENCiAgICAgIHdob2xlbGVuID0gTGVuKHdob2xlJCkNCiAgICAgIHdob2xlJCA9IFJpZ2h0JCh3aG9sZSQsd2hvbGVsZW4tKGVsbGVuICsgMSkpDQogICAgTG9vcA0KICAgIElmIExlbih3aG9sZSQpICZndDsgbWF4bGVuIFRoZW4NCiAgICAgIG1heGxlbiA9IExlbih3aG9sZSQpDQogICAgRW5kSWYNCiAgICANCiAgICB3aG9sZSQgPSBhcmcxJA0KICAgIEVyYXNlIFNwbGl0dXAkDQogICAgRGltIHNwbGl0dXAkKG51bWVscysyKSBsZW5ndGggbWF4bGVuDQogICAgc3BsaXR1cCQoMCkgPSBTdHIkKG51bWVscykNCiAgICBzcGxpdHVwJCgxKSA9IFN0ciQobWF4bGVuKQ0KICAgIEZvciB4ID0gMiBUbyBudW1lbHMrMQ0KICAgICAgd2hvbGVsZW4gPSBMZW4od2hvbGUkKQ0KICAgICAgSWYgeCA9IG51bWVscysxIFRoZW4NCiAgICAgICAgZWxsZW4gPSBMZW4od2hvbGUkKQ0KICAgICAgICBzcGxpdHVwJCh4KSA9IHdob2xlJA0KICAgICAgRWxzZQ0KICAgICAgICBlbGxlbiA9IEluc3RyKHdob2xlJCxkZWxpbSQpIC0gMQ0KICAgICAgICBzcGxpdHVwJCh4KT1MZWZ0JCh3aG9sZSQsZWxsZW4pDQogICAgICAgIHdob2xlJCA9IFJpZ2h0JCh3aG9sZSQsd2hvbGVsZW4tKGVsbGVuKzEpKQ0KICAgICAgRW5kSWYNCiAgICBOZXh0IHgNCiAgRWxzZQ0KICAgIFByaW50ICJFcnJvciYjNTg7IE5vIGRlbGltaXRlciBpbiBzdHJpbmciDQogIEVuZElmDQpFbmQgU3ViIA0KDQo8L3ByZT5kZOuA0W2jrjdHCd5R+AqNwKKTaOjZ" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">SPLIT subroutine</h1><small>Modified on 2016/12/23 23:45 by Administrator &mdash; Categorized as: Strings, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+  ' Subroutine to split a delimited string of characters into individual
+  ' substrings and return those substrings in a string array.
+  ' As you can't pass arrays in MM Basic, the returned array will always
+  ' be named splitup$()
+  ' The program automatically calculates the number of substrings in the string
+  ' and the size of the largest substring, then scales the array accordingly.
+  ' The number of substrings is returned in array position 0 and the maximum
+  ' length of each substring is returned in array position 1
+  
+  Print "Testing code for split$ subroutine"
+  Print
+  Print "Test string is  'abc,defg,hijkl,+123.678,-5' with comma delimiter"
+  a$="abc,defg,hijkl,+123.678,-5"
+  Print "Usage is  SPLIT$ arg$,delimiter$"
+  
+  split$ a$,","
+  
+  Print "The splitup array that is created is a one dimensional array that is "
+  Print "the number of substrings in the argument string + 2 in depth, "
+  Print "each of which equals the largest substring in characters long"
+  Print "Splitup$(0) has the number of substrings extracted in it"
+  Print "Splitup$(1) is the maximum string length of any substring"
+  Print "Splitup$(2) through Splitup$(n) contain the delimited substrings"
+  Print " of the argument string"
+  Print
+  Print "Test run"
+  Print "First substring of argument string at position 2 is ",splitup$(2)
+  Print "Second substring of argument string at position 3 is ",splitup$(3)
+  Print "Third substring of argument string at position 4 is ",splitup$(4)
+  Print "Fourth substring of argument string at position 5 is ",splitup$(5)
+  Print "Fifth substring of argument string at position 6 is ",splitup$(6)
+  ' End of test code
+  
+  ' SPLIT subroutine
+Sub split$(arg1$,arg2$)
+  ' arg1$ is the string to be split
+  ' arg2$ is the delimiter to split on
+  Local whole$,delim$
+  Local numels,maxlen,wholelen,ellen
+  whole$=arg1$
+  delim$=arg2$
+  If Instr(whole$,delim$) &lt;&gt; 0 Then
+    numels = 1                         ' delimiter found
+    maxlen = 1
+    Do While Instr(whole$,delim$) &lt;&gt; 0 ' now count up elements
+      ellen = Instr(whole$,delim$)-1   ' and maximum size so we
+      If ellen &gt; maxlen Then
+        maxlen = ellen                 ' can dimension array
+      EndIf
+      numels = numels + 1
+      wholelen = Len(whole$)
+      whole$ = Right$(whole$,wholelen-(ellen + 1))
+    Loop
+    If Len(whole$) &gt; maxlen Then
+      maxlen = Len(whole$)
+    EndIf
+    
+    whole$ = arg1$
+    Erase Splitup$
+    Dim splitup$(numels+2) length maxlen
+    splitup$(0) = Str$(numels)
+    splitup$(1) = Str$(maxlen)
+    For x = 2 To numels+1
+      wholelen = Len(whole$)
+      If x = numels+1 Then
+        ellen = Len(whole$)
+        splitup$(x) = whole$
+      Else
+        ellen = Instr(whole$,delim$) - 1
+        splitup$(x)=Left$(whole$,ellen)
+        whole$ = Right$(whole$,wholelen-(ellen+1))
+      EndIf
+    Next x
+  Else
+    Print "Error&#58; No delimiter in string"
+  EndIf
+End Sub 
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:29 GMT -->
+</html>

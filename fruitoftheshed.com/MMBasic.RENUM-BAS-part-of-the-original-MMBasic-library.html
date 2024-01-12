@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:56:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	RENUM.BAS - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=RENUM-BAS-part-of-the-original-MMBasic-library&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBL8BR2V0RmlsZS5hc3B4P0ZpbGU9UmVudW1iZXIuemlwJmFtcDtBc1N0cmVhbUF0dGFjaG1lbnQ9MSZhbXA7UHJvdmlkZXI9U2NyZXdUdXJuLldpa2kuRmlsZXNTdG9yYWdlUHJvdmlkZXImYW1wO0lzUGFnZUF0dGFjaG1lbnQ9MSZhbXA7UGFnZT1NTUJhc2ljLlJFTlVNLUJBUy1wYXJ0LW9mLXRoZS1vcmlnaW5hbC1NTUJhc2ljLWxpYnJhcnkIRG93bmxvYWQMUmVudW1iZXIuemlwCDQwLjIyIEtCZGRjLsmE7lNXmveGWkXD4oeH2Lcb7w==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login701f.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dRENUM-BAS-part-of-the-original-MMBasic-library%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.Historyd583.html?Page=MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			RENUM.BAS
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Printd583.html?Page=MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:37
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesb06f.html?Cat=MMBasic.Arrays" title="Arrays">Arrays</a>, <a href="MMBasic.AllPages6c47.html?Cat=MMBasic.Program%20Flow" title="Program Flow">Program Flow</a>, <a href="MMBasic.AllPages0409.html?Cat=MMBasic.Program%20Management" title="Program Management">Program Management</a>, <a href="MMBasic.AllPagesff34.html?Cat=MMBasic.Strings" title="Strings">Strings</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fb146fab0-53ed-4ff7-b709-e0d4d25566d0" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fb146fab0-53ed-4ff7-b709-e0d4d25566d0');"><a href="MMBasic.MMUNIX-UNIX-like-commands-cat-dir-grep-more.html" title="MMUNIX - UNIX-like commands: cat dir grep more">MMUNIX - UNIX-like commands: cat dir grep more</a><a href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a></div><div id="f453bd121-d412-4909-901f-f8c5279b2aa3" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f453bd121-d412-4909-901f-f8c5279b2aa3');"></div><div id="fb24e5f27-50ac-48b7-8df2-cef29d3497ea" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fb24e5f27-50ac-48b7-8df2-cef29d3497ea');"><a href="MMBasic.Compact-Quick-Day-Of-Week-function-with-historical-capability.html" title="Compact Quick Day Of Week function with historical capability">Compact Quick Day Of Week function with historical capability</a></div><div id="fd36c2673-2985-4469-8a68-12f79d69a88f" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fd36c2673-2985-4469-8a68-12f79d69a88f');"><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a><a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart() Function (VB work-a-like)</a><a href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$() - pad a number with leading zeroes</a></div><div id="sdd43b592-f19f-4c87-a044-3881e6ae1fd5" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sdd43b592-f19f-4c87-a044-3881e6ae1fd5');"><a href="MMBasic.MMUNIX-UNIX-like-commands-cat-dir-grep-more.html" title="MMUNIX - UNIX-like commands: cat dir grep more">MMUNIX - UNIX-like commands: cat dir grep more</a><a href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Refrigerator-temperature-sensor-with-five-zones.html" title="Refrigerator temperature sensor with five zones (MMBasic)">Refrigerator temperature sensor with five zones (MMBasic)</a> &raquo; <a href="MMBasic.Regular-Expression-Function.html" title="Regular Expression Function (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'sdd43b592-f19f-4c87-a044-3881e6ae1fd5', this);" id="lnksdd43b592-f19f-4c87-a044-3881e6ae1fd5" onmouseout="javascript:return __HideDropDown('sdd43b592-f19f-4c87-a044-3881e6ae1fd5');">Regular Expression Function (MMBasic)</a> &raquo; <b><a href="MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.html" title="RENUM.BAS (MMBasic)">RENUM.BAS (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Quick-and-Dirty-Daylight-Indicator.html" title="Quick and Dirty Daylight Indicator (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fd36c2673-2985-4469-8a68-12f79d69a88f', this);" id="lnkfd36c2673-2985-4469-8a68-12f79d69a88f" onmouseout="javascript:return __HideDropDown('fd36c2673-2985-4469-8a68-12f79d69a88f');">Quick and Dirty Daylight Indicator (MMBasic)</a> &raquo; <a href="MMBasic.Quick-Day-Of-Week-and-tiny-too.html" title="Quick Day Of Week (and tiny too) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fb24e5f27-50ac-48b7-8df2-cef29d3497ea', this);" id="lnkfb24e5f27-50ac-48b7-8df2-cef29d3497ea" onmouseout="javascript:return __HideDropDown('fb24e5f27-50ac-48b7-8df2-cef29d3497ea');">Quick Day Of Week (and tiny too) (MMBasic)</a> &raquo; <a href="MMBasic.Radius-of-an-Arc-or-Segment.html" title="Radius of an Arc or Segment (MMBasic)">Radius of an Arc or Segment (MMBasic)</a> &raquo; <a href="MMBasic.Random-File-Access-part-of-the-original-MMBasic-library.html" title="Random File Access (MMBasic)">Random File Access (MMBasic)</a> &raquo; <a href="MMBasic.RC4-Encryption-and-Decryption-Functions.html" title="RC4 Encryption and Decryption Functions (MMBasic)">RC4 Encryption and Decryption Functions (MMBasic)</a> &raquo; <a href="MMBasic.Read-Temperature-from-Dallas-DS18B20-part-of-the-original-MMBasic-library.html" title="Read Temperature from Dallas DS18B20 (MMBasic)">Read Temperature from Dallas DS18B20 (MMBasic)</a> &raquo; <a href="MMBasic.REDIM-Redimension-an-array.html" title="REDIM Redimension an array (VB work-a-like) (MMBasic)">REDIM Redimension an array (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.Refrigerator-temperature-sensor-with-five-zones.html" title="Refrigerator temperature sensor with five zones (MMBasic)">Refrigerator temperature sensor with five zones (MMBasic)</a> &raquo; <a href="MMBasic.Regular-Expression-Function.html" title="Regular Expression Function (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fb146fab0-53ed-4ff7-b709-e0d4d25566d0', this);" id="lnkfb146fab0-53ed-4ff7-b709-e0d4d25566d0" onmouseout="javascript:return __HideDropDown('fb146fab0-53ed-4ff7-b709-e0d4d25566d0');">Regular Expression Function (MMBasic)</a> &raquo; <b><a href="MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.html" title="RENUM.BAS (MMBasic)">RENUM.BAS (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />RENUM.BAS<br /><br />RENUM.BAS is written in MMBasic and requires at least version 4.3a.<br /><br />Renum.bas renumbers basic files, the same way the RENUMBER command used to work in version of MMBasic prior to Version 4.3a, and the RENUMBER.BAS file in the library used to work. The RENUMBER command has been removed from MMBasic and the old program has been removed from the library.<br /><br />Because of the length of the program (around 1900 lines) it is modularised (<b>Modules are in the attachments tab, top right</b>) and uses the Chain command that was introduced in MMBasic 4.3. CONFIG.BAS, the second module, chains back to the program held in variable MasterFile$. If you use CONFIG.BAS for your own programs remember to set this variable - or change the code to suit your needs.<br /><br />The program has some enhancements compared with the older versions.<br />- a line out-of-order check. A priority, because out-of-order lines caused an embarassing bug for me a while back;<br />- it ignores potential labels and line numbers if they are within remarks or print statements;<br />- it attempts to indent based on the length of the longest line number (but see problems below);<br />- it has options to increment the line numbers, even if the line number is blank, and to add line numbers to blank lines;<br />- it has some extra validation checks;<br />- it stores your preferred values in a configuration file.<br /><br />It also has problems.<br />- It has meaningful comments in the code, so it's big.<br />- it can't properly format programs that start off with bad formatting, especially if there's a mix of code with and without line numbers.<br />- it uses a lot of memory. To counter this there is a check at the beginning of RENUM.BAS to switch colour MMs to Mode 1 to conserve memory. The code also releases memory after use where possible.<br />- there is a lot of debug code still in the program. There's an entry in the renum.cfg file that turns it on and off. If you find line numbers in your code (ie, not those ones at the start of the line) with leading astrisks, you have debug enabled. Edit the config file and set bDebug to FALSE. I'll remove the debug code once I know the program works well in the 'real world'.<br />- The input and output filenames must be different. Once I know the program works reliably I'll add the 3 or 4 lines needed to close the input file, rename the original to a .bak file, then rename the output file to the original filename.<br /><br />HOW TO RUN THE PROGRAM<br />You can run RENUMBER.BAS from the MMBasic prompt with no parameters.<br />It prompts for:<br />1) The name of the program to be renumbered. The .bas extension is optional.<br />2) The name of the output file. Again, .bas is optional. It cannot be the same as the input file.<br />3) The start line number in the basic program where you want to start renumbering.<br />4) The first line number in the output file.<br />5) The increment you want between line numbers.<br /><br />It then prompts for whether you want to put line numbers on those lines that do not have them, or, if you don't want to do that, whether you want to increment the line number counter over those lines without line numbers.<br /><br />For example, consider a file with a mix of lines with and without line numbers:<br />10 line 1<br />20 line 2<br />  line 3 with no line number<br />  line 4 with no line number<br />120 END<br /><br />If you choose to put line numbers on those without them, you will get<br />10 line 1<br />20 line 2<br />30 line 3 with no line number<br />40 line 4 with no line number<br />50 END<br /><br />If you answer "N" to the option above, you are prompted as to whether the line numbering should increment when the program finds a lines without line numbers. If you answer "Y" you get<br />10 line 1<br />20 line 2<br />  line 3 with no line number<br />  line 4 with no line number<br />50 END<br /><br />If you answer "N", you get<br />10 line 1<br />20 line 2<br />  line 3 with no line number<br />  line 4 with no line number<br />30 END<br /><br />Finally, it prompts whether you want to use the FORMAT.BAS program. If you do, it prompts for:<br />1) the indent (accepts 1 to 6, with a default of 2).<br />2) whether the format should display the formatted program on the screen, a screen at a time, as it is processed.<br /><br />Your answers are saved into a configuration file called renumber.cfg. The program initially asks if you want to use the same answers as the last time the program was run. If you answer "y" the values are loaded from the configuration file.<br /><br />The renumbered program is written to the output file.<br /><br />You can also pass parameters on the command line if you use the MMBasic Implied Run format. Type RENUMBER /? for a list of the options.<br />Note: if you use the MMBasic Implied Run format, you can use the undocumented /D parameter to toggle debug mode.<br /><br />PROGRAMMING DECISIONS<br />I planned to offer an option to align the start of lines with the end of the longest label (as it currently does with line numbers), but decided not to because many programmers have the label on a separate line with no code following, and aligning to those labels would not add much to the code layout, but would waste valuable space on the LHS of the screen.<br /><br />I was trying to get line formatting perfect but that would have needed code analysis to get the indent right. I had tried to replicate the indenting in the original code, but it was too complex - especially if lined and unlined code were mixed and started in different columns. I'll leave that up to Hugh's FORMAT program.<br /><br />I decided not to code an option to strip out all linenumbers that weren't a target (eg GOTO target). If anyone decides to implement it, I made the 'lines' array 3 dimensional and tagged any lines that were targets (ie follow a GOTO, GOSUB etc.) in pass 2. You would have to move this check to pass 1 (not trivial) or make a third pass and reprocess the input file once the second pass had identified the targets. Probably the easiest way would be to scan the array and replace all line numbers in dimension 2 of the array with 0 if they weren't a target.<br />ie, if lines(linenum,3) = 0 then lines(linenum,2) = 0.<br />Then use the array value when adding the new linenumber to the line of code. Those with 0 will have spaces instead of a line number.<br /><br /><br /><br />USEFUL ROUTINES<br />This program calls CONFIG.BAS. I tried to make CONFIG.BAS as stand-alone as possible. All the code that has to be customised for your program is in the last two functions. And to make it REALLY EASY, I wrote a program called CONCODER.BAS to create all the code for those two functions. Set up your config file (I'd suggest copying from an old one and editing it with a text editor), and run CONCODER. It will prompt you for the name of the config file and the file you want to have the output written to.<br /><br />Here's an example of the contents of a Config file:<br />' This is the config file for EXAMPLE.BAS (comments are ignored by the config processor).<br />CITY=Bangkok<br />COUNTRY=Thailand<br />LineCount=22<br />LastFileOpened=ABCD.TXT<br />CompletedSuccessfully=TRUE<br /><br />Note that:<br />Comments are ignored by the processor.<br />All entries start at the first column.<br />There are no spaces between the config tag and the =, and the = and the value.<br />Config tags for strings do not have a $ on the end.<br />There are no quotes around string values.<br />You can use boolean (logical) values. True and False are defined at the top of CONFIG.BAS and bad things will happen if you remove the definition :)<br />You can use other types of value, but you'll have to write the code to support them.<br /><br />The concept is pretty simple. Values are read from the config file and allocated to global variables. The main program may change these values. At the end of the main program you call the config program again to store the global values back into the config file. The two customised functions at the end are responsible for converting the config tags into global variable names and back again, and has code to convert the values into something that can be stored and retrieved from the config file.<br /><br />Before you call config.bas, set a variable called bReadConfig to TRUE. This will make it call the code to read the config file. At the end of your program set bReadConfig to FALSE and run config.bas again. This will make it call the code to write the values back to the config file. The program chains to the program held in variable MasterFile$, so set that up too.<br /><br />ConCoder will read each line from the config file and prompt you for the "type" of the config item. Currently it accepts b (boolean), n (numeric), s (string) and o (other). It also asks whether the tag is exactly the same as the global variable name that the value will be assigned to. It won't be for strings because there's no $ on the end of the tag. You may also decide to use global variable names that are different to the tag for other reasons. Anyway, you can specify a different name if you want to. ConCoder will create the code to read the data from the config file and write it back again.<br /><br />If you specify the type as "other" you will have to write the code to support it. I've left a gap in the functions for you to insert it, and an END statement to stop the program if you don't.<br /><br />Once ConCoder has run, select all the text from the output file and overwrite the two functions at the bottom of CONFIG.BAS.<br /><br />If you keep all your MMBasic programs in one folder you will have to have a separate CONFIG.BAS for each program, so they will all have to have different names. I suppose you could have one config.bas that managed all config files, but I didn't write it for that situation and it could need a bit of recoding. It would also create unneeded global variables in your programs.<br /><br />You could set up different config files to suit different test situations and save having to type in the values each time. Just change the name of the config file being used.<br /><br />Another possibly useful routine is fileExists. It checks for the existence of a file in both the DOS and normal versions of MMBasic. It has a routine to convert file error numbers into their text descriptions.<br /><br />If you have any questions or suggestions contact me at jdeakins@pcug.org.au. Just make sure it has a reasonable subject heading so I don't delete it with the daily flood of spam. Alternately, PM me at The Backshed Forum as James_From_Canb.<br /><br />James Deakins<br />March/April 2013.
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='Renumberd4d3.zip?File=Renumber.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library' title="Download">Renumber.zip</a></td>
+			<td>40.22 KB</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.RENUM-BAS-part-of-the-original-MMBasic-library.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:56:55 GMT -->
+</html>

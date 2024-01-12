@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Invaders-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Invaders - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Invaders-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF5YUBPGgxIGNsYXNzPSJwYWdldGl0bGUiPkludmFkZXJzPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzozMiBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEdhbWVzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz5UaGlzIGlzIGEgdmVyc2lvbiBvZiB0aGUgU3BhY2UgSW52YWRlcnMgZ2FtZSBmb3IgdGhlIE1heGltaXRlLiAgSXQgd2FzIHdyaXR0ZW4gYnkgRmFicmljZSBNdWxsZXIgKEZyYW5jZSkuPGJyIC8+PGJyIC8+VG8gcGxheSwgdW56aXAgYWxsIHRoZSBmaWxlcyBpbnRvIGEgZGlyZWN0b3J5IG9uIHlvdXIgU0QgY2FyZCwgY2hhbmdlIGludG8gdGhlIGRpcmVjdG9yeSBhbmQgdGhlbiBydW4gdGhlIGZpbGUgSU5WQURFUlMuQkFTLjxiciAvPjxiciAvPlNwYWNlIEJhciAgID0gVGhlIGZpcmUgYnV0dG9uPGJyIC8+TGVmdCBBcnJvdyAgPSBNb3ZlIHlvdXIgZ3VuIHRvIHRoZSBsZWZ0PGJyIC8+UmlnaHQgQXJyb3cgPSBNb3ZlIHlvdXIgZ3VuIHRvIHRoZSByaWdodDxiciAvPkNUUkwtQyAgICAgID0gUXVpdDxiciAvPjxiciAvPlRoaXMgbXVzdCBiZSBydW4gdXNpbmcgTU1CYXNpYyAzLjBBIGFzIGl0IHJlbGllcyBvbiBzb21lIGFkdmFuY2VkIGZlYXR1cmVzIG9mIHRoaXMgdmVyc2lvbiB0byBjb250cm9sIHRoZSBpbnZhZGVycy48YnIgLz48YnIgLz5JdCBsb29rcyBiZXN0IGlmIHBsYXllZCBvbiBhIGNvbXBvc2l0ZSBQQUwgbW9uaXRvciBidXQgaXQgd2lsbCBhbHNvIHJ1biBmaW5lIG9uIGEgVkdBIG1vbml0b3IuPGJyIC8+PGJyIC8+PGI+SU5WQURFUlMuQkFTPC9iPjxiciAvPjxwcmU+DQogJ1NwYWNlIEludmFkZXJzIGZvciB0aGUgTWF4aW1pdGUNCk9wdGlvbiBiYXNlIDENCkNsZWFyDQogJ0luaXRpYWxpc2UgdmFyaWFibGVzDQpEaW0gRmlyZUNvb3JkKDIpDQpEaW0gT2xkRmlyZUNvb3JkKDIpDQpOYkNvbHMgPSAxMQ0KTmJJbnZGaXJlID0gNQ0KU3ByV2lkZSA9IDE2DQpNaW5YID0gMCAmIzU4OyBNYXhYID0gMTIwDQpEaW0gSW52YWRlcnMoNSxOYkNvbHMpDQpEaW0gSW52Q29scyhOYkNvbHMpDQpEaW0gSW52RmlyZUNvb3JkKDIwLDIpDQpEaW0gSW52RmlyZU9sZCgyMCwyKQ0KRGltIEludkxpbmUoNSkNCkRpbSBJbnZFcmFzZSg1KQ0KRGltIEludkxpbmUkKDUpDQpEaW0gSW52Q2hhciQoNSwyKQ0KRGltIEludlNjb3JlKDUpDQpJbnZTY29yZSgxKSA9IDMwDQpJbnZTY29yZSgyKSA9IDMwDQpJbnZTY29yZSgzKSA9IDIwDQpJbnZTY29yZSg0KSA9IDIwDQpJbnZTY29yZSg1KSA9IDEwDQpJbnZNaVNjb3JlID0gMTAwDQpNaXN0ZXJ5ID0gMTE3DQpDYW5vbiA9IDExOA0KQ2Fub25FeHAxID0gMTE5DQpDYW5vbkV4cDIgPSAxMjANCkR4ID0gLTINCkludkludGVydmFsID0gMjAwDQpJbnZNaUludGVydmFsID0gMjAwDQpJbnZNaVNwZWVkID0gMjANCkludkZpcmVUaW1lciA9IDI1DQpJbnZGaXJlU3BlZWQgPSAyNQ0KRmlyZVNwZWVkID0gNQ0KTWlzdGVyeU9uID0gMA0KU2NvcmUgPSAwDQpMaXZlcyA9IDMNCkxldmVsID0gMA0KTmV4dExldmVsID0gMQ0KSW52YWRlclggPSAxNg0KSW52YWRlclkgPSA0MA0KT3JpZ2luTWF4WSA9IDcwDQpJbnZNYXhZID0gT3JpZ2luTWF4WQ0KTWlzdGVyeVggPSAyODANCk9sZE1pc3RlcnlYID0gTWlzdGVyeVgNCk9sZEludmFkZXJYID0gSW52YWRlclgNCk9sZEludmFkZXJZID0gSW52YWRlclkNCkNhbm9uWCA9IDEwMA0KQ2Fub25ZID0gMTgwDQpPbGRDYW5vblggPSBDYW5vblgNCk9sZENhbm9uWSA9IENhbm9uWQ0KRmlyZSA9IDANCkludkhpdEIgPSAwDQpDeWNsZSA9IDANCiAnR2V0IHRoZSBJbnZhZGVycyBmb250ICgxNiB4IDEzIHBpeGVscykNCkZvbnQgTG9hZCAiaW52YWRlci5mbnQiIEFzICYjMzU7Ng0KICdHZXQgdGhlIHN0YXJ0IFNjcmVlbiBmb250ICg4IHggOCBwaXhlbHMpDQpGb250IExvYWQgImludm1lbnUuZm50IiBBcyAmIzM1OzcNCiAnU2V0dGluZyB0aGUgam95c3RpY2sgcGlucw0KICdQSU4gMTMgPSBMRUZUDQpTZXRQaW4gMTMsMg0KICdQSU4gMTQgPSBSSUdIVA0KU2V0UGluIDE0LDINCiAnUElOIDE1ID0gRmlyZSBCdXR0b24gMQ0KU2V0UGluIDE1LDINCiAnV2Ugc3RhcnQgaGVyZQ0KQ2xzDQpHb1N1YiBTdGFydFNjcmVlbg0KUmFuZG9taXplIFRpbWVyDQpQYXVzZSA1MDANCkNscw0KVGltZXIgPSAwDQpDb3VudGVyMSA9IDANCkNvdW50ZXIyID0gMA0KQ291bnRlcjMgPSAwDQpDb3VudGVyNCA9IDANCkNvdW50ZXI1ID0gMA0KQ291bnRlcjYgPSAwDQpSZWRyYXdJbnZhZGVycyA9IDENCiAnR2VuZXJhbCBnYW1lIGxvb3ANCkRvIFdoaWxlIDENCiAnY2hlY2sgaWYgd2UgZHJhdyBhIG5ldyBsZXZlbA0KIElmIE5leHRMZXZlbCA9IDEgVGhlbiBHb1N1YiBEcmF3TmV4dExldmVsDQogJ2NoZWNrIGlmIHdlIGhhdmUgdG8gbW92ZSB0aGUgSW52YWRlcnMNCiBJZiBDb3VudGVyMSAmZ3Q7PSBJbnZJbnRlcnZhbCBUaGVuDQogIFNvdW5kIDMwMCw1MA0KICBUaW1lciA9IDANCiAgR29TdWIgTW92ZUludmFkZXJzDQogIFJlZHJhd0ludmFkZXJzID0gMQ0KICBJZiBDeWNsZSA9IDAgVGhlbiBDeWNsZSA9IDEgRWxzZSBDeWNsZSA9IDANCiBFbmRJZg0KICdjaGVjayBpZiB3ZSByZWRyYXcgdGhlIEludmFkZXJzIGZpcmUNCiAnYXQgbmV3IHBvc2l0aW9ucw0KIElmIENvdW50ZXIyICZndDs9IEludkZpcmVTcGVlZCBUaGVuDQogIENvdW50ZXIyID0gMA0KICBHb1N1YiBJbnZGaXJlU2hvdw0KIEVuZElmDQogJ0NoZWNrIGlmIG9uZSBvZiB0aGUgaW52YWRlciBjYW4gZmlyZQ0KIElmIENvdW50ZXIzICZndDs9IEludkZpcmVUaW1lciBUaGVuDQogIENvdW50ZXIzID0gMA0KICBHb1N1YiBJbnZOZXdGaXJlDQogRW5kSWYNCiAnQ2hlY2sgaWYgd2UgYWN0aXZhdGUgdGhlIE1pc3RlcnkgU2hpcA0KIElmIChDb3VudGVyNCAmZ3Q7PSBJbnZNaUludGVydmFsKSBBbmQgKE1pc3RlcnlPbiA9IDApIFRoZW4NCiAgTWlzdGVyeU9uID0gMQ0KIEVuZElmDQogJ0NoZWNrIGlmIHdlIHNob3cgdGhlIE1pc3RlcnkgU2hpcA0KIElmIChNaXN0ZXJ5T24gPSAxKSBBbmQgKENvdW50ZXI2ICZndDs9IEludk1pU3BlZWQpIFRoZW4NCiAgQ291bnRlcjYgPSAwDQogIEdvU3ViIE1vdmVNaXN0ZXJ5DQogRW5kSWYNCiBjaGFyID0gQXNjKElua2V5JCkNCiAnY2hlY2sgaWYgd2UgbW92ZSB0aGUgQ2Fub24gdG8gTGVmdA0KIElmIChjaGFyID0gMTMwKSBUaGVuDQogIE9sZENhbm9uWCA9IENhbm9uWA0KICBDYW5vblggPSBDYW5vblggLSAyDQogIElmIENhbm9uWCAmbHQ7IDAgVGhlbiBDYW5vblggPSAwDQogRW5kSWYNCiAnY2hlY2sgaWYgd2UgbW92ZSB0aGUgQ2Fub24gdG8gUmlnaHQNCiBJZiAoY2hhciA9IDEzMSkgVGhlbg0KICBPbGRDYW5vblggPSBDYW5vblgNCiAgQ2Fub25YID0gQ2Fub25YICsgMg0KICBJZiBDYW5vblggJmd0OyAyODUgVGhlbiBDYW5vblggPSAyODUNCiBFbmRJZg0KICdjaGVjayBpZiB3ZSBGaXJlDQogSWYgKGNoYXIgPSAzMikgQW5kIChGaXJlID0gMCkgVGhlbg0KICBHb1N1YiBDYW5vbkZpcmUNCiBFbmRJZg0KICdjaGVjayBpZiB3ZSBraWxsIGEgSW52YWRlcnMNCiBJZiAoRmlyZSA9IDEpIEFuZCAoQ291bnRlcjUgJmd0Oz0gRmlyZVNwZWVkKSBUaGVuDQogIENvdW50ZXI1ID0gMA0KICBPbGRGaXJlQ29vcmQoMSkgPSBGaXJlQ29vcmQoMSkNCiAgT2xkRmlyZUNvb3JkKDIpID0gRmlyZUNvb3JkKDIpDQogIEZpcmVDb29yZCgyKSA9IEZpcmVDb29yZCgyKSAtIDUNCiAgSWYgKEZpcmVDb29yZCgyKSAmbHQ7PSBBY3RNYXhZKSBUaGVuIEdvU3ViIENoZWNrS2lsbA0KICBHb1N1YiBDYW5vbkhpdEJ1bmtlcg0KICBJZiBGaXJlQ29vcmQoMikgJmx0OyAwIFRoZW4NCiAgIExpbmUgKE9sZEZpcmVDb29yZCgxKSAsIE9sZEZpcmVDb29yZCgyKSkgLSAoT2xkRmlyZUNvb3JkKDEpICwgT2xkRmlyZUNvb3JkKDIpIC0gMyksMA0KICAgRmlyZSA9IDANCiAgRW5kSWYNCiBFbmRJZg0KICdBY3R1YWxpemUgYWxsIENvdW50ZXJzDQogQ291bnRlcjEgPSBUaW1lcg0KIENvdW50ZXIyID0gQ291bnRlcjIgKyAxDQogQ291bnRlcjMgPSBDb3VudGVyMyArIDENCiBDb3VudGVyNCA9IENvdW50ZXI0ICsgMQ0KIENvdW50ZXI1ID0gQ291bnRlcjUgKyAxDQogQ291bnRlcjYgPSBDb3VudGVyNiArIDENCiBHb1N1YiBSZWRyYXcNCkxvb3ANCiAnRHJhdyBhIG5ldyBsZXZlbCBhbmQgc2V0IHRoZSB2YXJpYWJsZXMNCkRyYXdOZXh0TGV2ZWwmIzU4Ow0KTGV2ZWwgPSBMZXZlbCArIDENCklmIExldmVsID0gMTAgVGhlbiBHb1RvIFlvdVdpbg0KSW52SW50ZXJ2YWwgPSAyMDAgLSAoKExldmVsIC0gMSkgJiM0MjsgMTApDQpJZiBJbnZJbnRlcnZhbCAmbHQ7IDQwIFRoZW4gSW52SW50ZXJ2YWwgPSA0MA0KSW52RmlyZVRpbWVyID0gMjAgLSAoKExldmVsIC0gMSkgJiM0MjsgMikNCklmIEludkZpcmVUaW1lciAmbHQ7IDEwIFRoZW4gSW52RmlyZVRpbWVyID0gMTANCkludmFkZXJYID0gMTYNCkludmFkZXJZID0gMjENCkNhbm9uWCA9IDEwMA0KQ2Fub25ZID0gMTgwDQpGaXJlID0gMA0KICdTZXQgdGhlIEludmFkZXJzDQpGb3IgYSA9IDEgVG8gNQ0KIEZvciBiID0gMSBUbyBOYkNvbHMNCiAgSW52YWRlcnMoYSAsIGIpID0gMQ0KIE5leHQgYg0KTmV4dCBhDQpGb3IgYSA9IDEgVG8gTmJJbnZGaXJlDQogSW52RmlyZUNvb3JkKGEsMSkgPSAtMQ0KIEludkZpcmVDb29yZChhLDIpID0gLTENCk5leHQgYQ0KRm9yIGEgPSAxIFRvIDUNCiBJbnZMaW5lKGEpID0gTmJDb2xzDQogSW52RXJhc2UoYSkgPSAxDQogSW52Q2hhciQoYSAsIDEpID0gImMiDQogSW52Q2hhciQoYSAsIDEpID0gImEiDQogSW52Q2hhciQoYSAsIDEpID0gImIiDQogSW52Q2hhciQoYSAsIDEpID0gImUiDQogSW52Q2hhciQoYSAsIDEpID0gImYiDQogSW52Q2hhciQoYSAsIDIpID0gImQiDQogSW52Q2hhciQoYSAsIDIpID0gImIiDQogSW52Q2hhciQoYSAsIDIpID0gImEiDQogSW52Q2hhciQoYSAsIDIpID0gImYiDQogSW52Q2hhciQoYSAsIDIpID0gImUiDQpOZXh0IGENCkludk1heFkgPSBPcmlnaW5NYXhZDQpNaW5YID0gMCAmIzU4OyBNYXhYID0gMTIwDQpOYkludkZpcmUgPSA1ICsgKExldmVsIC0gMSkNCkludkZpcmVUaW1lciA9IDI1IC0gKChMZXZlbCAtIDEpICYjNDI7IDIpDQpJbnZGaXJlU3BlZWQgPSAyNSAtIChMZXZlbCAtIDEpDQogJ0RyYXcgdGhlIExldmVsDQpDbHMNCkdvU3ViIFNob3dCdW5rZXINCkdvU3ViIFJlZHJhdw0KTmV4dExldmVsID0gMA0KUmV0dXJuDQpNb3ZlSW52YWRlcnMmIzU4Ow0KT2xkSW52YWRlclggPSBJbnZhZGVyWA0KT2xkSW52YWRlclkgPSBJbnZhZGVyWQ0KSW52YWRlclggPSBJbnZhZGVyWCArIER4DQpJZiBJbnZhZGVyWCAmbHQ7IE1pblggVGhlbg0KIEludmFkZXJYID0gTWluWA0KIE9sZEludmFkZXJZID0gSW52YWRlclkNCiBJbnZhZGVyWSA9IEludmFkZXJZICsgNQ0KIEludkludGVydmFsID0gSW52SW50ZXJ2YWwgLSAxMA0KIElmIEludkludGVydmFsICZsdDsgNDAgVGhlbiBJbnZJbnRlcnZhbCA9IDQwDQogRHggPSBBYnMoRHgpDQpFbmRJZg0KSWYgSW52YWRlclggJmd0OyBNYXhYIFRoZW4NCiBJbnZhZGVyWCA9IE1heFgNCiBPbGRJbnZhZGVyWSA9IEludmFkZXJZDQogSW52YWRlclkgPSBJbnZhZGVyWSArIDUNCiBJbnZJbnRlcnZhbCA9IEludkludGVydmFsIC0gMTANCiBJZiBJbnZJbnRlcnZhbCAmbHQ7IDQwIFRoZW4gSW52SW50ZXJ2YWwgPSA0MA0KIER4ID0gLUR4DQpFbmRJZg0KSWYgSW52YWRlclkgJmd0Oz0gSW52TWF4WSBUaGVuDQogR29UbyBHYW1lT3Zlcg0KRW5kSWYNClJldHVybg0KTW92ZU1pc3RlcnkmIzU4Ow0KT2xkTWlzdGVyeVggPSBNaXN0ZXJ5WA0KTWlzdGVyeVggPSBNaXN0ZXJ5WCAtIDMNCklmIE1pc3RlcnlYICZsdDsgMCBUaGVuDQogTGluZSAoT2xkTWlzdGVyeVggLCAwKSAtIChPbGRNaXN0ZXJ5WCArIDE2LCAyMCkgLCAwLEJGDQogTWlzdGVyeU9uID0gMA0KIENvdW50ZXI0ID0gMA0KIE1pc3RlcnlYID0gMjgwDQpFbmRJZg0KUmV0dXJuDQpSZWRyYXcmIzU4Ow0KICdEcmF3IHRoZSBJbnZhZGVycw0KRm9udCAmIzM1OzYNCklmIFJlZHJhd0ludmFkZXJzID0gMSBUaGVuDQogRm9yIGEgPSAxIFRvIDUNCiAgSW52TGluZSQoYSkgPSAiIg0KIE5leHQgYQ0KIElmIEN5Y2xlID0gMCBUaGVuDQogIEZvciBhID0gMSBUbyA1DQogICBGb3IgYiA9IDEgVG8gTmJDb2xzDQogICAgSWYgSW52YWRlcnMoYSAsIGIpICZsdDsmZ3Q7IDEyMSBUaGVuDQogICAgIEludkxpbmUkKGEpID0gSW52TGluZSQoYSkgKyBJbnZDaGFyJChhICwgMSkNCiAgICBFbHNlDQogICAgIEludkxpbmUkKGEpID0gSW52TGluZSQoYSkgKyBDaHIkKDEyMSkNCiAgICBFbmRJZg0KICAgTmV4dCBiDQogIE5leHQgYQ0KIEVsc2UNCiAgRm9yIGEgPSAxIFRvIDUNCiAgIEZvciBiID0gMSBUbyBOYkNvbHMNCiAgICBJZiBJbnZhZGVycyhhICwgYikgJmx0OyZndDsgMTIxIFRoZW4NCiAgICAgSW52TGluZSQoYSkgPSBJbnZMaW5lJChhKSArIEludkNoYXIkKGEgLCAyKQ0KICAgIEVsc2UNCiAgICAgSW52TGluZSQoYSkgPSBJbnZMaW5lJChhKSArIENociQoMTIxKQ0KICAgIEVuZElmDQogICBOZXh0IGINCiAgTmV4dCBhDQogRW5kSWYNCiBGb3IgYSA9IDEgVG8gNQ0KICBJZiBJbnZMaW5lKGEpICZsdDsmZ3Q7IDAgVGhlbg0KICAgb3kxID0gT2xkSW52YWRlclkgKyAoKGEgLSAxKSAmIzQyOyAyMCkNCiAgIG95MiA9IE9sZEludmFkZXJZICsgKChhIC0gMSkgJiM0MjsgMjApICsgMTMNCiAgIG95MyA9IEludmFkZXJZICsgKChhIC0gMSkgJiM0MjsgMjApDQogICBMaW5lIChPbGRJbnZhZGVyWCAsIG95MSkgLSAoT2xkSW52YWRlclggKyAoMTYgJiM0MjsgTmJDb2xzKSAsIG95MiksMCxCRg0KICAgUHJpbnQgQChJbnZhZGVyWCAsIG95MykgSW52TGluZSQoYSkNCiAgIEFjdE1heFkgPSBveTINCiAgRW5kSWYNCiBOZXh0IGENCiBSZWRyYXdJbnZhZGVycyA9IDANCkVuZElmDQogJ0RyYXcgdGhlIENhbm9uDQpMaW5lIChPbGRDYW5vblggLCBPbGRDYW5vblkpIC0gKE9sZENhbm9uWCArIDE2LCBPbGRDYW5vblkgKyAxMykgLCAwLEJGDQpQcmludCBAKENhbm9uWCAsIENhbm9uWSkgQ2hyJChDYW5vbikNCiAnRHJhdyB0aGUgTWlzdGVyeSBTaGlwDQpJZiBNaXN0ZXJ5T24gPSAxIFRoZW4NCiBMaW5lIChPbGRNaXN0ZXJ5WCAsIDApIC0gKE9sZE1pc3RlcnlYICsgMTYsIDIwKSAsIDAsQkYNCiBQcmludCBAKE1pc3RlcnlYICwgMCkgQ2hyJChNaXN0ZXJ5KQ0KRW5kSWYNCiAnRHJhdyB0aGUgQ2Fub24gRmlyZQ0KSWYgRmlyZSA9IDEgVGhlbg0KICBMaW5lIChPbGRGaXJlQ29vcmQoMSkgLCBPbGRGaXJlQ29vcmQoMikpIC0gKE9sZEZpcmVDb29yZCgxKSAsIE9sZEZpcmVDb29yZCgyKSAtIDMpLDANCiAgTGluZSAoRmlyZUNvb3JkKDEpICwgRmlyZUNvb3JkKDIpKSAtIChGaXJlQ29vcmQoMSkgLCBGaXJlQ29vcmQoMikgLSAzKSwxDQpFbmRJZg0KICdEcmF3IExpdmVzICwgU2NvcmUgYW5kIExldmVsDQpGb250ICYjMzU7MQ0KUHJpbnQgQCgxLDIwMCkgIkxpdmVzID0gIjsgTGl2ZXMNClByaW50IEAoMTAwLDIwMCkgIlNjb3JlID0gIjsgU2NvcmUNClByaW50IEAoMjAwLDIwMCkgIkxldmVsID0gIjsgTGV2ZWwNClJldHVybg0KSW52TmV3RmlyZSYjNTg7DQphID0gMQ0KVmFsaWRGaXJlID0gMA0KRG8gV2hpbGUgYSAmbHQ7PSBOYkludkZpcmUNCiBJZiBJbnZGaXJlQ29vcmQoYSwxKSA9IC0xIEFuZCBJbnZGaXJlQ29vcmQoYSwyKSA9IC0xIFRoZW4NCiAgeCA9IEludChSbmQgJiM0MjsgMTApICsgMQ0KICB5ID0gSW50KFJuZCAmIzQyOyA0KSArIDENCiAgSWYgSW52YWRlcnMoeSAsIHgpICZsdDsmZ3Q7IDEyMSBUaGVuIFZhbGlkRmlyZSA9IDENCiAgSWYgVmFsaWRGaXJlID0gMSBUaGVuDQogICBJbnZGaXJlQ29vcmQoYSwxKSA9IEludmFkZXJYICsgKCh4IC0gMSkgJiM0MjsgMTYpICsgOA0KICAgSW52RmlyZUNvb3JkKGEsMikgPSBJbnZhZGVyWSArICh5ICYjNDI7IDIwKQ0KICAgSW52RmlyZU9sZChhLDEpID0gSW52RmlyZUNvb3JkKGEsMSkNCiAgIEludkZpcmVPbGQoYSwyKSA9IEludkZpcmVDb29yZChhLDIpDQogICBhID0gTmJJbnZGaXJlICsgMQ0KICBFbmRJZg0KIEVuZElmDQogYSA9IGEgKyAxDQpMb29wDQpSZXR1cm4NCkludkZpcmVTaG93JiM1ODsNCmEgPSAxDQpEbyBXaGlsZSBhICZsdDs9IE5iSW52RmlyZQ0KIERlYWQgPSAwDQogSW52SGl0QiA9IDANCiBJZiBJbnZGaXJlQ29vcmQoYSwxKSAmbHQ7Jmd0OyAtMSBBbmQgSW52RmlyZUNvb3JkKGEsMikgJmx0OyZndDsgLTEgVGhlbg0KICBJbnZGaXJlT2xkKGEsMSkgPSBJbnZGaXJlQ29vcmQoYSwxKQ0KICBJbnZGaXJlT2xkKGEsMikgPSBJbnZGaXJlQ29vcmQoYSwyKQ0KICBJbnZGaXJlQ29vcmQoYSwyKSA9IEludkZpcmVDb29yZChhLDIpICsgNQ0KICB4ID0gSW52RmlyZUNvb3JkKGEsMSkgJiM1ODsgeSA9IEludkZpcmVDb29yZChhLDIpDQogIExpbmUgKEludkZpcmVPbGQoYSwxKSAsIEludkZpcmVPbGQoYSwyKSkgLSAoSW52RmlyZU9sZChhLDEpICwgSW52RmlyZU9sZChhLDIpICsgMyksMA0KICBMaW5lIChJbnZGaXJlQ29vcmQoYSwxKSAsIEludkZpcmVDb29yZChhLDIpKSAtIChJbnZGaXJlQ29vcmQoYSwxKSAsIEludkZpcmVDb29yZChhLDIpICsgMyksMQ0KICBHb1N1YiBDaGVja0RlYWQNCiAgSWYgRGVhZCA9IDEgVGhlbg0KICAgTGluZSAoSW52RmlyZUNvb3JkKGEsMSkgLCBJbnZGaXJlQ29vcmQoYSwyKSkgLSAoSW52RmlyZUNvb3JkKGEsMSkgLCBJbnZGaXJlQ29vcmQoYSwyKSArIDMpLDANCiAgIEludkZpcmVDb29yZChhLDEpID0gLTENCiAgIEludkZpcmVDb29yZChhLDIpID0gLTENCiAgIERlYWQgPSAwDQogIEVuZElmDQogIEdvU3ViIEludkhpdEJ1bmtlcg0KICBJZiB5ICZndDsgKENhbm9uWSArIDMpIFRoZW4NCiAgIExpbmUgKEludkZpcmVDb29yZChhLDEpICwgSW52RmlyZUNvb3JkKGEsMikpIC0gKEludkZpcmVDb29yZChhLDEpICwgSW52RmlyZUNvb3JkKGEsMikgKyAzKSwwDQogICBJbnZGaXJlQ29vcmQoYSwxKSA9IC0xDQogICBJbnZGaXJlQ29vcmQoYSwyKSA9IC0xDQogIEVuZElmDQogRW5kSWYNCiBhID0gYSArIDENCkxvb3ANClJldHVybg0KQ2Fub25GaXJlJiM1ODsNCkZpcmUgPSAxDQpGaXJlQ29vcmQoMSkgPSBDYW5vblggKyA4DQpGaXJlQ29vcmQoMikgPSBDYW5vblkNCk9sZEZpcmVDb29yZCgxKSA9IEZpcmVDb29yZCgxKQ0KT2xkRmlyZUNvb3JkKDIpID0gRmlyZUNvb3JkKDIpDQpHb1N1YiBiZWVwRmlyZQ0KUmV0dXJuDQpDaGVja0tpbGwmIzU4Ow0KSWYgKEZpcmVDb29yZCgxKSAmZ3Q7PSBJbnZhZGVyWCkgQW5kIChGaXJlQ29vcmQoMSkgJmx0Oz0gKEludmFkZXJYICsgMTc1KSkgVGhlbg0KIEZpcmVDb2x1bW4gPSBJbnQoKEZpcmVDb29yZCgxKSAtIEludmFkZXJYKSAvIDE2KSArIDENCiBJZiAoKEZpcmVDb29yZCgyKSAtIDMpICZndDs9IEludmFkZXJZKSBBbmQgKChGaXJlQ29vcmQoMikgLSAzKSAmbHQ7PSAoSW52YWRlclkgKyA5MykpIFRoZW4NCiAgRmlyZUxpbmUgPSBJbnQoKEZpcmVDb29yZCgyKSAtIDMgLSBJbnZhZGVyWSkgLyAyMCkgKyAxDQogIElmIEludmFkZXJzKEZpcmVMaW5lICwgRmlyZUNvbHVtbikgJmx0OyZndDsgMTIxIFRoZW4NCiAgIEludmFkZXJzKEZpcmVMaW5lICwgRmlyZUNvbHVtbikgPSAxMjENCiAgIFNjb3JlID0gU2NvcmUgKyBJbnZTY29yZShGaXJlTGluZSkNCiAgIExpbmUgKE9sZEZpcmVDb29yZCgxKSAsIE9sZEZpcmVDb29yZCgyKSkgLSAoT2xkRmlyZUNvb3JkKDEpICwgT2xkRmlyZUNvb3JkKDIpIC0gMyksMA0KICAgRmlyZSA9IDANCiAgIEdvU3ViIGJlZXBLaWxsSW52DQogICBHb1N1YiBDaGVja0xldmVsDQogIEVuZElmDQogRW5kSWYNCkVuZElmDQpJZiBNaXN0ZXJ5T24gPSAxIFRoZW4NCiB4MSA9IE1pc3RlcnlYDQogeDIgPSBNaXN0ZXJ5WCArIDE2DQogeTEgPSAwDQogeTIgPSAxMw0KIElmIEZpcmVDb29yZCgxKSAmZ3Q7PSB4MSBBbmQgRmlyZUNvb3JkKDEpICZsdDs9IHgyIEFuZCBGaXJlQ29vcmQoMikgJmd0Oz0geTEgQW5kIEZpcmVDb29yZCgyKSAmbHQ7PSB5MiBUaGVuDQogIFNjb3JlID0gU2NvcmUgKyBJbnZNaVNjb3JlICsgSW50KFJuZCAmIzQyOyAxMDApICsgMTAwDQogIExpbmUgKE9sZEZpcmVDb29yZCgxKSAsIE9sZEZpcmVDb29yZCgyKSkgLSAoT2xkRmlyZUNvb3JkKDEpICwgT2xkRmlyZUNvb3JkKDIpIC0gMyksMA0KICBMaW5lIChPbGRNaXN0ZXJ5WCAsIDApIC0gKE9sZE1pc3RlcnlYICsgMTYsIDIwKSAsIDAsQkYNCiAgRmlyZSA9IDANCiAgTWlzdGVyeU9uID0gMA0KICBDb3VudGVyNCA9IDANCiAgTWlzdGVyeVggPSAyODANCiAgR29TdWIgYmVlcEtpbGxNaXMNCiBFbmRJZg0KRW5kSWYNClJldHVybg0KQ2hlY2tEZWFkJiM1ODsNCklmICh4ICZndDs9IENhbm9uWCkgQW5kICh4ICZsdDs9IChDYW5vblggKyAxNikpIEFuZCAoeSAmZ3Q7PSBDYW5vblkpIEFuZCAoeSAmbHQ7PSAoQ2Fub25ZICsgMTMpKSBUaGVuDQogRm9udCAmIzM1OzYNCiAnV2UgbG9vc2Ugb25lIENhbm9uDQogTG9jYXRlIENhbm9uWCAsIENhbm9uWSAmIzU4OyBQcmludCBDaHIkKDExOSkNCiBTb3VuZCA4MDAsMjAwDQogUGF1c2UgMzAwDQogU291bmQgNjAwLDIwMA0KIFBhdXNlIDMwMA0KIExvY2F0ZSBDYW5vblggLCBDYW5vblkgJiM1ODsgUHJpbnQgQ2hyJCgxMjApDQogU291bmQgMzAwLDIwMA0KIFBhdXNlIDUwMA0KIExpdmVzID0gTGl2ZXMgLSAxDQogU291bmQgNTAwLDIwMA0KIFBhdXNlIDIwMA0KIExvY2F0ZSBDYW5vblggLCBDYW5vblkgJiM1ODsgUHJpbnQgQ2hyJCgxMjEpDQogRGVhZCA9IDENCiAnQ2hlY2sgaWYgd2UgbG9vc2UgdGhlIGdhbWUNCiBJZiBMaXZlcyA9IDAgVGhlbiBHb1RvIEdhbWVPdmVyDQpFbHNlDQogRGVhZCA9IDANCkVuZElmDQpSZXR1cm4NCkNhbm9uSGl0QnVua2VyJiM1ODsNCklmIChGaXJlQ29vcmQoMikgJmd0Oz0gMTYwKSBBbmQgKEZpcmVDb29yZCgyKSAmbHQ7PSAxNzkpIFRoZW4NCiBheCA9IEZpcmVDb29yZCgxKSAmIzU4OyBheSA9IEZpcmVDb29yZCgyKQ0KIElmIFBpeGVsKGF4ICwgYXkgKyAxKSAmbHQ7Jmd0OyAwIFRoZW4NCiAgU291bmQgMTIwMCw1MA0KICBGb3IgYiA9IDEgVG8gMTANCiAgIHggPSBGaXJlQ29vcmQoMSkgKyAoIEludChSbmQgJiM0MjsgMTApIC0gNSkNCiAgIHkgPSBGaXJlQ29vcmQoMikgKyAoIEludChSbmQgJiM0MjsgMTApIC0gNSkNCiAgIFBpeGVsKHggLCB5KSA9IDANCiAgTmV4dCBiDQogIExpbmUgKGF4IC0gMiAsIGF5IC0gMikgLSAoYXggKyAyICwgYXkgKyAyKSAsIDAgLCBCRg0KICBMaW5lIChPbGRGaXJlQ29vcmQoMSkgLCBPbGRGaXJlQ29vcmQoMikpIC0gKE9sZEZpcmVDb29yZCgxKSAsIE9sZEZpcmVDb29yZCgyKSAtIDMpLDANCiAgRmlyZSA9IDANCiBFbmRJZg0KRW5kSWYNClJldHVybg0KSW52SGl0QnVua2VyJiM1ODsNCiAnQ2hlY2sgaWYgSW52YWRlcnMgaGl0IHRoZSBidW5rZXJzDQpJZiAoeSAmZ3Q7PSAxNjApIEFuZCAoeSAmbHQ7PSAxNzkpIFRoZW4NCiBJZiBQaXhlbCh4ICwgeSAtIDEpICZsdDsmZ3Q7IDAgVGhlbg0KICAnSW52YWRlcnMgaGl0IHRoZSBidW5rZXJzDQogICBTb3VuZCAxMjAwLDUwDQogICBGb3IgYiA9IDEgVG8gMTANCiAgICB4MSA9IHggKyAoIEludChSbmQgJiM0MjsgMTApIC0gNSkNCiAgICB5MSA9IHkgKyAoIEludChSbmQgJiM0MjsgMTApIC0gNSkNCiAgICBQaXhlbCh4MSAsIHkxKSA9IDANCiAgIE5leHQgYg0KICAgTGluZSAoeCAtIDIgLCB5IC0gMikgLSAoeCArIDIgLCB5ICsgMikgLCAwICwgQkYNCiAgIExpbmUgKEludkZpcmVDb29yZChhLDEpICwgSW52RmlyZUNvb3JkKGEsMikpIC0gKEludkZpcmVDb29yZChhLDEpICwgSW52RmlyZUNvb3JkKGEsMikgKyAzKSwwDQogICBJbnZGaXJlQ29vcmQoYSwxKSA9IC0xDQogICBJbnZGaXJlQ29vcmQoYSwyKSA9IC0xDQogRW5kSWYNCkVuZElmDQpSZXR1cm4NClNob3dCdW5rZXImIzU4Ow0KICdTaG93IHRoZSA0IGJ1bmtlcnMNCkZvciBhID0gMSBUbyA0DQogTGluZSAoYSAmIzQyOyA2MCAsIDE2MCkgLSAoYSAmIzQyOyA2MCArIDMwICwgMTc5KSAsIDEgLCBCRg0KIExpbmUgKGEgJiM0MjsgNjAgKyAxMCwgMTc1KSAtIChhICYjNDI7IDYwICsgMjAgLCAxODApICwgMCAsIEJGDQpOZXh0IGENClJldHVybg0KYmVlcEtpbGxJbnYmIzU4Ow0KU291bmQgMTIwMCw1MA0KUmV0dXJuDQpiZWVwS2lsbE1pcyYjNTg7DQpTb3VuZCAxMTAwLDUwDQpQYXVzZSA1MA0KU291bmQgMTMwMCw1MA0KUGF1c2UgNTANClNvdW5kIDEyMDAsNTANClBhdXNlIDUwDQpTb3VuZCAxNDAwLDUwDQpSZXR1cm4NCmJlZXBGaXJlJiM1ODsNClNvdW5kIDEwMDAsNTANClJldHVybg0KQ2hlY2tMZXZlbCYjNTg7DQogJ0hlcmUgd2UgbG9vayBpZiB3ZSBraWxsZWQgYWxsIEludmFkZXJzDQpGb3IgbCA9IDEgVG8gNQ0KIEludkxpbmUobCkgPSAwDQpOZXh0IGwNCkZvciBsID0gMSBUbyBOYkNvbHMNCiBJbnZDb2xzKGwpID0gMA0KTmV4dCBsDQpGb3IgbCA9IDEgVG8gNQ0KIEZvciBtID0gMSBUbyBOYkNvbHMNCiAgSWYgSW52YWRlcnMgKGwgLCBtKSAmbHQ7Jmd0OyAxMjEgVGhlbg0KICAgSW52TGluZShsKSA9IEludkxpbmUobCkgKyAxDQogICBJbnZDb2xzKG0pID0gSW52Q29scyhtKSArIDENCiAgRW5kSWYNCiBOZXh0IG0NCk5leHQgbA0KSWYgSW52TGluZSgxKSA9IDAgQW5kIEludkxpbmUoMikgPSAwIEFuZCBJbnZMaW5lKDMpID0gMCBBbmQgSW52TGluZSg0KSA9IDAgQW5kIEludkxpbmUoNSkgPSAwIFRoZW4NCiAnV2UgZmluaXNoIHRoZSBMZXZlbA0KIE5leHRMZXZlbCA9IDENCkVuZElmDQpGb3IgbCA9IDEgVG8gNQ0KIElmIChJbnZMaW5lKGwpID0gMCkgQW5kIChJbnZFcmFzZShsKSAmbHQ7Jmd0OyAwKSBUaGVuDQogIEludkVyYXNlKGwpID0gMA0KICBMaW5lIChPbGRJbnZhZGVyWCAsIE9sZEludmFkZXJZICsgKCggbCAtIDEpICYjNDI7IDIwKSkgLSAoT2xkSW52YWRlclggKyAoMTYgJiM0MjsgTmJDb2xzKSAsIE9sZEludmFkZXJZICsgKCggbCAtIDEpICYjNDI7IDIwKSArIDEzKSwwLEJGDQogRW5kSWYNCk5leHQgbA0KSWYgSW52TGluZSg1KSA9IDAgVGhlbiBJbnZNYXhZID0gT3JpZ2luTWF4WSArIDIwDQpJZiAoSW52TGluZSg0KSA9IDApIEFuZCAoSW52TGluZSg1KSA9IDApIFRoZW4gSW52TWF4WSA9IE9yaWdpbk1heFkgKyA0MA0KSWYgKEludkxpbmUoMykgPSAwKSBBbmQgKEludkxpbmUoNCkgPSAwKSBUaGVuIEludk1heFkgPSBPcmlnaW5NYXhZICsgNjANCklmIChJbnZMaW5lKDIpID0gMCkgQW5kIChJbnZMaW5lKDMpID0gMCkgVGhlbiBJbnZNYXhZID0gT3JpZ2luTWF4WSArIDgwDQpGb3IgbCA9IDEgVG8gTmJDb2xzDQogSWYgSW52Q29scyhsKSA9IDAgVGhlbg0KICBNaW5YID0gMCAtIChTcHJXaWRlICYjNDI7IGwpDQogRWxzZQ0KICBsID0gTmJDb2xzICsgMQ0KIEVuZElmDQpOZXh0IGwNCkZvciBsID0gTmJDb2xzIFRvIDEgU3RlcCAtIDENCiBJZiBJbnZDb2xzKGwpID0gMCBUaGVuDQogIE1heFggPSAxMjAgKyAoU3ByV2lkZSAmIzQyOyAoTmJDb2xzIC0gbCkpDQogRWxzZQ0KICBsID0gMA0KIEVuZElmDQpOZXh0IGwNClJldHVybg0KICdZb3UgbG9vc2UgdGhlIGdhbWUNCkdhbWVPdmVyJiM1ODsNCkZvbnQgJiMzNTsxDQpDbHMNClByaW50IEAoMTIwLDEwMCkgIkcgQSBNIEUgLSBPIFYgRSBSIg0KUGF1c2UgNTAwMA0KUnVuDQogJ1lvdSB3aW4gdGhlIGdhbWUgYXQgTGV2ZWwgMTANCllvdVdpbiYjNTg7DQpGb250ICYjMzU7MQ0KQ2xzDQpQcmludCBAKDEyMCwxMDApICJZIE8gVSAtIFcgSSBOIg0KUGF1c2UgNTAwMA0KUnVuDQogJ1N0YXJ0IFNjcmVlbg0KU3RhcnRTY3JlZW4mIzU4Ow0KQ2xzDQpGb250ICYjMzU7MQ0KUHJpbnQgQCgxNDAsNTApICJQTEEiDQpGb250ICYjMzU7Nw0KUHJpbnQgQCgxNTksNTApICJZIg0KRm9udCAmIzM1OzENClByaW50IEAoMTIwLDcwKSAiU1BBQ0UgIElOVkFERVJTIg0KUHJpbnQgQCgxMDAsOTApICImIzQyO1NDT1JFIEFEVkFOQ0UgVEFCTEUmIzQyOyINCkZvbnQgJiMzNTs2DQpQcmludCBAKDExNSwxMDUpIENociQoMTE3KQ0KRm9udCAmIzM1OzENClByaW50IEAoMTMyLDEwOCkgIj0/ICBNWVNURVJZIg0KRm9udCAmIzM1OzYNClByaW50IEAoMTE1LDEyNSkgImMiDQpGb250ICYjMzU7MQ0KUHJpbnQgQCgxMzIsMTI4KSAiPTMwICBQT0lOVFMiDQpGb250ICYjMzU7Ng0KUHJpbnQgQCgxMTUsMTQ1KSAiYSINCkZvbnQgJiMzNTsxDQpQcmludCBAKDEzMiwxNDgpICI9MjAgIFBPSU5UUyINCkZvbnQgJiMzNTs2DQpQcmludCBAKDExNSwxNjUpICJlIg0KRm9udCAmIzM1OzENClByaW50IEAoMTMyLDE2OCkgIj0xMCAgUE9JTlRTIg0KUHJpbnQgQCgxMTAsMjAwKSAiUFJFU1MgRklSRSBUTyBTVEFSVCINCkNudCA9IDANCkFuaW1hdGUgPSAwDQpBbmltWCA9IDI5MA0KT2xkQW5pbVggPSBBbmltWA0KU3ByID0gOTANCkRvIFdoaWxlIChJbmtleSQgPSAiIikNCiBDbnQgPSBDbnQgKyAxDQogSWYgKENudCAmZ3Q7IDMwMDApIEFuZCAoQW5pbWF0ZSA9IDApIFRoZW4NCiAgQW5pbWF0ZSA9IDENCiAgRm9udCAmIzM1OzcNCiBFbmRJZg0KIElmIEFuaW1hdGUgPSAxIFRoZW4NCiAgJ0dvIHRvIHRoZSByZXZlcnNlZCAnWScNCiAgSWYgU3ByID0gOTAgVGhlbiBTcHIgPSA5MSBFbHNlIFNwciA9IDkwDQogIHB4MSA9IE9sZEFuaW1YIC0gMSAmIzU4OyBweDIgPSBPbGRBbmltWCArIDEyDQogIExpbmUgKHB4MSAsIDUwKSAtIChweDIgLCA2MSkgLCAwICwgQkYNCiAgUGF1c2UgNQ0KICBQcmludCBAKEFuaW1YICwgNTApIENociQoU3ByKTsNCiAgUGF1c2UgNQ0KICBPbGRBbmltWCA9IEFuaW1YDQogIEFuaW1YID0gQW5pbVggLSAxDQogIElmIEFuaW1YICZsdDs9IDE2NyBUaGVuDQogICBBbmltYXRlID0gMg0KICAgT2xkQW5pbVggPSBPbGRBbmltWCAtIDgNCiAgIEFuaW1YID0gQW5pbVggLSA4DQogIEVuZElmDQogRW5kSWYNCiBJZiBBbmltYXRlID0gMiBUaGVuDQogICdUYWtlIHRoZSByZXZlcnNlZCAnWScgYXdheQ0KICBJZiBTcHIgPSA5MCBUaGVuIFNwciA9IDkxIEVsc2UgU3ByID0gOTANCiAgRm9udCAmIzM1OzcNCiAgcHgxID0gT2xkQW5pbVggLSAxICYjNTg7IHB4MiA9IE9sZEFuaW1YICsgMjINCiAgTGluZSAocHgxICwgNTApIC0gKHB4MiAsIDYxKSAsIDAgLCBCRg0KICBQYXVzZSA1DQogIExvY2F0ZSBBbmltWCAsIDUwICYjNTg7IFByaW50ICJZIjsgQ2hyJChTcHIpOw0KICBQYXVzZSA1DQogIE9sZEFuaW1YID0gQW5pbVgNCiAgQW5pbVggPSBBbmltWCArIDENCiAgSWYgQW5pbVggJmd0Oz0gMjgyIFRoZW4gQW5pbWF0ZSA9IDMNCiBFbmRJZg0KIElmIEFuaW1hdGUgPSAzIFRoZW4NCiAgJ1B1dCB0aGUgZ29vZCAnWScgaW4gcGxhY2UNCiAgSWYgU3ByID0gOTAgVGhlbiBTcHIgPSA5MSBFbHNlIFNwciA9IDkwDQogIHB4MSA9IE9sZEFuaW1YIC0gMSAmIzU4OyBweDIgPSBPbGRBbmltWCArIDIyDQogIExpbmUgKHB4MSAsIDUwKSAtIChweDIgLCA2MSkgLCAwICwgQkYNCiAgUGF1c2UgNQ0KICBGb250ICYjMzU7MQ0KICBQcmludCBAKEFuaW1YICwgNTApICJZIjsNCiAgRm9udCAmIzM1OzcNCiAgUHJpbnQgQChBbmltWCArIDggLCA1MCkgQ2hyJChTcHIpOw0KICBQYXVzZSA1DQogIE9sZEFuaW1YID0gQW5pbVgNCiAgQW5pbVggPSBBbmltWCAtIDENCiAgSWYgQW5pbVggJmx0Oz0gMTU4IFRoZW4NCiAgIEFuaW1hdGUgPSA0DQogICBPbGRBbmltWCA9IE9sZEFuaW1YICsgOA0KICAgQW5pbVggPSBBbmltWCArIDgNCiAgRW5kSWYNCiBFbmRJZg0KIElmIEFuaW1hdGUgPSA0IFRoZW4NCiAgJ0ludmFkZXIgZ28gYXdheSBhbG9uZQ0KICBJZiBTcHIgPSA5MCBUaGVuIFNwciA9IDkxIEVsc2UgU3ByID0gOTANCiAgcHgxID0gT2xkQW5pbVggLSAxICYjNTg7IHB4MiA9IE9sZEFuaW1YICsgMTINCiAgTGluZSAocHgxICwgNTApIC0gKHB4MiAsIDYxKSAsIDAgLCBCRg0KICBQYXVzZSA1DQogIFByaW50IEAoQW5pbVggLCA1MCkgQ2hyJChTcHIpOw0KICBQYXVzZSA1DQogIE9sZEFuaW1YID0gQW5pbVgNCiAgQW5pbVggPSBBbmltWCArIDENCiAgSWYgQW5pbVggJmd0Oz0gMjkwIFRoZW4NCiAgIEFuaW1hdGUgPSA1DQogICBMaW5lIChBbmltWCAtIDEgLCA1MCkgLSAoQW5pbVggKyAxMiwgNjEpICwgMCAsIEJGDQogIEVuZElmDQogRW5kSWYNCiBJZiBDbnQgJmd0OyA0MDAwIFRoZW4gQ250ID0gMA0KTG9vcA0KUmV0dXJuDQoNCjwvcHJlPmRkA/lX2PqZTE6Tilzrat5idTF1Sk8=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Invaders</h1><small>Modified on 2016/12/23 23:32 by Administrator &mdash; Categorized as: Games, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />This is a version of the Space Invaders game for the Maximite.  It was written by Fabrice Muller (France).<br /><br />To play, unzip all the files into a directory on your SD card, change into the directory and then run the file INVADERS.BAS.<br /><br />Space Bar   = The fire button<br />Left Arrow  = Move your gun to the left<br />Right Arrow = Move your gun to the right<br />CTRL-C      = Quit<br /><br />This must be run using MMBasic 3.0A as it relies on some advanced features of this version to control the invaders.<br /><br />It looks best if played on a composite PAL monitor but it will also run fine on a VGA monitor.<br /><br /><b>INVADERS.BAS</b><br /><pre>
+ 'Space Invaders for the Maximite
+Option base 1
+Clear
+ 'Initialise variables
+Dim FireCoord(2)
+Dim OldFireCoord(2)
+NbCols = 11
+NbInvFire = 5
+SprWide = 16
+MinX = 0 &#58; MaxX = 120
+Dim Invaders(5,NbCols)
+Dim InvCols(NbCols)
+Dim InvFireCoord(20,2)
+Dim InvFireOld(20,2)
+Dim InvLine(5)
+Dim InvErase(5)
+Dim InvLine$(5)
+Dim InvChar$(5,2)
+Dim InvScore(5)
+InvScore(1) = 30
+InvScore(2) = 30
+InvScore(3) = 20
+InvScore(4) = 20
+InvScore(5) = 10
+InvMiScore = 100
+Mistery = 117
+Canon = 118
+CanonExp1 = 119
+CanonExp2 = 120
+Dx = -2
+InvInterval = 200
+InvMiInterval = 200
+InvMiSpeed = 20
+InvFireTimer = 25
+InvFireSpeed = 25
+FireSpeed = 5
+MisteryOn = 0
+Score = 0
+Lives = 3
+Level = 0
+NextLevel = 1
+InvaderX = 16
+InvaderY = 40
+OriginMaxY = 70
+InvMaxY = OriginMaxY
+MisteryX = 280
+OldMisteryX = MisteryX
+OldInvaderX = InvaderX
+OldInvaderY = InvaderY
+CanonX = 100
+CanonY = 180
+OldCanonX = CanonX
+OldCanonY = CanonY
+Fire = 0
+InvHitB = 0
+Cycle = 0
+ 'Get the Invaders font (16 x 13 pixels)
+Font Load "invader.fnt" As &#35;6
+ 'Get the start Screen font (8 x 8 pixels)
+Font Load "invmenu.fnt" As &#35;7
+ 'Setting the joystick pins
+ 'PIN 13 = LEFT
+SetPin 13,2
+ 'PIN 14 = RIGHT
+SetPin 14,2
+ 'PIN 15 = Fire Button 1
+SetPin 15,2
+ 'We start here
+Cls
+GoSub StartScreen
+Randomize Timer
+Pause 500
+Cls
+Timer = 0
+Counter1 = 0
+Counter2 = 0
+Counter3 = 0
+Counter4 = 0
+Counter5 = 0
+Counter6 = 0
+RedrawInvaders = 1
+ 'General game loop
+Do While 1
+ 'check if we draw a new level
+ If NextLevel = 1 Then GoSub DrawNextLevel
+ 'check if we have to move the Invaders
+ If Counter1 &gt;= InvInterval Then
+  Sound 300,50
+  Timer = 0
+  GoSub MoveInvaders
+  RedrawInvaders = 1
+  If Cycle = 0 Then Cycle = 1 Else Cycle = 0
+ EndIf
+ 'check if we redraw the Invaders fire
+ 'at new positions
+ If Counter2 &gt;= InvFireSpeed Then
+  Counter2 = 0
+  GoSub InvFireShow
+ EndIf
+ 'Check if one of the invader can fire
+ If Counter3 &gt;= InvFireTimer Then
+  Counter3 = 0
+  GoSub InvNewFire
+ EndIf
+ 'Check if we activate the Mistery Ship
+ If (Counter4 &gt;= InvMiInterval) And (MisteryOn = 0) Then
+  MisteryOn = 1
+ EndIf
+ 'Check if we show the Mistery Ship
+ If (MisteryOn = 1) And (Counter6 &gt;= InvMiSpeed) Then
+  Counter6 = 0
+  GoSub MoveMistery
+ EndIf
+ char = Asc(Inkey$)
+ 'check if we move the Canon to Left
+ If (char = 130) Then
+  OldCanonX = CanonX
+  CanonX = CanonX - 2
+  If CanonX &lt; 0 Then CanonX = 0
+ EndIf
+ 'check if we move the Canon to Right
+ If (char = 131) Then
+  OldCanonX = CanonX
+  CanonX = CanonX + 2
+  If CanonX &gt; 285 Then CanonX = 285
+ EndIf
+ 'check if we Fire
+ If (char = 32) And (Fire = 0) Then
+  GoSub CanonFire
+ EndIf
+ 'check if we kill a Invaders
+ If (Fire = 1) And (Counter5 &gt;= FireSpeed) Then
+  Counter5 = 0
+  OldFireCoord(1) = FireCoord(1)
+  OldFireCoord(2) = FireCoord(2)
+  FireCoord(2) = FireCoord(2) - 5
+  If (FireCoord(2) &lt;= ActMaxY) Then GoSub CheckKill
+  GoSub CanonHitBunker
+  If FireCoord(2) &lt; 0 Then
+   Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+   Fire = 0
+  EndIf
+ EndIf
+ 'Actualize all Counters
+ Counter1 = Timer
+ Counter2 = Counter2 + 1
+ Counter3 = Counter3 + 1
+ Counter4 = Counter4 + 1
+ Counter5 = Counter5 + 1
+ Counter6 = Counter6 + 1
+ GoSub Redraw
+Loop
+ 'Draw a new level and set the variables
+DrawNextLevel&#58;
+Level = Level + 1
+If Level = 10 Then GoTo YouWin
+InvInterval = 200 - ((Level - 1) &#42; 10)
+If InvInterval &lt; 40 Then InvInterval = 40
+InvFireTimer = 20 - ((Level - 1) &#42; 2)
+If InvFireTimer &lt; 10 Then InvFireTimer = 10
+InvaderX = 16
+InvaderY = 21
+CanonX = 100
+CanonY = 180
+Fire = 0
+ 'Set the Invaders
+For a = 1 To 5
+ For b = 1 To NbCols
+  Invaders(a , b) = 1
+ Next b
+Next a
+For a = 1 To NbInvFire
+ InvFireCoord(a,1) = -1
+ InvFireCoord(a,2) = -1
+Next a
+For a = 1 To 5
+ InvLine(a) = NbCols
+ InvErase(a) = 1
+ InvChar$(a , 1) = "c"
+ InvChar$(a , 1) = "a"
+ InvChar$(a , 1) = "b"
+ InvChar$(a , 1) = "e"
+ InvChar$(a , 1) = "f"
+ InvChar$(a , 2) = "d"
+ InvChar$(a , 2) = "b"
+ InvChar$(a , 2) = "a"
+ InvChar$(a , 2) = "f"
+ InvChar$(a , 2) = "e"
+Next a
+InvMaxY = OriginMaxY
+MinX = 0 &#58; MaxX = 120
+NbInvFire = 5 + (Level - 1)
+InvFireTimer = 25 - ((Level - 1) &#42; 2)
+InvFireSpeed = 25 - (Level - 1)
+ 'Draw the Level
+Cls
+GoSub ShowBunker
+GoSub Redraw
+NextLevel = 0
+Return
+MoveInvaders&#58;
+OldInvaderX = InvaderX
+OldInvaderY = InvaderY
+InvaderX = InvaderX + Dx
+If InvaderX &lt; MinX Then
+ InvaderX = MinX
+ OldInvaderY = InvaderY
+ InvaderY = InvaderY + 5
+ InvInterval = InvInterval - 10
+ If InvInterval &lt; 40 Then InvInterval = 40
+ Dx = Abs(Dx)
+EndIf
+If InvaderX &gt; MaxX Then
+ InvaderX = MaxX
+ OldInvaderY = InvaderY
+ InvaderY = InvaderY + 5
+ InvInterval = InvInterval - 10
+ If InvInterval &lt; 40 Then InvInterval = 40
+ Dx = -Dx
+EndIf
+If InvaderY &gt;= InvMaxY Then
+ GoTo GameOver
+EndIf
+Return
+MoveMistery&#58;
+OldMisteryX = MisteryX
+MisteryX = MisteryX - 3
+If MisteryX &lt; 0 Then
+ Line (OldMisteryX , 0) - (OldMisteryX + 16, 20) , 0,BF
+ MisteryOn = 0
+ Counter4 = 0
+ MisteryX = 280
+EndIf
+Return
+Redraw&#58;
+ 'Draw the Invaders
+Font &#35;6
+If RedrawInvaders = 1 Then
+ For a = 1 To 5
+  InvLine$(a) = ""
+ Next a
+ If Cycle = 0 Then
+  For a = 1 To 5
+   For b = 1 To NbCols
+    If Invaders(a , b) &lt;&gt; 121 Then
+     InvLine$(a) = InvLine$(a) + InvChar$(a , 1)
+    Else
+     InvLine$(a) = InvLine$(a) + Chr$(121)
+    EndIf
+   Next b
+  Next a
+ Else
+  For a = 1 To 5
+   For b = 1 To NbCols
+    If Invaders(a , b) &lt;&gt; 121 Then
+     InvLine$(a) = InvLine$(a) + InvChar$(a , 2)
+    Else
+     InvLine$(a) = InvLine$(a) + Chr$(121)
+    EndIf
+   Next b
+  Next a
+ EndIf
+ For a = 1 To 5
+  If InvLine(a) &lt;&gt; 0 Then
+   oy1 = OldInvaderY + ((a - 1) &#42; 20)
+   oy2 = OldInvaderY + ((a - 1) &#42; 20) + 13
+   oy3 = InvaderY + ((a - 1) &#42; 20)
+   Line (OldInvaderX , oy1) - (OldInvaderX + (16 &#42; NbCols) , oy2),0,BF
+   Print @(InvaderX , oy3) InvLine$(a)
+   ActMaxY = oy2
+  EndIf
+ Next a
+ RedrawInvaders = 0
+EndIf
+ 'Draw the Canon
+Line (OldCanonX , OldCanonY) - (OldCanonX + 16, OldCanonY + 13) , 0,BF
+Print @(CanonX , CanonY) Chr$(Canon)
+ 'Draw the Mistery Ship
+If MisteryOn = 1 Then
+ Line (OldMisteryX , 0) - (OldMisteryX + 16, 20) , 0,BF
+ Print @(MisteryX , 0) Chr$(Mistery)
+EndIf
+ 'Draw the Canon Fire
+If Fire = 1 Then
+  Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+  Line (FireCoord(1) , FireCoord(2)) - (FireCoord(1) , FireCoord(2) - 3),1
+EndIf
+ 'Draw Lives , Score and Level
+Font &#35;1
+Print @(1,200) "Lives = "; Lives
+Print @(100,200) "Score = "; Score
+Print @(200,200) "Level = "; Level
+Return
+InvNewFire&#58;
+a = 1
+ValidFire = 0
+Do While a &lt;= NbInvFire
+ If InvFireCoord(a,1) = -1 And InvFireCoord(a,2) = -1 Then
+  x = Int(Rnd &#42; 10) + 1
+  y = Int(Rnd &#42; 4) + 1
+  If Invaders(y , x) &lt;&gt; 121 Then ValidFire = 1
+  If ValidFire = 1 Then
+   InvFireCoord(a,1) = InvaderX + ((x - 1) &#42; 16) + 8
+   InvFireCoord(a,2) = InvaderY + (y &#42; 20)
+   InvFireOld(a,1) = InvFireCoord(a,1)
+   InvFireOld(a,2) = InvFireCoord(a,2)
+   a = NbInvFire + 1
+  EndIf
+ EndIf
+ a = a + 1
+Loop
+Return
+InvFireShow&#58;
+a = 1
+Do While a &lt;= NbInvFire
+ Dead = 0
+ InvHitB = 0
+ If InvFireCoord(a,1) &lt;&gt; -1 And InvFireCoord(a,2) &lt;&gt; -1 Then
+  InvFireOld(a,1) = InvFireCoord(a,1)
+  InvFireOld(a,2) = InvFireCoord(a,2)
+  InvFireCoord(a,2) = InvFireCoord(a,2) + 5
+  x = InvFireCoord(a,1) &#58; y = InvFireCoord(a,2)
+  Line (InvFireOld(a,1) , InvFireOld(a,2)) - (InvFireOld(a,1) , InvFireOld(a,2) + 3),0
+  Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),1
+  GoSub CheckDead
+  If Dead = 1 Then
+   Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),0
+   InvFireCoord(a,1) = -1
+   InvFireCoord(a,2) = -1
+   Dead = 0
+  EndIf
+  GoSub InvHitBunker
+  If y &gt; (CanonY + 3) Then
+   Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),0
+   InvFireCoord(a,1) = -1
+   InvFireCoord(a,2) = -1
+  EndIf
+ EndIf
+ a = a + 1
+Loop
+Return
+CanonFire&#58;
+Fire = 1
+FireCoord(1) = CanonX + 8
+FireCoord(2) = CanonY
+OldFireCoord(1) = FireCoord(1)
+OldFireCoord(2) = FireCoord(2)
+GoSub beepFire
+Return
+CheckKill&#58;
+If (FireCoord(1) &gt;= InvaderX) And (FireCoord(1) &lt;= (InvaderX + 175)) Then
+ FireColumn = Int((FireCoord(1) - InvaderX) / 16) + 1
+ If ((FireCoord(2) - 3) &gt;= InvaderY) And ((FireCoord(2) - 3) &lt;= (InvaderY + 93)) Then
+  FireLine = Int((FireCoord(2) - 3 - InvaderY) / 20) + 1
+  If Invaders(FireLine , FireColumn) &lt;&gt; 121 Then
+   Invaders(FireLine , FireColumn) = 121
+   Score = Score + InvScore(FireLine)
+   Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+   Fire = 0
+   GoSub beepKillInv
+   GoSub CheckLevel
+  EndIf
+ EndIf
+EndIf
+If MisteryOn = 1 Then
+ x1 = MisteryX
+ x2 = MisteryX + 16
+ y1 = 0
+ y2 = 13
+ If FireCoord(1) &gt;= x1 And FireCoord(1) &lt;= x2 And FireCoord(2) &gt;= y1 And FireCoord(2) &lt;= y2 Then
+  Score = Score + InvMiScore + Int(Rnd &#42; 100) + 100
+  Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+  Line (OldMisteryX , 0) - (OldMisteryX + 16, 20) , 0,BF
+  Fire = 0
+  MisteryOn = 0
+  Counter4 = 0
+  MisteryX = 280
+  GoSub beepKillMis
+ EndIf
+EndIf
+Return
+CheckDead&#58;
+If (x &gt;= CanonX) And (x &lt;= (CanonX + 16)) And (y &gt;= CanonY) And (y &lt;= (CanonY + 13)) Then
+ Font &#35;6
+ 'We loose one Canon
+ Locate CanonX , CanonY &#58; Print Chr$(119)
+ Sound 800,200
+ Pause 300
+ Sound 600,200
+ Pause 300
+ Locate CanonX , CanonY &#58; Print Chr$(120)
+ Sound 300,200
+ Pause 500
+ Lives = Lives - 1
+ Sound 500,200
+ Pause 200
+ Locate CanonX , CanonY &#58; Print Chr$(121)
+ Dead = 1
+ 'Check if we loose the game
+ If Lives = 0 Then GoTo GameOver
+Else
+ Dead = 0
+EndIf
+Return
+CanonHitBunker&#58;
+If (FireCoord(2) &gt;= 160) And (FireCoord(2) &lt;= 179) Then
+ ax = FireCoord(1) &#58; ay = FireCoord(2)
+ If Pixel(ax , ay + 1) &lt;&gt; 0 Then
+  Sound 1200,50
+  For b = 1 To 10
+   x = FireCoord(1) + ( Int(Rnd &#42; 10) - 5)
+   y = FireCoord(2) + ( Int(Rnd &#42; 10) - 5)
+   Pixel(x , y) = 0
+  Next b
+  Line (ax - 2 , ay - 2) - (ax + 2 , ay + 2) , 0 , BF
+  Line (OldFireCoord(1) , OldFireCoord(2)) - (OldFireCoord(1) , OldFireCoord(2) - 3),0
+  Fire = 0
+ EndIf
+EndIf
+Return
+InvHitBunker&#58;
+ 'Check if Invaders hit the bunkers
+If (y &gt;= 160) And (y &lt;= 179) Then
+ If Pixel(x , y - 1) &lt;&gt; 0 Then
+  'Invaders hit the bunkers
+   Sound 1200,50
+   For b = 1 To 10
+    x1 = x + ( Int(Rnd &#42; 10) - 5)
+    y1 = y + ( Int(Rnd &#42; 10) - 5)
+    Pixel(x1 , y1) = 0
+   Next b
+   Line (x - 2 , y - 2) - (x + 2 , y + 2) , 0 , BF
+   Line (InvFireCoord(a,1) , InvFireCoord(a,2)) - (InvFireCoord(a,1) , InvFireCoord(a,2) + 3),0
+   InvFireCoord(a,1) = -1
+   InvFireCoord(a,2) = -1
+ EndIf
+EndIf
+Return
+ShowBunker&#58;
+ 'Show the 4 bunkers
+For a = 1 To 4
+ Line (a &#42; 60 , 160) - (a &#42; 60 + 30 , 179) , 1 , BF
+ Line (a &#42; 60 + 10, 175) - (a &#42; 60 + 20 , 180) , 0 , BF
+Next a
+Return
+beepKillInv&#58;
+Sound 1200,50
+Return
+beepKillMis&#58;
+Sound 1100,50
+Pause 50
+Sound 1300,50
+Pause 50
+Sound 1200,50
+Pause 50
+Sound 1400,50
+Return
+beepFire&#58;
+Sound 1000,50
+Return
+CheckLevel&#58;
+ 'Here we look if we killed all Invaders
+For l = 1 To 5
+ InvLine(l) = 0
+Next l
+For l = 1 To NbCols
+ InvCols(l) = 0
+Next l
+For l = 1 To 5
+ For m = 1 To NbCols
+  If Invaders (l , m) &lt;&gt; 121 Then
+   InvLine(l) = InvLine(l) + 1
+   InvCols(m) = InvCols(m) + 1
+  EndIf
+ Next m
+Next l
+If InvLine(1) = 0 And InvLine(2) = 0 And InvLine(3) = 0 And InvLine(4) = 0 And InvLine(5) = 0 Then
+ 'We finish the Level
+ NextLevel = 1
+EndIf
+For l = 1 To 5
+ If (InvLine(l) = 0) And (InvErase(l) &lt;&gt; 0) Then
+  InvErase(l) = 0
+  Line (OldInvaderX , OldInvaderY + (( l - 1) &#42; 20)) - (OldInvaderX + (16 &#42; NbCols) , OldInvaderY + (( l - 1) &#42; 20) + 13),0,BF
+ EndIf
+Next l
+If InvLine(5) = 0 Then InvMaxY = OriginMaxY + 20
+If (InvLine(4) = 0) And (InvLine(5) = 0) Then InvMaxY = OriginMaxY + 40
+If (InvLine(3) = 0) And (InvLine(4) = 0) Then InvMaxY = OriginMaxY + 60
+If (InvLine(2) = 0) And (InvLine(3) = 0) Then InvMaxY = OriginMaxY + 80
+For l = 1 To NbCols
+ If InvCols(l) = 0 Then
+  MinX = 0 - (SprWide &#42; l)
+ Else
+  l = NbCols + 1
+ EndIf
+Next l
+For l = NbCols To 1 Step - 1
+ If InvCols(l) = 0 Then
+  MaxX = 120 + (SprWide &#42; (NbCols - l))
+ Else
+  l = 0
+ EndIf
+Next l
+Return
+ 'You loose the game
+GameOver&#58;
+Font &#35;1
+Cls
+Print @(120,100) "G A M E - O V E R"
+Pause 5000
+Run
+ 'You win the game at Level 10
+YouWin&#58;
+Font &#35;1
+Cls
+Print @(120,100) "Y O U - W I N"
+Pause 5000
+Run
+ 'Start Screen
+StartScreen&#58;
+Cls
+Font &#35;1
+Print @(140,50) "PLA"
+Font &#35;7
+Print @(159,50) "Y"
+Font &#35;1
+Print @(120,70) "SPACE  INVADERS"
+Print @(100,90) "&#42;SCORE ADVANCE TABLE&#42;"
+Font &#35;6
+Print @(115,105) Chr$(117)
+Font &#35;1
+Print @(132,108) "=?  MYSTERY"
+Font &#35;6
+Print @(115,125) "c"
+Font &#35;1
+Print @(132,128) "=30  POINTS"
+Font &#35;6
+Print @(115,145) "a"
+Font &#35;1
+Print @(132,148) "=20  POINTS"
+Font &#35;6
+Print @(115,165) "e"
+Font &#35;1
+Print @(132,168) "=10  POINTS"
+Print @(110,200) "PRESS FIRE TO START"
+Cnt = 0
+Animate = 0
+AnimX = 290
+OldAnimX = AnimX
+Spr = 90
+Do While (Inkey$ = "")
+ Cnt = Cnt + 1
+ If (Cnt &gt; 3000) And (Animate = 0) Then
+  Animate = 1
+  Font &#35;7
+ EndIf
+ If Animate = 1 Then
+  'Go to the reversed 'Y'
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 12
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Print @(AnimX , 50) Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX - 1
+  If AnimX &lt;= 167 Then
+   Animate = 2
+   OldAnimX = OldAnimX - 8
+   AnimX = AnimX - 8
+  EndIf
+ EndIf
+ If Animate = 2 Then
+  'Take the reversed 'Y' away
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  Font &#35;7
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 22
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Locate AnimX , 50 &#58; Print "Y"; Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX + 1
+  If AnimX &gt;= 282 Then Animate = 3
+ EndIf
+ If Animate = 3 Then
+  'Put the good 'Y' in place
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 22
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Font &#35;1
+  Print @(AnimX , 50) "Y";
+  Font &#35;7
+  Print @(AnimX + 8 , 50) Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX - 1
+  If AnimX &lt;= 158 Then
+   Animate = 4
+   OldAnimX = OldAnimX + 8
+   AnimX = AnimX + 8
+  EndIf
+ EndIf
+ If Animate = 4 Then
+  'Invader go away alone
+  If Spr = 90 Then Spr = 91 Else Spr = 90
+  px1 = OldAnimX - 1 &#58; px2 = OldAnimX + 12
+  Line (px1 , 50) - (px2 , 61) , 0 , BF
+  Pause 5
+  Print @(AnimX , 50) Chr$(Spr);
+  Pause 5
+  OldAnimX = AnimX
+  AnimX = AnimX + 1
+  If AnimX &gt;= 290 Then
+   Animate = 5
+   Line (AnimX - 1 , 50) - (AnimX + 12, 61) , 0 , BF
+  EndIf
+ EndIf
+ If Cnt &gt; 4000 Then Cnt = 0
+Loop
+Return
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Invaders-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:08 GMT -->
+</html>

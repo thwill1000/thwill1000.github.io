@@ -1,0 +1,189 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Big-Integer-Maths-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:13:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Big Integer Maths - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Big-Integer-Maths-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFszA8aDEgY2xhc3M9InBhZ2V0aXRsZSI+QmlnIEludGVnZXIgTWF0aHM8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzIzIDIzOjIwIGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogTWF0aHMsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPjxwcmU+DQonIGludGVnZXIgbWF0aHMgYnkgVGFzc3lKaW0gMDcgRmViIDIwMTINCg0KJyBNTSBCYXNpYyBDQU4gZG8gYmlnIGludGVnZXIgbWF0aHMhDQoNCicgVGhlIGluY2x1ZGVkIGNvZGUgdXNlcyBpbnRlZ2VyIG1hdGhzIHRvIGNhbGN1bGF0ZQ0KJyAxLCAxw5cyLCAxw5cyw5czLCAxw5cyw5czw5c0LCBldGMuIHRoZSBzdWNjZXNzaXZlIGZhY3RvcmlhbCBudW1iZXJzLg0KJyBUaGUgbGltaXQgaW4gTU0gQmFzaWMgaXMgdGhlIGxlbmd0aCBvZiBhIHN0cmluZyBvciAyNTUgZGlnaXRzLg0KJyBBdCB0aGlzIHN0YWdlLCBvbmx5IHBvc2l0aXZlIGludGVnZXJzIGFyZSBhbGxvd2VkIGFzIGlucHV0cy4NCicgVGhpcyBjb2RlIGlzIFNMT1cgYW5kIEkgaGF2ZSBub3QgbWFkZSBhbnkgYXR0ZW1wdCB0byBzcGVlZCBpdCB1cC4NCicgV29ya2luZyBpbiBiYXNlIDEwMDAgKDMgZGlnaXRzIGF0IGEgdGltZSkgaXMgdGhlIG9idmlvdXMgd2F5IHRvDQonIGdhaW4gc3BlZWQgYnV0IHRoaXMgZXhlcmNpc2Ugd2FzIGEgcHJvb2Ygb2YgY29uY2VwdCByYXRoZXIgdGhhbiBnb29kIGNvZGUuDQonIEkga25vdyBhIGxvdCBtb3JlIGFib3V0IE1NIEJhc2ljIHN1YnJvdXRpbmUgbm93IQ0KJyBJdCBuZWVkcyBNTSBCYXNpYyBWMy4xIGFzIGl0IHVzZXMgdXNlciBkZWZpbmVkIHN1YnJvdXRpbmVzLg0KJyBDb252ZXJ0aW5nIHRvIGdvc3VicyBhbmQgbGluZSBudW1iZXJzIGlzIGEgdGFzayBmb3Igc29tZW9uZSBlbHNlLg0KDQonIE5vdyBJIG5lZWQgdG8gZ28gdGhlIG5leHQgc3RlcCBhbmQgYWxsb3cgbmVnYXRpdmUgbnVtYmVycyBhcyBpbnB1dHMuIA0KDQphJCA9ICIxMyINCkZvciBpID0gMCBUbyAxNSAnIGRlbW8gb2YgdGhlIGZvdXIgb3BlcmF0aW9ucw0KICAgIGFkZCggYSQgLCBTdHIkKCBpICkscmVzJCApDQogICAgUHJpbnQgYSQ7IiArICI7aTsiID0gIjtyZXMkDQogICAgbWluKCBhJCAsIFN0ciQoIGkgKSxyZXMkICkNCiAgICBQcmludCBhJDsiIC0gIjtpOyIgPSAiO3JlcyQNCiAgICBtdWx0eSggYSQgLCBTdHIkKCBpICkscmVzJCApDQogICAgUHJpbnQgYSQ7IiAmIzQyOyAiO2k7IiA9ICI7cmVzJA0KICAgIGRpdiggYSQgLCBTdHIkKCBpICkscmVzJCApDQogICAgUHJpbnQgYSQ7IiAvICI7aTsiID0gIjtyZXMkDQogICAgUHJpbnQNCk5leHQgaQ0KDQphJD0iMSINCkZvciBpID0gMSBUbyA1NSAnIHByaW50aW5nIHVwIHRvIGZhY3RvcmlhbCA1NS4NCiAgICBiJD1TdHIkKGkpDQogICAgbXVsdHkoYSQsIGIkLCByZXMkKQ0KICAgIFByaW50IGIkOyIhID0gIjtyZXMkOyIgICgiO2xlbihyZXMkKTsiICkiDQogICAgYSQ9cmVzJA0KTmV4dCBpDQoNCkVuZA0KDQpTdWIgZGl2KCBhJCAsIGIkLCBjJCApICcgZ2l2ZW4gYSQgYW5kIGIkLCByZXR1cm5zIGEvYiBpbiBjJA0KICAgIExvY2FsIGYsIGksIGQsIHQsIHRyeSQsIG5yJCwgYTEkLCBiMSQsIGEyJCwgeiQNCiAgICBhMSQ9YSQgJiM1ODsgYjEkPWIkICYjNTg7IGMkPSIiICcgbWFrZSBjb3BpZXMgb2YgYSQgYW5kIGIkIHRvIHByZXNlcnZlIG9yaWdpbmFscw0KICAgIElmIFZhbCggYiQgKSA9IDAgVGhlbiAgICcgZGl2aWRlIGJ5IHplcm8NCiAgICAgICAgYyQgPSAiZXJyb3IiDQogICAgRWxzZQ0KICAgICAgICBGb3IgaSA9IExlbiggYTEkICkgLSBMZW4oIGIxJCApIFRvIDAgU3RlcCAtMQ0KICAgICAgICAgICAgZiA9IDANCiAgICAgICAgICAgIG5yJCA9ICIwIg0KICAgICAgICAgICAgeiQ9U3RyaW5nJChpLCIwIikNCiAgICAgICAgICAgIEZvciBkID0gMCBUbyA5DQogICAgICAgICAgICAgICAgbWQoIGIxJCArIHokICwgZCwgdHJ5JCApDQogICAgICAgICAgICAgICAgYmlnKCBhMSQgLCB0cnkkLCB0ICkNCiAgICAgICAgICAgICAgICBJZiB0IFRoZW4NCiAgICAgICAgICAgICAgICAgICAgZiA9IGQNCiAgICAgICAgICAgICAgICAgICAgbnIkID0gdHJ5JA0KICAgICAgICAgICAgICAgIEVuZElmDQogICAgICAgICAgICBOZXh0IGQNCiAgICAgICAgICAgIGMkID0gYyQgKyBTdHIkKCBmICkNCiAgICAgICAgICAgIElmIGYgJmd0OyAwIFRoZW4NCiAgICAgICAgICAgICAgICBtaW4oIGExJCAsIG5yJCwgYTIkICkNCiAgICAgICAgICAgICAgICBhMSQgPSBhMiQNCiAgICAgICAgICAgIEVuZElmDQogICAgICAgIE5leHQgaQ0KICAgIEVuZElmDQogICAgdHJpbSAoYyQpDQpFbmQgU3ViDQoNClN1YiBtdWx0eSggYSQgLCBiJCwgYyQgKSAnIGdpdmVuIGEkIGFuZCBiJCwgcmV0dXJucyB0aGUgc3VtIGluIGMkDQogICAgTG9jYWwgaSwgaCQsIGExJCwgYjEkLCB0JCwgZCQsIHokDQogICAgYTEkPWEkICYjNTg7IGIxJD1iJCAmIzU4OyBjJD0iIiAnIG1ha2UgY29waWVzIG9mIGEkIGFuZCBiJCB0byBwcmVzZXJ2ZSBvcmlnaW5hbHMNCiAgICBJZiBMZW4oIGIxJCApICZndDsgTGVuKCBhMSQgKSBUaGVuICcgc3dhcCBudW1iZXIgZm9yIGdyZWF0ZXIgc3BlZWQNCiAgICAgICAgaCQgPSBhMSQNCiAgICAgICAgYTEkID0gYjEkDQogICAgICAgIGIxJCA9IGgkDQogICAgRW5kSWYNCiAgICBGb3IgaSA9IExlbiggYTEkICkgVG8gMSBTdGVwIC0xDQogICAgICAgIHokPVN0cmluZyQoTGVuKCBhMSQgKS1pLCIwIikNCiAgICAgICAgbWQoIGIxJCAsIFZhbCggTWlkJCggYTEkICwgaSAsIDEgKSApICwgdCQpDQogICAgICAgIGFkZCggYyQgLCB0JCsgeiQgLGQkKQ0KICAgICAgICBjJD1kJA0KICAgIE5leHQgaQ0KICAgIHRyaW0gKGMkKQ0KRW5kIFN1Yg0KDQpTdWIgbWQoIGEkICwgIG5yLCBjJCApICcgbXVsdGlwbHkgYSQgYnkgYSBzaW5nbGUgZGlnaXQsIHJlc3VsdCBpbiBjJA0KICAgIExvY2FsIGhvbGQsIGNhcnJ5LCBpDQogICAgY2FycnkgPSAwICYjNTg7IGMkPSIiDQogICAgRm9yIGkgPSBMZW4oIGEkICkgVG8gMSBTdGVwIC0xDQogICAgICAgIGhvbGQgPSBWYWwoIE1pZCQoIGEkICwgaSAsIDEgKSApICYjNDI7IG5yICsgY2FycnkNCiAgICAgICAgY2FycnkgPSBJbnQoIGhvbGQgLyAxMCApDQogICAgICAgIGMkID0gU3RyJCggaG9sZCBNb2QgMTAgKSArIGMkDQogICAgTmV4dCBpDQogICAgSWYgY2FycnkgJmd0OyAwIFRoZW4gYyQgPSBTdHIkKCBjYXJyeSApICsgYyQNCkVuZCBTdWINCg0KU3ViIHNhbWVsZW4gKGEkLCBiJCkgJyBwYWRzIHRoZSBzaG9ydGVyIHZhcmlhYmxlIHdpdGggbGVhZGluZyB6ZXJvcw0KICAgIGRpZj1BYnMoTGVuKCBhJCApLUxlbiggYiQgKSkNCiAgICBJZiBkaWYmZ3Q7MCBUaGVuDQogICAgICAgIHokPVN0cmluZyQoZGlmLCIwIikNCiAgICAgICAgSWYgTGVuKCBhJCApICZsdDsgTGVuKCBiJCApIFRoZW4NCiAgICAgICAgICAgIGEkID0geiQrYSQNCiAgICAgICAgRWxzZQ0KICAgICAgICAgICAgYiQgPSB6JCtiJA0KICAgICAgICBFbmRJZg0KICAgIEVuZElmDQpFbmQgU3ViDQoNClN1YiBhZGQoIGEkICwgYiQsIGMkICkgJyBnaXZlbiBhJCBhbmQgYiQsIHJldHVybnMgdGhlIHN1bSBpbiBjJA0KICAgIExvY2FsIGNhcnJ5LCBob2xkLCBpLGExJCwgYjEkDQogICAgYyQ9IiIgJiM1ODsgYTEkPWEkICYjNTg7IGIxJD1iJA0KICAgIHNhbWVsZW4gYTEkICwgYjEkDQogICAgRm9yIGkgPSBMZW4oIGExJCApIFRvIDEgU3RlcCAtMQ0KICAgICAgICBob2xkID0gVmFsKCBNaWQkKCBhMSQgLCBpICwgMSApICkgKyBWYWwoIE1pZCQoIGIxJCAsIGkgLCAxICkgKSArIGNhcnJ5DQogICAgICAgIGNhcnJ5ID0gSW50KCBob2xkIC8gMTAgKQ0KICAgICAgICB4JD1TdHIkKCBob2xkIE1vZCAxMCApDQogICAgICAgIGMkID0gUmlnaHQkKCB4JCwxKSArIGMkDQogICAgTmV4dCBpDQogICAgSWYgY2FycnkgJmd0OyAwIFRoZW4gYyQgPSBTdHIkKCBjYXJyeSApICsgYyQNCkVuZCBTdWINCg0KU3ViIG1pbiggYSQgLCBiJCwgYyQgKSAnIGdpdmVuIGEkIGFuZCBiJCwgcmV0dXJucyB0aGUgZGlmZmVyZW5jZSBpbiBjJA0KICAgIExvY2FsIGExJCwgYjEkLCBoJCwgaSwgaG9sZCwgYm9ycm93DQogICAgYyQ9IiIgJiM1ODsgcyQ9IiIgJiM1ODthMSQ9YSQgJiM1ODsgYjEkPWIkICcgaW5pdGlhbGlzZSB2YXJpYWJsZXMgYW5kIHByZXNlcnZlIGEkIGFuZCBiJA0KICAgIHNhbWVsZW4gYTEkICwgYjEkDQogICAgSWYgYTEkJmx0O2IxJCBUaGVuICcgaWYgcmVzdWx0IGlzIGdvaW5nIHRvIGJlIG5lZ2F0aXZlLCBzd2FwIGExICZhbXA7IGIxDQogICAgICAgIGgkID0gYTEkDQogICAgICAgIGExJCA9IGIxJA0KICAgICAgICBiMSQgPSBoJA0KICAgICAgICBzJD0iLSINCiAgICBFbmRJZg0KICAgIEZvciBpID0gTGVuKCBhMSQgKSBUbyAxIFN0ZXAgLTENCiAgICAgICAgaG9sZCA9IFZhbCggTWlkJCggYTEkICwgaSAsIDEgKSApIC0gVmFsKCBNaWQkKCBiMSQgLCBpICwgMSApICkgKyAxMCAtIGJvcnJvdw0KICAgICAgICBib3Jyb3cgPSAxLSBJbnQoIGhvbGQgLyAxMCApDQogICAgICAgIGMkID0gU3RyJCggaG9sZCBNb2QgMTAgKSArIGMkDQogICAgTmV4dCBpDQogICAgdHJpbSBjJA0KICAgIGMkID0gcyQrYyQgJyBhZGQgdGhlIHNpZ24NCkVuZCBTdWINCg0KU3ViIGJpZyggYSQsIGIkLCBiaWdnZXN0ICkgJyBiaWdnZXN0ID0gMSBpZiBhJCAmZ3Q7PSBiJA0KICAgIExvY2FsIGExJCwgYjEkICAgICAgJ3ByZXNlcnZlIGEkIGFuZCBiJA0KICAgIGExJCA9IGEkICYjNTg7IGIxJCA9IGIkDQogICAgYmlnZ2VzdCA9IDANCiAgICBzYW1lbGVuIChhMSQgLCBiMSQpDQogICAgSWYgYTEkJmd0Oz1iMSQgVGhlbiBiaWdnZXN0ID0gMQ0KRW5kIFN1Yg0KDQpTdWIgdHJpbSAoYSQpICcgZ2l2ZW4gYSQsIGxlYWRpbmcgemVyb3MgYXJlIHN0cmlwcGVkLiBhJCBpcyBhbHRlcmVkLg0KICAgIExvY2FsIHMkDQogICAgcyQ9IiINCiAgICBJZiBMZWZ0JChhJCwxKT0iLSIgVGhlbiAnIGlmIHRoZSBudW1iZXIgaXMgbmVnYXRpdmUsIHByZXNlcnZlIHRoZSBzaWduDQogICAgICAgIHMkPSItIg0KICAgICAgICBhJD1NaWQkKGEkLDIpDQogICAgRW5kSWYNCiAgICBEbyBXaGlsZSBMZWZ0JChhJCwxKT0iMCIgJyBzdHJpcCBsZWFkaW5nIGNoYXJhY3RlcnMgd2hpbGUgdGhleSBhcmUgIjAiDQogICAgICAgIGEkPU1pZCQoYSQsMikNCiAgICBMb29wDQogICAgSWYgYSQ9IiIgVGhlbiBhJD0iMCINCiAgICBhJD1zJCthJCAnIHJlcGxhY2UgdGhlIHNpZ24NCkVuZCBTdWIgDQo8L3ByZT5kZP8UwQgqSmROXX2nFiWednVkA6S0" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Big Integer Maths</h1><small>Modified on 2016/12/23 23:20 by Administrator &mdash; Categorized as: Maths, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><pre>
+' integer maths by TassyJim 07 Feb 2012
+
+' MM Basic CAN do big integer maths!
+
+' The included code uses integer maths to calculate
+' 1, 1×2, 1×2×3, 1×2×3×4, etc. the successive factorial numbers.
+' The limit in MM Basic is the length of a string or 255 digits.
+' At this stage, only positive integers are allowed as inputs.
+' This code is SLOW and I have not made any attempt to speed it up.
+' Working in base 1000 (3 digits at a time) is the obvious way to
+' gain speed but this exercise was a proof of concept rather than good code.
+' I know a lot more about MM Basic subroutine now!
+' It needs MM Basic V3.1 as it uses user defined subroutines.
+' Converting to gosubs and line numbers is a task for someone else.
+
+' Now I need to go the next step and allow negative numbers as inputs. 
+
+a$ = "13"
+For i = 0 To 15 ' demo of the four operations
+    add( a$ , Str$( i ),res$ )
+    Print a$;" + ";i;" = ";res$
+    min( a$ , Str$( i ),res$ )
+    Print a$;" - ";i;" = ";res$
+    multy( a$ , Str$( i ),res$ )
+    Print a$;" &#42; ";i;" = ";res$
+    div( a$ , Str$( i ),res$ )
+    Print a$;" / ";i;" = ";res$
+    Print
+Next i
+
+a$="1"
+For i = 1 To 55 ' printing up to factorial 55.
+    b$=Str$(i)
+    multy(a$, b$, res$)
+    Print b$;"! = ";res$;"  (";len(res$);" )"
+    a$=res$
+Next i
+
+End
+
+Sub div( a$ , b$, c$ ) ' given a$ and b$, returns a/b in c$
+    Local f, i, d, t, try$, nr$, a1$, b1$, a2$, z$
+    a1$=a$ &#58; b1$=b$ &#58; c$="" ' make copies of a$ and b$ to preserve originals
+    If Val( b$ ) = 0 Then   ' divide by zero
+        c$ = "error"
+    Else
+        For i = Len( a1$ ) - Len( b1$ ) To 0 Step -1
+            f = 0
+            nr$ = "0"
+            z$=String$(i,"0")
+            For d = 0 To 9
+                md( b1$ + z$ , d, try$ )
+                big( a1$ , try$, t )
+                If t Then
+                    f = d
+                    nr$ = try$
+                EndIf
+            Next d
+            c$ = c$ + Str$( f )
+            If f &gt; 0 Then
+                min( a1$ , nr$, a2$ )
+                a1$ = a2$
+            EndIf
+        Next i
+    EndIf
+    trim (c$)
+End Sub
+
+Sub multy( a$ , b$, c$ ) ' given a$ and b$, returns the sum in c$
+    Local i, h$, a1$, b1$, t$, d$, z$
+    a1$=a$ &#58; b1$=b$ &#58; c$="" ' make copies of a$ and b$ to preserve originals
+    If Len( b1$ ) &gt; Len( a1$ ) Then ' swap number for greater speed
+        h$ = a1$
+        a1$ = b1$
+        b1$ = h$
+    EndIf
+    For i = Len( a1$ ) To 1 Step -1
+        z$=String$(Len( a1$ )-i,"0")
+        md( b1$ , Val( Mid$( a1$ , i , 1 ) ) , t$)
+        add( c$ , t$+ z$ ,d$)
+        c$=d$
+    Next i
+    trim (c$)
+End Sub
+
+Sub md( a$ ,  nr, c$ ) ' multiply a$ by a single digit, result in c$
+    Local hold, carry, i
+    carry = 0 &#58; c$=""
+    For i = Len( a$ ) To 1 Step -1
+        hold = Val( Mid$( a$ , i , 1 ) ) &#42; nr + carry
+        carry = Int( hold / 10 )
+        c$ = Str$( hold Mod 10 ) + c$
+    Next i
+    If carry &gt; 0 Then c$ = Str$( carry ) + c$
+End Sub
+
+Sub samelen (a$, b$) ' pads the shorter variable with leading zeros
+    dif=Abs(Len( a$ )-Len( b$ ))
+    If dif&gt;0 Then
+        z$=String$(dif,"0")
+        If Len( a$ ) &lt; Len( b$ ) Then
+            a$ = z$+a$
+        Else
+            b$ = z$+b$
+        EndIf
+    EndIf
+End Sub
+
+Sub add( a$ , b$, c$ ) ' given a$ and b$, returns the sum in c$
+    Local carry, hold, i,a1$, b1$
+    c$="" &#58; a1$=a$ &#58; b1$=b$
+    samelen a1$ , b1$
+    For i = Len( a1$ ) To 1 Step -1
+        hold = Val( Mid$( a1$ , i , 1 ) ) + Val( Mid$( b1$ , i , 1 ) ) + carry
+        carry = Int( hold / 10 )
+        x$=Str$( hold Mod 10 )
+        c$ = Right$( x$,1) + c$
+    Next i
+    If carry &gt; 0 Then c$ = Str$( carry ) + c$
+End Sub
+
+Sub min( a$ , b$, c$ ) ' given a$ and b$, returns the difference in c$
+    Local a1$, b1$, h$, i, hold, borrow
+    c$="" &#58; s$="" &#58;a1$=a$ &#58; b1$=b$ ' initialise variables and preserve a$ and b$
+    samelen a1$ , b1$
+    If a1$&lt;b1$ Then ' if result is going to be negative, swap a1 &amp; b1
+        h$ = a1$
+        a1$ = b1$
+        b1$ = h$
+        s$="-"
+    EndIf
+    For i = Len( a1$ ) To 1 Step -1
+        hold = Val( Mid$( a1$ , i , 1 ) ) - Val( Mid$( b1$ , i , 1 ) ) + 10 - borrow
+        borrow = 1- Int( hold / 10 )
+        c$ = Str$( hold Mod 10 ) + c$
+    Next i
+    trim c$
+    c$ = s$+c$ ' add the sign
+End Sub
+
+Sub big( a$, b$, biggest ) ' biggest = 1 if a$ &gt;= b$
+    Local a1$, b1$      'preserve a$ and b$
+    a1$ = a$ &#58; b1$ = b$
+    biggest = 0
+    samelen (a1$ , b1$)
+    If a1$&gt;=b1$ Then biggest = 1
+End Sub
+
+Sub trim (a$) ' given a$, leading zeros are stripped. a$ is altered.
+    Local s$
+    s$=""
+    If Left$(a$,1)="-" Then ' if the number is negative, preserve the sign
+        s$="-"
+        a$=Mid$(a$,2)
+    EndIf
+    Do While Left$(a$,1)="0" ' strip leading characters while they are "0"
+        a$=Mid$(a$,2)
+    Loop
+    If a$="" Then a$="0"
+    a$=s$+a$ ' replace the sign
+End Sub 
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Big-Integer-Maths-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:13:52 GMT -->
+</html>

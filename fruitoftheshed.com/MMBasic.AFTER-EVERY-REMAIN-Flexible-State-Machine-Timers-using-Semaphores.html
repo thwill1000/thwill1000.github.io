@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:40:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	AFTER, EVERY, AT, REMAIN Flexible State Machine Timers using Semaphores. - Fruit Of The Shed
+</title><meta name="keywords" content="state, after, every, remain, semaphore" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login053c.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dAFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History0eb7.html?Page=MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			AFTER, EVERY, AT, REMAIN Flexible State Machine Timers using Semaphores.
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print0eb7.html?Page=MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2022/01/09 08:34
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesb06f.html?Cat=MMBasic.Arrays" title="Arrays">Arrays</a>, <a href="MMBasic.AllPagese076.html?Cat=MMBasic.Control" title="Control">Control</a>, <a href="MMBasic.AllPages6c47.html?Cat=MMBasic.Program%20Flow" title="Program Flow">Program Flow</a>, <a href="MMBasic.AllPages6be6.html?Cat=MMBasic.State%20Machine" title="State Machine">State Machine</a>, <a href="MMBasic.AllPages1892.html?Cat=MMBasic.Timers" title="Timers">Timers</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fcd0c4030-6cad-4fb4-aa0a-8dd5f686d216" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fcd0c4030-6cad-4fb4-aa0a-8dd5f686d216');"><a href="Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology.html" title="A Brief Introduction to State Machine Methodology...">A Brief Introduction to State Machine Methodology...</a><a href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a></div><div id="f934d03c3-87fa-45d8-92de-ea56acd08314" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f934d03c3-87fa-45d8-92de-ea56acd08314');"></div><div id="fd873a25d-ecfe-4cde-8d4d-2886ecc48c12" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fd873a25d-ecfe-4cde-8d4d-2886ecc48c12');"><a href="Creating-and-Editing-Pages-on-Fruit-of-the-Shed.html" title="Creating and Editing Pages on Fruit of the Shed">Creating and Editing Pages on Fruit of the Shed</a></div><div id="se89c4bfb-0901-4963-aa07-797bce4ece1d" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('se89c4bfb-0901-4963-aa07-797bce4ece1d');"><a href="Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology.html" title="A Brief Introduction to State Machine Methodology...">A Brief Introduction to State Machine Methodology...</a><a href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a></div><div id="sf6848965-ea3a-4b2f-9567-a3da3f398ffc" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sf6848965-ea3a-4b2f-9567-a3da3f398ffc');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(5)</a> &raquo; <a href="MMBasic.EggDrop-part-of-the-original-MMBasic-library.html" title="EggDrop (MMBasic)">EggDrop (MMBasic)</a> &raquo; <a href="MMBasic.A-Simple-GUI-pack.html" title="A Simple GUI pack (MMBasic)">A Simple GUI pack (MMBasic)</a> &raquo; <b><a href="MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores.html" title="AFTER, EVERY, AT, REMAIN Flexible State Machine Timers using Semaphores. (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'se89c4bfb-0901-4963-aa07-797bce4ece1d', this);" id="lnkse89c4bfb-0901-4963-aa07-797bce4ece1d" onmouseout="javascript:return __HideDropDown('se89c4bfb-0901-4963-aa07-797bce4ece1d');">AFTER, EVERY, AT, REMAIN Flexible State Machine Timers using Semaphores. (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.MainPage.html" title="_MMBasic Code Library (MMBasic)">_MMBasic Code Library (MMBasic)</a> &raquo; <a href="MainPage.html" title="Home Page" onmouseover="javascript:return __ShowDropDown(event, 'fd873a25d-ecfe-4cde-8d4d-2886ecc48c12', this);" id="lnkfd873a25d-ecfe-4cde-8d4d-2886ecc48c12" onmouseout="javascript:return __HideDropDown('fd873a25d-ecfe-4cde-8d4d-2886ecc48c12');">Home Page</a> &raquo; <a href="MMBasic.EggDrop-part-of-the-original-MMBasic-library.html" title="EggDrop (MMBasic)">EggDrop (MMBasic)</a> &raquo; <a href="MMBasic.A-Simple-GUI-pack.html" title="A Simple GUI pack (MMBasic)">A Simple GUI pack (MMBasic)</a> &raquo; <b><a href="MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores.html" title="AFTER, EVERY, AT, REMAIN Flexible State Machine Timers using Semaphores. (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fcd0c4030-6cad-4fb4-aa0a-8dd5f686d216', this);" id="lnkfcd0c4030-6cad-4fb4-aa0a-8dd5f686d216" onmouseout="javascript:return __HideDropDown('fcd0c4030-6cad-4fb4-aa0a-8dd5f686d216');">AFTER, EVERY, AT, REMAIN Flexible State Machine Timers using Semaphores. (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		A common requirement is for sections of code to be executed to a schedule or after a period of time. The following uses an array of flags and counters to keep track of (in this case but easily tweak-able) 10 timers, with option for them to be single-shot or repeating. The timers can be stopped or temporarily disabled.  To check if a period has elapsed, simply check the flag and perform your desired action if it is set (you need to reset it as part of this). This is a key requirement for <a class="pagelink" target="_blank" href="Platform%20Agnostic.A-Brief-Introduction-to-State-Machine-Methodology.html" title="A Brief Introduction to State Machine Methodology...">State Machine Methodology.</a><br /><br />The Subs/Functions are inspired by the Locomotive Basic commands of the same names and make executing sections of code asynchronously a breeze. MMBasic provides four timers but they expect a sub program to be called each time and they have to be handled (i.e. if they are one-shot) by the called sub. The following code uses a single MMBasic timer but then expands this to practically unlimited timers and really easy to set one running. The main loop simply checks for the relevant flag and takes action (calls a Sub, changes the state of an output pin etc...) if it is set.<br /><br /><br /><b>After</b>  Set a semaphore after a period of time. E.g. After 30 seconds<br /><b>Every</b> Set a semaphore at the same period repeatedly. E.g. Every 10 seconds<br /><b>At</b> Set a semaphore at a specific DateTime. E.g. At 09/09/2019 05:25:30<br /><b>Remain</b> Return the remaining time (i.e. before it was due to set the semaphore) and optionally stop the timer.<br /><b>DI & EI</b> Temporarily Disable or Enable all timers.<br /><br /><br /><b>Pros:</b><br /><ul><li>Easy to configure a one-shot timer.</li><li>Easy to re-use timers for different sections of code.</li><li>Retrieve the remaining time on a timer and optionally stop it.</li><li>No need to worry about handling SETTICK - No dedicated Sub to handle an event - just do it inline when it is convenient.</li><li>Gives much greater scope for the number of timers.</li><li>Multiple ticks from the same counter give only a single event - No event "storms" for slow-running code.</li><li>Manageable program interruption - It is totally down to the program flow - nothing kicking off "behind your back".</li><li>No implicit priority to timers, it is down to how the flags get checked.<br /></li></ul><br /><b>Cons:</b><br /><ul><li>Timer resolution is not as good as SETTICK on slow systems - very small delays are likely to be inaccurate, e.g. waiting one second when the service period is 1000mS.</li><li>As the internal timer is used to determine the time periods, very long periods may be inaccurate due to clock drift (see clocktrim in the MicroMite manual). Note this is no worse than the SETTICK command. This may become particularly noticeable when using At() - A little work could provide a better solution if it becomes critical.<br /></li></ul><br />The following provides a core timer handler and three Subs to set repetitive or one-shot timers and a method to stop a timer (and return the remaining count before it was stopped).<br /><br /><b>Dependencies:</b><br /><ul><li><a class="pagelink" href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a>  Bits 0 - 9 in the Flags field correspond to timers 0-9... tweak as necessary. Bit 10 is the global timer disable bit (=1). In the disabled state, timers are not decremented and any time spent disabled will be effectively added to running timers. E.g. if a timer is due to expire after 10 seconds but spends five seconds disabled, the total delay will be 15 seconds. DI/EI should be used to stop the timers when some critical process is taking place to prevent state changes.</li><li>Three global variables are required, two integer arrays and a simple integer to hold the flags.</li><li><a class="pagelink" href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime</a> required if you intend to use the At functionality<br /></li></ul><br /><b>Variable Descriptions:</b><br />TMRctr() maintains the count for a given timer<br />TMRini()holds the timer type and its initialization value.<br /><code>    - bits 0-61 store the initial value<br />    - bits 63&62 store the format of the counter:<br />        0=disabled<br />        1=(actually 0x4000000000000000) indicates a one shot "AFTER x" type counter<br />        2=(actually 0x8000000000000000) indicates a repetitive "EVERY x" type counter<br /></code><br />As written below, it provides 10 timers which should be loads for just about any use, but this can be tweaked as you see fit.<br /><br />The CoreTMR needs to be set running with the SETTICK command - timer counter values are a multiple of the interval used here. Try not to be too aggressive with small/fast intervals but the larger the interval the greater the loss of resolution. Find something that works for you but remember to adjust your timer values accordingly e.g. if you want ticks 10 times a second, the setitick must be set to 100 - and the values used in AFTER & EVERY would need to reflect the increase in resolution -in the above example 1 second becomes 10 counts etc.<br /><br /><b>Example:</b><br /><pre>
+Preamble&#58;
+	Option Base 0
+
+	Dim Integer TMct(9),TMin(9),Flag
+
+
+	SETTICK 1000,CoreTMR,4' service timers every second
+
+
+
+
+
+Main&#58;
+' example usage for the main loop
+' gives the user 10 seconds to hit a key (using timer 1)
+	Print "Quick Press a key!"
+
+	After 10,1 ' 10 seconds using timer 1
+	Every 1 ,2 ' count 1 second intervals using timer 2
+	Every 2 ,3 ' count 2 second intervals using timer 3
+
+
+	Do
+		a$=Inkey$
+		If FlagTest(2) Then FlagRes 2&#58;Print "x"' output an x while we wait
+		If FlagTest(3) Then FlagRes 3&#58;Print "y"' output a y  while we wait
+
+	Loop Until FlagTest(1) or a$&lt;&gt;""
+
+	x=Remain(1)' stop the timer and get the remaining time
+
+	If FlagTest(1) Then ' the timer expired?
+		Print "Too late!"
+
+	Else ' otherwise someone pressed a key
+		Print "that was close. There was only ";x;" seconds left!"
+
+	EndIf
+
+	DI
+	For n=1 To 3&#58; x=Remain(n)&#58; Next
+	EI
+
+	End
+
+
+
+
+' The subs
+	Sub CoreTMR ' needs to run on a ticker at whatever interval is required - this is also the multiple of timer counts
+		If FlagTest(10) Then Exit Sub
+		Local Integer n
+		For n=0 To 9
+			Select Case TMin(n)&gt;&gt;62 ' extract the top 2 bits
+				Case 0,3 'disabled or invalid
+					FlagRes(n)
+				Case 1' AFTER
+					If TMct(n) then
+						TMct(n)=TMct(n)-1
+						If TMct(n)=0 Then FlagSet(n) ' indicate the timer has expired
+					EndIf
+				Case 2' EVERY
+					If TMct(n) then
+						TMct(n)=TMct(n)-1
+						If TMct(n)=0 Then
+							FlagSet(n) ' indicate the timer has expired
+							TMct(n)=TMin(n) And &amp;h3FFFFFFFFFFFFFFF ' reset the timer
+						EndIf
+					EndIf
+			End Select
+		Next
+	End Sub
+
+
+	Sub After(Interval As Integer,Tmr As Integer)' starts a one-shot timer
+		TMin(Tmr)=Interval OR &amp;h4000000000000000&#58;TMct(Tmr)=Interval And &amp;h3FFFFFFFFFFFFFFF&#58;FlagRes(Tmr)
+	End Sub
+
+	Sub Every(Interval As Integer,Tmr As Integer)' starts a repetitive timer
+		TMin(Tmr)=Interval OR &amp;h8000000000000000&#58;TMct(Tmr)=Interval And &amp;h3FFFFFFFFFFFFFFF&#58;FlagRes(Tmr)
+	End Sub
+
+
+	Function Remain(Tmr As Integer, opt As Integer) As Integer' returns the remaining time in the counter.
+		'if opt=0 (or omitted) timer is stopped
+		'if opt&lt;&gt;1 timer remains running
+		Remain=TMct(Tmr)
+		If opt=0 Then TMin(Tmr)=TMin(Tmr) And &amp;h3FFFFFFFFFFFFFFF
+	End Function
+
+	Sub DI
+		FlagSet 10
+	End Sub
+
+	Sub EI
+		FlagRes 10
+	End Sub
+</pre><br />All <a class="externallink" href="http://www.cpcwiki.eu/index.php/Locomotive_BASIC#AFTER_.E2.80.B9time_delay.E2.80.BA.5B.2C.E2.80.B9timer_number.E2.80.BA.5D_GOSUB_.E2.80.B9line_number.E2.80.BA" title="the functions" target="_blank">the functions</a> are inspired by some innovative (for the time) namesakes in Locomotive basic as used on the Amstrad CPC of the 1980s. <br /><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.AFTER-EVERY-REMAIN-Flexible-State-Machine-Timers-using-Semaphores.ashx by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 11:40:49 GMT -->
+</html>

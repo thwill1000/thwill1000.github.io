@@ -1,0 +1,134 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed&Revision=00002 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:14:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed&amp;Revision=00002" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAU/UGFnZSBIaXN0b3J5OiBNb2RidXMgQ1JDIHVzZXMgdGhlIHRhYmxlIGxvb2t1cCBtZXRob2QgZm9yIHNwZWVkZAIFDxBkEBUIATcBNgE1ATQBMwEyATEBMBUIATcBNgE1ATQBMwEyATEBMBQrAwhnZ2dnZ2dnZ2RkAgcPEGQQFQkHQ3VycmVudAE3ATYBNQE0ATMBMgExATAVCQdDdXJyZW50ATcBNgE1ATQBMwEyATEBMBQrAwlnZ2dnZ2dnZ2dkZAILDxYCHwAFyiU8dGFibGUgY2xhc3M9ImJveCIgY2VsbHBhZGRpbmc9IjAiIGNlbGxzcGFjaW5nPSIwIj48dHI+PHRkPjxwIHN0eWxlPSJ0ZXh0LWFsaWduOiBjZW50ZXI7Ij48Yj48YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuTW9kYnVzLUNSQy11c2VzLXRoZS10YWJsZS1sb29rdXAtbWV0aG9kLWZvci1zcGVlZCZhbXA7UmV2aXNpb249MDAwMDEiPiZsYXF1bzsgT2xkZXIgUmV2aXNpb248L2E+IC0gPGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLk1vZGJ1cy1DUkMtdXNlcy10aGUtdGFibGUtbG9va3VwLW1ldGhvZC1mb3Itc3BlZWQiPkJhY2sgdG8gUGFnZSBIaXN0b3J5PC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5Nb2RidXMtQ1JDLXVzZXMtdGhlLXRhYmxlLWxvb2t1cC1tZXRob2QtZm9yLXNwZWVkJmFtcDtSZXZpc2lvbj0wMDAwMyI+TmV3ZXIgUmV2aXNpb24gJnJhcXVvOzwvYT48L2I+PC9wPjwvdGQ+PC90cj48L3RhYmxlPjxiciAvPjxoMyBjbGFzcz0ic2VwYXJhdG9yIj5QYWdlIFJldmlzaW9uOiAyMDE4LzEyLzExIDEwOjIyPC9oMz48YnIgLz48YSBocmVmPSJNTUJhc2ljLkVkaXQuYXNweD9QYWdlPU1NQmFzaWMuTW9kYnVzLUNSQy11c2VzLXRoZS10YWJsZS1sb29rdXAtbWV0aG9kLWZvci1zcGVlZCZhbXA7U2VjdGlvbj0wIiBjbGFzcz0iZWRpdHNlY3Rpb25saW5rIj48L2E+PGgxIGNsYXNzPSJzZXBhcmF0b3IiPlRISVMgSVMgU1RJTEwgSU4gRFJBRlQgLSBQTEVBU0UgQ09NRSBCQUNLIExBVEVSPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRISVNfSVNfU1RJTExfSU5fRFJBRlRfLV9QTEVBU0VfQ09NRV9CQUNLX0xBVEVSXzAiIGhyZWY9IiNUSElTX0lTX1NUSUxMX0lOX0RSQUZUXy1fUExFQVNFX0NPTUVfQkFDS19MQVRFUl8wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMT5CaWxsIE1jS2lubGV5IDxiPlRISVMgSVMgU1RJTEwgSU4gRFJBRlQgLSBQTEVBU0UgQ09NRSBCQUNLIExBVEVSPC9iPjxiciAvPjxiciAvPjxiPkludHJvZHVjdGlvbjo8L2I+PGJyIC8+VGhpcyBDUkMgKEN5Y2xpYyBSZWR1bmRhbmN5IENoZWNrKSBpcyBmb3IgdGhlIE1vZGJ1cyBSVFUgcHJvdG9jb2wgYXMgdXNlZCBpbiBSUzIzMiBhbmQgUlM0ODUgY29tbXVuaWNhdGlvbnMuIFRoZSBDUkMgaXMgYSAxNiBiaXQgd29yZCB0aGF0IGlzIGNhbGN1bGF0ZWQgZnJvbSBhbGwgb2YgdGhlIGRhdGEgaW4gYSBtZXNzYWdlLiBJdCBjYW5ub3QgY29ycmVjdCBhbnkgZGF0YSBjb3JydXB0aW9uIGJ1dCBpdCB3aWxsIGluZGljYXRlIGlmIGEgbWVzc2FnZSBoYXMgYmVlbiBjb3JydXB0ZWQgaW4gc29tZSB3YXkuIFRoaXMgcHJvZ3JhbSB1c2VzIHRoZSB0YWJsZSBsb29rdXAgbWV0aG9kIGZvciBzcGVlZC4gSXQgcHJvY2Vzc2VzIHRoZSBtZXNzYWdlIGJ5dGUtYnktYnl0ZSByYXRoZXIgdGhhbiB0aGUgYml0LWJ5LWJpdCBtZXRob2Qgd2hpY2ggaXMgbW9yZSB1c3VhbC4gVGhpcyBwcm9ncmFtIGdlbmVyYXRlcyB0aGUgbG9va3VwIHRhYmxlIGluIHNvZnR3YXJlIHJhdGhlciB0aGFuIGVudGVyaW5nIHRoZSBkYXRhIGludG8gdGhlIHRhYmxlIHZpYSBhIHNlcmllcyBvZiBSRUFEL0RBVEEgc3RhdGVtZW50cy4gSXQgcmVxdWlyZXMgYW4gaW50ZWdlciB0YWJsZSBvZiAyNTYgd29yZHMuPGJyIC8+PGJyIC8+PGI+UExFQVNFIE5PVEU6PC9iPjxiciAvPkFsdGhvdWdoIHRoaXMgaXMgYSBNb2RidXMgQ1JDIGl0IGlzIGluIG5vIHdheSByZXN0cmljdGVkIHRvIGJlIG9ubHkgdXNlZCBmb3IgdGhlIE1vZGJ1cyBwcm90b2NvbC4gQW55IG1lc3NhZ2Ugc3RydWN0dXJlIGNvbnNpc3Rpbmcgb2YgYSBzdHJlYW0gb2YgOC1iaXQgZGF0YSBieXRlcyBjYW4gdXRpbGlzZSBpdC4gRm9yIGV4YW1wbGU6PGJyIC8+TXNnJCA9IOKAnFRoZSBxdWljayBicm93biBmb3gganVtcHMgb3ZlciB0aGUgbGF6eSBkb2figJ08YnIgLz48YnIgLz5BbiBleGFtcGxlIGEgTW9kYnVzIG1lc3NhZ2UgKGluIEhleCkgY291bGQgbG9vayBsaWtlOjxiciAvPjxwcmU+DQpTbGF2ZSBBZGRyZXNzICAgICAgICAgICAgIDE4DQpGdW5jdGlvbiBDb2RlICAgICAgICAgICAgIDAzDQpTdGFydCBBZGRyZXNzIChIaSkgICAgICAgIDBCDQpTdGFydCBBZGRyZXNzIChMbykgICAgICAgIEI5DQpOdW1iZXIgb2YgcG9pbnRzIChIaSkgICAgIDAwDQpOdW1iZXIgb2YgcG9pbnRzIChMbykgICAgIDAxDQpDUkMgKExvKSAgICAgICAgICAgICAgICAgIDU1DQpDUkMgKEhpKSAgICAgICAgICAgICAgICAgIEMyDQo8L3ByZT48YnIgLz5Ob3RlIHRoYXQgdGhlIEhpZ2gvTG93IG9yZGVyIG9mIGJ5dGVzIGluIHRoZSBDUkMgaXMgdGhlIHJldmVyc2Ugb2YgdGhhdCB1c2VkIGZvciB0aGUgZGF0YS4gSSBkb27igJl0IGtub3cgd2h5LjxiciAvPjxiciAvPkluIE1NQmFzaWMgd2l0aG91dCB0aGUgQ1JDLCB0aGF0IG1lc3NhZ2Ugd291bGQgbG9vayBsaWtlOjxiciAvPjxiciAvPjxkaXYgY2xhc3M9ImJveCI+PGNvZGU+VHhNc2ckID0gQ0hSJCgmSDE4KStDSFIkKCZIMDMpK0NIUiQoJkgwQikrQ0hSJCgmSEI5KStDSFIkKCZIMDApK0NIUiQoJkgwMSk8L2NvZGU+PC9kaXY+PGJyIC8+QWRkIHRoZSBDUkMgdG8gdGhlIG1lc3NhZ2UgYnk6PGJyIC8+PGJyIC8+PGRpdiBjbGFzcz0iYm94Ij48Y29kZT5UeE1zZyQgPSBUeE1zZyQgKyBDUkMxNiQoVHhNc2ckKTwvY29kZT48L2Rpdj48YnIgLz5DaGVjayB0aGUgcmVjZWl2ZWQgbWVzc2FnZSAoZWcgUnhNc2cpIGJ5OjxiciAvPjxiciAvPjxkaXYgY2xhc3M9ImJveCI+PGNvZGU+SUYgQ1JDMTYkKFJ4TXNnJCkgPSBDSFIkKDApICsgQ0hSJCgwKSBUSEVOICcgQ1JDIGlzIE9LPGJyIC8+JyBQcm9jZXNzIHRoZSByZXNwb25zZTxiciAvPkVMU0U8YnIgLz4nIEJhZCBDUkMgLSBETyBub3RoaW5nIC0gZG9uJ3QgcmVzcG9uZDxiciAvPkVORCBJRjwvY29kZT48YnIgLz48L2Rpdj48YnIgLz5UbyB1c2UgdGhlIHByb2dyYW0sIGluc2VydCB0aGUgY29kZSBiZWxvdyBpbnRvIHlvdXIgcHJvZ3JhbS4gVGhlIHN1YnJvdXRpbmUgYW5kIGZ1bmN0aW9uIGNhbiBiZSBwbGFjZSBhbnl3aGVyZSwgcHJlZmVyYWJseSBhZnRlciB0aGUgbWFpbiBib2R5IG9mIHRoZSBwcm9ncmFtLiBUaGUgdGFibGUgRElNIHN0YXRlbWVudCBzaG91bGQgYmUgbmVhciB0aGUgdG9wIG9mIHRoZSBwcm9ncmFtIGFuZCB0aGUgJ2dlbkNSQ3RhYmxlJyBzdWJyb3V0aW5lIHNob3VsZCBiZSBvbmUgb2YgdGhlIGZpcnN0IGluc3RydWN0aW9ucyBhcyBwYXJ0IG9mIGFueSBpbml0aWFsaXNhdGlvbi48YnIgLz48YnIgLz48Yj5Bc3N1bXB0aW9uczo8L2I+PGJyIC8+VGhhdCB0aGUgZGVmYXVsdDogPGI+T1BUSU9OIEJBU0UgMDwvYj4gaXMgaW4gZm9yY2UuIElmIDxiPk9QVElPTiBCQVNFIDE8L2I+IGlzIHVzZWQgdGhlbiBzb21lIGNoYW5nZXMgd2lsbCBiZSBuZWVkZWQuPGJyIC8+PGJyIC8+PGI+VGhlIFByb2dyYW06PC9iPjxiciAvPjxkaXYgY2xhc3M9ImJveCI+PGNvZGU+RElNIElOVEVHRVIgY3JjX3RhYmxlKDI1NSkgJyBsb29rdXAgdGFibGUgZm9yIENSQyBnZW5lcmF0aW9uPGJyIC8+PGJyIC8+Z2VuQ1JDdGFibGUgJyBnZW5lcmF0ZSB0aGUgbG9va3VwIHRhYmxlPGJyIC8+PGJyIC8+PGJyIC8+JzxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxiciAvPidnZW5lcmF0ZXMgYSBsb29rdXAgdGFibGUgZm9yIGZhc3QgY3JjIGNhbGN1bGF0aW9uPGJyIC8+U1VCIGdlbkNSQ3RhYmxlPGNvZGU+PGJyIC8+TE9DQUwgaSUsIGolLCBrJSwgY3JjX2NvbnN0JSA9ICZIQTAwMTxiciAvPkZPUiBpJSA9IDAgVE8gMjU1PGJyIC8+ICBrJSA9IGklPC9jb2RlPjxiciAvPiAgRk9SIGolID0gMSBUTyA4PGJyIC8+ICAgIElGIGslIEFORCAxIFRIRU48YnIgLz4gICAgICBrJSA9IGslID4+IDE8YnIgLz4gICAgICBrJSA9IGslIFhPUiBjcmNfY29uc3QlPGJyIC8+ICAgIEVMU0U8YnIgLz4gICAgICBrJSA9IGslID4+IDE8YnIgLz4gICAgRU5EIElGPGJyIC8+ICBORVhUIGolPGJyIC8+IGNyY190YWJsZShpJSk9ayU8YnIgLz5ORVhUIGklPGJyIC8+RU5EIFNVQjxiciAvPic8YnIgLz4nIHJldHVybnMgdGhlIENSQyBhcyBhIHN0cmluZzxiciAvPkZVTkNUSU9OIENSQzE2JChhJCk8YnIgLz4gIExPQ0FMIENSQyUgPSAmSEZGRkYsIG4lPGJyIC8+ICBGT1IgbiUgPSAxIFRPIExFTihhJCk8YnIgLz4gICAgQ1JDJSA9IChDUkMlID4+IDgpIFhPUiBjcmNfdGFibGUoQ1JDJSBYT1IgQVNDKE1JRCQoYSQsIG4lLCAxKSkgQU5EICZIRkYpPGJyIC8+ICBORVhUIG4lPGJyIC8+ICBDUkMxNiQgPSBDSFIkKENSQyUgQU5EICZIRkYpICsgQ0hSJCgoQ1JDJT4+OCkgQU5EICZIRkYpPGJyIC8+RU5EIEZVTkNUSU9OPGJyIC8+JzxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPjxzdHJpa2U+LTwvc3RyaWtlPi08L2NvZGU+PC9kaXY+ZGTx7OOlksU3ZZVndEooZTUTAuYtZQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWEwLp9eyeBQK7z/TSAwK4z/TSAwK5z/TSAwK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLE5ta/BQLH5ta/BQLG5ta/BQLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCeZD7pBOVBqcV6e9pq7zTAA0QBIy" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login2d0b.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed%26Revision%3d00002" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Modbus CRC uses the table lookup method for speed</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.History8c72.html?Page=MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed&amp;Revision=00001">&laquo; Older Revision</a> - <a href="MMBasic.History3695.html?Page=MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed">Back to Page History</a> - <a href="MMBasic.History6b02.html?Page=MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed&amp;Revision=00003">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2018/12/11 10:22</h3><br /><a href="Loginb02a.html?Page=MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed&amp;Section=0" class="editsectionlink"></a><h1 class="separator">THIS IS STILL IN DRAFT - PLEASE COME BACK LATER<a class="headeranchor" id="THIS_IS_STILL_IN_DRAFT_-_PLEASE_COME_BACK_LATER_0" href="#THIS_IS_STILL_IN_DRAFT_-_PLEASE_COME_BACK_LATER_0" title="Link to this Section">&#0182;</a></h1>Bill McKinley <b>THIS IS STILL IN DRAFT - PLEASE COME BACK LATER</b><br /><br /><b>Introduction:</b><br />This CRC (Cyclic Redundancy Check) is for the Modbus RTU protocol as used in RS232 and RS485 communications. The CRC is a 16 bit word that is calculated from all of the data in a message. It cannot correct any data corruption but it will indicate if a message has been corrupted in some way. This program uses the table lookup method for speed. It processes the message byte-by-byte rather than the bit-by-bit method which is more usual. This program generates the lookup table in software rather than entering the data into the table via a series of READ/DATA statements. It requires an integer table of 256 words.<br /><br /><b>PLEASE NOTE:</b><br />Although this is a Modbus CRC it is in no way restricted to be only used for the Modbus protocol. Any message structure consisting of a stream of 8-bit data bytes can utilise it. For example:<br />Msg$ = “The quick brown fox jumps over the lazy dog”<br /><br />An example a Modbus message (in Hex) could look like:<br /><pre>
+Slave Address             18
+Function Code             03
+Start Address (Hi)        0B
+Start Address (Lo)        B9
+Number of points (Hi)     00
+Number of points (Lo)     01
+CRC (Lo)                  55
+CRC (Hi)                  C2
+</pre><br />Note that the High/Low order of bytes in the CRC is the reverse of that used for the data. I don’t know why.<br /><br />In MMBasic without the CRC, that message would look like:<br /><br /><div class="box"><code>TxMsg$ = CHR$(&H18)+CHR$(&H03)+CHR$(&H0B)+CHR$(&HB9)+CHR$(&H00)+CHR$(&H01)</code></div><br />Add the CRC to the message by:<br /><br /><div class="box"><code>TxMsg$ = TxMsg$ + CRC16$(TxMsg$)</code></div><br />Check the received message (eg RxMsg) by:<br /><br /><div class="box"><code>IF CRC16$(RxMsg$) = CHR$(0) + CHR$(0) THEN ' CRC is OK<br />' Process the response<br />ELSE<br />' Bad CRC - DO nothing - don't respond<br />END IF</code><br /></div><br />To use the program, insert the code below into your program. The subroutine and function can be place anywhere, preferably after the main body of the program. The table DIM statement should be near the top of the program and the 'genCRCtable' subroutine should be one of the first instructions as part of any initialisation.<br /><br /><b>Assumptions:</b><br />That the default: <b>OPTION BASE 0</b> is in force. If <b>OPTION BASE 1</b> is used then some changes will be needed.<br /><br /><b>The Program:</b><br /><div class="box"><code>DIM INTEGER crc_table(255) ' lookup table for CRC generation<br /><br />genCRCtable ' generate the lookup table<br /><br /><br />'<strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><br />'generates a lookup table for fast crc calculation<br />SUB genCRCtable<code><br />LOCAL i%, j%, k%, crc_const% = &HA001<br />FOR i% = 0 TO 255<br />  k% = i%</code><br />  FOR j% = 1 TO 8<br />    IF k% AND 1 THEN<br />      k% = k% >> 1<br />      k% = k% XOR crc_const%<br />    ELSE<br />      k% = k% >> 1<br />    END IF<br />  NEXT j%<br /> crc_table(i%)=k%<br />NEXT i%<br />END SUB<br />'<br />' returns the CRC as a string<br />FUNCTION CRC16$(a$)<br />  LOCAL CRC% = &HFFFF, n%<br />  FOR n% = 1 TO LEN(a$)<br />    CRC% = (CRC% >> 8) XOR crc_table(CRC% XOR ASC(MID$(a$, n%, 1)) AND &HFF)<br />  NEXT n%<br />  CRC16$ = CHR$(CRC% AND &HFF) + CHR$((CRC%>>8) AND &HFF)<br />END FUNCTION<br />'<strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike><strike>-</strike>-</code></div>
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Modbus-CRC-uses-the-table-lookup-method-for-speed&Revision=00002 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:14:07 GMT -->
+</html>

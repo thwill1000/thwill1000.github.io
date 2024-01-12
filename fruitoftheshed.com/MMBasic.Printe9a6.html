@@ -1,0 +1,103 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Small-Strings-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Small Strings - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Small-Strings-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFhTQ8aDEgY2xhc3M9InBhZ2V0aXRsZSI+U21hbGwgU3RyaW5nczwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6NDIgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBNZW1vcnksIFN0cmluZ3MsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPlRoaXMgY29kZSBpcyBpbnRlbmRlZCBmb3IgZWFybHkgdmVyc2lvbnMgb2YgTU1CYXNpYyB3aGVyZSBzdHJpbmdzIHdlcmUgZml4ZWQgYXQgMjU1IGNoYXJhY3RlcnMgaW4gbGVuZ3RoIChidXQgYWZ0ZXIgUEVFSyBhbmQgUE9LRSB3ZXJlIGltcGxlbWVudGVkKS4gVGhpcyBpcyBubyBsb25nZXIgdGhlIGNhc2UgYnV0IHRoaXMgY29kZSBpcyBpbmNsdWRlZCBoZXJlIHBhcnRseSB0byBtYWludGFpbiBjb2hlcmVuY2Ugd2l0aCB0aGUgb2xkIE1NQmFzaWMgbGlicmFyeSBidXQgYWxzbyBiZWNhdXNlIGl0IGRlbW9uc3RyYXRlcyBzbGljaW5nIHN0cmluZ3MgYW5kIGhvbGRpbmcgdGhlbSBpbiBlbGVtZW50cyBvZiBhbiBhcnJheSAtIHRoaXMgY291bGQgZWFzaWx5IGJlIGFkYXB0ZWQgdG8gaG9sZCBzdHJpbmdzIGxhcmdlciB0aGFuIDI1NSBjaGFyYWN0ZXJzICh3aGljaCBpcyBhIGxpbWl0IGluIFY1LjIpLiBJdCBhbHNvIGRlbW9uc3RyYXRlcyB0aGUgIHVzZSBvZiBQRUVLICYgUE9LRSB0byBtYW5pcHVsYXRlIHZhcmlhYmxlcyBkaXJlY3RseS4uLiBhIGxvdCB0byBzdHVkeSBoZXJlLjxiciAvPjxiciAvPjxoMSBjbGFzcz0ic2VwYXJhdG9yIj4gPC9oMT48YnIgLz5TbWFsbCBTdHJpbmdzPGJyIC8+QW4gTU1CYXNpYyBwcm9ncmFtIGJ5IFRhc3N5SmltIC0gT2N0IDIwMTI8YnIgLz48YnIgLz5TYXZlIHNwYWNlIGJ5IHVzaW5nIHNob3J0IHN0cmluZ3MuIE1NQmFzaWMgc3RyaW5ncyBhcmUgYSBmaXhlZCAyNTUgYnl0ZXMgbG9uZy4gSWYgeW91IGhhdmUgYSBsb3Qgb2Ygc2hvcnQgc3RyaW5ncywgeW91IGNhbiBzYXZlIGEgbG90IG9mIHZhbHVhYmxlIG1lbW9yeSBieSB1c2luZyBzaG9ydCBzdHJpbmdzLiBUaGUgY29kZSBjcmVhdGVzIGFuIGFycmF5IG9mIGFueSAoIDwgMjU1ICkgbGVuZ3RoIHN0cmluZ3MuIEl0IHdvdWxkIGJlIGEgYml0IHNsb3cgZm9yIGludGVuc2l2ZSBzdHJpbmcgbWFuaXB1bGF0aW9uIGJ1dCBpdCBjYW4gc2F2ZSBoZWFwcyBvZiBzcGFjZS48YnIgLz48YnIgLz5TdHJpbmdzIHVzZSAyNTYgYnl0ZXMuIFRoZSBmaXJzdCBieXRlIGlzIHRoZSBsZW5ndGggb2YgdGhlIHN0cmluZyBhbmQgdGhlIHJlbWFpbmluZyAyNTUgYnl0ZXMgYXJlIHdoZXJlIHRoZSBhY3R1YWwgc3RyaW5nIGlzIHN0b3JlZC4gSSB1c2VkIHRoZSBzYW1lIG1ldGhvZCBzbyBpZiB5b3UgbmVlZCBzdHJpbmdzIDMyIGJ5dGVzIGxvbmcsIHlvdSB3aWxsIGhhdmUgdG8gc3BlY2lmeSAzMyBhcyB0aGUgc2l6ZS4gSW4gTU1CYXNpYyB5b3UgY2FuIHNwZWNpZnkgdGhlIHN0YXJ0aW5nIGFycmF5IG51bWJlciBhcyB6ZXJvIG9yIG9uZS4gSSBoYXZlIHN0YXllZCB3aXRoIG9uZSBiZWNhdXNlIHRoYXQgaXMgdGhlIHdheSBJIGhhdmUgYWx3YXlzIGRvbmUgaXQuIEkgdXNlIHRoZSAnemVybycgbG9jYXRpb24gdG8gc3RvcmUgdGhlIG5ldyBhcnJheSBzaXplIHRvIHNhdmUgb24gdHdvIHZhcmlhYmxlcy48YnIgLz48YnIgLz5BbiBleGFtcGxlIHRoYXQgbWlnaHQgYmUgcmVsZXZhbnQgdG8geW91LjxiciAvPjxiciAvPkkgaGF2ZSBhIGxpc3Qgb2YgNjUyIEF1c3NpZSB0b3ducy4gVGhlIGxvbmdlc3QgbmFtZSBpbiB0aGUgbGlzdCBpcyAiS2luZ3N0b24gU291dGggRWFzdCIgd2hpY2ggaXMgMTkgY2hhcmFjdGVycyBsb25nLiBBbiBhcnJheSBvZiA2NTIgWCAyMCBieXRlcyBpcyBuZWVkZWQuIDY1MioyMC8yNTYgPSA1MS4gTXkgbWV0aG9kIGNyZWF0ZXMgYW4gYXJyYXkgd2l0aCA1MSBlbGVtZW50cyB3aGljaCB1c2VzIGFib3V0IDEzSyAtIEZ1bGwgbGVuZ3RoIHN0cmluZ3Mgd291bGQgbmVlZCAxNjNLIG9mIG1lbW9yeS4gSSBhbHNvIGhhdmUgYSBsaXN0IG9mIDY1SyBwbGFjZSBuYW1lcyBidXQgdGhhdCdzIHRvbyBtdWNoIGZvciB0aGUgTWF4aW1pdGUgdG8gY2hldyBvbiE8YnIgLz48YnIgLz5JIGRlbGliZXJhdGVseSBrZXB0IHRvIHNpbmdsZSBkaW1lbnNpb24gYXJyYXlzIGJ1dCBpdCBpcyBlYXN5IHRvIHVzZSB0aGUgc2hvcnQgYXJyYXkgYXMgMiBkaW1lbnNpb25zLiBNb3N0IHRpbWVzIGEgc2luZ2xlIGRpbSBhcnJheSBmb3IgdGhlIHN0cmluZyBhbmQgYW5vdGhlciBzdGFuZGFyZCBudW1lcmljIGFycmF5IGZvciB0aGUgcmVzdCBvZiB0aGUgZGF0YS4gSW4gdGhlIFRvd25zIGV4YW1wbGUgdGhpcyBudW1lcmljIGFycmF5IHdpbGwgc3RvcmUgdGhlIGxhdGl0dWRlIGFuZCBsb25naXR1ZGUgb2YgdGhlIHRvd25zLjxiciAvPjxiciAvPkl0IGlzIHRoYW5rcyB0byBHZW9mZiBpbXBsZW1lbnRpbmcgUEVFSyBhbmQgUE9LRSBhbmQgZ2l2aW5nIHVzIHRoZSBsb2NhdGlvbiBvZiB0aGUgdmFyaWFibGUgdGFibGUgdGhhdCBJIHdhcyBhYmxlIHRvIGRvIHRoaXMuIDxiciAvPjxiciAvPlRoZSBjb2RlIG1ha2VzIHVzZSBvZiBQRUVLIGFuZCBQT0tFIHNvIGl0IGRvZXMgaGF2ZSB0aGUgcG90ZW50aWFsIHRvIGNhdXNlIGhhdm9jLjxiciAvPjxiciAvPjxiPmZ1bmN0aW9uIG1ha2VTbWFsbChhYSxiYik8L2I+PGJyIC8+Rmlyc3Qgd2Ugd29yayBvdXQgdGhlIG51bWJlciBvZiBub3JtYWwgc3RyaW5nIGVsZW1lbnRzIG5lZWRlZCB0byBzdG9yZSBvdXIgc21hbGwgYXJyYXkuIFdlIHRoZW4gY3JlYXRlIHRoZSBob2xkaW5nIGFycmF5IGFuZCBmaW5kIGl0cyBtZW1vcnkgYWRkcmVzcy48YnIgLz5UaGUgZmlyc3QgMiBtZW1vcnkgbG9jYXRpb25zIGFyZSB1c2VkIHRvIHN0b3JlIHRoZSBuZXcgYXJyYXkgZGltZW5zaW9ucy4gPGJyIC8+PGJyIC8+PGI+ZnVuY3Rpb24gUHV0U21hbGwoYiwgYSQpPC9iPjxiciAvPldlIHBhc3MgdGhlIGFycmF5IGVsZW1lbnQgYW5kIHRoZSBzdHJpbmcgZm9yIHN0b3JpbmcuIElmIHRoZSBzdHJpbmcgaXMgdG9vIGxvbmcsIGl0IGlzIHRydW5jYXRlZCB3aXRob3V0IGFueSBlcnJvciBtZXNzYWdlLiBUaGUgZnVuY3Rpb24gcmV0dXJucyAtMSBpZiBhbiBlcnJvciBvY2N1cnMgb3IgdGhlIGxlbmd0aCBvZiB0aGUgc3RyaW5nIGlzIGluY29ycmVjdC48YnIgLz48YnIgLz48Yj5mdW5jdGlvbiBHZXRTbWFsbCQoYiwgYSQpPC9iPjxiciAvPlBhc3MgdGhlIGFycmF5IGVsZW1lbnQgYW5kIGFuIG9wdGlvbmFsIGVycm9yIHN0cmluZy4gUmV0dXJuIHRoZSBzdHJpbmcgb3IgdGhlIGVycm9yIHN0cmluZyBpZiBhcnJheSBpcyBvdXQgb2YgYm91bmRzIDxiciAvPjxiciAvPlRoZSBjb2RlIGhhcyBiZWVuIHRlc3RlZCBvbiB2YXJpb3VzIGhhcmR3YXJlIGJ1dCBub3QgYXMgcGFydCBvZiBhIGJpZyBwcm9ncmFtLjxiciAvPkppbTxiciAvPjxiciAvPjxiPlNTVFJJTkcuQkFTPC9iPjxiciAvPjxwcmU+DQonc21hbGwgc3RyaW5ncyBieSBUYXNzeUppbQ0KeD1tYWtlU21hbGwoIDM5LDQwKSAnIDM4KzEgYnl0ZXMgbG9uZywgNDAgZWxlbWVudHMNCnByaW50IHg7IiBzdHJpbmcgZWxlbWVudHMgdXNlZCINCm1lbW9yeQ0KZm9yIG4gPSAxIHRvIDQxDQp0ZXN0JD0iVGVzdCBzdHJpbmcgbnVtYmVyICIrc3RyJChuKQ0KeD1QdXRTbWFsbChuLHRlc3QkKQ0KcHJpbnQgdGVzdCQ7IiAiO3gNCm5leHQgbg0KcHJpbnQNCnByaW50ICJOb3cgd2UgcmV0cmlldmUgdGhlIHN0cmluZ3MiDQpmb3IgbiA9IDEgdG8gNDENCnRlc3QkPUdldFNtYWxsJChuLCJ3b29wcyEiKQ0KcHJpbnQgbjsiICAiO3Rlc3QkDQpuZXh0IG4NCm1lbW9yeQ0KZW5kDQoNCmZ1bmN0aW9uIG1ha2VTbWFsbCggYWEsYmIpICdhYT0gc3RyaW5nIGxlbmd0aCwgYmI9IGFycmF5IGVsZW1lbnRzDQpsb2NhbCBhc2NpaSQsZyxuLGMNCm1ha2VTbWFsbD0tMQ0KZGltIHNtYWxsc3RyaW5nJChpbnQoYWEmIzQyO2JiLzI1NikrMSkgJyBhbGxvY2F0ZSB0aGUgcmVxdWlyZWQgbWVtb3J5IGFzIGEgbm9ybWFsIGFycmF5DQpmb3IgZz0wIHRvIDMyICdsb29rIHRocm91Z2ggYSBtYXhpbXVtIG9mIDMyIHZhcmlhYmxlcw0KYXNjaWkkPSIiDQpmb3IgbiA9IDAgdG8gMzINCmM9cGVlayhWQVJUQkwsbitnJiM0Mjs1NikNCmlmIGM9MCB0aGVuIGV4aXQgZm9yDQphc2NpaSQ9YXNjaWkkK2NociQoYykgJyByZXRyaWV2ZSB2YXJpYWJsZSBuYW1lIChlbmQgaXMgY2hyJCgwKSkNCm5leHQgbg0KU1NsPXBlZWsoVkFSVEJMLDUyK2cmIzQyOzU2KStwZWVrKFZBUlRCTCw1MytnJiM0Mjs1NikmIzQyOzI1NiAnIHN0cmluZyBzdG9yYWdlIGxvdyB3b3JkDQpTU2g9cGVlayhWQVJUQkwsNTQrZyYjNDI7NTYpK3BlZWsoVkFSVEJMLDU1K2cmIzQyOzU2KSYjNDI7MjU2ICcgc3RyaW5nIHN0b3JhZ2UgaGlnaCB3b3JkDQppZiBhc2NpaSQ9IlNNQUxMU1RSSU5HJCgiIHRoZW4gDQpwb2tlIFNTaCwgU1NsLCBhYSAnc3RvcmUgdGhlIG1heCBzdHJpbmcgbGVuZ3RoDQpwb2tlIFNTaCwgU1NsKzEsIGJiICcgc3RvcmUgdGhlIG1heCBudW1iZXIgb2YgZWxlbWVudHMNCm1ha2VTbWFsbD1pbnQoYWEmIzQyO2JiLzI1NikrMQ0KZXhpdCBmb3INCmVuZGlmDQpuZXh0IGcgDQplbmQgZnVuY3Rpb24gJ3JldHVybnMgLTEgZm9yIGVycm9yIG9yIG51bWJlciBvZiBub3JtYWwgc3RyaW5nIGFycmF5IGVsZW1lbnRzIHVzZWQNCg0KZnVuY3Rpb24gUHV0U21hbGwoYiwgYSQpICcgZWxlbWVudCBudW1iZXIsIHN0cmluZyB0byBzdG9yZSANCmxvY2FsIG4sYWEsYmINCmFhPXBlZWsoU1NoLCBTU2wpICcgcmV0cmlldmUgdGhlIG1heCBzdHJpbmcgbGVuZ3RoDQpiYj1wZWVrKFNTaCwgU1NsKzEpICcgcmV0cmlldmUgdGhlIG1heCBudW1iZXIgb2YgZWxlbWVudHMNCm49LTENCmI9aW50KGIpDQppZiBiJmd0OzAgYW5kIGImbHQ7PWJiIHRoZW4NCiAgICBpZiBsZW4oYSQpJmd0Oz1hYSB0aGVuDQogICAgICAgIGEkPWxlZnQkKGEkLGFhLTEpICcgdHJpbSB0aGUgc3RyaW5nIHRvIG1heCBsZW5ndGgNCiAgICBlbmRpZg0KICAgIHBva2UgU1NoLCBTU2wrYiYjNDI7YWEsIGxlbihhJCkgJyBzdG9yZSB0aGUgc3RyaW5nIGxlbmd0aA0KICAgIGZvciBuID0gMSB0byBsZW4oYSQpDQogICAgICAgIGM9YXNjKG1pZCQoYSQsbiwxKSkNCiAgICAgICAgcG9rZSBTU2gsIFNTbCtiJiM0MjthYStuLCBjICcgc3RvcmUgdGhlIHN0cmluZw0KICAgIG5leHQgbg0KZW5kaWYNClB1dFNtYWxsPW4gJyByZXR1cm5zIGxlbmd0aCBvZiBzdHJpbmcgb3IgLTEgaWYgc3Vic2NyaXB0IG91dCBvZiByYW5nZQ0KZW5kIGZ1bmN0aW9uDQoNCmZ1bmN0aW9uIEdldFNtYWxsJChiLCBhJCkgJyBlbGVtZW50IG51bWJlciwgZXJyb3IgbWVzc2FnZSBpZiBvdXQgb2YgYm91bmRzDQpsb2NhbCBuLGFhLGJiLHMNCmFhPXBlZWsoU1NoLCBTU2wpICcgcmV0cmlldmUgdGhlIG1heCBzdHJpbmcgbGVuZ3RoDQpiYj1wZWVrKFNTaCwgU1NsKzEpICcgcmV0cmlldmUgdGhlIG1heCBudW1iZXIgb2YgZWxlbWVudHMNCmI9aW50KGIpDQppZiBiJmd0OzAgYW5kIGImbHQ7PWJiIHRoZW4NCmEkPSIiDQpzID0gcGVlayhTU2gsU1NsK2FhJiM0MjtiKSAnIHNpemUgb2YgZWxlbWVudA0KZm9yIG4gPSAxIHRvIHMNCms9cGVlayhTU2gsU1NsK2FhJiM0MjtiK24pICcgYnVpbGQgdGhlIHN0cmluZw0KYSQ9YSQrY2hyJChrKQ0KbmV4dCBuDQplbmRpZg0KR2V0U21hbGwkPWEkICdyZXR1cm5zIHN0cmluZyBvciBlcnJvciBtZXNzYWdlDQplbmQgZnVuY3Rpb24NCg0KPC9wcmU+PGJyIC8+ZGTFnjlXlATtI9VghtF+MP45eZeJNQ==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Small Strings</h1><small>Modified on 2016/12/23 23:42 by Administrator &mdash; Categorized as: Memory, Strings, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />This code is intended for early versions of MMBasic where strings were fixed at 255 characters in length (but after PEEK and POKE were implemented). This is no longer the case but this code is included here partly to maintain coherence with the old MMBasic library but also because it demonstrates slicing strings and holding them in elements of an array - this could easily be adapted to hold strings larger than 255 characters (which is a limit in V5.2). It also demonstrates the  use of PEEK & POKE to manipulate variables directly... a lot to study here.<br /><br /><h1 class="separator"> </h1><br />Small Strings<br />An MMBasic program by TassyJim - Oct 2012<br /><br />Save space by using short strings. MMBasic strings are a fixed 255 bytes long. If you have a lot of short strings, you can save a lot of valuable memory by using short strings. The code creates an array of any ( < 255 ) length strings. It would be a bit slow for intensive string manipulation but it can save heaps of space.<br /><br />Strings use 256 bytes. The first byte is the length of the string and the remaining 255 bytes are where the actual string is stored. I used the same method so if you need strings 32 bytes long, you will have to specify 33 as the size. In MMBasic you can specify the starting array number as zero or one. I have stayed with one because that is the way I have always done it. I use the 'zero' location to store the new array size to save on two variables.<br /><br />An example that might be relevant to you.<br /><br />I have a list of 652 Aussie towns. The longest name in the list is "Kingston South East" which is 19 characters long. An array of 652 X 20 bytes is needed. 652*20/256 = 51. My method creates an array with 51 elements which uses about 13K - Full length strings would need 163K of memory. I also have a list of 65K place names but that's too much for the Maximite to chew on!<br /><br />I deliberately kept to single dimension arrays but it is easy to use the short array as 2 dimensions. Most times a single dim array for the string and another standard numeric array for the rest of the data. In the Towns example this numeric array will store the latitude and longitude of the towns.<br /><br />It is thanks to Geoff implementing PEEK and POKE and giving us the location of the variable table that I was able to do this. <br /><br />The code makes use of PEEK and POKE so it does have the potential to cause havoc.<br /><br /><b>function makeSmall(aa,bb)</b><br />First we work out the number of normal string elements needed to store our small array. We then create the holding array and find its memory address.<br />The first 2 memory locations are used to store the new array dimensions. <br /><br /><b>function PutSmall(b, a$)</b><br />We pass the array element and the string for storing. If the string is too long, it is truncated without any error message. The function returns -1 if an error occurs or the length of the string is incorrect.<br /><br /><b>function GetSmall$(b, a$)</b><br />Pass the array element and an optional error string. Return the string or the error string if array is out of bounds <br /><br />The code has been tested on various hardware but not as part of a big program.<br />Jim<br /><br /><b>SSTRING.BAS</b><br /><pre>
+'small strings by TassyJim
+x=makeSmall( 39,40) ' 38+1 bytes long, 40 elements
+print x;" string elements used"
+memory
+for n = 1 to 41
+test$="Test string number "+str$(n)
+x=PutSmall(n,test$)
+print test$;" ";x
+next n
+print
+print "Now we retrieve the strings"
+for n = 1 to 41
+test$=GetSmall$(n,"woops!")
+print n;"  ";test$
+next n
+memory
+end
+
+function makeSmall( aa,bb) 'aa= string length, bb= array elements
+local ascii$,g,n,c
+makeSmall=-1
+dim smallstring$(int(aa&#42;bb/256)+1) ' allocate the required memory as a normal array
+for g=0 to 32 'look through a maximum of 32 variables
+ascii$=""
+for n = 0 to 32
+c=peek(VARTBL,n+g&#42;56)
+if c=0 then exit for
+ascii$=ascii$+chr$(c) ' retrieve variable name (end is chr$(0))
+next n
+SSl=peek(VARTBL,52+g&#42;56)+peek(VARTBL,53+g&#42;56)&#42;256 ' string storage low word
+SSh=peek(VARTBL,54+g&#42;56)+peek(VARTBL,55+g&#42;56)&#42;256 ' string storage high word
+if ascii$="SMALLSTRING$(" then 
+poke SSh, SSl, aa 'store the max string length
+poke SSh, SSl+1, bb ' store the max number of elements
+makeSmall=int(aa&#42;bb/256)+1
+exit for
+endif
+next g 
+end function 'returns -1 for error or number of normal string array elements used
+
+function PutSmall(b, a$) ' element number, string to store 
+local n,aa,bb
+aa=peek(SSh, SSl) ' retrieve the max string length
+bb=peek(SSh, SSl+1) ' retrieve the max number of elements
+n=-1
+b=int(b)
+if b&gt;0 and b&lt;=bb then
+    if len(a$)&gt;=aa then
+        a$=left$(a$,aa-1) ' trim the string to max length
+    endif
+    poke SSh, SSl+b&#42;aa, len(a$) ' store the string length
+    for n = 1 to len(a$)
+        c=asc(mid$(a$,n,1))
+        poke SSh, SSl+b&#42;aa+n, c ' store the string
+    next n
+endif
+PutSmall=n ' returns length of string or -1 if subscript out of range
+end function
+
+function GetSmall$(b, a$) ' element number, error message if out of bounds
+local n,aa,bb,s
+aa=peek(SSh, SSl) ' retrieve the max string length
+bb=peek(SSh, SSl+1) ' retrieve the max number of elements
+b=int(b)
+if b&gt;0 and b&lt;=bb then
+a$=""
+s = peek(SSh,SSl+aa&#42;b) ' size of element
+for n = 1 to s
+k=peek(SSh,SSl+aa&#42;b+n) ' build the string
+a$=a$+chr$(k)
+next n
+endif
+GetSmall$=a$ 'returns string or error message
+end function
+
+</pre><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Small-Strings-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:57 GMT -->
+</html>

@@ -1,0 +1,609 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:54:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Sprite demo: Breakout - Fruit Of The Shed
+</title><meta name="keywords" content="arcade" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Sprite-demo-Breakout-part-of-the-original-MMBasic-library&amp;NS=MMBasic&amp;NoRedirect=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBMcBR2V0RmlsZS5hc3B4P0ZpbGU9YnJlYWsuemlwJmFtcDtBc1N0cmVhbUF0dGFjaG1lbnQ9MSZhbXA7UHJvdmlkZXI9U2NyZXdUdXJuLldpa2kuRmlsZXNTdG9yYWdlUHJvdmlkZXImYW1wO0lzUGFnZUF0dGFjaG1lbnQ9MSZhbXA7UGFnZT1NTUJhc2ljLlNwcml0ZS1kZW1vLUJyZWFrb3V0LXBhcnQtb2YtdGhlLW9yaWdpbmFsLU1NQmFzaWMtbGlicmFyeQhEb3dubG9hZAlicmVhay56aXAHMy4xNCBLQmRkdeQDwBKB65JO/fqxQY+HIHgJ2oQ=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login88e2.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dSprite-demo-Breakout-part-of-the-original-MMBasic-library%26NS%3dMMBasic%26NoRedirect%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History675a.html?Page=MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Sprite demo: Breakout
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print675a.html?Page=MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:46
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages0dbd.html?Cat=MMBasic.Games" title="Games">Games</a>, <a href="MMBasic.AllPageseb16.html?Cat=MMBasic.Graphics" title="Graphics">Graphics</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="fe081eb4d-6f03-416e-8f41-5eee93bf84c8" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fe081eb4d-6f03-416e-8f41-5eee93bf84c8');"><a href="MMBasic.ByREF-ByVAL-VB-work-a-like.html" title="ByREF & ByVAL - (VB work-a-like)">ByREF & ByVAL - (VB work-a-like)</a><a href="MMBasic.Field-Function-cField.html" title="Field Function cField$">Field Function cField$</a></div><div id="f6d4c0293-037e-4ab6-bc01-e7866a3e8433" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f6d4c0293-037e-4ab6-bc01-e7866a3e8433');"><a href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic">Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic</a><a href="MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library.html" title="Bubble Sort">Bubble Sort</a><a href="MMBasic.Shell-Sort.html" title="Shell Sort">Shell Sort</a><a href="MMBasic.CR2-Sort-The-Fastest-Search.html" title="Cube Root of Two Sort - fast sort">Cube Root of Two Sort - fast sort</a><a href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings">Comb Sort for strings</a></div><div id="f392f090f-9f21-4175-bdb7-2f4d0bd7c8da" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f392f090f-9f21-4175-bdb7-2f4d0bd7c8da');"><a href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a></div><div id="fd7e1abb2-75c7-45e2-ad6e-b3a8eb9db088" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fd7e1abb2-75c7-45e2-ad6e-b3a8eb9db088');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library.html" title="SPLIT subroutine (MMBasic)">SPLIT subroutine (MMBasic)</a> &raquo; <a href="MMBasic.Sprite-demo-Arcade-part-of-the-original-MMBasic-library.html" title="Sprite demo: Arcade (MMBasic)">Sprite demo: Arcade (MMBasic)</a> &raquo; <b><a href="MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library.html" title="Sprite demo: Breakout (MMBasic)">Sprite demo: Breakout (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Small-Strings-part-of-the-original-MMBasic-library.html" title="Small Strings (MMBasic)">Small Strings (MMBasic)</a> &raquo; <a href="MMBasic.Micromite-SMS-Text-Gateway.html" title="SMS (Text) Gateway with MicroMite  (MMBasic)">SMS (Text) Gateway with MicroMite  (MMBasic)</a> &raquo; <a href="MMBasic.Some-Hints-Tips-for-writing-efficient-code.html" title="Some Hints & Tips for writing efficient code. (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f392f090f-9f21-4175-bdb7-2f4d0bd7c8da', this);" id="lnkf392f090f-9f21-4175-bdb7-2f4d0bd7c8da" onmouseout="javascript:return __HideDropDown('f392f090f-9f21-4175-bdb7-2f4d0bd7c8da');">Some Hints & Tips for writing efficient code. (MMBasic)</a> &raquo; <a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f6d4c0293-037e-4ab6-bc01-e7866a3e8433', this);" id="lnkf6d4c0293-037e-4ab6-bc01-e7866a3e8433" onmouseout="javascript:return __HideDropDown('f6d4c0293-037e-4ab6-bc01-e7866a3e8433');">Sort algorithms - A comparison (MMBasic)</a> &raquo; <a href="MMBasic.sort1-sort-strings-on-a-number-inside-the-strings.html" title="sort1 - sort strings, on a number inside the strings  (MMBasic)">sort1 - sort strings, on a number inside the strings  (MMBasic)</a> &raquo; <a href="MMBasic.sortname-sort-strings-on-a-name-inside-the-strings.html" title="sortname - sort strings, on a name inside the strings (MMBasic)">sortname - sort strings, on a name inside the strings (MMBasic)</a> &raquo; <a href="MMBasic.VB%20Work-a-like%20SPLIT%20Function.html" title="SPLIT Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fe081eb4d-6f03-416e-8f41-5eee93bf84c8', this);" id="lnkfe081eb4d-6f03-416e-8f41-5eee93bf84c8" onmouseout="javascript:return __HideDropDown('fe081eb4d-6f03-416e-8f41-5eee93bf84c8');">SPLIT Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.SPLIT-subroutine-part-of-the-original-MMBasic-library.html" title="SPLIT subroutine (MMBasic)">SPLIT subroutine (MMBasic)</a> &raquo; <a href="MMBasic.Sprite-demo-Arcade-part-of-the-original-MMBasic-library.html" title="Sprite demo: Arcade (MMBasic)">Sprite demo: Arcade (MMBasic)</a> &raquo; <b><a href="MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library.html" title="Sprite demo: Breakout (MMBasic)">Sprite demo: Breakout (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required file(s) are available in the attachments tab (top right).<br /><br />Colour Maximite V4.0 Demos from Fabrice Muller, France<br /><br /><b>Arcade</b>:<br />Arcade game where you have to shoot enemies until you die 3 times. It shows how to use multi-sprite enemies, audio modules as sound effects and ADC input for moving your ship Right/Left with a potentiometer + a Button to fire.<br /><br /><b>BREAKTST.BAS</b>:<br /><pre>
+'Breakout Game demo for Colour Maximite v4.0
+'Fabrice Muller
+'2012
+'Connect a potentiometer to Pin 2
+'
+'                Pin 2
+'                  |
+'                  |
+'                /   \
+' +3v3 &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;| o |&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; GND
+'                \&#95;&#95;_/
+'
+'         10Kohm Potentiometer
+'
+
+'All Arrays start at 0
+Option base 0
+'Setup the Pin 2 as ADC input
+SetPin 2,1
+'array for a 15 x 8 bricks wall
+Dim Brick(14,7)
+'Load the Sprites
+Drive "b&#58;"
+Sprite Load "Break.spr"
+RackSize = 32
+'Put the screen in 240 x 216 pixels
+Mode 4
+Cls
+Print @(100 , 80) "Press a key to start"
+Do While Inkey$ = "" &#58; Loop
+Cls
+Lives = 3
+Level = 1
+'Maximum number of level you created
+Max_Level = 4
+'Load level 1 at start
+Load_Level(1)
+Racket = Pot_Read(2)
+Randomize Timer
+ballx = Rnd &#42; (MM.HRes -40) + 20
+bally = 90
+dx = 0
+Do While dx = 0
+ dx = Rnd(5) - 2
+Loop
+dy = -2
+'Draw the Racket and the Ball
+Sprite On 1,racket,200
+Sprite On 2,racket + 16,200
+Sprite On 3,ballx,bally
+Sprite_Flip = 0
+ 'Main loop
+Do While 1
+ 'Get racket position
+ Racket = Pot_Read(2)
+ RackRight = Racket + RackSize
+ 'Move the Racket and the Ball
+ If Sprite_Flip = 1 Then
+  Sprite off 1
+  Sprite off 2
+  Sprite off 3
+  Sprite on 1,racket,200
+  Sprite on 2,racket + 16,200
+  Sprite on 3,ballx,bally
+  Sprite_Flip = 0
+ Else
+  Sprite off 3
+  Sprite off 2
+  Sprite off 1
+  Sprite on 3,ballx,bally
+  Sprite on 2,racket + 16,200
+  Sprite on 1,racket,200
+  Sprite_Flip = 1
+ EndIf
+ ballx = ballx + dx
+ bally = bally + dy
+ If bally &gt;= 190 Then Racket_Test
+ If bally &lt;= 3 Then dy = Abs(dy)
+ If ballx &gt; (MM.HRes - 7) Then dx = -dx
+ If ballx &lt; 1 Then dx = Abs(dx)
+ ShootY = Int(bally / 8)
+ If (ShootY &gt;= 0) And (ShootY &lt;= 7) Then
+  ShootX = Int(Ballx / 16)
+  If ShootX &lt;= 14 Then Test_the_Bricks
+ EndIf
+ Pause 20
+Loop
+
+Sub Racket_Test
+ If (ballx &lt; (Racket - 7)) Or (ballx &gt; RackRight) Then
+  Lives = Lives - 1
+  If Lives = 0 Then
+   Print @(100 , 90) "GAME OVER !"
+   Sound 500,500
+   Print @(60 , 110) "Press a key to restart"
+   Do While Inkey$ = "" &#58; Loop
+   Run
+  Else
+   Sprite Off 3
+   Bally = 90
+   Ballx = Int(Rnd &#42; (MM.HRes - 30) + 10)
+   Sprite On 3,Ballx,Bally
+   Exit Sub
+  EndIf
+ EndIf
+ Sound 700,10
+ dy = -dy
+ If (ballx &gt;= Racket) And (ballx &gt;= Racket + Int(RackSize / 4)) Then
+   If dx &gt; 0 Then dx = -3
+ EndIf
+ If (Ballx &gt;= Racket + Int(RackSize/4)) And (Ballx &lt;= Racket + Int(RackSize/2)) Then
+  If dx &gt; 0 Then dx = -2
+ EndIf
+ If (Ballx &gt;= (Racket + Int(RackSize / 2)+Int(RackSize / 4))) And (Ballx &lt;= RackRight) Then
+  If dx &lt; 0 Then dx = 2
+ EndIf
+End Sub
+
+Sub Test_the_Bricks
+ If ShootX &lt; 0 Then ShootX = 0
+ If brick(ShootX,ShootY) = 1 Then
+  brick(ShootX,ShootY) = 0
+  Sound 1000,20
+  Sprite Off 3
+  Line (ShootX&#42;16,ShootY&#42;8)-((ShootX&#42;16)+15,(ShootY&#42;8)+7),0,bf
+  Sprite On 3,ballx,bally
+  score = score + 10
+  Print @(0 , 200) score;" "
+  If (score Mod 1200) = 0 Then
+   'Load the next level
+   Level = Level + 1
+   If Level &gt; Max_Level Then
+    Print @(100 , 80) "You win !"
+    Print @(70 , 100) "Press a key to restart"
+    Do While Inkey$ = "" &#58; Loop
+    Run
+   EndIf
+   Sprite Off 1
+   Sprite Off 2
+   Sprite Off 3
+   Bally = 90
+   Ballx = Int(Rnd &#42; (MM.HRes - 30) + 10)
+   Cls
+   Load_Level(Level)
+   Sprite On 1,racket,200
+   Sprite On 2,racket + 16,200
+   Sprite On 3,Ballx,Bally
+   Sprite_Flip = 0
+   dy = Abs(dy)
+   Exit Sub
+  EndIf
+  If dy &gt; 0 Then
+   dy = -dy
+  Else
+   dy = Abs(dy)
+  EndIf
+ EndIf
+End Sub
+
+Sub Load_Level(Number)
+ 'Here we load a bmp and it's related
+ 'data array
+ Local FileBMP$,FileBrick$
+ Local Input_Line$
+ Local a,b
+
+ FileBMP$ = "brick"
+ If Number &lt; 10 Then FileBMP$ = FileBMP$ + "0" + Str$(Number) + ".bmp"
+ If Number &gt;= 10 Then FileBMP$ = FileBMP$ + Str$(Number) + ".bmp"
+ FileBrick$ = "brick"
+ If Number &lt; 10 Then FileBrick$ = FileBrick$ + "0" + Str$(Number) + ".lvl"
+ If Number &gt;= 10 Then FileBrick$ = FileBrick$ + Str$(Number) + ".lvl"
+ 'We load the Wall BMP
+ LoadBMP FileBMP$,0,0
+ 'We load the data array for this level
+ Open FileBrick$ For input As &#35;1
+  For a = 0 To 7
+   Line Input &#35;1,Input_Line$
+   For b = 0 To 14
+    If Mid$(Input_line$,b+1,1) &lt;&gt; " " Then
+        Brick(b,a) = 1
+       Else
+        Brick(b,a) = 0
+       EndIf
+   Next b
+  Next a
+ Close &#35;1
+End Sub
+
+Function Pot_Read(ADC_Pin)
+ 'Read the potentiometer value for place
+ 'the X coordinate from the Ship
+ 'ADC_Pin is the pin number we have define for ADC input
+ Local CalcPot , tmppos
+ CalcPot = 3 / MM.HRes
+ tmppos = Int((Pin(ADC_Pin) -0.1) / CalcPot)
+ If tmppos &gt; (MM.HRes - 32) Then tmppos = MM.HRes - 32
+ Pot_Read = tmppos
+End Function
+
+</pre>
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='breakaf3b.zip?File=break.zip&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library' title="Download">break.zip</a></td>
+			<td>3.14 KB</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Sprite-demo-Breakout-part-of-the-original-MMBasic-library.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:54:00 GMT -->
+</html>

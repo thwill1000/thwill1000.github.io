@@ -1,0 +1,39 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.VB-Work-a-like-REPLACE-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	REPLACE$ Function (VB work-a-like) - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.VB-Work-a-like-REPLACE-Function" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF9AU8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UkVQTEFDRSQgRnVuY3Rpb24gKFZCIHdvcmstYS1saWtlKTwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMjEvMTEvMjUgMTc6MjAgYnkgQ2FwdGFpbkJvaW5nICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IFN0cmluZ3M8L3NtYWxsPjxiciAvPjxiciAvPlJldHVybnMgYSBzdHJpbmcgaW4gd2hpY2ggYWxsIG9jY3VycmVuY2VzIG9mIG9uZSBzcGVjaWZpZWQgc3Vic3RyaW5nIGhhdmUgYmVlbiByZXBsYWNlZCB3aXRoIGFub3RoZXIuPGJyIC8+PGJyIC8+PGI+U3ludGF4PC9iPjo8YnIgLz4gICAgUmVwbGFjZSQoZXhwcmVzc2lvbiwgZmluZCwgcmVwbGFjZXdpdGgpPGJyIC8+PGJyIC8+PGI+RXhhbXBsZTwvYj46PGJyIC8+CWZyZWQkPVJlcGxhY2UkKERhdGUkLCIvIiwiLSIpICAncmVwbGFjZXMgYWxsIC8gaW4gdGhlIGRhdGUgd2l0aCAtPGJyIC8+PGJyIC8+PGI+Q29kZTwvYj46PGJyIC8+PHByZT4JRnVuY3Rpb24gUmVwbGFjZSQoYSQsYiQsYyQpDQoJCUxvY2FsIEludGVnZXIgeixkLGUNCgkJTG9jYWwgciQseCQNCgkJej0xJiM1ODtkPUxlbihjJCkmIzU4O2U9TGVuKGIkKSYjNTg7ciQ9YSQNCgkJRG8NCgkJCXo9SW5zdHIoeixyJCxiJCkNCgkJCUlmIHo9MCBUaGVuIEV4aXQgRG8NCgkJCXgkPUxlZnQkKHIkLHotMSkNCgkJCXIkPXgkK2MkK01pZCQociQseitlKQ0KCQkJej1MZW4oeCQpK2QNCgkJTG9vcA0KCQlSZXBsYWNlJD1yJA0KCUVuZCBGdW5jdGlvbk48L3ByZT48YnIgLz48YnIgLz5kZFm4T7Gd7NDAxcqZmeIhM/YgvVoS" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">REPLACE$ Function (VB work-a-like)</h1><small>Modified on 2021/11/25 17:20 by CaptainBoing &mdash; Categorized as: Strings</small><br /><br />Returns a string in which all occurrences of one specified substring have been replaced with another.<br /><br /><b>Syntax</b>:<br />    Replace$(expression, find, replacewith)<br /><br /><b>Example</b>:<br />	fred$=Replace$(Date$,"/","-")  'replaces all / in the date with -<br /><br /><b>Code</b>:<br /><pre>	Function Replace$(a$,b$,c$)
+		Local Integer z,d,e
+		Local r$,x$
+		z=1&#58;d=Len(c$)&#58;e=Len(b$)&#58;r$=a$
+		Do
+			z=Instr(z,r$,b$)
+			If z=0 Then Exit Do
+			x$=Left$(r$,z-1)
+			r$=x$+c$+Mid$(r$,z+e)
+			z=Len(x$)+d
+		Loop
+		Replace$=r$
+	End FunctionN</pre><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.VB-Work-a-like-REPLACE-Function by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:17 GMT -->
+</html>

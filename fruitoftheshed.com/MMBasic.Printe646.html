@@ -1,0 +1,31 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF0gg8aDEgY2xhc3M9InBhZ2V0aXRsZSI+SXNMZWFwWWVhciBGdW5jdGlvbiB0byBkZXRlcm1pbmUgaWYgdGhlIGdpdmVuIHllYXIgaXMgYSBMZWFwIFllYXIgb24gdGhlIEdyZWdvcmlhbiAod2VzdGVybikgY2FsZW5kYXI8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDIwLzAxLzAzIDExOjU4IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBEYXRlcywgVGltZSBhbmQgQ2xvY2tzLCBNYXRoczwvc21hbGw+PGJyIC8+PGJyIC8+VGhlIGZvbGxvd2luZyBpcyBhbiBNTUJhc2ljIGZ1bmN0aW9uIHRvIGluZGljYXRlIHRoYXQgdGhlIGdpdmVuIHllYXIgaXMgYSA8YSBjbGFzcz0iZXh0ZXJuYWxsaW5rIiBocmVmPSJodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9MZWFwX3llYXIiIHRpdGxlPSJsZWFwIHllYXIiIHRhcmdldD0iX2JsYW5rIj5sZWFwIHllYXI8L2E+LjxiciAvPjxiciAvPkl0IHNpbXBseSByZXR1cm5zIGEgQm9vbGVhbiAoYWN0dWFsbHkgYW4gaW50ZWdlcikgb2YgMSBpZiB0aGUgeWVhciBpcyBsZWFwIG9yIDAgaWYgbm90LjxiciAvPjxiciAvPkZhc3RlciB2ZXJzaW9uIGVsaW1pbmF0ZXMgZGVjaXNpb24gbWFraW5nPGJyIC8+PGJyIC8+PGI+U3ludGF4OjwvYj48YnIgLz49SXNMZWFwWWVhcih5ZWFyKTxiciAvPjxiciAvPjxiPkV4YW1wbGUgVXNhZ2U6PC9iPjxiciAvPkRheXNJblllYXI9MzY1K0lzTGVhcFllYXIoeWVhcik8YnIgLz5JZiBJc0xlYXBZZWFyKHllYXIpIFRoZW4uLi48YnIgLz48YnIgLz48cHJlPg0KCUZ1bmN0aW9uIElzTGVhcFllYXIobiBBcyBJbnRlZ2VyKSBBcyBJbnRlZ2VyDQoJCUlzTGVhcFllYXI9KChuIE1vZCA0PTApIEFuZCAobiBNb2QgMTAwICZsdDsmZ3Q7MCkpIE9yIChuIE1vZCA0MDA9MCkgCQkNCglFbmQgRnVuY3Rpb24NCjwvcHJlPjxiciAvPjxiPlNlZSBBbHNvOjwvYj48YnIgLz48YSBjbGFzcz0icGFnZWxpbmsiIGhyZWY9Ik1NQmFzaWMuSXNEYXRlLWFuZC1Jc1RpbWUtZnVuY3Rpb25zLVZCLVdvcmstQS1MaWtlLmFzaHgiIHRpdGxlPSJJc0RhdGUgYW5kIElzVGltZSBmdW5jdGlvbnMgKFZCIFdvcmstQS1MaWtlKSI+SXNEYXRlIGFuZCBJc1RpbWUgZnVuY3Rpb25zPC9hPmRkUZsd28JEJG/zEdwfMECyTcCjSTM=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar</h1><small>Modified on 2020/01/03 11:58 by CaptainBoing &mdash; Categorized as: Dates, Time and Clocks, Maths</small><br /><br />The following is an MMBasic function to indicate that the given year is a <a class="externallink" href="https://en.wikipedia.org/wiki/Leap_year" title="leap year" target="_blank">leap year</a>.<br /><br />It simply returns a Boolean (actually an integer) of 1 if the year is leap or 0 if not.<br /><br />Faster version eliminates decision making<br /><br /><b>Syntax:</b><br />=IsLeapYear(year)<br /><br /><b>Example Usage:</b><br />DaysInYear=365+IsLeapYear(year)<br />If IsLeapYear(year) Then...<br /><br /><pre>
+	Function IsLeapYear(n As Integer) As Integer
+		IsLeapYear=((n Mod 4=0) And (n Mod 100 &lt;&gt;0)) Or (n Mod 400=0) 		
+	End Function
+</pre><br /><b>See Also:</b><br /><a class="pagelink" href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions</a>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:17:18 GMT -->
+</html>

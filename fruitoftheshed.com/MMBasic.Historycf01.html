@@ -1,0 +1,255 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFgoCAQ8WAh4EVGV4dAVUUGFnZSBIaXN0b3J5OiBMaW5lIGVkaXRvciBmb3IgaW50ZXJhY3RpdmUgZWRpdGluZyBvZiB0ZXh0IGxpbmVzL3BhZ2VzIC0gTElORUVESVQuQkFTZAIFDxBkEBULAjEwATkBOAE3ATYBNQE0ATMBMgExATAVCwIxMAE5ATgBNwE2ATUBNAEzATIBMQEwFCsDC2dnZ2dnZ2dnZ2dnZGQCBw8QZBAVDAdDdXJyZW50AjEwATkBOAE3ATYBNQE0ATMBMgExATAVDAdDdXJyZW50AjEwATkBOAE3ATYBNQE0ATMBMgExATAUKwMMZ2dnZ2dnZ2dnZ2dnZGQCCw8WAh8AZWQCDQ8WAh4LXyFJdGVtQ291bnQCDBYYAgEPZBYEZg8VBgdDdXJyZW50e01NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5MaW5lLWVkaXRvci1mb3ItaW50ZXJhY3RpdmUtZWRpdGluZy1vZi10ZXh0LWxpbmVzLXBhZ2VzLUxJTkVFRElULUJBUyZhbXA7UmV2aXNpb249Q3VycmVudEZMaW5lIGVkaXRvciBmb3IgaW50ZXJhY3RpdmUgZWRpdGluZyBvZiB0ZXh0IGxpbmVzL3BhZ2VzIC0gTElORUVESVQuQkFTEDIwMTgvMDMvMjQgMDA6NTQ1PGEgaHJlZj0iTU1CYXNpYy5Vc2VyLmFzcHg/VXNlcm5hbWU9ZW5nZWxlbiI+cmF2ZTwvYT4AZAIBDw8WBB4PQ29tbWFuZEFyZ3VtZW50BQdDdXJyZW50HgdWaXNpYmxlaGRkAgIPZBYEZg8VBgIxMHZNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuTGluZS1lZGl0b3ItZm9yLWludGVyYWN0aXZlLWVkaXRpbmctb2YtdGV4dC1saW5lcy1wYWdlcy1MSU5FRURJVC1CQVMmYW1wO1JldmlzaW9uPTEwRkxpbmUgZWRpdG9yIGZvciBpbnRlcmFjdGl2ZSBlZGl0aW5nIG9mIHRleHQgbGluZXMvcGFnZXMgLSBMSU5FRURJVC5CQVMQMjAxOC8wMy8yMyAxNjo1NTU8YSBocmVmPSJNTUJhc2ljLlVzZXIuYXNweD9Vc2VybmFtZT1lbmdlbGVuIj5yYXZlPC9hPgBkAgEPDxYEHwIFAjEwHwNoZGQCAw9kFgRmDxUGATl1TU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLkxpbmUtZWRpdG9yLWZvci1pbnRlcmFjdGl2ZS1lZGl0aW5nLW9mLXRleHQtbGluZXMtcGFnZXMtTElORUVESVQtQkFTJmFtcDtSZXZpc2lvbj05RkxpbmUgZWRpdG9yIGZvciBpbnRlcmFjdGl2ZSBlZGl0aW5nIG9mIHRleHQgbGluZXMvcGFnZXMgLSBMSU5FRURJVC5CQVMQMjAxOC8wMy8yMyAxNjozMDU8YSBocmVmPSJNTUJhc2ljLlVzZXIuYXNweD9Vc2VybmFtZT1lbmdlbGVuIj5yYXZlPC9hPgBkAgEPDxYEHwIFATkfA2hkZAIED2QWBGYPFQYBOHVNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuTGluZS1lZGl0b3ItZm9yLWludGVyYWN0aXZlLWVkaXRpbmctb2YtdGV4dC1saW5lcy1wYWdlcy1MSU5FRURJVC1CQVMmYW1wO1JldmlzaW9uPThGTGluZSBlZGl0b3IgZm9yIGludGVyYWN0aXZlIGVkaXRpbmcgb2YgdGV4dCBsaW5lcy9wYWdlcyAtIExJTkVFRElULkJBUxAyMDE4LzAzLzIzIDE2OjI2NTxhIGhyZWY9Ik1NQmFzaWMuVXNlci5hc3B4P1VzZXJuYW1lPWVuZ2VsZW4iPnJhdmU8L2E+AGQCAQ8PFgQfAgUBOB8DaGRkAgUPZBYEZg8VBgE3dU1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5MaW5lLWVkaXRvci1mb3ItaW50ZXJhY3RpdmUtZWRpdGluZy1vZi10ZXh0LWxpbmVzLXBhZ2VzLUxJTkVFRElULUJBUyZhbXA7UmV2aXNpb249N0ZMaW5lIGVkaXRvciBmb3IgaW50ZXJhY3RpdmUgZWRpdGluZyBvZiB0ZXh0IGxpbmVzL3BhZ2VzIC0gTElORUVESVQuQkFTEDIwMTgvMDMvMjMgMTY6MjM1PGEgaHJlZj0iTU1CYXNpYy5Vc2VyLmFzcHg/VXNlcm5hbWU9ZW5nZWxlbiI+cmF2ZTwvYT4AZAIBDw8WBB8CBQE3HwNoZGQCBg9kFgRmDxUGATZ1TU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLkxpbmUtZWRpdG9yLWZvci1pbnRlcmFjdGl2ZS1lZGl0aW5nLW9mLXRleHQtbGluZXMtcGFnZXMtTElORUVESVQtQkFTJmFtcDtSZXZpc2lvbj02RkxpbmUgZWRpdG9yIGZvciBpbnRlcmFjdGl2ZSBlZGl0aW5nIG9mIHRleHQgbGluZXMvcGFnZXMgLSBMSU5FRURJVC5CQVMQMjAxOC8wMy8yMyAxNjoyMzU8YSBocmVmPSJNTUJhc2ljLlVzZXIuYXNweD9Vc2VybmFtZT1lbmdlbGVuIj5yYXZlPC9hPgBkAgEPDxYEHwIFATYfA2hkZAIHD2QWBGYPFQYBNXVNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuTGluZS1lZGl0b3ItZm9yLWludGVyYWN0aXZlLWVkaXRpbmctb2YtdGV4dC1saW5lcy1wYWdlcy1MSU5FRURJVC1CQVMmYW1wO1JldmlzaW9uPTVGTGluZSBlZGl0b3IgZm9yIGludGVyYWN0aXZlIGVkaXRpbmcgb2YgdGV4dCBsaW5lcy9wYWdlcyAtIExJTkVFRElULkJBUxAyMDE4LzAzLzIzIDE1OjU5NTxhIGhyZWY9Ik1NQmFzaWMuVXNlci5hc3B4P1VzZXJuYW1lPWVuZ2VsZW4iPnJhdmU8L2E+AGQCAQ8PFgQfAgUBNR8DaGRkAggPZBYEZg8VBgE0dU1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5MaW5lLWVkaXRvci1mb3ItaW50ZXJhY3RpdmUtZWRpdGluZy1vZi10ZXh0LWxpbmVzLXBhZ2VzLUxJTkVFRElULUJBUyZhbXA7UmV2aXNpb249NEZMaW5lIGVkaXRvciBmb3IgaW50ZXJhY3RpdmUgZWRpdGluZyBvZiB0ZXh0IGxpbmVzL3BhZ2VzIC0gTElORUVESVQuQkFTEDIwMTgvMDMvMjMgMTU6NDk1PGEgaHJlZj0iTU1CYXNpYy5Vc2VyLmFzcHg/VXNlcm5hbWU9ZW5nZWxlbiI+cmF2ZTwvYT4AZAIBDw8WBB8CBQE0HwNoZGQCCQ9kFgRmDxUGATN1TU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLkxpbmUtZWRpdG9yLWZvci1pbnRlcmFjdGl2ZS1lZGl0aW5nLW9mLXRleHQtbGluZXMtcGFnZXMtTElORUVESVQtQkFTJmFtcDtSZXZpc2lvbj0zRkxpbmUgZWRpdG9yIGZvciBpbnRlcmFjdGl2ZSBlZGl0aW5nIG9mIHRleHQgbGluZXMvcGFnZXMgLSBMSU5FRURJVC5CQVMQMjAxOC8wMy8yMyAxNTozNjU8YSBocmVmPSJNTUJhc2ljLlVzZXIuYXNweD9Vc2VybmFtZT1lbmdlbGVuIj5yYXZlPC9hPgBkAgEPDxYEHwIFATMfA2hkZAIKD2QWBGYPFQYBMnVNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuTGluZS1lZGl0b3ItZm9yLWludGVyYWN0aXZlLWVkaXRpbmctb2YtdGV4dC1saW5lcy1wYWdlcy1MSU5FRURJVC1CQVMmYW1wO1JldmlzaW9uPTJGTGluZSBlZGl0b3IgZm9yIGludGVyYWN0aXZlIGVkaXRpbmcgb2YgdGV4dCBsaW5lcy9wYWdlcyAtIExJTkVFRElULkJBUxAyMDE4LzAzLzIzIDE1OjM0NTxhIGhyZWY9Ik1NQmFzaWMuVXNlci5hc3B4P1VzZXJuYW1lPWVuZ2VsZW4iPnJhdmU8L2E+AGQCAQ8PFgQfAgUBMh8DaGRkAgsPZBYEZg8VBgExdU1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5MaW5lLWVkaXRvci1mb3ItaW50ZXJhY3RpdmUtZWRpdGluZy1vZi10ZXh0LWxpbmVzLXBhZ2VzLUxJTkVFRElULUJBUyZhbXA7UmV2aXNpb249MUZMaW5lIGVkaXRvciBmb3IgaW50ZXJhY3RpdmUgZWRpdGluZyBvZiB0ZXh0IGxpbmVzL3BhZ2VzIC0gTElORUVESVQuQkFTEDIwMTgvMDMvMjMgMTU6MzM1PGEgaHJlZj0iTU1CYXNpYy5Vc2VyLmFzcHg/VXNlcm5hbWU9ZW5nZWxlbiI+cmF2ZTwvYT4AZAIBDw8WBB8CBQExHwNoZGQCDA9kFgRmDxUGATB1TU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLkxpbmUtZWRpdG9yLWZvci1pbnRlcmFjdGl2ZS1lZGl0aW5nLW9mLXRleHQtbGluZXMtcGFnZXMtTElORUVESVQtQkFTJmFtcDtSZXZpc2lvbj0wRkxpbmUgZWRpdG9yIGZvciBpbnRlcmFjdGl2ZSBlZGl0aW5nIG9mIHRleHQgbGluZXMvcGFnZXMgLSBMSU5FRURJVC5CQVMQMjAxOC8wMy8yMyAxNTozMjU8YSBocmVmPSJNTUJhc2ljLlVzZXIuYXNweD9Vc2VybmFtZT1lbmdlbGVuIj5yYXZlPC9hPgBkAgEPDxYEHwIFATAfA2hkZGRYuB8R5lb/xgLRofUDX6Xm7q6URw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWGQLMi+6VDwK9z7TRAwKlz/TSAwKqz/TSAwK7z/TSAwK4z/TSAwK5z/TSAwK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLC5pa8BQLa5ta/BQLV5ta/BQLE5ta/BQLH5ta/BQLG5ta/BQLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCdBrW+v0nzxGujP65BLWvdWjvuqB" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Loginf53f.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="10">10</option>
+	<option value="9">9</option>
+	<option value="8">8</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="10">10</option>
+	<option value="9">9</option>
+	<option value="8">8</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    
+    
+    
+			<table id="HistoryTable" class="generic" cellpadding="0" cellspacing="0">
+				<thead>
+				<tr class="tableheader">
+					<th style="text-align: right;">#</th>
+					<th>Title</th>
+					<th>Saved on</th>
+					<th>Saved by</th>
+					<th>Comment</th>
+					<th>&nbsp;</th>
+				</tr>
+				</thead>
+				<tbody>
+		
+			<tr class="tablerow">
+				<td style="text-align: right;">Current</td>
+				<td><a href='MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BASc674.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=Current'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/24 00:54</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerowalternate">
+				<td style="text-align: right;">10</td>
+				<td><a href='MMBasic.History9f20.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=10'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 16:55</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerow">
+				<td style="text-align: right;">9</td>
+				<td><a href='MMBasic.History10fb.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=9'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 16:30</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerowalternate">
+				<td style="text-align: right;">8</td>
+				<td><a href='MMBasic.History1c39.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=8'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 16:26</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerow">
+				<td style="text-align: right;">7</td>
+				<td><a href='MMBasic.History65cc.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=7'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 16:23</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerowalternate">
+				<td style="text-align: right;">6</td>
+				<td><a href='MMBasic.History70ea.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=6'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 16:23</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerow">
+				<td style="text-align: right;">5</td>
+				<td><a href='MMBasic.Historyb9b4.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=5'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 15:59</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerowalternate">
+				<td style="text-align: right;">4</td>
+				<td><a href='MMBasic.History0fde.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=4'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 15:49</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerow">
+				<td style="text-align: right;">3</td>
+				<td><a href='MMBasic.Historyb303.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=3'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 15:36</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerowalternate">
+				<td style="text-align: right;">2</td>
+				<td><a href='MMBasic.Historyc152.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=2'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 15:34</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerow">
+				<td style="text-align: right;">1</td>
+				<td><a href='MMBasic.History4c55.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=1'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 15:33</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			<tr class="tablerowalternate">
+				<td style="text-align: right;">0</td>
+				<td><a href='MMBasic.History6bab.html?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS&amp;Revision=0'>Line editor for interactive editing of text lines/pages - LINEEDIT.BAS</a></td>
+				<td>2018/03/23 15:32</td>
+				<td><a href="MMBasic.Userfdbc.html?Username=engelen">rave</a></td>
+				<td></td>
+				<td></td>
+			</tr>
+		
+			</tbody>
+			</table>
+		
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Line-editor-for-interactive-editing-of-text-lines-pages-LINEEDIT-BAS by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:17 GMT -->
+</html>

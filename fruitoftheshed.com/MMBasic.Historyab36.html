@@ -1,0 +1,227 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Measuring-RMS-algorythm-using-MMBasic&Revision=00011 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:12:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.Measuring-RMS-algorythm-using-MMBasic&amp;Revision=00011" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAU1UGFnZSBIaXN0b3J5OiBNZWFzdXJpbmcgUk1TIChhbGdvcnl0aG0pIHVzaW5nIE1NQmFzaWNkAgUPEGQQFRkCMjQCMjMCMjICMjECMjACMTkCMTgCMTcCMTYCMTUCMTQCMTMCMTICMTECMTABOQE4ATcBNgE1ATQBMwEyATEBMBUZAjI0AjIzAjIyAjIxAjIwAjE5AjE4AjE3AjE2AjE1AjE0AjEzAjEyAjExAjEwATkBOAE3ATYBNQE0ATMBMgExATAUKwMZZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2RkAgcPEGQQFRoHQ3VycmVudAIyNAIyMwIyMgIyMQIyMAIxOQIxOAIxNwIxNgIxNQIxNAIxMwIxMgIxMQIxMAE5ATgBNwE2ATUBNAEzATIBMQEwFRoHQ3VycmVudAIyNAIyMwIyMgIyMQIyMAIxOQIxOAIxNwIxNgIxNQIxNAIxMwIxMgIxMQIxMAE5ATgBNwE2ATUBNAEzATIBMQEwFCsDGmdnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZ2dnZGQCCw8WAh8ABaNCPHRhYmxlIGNsYXNzPSJib3giIGNlbGxwYWRkaW5nPSIwIiBjZWxsc3BhY2luZz0iMCI+PHRyPjx0ZD48cCBzdHlsZT0idGV4dC1hbGlnbjogY2VudGVyOyI+PGI+PGEgaHJlZj0iTU1CYXNpYy5IaXN0b3J5LmFzcHg/UGFnZT1NTUJhc2ljLk1lYXN1cmluZy1STVMtYWxnb3J5dGhtLXVzaW5nLU1NQmFzaWMmYW1wO1JldmlzaW9uPTAwMDEwIj4mbGFxdW87IE9sZGVyIFJldmlzaW9uPC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5NZWFzdXJpbmctUk1TLWFsZ29yeXRobS11c2luZy1NTUJhc2ljIj5CYWNrIHRvIFBhZ2UgSGlzdG9yeTwvYT4gLSA8YSBocmVmPSJNTUJhc2ljLkhpc3RvcnkuYXNweD9QYWdlPU1NQmFzaWMuTWVhc3VyaW5nLVJNUy1hbGdvcnl0aG0tdXNpbmctTU1CYXNpYyZhbXA7UmV2aXNpb249MDAwMTIiPk5ld2VyIFJldmlzaW9uICZyYXF1bzs8L2E+PC9iPjwvcD48L3RkPjwvdHI+PC90YWJsZT48YnIgLz48aDMgY2xhc3M9InNlcGFyYXRvciI+UGFnZSBSZXZpc2lvbjogMjAyMC8wNy8yNSAyMDoxNTwvaDM+PGJyIC8+VGhlIFJNUyB2YWx1ZSBvZiBpcyB0aGUgUm9vdC1NZWFuLVNxdWFyZSB2YWx1ZS4gSXQgaXMgZXNzZW50aWFsIGZvciBkZXRlcm1pbmluZyBwb3dlciBkaXNzaXBhdGlvbiBpbiBjaXJjdWl0cy48YnIgLz48YnIgLz5EZXRlcm1pbmluZyBSTVMgdmFsdWUgb2YgYW4gQUMgc2lnbmFsIG1lYXN1cmVtZW50IGhhcyBiZWVuIGEgY2hhbGxlbmdlIGZvciBtdWx0aW1ldGVyIGRlc2lnbmVycyBmb3IgeWVhcnMuIFNpbmNlIHRoZSBSTVMgdmFsdWUgb2YgYSBzaWduYWwgd2FzIHVzZWQgdG8gZGV0ZXJtaW5lIGRpc3NwYXRpb24sIGl0IGlzIG5vdCBzdHJhbmdlIHRoYXQgdGhlIGVhcmxpZXN0IFJNUyBtZXRlcnMgY29udGFpbmVkIGEgZGlzc2lwYXRpbmcgZWxlbWVudCwgYW5kIHRoZSBSTVMgdmFsdWUgd2FzIGRlcml2ZWQgZnJvbSB0aGUgdGVtcGVyYXR1cmUgcmlzZSBvZiB0aGUgaGVhdGluZyBlbGVtZW50LjxiciAvPlNpbmNlIHRoZSBhZHZhbmNlIG9mIHNlbWljb25kdWN0b3JzLCBhbmQgZXNwZWNpYWxseSBhbmFsb2cgSUMncywgUk1TIHdhcyBkZXRlcm1pbmVkIGJ5IGFjdHVhbGx5IG11bHRpcGx5aW5nIGEgdm9sdGFnZSB3aXRoIGl0c2VsZiwgZmlsdGVyaW5nLCBhbmQgdGFraW5nIHRoZSBzcXVhcmUgcm9vdC48YnIgLz5UbyBnZXQgYW4gYWNjZXB0YWJsZSByZXNvbHV0aW9uLCB0aGUgYW5hbG9nIGNpcmN1aXRzIG5lZWRlZCBhIGxvdyBub2lzZSBmbG9vciwgZ3JlYXQgbGluZWFyaXR5LiBOZWVkbGVzcyB0byBzYXkgdGhlc2UgY2hpcHMgd2hlcmUgZXhwZW5zaXZlLjxiciAvPjxiciAvPldpdGggdGhlIGludHJvZHVjdGlvbiBvZiBkaWdpdGFsIGVsZWN0cm9uaWNzLCBhbmQgQURDJ3MsIGxpZmUgZ28gc29vIG11Y2ggZWFzaWVyLjxiciAvPjxiciAvPkJlbG93IGlzIGEgbWV0aG9kIG9mIGltcGxlbWVudGluZyBSTVMgbWVhc3VyZW1lbnRzIG9uIGEgbWFpbnMgQUMgc2lnbmFsLCB3aXRoIG1pbmltYWwgZXh0ZXJuYWwgY2lyY3VpdCwgaW4gTU1CYXNpYyBvbiBhIHNtYWxsIG1pY3JvbWl0ZS48YnIgLz48YnIgLz5UaGUgbmFtZSBSTVMgKFJvb3QgTWVhbiBTcXVhcmUpIGV4cGxhaW5zIGV4YWN0bHkgd2hhdCBpcyBpbnZvbHZlZDogVGFrZSB0aGUgc3F1YXJlIHJvb3Qgb2YgdGhlIG1lYW4gdmFsdWUgb2YgYWxsIHRoZSBtZWFzdXJlZCB2YWx1ZSB0byB0aGUgcG93ZXIgdHdvLjxiciAvPjxiciAvPjEvIHRha2Ugc2FtcGxlcyBmcm9tIGFuIEFEQzxiciAvPjIvIGNhbGN1bGF0ZSB0aGUgc3F1YXJlIHJvb3Qgb2YgZWFjaCBzYW1wbGUgYW5kIHN1bSB0aGVtIGFsbCB1cC48YnIgLz4zLyBkaXZpZGUgYnkgdGhlIG51bWJlciBvZiBzYW1wbGVzIChzdW1taW5nIGFuZCBkaXZpZGUgYnkgbnVtYmVyIGlzIGVzc2VudGlhbGx5IHRoZSBtZWFuIHZhbHVlKTxiciAvPjQvIHRha2UgdGhlIHNxdWFyZSByb290IG9mIHRoZSBtZWFuIHZhbHVlLjxiciAvPjxiciAvPkluIGVzc2VuY2UgdGhlcmUgaXMgbm8gc3RhcnQgYW5kIGVuZCB0byB0aGlzIHByb2Nlc3MuIEJ1dCBpZiB5b3UgaGF2ZSBhIHJlcGVhdGluZyBzaWduYWwgKGNvbnN0YW50IHNpbmUgd2F2ZSkgdGhlIFJNUyBvZiAxIGN5Y2xlIGlzIGVxdWFsIHRvIHRoZSBSTVMgb2YgdGhlIGVuZGxlc3MgbWVhc3VyZW1lbnQuPGJyIC8+T1IgYW55IG51bWJlciBvZiB3aG9sZSBjeWNsZXMuPGJyIC8+PGJyIC8+VGhpcyBpcyB3aGF0IGlzIGltcGxlbWVudGVkIGluIHRoZSBNTUJhc2ljIGV4YW1wbGUuIDxiciAvPjxiciAvPjEvIFJlYWQgdGhlIEFEQyBpbnRvIGFuIGFycmF5IG9mIG1lYXN1cmVtZW50IHNhbXBsZXM8YnIgLz4yLyBieSBkZXRlcm1pbmluZyB0aGUgbGFzdCBhbmQgZmlyc3QgKHJpc2luZykgemVybyBjcm9zc2luZyAoKiksIHdlIGhhdmUgYSBzdWJzZXQgb2YgdGhlIGFycmF5IHRoYXQgY29udGFpbnMgc2FtcGxlcyBvZiBhIGludGVnZXIgbnVtYmVyIG9mIGN5Y2xlcyBvZiB0aGUgaW5wdXQgd2F2ZWZvcm0uPGJyIC8+My8gc3F1YXJlIGFsbCB2YWx1ZXMgaW4gdGhlIHN1YnNldDxiciAvPjQvIHN1bSB0aGVzZSB2YWx1ZXMgdXAsIGFuZCBkaXZpZGUgYnkgdGhlIG51bWJlciBvZiBzYW1wbGVzPGJyIC8+NS8gY2FsY3VsYXRlIHRoZSBzcXVhcmUgcm9vdCBvZiB0aGUgcmVzdWx0LiA8YnIgLz42LyBhZGQgYSBzY2FsaW5nIGZhY3RvciB0byBjYWxpYnJhdGUgdGhlIHJlc3VsdCB0byByZWFsIHZvbHRzLjxiciAvPjxiciAvPk5lZWRsZXNzIHRvIHNheSB0aGF0IHRoZSBhY2N1cmFjeSBpcyBkZXBlbmRpbmcgb24gdGhlIG51bWJlciBvZiBzYW1wbGVzLCBhbmQgdGhlIGFjY3VyYWN5IG9mIHRoZSBBREMuPGJyIC8+VGhlIGV4YW1wbGUgYmVsb3cgYWNoaWV2ZXMgYSBiZXR0ZXIgdGhhbiAxJSBhY2N1cmFjeSBvdmVyIGEgMTA6MSBpbnB1dCB2b2x0YWdlIHJhbmdlIGNvbXBhcmVkIHRvIGEgdHJ1ZSBSTVMgdm9sdG1ldGVyIGFuZCBhIDUwSHogaW5wdXQgdm9sdGFnZS48YnIgLz5JdCB1c2VzIGEgc2luZ2xlIEFEQyBjaGFubmVsIG9uIGEgUElDMzJNWDE3MCBydW5uaW5nIE1NQmFzaWMgKG1pY3JvbWl0ZSksIGFuZCBkaXNwbGF5cyB0aGUgdmFsdWUgb24gYSAxNngyIGNoYXJhY3RlciBMQ0QuPGJyIC8+VGhlIExDRCBzaG93cyB0aGUgUk1TIHZhbHVlLCBhbmQgdGhlIG51bWJlciBvZiBzYW1wbGVzIHVzZWQgZm9yIHRoZSBjb252ZXJzaW9uLjxiciAvPjxiciAvPlRoZSB0ZXN0IGNpcmN1aXQ6PGJyIC8+PGEgY2xhc3M9InVua25vd25saW5rIiBocmVmPSJNTUJhc2ljLi5hc2h4IiB0aXRsZT0iTU1CYXNpYy4iPjwvYT48aW1nIHNyYz0iaHR0cDovL2Z0cC50aGViYWNrc2hlZC5jb20vZm9ydW0vdXBsb2Fkcy9Wb2xob3V0LzIwMjAtMDMtMTJfMDY1MDMxX1NjcmVlbnNob3QlMjBmcm9tJTIwMjAyMC0wMy0xMSUyMDIxLTQxLTQ2LnBuZyIgYWx0PSJJbWFnZSIgLz48YnIgLz48YnIgLz5UaGUgdGVzdCBjaXJjdWl0IHVzZXMgYSAyMzBWLTE4ViB0cmFuc2Zvcm1lciB0byBpc29sYXRlIHRoZSBtYWlucyB2b2x0YWdlIGZyb20gdGhlIG1pY3JvbWl0ZSwgYW5kIGNvdXBsZXMgdGhlIHRyYW5zZm9ybWVyIG91dHB1dCBBQyBpbnRvIHRoZSBBREMgcGluLjxiciAvPlRoZSBBREMgaW5wdXQgaW1wZWRhbmNlIGlzIDEwayBwYXJhbGxlbCB0byAxMGssIGVxdWFscyA1ayBvaG0uIDxiciAvPlRoZSBpbnB1dCBoYXMgKDEyMGsrNWspLzVrID0gMjV4IGF0dGVudWF0b3IsIHNvIGNvdWxkIG1lYXN1cmUgdGhlb3JldGljYWxseSB1cCB0byAyNSB4IDMuM3YgcGVhayB0byBwZWFrLiBUaGlzIGlzIDgyVnBwLjxiciAvPlRoZSB0cmFuc2Zvcm1lciBvdXRwdXQgaXMgMThWYWMgZXF1YWxzIDUxVnBwIGxvYWRlZCwgc28gdGhlcmUgaXMgc3VmZmljaWVudCBoZWFkcm9vbSBhdCB0aGUgQURDIGlucHV0LjxiciAvPjxiciAvPlRoZSB0ZXN0IHNldHVwOjxiciAvPjxhIGNsYXNzPSJ1bmtub3dubGluayIgaHJlZj0iTU1CYXNpYy4uYXNoeCIgdGl0bGU9Ik1NQmFzaWMuIj48L2E+PGltZyBzcmM9Imh0dHA6Ly9mdHAudGhlYmFja3NoZWQuY29tL2ZvcnVtL3VwbG9hZHMvVm9saG91dC8yMDIwLTAzLTEyXzA2NTIyM18yMDIwMDMxMV8yMTIxMTlzLmpwZyIgYWx0PSJJbWFnZSIgLz48YnIgLz48YnIgLz5MZWZ0IHRvcDogdGhlIExDRCBkaXNsYXlpbmcgdGhlIFJNUyB2YWx1ZTxiciAvPkxlZnQgbWlkOiB0aGUgbWljcm9taXRlPGJyIC8+TGVmdCBib3R0b206IHRoZSB0cnVlIFJNUyB2b2x0bWV0ZXIgdG8gdmVyaWZ5IHRoZSBtZWFzdXJlZCByZXN1bHQ8YnIgLz5NaWQgdG9wOiB0aGUgMjMwVi0xOFYgaXNvbGF0aW5nIHRyYW5zZm9ybWVyPGJyIC8+TWlkIGJvdHRvbTogYSBicmVhZGJvYXJkIHdpdGggdGhlIGlucHV0IGNpcmN1aXQgKHJlc2lzdG9ycyBhbmQgdGhlIGNhcGFjaXRvcik8YnIgLz5SaWdodCB0b3A6IGEgdmFyaWFibGUgbWFpbnMgdHJhbnNmb3JtZXIgdXNlZCB0byB2ZXJpZnkgdGhlIFJNUyByZXN1bHQgb3ZlciBhIHdpZGUgcmFuZ2Ugb2Ygdm9sdGFnZXMuPGJyIC8+PGJyIC8+QmVsb3cgaXMgdGhlIGV4YW1wbGUgY29kZS4gQXBhcnQgZnJvbSBzb21lIHZhcmlhYmxlIGRlZmluaXRpb25zLCBhbmQgdGhlIExDRCBpbml0aWFsaXphdGlvbiwgdGhlIERPLUxPT1AgZG9lcyB0aGUgUk1TIGNvbnZlcnNpb24uPGJyIC8+VGhlIHN0ZXBzIGRlc2NyaWJlZCBhYm92ZSBjYW4gZWFzaWx5IGJlIHJlY29nbml6ZWQuPGJyIC8+QnkgY2hhbmdpbmcgdGhlIGFycmF5IHNpemUgKHRoZSB2YWx1ZSAiVG90YWwiIGlzIHRoZSBtYXhpbXVtIG51bWJlciBvZiBzYW1wbGVzIGluIHRoZSBhcnJheSkgaW1wcm92ZXMgYWNjdXJhY3ksIGJ1dCBsb3dlcnMgdGhlIG1lYXN1cmVtZW50IHNwZWVkLjxiciAvPlRoZSBDYWxWYWx1ZSBpcyB0aGUgYWN0dWFsIGF0dGVudWF0aW9uIG9mIHRoZSByZXNpc3RvciBhdHRlbnVhdG9yICh0aGVvcmV0aWNhbGx5IDI1IHdpdGggdmVyeSBhY2N1cmF0ZSByZXNpc3RvcnMpLjxiciAvPjxiciAvPkFjY3VyYWN5OjxiciAvPjxhIGNsYXNzPSJ1bmtub3dubGluayIgaHJlZj0iTU1CYXNpYy4uYXNoeCIgdGl0bGU9Ik1NQmFzaWMuIj48L2E+PGltZyBzcmM9Imh0dHA6Ly9mdHAudGhlYmFja3NoZWQuY29tL2ZvcnVtL3VwbG9hZHMvVm9saG91dC8yMDIwLTAzLTEyXzA2NTMwOF8yMDIwMDMxMV8yMTIxMjZzLmpwZyIgYWx0PSJJbWFnZSIgLz48YnIgLz48YnIgLz48YnIgLz5UaGUgRXhhbXBsZSBjb2RlOjxiciAvPjxwcmU+JysmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7Kw0KJ3wgICAgICAgICAgICAgICAgICAgICBSTVMgY29udmVydG9yIGZvciBNWDE3MCAgICAgICAgICAgICAgICAgIHwNCicrJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OysNCicgVGhlIFJNUyB2YWx1ZSBvZiBhIHNpZ25hbCBpcyB0aGUgUihvb3QpTShlYW4pUyhxdWFyZSkgdmFsdWUuDQonIEl0IGlzIGNhbGN1bGF0ZWQgYnkgYWRkaW5nIHVwIHRoZSBzcXVhcmVzIG9mIHRoZSBpbnB1dCBzaWduYWwNCicgVGhlIG1lYW4gb2YgdGhlc2Ugc3F1YXJlcyBpcyByb290ZWQuIFRoaXMgcHJvY2VzcyBpcyBleHBsYWluZWQNCicgaW4gdGhlIHN0ZXBzIGJlbG93Lg0KJyBUaGlzIGV4YW1wbGUgdXNlcyB0aGUgQURDIGluIHRoZSBQSUMzMk1YMTcwIHRvIG1lYXN1cmUgdGhlDQonIEFDIGlucHV0IHNpZ25hbC4gT3V0cHV0IGlzIGRpc3BsYXllZCBhdCBhIDE2eDIgTENELg0KDQonJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsgIERlZmluZXMgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KQURDcGluID0gMjMgICAgICAgICAnIEFEQyBpbnB1dCBwaW4NClRvdGFsID0gODAwICAgICAgICAgJyBhcnJheSBzaXplIGZvciBtZWFzdXJpbmcgMjIwbVNlYyBAIDQ4TUh6DQpPZmZzZXQgPSAxLjY1MCAgICAgICcgbnVtZXJpYyBvZmZzZXQgYXQgMy4zMDBWDQpDYWxWYWx1ZSA9IDI0Ljg1ICAgICcgZ2FpbiBmYWN0b3IgYXR0ZW51YXRvciBhbmQgQUMgY291cGxpbmcgQCA1MEh6DQoNCk9wdGlvbiBleHBsaWNpdA0KJyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0gRGltIFZhcmlhYmxlcyAmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQpEaW0gU2FtcGxlIShUb3RhbCkNCkRpbSBTdW1TUSEsIFZhbHVlIQ0KRGltIGklLGolLGElDQoNCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyBJbml0aWFsaXplIGhhcmR3YXJlICYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NClNldFBpbiBBRENwaW4sIEFJTiAgJyBpbml0aWFsaXplIEFEQw0KQ1BVIDQ4ICAgICAgICAgICAgICAnIG1heGltdW0gc3BlZWQgZm9yIHRoZSBNWDE3MA0KDQonTENEDQpMQ0QgaW5pdCA0LDUsNiw3LDIsMjYNCkxDRCAxLDEsIlNhbXBsZXMgPSAgICAgICAiDQpMQ0QgMiwxLCJSTVMgPSAgICAgICAgICBWIg0KDQoNCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LSBNZWFzdXJpbmcgJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsNCg0KRG8NCiAgICdzYW1wbGUgaW5wdXQgc2lnbmFsDQogICBGb3IgaSU9MSBUbyBUb3RhbA0KICAgICBTYW1wbGUoaSUpPVBpbihBRENwaW4pLU9mZnNldA0KICAgTmV4dCBpJQ0KDQogICAnZmluZCB6ZXJvIGNyb3NzaW5ncw0KICAgaSU9MCYjNTg7aiU9VG90YWwtMQ0KICAgJ2ZpcnN0IHplcm8gY3Jvc3NpbmcgaW4gYXJyYXkNCiAgIERvDQogICAgIGklPWklKzENCiAgIExvb3AgVW50aWwoU2FtcGxlKGklKSZndDswIEFuZCBTYW1wbGUoaSUrMSkmbHQ7MCkNCg0KICAgJ2xhc3QgemVybyBjcm9zc2luZyBpbiBhcnJheQ0KICAgRG8NCiAgICAgaiU9aiUtMQ0KICAgTG9vcCBVbnRpbCAoU2FtcGxlKGolKSZndDswIEFuZCBTYW1wbGUoaiUrMSkmbHQ7MCkNCg0KICAgJ2NhbGN1bGF0ZSBTUVVBUkVTDQogICBTdW1TUSE9MA0KICAgRm9yIGElPWklIFRvIGolDQogICAgIFN1bVNRISA9IFN1bVNRISArIChTYW1wbGUhKGElKSYjNDI7U2FtcGxlIShhJSkpDQogICBOZXh0IGElDQoNCiAgICdjYWxjdWxhdGUgTUVBTg0KICAgU3VtU1EhID0gU3VtU1EhLyhqJS1pJSkNCg0KICAgJ2NhbGN1bGF0ZSBST09UDQogICBWYWx1ZSEgPSBTcXIoU3VtU1EhKQ0KDQogICAnZGlzcGxheSB2YWx1ZXMgb24gMTZ4MiBMQ0QNCiAgIExDRCAxLDExLFN0ciQoaiUtaSUpDQogICBMQ0QgMiw3LExlZnQkKFN0ciQoVmFsdWUhJiM0MjtDYWxWYWx1ZSEpLDUpDQoNCkxvb3A8L3ByZT48YnIgLz48YnIgLz48YnIgLz48YnIgLz48YnIgLz4gICBkZPlWj0SvXiXYzgF+XLFoTcGtLX/R" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWNQKf3sDDCAK8z4TRAwK8z4DRAwK8z7zRAwK8z7jRAwK8z7TRAwK9z9jSAwK9z9TSAwK9z5DRAwK9z4zRAwK9z4jRAwK9z4TRAwK9z4DRAwK9z7zRAwK9z7jRAwK9z7TRAwKlz/TSAwKqz/TSAwK7z/TSAwK4z/TSAwK5z/TSAwK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLD5qa8BQLD5qK8BQLD5p68BQLD5pq8BQLD5pa8BQLC5vq/BQLC5va/BQLC5rK8BQLC5q68BQLC5qq8BQLC5qa8BQLC5qK8BQLC5p68BQLC5pq8BQLC5pa8BQLa5ta/BQLV5ta/BQLE5ta/BQLH5ta/BQLG5ta/BQLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCSKg7hBplUYTnMmKqL1Vv7By89TS" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Loginfe55.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.Measuring-RMS-algorythm-using-MMBasic%26Revision%3d00011" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: Measuring RMS (algorythm) using MMBasic</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="24">24</option>
+	<option value="23">23</option>
+	<option value="22">22</option>
+	<option value="21">21</option>
+	<option value="20">20</option>
+	<option value="19">19</option>
+	<option value="18">18</option>
+	<option value="17">17</option>
+	<option value="16">16</option>
+	<option value="15">15</option>
+	<option value="14">14</option>
+	<option value="13">13</option>
+	<option value="12">12</option>
+	<option value="11">11</option>
+	<option value="10">10</option>
+	<option value="9">9</option>
+	<option value="8">8</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="24">24</option>
+	<option value="23">23</option>
+	<option value="22">22</option>
+	<option value="21">21</option>
+	<option value="20">20</option>
+	<option value="19">19</option>
+	<option value="18">18</option>
+	<option value="17">17</option>
+	<option value="16">16</option>
+	<option value="15">15</option>
+	<option value="14">14</option>
+	<option value="13">13</option>
+	<option value="12">12</option>
+	<option value="11">11</option>
+	<option value="10">10</option>
+	<option value="9">9</option>
+	<option value="8">8</option>
+	<option value="7">7</option>
+	<option value="6">6</option>
+	<option value="5">5</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.History36fb.html?Page=MMBasic.Measuring-RMS-algorythm-using-MMBasic&amp;Revision=00010">&laquo; Older Revision</a> - <a href="MMBasic.History3dc9.html?Page=MMBasic.Measuring-RMS-algorythm-using-MMBasic">Back to Page History</a> - <a href="MMBasic.History4b94.html?Page=MMBasic.Measuring-RMS-algorythm-using-MMBasic&amp;Revision=00012">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2020/07/25 20:15</h3><br />The RMS value of is the Root-Mean-Square value. It is essential for determining power dissipation in circuits.<br /><br />Determining RMS value of an AC signal measurement has been a challenge for multimeter designers for years. Since the RMS value of a signal was used to determine disspation, it is not strange that the earliest RMS meters contained a dissipating element, and the RMS value was derived from the temperature rise of the heating element.<br />Since the advance of semiconductors, and especially analog IC's, RMS was determined by actually multiplying a voltage with itself, filtering, and taking the square root.<br />To get an acceptable resolution, the analog circuits needed a low noise floor, great linearity. Needless to say these chips where expensive.<br /><br />With the introduction of digital electronics, and ADC's, life go soo much easier.<br /><br />Below is a method of implementing RMS measurements on a mains AC signal, with minimal external circuit, in MMBasic on a small micromite.<br /><br />The name RMS (Root Mean Square) explains exactly what is involved: Take the square root of the mean value of all the measured value to the power two.<br /><br />1/ take samples from an ADC<br />2/ calculate the square root of each sample and sum them all up.<br />3/ divide by the number of samples (summing and divide by number is essentially the mean value)<br />4/ take the square root of the mean value.<br /><br />In essence there is no start and end to this process. But if you have a repeating signal (constant sine wave) the RMS of 1 cycle is equal to the RMS of the endless measurement.<br />OR any number of whole cycles.<br /><br />This is what is implemented in the MMBasic example. <br /><br />1/ Read the ADC into an array of measurement samples<br />2/ by determining the last and first (rising) zero crossing (*), we have a subset of the array that contains samples of a integer number of cycles of the input waveform.<br />3/ square all values in the subset<br />4/ sum these values up, and divide by the number of samples<br />5/ calculate the square root of the result. <br />6/ add a scaling factor to calibrate the result to real volts.<br /><br />Needless to say that the accuracy is depending on the number of samples, and the accuracy of the ADC.<br />The example below achieves a better than 1% accuracy over a 10:1 input voltage range compared to a true RMS voltmeter and a 50Hz input voltage.<br />It uses a single ADC channel on a PIC32MX170 running MMBasic (micromite), and displays the value on a 16x2 character LCD.<br />The LCD shows the RMS value, and the number of samples used for the conversion.<br /><br />The test circuit:<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="../ftp.thebackshed.com/forum/uploads/Volhout/2020-03-12_065031_Screenshot%20from%202020-03-11%2021-41-46.png" alt="Image" /><br /><br />The test circuit uses a 230V-18V transformer to isolate the mains voltage from the micromite, and couples the transformer output AC into the ADC pin.<br />The ADC input impedance is 10k parallel to 10k, equals 5k ohm. <br />The input has (120k+5k)/5k = 25x attenuator, so could measure theoretically up to 25 x 3.3v peak to peak. This is 82Vpp.<br />The transformer output is 18Vac equals 51Vpp loaded, so there is sufficient headroom at the ADC input.<br /><br />The test setup:<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="../ftp.thebackshed.com/forum/uploads/Volhout/2020-03-12_065223_20200311_212119s.jpg" alt="Image" /><br /><br />Left top: the LCD dislaying the RMS value<br />Left mid: the micromite<br />Left bottom: the true RMS voltmeter to verify the measured result<br />Mid top: the 230V-18V isolating transformer<br />Mid bottom: a breadboard with the input circuit (resistors and the capacitor)<br />Right top: a variable mains transformer used to verify the RMS result over a wide range of voltages.<br /><br />Below is the example code. Apart from some variable definitions, and the LCD initialization, the DO-LOOP does the RMS conversion.<br />The steps described above can easily be recognized.<br />By changing the array size (the value "Total" is the maximum number of samples in the array) improves accuracy, but lowers the measurement speed.<br />The CalValue is the actual attenuation of the resistor attenuator (theoretically 25 with very accurate resistors).<br /><br />Accuracy:<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="../ftp.thebackshed.com/forum/uploads/Volhout/2020-03-12_065308_20200311_212126s.jpg" alt="Image" /><br /><br /><br />The Example code:<br /><pre>'+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;+
+'|                     RMS convertor for MX170                  |
+'+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;+
+' The RMS value of a signal is the R(oot)M(ean)S(quare) value.
+' It is calculated by adding up the squares of the input signal
+' The mean of these squares is rooted. This process is explained
+' in the steps below.
+' This example uses the ADC in the PIC32MX170 to measure the
+' AC input signal. Output is displayed at a 16x2 LCD.
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;  Defines &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+ADCpin = 23         ' ADC input pin
+Total = 800         ' array size for measuring 220mSec @ 48MHz
+Offset = 1.650      ' numeric offset at 3.300V
+CalValue = 24.85    ' gain factor attenuator and AC coupling @ 50Hz
+
+Option explicit
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- Dim Variables &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+Dim Sample!(Total)
+Dim SumSQ!, Value!
+Dim i%,j%,a%
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; Initialize hardware &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+SetPin ADCpin, AIN  ' initialize ADC
+CPU 48              ' maximum speed for the MX170
+
+'LCD
+LCD init 4,5,6,7,2,26
+LCD 1,1,"Samples =       "
+LCD 2,1,"RMS =          V"
+
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;- Measuring &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+Do
+   'sample input signal
+   For i%=1 To Total
+     Sample(i%)=Pin(ADCpin)-Offset
+   Next i%
+
+   'find zero crossings
+   i%=0&#58;j%=Total-1
+   'first zero crossing in array
+   Do
+     i%=i%+1
+   Loop Until(Sample(i%)&gt;0 And Sample(i%+1)&lt;0)
+
+   'last zero crossing in array
+   Do
+     j%=j%-1
+   Loop Until (Sample(j%)&gt;0 And Sample(j%+1)&lt;0)
+
+   'calculate SQUARES
+   SumSQ!=0
+   For a%=i% To j%
+     SumSQ! = SumSQ! + (Sample!(a%)&#42;Sample!(a%))
+   Next a%
+
+   'calculate MEAN
+   SumSQ! = SumSQ!/(j%-i%)
+
+   'calculate ROOT
+   Value! = Sqr(SumSQ!)
+
+   'display values on 16x2 LCD
+   LCD 1,11,Str$(j%-i%)
+   LCD 2,7,Left$(Str$(Value!&#42;CalValue!),5)
+
+Loop</pre><br /><br /><br /><br /><br />   
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.Measuring-RMS-algorythm-using-MMBasic&Revision=00011 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:12:23 GMT -->
+</html>

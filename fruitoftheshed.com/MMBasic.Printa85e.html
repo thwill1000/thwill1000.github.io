@@ -1,0 +1,78 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driver-for-Microchip-MCP4xxx-digital-potentiometers-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Driver for Microchip MCP4xxx digital potentiometers - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Driver-for-Microchip-MCP4xxx-digital-potentiometers-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFhRw8aDEgY2xhc3M9InBhZ2V0aXRsZSI+RHJpdmVyIGZvciBNaWNyb2NoaXAgTUNQNHh4eCBkaWdpdGFsIHBvdGVudGlvbWV0ZXJzPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzoyNSBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IENvbnRyb2wsIEVsZWN0cm9uaWNzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz48YnIgLz48YnIgLz48cHJlPg0KJyBzZXR1cCB0aGUgU1BJIHBvcnRzIGZvciB0aGlzIGNoaXANCk1DUFNldHVwIDEsIDIsIDMsIDQNCg0KJyBkZW1vbnN0cmF0aW9uIG9mIHJhbXBpbmcgZnJvbSBvbmUgZW5kIG9mIHRoZSBwb3QgdG8gdGhlIG90aGVyDQpGb3IgaSA9IDAgVG8gMTAwDQogIE1DUFNldCAwLCBpDQogIFBhdXNlIDEwMA0KTmV4dCBpDQoNCjwvcHJlPjxiciAvPjxiciAvPjxwcmU+DQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQonIGRyaXZlciBmb3IgdGhlIE1pY3JvY2hpcCBNQ1A0eHh4IHNlcmllcyBvZiBkaWdpdGFsIHBvdGVudGlvbWV0ZXJzDQomIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7DQoNCicgaW5pdGlhbGlzZSB0aGUgU1BJIGludGVyZmFjZQ0KU3ViIE1DUFNldHVwKG1vc2ksIG1pc28sIGNsaywgY2UpDQogIF9tb3NpID0gbW9zaQ0KICBfbWlzbyA9IG1pc28NCiAgX2NsayA9IGNsaw0KICBfY2UgPSBjZQ0KICBTZXRQaW4gX21vc2ksIDggICAgICAgICAgICAgICAgICcgc2V0IE1PU0kgcGluIGFzIGFuIG91dHB1dA0KICBTZXRQaW4gX21pc28sIDIgICAgICAgICAgICAgICAgICcgc2V0IE1JU08gcGluIGFzIGEgZGlnaXRhbCBpbnB1dA0KICBQaW4oX2NsaykgPSAxICYjNTg7IFNldFBpbiBfY2xrLCA4ICAnIHNldCBDTEsgcGluIGhpZ2ggdGhlbiBzZXQgaXQgYXMgYW4gb3V0cHV0DQogIFBpbihfY2UpID0gMSAmIzU4OyBTZXRQaW4gX2NlLCA4ICAgICcgc2V0IENFIHBpbiBoaWdoIHRoZW4gc2V0IGl0IGFzIGFuIG91dHB1dA0KRW5kIFN1Yg0KDQoNCicgc2V0IHRoZSBwb3RlbnRpb21ldGVyIHRvIGEgcGVyY2VudGFnZSBvZiBmdWxsIHNjYWxlDQonIHBvdCA9IDAgICBzZXQgcG90ZW50aW9tZXRlciAwDQonIHBvdCA9IDEgICBzZXQgcG90ZW50aW9tZXRlciAxIChub3Qgb24gYWxsIGNoaXBzKQ0KJyBwb3QgPSAyICAgdGhlIGRlZmF1bHQgcG93ZXIgdXAgc2V0dGluZyBmb3IgcG90ZW50aW9tZXRlciAwDQonIHBvdCA9IDMgICB0aGUgZGVmYXVsdCBwb3dlciB1cCBzZXR0aW5nIGZvciBwb3RlbnRpb21ldGVyIDENClN1YiBNQ1BTZXQocG90LCBwZXJjZW50KQ0KICBMb2NhbCBqdW5rLCByLCB2DQogIHIgPSBwb3QgJiM0MjsgKDIgXiAxNCkgICAgICAgICAgICAgICcgdGhlIGJpdHMgdG8gc2VsZWN0IHRoZSBjb3JyZWN0IHJlZ2lzdGVyDQogIHYgPSAoMjU2ICYjNDI7IHBlcmNlbnQpIFwgMTAwICAgICAgICcgdGhlIGJpdHMgdG8gc2V0IHRoZSBwb3QNCiAgSWYgcGVyY2VudCA9IDEwMCBUaGVuIHYgPSAmYW1wO0gxMDAgJyBmdWxsIHNjYWxlDQogIFBpbihfY2UpID0gMCAgICAgICAgICAgICAgICAgICAgJyBzZWxlY3QgdGhlIHNsYXZlDQogIGp1bmsgPSBTUEkoX21pc28sIF9tb3NpLCBfY2xrLCByICsgdiwgbSwgMywgMTYpDQogIElmIHBvdCAmZ3Q7IDEgVGhlbiAgICAgICAgICAgICAgICAgJyBpZiB3ZSBhcmUgc2V0dGluZyB0aGUgZWVwcm9tDQogICAgUGluKF9jZSkgPSAxICAgICAgICAgICAgICAgICAgJyBkZXNlbGVjdA0KICAgIFBhdXNlIDE1ICAgICAgICAgICAgICAgICAgICAgICcgd2FpdCBmb3IgdGhlIHdyaXRlDQogICAgUGluKF9jZSkgPSAwICAgICAgICAgICAgICAgICAgJyByZXNlbGVjdA0KICBFbmRJZg0KICBJZiAoU1BJKF9taXNvLCBfbW9zaSwgX2NsaywgciArICZhbXA7SEMwMCwgbSwgMywgMTYpIEFuZCAmYW1wO0gxRkYpICZsdDsmZ3Q7IHYgVGhlbg0KICAgIEVycm9yICJEZXZpY2Ugbm90IHJlc3BvbmRpbmciDQogIEVuZElmDQogIFBpbihfY2UpID0gMSAgICAgICAgICAgICAgICAgICAgJyBkZXNlbGVjdCB0aGUgc2xhdmUNCkVuZCBTdWINCg0KPC9wcmU+ZGRoWU5i0hgf9Zhbjb3fgVfYB00OHg==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Driver for Microchip MCP4xxx digital potentiometers</h1><small>Modified on 2016/12/23 23:25 by Administrator &mdash; Categorized as: Control, Electronics, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><br /><pre>
+' setup the SPI ports for this chip
+MCPSetup 1, 2, 3, 4
+
+' demonstration of ramping from one end of the pot to the other
+For i = 0 To 100
+  MCPSet 0, i
+  Pause 100
+Next i
+
+</pre><br /><br /><pre>
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' driver for the Microchip MCP4xxx series of digital potentiometers
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+' initialise the SPI interface
+Sub MCPSetup(mosi, miso, clk, ce)
+  _mosi = mosi
+  _miso = miso
+  _clk = clk
+  _ce = ce
+  SetPin _mosi, 8                 ' set MOSI pin as an output
+  SetPin _miso, 2                 ' set MISO pin as a digital input
+  Pin(_clk) = 1 &#58; SetPin _clk, 8  ' set CLK pin high then set it as an output
+  Pin(_ce) = 1 &#58; SetPin _ce, 8    ' set CE pin high then set it as an output
+End Sub
+
+
+' set the potentiometer to a percentage of full scale
+' pot = 0   set potentiometer 0
+' pot = 1   set potentiometer 1 (not on all chips)
+' pot = 2   the default power up setting for potentiometer 0
+' pot = 3   the default power up setting for potentiometer 1
+Sub MCPSet(pot, percent)
+  Local junk, r, v
+  r = pot &#42; (2 ^ 14)              ' the bits to select the correct register
+  v = (256 &#42; percent) \ 100       ' the bits to set the pot
+  If percent = 100 Then v = &amp;H100 ' full scale
+  Pin(_ce) = 0                    ' select the slave
+  junk = SPI(_miso, _mosi, _clk, r + v, m, 3, 16)
+  If pot &gt; 1 Then                 ' if we are setting the eeprom
+    Pin(_ce) = 1                  ' deselect
+    Pause 15                      ' wait for the write
+    Pin(_ce) = 0                  ' reselect
+  EndIf
+  If (SPI(_miso, _mosi, _clk, r + &amp;HC00, m, 3, 16) And &amp;H1FF) &lt;&gt; v Then
+    Error "Device not responding"
+  EndIf
+  Pin(_ce) = 1                    ' deselect the slave
+End Sub
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Driver-for-Microchip-MCP4xxx-digital-potentiometers-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:15:49 GMT -->
+</html>

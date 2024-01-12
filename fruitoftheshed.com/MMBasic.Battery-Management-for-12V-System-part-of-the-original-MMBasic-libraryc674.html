@@ -1,0 +1,1030 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:42:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Battery Management for 12V System - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Battery-Management-for-12V-System-part-of-the-original-MMBasic-library&amp;NS=MMBasic" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPZBYCZg8WAh4LXyFJdGVtQ291bnQCARYCAgEPZBYCZg8VBOIBR2V0RmlsZS5hc3B4P0ZpbGU9Q2FyYXZhbiUyMEJhdCUyME1vbi5wZGYmYW1wO0FzU3RyZWFtQXR0YWNobWVudD0xJmFtcDtQcm92aWRlcj1TY3Jld1R1cm4uV2lraS5GaWxlc1N0b3JhZ2VQcm92aWRlciZhbXA7SXNQYWdlQXR0YWNobWVudD0xJmFtcDtQYWdlPU1NQmFzaWMuQmF0dGVyeS1NYW5hZ2VtZW50LWZvci0xMlYtU3lzdGVtLXBhcnQtb2YtdGhlLW9yaWdpbmFsLU1NQmFzaWMtbGlicmFyeQhEb3dubG9hZBNDYXJhdmFuIEJhdCBNb24ucGRmCDIzLjg1IEtCZGRbuYByrtAHmw1L/bN+Bqa+vOdvMA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login0402.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dBattery-Management-for-12V-System-part-of-the-original-MMBasic-library%26NS%3dMMBasic" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library266d.html?Discuss=1">Discuss (4)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History1070.html?Page=MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library">History</a>
+			<a id="PageAttachmentsLink" title="Attachments" href="#" onclick="javascript:return __ToggleAttachmentsMenu(event.clientX, event.clientY);">Attachments</a>
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Battery Management for 12V System
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print1070.html?Page=MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2016/12/23 23:20
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.User6a4a.html?Username=admin">Administrator</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagese076.html?Cat=MMBasic.Control" title="Control">Control</a>, <a href="MMBasic.AllPagesbcca.html?Cat=MMBasic.Environment" title="Environment">Environment</a>, <a href="MMBasic.AllPages0f85.html?Cat=MMBasic._LIB%20Original%20MMBasic" title="_LIB Original MMBasic">_LIB Original MMBasic</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f05843a68-59e3-47cd-8a10-3555a14a8ea9" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f05843a68-59e3-47cd-8a10-3555a14a8ea9');"></div><div id="fa92c9805-e677-4776-a025-51ac56bd2b77" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fa92c9805-e677-4776-a025-51ac56bd2b77');"></div><div id="f838121ad-a17f-4366-95b4-bc4bbe46e136" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f838121ad-a17f-4366-95b4-bc4bbe46e136');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Base64-Mime-Encode-and-Decode-Functions.html" title="Base64 Mime Encode and Decode Functions (MMBasic)">Base64 Mime Encode and Decode Functions (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Capacity-Test-part-of-the-original-MMBasic-library.html" title="Battery Capacity Test (MMBasic)">Battery Capacity Test (MMBasic)</a> &raquo; <b><a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MicroMite%20ArmMite%20and%20MMX%20Hardware.Armmite-F4-Hardware.html" title="Armmite F4 Hardware (MicroMite ArmMite and MMX Hardware)">Armmite F4 Hardware (MicroMite ArmMite and MMX Hardware)</a> &raquo; <a href="MicroMite%20ArmMite%20and%20MMX%20Hardware.37-Sensor-45-sensor-kits.html" title="37 Sensor, 45 sensor kits (MicroMite ArmMite and MMX Hardware)">37 Sensor, 45 sensor kits (MicroMite ArmMite and MMX Hardware)</a> &raquo; <a href="MMBasic.ARMMite-Pin-Aliases.html" title="ARMMite H7 Pin Aliases (MMBasic)">ARMMite H7 Pin Aliases (MMBasic)</a> &raquo; <a href="MicroMite%20ArmMite%20and%20MMX%20Hardware.PicoMite.html" title="PicoMite (MicroMite ArmMite and MMX Hardware)">PicoMite (MicroMite ArmMite and MMX Hardware)</a> &raquo; <a href="MMBasic.Astrofix-part-of-the-original-MMBasic-library.html" title="Astrofix (MMBasic)">Astrofix (MMBasic)</a> &raquo; <a href="MMBasic.Automatic-LogFile-Naming-part-of-the-original-MMBasic-library.html" title="Automatic LogFile Naming (MMBasic)">Automatic LogFile Naming (MMBasic)</a> &raquo; <a href="MMBasic.Backpack-Tracker-curve-tracer.html" title="Backpack Tracker curve tracer (MMBasic)">Backpack Tracker curve tracer (MMBasic)</a> &raquo; <a href="MMBasic.Base64-Mime-Encode-and-Decode-Functions.html" title="Base64 Mime Encode and Decode Functions (MMBasic)">Base64 Mime Encode and Decode Functions (MMBasic)</a> &raquo; <a href="MMBasic.Battery-Capacity-Test-part-of-the-original-MMBasic-library.html" title="Battery Capacity Test (MMBasic)">Battery Capacity Test (MMBasic)</a> &raquo; <b><a href="MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.html" title="Battery Management for 12V System (MMBasic)">Battery Management for 12V System (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		<h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: The required file(s) are available in the attachments tab (top right).<br /><br />'<br />' Battery Management Program for Caravan 12V System<br />' Copyright Doug Pankhurst May 2013<br />' Written for MMBasic V4.3a, copyright Geoff Graham 2012 '<br />'<br />' File Version: 2.04 May 2013<br />'<br /><br />This is an updated (Mark II ;-) ) version of a program first submitted in May 2012. Lots of comments and it only JUST fits into a CMM running in 8 colour mode - I have intentionally made it verbose and not optimisedto allow easy reading.<br /><br />This program monitors a 12V Battery System, monitoring the battery voltage, the solar panel voltage and the amount of charge supplied into and out of the battery via current shunt ICs. The charge/discharge state of the battery is given by comparing current in versus current out.<br /><br />It also estimates time to 30% capacity based on battery voltage and current discharge rate and provides a warning.<br /><br />Real time data is displayed on VGA display as well as historical data recorded to a log file on the SD card for later analysis.<br /><br />It utilises a range of subroutines and defined funtions based on software and ideas from Doug Pankhurst, Geoff Graham, Tom Pankhurst, and also from programs provided in the MMBASIC Software library, authors unknown. This code is free for anyone to use or modify as long as they acknowledge it's source and credit the contributors above.<br /><br /><b>Physical configuration</b>:<br />Uses a CG Colourmax 2 as the hardware platform and an Arduino blank shield populated with voltage dividers for battery and solar voltages and Allegro ACS758 current sensors for input (charging) current and load current. Battery charge/discharge current is calculated by subtracting load current from charging current.<br /><br />The 11.8V to 14.4V from the caravan battery system (depending on whether charging or driving load) is fed into an LM317 variable voltage regulator to provide regulated 8.5V to the CGCMM.<br /><br />WARNING: The Allegro current sensors have VERY fragile leads so they need to be physically stabilised. The units I used were unidirectional and had an offset around 600mV and a 60mV/amp capacity.<br /><br /><b>A general synopsis of the program</b>:<br /><ul><li>Disable interrupts;</li><li>Define and initialise variables and constants;</li><li>Initialise display with static data; initialize 1 minute arrays to allow averaging;</li><li>Enter main loop; wait for interrupt ( which sets NewData flag) then handle 2 second, 1 minute, 1 hour and end of day (6AM) occurrences;</li><li>Start main loop, waiting for (set by interrupt routine);</li><li>Cycle through 2 second, 1 minute, 1 hour and End-of-Day processing with initial data and display initial readings<br />- 2 second routine processes all instantaneous readings from interrupt routines - battery voltage, solar array voltage, input current from both solar controller and/or 240VAC battery charger<br />- 1 minute routine averages 30 two second readings, then pushes the averages into an array, also writes out running graph<br />- 1 hour routine takes array data and writes out to files in .CSV format<br />- EOD ( at 6AM ) closes log file and creates a new log file;</li><li>Interrupt provides battery volts, solar volts, input current and load current.<br /></li></ul><br /><b>Global Variables</b>: These are here just for explanatory purposes - they are defined in the program proper. The initialised values are to simplify averaging and also represent typical values.<br /><code><br />BVolts : Battery Voltage read from Pin A0. Read as 1/6th of real voltage via 6:1 resistive divider.<br /><br />BVArray(29) : Battery Volts 30 element array - 1 each 2 secs.<br /><br />BatCharge : Battery state of charge as a percentage where 12.75V or higher is 100%, down to 12.05V, being 35% - danger level.<br /><br />AverageBV : Average battery voltage over last 60 seconds.<br /><br />BVAArray(59) : 1 hours worth of minute average battery volts.<br /><br />DeltaBV : Battery voltage variation over 60 seconds. The difference between the first and the last used to calculate the "Time to 30% discharge point".<br /><br />Time2Discharge : Time to 30% discharge.<br /><br />SVolts : Solar Array voltage from Pin A1. Read as 1/10th of real voltage by 10:1 resistive divider.<br /><br />SVArray(29) : Solar Volts 30 element array - 1 each 2 secs.<br /><br />AverageSV : Average Solar Panel volts over last 60 seconds.<br /><br />SVAArray(59) : 1 hours worth of minute average solar volts.<br /><br />InputCurrent : Charging current into battery/load read from Pin A2 2.5V reading = 50mA across the shunt, which = 50A through shunt. This can be both battery charging current and load current.<br /><br />ICArray(29) : Input Current 30 element array.<br /><br />AverageIC : Average input (generator) current over last 60 seconds.<br /><br />ICAArray(59) : array with 1 hours worth of minute average input currents.<br /><br />LoadCurrent : Load current of caravan - can be supplied from the batteries and the charging systems (solar, AC Mains or generator). Pin A3.<br /><br />LCArray(29) : Load Current 60 element array.<br /><br />AverageLC : Average load current over last 60 seconds.<br /><br />LCAArray(59) : array to hold 1 hours worth of average load currents.<br /><br />BatCurrent : A calculated value; if positive, = a charging current to the battery; if negative, = a discharge current from the battery.<br /><br />AverageBC : Average charge/discharge current over last min calculated by AverageLC-AverageIC.<br /><br />InputCurrentAH : Input current as an amp hour calculated value - this is an accumulating value over 24 hours.<br /><br />PreviousICAH : yesterdays Input Current AHs.<br /><br />LoadCurrentAH : Load current as an amp hour calculated value - this is an accumulating value over 24 hours.<br /><br />PreviousLCAH : yesterdays Load Current AHs.<br /><br />BatCurrentAH : Bat charge (+value) or discharge (-value) as an amp hour calculated value - accumulating value over 24 hours.<br /><br />PreviousBCAH : yesterdays Bat Current AHs.<br /><br />LogArray$ : String to use for plugging into log array<br /><br />NewDataFlag : Two second flag - set every 2 seconds by the interrupt routine when new voltage and current values are collected.<br /><br />MinFlag : Minute flag - set once every min at 00 seconds by sec interrupt process and cleared by min processing code.<br /><br />HourFlag : Hour Flag - set on the hour to enable writing the 60 average readings in the log array to be written to file<br /><br />EODFlag : End of Day Flag - set at 6AM to enable daily log file to be closed and new log file created by LogFileCreate subroutine<br /></code><br /><br /><b>CVBM204.BAS</b>:<br /><pre>
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Battery Management Program for Caravan 12V System        '
+' Copyright Doug Pankhurst May 2012                        '
+' Written for MMBasic V4.3a, copyright Geoff Graham 2012   '
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' File Version&#58;    2.04 May 2013
+'
+' For a detailed explanation of the program, it's
+' construction and rationale, please read the
+' CVBMREAD.TXT file.
+
+' Main Entry to Program
+
+EntryPoint&#58;  SetTick 0,0     ' Disable timer interrupt
+
+' Global Variables - initialised to default values
+BVolts = 12.8    '  Battery Voltage read from Pin A0. Read as
+' 1/6th of real voltage via 6&#58;1 resistive divider
+
+Dim BVArray(29)  ' Battary Volts 30 element array - 1 each 2 secs
+
+BatCharge = 100  ' Battery state of charge as a percentage where
+' 12.75V or higher is 100%, down to 12.05V being 35% - danger level
+
+AverageBV=12.8   ' Average battery voltage over last 60 seconds
+
+Dim BVAArray(59) ' 1 hours worth of minute average battery volts
+
+DeltaBV = 0.1    ' Battery voltage variation over 60 seconds. The
+' difference between the first and the last used to
+' calculate the "Time to 30% discharge point"
+
+Time2Discharge = 20 ' Time to 30% discharge
+
+SVolts = 20      ' Solar Array voltage from Pin A1. Read as 1/10th
+' of real voltage by 10&#58;1 resistive divider
+
+Dim SVArray(29)  ' Solar Volts 30 element array - 1 each 2 secs
+
+AverageSV = 21   ' Average Solar Panel volts over last 60 seconds
+
+Dim SVAArray(59) ' 1 hours worth of minute average solar volts
+
+InputCurrent = 18  ' Charging current into battery/load read from Pin A2
+' 2.5V reading = 50mA across the shunt, which equals 50A through the shunt.
+' This can be both battery charging current and load current.
+
+Dim ICArray(29)  ' Input Current 30 element array
+
+AverageIC = 18   ' Average input (generator) current over last 60 seconds
+
+Dim ICAArray(59) ' array with 1 hours worth of minute average input currents
+
+LoadCurrent = 12 ' Load current of caravan - can be supplied from the
+' batteries and the charging systems (solar, AC Mains or generator). Pin A3
+
+Dim LCArray(29)  ' Load Current 60 element array
+
+AverageLC = 12   ' Average load current over last 60 seconds
+
+Dim LCAArray(59) ' array to hold 1 hours worth of average load currents
+
+BatCurrent = 6   ' A calculated value; if positive, = a charging current to
+' the battery; if negative, equals a discharge current from the battery.
+
+AverageBC = 6    ' Average charge/discharge current over last min
+' calculated by AverageLC-AverageIC
+
+InputCurrentAH = 0 ' Input current as an amp hour calculated value -
+' this is an accumulating value over 24 hours
+
+PreviousICAH = 0   ' yesterdays Input Current AHs
+
+LoadCurrentAH = 0  ' Load current as an amp hour calculated value -
+' this is an accumulating value over 24 hours
+
+PreviousLCAH = 0   ' yesterdays Load Current AHs
+
+BatCurrentAH = 0   ' Bat charge (pos value) or discharge (neg value)
+' as an amp hour calculated value  - accumulating value over 24 hours
+
+PreviousBCAH = 5   ' yesterdays Bat Current AHs
+
+LogArray$ = ""     ' String to use for plugging into log array
+
+NewDataFlag = 0    ' Two second flag - set every 2 seconds by the
+' interrupt routine when new voltage and current values are collected.
+
+MinFlag = 0        ' Minute flag - set once every min at 00 seconds
+' by sec interrupt process and cleared by min processing code.
+
+HourFlag = 0       ' Hour Flag - set on the hour to enable
+' writing the 60 average readings in the log array to be writtent to file
+
+EODFlag = 0        ' End of Day Flag - set at 6AM to enable daily log file
+' to be closed and new log file created by LogFileCreate subroutine
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Carry out initialisation routines here - enable interrupt last
+
+Entry&#58;
+Mode 3,7     ' 8 colour mode white on black
+Colour White,Black
+Cls
+
+' Display all static data
+Option USB Off    ' only to VGA
+DisplayStatic
+BarGraph
+' Create Log File on program entry and then at start of new day - 6AM
+CreateLogFile
+
+' Set up all initial values to default for orderly entry.
+PreviousICAH = 50
+PreviousLCAH = 45
+PreviousBCAH = 5
+OldABV = 13
+LFAPointer = 0
+
+' Fill the arrays
+For Ax=0 To 29
+  BVArray(Ax) = 12.8
+  SVArray(Ax) = 19
+  ICArray(Ax) = 18
+  LCArray(Ax) = 12
+Next Ax
+
+' Wait until 00 seconds to start for clean entry.
+Do While Val(Mid$(Time$,7,2)) &lt;&gt; 58
+Loop
+
+' Enable timer tick interrupts to start data collection at 00 seconds
+SetTick 2000,GetData   ' Every other second, get battery voltage and current
+' data through the GetData interrupt routine.
+
+' end of initialisation routines
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Main program loop
+
+Main&#58;
+Do While NewDataFlag = 0   ' wait until interrupt provides fresh data
+Loop
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' 2 second processing code
+' Write out time and date to display
+Print @(1,1)Time$ + "   " + Date$
+
+' Push most recent values into arrays for minute averaging
+For Ax = 29 To 1 Step -1
+  BVArray(Ax) = BVArray(Ax-1)
+  SVArray(Ax) = SVArray(Ax-1)
+  ICArray(Ax) = ICArray(Ax-1)
+  LCArray(Ax) = LCArray(Ax-1)
+Next Ax
+BVArray(0) = BVolts
+SVArray(0) = SVolts
+ICArray(0) = InputCurrent
+LCArray(0) = LoadCurrent
+' Charge/Discharge Current is InputCurrent-LoadCurrent - if positive
+'  it is a charging current into battery, if negative, it is a
+'  discharging current out of battery
+BatCurrent = InputCurrent-LoadCurrent
+
+' Convert both input, output &amp; battery instantaneous currents into Amp Hours
+InputCurrentAH = InputCurrentAH + (InputCurrent/1800) ' use 2 sec interrupt
+LoadCurrentAH = LoadCurrentAH + (LoadCurrent/1800)    ' rate for calculation
+BatCurrentAH = InputCurrentAH-LoadCurrentAH
+
+' Note&#58; All AH accumulating totals are plugged into last day values
+' then reset to zero at 6AM - now update terminal display with all values
+Font &#35;2
+Colour 2
+Print @(372,25)Format$(BatCharge,"%3.0f")+"%"
+Font &#35;1
+Colour 7
+Print @(123,45)Format$(BVolts,"%5.2fV")
+Print @(123,56)Format$(SVolts,"%5.2fV")
+Print @(123,67)Format$(InputCurrent,"%5.2fA")
+Print @(123,78)Format$(LoadCurrent,"%5.2fA")
+Print @(312,45)Format$(AverageBV,"%5.2fV")
+Print @(312,56)Format$(AverageSV,"%5.2fV")
+Font &#35;2
+Colour 7
+Print @(420,184)Format$(AverageBV,"%4.1f")
+Colour 3
+Print @(420,232)Format$(AverageSV,"%4.1f")
+Colour 7
+Font &#35;1
+Print @(376,149)Format$(Time2Discharge,"%4.0f min")
+Print @(312,67)Format$(AverageIC,"%5.1fA")
+Print @(312,78)Format$(AverageLC,"%5.1fA")
+Colour 6
+Font &#35;2
+Print @(420,285)Format$(AverageIC,"%4.1f")
+Colour 5
+Print @(420,340)Format$(AverageLC,"%4.1f")
+Colour 7
+Font &#35;1
+Print @(117,127)Format$(InputCurrentAH,"%5.1fahrs")
+Print @(117,138)Format$(LoadCurrentAH,"%5.1fahrs")
+If (Sgn(BatCurrentAH) = +1) Then
+  Colour 2
+  Print @(117,149)Format$(BatCurrentAH,"%+5.1fahrs")
+Else
+  Colour 4
+  Print @(117,149)Format$(BatCurrentAH,"%+5.1fahrs")
+EndIf
+Colour 7
+Print @(312,127)Format$(PreviousICAH,"%5.1fahrs")
+Print @(312,138)Format$(PreviousLCAH,"%5.1fahrs")
+If (Sgn(PreviousBCAH) = +1) Then
+  Colour 2
+  Print @(312,149)Format$(PreviousBCAH,"%+5.1fahrs")
+Else
+  Colour 4
+  Print @(312,149)Format$(PreviousBCAH,"%+5.1fahrs")
+EndIf
+Colour 7
+If (Sgn(AverageBC) = +1) Then
+  Colour 2
+  Print @(312,89)Format$(AverageBC,"%+5.1fA")
+  Font &#35;2
+  Print @(418,410)Format$(AverageBC,"%+4.1f")
+  Font &#35;1
+Else
+  Colour 4
+  Print @(312,89)Format$(AverageBC,"%+5.1fA")
+  Font &#35;2
+  Print @(418,410)Format$(AverageBC,"%+4.1f")
+  Font &#35;1
+EndIf
+If (Sgn(BatCurrent) = +1) Then
+  Colour 2
+  Print @(123,89)Format$(BatCurrent,"%+5.2fA")
+Else
+  Colour 4
+  Print @(123,89)Format$(BatCurrent,"%+5.2fA")
+EndIf
+Colour 7
+NewDataFlag = 0      ' clear new data flag ready for next interrupt
+'
+' End of two second processing code, now check for minute, hour or end of
+' day flags and process accordingly
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Check for minute flag, calculate the average of the last 60 seconds of
+' readings, plug them into the log file array at the log file array pointer
+If MinFlag = 1 Then
+  ' calculate average for last minute
+  OldABV = AverageBV
+  OldASV = AverageSV
+  AverageBV = 0
+  AverageSV = 0
+  AverageIC = 0
+  AverageLC = 0
+  For Ax = 0 To 29   'don't forget only sampled every 2 secs
+    AverageBV = AverageBV + BVArray(Ax)
+    AverageSV = AverageSV + SVArray(Ax)
+    AverageIC = AverageIC + ICArray(Ax)
+    AverageLC = AverageLC + LCArray(Ax)
+  Next Ax
+  AverageBV = AverageBV/30
+  AverageSV = AverageSV/30
+  AverageIC = AverageIC/30
+  AverageLC = AverageLC/30
+  AverageBC = AverageIC - AverageLC
+  ' Calculate battery change as percentage and fill charge state graph
+  ' now calculate charge and paint capacity graph
+  ' 12.1V equates to 30% charge
+  BatCharge = Int((AverageBV - 11.75) &#42; 100)
+  If BatCharge &lt; 30 Then BatCharge = 30
+  If BatCharge &gt; 100 Then BatCharge = 100
+  FillBarGraph(BatCharge)
+
+  ' Calculate time to 30% discharge of battery
+  DeltaBV = OldABV - AverageBV
+  If Sgn(DeltaBV) = +1 Then
+       DVRate = BVArray(0)         ' set initial values for rate of
+    Time2Discharge = 0             ' discharge and time to discharge
+    Do While DVRate &gt; 12.1         ' 12.1 volts equates to 30% discharge
+      DVRate = DVRate - DeltaBV    ' loop through calculating the amount
+                                   ' of time to get the current voltage
+                                   ' down to the 30% discharge point
+      Time2Discharge = Time2Discharge + 1 ' inc minutes to discharge count
+    Loop
+  Else
+    Print @(376,149)"Charging "   ' if current voltage is greater than
+  EndIf                            ' previous minute
+  BVAArray(LFAPointer) = AverageBV  ' update average arrays
+  SVAArray(LFAPointer) = AverageSV
+  ICAArray(LFAPointer) = AverageIC
+  LCAArray(LFAPointer) = AverageLC
+  LFAPointer = LFAPointer + 1          ' LFA pointer reset by eod routine
+
+' Now paint out running graph
+' - first work out the current minute hour combo in minutes
+  rg_mins = <div class="box">Val(Mid$(Time$,1,2)) Mod 6)&#42;60))+(Val(Mid$(Time$,4,2</div>
+  rg_mins = rg_mins + 30               ' offset to start of graph
+  rg_abv = 412 - Int((AverageBV-8) &#42; 10)
+    If rg_abv &gt; 412 Then rg_abv = 412
+  rg_asv = 412 - Int((AverageSV-8) &#42; 10)
+    If rg_asv &gt; 412 Then rg_asv = 412
+    If rg_asv &lt; 163 Then rg_asv = 163
+  rg_aic = 412 - Int(AverageIC &#42; 5)
+  rg_alc = 412 - Int(AverageLC &#42; 5)
+  If (Sgn(AverageBC) = +1) Then
+    rg_abc = 412 - Int(AverageBC &#42; 5)
+  Else
+    rg_abc = 412 + Int(AverageBC &#42; 5)
+  EndIf
+  For yrg = 163 To 412 Step 1
+    If rg_abc = yrg Then
+      If (Sgn(AverageBC) = +1) Then
+        Pixel(rg_mins,yrg) = 2
+      Else
+        Pixel(rg_mins,yrg) = 4
+      EndIf
+    Else
+      Pixel(rg_mins,yrg) = 0
+    EndIf
+    If rg_abv = yrg Then
+      Pixel(rg_mins,yrg) = 7
+    EndIf
+    If rg_asv = yrg Then
+      Pixel(rg_mins,yrg) = 3
+    EndIf
+    If rg_aic = yrg Then
+      Pixel(rg_mins,yrg) = 6
+    EndIf
+    If rg_alc = yrg Then
+      Pixel(rg_mins,yrg) = 5
+    EndIf
+    Line(rg_mins+1,yrg)-(rg_mins+3,yrg),0
+  Next yrg
+
+  MinFlag = 0   ' reset the min flag
+EndIf
+' End of minute code
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Check for hour flag - if true then append log array out to file
+' (we want to limit log file writes to 24 per day to keep
+' SD card writes as low as possible).
+
+If HourFlag = 1 Then        ' set each hour in interrupt routine
+  LogArray$ = ""
+  For x=0 To 59 Step 1  ' get the average values from each average array
+    LogArray$ = LogArray$+Format$(BVAArray(x),"%+6.2fV")+Chr$(44)
+    LogArray$ = LogArray$+Format$(SVAArray(x),"%+6.2fV")+Chr$(44)
+    LogArray$ = LogArray$+Format$(ICAArray(x),"%+5.1fA")+Chr$(44)
+    LogArray$ = LogArray$+Format$(LCAArray(x),"%+5.1fA")
+    Print &#35;1,LogArray$
+    LogArray$ = ""
+  Next x
+  LFAPointer = 0   ' reset array pointer
+  HourFlag = 0     ' clear hour flag until next hour
+EndIf
+' End of hour code
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Check for end of day - if true then close log file and create new file
+' for new day starting at 6AM
+If EODFlag = 1 Then
+  Close &#35;1       ' close out last log file, save amp hour data
+  PreviousICAH = InputCurrentAH
+  InputCurrentAH = 0
+  PreviousLCAH = LoadCurrentAH
+  LoadCurrentAH = 0
+  PreviousBCAH = BatCurrentAH
+  BatCurrentAH = 0
+  CreateLogFile  ' create new log file with todays date
+  EODFlag = 0    ' clear end of day flag until next 6AM
+EndIf
+' End of day code
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+GoTo Main        ' back to Main ready for next interrupt
+
+' End of main program loop
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Interrupt Routine Handling
+
+GetData&#58;      ' Timer Interrupt handler
+              ' Arduino analogue input pins
+  SetPin a0,1  ' pin 35 - battery voltage - 0 to 2.5V = 0 to 15V
+  SetPin a1,1  ' pin 36 - solar volts - 0 to 2.5V = 0 to 25V
+  SetPin a2,1  ' pin 37 - input current shunt - 0 to 2.5V = 0 to 50A
+  SetPin a3,1  ' pin 38 - load current shunt - 0 to 2.5V = 0 to 50A
+
+' Get the battery voltage
+  ic=0
+  BVolts = 0
+  GetPin35 = 0
+  For ic = 1 To 20
+    GetPin35 = Pin(a0)
+    BVolts = BVolts + GetPin35
+  Next ic
+  BVolts = BVolts/20  ' Average out Battery voltage
+  BVolts = BVolts&#42;6   ' 15 battery volts = 2.5 MM volts
+
+' Get the Solar Array voltage
+  ic=0
+  SVolts=0
+  GetPin36 = 0
+  For ic = 1 To 20
+    GetPin36 = Pin(a1)
+    SVolts = SVolts + GetPin36
+  Next ic
+  SVolts = SVolts/20  ' same as for BVolts
+  SVolts = SVolts&#42;10  ' 25 solar volts = 2.5 MM volts
+
+' Get the input current as a voltage
+  InputCurrent = 0
+  GetPin37 = 0
+  For ic = 1 To 20
+    GetPin37 = Pin(a2) - 0.5817
+    InputCurrent = InputCurrent + GetPin37
+  Next ic
+  InputCurrent = InputCurrent/20   ' Average out input current
+  InputCurrent = Abs(InputCurrent&#42;16.667)   ' Correct for opamp amplification
+' current by 16.667 now gives a value 50mV = 1A
+
+' Get the load current as a voltage
+  LoadCurrent = 0
+  GetPin38 = 0
+  For ic = 1 To 20
+    GetPin38 = Pin(a3) - 0.5803
+    LoadCurrent = LoadCurrent + GetPin38
+  Next ic
+  LoadCurrent = LoadCurrent/20 ' Average out load current
+  LoadCurrent = Abs(LoadCurrent&#42;16.667) ' Correct for opamp amplification
+' current by 16.667 now gives a value 50mV = 1A
+
+' Get the current time, extract the minutes component
+If Mid$(Time$,7,2) = "00" Then
+  MinFlag = 1
+EndIf
+
+' Get the current time, test for hour AND minute tunover
+If Mid$(Time$,7,2) = "00" And Mid$(Time$,4,2) = "00" Then
+  HourFlag = 1
+EndIf
+
+' Get the current time, test for 0600&#58;00
+If MinFlag And HourFlag And Mid$(Time$,1,2)="06" Then
+  EODFlag = 1
+EndIf
+
+NewDataFlag = 1 ' set to indicate fresh data
+
+IReturn  ' Returns with the following values&#58;-
+' BVolts = 0 to 15 equalling battery volts
+' SVolts = 0 to 25 equalling solar Array volts
+' InputCurrent=0 to 50 equalling 0 to 50Amps
+' LoadCurrent=0 to 50 equalling 0 to 50Amps
+'End of Interrupt code
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Defined Subroutines
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Set up terminal display with static data (field names etc.)
+' - uses the PRINT @ to print at defined positions
+
+Sub DisplayStatic
+Local xrg,yrg,volts,amps
+  Cls
+  Print @(150,1)"CARAVAN POWER MONITOR V2.04"
+  Line(150,11)-(312,11)
+  Print @(1,25)"Instantaneous Readings"
+  Print @(198,25)"Minute Average Readings"
+  Line(1,36)-(152,36)
+  Line(198,36)-(346,36)
+  Print @(376,1)"Battery"
+  Print @(1,45)"Battery Volts     ="
+  Print @(198,45)"Battery Volts     ="
+  Print @(379,12)"Charge"
+  Print @(1,56)"Solar Array Volts ="
+  Print @(198,56)"Solar Array Volts ="
+  Print @(1,67)"Input Current     ="
+  Print @(198,67)"Input Current     ="
+  Print @(1,78)"Load Current      ="
+  Print @(198,78)"Load Current      ="
+  Print @(1,89)"Bat Chg/Dis Curr  ="
+  Print @(198,89)"Bat Chg/Dis Curr  ="
+  Print @(1,108)"Daily Accumulating Readings"
+  Print @(198,108)"Previous Days Total Readings"
+  Line(1,120)-(170,120)
+  Line(198,120)-(362,120)
+  Print @(1,127)"Input Charge      ="
+  Print @(198,127)"Input Charge      ="
+  Print @(384,127)"Time to"
+  Print @(1,138)"Load Discharge    ="
+  Print @(198,138)"Load Discharge    ="
+  Print @(400,138)"30%"
+  Print @(1,149)"Battery Chg/DisChg="
+  Print @(198,149)"Battery Chg/DisChg="
+  Line(0,162)-(479,431),1,B
+  Colour 7,0
+  Print @(424,164)"Battery"
+  Print @(430,174)"Volts"
+  Colour 3,0
+  Print @(430,210)"Solar"
+  Print @(430,220)"Volts"
+  Colour 6,0
+  Print @(430,260)"Input"
+  Print @(433,270)"Amps"
+  Colour 5,0
+  Print @(433,315)"Load"
+  Print @(433,325)"Amps"
+  Colour 2,0
+  Print @(427,375)"Battery"
+  Print @(436,385)"Amps"
+  Print @(430,395)"In/"
+  Colour 4,0
+  Print @(449,395)"Out"
+  Colour 7,0
+  volts=22
+  amps = 48
+  For yrg =167 To 387 Step 10
+    Print @(2,yrg)Format$(volts,"%2.0fV")
+    Print @(400,yrg)Format$(amps,"%2.0fA")
+    amps=amps-2
+    yrg=yrg+10
+    Print @(400,yrg)Format$(amps,"%2.0fA")
+    volts=volts-1
+    amps=amps-2
+  Next yrg
+  Line(29,163)-(29,413)
+  Line(393,163)-(393,413)
+  For yrg = 163 To 413 Step 10 'minor ticks
+    Pixel(28,yrg)=7
+    Pixel(394,yrg)=7
+  Next yrg
+  For yrg = 173 To 413 Step 20  'major ticks
+    Pixel(27,yrg)=7
+    Pixel(395,yrg)=7
+  Next yrg
+  Line(30,414)-(390,414) 'now for the bottom
+  For xrg = 30 To 390 Step 5
+    Pixel(xrg,415)=7
+  Next xrg
+  For xrg = 30 To 390 Step 15
+    Line(xrg,415)-(xrg,416),7
+  Next xrg
+  For xrg = 30 To 390 Step 30
+    Line(xrg,415)-(xrg,417),7
+  Next xrg
+  For xrg = 30 To 390 Step 60
+    Line(xrg,415)-(xrg,418),7
+  Next xrg
+  Print @(100,419)"6 Hour Graphing period - starts 6AM"
+End Sub
+&#39;&#39;&#39;&#39;&#39;&#39;'
+' Bar Graph - Draw Static
+' top left x=432, y=0, bottom right x=479, y=162
+' This equates to 2 steps per percentage for the range of 35% to 100%
+Sub BarGraph
+  Local xtl,ytl,xbr,ybr,percent,xpos,ypos,y
+
+  xtl=432&#58;ytl=0&#58;xbr=xtl+47&#58;ybr=ytl+162
+'  First draw the box and values
+  Line(xtl,ytl)-(xbr,ybr),1,B
+  percent=100
+  Print @(xtl+3,ytl+2)"Battery"
+  Print @(xtl+13,ytl+13)100
+  Print @(xtl+40,ytl+13)"%"
+  percent=percent-5
+  For y=ytl+22 To 142 Step 10
+    Print @(xtl+19,y)percent
+    Print @(xtl+40,y)"%"
+    percent = percent-5
+  Next y
+End Sub
+&#39;&#39;&#39;&#39;&#39;&#39;'
+Sub CreateLogFile
+  LogFileName$="B&#58;"+Mid$(Date$,9,2)+Mid$(Date$,4,2)+Left$(Date$,2)+".CSV"
+  Open LogFileName$ For Output As &#35;1
+  Print &#35;1, "Battery Voltage";Chr$(44);
+  Print &#35;1, "Solar Array Voltage";Chr$(44);
+  Print &#35;1, "Input Current";Chr$(44);
+  Print &#35;1, "Load Current"
+End Sub
+&#39;&#39;&#39;&#39;&#39;&#39;'
+' Bar Graph - Fill
+' top left x=432, y=0, bottom right x=479, y=162
+' To fill, start at x=434 thru 443 and y=150 back up to y=12
+' This gives 138 steps, equates to 1.97 steps per % for 30% to 100%
+' Enter with actual battery charge as a percent
+
+Sub FillBarGraph(BatCharge)
+Local xtl,ytl,bat_chg,xpos,ypos,yper,xright,xleft,ybot,ytop
+bat_chg=BatCharge
+xtl=432&#58;ytl=0&#58;xbr=xtl+47&#58;ybr=ytl+162
+' Now fill the bar graph
+If bat_chg &lt; 31 Then
+  bat_chg=30
+  Colour 4,7
+  Print @(xtl + 4,ytl + 151,2)"DANGER"
+Else
+  Colour 2,7
+  Print @(xtl + 4,ytl + 151,2)"  OK  "
+EndIf
+Colour 7,0
+If bat_chg &gt; 100 Then bat_chg=100
+ytop=12
+yper=Int(((100 - bat_chg) &#42; 1.97) + 12)
+ybot=150
+xleft=437
+xright=446
+For ypos=ybot To ytop Step -1
+  If yper &lt; ypos Then
+    For xpos=xleft To xright Step 1
+      Pixel(xpos,ypos)=2
+    Next xpos
+  Else
+    For xpos=xleft To xright Step 1
+      Pixel(xpos,ypos)=0
+    Next xpos
+  EndIf
+Next ypos
+End Sub
+' End program.
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+
+</pre><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		<div id="Anthem_ctl00_CphMaster_attachmentViewer_rptItems__">
+		<table id="AttachmentViewerTable" class="generic" cellpadding="0" cellspacing="0">
+			<thead>
+			<tr class="tableheader">
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Size</th>
+			</tr>
+			</thead>
+			<tbody>
+	
+		<tr class="tablerow">
+			<td><img src="Images/File.png" alt="-" /></td>
+			<td><a href='Caravan%20Bat%20Mone4ee.pdf?File=Caravan%20Bat%20Mon.pdf&amp;AsStreamAttachment=1&amp;Provider=ScrewTurn.Wiki.FilesStorageProvider&amp;IsPageAttachment=1&amp;Page=MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library' title="Download">Caravan Bat Mon.pdf</a></td>
+			<td>23.85 KB</td>
+		</tr>
+	
+		</tbody>
+		</table>
+	</div>
+
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Battery-Management-for-12V-System-part-of-the-original-MMBasic-library.ashx?NS=MMBasic by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:42:22 GMT -->
+</html>

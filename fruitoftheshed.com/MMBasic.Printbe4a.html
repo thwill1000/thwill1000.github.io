@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Successive-Approximation-Binary-Chop-Search-Algorithm-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Successive Approximation (Binary Chop) Search Algorithm - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Successive-Approximation-Binary-Chop-Search-Algorithm-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFnTM8aDEgY2xhc3M9InBhZ2V0aXRsZSI+U3VjY2Vzc2l2ZSBBcHByb3hpbWF0aW9uIChCaW5hcnkgQ2hvcCkgU2VhcmNoIEFsZ29yaXRobTwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTYvMTIvMjMgMjM6NDcgYnkgQWRtaW5pc3RyYXRvciAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBBcnJheXMsIFNlYXJjaCwgU3RyaW5ncywgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PGJyIC8+PGI+QlNFQVJDSC5CQVMgPC9iPjxiciAvPjxwcmU+DQogICAgICAnIEJpbmFyeSBTZWFyY2ggUm91dGluZSAgLSBGcm9tIEh1Z2ggQnVja2xlLCBKYW4gMjAxMg0KICAgICAgJyBTZWFyY2hlcyBmb3IgYW4gZW50cnkgaW4gYSBzb3J0ZWQgdGV4dCBhcnJheS4NCg0KICAgICAgJyBZb3UgY2FuIHNlYXJjaCBhbGwgb3IgcGFydCBvZiB0aGUgYXJyYXkgYnkgc2V0dGluZw0KICAgICAgJyBTdGFydEluZHggYW5kIEVuZEluZHggdG8gYXBwcm9wcmlhdGUgdmFsdWVzLiAgVGhlc2Ugd2lsbA0KICAgICAgJyBub3JtYWxseSBiZSB0aGUgYXJyYXkgZXh0ZW50cywgYXMgdGhleSBhcmUgaGVyZS4NCg0KICAgICAgJyBJZiB0aGUgc3Vicm91dGluZSBCaW5TZWFyY2ggcmV0dXJucyBGb3VuZCA9IDEgdGhlbg0KICAgICAgJyB0aGUgdmFsdWUgY2FuIGJlIGZvdW5kIGF0IGEkKEluZHgpLg0KDQogICAgICAnIFlvdSBjb3VsZCB1c2UgdGhpcyByb3V0aW5lIGluIGNvbmp1bmN0aW9uIHdpdGggdGhlIEJ1YmJsZSBTb3J0DQogICAgICAnIGFzIEkgaGF2ZSBkb25lIHRvIGVuc3VyZSB0aGUgYXJyYXkgaXMgaW4gYXNjZW5kaW5nIG9yZGVyLA0KICAgICAgJyBidXQgbm90ZSB0aGUgdXNlIG9mIExjYXNlJCgpIGluIGJvdGggdGhlIGJ1YmJsZSBzb3J0IGFuZA0KICAgICAgJyBiaW5hcnkgc2VhcmNoIGJlY2F1c2UgSSB3YW50IHRoZSBzZXF1ZW5jZSB0byBiZSBub3QgY2FzZQ0KICAgICAgJyBzZW5zaXRpdmUsIGFzIGluIGEgZGljdGlvbmFyeSBhbmQgaW4gdGV4dCBzb3J0ZWQgaW4gV29yZA0KICAgICAgJyBhbmQgRXhjZWwuDQoNCiAgICAgICcgVG8gc2VhcmNoIGEgbnVtZXJpYyBhcnJheSwganVzdCByZW1vdmUgYWxsIHRoZSBEb2xsYXIgc2lnbnMNCiAgICAgICcgYW5kIHByb3ZpZGUgc29tZSBudW1lcmljIERhdGEuDQoNCiAgICAgICcgVGhpcyBpcyBqdXN0IHNvbWUgdGVzdCBkYXRhDQogICAgICBEYXRhIEFuZHJldyxGcmVkLEdlb2ZmcmV5LEdlb3JnZSxIdWdoLElzYWFjLGFhcmR2YXJrDQogICAgICBEYXRhIEphbWVzLEpvZSxKb2huLExhbmNlLFZpY3RvcixXaWxsaWFtLEFhcm9uDQogICAgICBEaW0gYSQoMjApDQogICAgICBQcmludA0KICAgICAgaj0xNCAgICAgJyBudW1iZXIgb2YgbmFtZXMgaW4gdGhlIERhdGEgc3RhdGVtZW50cw0KICAgICAgRm9yIGkgPSAxIFRvIGoNCiAgICAgICAgUmVhZCBhJChpKQ0KICAgICAgTmV4dA0KDQogICAgICAnIFNvcnQgdGhlIGxpc3Qgb2YgbmFtZXMNCiAgICAgIEdvU3ViIEJibFNvcnQNCiAgICAgIFByaW50ICJTb3J0ZWQgTmFtZXMmIzU4OyINCiAgICAgIEZvciBpPTEgVG8gag0KICAgICAgICBQcmludCBpOyAiICI7IGEkKGkpDQogICAgICBOZXh0DQogICAgICBQcmludA0KICAgICAgUHJpbnQNCg0KICAgICAgJyBUaGlzIERvIGxvb3AgaW52b2tlcyB0aGUgc2VhcmNoIGFuZCBwcmludHMgdGhlIHJlc3VsdA0KICAgICAgRG8NCiAgICAgICAgJyBUaGlzIGV4YW1wbGUgc2VhcmNoZXMgdGhlIHdob2xlIGFycmF5IGEkKCkuDQogICAgICAgICcgVG8gc2VhcmNoIHBhcnQgb2YgdGhlIGFycmF5LCBzZXQgU3RhcnRJbmR4IGFuZCBFbmRJbmR4IHRvDQogICAgICAgICcgdGhlIGJvdW5kYXJpZXMgeW91IHdhbnQuDQogICAgICAgIFN0YXJ0SW5keCA9IDENCiAgICAgICAgRW5kSW5keCA9IGoNCiAgICAgICAgSW5wdXQgIkZpbmQgKGVuZCB0byBleGl0KSI7IGIkDQogICAgICAgIEdvU3ViIEJpblNlYXJjaA0KICAgICAgICBJZiBmb3VuZCA9IDEgVGhlbg0KICAgICAgICAgIFByaW50IGIkOyAiIGZvdW5kIGF0ICI7ICJhJCgiOyBpbmR4OyAiKSINCiAgICAgICAgRWxzZQ0KICAgICAgICAgIFByaW50IGIkOyAiIHdhc24ndCBmb3VuZC4gSW5kZXggPSAiOyBpbmR4DQogICAgICAgIEVuZElmDQogICAgICBMb29wIFdoaWxlIGIkICZsdDsmZ3Q7ICJlbmQiDQogICAgICBQcmludCAiQnllIg0KICAgICAgRW5kDQoNCkJpblNlYXJjaCYjNTg7DQogICAgICAnIFRoZSBCaW5hcnkgc2VhcmNoIGxvb2tzIGZvciBiJCBpbiBhcnJheSBhJCgpLg0KICAgICAgJyBJdCB0ZXN0cyB0aGUgdmFsdWUgYXQgdGhlIG1pZCBwb2ludCBvZiB0aGUgYXJyYXkuDQogICAgICAnIElmIHRoZSB2YWx1ZSB0aGVyZSBpcyBncmVhdGVyIHRoYW4gdGhlIHZhbHVlIHdlIGFyZSBsb29raW5nIGZvciwNCiAgICAgICcgdGhlIFNUQVJUIHBvaW50IGlzIHNldCB0byB3aGVyZSB3ZSBqdXN0IGxvb2tlZCArIDEuDQogICAgICAnIElmIGl0IHdhcyBsZXNzLCB0aGVuIHRoZSBFTkQgcG9pbnQgaXMgc2V0IHRvIHdoZXJlIHdlIGp1c3QNCiAgICAgICcgbG9va2VkIC0gMS4gVGhlbiB0aGUgcm91dGluZSBsb29wcy4gU28gb24gZWFjaCBsb29wIHdlIGhhbHZlDQogICAgICAnIHRoZSBzZWN0aW9uIG9mIHRoZSBhcnJheSB0byBzZWFyY2ggdW50aWwgdGhlIGVudHJ5IGlzIGZvdW5kDQogICAgICAnIG9yIGVpdGhlciB0aGUgU3RhcnQgb3IgRW5kIHBvaW50IGV4Y2VlZHMgdGhlIGFycmF5IGJvdW5kYXJpZXMuDQoNCiAgICAgICcgQ2FsbCB0aGlzIHJvdXRpbmUgd2l0aA0KICAgICAgJyAgIEFycmF5IGEkKCkgc29ydGVkIGluIGFzY2VuZGluZyBzZXF1ZW5jZQ0KICAgICAgJyAgIFN0YXJ0SW5keCBhbmQgRW5kSW5keCBzZXQgdG8gdGhlIGxvd2VyIGFuZCB1cHBlciBsaW1pdHMNCiAgICAgICcgICAgIG9mIGEkKCkgeW91IHdpc2ggdG8gdGVzdC4NCiAgICAgICcgICBiJCBzZXQgdG8gdGhlIHZhbHVlIHRvIGZpbmQuDQoNCiAgICAgICcgQmluU2VhcmNoIHJldHVybnMgRm91bmQgPSAxIGlmIHRoZSB2YWx1ZSB3YXMgZm91bmQsIDAgaWYgbm90Lg0KICAgICAgJyBJZiBmb3VuZCwgaXQgcmV0dXJucyBJbmR4IHBvaW50aW5nIHRvIHRoZSBtYXRjaGluZyBlbGVtZW50IGluIGEkKCkNCg0KICAgICAgRm91bmQgPSAwDQogICAgICBEbw0KICAgICAgICAnIEZpbmQgbWlkIHBvaW50IG9mIHRoZSBzZWN0aW9uIG9mIHRoZSBhcnJheSB0byBzZWFyY2gNCiAgICAgICAgSW5keCA9IFN0YXJ0SW5keCArIEZpeCgoRW5kSW5keCAtIFN0YXJ0SW5keCkvMikNCiAgICAgICAgSWYgTENhc2UkKGIkKSA9IExDYXNlJChhJChJbmR4KSkgVGhlbg0KICAgICAgICAgIEZvdW5kID0gMQ0KICAgICAgICAgIEVsc2VJZiBMQ2FzZSQoYiQpICZndDsgTENhc2UkKGEkKEluZHgpKSBUaGVuDQogICAgICAgICAgICBTdGFydEluZHggPSBJbmR4ICsgMQ0KICAgICAgICAgIEVsc2UNCiAgICAgICAgICAgIEVuZEluZHggPSBJbmR4IC0gMQ0KICAgICAgICBFbmRJZg0KICAgICAgTG9vcCBVbnRpbCBGb3VuZCA9IDEgT3IgU3RhcnRJbmR4ICZndDsgRW5kSW5keCBPciBFbmRJbmR4ICZsdDsgU3RhcnRJbmR4DQogICAgICBSZXR1cm4NCg0KDQpCYmxTb3J0JiM1ODsNCiAgICAnIEJ1YmJsZSBzb3J0IHJvdXRpbmUgdXNlZCB0byBzb3J0IHRoZSBsaXN0IG9mIG5hbWVzDQogICAgICBGbGlwcyA9IDENCiAgICAgIERvDQogICAgICAgIEZsaXBzID0gMA0KICAgICAgICBGb3Igbj0xIFRvIGotMQ0KICAgICAgICAgIElmIExDYXNlJChBJChuKSkgJmd0OyBMQ2FzZSQoQSQobisxKSkgVGhlbg0KICAgICAgICAgICAgU2F2ZUEkID0gQSQobikNCiAgICAgICAgICAgIEEkKG4pID0gQSQobisxKQ0KICAgICAgICAgICAgQSQobisxKSA9IFNhdmVBJA0KICAgICAgICAgICAgRmxpcHMgPSAxDQogICAgICAgICAgRW5kSWYNCiAgICAgICAgTmV4dA0KICAgICAgTG9vcCBXaGlsZSBGbGlwcyA9IDENCiAgICAgIFJldHVybg0KDQoNCjwvcHJlPjxiciAvPjxiciAvPjxiPkJTRUFSQ0gxLkJBUyA8L2I+PGJyIC8+PHByZT4NCg0KQmluU2VhcmNoJiM1ODsNCiAgICAgICcgVGhlIEJpbmFyeSBzZWFyY2ggbG9va3MgZm9yIGIkIGluIGFycmF5IGEkKCkuDQogICAgICAnIEl0IHRlc3RzIHRoZSB2YWx1ZSBhdCB0aGUgbWlkIHBvaW50IG9mIHRoZSBhcnJheS4NCiAgICAgICcgSWYgdGhlIHZhbHVlIHRoZXJlIGlzIGdyZWF0ZXIgdGhhbiB0aGUgdmFsdWUgd2UgYXJlIGxvb2tpbmcgZm9yLA0KICAgICAgJyB0aGUgU1RBUlQgcG9pbnQgaXMgc2V0IHRvIHdoZXJlIHdlIGp1c3QgbG9va2VkICsgMS4NCiAgICAgICcgSWYgaXQgd2FzIGxlc3MsIHRoZW4gdGhlIEVORCBwb2ludCBpcyBzZXQgdG8gd2hlcmUgd2UganVzdA0KICAgICAgJyBsb29rZWQgLSAxLiBUaGVuIHRoZSByb3V0aW5lIGxvb3BzLiBTbyBvbiBlYWNoIGxvb3Agd2UgaGFsdmUNCiAgICAgICcgdGhlIHNlY3Rpb24gb2YgdGhlIGFycmF5IHRvIHNlYXJjaCB1bnRpbCB0aGUgZW50cnkgaXMgZm91bmQNCiAgICAgICcgb3IgZWl0aGVyIHRoZSBTdGFydCBvciBFbmQgcG9pbnQgZXhjZWVkcyB0aGUgYXJyYXkgYm91bmRhcmllcy4NCg0KICAgICAgJyBOb3RlIHRoYXQgdGhpcyBzZWFyY2ggcm91dGluZSBleHBlY3RzIHRoZSBhcnJheSBBJCgpIHRvIGJlIGluDQogICAgICAnIHNlcXVlbmNlIHdoaWNoIGlzIENBU0UgSU5TRU5TSVRJVkUuIGUuZy4gYWEgY29tZXMgYmVmb3JlIEFiDQogICAgICAnIElmIHRoZSBhcnJheSB3YXMgc29ydGVkIGNhc2Ugc2Vuc2l0aXZlIHRoZW4gcmVtb3ZlIExjYXNlJCgpLg0KICAgICAgDQogICAgICAnIENhbGwgdGhpcyByb3V0aW5lIHdpdGgNCiAgICAgICcgICBBcnJheSBhJCgpIHNvcnRlZCBpbiBhc2NlbmRpbmcgc2VxdWVuY2UNCiAgICAgICcgICBTdGFydEluZHggYW5kIEVuZEluZHggc2V0IHRvIHRoZSBsb3dlciBhbmQgdXBwZXIgbGltaXRzDQogICAgICAnICAgICBvZiBhJCgpIHlvdSB3aXNoIHRvIHRlc3QuDQogICAgICAnICAgYiQgc2V0IHRvIHRoZSB2YWx1ZSB0byBmaW5kLg0KDQogICAgICAnIEJpblNlYXJjaCByZXR1cm5zIEZvdW5kID0gMSBpZiB0aGUgdmFsdWUgd2FzIGZvdW5kLCAwIGlmIG5vdC4NCiAgICAgICcgSWYgZm91bmQsIGl0IHJldHVybnMgSW5keCBwb2ludGluZyB0byB0aGUgbWF0Y2hpbmcgZWxlbWVudCBpbiBhJCgpDQogDQogICAgICBGb3VuZCA9IDANCiAgICAgIERvDQogICAgICAgICcgRmluZCBtaWQgcG9pbnQgb2YgdGhlIHNlY3Rpb24gb2YgdGhlIGFycmF5IHRvIHNlYXJjaA0KICAgICAgICBJbmR4ID0gU3RhcnRJbmR4ICsgRml4KChFbmRJbmR4IC0gU3RhcnRJbmR4KS8yKQ0KICAgICAgICBJZiBMY2FzZSQoYiQpID0gTGNhc2UkKGEkKEluZHgpKSBUaGVuDQogICAgICAgICAgRm91bmQgPSAxDQogICAgICAgICAgRWxzZUlmIExjYXNlJChiJCkgJmd0OyBMY2FzZSQoYSQoSW5keCkpIFRoZW4NCiAgICAgICAgICAgIFN0YXJ0SW5keCA9IEluZHggKyAxDQogICAgICAgICAgRWxzZQ0KICAgICAgICAgICAgRW5kSW5keCA9IEluZHggLSAxDQogICAgICAgIEVuZElmDQogICAgICBMb29wIFVudGlsIEZvdW5kID0gMSBPciBTdGFydEluZHggJmd0OyBFbmRJbmR4IE9yIEVuZEluZHggJmx0OyBTdGFydEluZHgNCiAgICAgIFJldHVybg0KDQoNCjwvcHJlPjxiciAvPjxiciAvPmRktot7dI7QqZX/QKd+8X+zWrsaI60=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Successive Approximation (Binary Chop) Search Algorithm</h1><small>Modified on 2016/12/23 23:47 by Administrator &mdash; Categorized as: Arrays, Search, Strings, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><b>BSEARCH.BAS </b><br /><pre>
+      ' Binary Search Routine  - From Hugh Buckle, Jan 2012
+      ' Searches for an entry in a sorted text array.
+
+      ' You can search all or part of the array by setting
+      ' StartIndx and EndIndx to appropriate values.  These will
+      ' normally be the array extents, as they are here.
+
+      ' If the subroutine BinSearch returns Found = 1 then
+      ' the value can be found at a$(Indx).
+
+      ' You could use this routine in conjunction with the Bubble Sort
+      ' as I have done to ensure the array is in ascending order,
+      ' but note the use of Lcase$() in both the bubble sort and
+      ' binary search because I want the sequence to be not case
+      ' sensitive, as in a dictionary and in text sorted in Word
+      ' and Excel.
+
+      ' To search a numeric array, just remove all the Dollar signs
+      ' and provide some numeric Data.
+
+      ' This is just some test data
+      Data Andrew,Fred,Geoffrey,George,Hugh,Isaac,aardvark
+      Data James,Joe,John,Lance,Victor,William,Aaron
+      Dim a$(20)
+      Print
+      j=14     ' number of names in the Data statements
+      For i = 1 To j
+        Read a$(i)
+      Next
+
+      ' Sort the list of names
+      GoSub BblSort
+      Print "Sorted Names&#58;"
+      For i=1 To j
+        Print i; " "; a$(i)
+      Next
+      Print
+      Print
+
+      ' This Do loop invokes the search and prints the result
+      Do
+        ' This example searches the whole array a$().
+        ' To search part of the array, set StartIndx and EndIndx to
+        ' the boundaries you want.
+        StartIndx = 1
+        EndIndx = j
+        Input "Find (end to exit)"; b$
+        GoSub BinSearch
+        If found = 1 Then
+          Print b$; " found at "; "a$("; indx; ")"
+        Else
+          Print b$; " wasn't found. Index = "; indx
+        EndIf
+      Loop While b$ &lt;&gt; "end"
+      Print "Bye"
+      End
+
+BinSearch&#58;
+      ' The Binary search looks for b$ in array a$().
+      ' It tests the value at the mid point of the array.
+      ' If the value there is greater than the value we are looking for,
+      ' the START point is set to where we just looked + 1.
+      ' If it was less, then the END point is set to where we just
+      ' looked - 1. Then the routine loops. So on each loop we halve
+      ' the section of the array to search until the entry is found
+      ' or either the Start or End point exceeds the array boundaries.
+
+      ' Call this routine with
+      '   Array a$() sorted in ascending sequence
+      '   StartIndx and EndIndx set to the lower and upper limits
+      '     of a$() you wish to test.
+      '   b$ set to the value to find.
+
+      ' BinSearch returns Found = 1 if the value was found, 0 if not.
+      ' If found, it returns Indx pointing to the matching element in a$()
+
+      Found = 0
+      Do
+        ' Find mid point of the section of the array to search
+        Indx = StartIndx + Fix((EndIndx - StartIndx)/2)
+        If LCase$(b$) = LCase$(a$(Indx)) Then
+          Found = 1
+          ElseIf LCase$(b$) &gt; LCase$(a$(Indx)) Then
+            StartIndx = Indx + 1
+          Else
+            EndIndx = Indx - 1
+        EndIf
+      Loop Until Found = 1 Or StartIndx &gt; EndIndx Or EndIndx &lt; StartIndx
+      Return
+
+
+BblSort&#58;
+    ' Bubble sort routine used to sort the list of names
+      Flips = 1
+      Do
+        Flips = 0
+        For n=1 To j-1
+          If LCase$(A$(n)) &gt; LCase$(A$(n+1)) Then
+            SaveA$ = A$(n)
+            A$(n) = A$(n+1)
+            A$(n+1) = SaveA$
+            Flips = 1
+          EndIf
+        Next
+      Loop While Flips = 1
+      Return
+
+
+</pre><br /><br /><b>BSEARCH1.BAS </b><br /><pre>
+
+BinSearch&#58;
+      ' The Binary search looks for b$ in array a$().
+      ' It tests the value at the mid point of the array.
+      ' If the value there is greater than the value we are looking for,
+      ' the START point is set to where we just looked + 1.
+      ' If it was less, then the END point is set to where we just
+      ' looked - 1. Then the routine loops. So on each loop we halve
+      ' the section of the array to search until the entry is found
+      ' or either the Start or End point exceeds the array boundaries.
+
+      ' Note that this search routine expects the array A$() to be in
+      ' sequence which is CASE INSENSITIVE. e.g. aa comes before Ab
+      ' If the array was sorted case sensitive then remove Lcase$().
+      
+      ' Call this routine with
+      '   Array a$() sorted in ascending sequence
+      '   StartIndx and EndIndx set to the lower and upper limits
+      '     of a$() you wish to test.
+      '   b$ set to the value to find.
+
+      ' BinSearch returns Found = 1 if the value was found, 0 if not.
+      ' If found, it returns Indx pointing to the matching element in a$()
+ 
+      Found = 0
+      Do
+        ' Find mid point of the section of the array to search
+        Indx = StartIndx + Fix((EndIndx - StartIndx)/2)
+        If Lcase$(b$) = Lcase$(a$(Indx)) Then
+          Found = 1
+          ElseIf Lcase$(b$) &gt; Lcase$(a$(Indx)) Then
+            StartIndx = Indx + 1
+          Else
+            EndIndx = Indx - 1
+        EndIf
+      Loop Until Found = 1 Or StartIndx &gt; EndIndx Or EndIndx &lt; StartIndx
+      Return
+
+
+</pre><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Successive-Approximation-Binary-Chop-Search-Algorithm-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:47 GMT -->
+</html>

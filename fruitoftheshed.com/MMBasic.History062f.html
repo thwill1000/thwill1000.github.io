@@ -1,0 +1,219 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:12:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Page History - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/History.aspx?NS=MMBasic&amp;Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&amp;Revision=00001" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTEzMjI3OTE2NTkPZBYCZg9kFgICAQ9kFgICCQ9kFggCAQ8WAh4EVGV4dAU+UGFnZSBIaXN0b3J5OiBNTUJhc2ljIC0gQ3JlYXRlL01hbmlwdWxhdGUgU3RhY2ssIFF1ZXVlIG9yIExpc3RkAgUPEGQQFQUBNAEzATIBMQEwFQUBNAEzATIBMQEwFCsDBWdnZ2dnZGQCBw8QZBAVBgdDdXJyZW50ATQBMwEyATEBMBUGB0N1cnJlbnQBNAEzATIBMQEwFCsDBmdnZ2dnZ2RkAgsPFgIfAAWGLDx0YWJsZSBjbGFzcz0iYm94IiBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiPjx0cj48dGQ+PHAgc3R5bGU9InRleHQtYWxpZ246IGNlbnRlcjsiPjxiPjxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5NTUJhc2ljLUNyZWF0ZS1NYW5pcHVsYXRlLVN0YWNrLVF1ZXVlLW9yLUxpc3QmYW1wO1JldmlzaW9uPTAwMDAwIj4mbGFxdW87IE9sZGVyIFJldmlzaW9uPC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5NTUJhc2ljLUNyZWF0ZS1NYW5pcHVsYXRlLVN0YWNrLVF1ZXVlLW9yLUxpc3QiPkJhY2sgdG8gUGFnZSBIaXN0b3J5PC9hPiAtIDxhIGhyZWY9Ik1NQmFzaWMuSGlzdG9yeS5hc3B4P1BhZ2U9TU1CYXNpYy5NTUJhc2ljLUNyZWF0ZS1NYW5pcHVsYXRlLVN0YWNrLVF1ZXVlLW9yLUxpc3QmYW1wO1JldmlzaW9uPTAwMDAyIj5OZXdlciBSZXZpc2lvbiAmcmFxdW87PC9hPjwvYj48L3A+PC90ZD48L3RyPjwvdGFibGU+PGJyIC8+PGgzIGNsYXNzPSJzZXBhcmF0b3IiPlBhZ2UgUmV2aXNpb246IDIwMTcvMDgvMDMgMTE6MzY8L2gzPjxiciAvPjxwcmU+U3RhY2ssIFF1ZXVlIGFuZCBMaXN0IFJvdXRpbmVzIGZvciBTdHJpbmdzIGFuZCBOdW1lcmljIHZhbHVlcw0KJiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7DQpDb2RlIGlzIGluY2x1ZGVkIGluIHRoZSB6aXBwZWQgYXR0YWNobWVudA0KDQpTdHJpbmcgT3BlcmF0aW9ucw0KJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstDQoNClMuU1RBQ0suQ1JFQVRFIHN0cmluZyQsd2lkdGgNCg0KQ3JlYXRlIGEgc3RyaW5nIGFzIGEgaG9sZGVyIGZvciBtdWx0aXBsZSBzdWJzdHJpbmdzIG9mIHdpZHRoIGNoYXJhY3RlcnMgbG9uZyBmb3IgdXNlIGFzIGEgTGFzdCBJbiwgDQpGaXJzdCBPdXQgKExJRk8pIHN0YWNrLiBNYXhpbXVtIG51bWJlciBvZiBzdWJzdHJpbmdzIGlzIHdpZHRoIHggbnVtYmVyIG9mIHN1YnN0cmluZ3MgPSZsdDsgMjUwLiANCkVnLiBtYXggMjUgb2YgMTAgY2hhcmFjdGVyIGxvbmdzIHN0cmluZ3MuIFN0cmluZ3Mgb2YgbGVzcyB0aGFuIHdpZHRoIGFyZSByaWdodCBqdXN0aWZpZWQgYW5kIA0KcGFkZGVkIHdpdGggc3BhY2VzLg0KDQpSb3V0aW5lIHJldHVybnMgd2l0aCBzdHJpbmckIHNldCB1cCBhcyB0aGUgaG9sZGVyIHdpdGggdGhlIHdpZHRoIGluIGNoYXJhY3RlciBwb3NpdGlvbnMgMSBhbmQgMiAobWF4aW11bSA5OSkgYW5kIGEgcG9pbnRlciB0byB0aGUgYm90dG9tIG9mIHRoZSBzdGFjayArIDEgaW4gcG9zaXRpb25zIDMsIDQgYW5kIDUuDQoNCg0KUy5TVEFDSy5QVVNIIHN0cmluZyQsZGF0YSQNCg0KUHVzaCBkYXRhJCBvbnRvIHN0YWNrIHN0cmluZyQuIElmIGRhdGEkIGlzIHNob3J0ZXIgdGhhbiB3aWR0aCwgZGF0YSQgaXMgcmlnaHQganVzdGlmaWVkIGFuZCBwYWRkZWQgd2l0aCBzcGFjZXMuDQoNCg0KUy5TVEFDSy5QT1AkKHN0cmluZyQpDQoNCkZ1bmN0aW9uIHRvIHBvcCB0aGUgdG9wIHN1YnN0cmluZyBvZmYgdGhlIHN0YWNrIHN0cmluZyQuDQoNCkFsbCBzdHJpbmcgc3RhY2sgb3BlcmF0aW9ucyBhcmUgY2hlY2tlZCBmb3Igb3ZlcmZsb3csIHVuZGVyZmxvdyBvciBzdWJzdHJpbmdzIHRvbyB3aWRlLg0KDQpRdWV1ZSBPcGVyYXRpb25zDQomIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Ow0KDQpTLlFVRVVFLkNSRUFURSBzdHJpbmckLHdpZHRoDQoNCkNyZWF0ZSBhIHN0cmluZyBhcyBhIGhvbGRlciBmb3IgbXVsdGlwbGUgc3Vic3RyaW5ncyBvZiB3aWR0aCBjaGFyYWN0ZXJzIGxvbmcgZm9yIHVzZSBhcyBhIEZpcnN0IEluLCBGaXJzdCBPdXQgKEZJRk8pIHF1ZXVlLiBNYXhpbXVtIG51bWJlciBvZiBzdWJzdHJpbmdzIGlzIHdpZHRoIHggbnVtYmVyIG9mIHN1YnN0cmluZ3MgPSZsdDsgMjUwLiBFZy4gbWF4IDI1IG9mIDEwIGNoYXJhY3RlciBsb25ncyBzdHJpbmdzLiBTdHJpbmdzIG9mIGxlc3MgdGhhbiB3aWR0aCBhcmUgcmlnaHQganVzdGlmaWVkIGFuZCBwYWRkZWQgd2l0aCBzcGFjZXMuDQoNClJvdXRpbmUgcmV0dXJucyB3aXRoIHN0cmluZyQgc2V0IHVwIGFzIHRoZSBob2xkZXIgd2l0aCB0aGUgd2lkdGggaW4gY2hhcmFjdGVyIHBvc2l0aW9ucyAxIGFuZCAyIChtYXhpbXVtIDk5KSBhbmQgYSBwb2ludGVyIHRvIHRoZSBib3R0b20gb2YgdGhlIHN0YWNrICsgMSBpbiBwb3NpdGlvbnMgMywgNCBhbmQgNS4NCg0KUy5RVUVVRS5QVVNIIHN0cmluZyQsZGF0YSQNCg0KUHVzaCBkYXRhJCBvbnRvIHF1ZXVlIHN0cmluZyQuIElmIGRhdGEkIGlzIHNob3J0ZXIgdGhhbiB3aWR0aCwgZGF0YSQgaXMgcmlnaHQganVzdGlmaWVkIGFuZCBwYWRkZWQgd2l0aCBzcGFjZXMuDQoNClMuUVVFVUUuUFVMTCQoc3RyaW5nJCkNCg0KRnVuY3Rpb24gdG8gcG9wIHRoZSBib3R0b20gKGZpcnN0KSBzdWJzdHJpbmcgb2ZmIHRoZSBxdWV1ZSBzdHJpbmckLg0KQWxsIHN0cmluZyBxdWV1ZSBvcGVyYXRpb25zIGFyZSBjaGVja2VkIGZvciBvdmVyZmxvdywgdW5kZXJmbG93IG9yIHN1YnN0cmluZ3MgdG9vIHdpZGUuDQoNCkxpc3QgT3BlcmF0aW9ucw0KJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCg0KUy5MSVNULkNSRUFURSBzdHJpbmckLHdpZHRoDQoNCkNyZWF0ZSBhIHN0cmluZyBhcyBhIGhvbGRlciBmb3IgbXVsdGlwbGUgc3Vic3RyaW5ncyBvZiB3aWR0aCBjaGFyYWN0ZXJzIGxvbmcgZm9yIHVzZSBhcyBhIHJhbmRvbSBhY2Nlc3MgbGlzdC4gTWF4aW11bSBudW1iZXIgb2Ygc3Vic3RyaW5ncyBpcyB3aWR0aCB4IG51bWJlciBvZiBzdWJzdHJpbmdzID0mbHQ7IDI1MC4gRWcuIG1heCAyNSBvZiAxMCBjaGFyYWN0ZXIgbG9uZ3Mgc3RyaW5ncy4gU3RyaW5ncyBvZiBsZXNzIHRoYW4gd2lkdGggYXJlIHJpZ2h0IGp1c3RpZmllZCBhbmQgcGFkZGVkIHdpdGggc3BhY2VzLg0KDQpSb3V0aW5lIHJldHVybnMgd2l0aCBzdHJpbmckIHNldCB1cCBhcyB0aGUgaG9sZGVyIHdpdGggdGhlIHdpZHRoIGluIGNoYXJhY3RlciBwb3NpdGlvbnMgMSBhbmQgMiAobWF4aW11bSA5OSkgYW5kIGEgcG9pbnRlciB0byB0aGUgYm90dG9tIG9mIHRoZSBsaXN0ICsgMSBpbiBwb3NpdGlvbnMgMywgNCBhbmQgNS4NCg0KDQpTLkxJU1QuQUREIHN0cmluZyQsZGF0YSQNCg0KQWRkIGRhdGEkIG9udG8gbGlzdCBzdHJpbmckIGF0IHRoZSBib3R0b20uIElmIGRhdGEkIGlzIHNob3J0ZXIgdGhhbiB3aWR0aCwgZGF0YSQgaXMgcmlnaHQganVzdGlmaWVkIGFuZCBwYWRkZWQgd2l0aCBzcGFjZXMuDQoNCg0KUy5MSVNULkZJTEwgc3RyaW5nJCxmaWxlJA0KDQpBZGQgZGF0YSQgb250byBsaXN0IHN0cmluZyQgYXQgdGhlIGJvdHRvbSBmcm9tIHRleHQgZmlsZSBmaWxlJC4gVGV4dCBmaWxlIGZpbGUkIG11c3QgaGF2ZSBlYWNoIGVudHJ5IG9mIGxlbmd0aCB3aWR0aCBvciBsZXNzIGFuZCB0ZXJtaW5hdGVkIHdpdGggQ1JMRi4gIENSTEYgaXMgc3RyaXBwZWQgcHJpb3IgdG8gZGF0YSQgYmVpbmcgYWRkZWQgdG8gbGlzdC4gSWYgZGF0YSQgaXMgc2hvcnRlciB0aGFuIHdpZHRoLCBkYXRhJCBpcyByaWdodCBqdXN0aWZpZWQgYW5kIHBhZGRlZCB3aXRoIHNwYWNlcy4NCg0KDQpTLkxJU1QuR0VUJChzdHJpbmckLGluZGV4KQ0KDQpGdW5jdGlvbiB0byByZXR1cm4gdGhlIGxpc3QgZW50cnkgcG9pbnRlZCB0byBieSBpbmRleC4gVGhlIGxpc3QgaXMgbm90IG1vZGlmaWVkLg0KQWxsIHN0cmluZyBsaXN0IG9wZXJhdGlvbnMgYXJlIGNoZWNrZWQgZm9yIG92ZXJmbG93IG9yIHN1YnN0cmluZ3MgdG9vIHdpZGUuDQoNCiYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsmIzYxOyYjNjE7JiM2MTsNCg0KQ29tbWFuZHMgZm9yIG51bWVyaWMgbWFuaXB1bGF0aW9uIGluIGEgc3RhY2suDQoNCk51bWVyaWMgT3BlcmF0aW9ucw0KJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7DQoNCk4uU1RBQ0suQ1JFQVRFIHN0cmluZyQsd2lkdGgNCg0KQ3JlYXRlIGEgc3RyaW5nIGFzIGEgaG9sZGVyIGZvciBtdWx0aXBsZSBzdWJzdHJpbmdzIG9mIG51bWVyaWMgdmFyaWFibGVzIGZvciB1c2UgYXMgYSBMYXN0IEluLCBGaXJzdCBPdXQgKExJRk8pIHN0YWNrLiBNYXhpbXVtIG51bWJlciBvZiBudW1lcmljIHZhbHVlcyBwdXNoZWQgb250byB0aGUgc3RhY2sgaXMgNjIuDQoNClJvdXRpbmUgcmV0dXJucyB3aXRoIHN0cmluZyQgc2V0IHVwIGFzIHRoZSBob2xkZXIgd2l0aCB0aGUgd2lkdGggaW4gY2hhcmFjdGVyIHBvc2l0aW9ucyAxIGFuZCAyIChhbHdheXMgNCkgYW5kIGEgcG9pbnRlciB0byB0aGUgYm90dG9tIG9mIHRoZSBzdGFjayArIDEgaW4gcG9zaXRpb25zIDMsIDQgYW5kIDUuDQoNCg0KTi5TVEFDSy5QVVNIIHN0cmluZyQsZGF0YQ0KDQpQdXNoIG51bWVyaWMgZGF0YSBvbnRvIHN0YWNrIHN0cmluZyQuDQoNCg0KTi5TVEFDSy5QT1Aoc3RyaW5nJCkNCg0KRnVuY3Rpb24gdG8gcG9wIHRoZSB0b3AgbnVtZXJpYyB2YWx1ZSBvZmYgdGhlIHN0YWNrIHN0cmluZyQuDQoNCg0KTi5TVEFDSy5BVkVSQUdFKHN0cmluZyQpDQoNCkZ1bmN0aW9uIHRvIHJldHVybiB0aGUgYXZlcmFnZSBvZiBhbGwgdGhlIG51bWVyaWNhbCB2YWx1ZXMgb24gdGhlIHN0YWNrLg0KQWxsIG9wZXJhdGlvbnMgYXJlIGNoZWNrZWQgZm9yIG92ZXJmbG93LCB1bmRlcmZsb3cgb3Igc3Vic3RyaW5ncyB0b28gd2lkZS4NCg0KPC9wcmU+PGJyIC8+RG91ZyBQYW5raHVyc3RkZKLbUpY14o+LfXLaVw+tHRTPGo9i" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="2068001F" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDQL44qqdCwK+z/TSAwK/z/TSAwK8z/TSAwK9z/TSAwKiz/TSAwK3j57gBwLB5ta/BQLA5ta/BQLD5ta/BQLC5ta/BQLd5ta/BQL9yYWiCbw1u42fZfwY1wSnlVOrAVwx926k" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Loginbdba.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fHistory.aspx%3fNS%3dMMBasic%26Page%3dMMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List%26Revision%3d00001" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <h1 class="pagetitlesystem">Page History: MMBasic - Create/Manipulate Stack, Queue or List</h1>
+    <p>Compare Page Revisions</p> 
+    <select name="ctl00$CphMaster$lstRev1" id="ctl00_CphMaster_lstRev1">
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <select name="ctl00$CphMaster$lstRev2" id="ctl00_CphMaster_lstRev2">
+	<option value="Current">Current</option>
+	<option value="4">4</option>
+	<option value="3">3</option>
+	<option value="2">2</option>
+	<option value="1">1</option>
+	<option value="0">0</option>
+
+</select>
+    <input type="submit" name="ctl00$CphMaster$btnCompare" value="Compare" id="ctl00_CphMaster_btnCompare" />
+    <br /><br />
+    
+    <table class="box" cellpadding="0" cellspacing="0"><tr><td><p style="text-align: center;"><b><a href="MMBasic.History1b5d.html?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&amp;Revision=00000">&laquo; Older Revision</a> - <a href="MMBasic.History3287.html?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List">Back to Page History</a> - <a href="MMBasic.History8964.html?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&amp;Revision=00002">Newer Revision &raquo;</a></b></p></td></tr></table><br /><h3 class="separator">Page Revision: 2017/08/03 11:36</h3><br /><pre>Stack, Queue and List Routines for Strings and Numeric values
+&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+Code is included in the zipped attachment
+
+String Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+S.STACK.CREATE string$,width
+
+Create a string as a holder for multiple substrings of width characters long for use as a Last In, 
+First Out (LIFO) stack. Maximum number of substrings is width x number of substrings =&lt; 250. 
+Eg. max 25 of 10 character longs strings. Strings of less than width are right justified and 
+padded with spaces.
+
+Routine returns with string$ set up as the holder with the width in character positions 1 and 2 (maximum 99) and a pointer to the bottom of the stack + 1 in positions 3, 4 and 5.
+
+
+S.STACK.PUSH string$,data$
+
+Push data$ onto stack string$. If data$ is shorter than width, data$ is right justified and padded with spaces.
+
+
+S.STACK.POP$(string$)
+
+Function to pop the top substring off the stack string$.
+
+All string stack operations are checked for overflow, underflow or substrings too wide.
+
+Queue Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+S.QUEUE.CREATE string$,width
+
+Create a string as a holder for multiple substrings of width characters long for use as a First In, First Out (FIFO) queue. Maximum number of substrings is width x number of substrings =&lt; 250. Eg. max 25 of 10 character longs strings. Strings of less than width are right justified and padded with spaces.
+
+Routine returns with string$ set up as the holder with the width in character positions 1 and 2 (maximum 99) and a pointer to the bottom of the stack + 1 in positions 3, 4 and 5.
+
+S.QUEUE.PUSH string$,data$
+
+Push data$ onto queue string$. If data$ is shorter than width, data$ is right justified and padded with spaces.
+
+S.QUEUE.PULL$(string$)
+
+Function to pop the bottom (first) substring off the queue string$.
+All string queue operations are checked for overflow, underflow or substrings too wide.
+
+List Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+S.LIST.CREATE string$,width
+
+Create a string as a holder for multiple substrings of width characters long for use as a random access list. Maximum number of substrings is width x number of substrings =&lt; 250. Eg. max 25 of 10 character longs strings. Strings of less than width are right justified and padded with spaces.
+
+Routine returns with string$ set up as the holder with the width in character positions 1 and 2 (maximum 99) and a pointer to the bottom of the list + 1 in positions 3, 4 and 5.
+
+
+S.LIST.ADD string$,data$
+
+Add data$ onto list string$ at the bottom. If data$ is shorter than width, data$ is right justified and padded with spaces.
+
+
+S.LIST.FILL string$,file$
+
+Add data$ onto list string$ at the bottom from text file file$. Text file file$ must have each entry of length width or less and terminated with CRLF.  CRLF is stripped prior to data$ being added to list. If data$ is shorter than width, data$ is right justified and padded with spaces.
+
+
+S.LIST.GET$(string$,index)
+
+Function to return the list entry pointed to by index. The list is not modified.
+All string list operations are checked for overflow or substrings too wide.
+
+&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;&#61;
+
+Commands for numeric manipulation in a stack.
+
+Numeric Operations
+&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+N.STACK.CREATE string$,width
+
+Create a string as a holder for multiple substrings of numeric variables for use as a Last In, First Out (LIFO) stack. Maximum number of numeric values pushed onto the stack is 62.
+
+Routine returns with string$ set up as the holder with the width in character positions 1 and 2 (always 4) and a pointer to the bottom of the stack + 1 in positions 3, 4 and 5.
+
+
+N.STACK.PUSH string$,data
+
+Push numeric data onto stack string$.
+
+
+N.STACK.POP(string$)
+
+Function to pop the top numeric value off the stack string$.
+
+
+N.STACK.AVERAGE(string$)
+
+Function to return the average of all the numerical values on the stack.
+All operations are checked for overflow, underflow or substrings too wide.
+
+</pre><br />Doug Pankhurst
+    
+    
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.History.aspx?Page=MMBasic.MMBasic-Create-Manipulate-Stack-Queue-or-List&Revision=00001 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 13:12:46 GMT -->
+</html>

@@ -1,0 +1,80 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.PWM-for-LED by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	PWM for LED - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.PWM-for-LED" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF6hI8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UFdNIGZvciBMRUQ8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzE5IDEwOjI2IGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogQ29udHJvbCwgRWxlY3Ryb25pY3MsIE1hdGhzPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PGJyIC8+PGI+UFdNVFJJLmJhczwvYj48YnIgLz48cHJlPg0KJyBBdXRob3ImIzU4OyBHcmFlbWUgQW5kZXJzb24NCicgRGF0ZSYjNTg7ICAgMjktT2N0LTIwMTINCicNCicgVmFyaWFibGUgcHVsc2Ugd2lkdGggZm9yIGZyb250IHBhbmVsIExFRA0KJyBMRUQgYW1wbGl0dWRlIGlzIGEgJ3RyaWFuZ2xlJyB3YXZlDQoNCg0KICBpU2Vjb25kcyA9IDEgJyBsZW5ndGggb2YgdGhlIHdob2xlIGN5Y2xlDQoNCiAgRG8NCiAgICBpU3RhdGUgPSAxDQoNCiAgICBGb3IgeSA9IDEgVG8gMg0KICAgICAgRm9yIHggPSAxIFRvIDUwICYjNDI7IGlTZWNvbmRzIFN0ZXAgaVNlY29uZHMNCiAgICAgICAgUGluKDApID0gaVN0YXRlICcgZmlyc3QgcGFydCBvZiBkdXR5IGN5Y2xlDQogICAgICAgIFBhdXNlIHggLyA1DQoNCiAgICAgICAgUGluKDApID0gQWJzKGlTdGF0ZSAtIDEpICcgcmV2ZXJzZSBwaW4gc3RhdGUNCiAgICAgICAgUGF1c2UgaVNlY29uZHMgJiM0MjsgMTAgLSB4IC8gNSAnIGhvbGQgZm9yIHJlbWFpbmRlciBvZiBkdXR5IGN5Y2xlDQogICAgICBOZXh0DQoNCiAgICAgICcgcmV2c2VyZSB0aGUgbG9naWMgZm9yIHRoZSBzZWNvbmQgdGltZSB0aHJvdWdoDQogICAgICBpU3RhdGUgPSBBYnMoaVN0YXRlIC0xKQ0KICAgIE5leHQNCiAgTG9vcA0KPC9wcmU+PGJyIC8+PGJyIC8+PGI+UFdNU0lOLmJhczwvYj48YnIgLz48cHJlPg0KJyBBdXRob3ImIzU4OyBHcmFlbWUgQW5kZXJzb24NCicgRGF0ZSYjNTg7ICAgMjktT2N0LTIwMTINCicNCicgVmFyaWFibGUgcHVsc2Ugd2lkdGggZm9yIGZyb250IHBhbmVsIExFRA0KJyBMRUQgYW1wbGl0dWRlIGlzIGEgU2luZSB3YXZlDQoNCg0KICBpU2Vjb25kcyA9IDEgJyBsZW5ndGggb2YgdGhlIHdob2xlIGN5Y2xlDQoNCiAgRG8NCiAgICBpU3RhdGUgPSAxDQoNCiAgICBGb3IgeSA9IDEgVG8gMg0KICAgICAgRm9yIHggPSAwIFRvIDkwDQogICAgICAgIFBpbigwKSA9IGlTdGF0ZSAnIGZpcnN0IHBhcnQgb2YgZHV0eSBjeWNsZQ0KICAgICAgICBQYXVzZSBTaW4oeCYjNDI7UGkvMTgwKSAmIzQyOyBpU2Vjb25kcyAmIzQyOyA1DQoNCiAgICAgICAgUGluKDApID0gQWJzKGlTdGF0ZSAtIDEpICcgcmV2ZXJzZSBwaW4gc3RhdGUNCiAgICAgICAgUGF1c2UgKDEtU2luKHgmIzQyO1BpLzE4MCkpICYjNDI7IGlTZWNvbmRzICYjNDI7IDUgJyBob2xkIGZvciByZW1haW5kZXIgb2YgZHV0eSBjeWNsZQ0KICAgICAgTmV4dA0KDQogICAgICAnIHJldnNlcmUgdGhlIGxvZ2ljIGZvciB0aGUgc2Vjb25kIHRpbWUgdGhyb3VnaA0KICAgICAgaVN0YXRlID0gQWJzKGlTdGF0ZSAtMSkNCiAgICBOZXh0DQogIExvb3ANCg0KPC9wcmU+ZGS12NYt7I+KA5CH+4a5B3F1UT50Nw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">PWM for LED</h1><small>Modified on 2016/12/19 10:26 by Administrator &mdash; Categorized as: Control, Electronics, Maths</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><b>PWMTRI.bas</b><br /><pre>
+' Author&#58; Graeme Anderson
+' Date&#58;   29-Oct-2012
+'
+' Variable pulse width for front panel LED
+' LED amplitude is a 'triangle' wave
+
+
+  iSeconds = 1 ' length of the whole cycle
+
+  Do
+    iState = 1
+
+    For y = 1 To 2
+      For x = 1 To 50 &#42; iSeconds Step iSeconds
+        Pin(0) = iState ' first part of duty cycle
+        Pause x / 5
+
+        Pin(0) = Abs(iState - 1) ' reverse pin state
+        Pause iSeconds &#42; 10 - x / 5 ' hold for remainder of duty cycle
+      Next
+
+      ' revsere the logic for the second time through
+      iState = Abs(iState -1)
+    Next
+  Loop
+</pre><br /><br /><b>PWMSIN.bas</b><br /><pre>
+' Author&#58; Graeme Anderson
+' Date&#58;   29-Oct-2012
+'
+' Variable pulse width for front panel LED
+' LED amplitude is a Sine wave
+
+
+  iSeconds = 1 ' length of the whole cycle
+
+  Do
+    iState = 1
+
+    For y = 1 To 2
+      For x = 0 To 90
+        Pin(0) = iState ' first part of duty cycle
+        Pause Sin(x&#42;Pi/180) &#42; iSeconds &#42; 5
+
+        Pin(0) = Abs(iState - 1) ' reverse pin state
+        Pause (1-Sin(x&#42;Pi/180)) &#42; iSeconds &#42; 5 ' hold for remainder of duty cycle
+      Next
+
+      ' revsere the logic for the second time through
+      iState = Abs(iState -1)
+    Next
+  Loop
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.PWM-for-LED by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:22:41 GMT -->
+</html>

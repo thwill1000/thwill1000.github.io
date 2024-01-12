@@ -1,0 +1,427 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Some-Hints-Tips-for-writing-efficient-code.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Some Hints & Tips for writing efficient code. - Fruit Of The Shed
+</title><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Some-Hints-Tips-for-writing-efficient-code&amp;NS=MMBasic&amp;NoRedirect=1" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Loginfe51.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dSome-Hints-Tips-for-writing-efficient-code%26NS%3dMMBasic%26NoRedirect%3d1" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBf63524b4df3e46d58daced6fab3b588b() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBf63524b4df3e46d58daced6fab3b588b').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBf63524b4df3e46d58daced6fab3b588b" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBf63524b4df3e46d58daced6fab3b588b(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Some-Hints-Tips-for-writing-efficient-code266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History4339.html?Page=MMBasic.Some-Hints-Tips-for-writing-efficient-code">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Some Hints & Tips for writing efficient code.
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print4339.html?Page=MMBasic.Some-Hints-Tips-for-writing-efficient-code" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2021/12/12 10:24
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPages6c47.html?Cat=MMBasic.Program%20Flow" title="Program Flow">Program Flow</a>, <a href="MMBasic.AllPages0409.html?Cat=MMBasic.Program%20Management" title="Program Management">Program Management</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f4b6468f1-da81-4be4-8120-bd3efb5a80f9" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f4b6468f1-da81-4be4-8120-bd3efb5a80f9');"><a href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a></div><div id="fe172bcf1-b7f0-4670-9233-647d084dcc72" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fe172bcf1-b7f0-4670-9233-647d084dcc72');"></div><div id="f1139c124-9b7c-4165-8cec-77e04662ba52" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f1139c124-9b7c-4165-8cec-77e04662ba52');"><a href="MMBasic.RC4-Encryption-and-Decryption-Functions.html" title="RC4 Encryption and Decryption Functions">RC4 Encryption and Decryption Functions</a><a href="MMBasic.Base64-Mime-Encode-and-Decode-Functions.html" title="Base64 Mime Encode and Decode Functions">Base64 Mime Encode and Decode Functions</a></div><div id="fd2ae610b-5b77-43a2-a8fc-aef2f5f18904" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fd2ae610b-5b77-43a2-a8fc-aef2f5f18904');"></div><div id="fc0d4cb8b-ab39-4e9d-96ae-98657413e17b" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fc0d4cb8b-ab39-4e9d-96ae-98657413e17b');"><a href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">Sort algorithms - A comparison</a></div><div id="s94afb805-0dac-49a3-8973-792848e10ce9" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s94afb805-0dac-49a3-8973-792848e10ce9');"><a href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a></div><div id="sdba8947b-66f3-4783-90b7-c8d718c1dc12" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sdba8947b-66f3-4783-90b7-c8d718c1dc12');"></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.Small-Strings-part-of-the-original-MMBasic-library.html" title="Small Strings (MMBasic)">Small Strings (MMBasic)</a> &raquo; <a href="MMBasic.Micromite-SMS-Text-Gateway.html" title="SMS (Text) Gateway with MicroMite  (MMBasic)">SMS (Text) Gateway with MicroMite  (MMBasic)</a> &raquo; <b><a href="MMBasic.Some-Hints-Tips-for-writing-efficient-code.html" title="Some Hints & Tips for writing efficient code. (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's94afb805-0dac-49a3-8973-792848e10ce9', this);" id="lnks94afb805-0dac-49a3-8973-792848e10ce9" onmouseout="javascript:return __HideDropDown('s94afb805-0dac-49a3-8973-792848e10ce9');">Some Hints & Tips for writing efficient code. (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.Shell-Sort.html" title="Shell Sort (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fc0d4cb8b-ab39-4e9d-96ae-98657413e17b', this);" id="lnkfc0d4cb8b-ab39-4e9d-96ae-98657413e17b" onmouseout="javascript:return __HideDropDown('fc0d4cb8b-ab39-4e9d-96ae-98657413e17b');">Shell Sort (MMBasic)</a> &raquo; <a href="MMBasic.SHIFT-or-ROTATE-an-array-of-integers.html" title="SHIFT or ROTATE an array of integers (MMBasic)">SHIFT or ROTATE an array of integers (MMBasic)</a> &raquo; <a href="MMBasic.Short-range-radio-network-not-WiFi-SLAVE-module-Uses-cheapie-433MHz-modules-or-HC-12.html" title="Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)">Short range radio network (not WiFi). SLAVE module. Uses cheapie 433MHz modules or HC-12 (MMBasic)</a> &raquo; <a href="MMBasic.Sign-Extend-an-Integer.html" title="Sign Extend an Integer (MMBasic)">Sign Extend an Integer (MMBasic)</a> &raquo; <a href="MMBasic.Simple-Decimal-to-BCD-conversion-function.html" title="Simple Decimal to BCD conversion function (MMBasic)">Simple Decimal to BCD conversion function (MMBasic)</a> &raquo; <a href="MMBasic.Simple-Encryption.html" title="Simple Encryption (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f1139c124-9b7c-4165-8cec-77e04662ba52', this);" id="lnkf1139c124-9b7c-4165-8cec-77e04662ba52" onmouseout="javascript:return __HideDropDown('f1139c124-9b7c-4165-8cec-77e04662ba52');">Simple Encryption (MMBasic)</a> &raquo; <a href="MMBasic.sinput-String-input-with-edit-functions.html" title="sinput - String input, with edit functions (MMBasic)">sinput - String input, with edit functions (MMBasic)</a> &raquo; <a href="MMBasic.Small-Strings-part-of-the-original-MMBasic-library.html" title="Small Strings (MMBasic)">Small Strings (MMBasic)</a> &raquo; <a href="MMBasic.Micromite-SMS-Text-Gateway.html" title="SMS (Text) Gateway with MicroMite  (MMBasic)">SMS (Text) Gateway with MicroMite  (MMBasic)</a> &raquo; <b><a href="MMBasic.Some-Hints-Tips-for-writing-efficient-code.html" title="Some Hints & Tips for writing efficient code. (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f4b6468f1-da81-4be4-8120-bd3efb5a80f9', this);" id="lnkf4b6468f1-da81-4be4-8120-bd3efb5a80f9" onmouseout="javascript:return __HideDropDown('f4b6468f1-da81-4be4-8120-bd3efb5a80f9');">Some Hints & Tips for writing efficient code. (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		Although there is merit in the argument that if you need speed, don't use an interpreted language, any code you write that is intended to be reasonably long-lived (i.e. you actually save it with the intention of using it again some day) should be honed to be efficient.<br /><br />Much of what follows is idiosyncratic, fairly heavily pedantic and not terribly important but it scratches my efficiency itch. I come from a Z80/68000 background and older CPUs were starved of memory & power and it taught me to be frugal. Not much of the following really applies to compiled code and modern CPUs but there are elements of "sanitary" code development that will make you feel warm and fuzzy all over. It is worth mentioning that modern code suffers from a phenomenon colloquially known as "bloat" - this is largely the effect of developers not writing compactly (or even sloppily) because they don't have to care in these days of immensely fast multi-core CPUs and gigabytes of memory. Am I being too hard on them? Perhaps. In the days of slower systems, you could write something and see that it just wasn't good enough and so you'd have several stabs at it each time getting better (hopefully). Modern machines are so fast that even garbage runs in a twinkle so maybe developers don't get that kick in the pants when something they have written clearly runs like a three-legged donkey - the impetus to write excellent code just isn't there now. Good for the accountants. Personally, I get a buzz out of making code as good as I think I can get it, maybe revisiting code months later just for the mental exercise... Old habits and all that.<br /><br />There are plenty of methods - some open to discussion, that can help. These range from the simple to downright cryptic, and it's not a new concept. Simple tweaks in the way you do things can shave quite a bit off the cycle times for your code - and that will be the over-arcing theme of these hints; to get code as quick and compact as possible, bearing in mind also that small isn't always fast... we'll come to that. <br /><br />This article is aimed at the MicroMite range of micro-controllers but the ideas are fully migrate-able across all the MMBasic platforms and beyond. On the smaller micromites, some tasks can be a big ask for an interpreter at 48MHz (or slower). Some of the following tips got an RC4 encryption algorithm usable - it was struggling to do <code>un-encrypt >> process >> encrypt</code> in under 1.5 seconds. It's still tight for long strings but it's usable now. So these tips can help and even have proved vital in some instances - do not dismiss as mere pedantry too lightly.<br /><br />This isn't an exhaustive list; more a collection of hints and suggestions.<br /><br /><h4 class="separator">"Heal thyself, physician"<a class="headeranchor" id="Heal_thyself_physician_0" href="#Heal_thyself_physician_0" title="Link to this Section">&#0182;</a></h4>Many examples of my own code published in this library may not adhere too closely to these guidelines. This is likely for two main reasons:<br /><ol><br /><li>These habits have evolved since I started publishing and are part of my own development.</li><br /><li>I have not honed the code too much so as to leave it easily understandable.</li><br /></ol><br />Often when I use the code in anger, it will bear just a passing resemblance to any in a wiki article here.<br /><br />Discuss, critique, contribute.<br /><h1 class="separator"> </h1><br /><b>Keep your variable names relevant and punchy</b><br />Self documenting code is greatly helped by having variable names that describe what they are used for and it's a great idea... but... it can be over used, no-one will mind if you call a general purpose counter "x". Consider the following:<br /><pre>For MyBigLoopCountVariable = 1 To 10
+Print MyBigLoopCountVariable
+Next</pre><br />doesn't improve clarity over<br /><br /><pre>For x=1 To 10
+Print x
+Next</pre><br />Not to mention the smaller code footprint.<br /><br />Short variable names are fine where applicable (and a tiny bit faster to parse too, so will shave off a few mS in tight loop with thousands of iterations), but the following is crying out for good variable names.<br /><pre>a(m,j)=c/d+1</pre><br />looks a lot better as<br /><pre>ColorMap(current,pointer)=OldColVal/daynum+1</pre><br />you stand a good chance of understanding what that line is doing just by looking at it.<br /><br /><b>Some insight into variable names</b><br />In tight/repetitive loops where timing is important, it helps to understand how MMBasic defines and accesses variables - it might help shave a few microseconds off each time through: MMBasic stores all variables on "the heap" as they are defined. There is no ordering or reserved variable space - each has to be searched for, every time you use it (BBC Basic had 26 reserved spaces for the 26 integer variables <code>a-z</code> which meant it didn't have to search for them it "instinctively knew" where each was - this was a clever accelerant for the interpreter). With MMBasic, you can leverage the internal mechanism a tad by defining commonly used variables before obscure/rarely accessed ones, the most commonly used ones first, in the order they are used if you can. E.g. If you have a variable <code>n</code> that is used in counting loops everywhere in your code, define it early on so the interpreter doesn't have a hard time finding it when it needs to. Conversely, a variable you use twice in some bit of code that executes once every 10 minutes, define it last maybe so MMBasic doesn't have to skip over it in its search for <code>n</code> all the time. MMBasic parses variable names 4 characters at a time so there is no reason to arbitrarily reduce variable names unless you want to (to save code space?), e.g. to use <code>t</code> instead of <code>trev</code>, but it's a big reason not to use <code>trevor</code> (it needs two rounds of parsing) unless the longer name brings something to your code.<br /><h1 class="separator"> </h1><br /><b>Don't calculate things twice - use a variable</b><br />If you make the processor do some work that you are going to need later, save the result and don't repeat the effort. The following forces some string slicing and evaluation to be done twice.<br /><pre>If Val(Mid$(a$,2,2))=17 Then
+Print "The value is ";Val(Mid$(a$,2,2)); " in that position
+EndIf</pre><br />Variables are much faster than evals (ish... see below) Better to have<br /><br /><pre>x=Val(Mid$(a$,2,2))
+If x=17 Then
+Print "The value is ";x; " in that position
+EndIf</pre><br /><b>Wait! Don't use a variable</b><br />Consider this in a Sub or Function:<br /><br /><pre>
+Local Integer x
+x=t&lt;&lt;b</pre><br />... and then using x in the places where you had the calculation, is definitely slower than simply using<br /><pre>t&lt;&lt;b</pre><br />if only a couple of times in the subject code because the overhead of variable management doesn't really play-off well against the speed of simple integer maths done once or twice.<br /><br />The point I am trying to get across is; culture the mindset to play with the options and see which gives most benefit, don't necessarily accept the first thing  that you think of for anything more than 'quick scribble' code. Check out the latest version of the <a class="pagelink" href="MMBasic.Bit-Manipulation-Functions.html" title="Bit Manipulation Functions">Bit Manipulation Functions</a> to see what I mean here.<br /><br /><b>On Absolutes and CONSTs</b><br />While on the subject of variables, don't forget CONSTants either - handled just like variables but obviously you can't change the contents. It takes a lot less effort to look up a value from a CONST than for the parser to work it out from your code, so try not to use absolute values if you can avoid it. Another tangent! when specifying absolute values, consider the parser... Us humans work really nicely in base 10, but processors don't. Any absolute value has to be converted into CPU binary each time it is encountered. Take a look at this silly code:<br /><br /><pre>
+ dim integer n
+ 
+ timer=0
+ do 
+  n=n+1
+  if n=100000 then exit do
+ loop
+ ? timer
+</pre><br />Now consider where n is incremented. 1 is the same in all bases, but you can shave a lump off the increment by specifying a computer friendly base (even given the extra two bytes being interpreted). Here are some timings for various bases in just that one tiny line:<br /> 18268mS with n=n+1<br /> 17884mS with n=n+&h1<br /> 17841mS with n=n+&b1<br /> 17834mS with n=n+&o1<br />all the above mean the same thing but you can shave almost a second off that loop with a radix (why octal is marginally the fastest I can't say, but you get my point).<br /><br />This isn't the end though; that comparison line duffs-up the parser as well. Instead of using an absolute (even with a radix), how about using a CONST for the comparison? They are already stored in binary and very much faster to use. Going back to our <code>n=n+1</code> worst case above, by using a CONST, we shave almost 5 seconds off the same loop! Just 13839mS with <code>CONST c=100000</code> and then later <code>if n=c</code> roughly 25% faster. You could go even further and use another CONST for the increment value - I'll leave you to experiment with that. <br /><br /><b>In summary:</b> Try not to use absolutes - use CONSTs unless you have a good reason and if you want/have to use absolutes, consider specifying them in different radices to shave off valuable mS. The key is balance: All of the above is largely meaningless outside of bits of code that run (or get called) over and over. And, there isn't much point using a radix for the CONST (unless it adds something). It is only executed once in your code and I doubt you'll notice a few mS saved at boot time.<br /><br /><h1 class="separator"> </h1><br /><b>Multiple tests in IF statements</b><br />The If statement could be the arguably most used construct. It makes a decision and allows code to "look" intelligent by reacting to different situations (the much vaunted AI is largely just a mass of machine generated IF statements). The statement evaluates an argument (just some data passed to something else) and boils it down to a 1 or 0... yes or no. Often time, the AND and OR operators are used to make the tests deeper but they can complicate a simple test and slow down the decision making. Try to make the arguments "aware" of what they are working towards. Consider the example we have to test the condition of a switch but only if it is daytime. We might write something like:<br /><pre>If DayTime=1 And SwitchPressed=1 Then...</pre><br />but remember the whole argument has to be evaluated. The switch is tested as well as seeing if it is daytime. In reality, if it isn't daytime, we don't give a hoot about the switch so you can help the parser by splitting things down. Consider:<br /><pre>If DayTime Then
+    If SwitchPressed Then</pre><br />Yes it takes more space in your code, but it will be a little faster. If this is executed hundreds of times a minute, all those savings add up. This method allows the parser to immediately skip the whole testing of the switch state if it is night time. Note also, we don't need to test for <code>=1</code>. The parser is a trusting soul and it believes everything is true unless you say otherwise, so "<code>If DayTime Then</code>" is functionally identical to "<code>If DayTime<>0 Then</code>" but a little bit faster because no comparison (to 1) is made. Worth mentioning that every number except zero is true so you can use this trick for any non-zero condition.<br /><br />While we are at it, do the quickest, simplest, most-unlikely things first. Which takes more time to execute? Which is the least likely thing to happen that can quickly disqualify the rest of the test? etc...<br /><br />As an aside, this last aspect is the subject of an entire IT effort when streamlining databases; Consider a hypothetical world population database with the names and nationalities of every human in it (massive assumptions made to keep the numbers simple). Suppose now, we want a list of every Chinese male. Which of the two "queries" below is the better? By better I mean, fastest - the lowest "cost" to the database engine.<br /><br /><pre> Select NAME From POPULATION Where SEX='M' And NATIONALITY='CH';</pre><br />or<br /><br /><pre> Select NAME From POPULATION Where NATIONALITY='CH' And SEX='M';</pre><br />Both results are the same, but the way most databases work is through reducing sets. It starts out with a big block of data, then strips away the stuff it's not interested in to result in another block... and so on, until you end up with the subset you are interested in. The first searches our DB of 7 Billion records for all the males, (we'll assume it's 50%) and then has to search 3.5 Billion records to determine the Chinese members. 10.5 Billion records examined. The second example searches 7 Billion records, true, but after it only has to search a further 1 Billion records - 8 Billion records total. The first part of the search is unavoidable, but the second dispensed with 70% of the work - just by thinking about the task at hand and shaping the "IF" accordingly which; represents a saving of almost 25% over the entire workload. This is a very blunt example but I hope it illustrates my point - get rid of the most obvious stuff first and deal with the intricacies after.<br /><h1 class="separator"> </h1><br /><b>Testing for permitted characters in a string</b><br />So you are asking the user to make a choice... Yes, No or Cancel... you might prompt them to enter only Y, N or C. The following code is a bit contrived but proves the point. By the way, don't use INPUT for this type of thing. It's two key-presses instead of one and is "blocking" - your program loses control while waiting inside the Input statement. INPUT is fine for scribble code but it is telling when used in a finished item.<br /><pre>Do
+a$=Inkey$
+Loop Until a$="Y" Or a$="y" Or a$="N" Or a$="n" Or a$="C" Or a$="c"</pre><br />OK, that is <i>very</i> contrived and we all know how to use UCase$ (right?) so you might write it as:<br /><br /><pre>Do
+a$=UCase$(Inkey$)
+Loop Until a$="Y" Or a$="N" Or a$="C"</pre><br />Happy with that? Remember what we said above about all the factors in an argument having to be evaluated. True if you are waiting for the user, the processor is likely twiddling its thumbs so the delay in processing is unimportant. But we are looking for efficiency. How about:<br /><br /><pre>Do
+a$=UCase$(Inkey$)
+Loop Until Instr(" YNC",a$)&gt;1</pre><br />This is ultra efficient, tiny code and only a single evaluation. It is also dead easy to add other options... you just put them in the test string in the Instr() function. It works by testing any returned character against a list of allowed ones. The empty string, "" (i.e. no key pressed) is always position one and so is the first non-empty character. So we put a dummy character in that position of our test string - the space, the real meat starts at position two. So if we return a value greater than 1, we have at least character two typed on the keyboard. Using Instr to return the number of the character is very fast because we are using the "primitives" of the language to do the parsing rather than writing it ourselves - you are going behind the interpreters back almost... which is what you should be doing as much as possible if you want fast code.<br /><br /><b>A quick word about Inkey$</b> It gets the first key pressed from the buffer. It is important to remember that key is gone once Inkey$ has taken it. Notice we assigned the value to a variable? why wouldn't this be OK?<br /><pre>If Ucase$(Inkey$)="Y" or Ucase$(Inkey$)="N"</pre><br /><h1 class="separator"> </h1><br /><b>Don't put comments and white-space in the execution path unless you have to</b><br />I am a great believer in commenting and indenting your code to make it easy to follow. In a compiled/assembled language, it really doesn't matter where that happens, but in an interpretted language like MMBasic, all that stuff has to be skipped over to get to the code - this takes time (consequently, in the divisive argument of Spaces vs TABs; I am firmly in the TABs camp as it reduces code size and the number of bytes to skip). Consider the following<br /><br /><pre>For n=1 To 1000
+'does something
+a=a+1
+Next</pre><br />looks innocuous enough, but each time through that loop, the comment must be skipped over and that takes time. This is better but functionally identical<br /><br /><pre>'does something
+For n=1 To 1000
+a=a+1
+Next</pre><br />On the subject of comments, keep then succinct. Only where necessary - they take up space and slow code wherever they are. try to avoid white-space before or after a ' unless it helps in some way.<br /><h1 class="separator"> </h1><br /><b>Don't make Subs or Functions for things you do only once if you can avoid it</b><br />Each time you branch to a Sub program or Function, it takes some time to set up the working environment - despite any parsing of the code to jump there, do some work, tidy up and come back.<br /><br />If you use a piece of code only once, put it in the main stream of the code unless it really helps, i.e. it is only executed once in a while or the code depreciates the readability of the main stream - it is easy to isolate it and make it into a Sub later if you need to e.g. you end up calling it from somewhere else as well or it just starts to "fog-up" the program flow.<br /><br />Consider if you are writing a sort algorithm that needs to swap two variables. This will likely be called thousands, if not tens of thousands of times on a reasonably sized list. The swap is only performed in one place. Yes it looks nice to have a Swap function in your code (MMBasic has no native Swap), if each time you call it, you waste just 500uS with all the house-keeping, over 2 thousand swaps that whole sort routine is now running a second slower than it might. Do you think that 2000 is an unrealistic number just to prove a point and a lot of swaps? In a bubble sort, a list of 100 items in worst case order will take 5000+ swaps to sort - just 100 items! At 500uS per swap, you have just added 2<sup>1</sup>/<sub>2</sub> seconds to the sort time by branching out to a nice Swap function - and that doesn't include *any* computation towards the task.<br /><h1 class="separator"> </h1><br /><b>A moment of hypocrisy</b><br />When I publish my work (at least only snippets, functions etc), I really try not to use cryptic code but there are times when a simple Peek or Poke can really make a big difference.<br /><br />The following are two very specific alternatives that will shave a good portion off your string slicing.<br /><br />When you are looking for the ASCII codes progressively through a string. Consider this:<br /><br /><pre>
+for n=1 to len(a$)
+x=Asc(Mid$(a$,n,1))
+Next</pre><br />fairly obvious what we are doing, obtaining the character code for each single character in the string. Understanding that strings are simply long lists of these ASCII codes in the first place helps to derive a faster way of dealing with this:<br /><br /><pre>
+for n=1 to len(a$)
+x=Peek(VAR a$,n)
+Next</pre><br />I know I said I wanted to avoid cryptic, but this simple Peek directly returns the <i>number</i> of the pointed character - precisely what you want and exactly the same funtionality as the first example, but only a single function and reduced complexity for the evaluator. In fact, it's about 16% faster; With a 255 character string, a 48MHz MicroMite take 36mS and 30mS respectively. Dropping the CPU to 5MHz exaggerates the difference - 376mS and 300mS. A very healthy acceleration, but wait there's more...<br /><br />When shortening a variable from the left, it would be very reasonable to have:<br /><pre>a$=Left$(a$,128)</pre><br />But knowing the structure of strings (and that offset 0 is the length byte) you could easily have<br /><pre>Poke VAR a$,0,128</pre><br />This simple tweak is an amazing 50% faster because it eliminates the string evaluator entirely. In a loop of 1000 iterations on a 48MHz MicroMite, the timings were 146mS and 98mS respectively.<br /><br />The above two examples are reasonably hardcore and very specific to MMBasic, but they work across all current flavours of MMBasic (so compatibility is good) and pay immediate dividends. You are also getting used to some of the more "low-level" functionality. Legibility can be hard to maintain in such circumstances and I would encourage you to avoid it where speed is not an issue, but if it gets you thinking then my work is done.<br /><br />There are many more "super-tweaks" in this vein, hopefully these two inspire you to explore a bit. Play around with the low-level stuff and have fun learning the inner workings and getting slick code in the process - even though it may not be terribly readable. <b>Save your program before running it because this stuff can cause processor exceptions</b>.<br /><h1 class="separator"> </h1><br /><br /><b>Stare at your code</b> Re-read it, polish it, streamline it. Be proud that it is as efficient as you can get it but don't be resentful when someone shows you a better way. That is free learning! Remember: efficiency is what you determine it to be, not just small code, not just fast - it has to be a balance of the two that you like and can give an approving nod to.<br /><br />Consider a Cosine calculation. You could write a tiny routine that uses Chebyshev polynomials to calculate the Cos of any angle. It will be small - but it will be slooooow (comparatively speaking). If you analyse the requirement, you might find that you only need to calculate to a tenth of a degree... Now you could make up a table of 3600 (10 steps for each of 360 degrees) with all the values for the relevant Cosine and simply look the result up by jumping to the right point in the table: the input degrees, multiplied by 40 (10 for each degree and 4 for each floating point number) and added to the place where your table starts and you have your answer. No calculation at all. Super fast... but also super big; 14.4K of memory taken up. You could reduce this by 3/4 by performing some massaging of the input angle based on its quadrant but now you are complicating things so the efficiency of speed might no longer justify the inefficiency of memory.<br /><br />This, incidentally, is the eternal conundrum of computing; you can have it big and fast or small and slow.<br /><h1 class="separator"> </h1><br />Probably more to come...
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Some-Hints-Tips-for-writing-efficient-code.ashx?NoRedirect=1 by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:53:32 GMT -->
+</html>

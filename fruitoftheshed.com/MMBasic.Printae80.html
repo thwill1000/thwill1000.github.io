@@ -1,0 +1,149 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.LINE-INPUT-with-timeout-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	LINE INPUT with timeout - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.LINE-INPUT-with-timeout-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFvi08aDEgY2xhc3M9InBhZ2V0aXRsZSI+TElORSBJTlBVVCB3aXRoIHRpbWVvdXQ8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE2LzEyLzIzIDIzOjMzIGJ5IEFkbWluaXN0cmF0b3IgJm1kYXNoOyBDYXRlZ29yaXplZCBhczogUHJvZ3JhbSBGbG93LCBTdHJpbmdzLCBfTElCIE9yaWdpbmFsIE1NQmFzaWM8L3NtYWxsPjxiciAvPjxiciAvPjxoMiBjbGFzcz0ic2VwYXJhdG9yIj5UaGlzIG1vZHVsZSBpcyBwYXJ0IG9mIHRoZSBvcmlnaW5hbCBNTUJhc2ljIGxpYnJhcnkuIEl0IGlzIHJlcHJvZHVjZWQgaGVyZSB3aXRoIGtpbmQgcGVybWlzc2lvbiBvZiBIdWdoIEJ1Y2tsZSBhbmQgR2VvZmYgR3JhaGFtLiBCZSBhd2FyZSBpdCBtYXkgcmVmZXJlbmNlIGZ1bmN0aW9uYWxpdHkgd2hpY2ggaGFzIGNoYW5nZWQgb3IgaXMgZGVwcmVjYXRlZCBpbiB0aGUgbGF0ZXN0IHZlcnNpb25zIG9mIE1NQmFzaWMuPGEgY2xhc3M9ImhlYWRlcmFuY2hvciIgaWQ9IlRoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgaHJlZj0iI1RoaXNfbW9kdWxlX2lzX3BhcnRfb2ZfdGhlX29yaWdpbmFsX01NQmFzaWNfbGlicmFyeV9JdF9pc19yZXByb2R1Y2VkX2hlcmVfd2l0aF9raW5kX3Blcm1pc3Npb25fb2ZfSHVnaF9CdWNrbGVfYW5kX0dlb2ZmX0dyYWhhbV9CZV9hd2FyZV9pdF9tYXlfcmVmZXJlbmNlX2Z1bmN0aW9uYWxpdHlfd2hpY2hfaGFzX2NoYW5nZWRfb3JfaXNfZGVwcmVjYXRlZF9pbl90aGVfbGF0ZXN0X3ZlcnNpb25zX29mX01NQmFzaWNfMCIgdGl0bGU9IkxpbmsgdG8gdGhpcyBTZWN0aW9uIj4mIzAxODI7PC9hPjwvaDI+PGI+Tm90ZTwvYj46IEFueSByZXF1aXJlZCBmaWxlKHMpIGFyZSBhdmFpbGFibGUgaW4gdGhlIGF0dGFjaG1lbnRzIHRhYiAodG9wIHJpZ2h0KS48YnIgLz48YnIgLz48YnIgLz48Yj5HZXRpbi5iYXM8L2I+PGJyIC8+PHByZT4NCidUSU1FUiBDT05UUk9MTEVEIExJTkUgSU5QVVQgUk9VVElORQ0KJ0J5IEdyb2dzdGVyIG9mIFRCUyBmb3J1bXMgMjAxMywgd2l0aCBjdXJzb3INCidjb250cmlidXRpb25zIGJ5IFRhc3N5SmltIG9mIFRCUyBmb3J1bXMuDQoNCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Ow0KDQonVGhpcyBjb2RlIGNhbiBiZSBjYWxsZWQgYXMgYSBzdWJyb3V0aW5lIHdoZW5ldmVyIHlvdSBuZWVkDQondGhlIGVxdWF2YWxlbnQgb2YgTElORSBJTlBVVCwgYnV0IHdpdGggYSB0aW1lb3V0IGZlYXR1cmUuDQonVGhpcyByb3V0aW5lIHdpbGwgYWxzbyBpZ25vcmUgYW5kIGV4aXQgd2l0aCBhbnl0aGluZyBPVEhFUg0KJ3RoZW4gbnVtYmVycyBhbmQgbGV0dGVycywgc28gc3BlY2lhbCBjaGFyYXRlcnMgZXRjLCB3aWxsIGNhdXNlDQondGhlIHN1YnJvdXRpbmUgdG8gZW5kLiAgQSBmbGFnIGlzIHNldCBkdXJpbmcgdGhpcyBwcm9jZXNzLCBzbyB0aGF0DQonZXhpdCBmcm9tIGlsbGVnYWwga2V5cHJlc3NlcyBjYW4gYmUgZGV0ZWN0ZWQgYnkgdGhlIG1haW4gcHJvZ3JhbS4NCg0KJ1RoZSBjb2RlIHdhcyBvcmlnaW5hbGx5IGRldmVsb3BlZCBmb3IgdXNlIGluIGEgbWVudS1kcml2ZW4gcHJvZ3JhbQ0KJ3doZXJlIGl0IHdhcyBuZWNlc3NhcnkgdGhhdCBpZiBubyBrZXkgd2FzIHByZXNzZWQgd2hlbiBpbiBhbnkNCidMSU5FIElOUFVUIHR5cGUgY29tbWFuZCwgdGhlIHJvdXRpbmUgY291bGQgYXV0by1leGl0IGJhY2sgdG8gdGhlDQonbWFpbiBtZW51IGlmIHRoZSBzZXQgdGltZSBmb3IgZW50ZXJpbmcgdGhlIGRhdGEgaGFkIGV4cGlyZWQuDQoNCidUaGUgcm91dGluZSBhbHNvIGhhcyB0aGUgYWJpbGl0eSB0byBzaG93IHRoZSBvdXRwdXQgc3RyaW5nIGFzIGl0DQonaXMgYmVpbmcgdHlwZWQsIG9yIHRvIHN1cHByZXNzIG91dHB1dHR0aW5nIHRoZSBrZXlzdHJva2VzLCB3aGljaA0KJ2lzIHZlcnkgaGFuZHkgaWYgeW91IGFyZSB3YW50aW5nIHRoZSB1c2VyIHRvIGVudGVyIGEgcGFzc3dvcmQuDQoNCidCYWNrc3BhY2UgaXMgZnVsbHkgcHJvY2Vzc2VkLCBhbmQgYW55IGVycm9yIGluIHR5cGluZyB3aGVyZSB0aGF0DQonaXMgY29ycmVjdGVkIHVzaW5nIHRoZSBiYWNrc3BhY2Uga2V5LCBpcyBhbGxvd2VkIGZvciwgc28gdGhhdA0KJ29ubHkgdGhlIHdhbnRlZCBvdXRwdXQgaXMgdGhlIHJlc3VsdC4NCg0KJ1NldmVyYWwgdmFyaWFibGVzIGFyZSBwYXNzZWQgdG8gdGhlIHJvdXRpbmUgd2hlbiBpdCBpcyBjYWxsZWQsIGFuZA0KJ3Jlc3VsdGluZyBmbGFncyBldGMgYXJlIGFsc28gc2V0IG9yIHJlc2V0IGR1cmluZyB0aGUgcm91dGluZS4NCidUaGVyZSBpcyBubyBhbGxvd2FuY2UgZm9yIGluY29ycmVjdCBkYXRhIGluIHRoZSB2YXJpYWJsZXMgcGFzc2VkDQondG8gdGhlIHJvdXRpbmUgd2hlbiBpdCBpcyBjYWxsZWQuDQoNCidUbyBjYWxsIHRoZSByb3V0aW5lLCB1c2UgdGhlIGxpbmUgJ0dFVElOIChDWCxDWSxUUCxTSyknIGluDQoneW91ciBjb2RlKHdpdGhvdXQgcXVvdGVzLCBuYXR1cmFsbHkpLCB3aGVyZSB5b3Ugd2FudCB0aGUNCidpbnB1dCBmcm9tIHRoZSB1c2VyLiAgDQoNCidDWCAtIFggc2NyZWVuIHBvc2l0aW9uIG9mIGN1cnNvciBwcm9tcHQNCidDWSAtIFkgc2NyZWVuIHBvc2l0aW9uIG9mIGN1cnNvciBwcm9tcHQNCidUUCAtIFRpbWUgUGVyaW9kIGluIG1zIGJlZm9yZSB0aGUgdGltZW91dCBvY2N1cnMNCidTSyAtIFNob3cgS2V5c3Ryb2tlcyBvciBub3QoMT1zaG93IGtleXN0cm9rZXMsIDA9ZG9uJ3Qgc2hvdyBrZXlzdHJva2VzKSANCg0KJ0FueSBjb21wbHlpbmcga2V5cHJlc3Mgd2lsbCByZXNldCB0aGUgdGltZW91dCB0aW1lciwgc28gdGhhdCBpZiB5b3UgaGF2ZQ0KJ1RQIHNldCB0byA1MDAwKDUgc2Vjb25kcyksIHRoZW4gc28gbG9uZyBhcyB5b3UgdHlwZSBvbmUgY2hhcmFjdGVyIGFmdGVyDQonYW5vdGhlciB3aXRoaW4gNSBzZWNvbmRzLCB0aGUgdGltZXIgd2lsbCBiZSByZXNldCBmb3IgdGhlIG5leHQga2V5cHJlc3MuDQonSWYgeW91IGRvbid0IHByZXNzIGFub3RoZXIga2V5IGFmdGVyIDUgc2Vjb25kcyh1c2luZyBleGFtcGxlIGFib3ZlKSwgdGhlbg0KJ3RoZSByb3V0aW5lIHdpbGwgYXV0by1leGl0Lg0KDQonVG8gZGV0ZWN0IGlmIHRoZSByb3V0aW5lIGhhcyBzdWNlc3NmdWxseSBleGl0ZWQgd2l0aCBub3JtYWwgYW5kIGNvcnJlY3QNCidpbnB1dCBvciBub3QsIHlvdSBuZWVkIHRvIGNoZWNrIEdJRkxBRyBhZnRlciB0aGUgcm91dGluZSBoYXMgZXhpdGVkLg0KJ0lmIEdJRkxBRz0wLCB0aGVuIHRoZSByb3V0aW5lIGhhcyByZXR1cm5lZCB3aXRoIGEgdmFsaWQgaW5wdXQuDQonSWYgR0lGTEFHPTEsIHRoZW4gdGhlIHJvdXRpbmUgaGFzIGV4aXRlZCB3aXRoIGFuIGludmFsaWQga2V5cHJlc3MuDQonVGhpcyBjYW4gYmUgdXNlZCB0byBkZXRlY3QgaW52YWxpZCBpbnB1dHMsIGFuZCBjYW4gbG9vcCB0byB0aGUgcmVsZXZhbnQNCidlcnJvciB0cmFwcGluZyByb3V0aW5lcywgaWYgdGhhdCBpcyByZXF1aXJlZC4NCg0KJ1doZW4gdGhlIHJvdXRpbmUgZXhpdHMsIGlmIHRoZSBpbnB1dCBpcyBpbnZhbGlkLCB0aGVuIExJTiQgd2lsbCBlcXVhbCAiIg0KJ0lmIHRoZSByb3V0aW5lIGV4aXRzIHdpdGggdmFsaWQgaW5wdXQsIHRoZW4gdGhhdCBpbnB1dCB3aWxsIGJlIGhlbGQNCidpbiB0aGUgTElOJCBzdHJpbmcgdmFyaWFibGUsIGFuZCB0aGlzIGNhbiBiZSBzdWJqZWN0ZWQgdG8gZnVydGhlcg0KJ3Rlc3RpbmcsIGRlcGVuZGluZyBvbiB5b3VyIGFwcGxpY2F0aW9uIG9yIHJlcXVpcmVtZW50cyBmb3IgdGhlIGRhdGENCid0eXBlZCBpbiBieSB0aGUgdXNlci4NCg0KJ1Byb2JhYmx5IG5vdCB0aGUgbW9zdCBiZWF1dGlmdWwgb3IgZWZmaWNpZW50IG9mIGNvZGUgaW4gdGhlIHdvcmxkLA0KJ2J1dCBpdCB3b3JrcyEgOykNCg0KJ0dyb2dzdGVyIC0gNHRoIEZlYnJ1YXJ5IDIwMTQsIDgmIzU4OzE2UE0NCidCVUcgRklYIEZPUiBFTlRFUiBPTkxZIC0gMjYvMDIvMjAxNA0KDQoNCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstDQoNClNVQiBHRVRJTiAoQ1gsQ1ksVFAsU0spDQpkbyANCiAgICB0aW1lcj0wDQogICAgZmxhZz0wDQogICAgZ2lmbGFnPTANCiAgICBpZiBTSz0xIHRoZW4NCiAgICAgICAgcHJpbnQgQChDWCxDWSkgb3V0JCArICJfICINCiAgICAgIGVsc2UNCiAgICAgIHByaW50IEAoQ1gsQ1kpICJfICINCiAgICBlbmRpZg0KICAgIGRvIA0KICAgICAgayQ9aW5rZXkkIA0KICAgIGxvb3AgdW50aWwgayQmbHQ7Jmd0OyIiIG9yIHRpbWVyJmd0O1RQDQogICAgaWYgdGltZXImZ3Q7PVRQIHRoZW4NCiAgICAgIG91dCQ9IiINCiAgICAgIGdpZmxhZz0xDQogICAgICBleGl0IHN1Yg0KICAgIGVuZGlmDQogICAgaWYgYXNjKGskKSZndDs9MCBhbmQgYXNjKGskKSZsdDs9NyBvciBhc2MoayQpJmd0Oz05IGFuZCBhc2MoayQpJmx0Oz0xMiB0aGVuDQogICAgICBvdXQkPSIiDQogICAgICBnaWZsYWc9MQ0KICAgICAgZXhpdCBzdWINCiAgICBlbmRpZg0KICAgIGlmIGFzYyhrJCkmZ3Q7PTE0IGFuZCBhc2MoayQpJmx0Oz0zMSBvciBhc2MoayQpJmd0Oz0xMjggYW5kIGFzYyhrJCkmbHQ7PTE1NiB0aGVuDQogICAgICBvdXQkPSIiDQogICAgICBnaWZsYWc9MQ0KICAgICAgZXhpdCBzdWINCiAgICBlbmRpZg0KICAgIGlmIGFzYyhrJCk9MTMgdGhlbg0KICAgICAgSWYgb3V0JD0iIiBUaGVuIA0KICAgICAgICBsaW4kPSIiDQogICAgICAgIGV4aXQgc3ViDQogICAgICBlbHNlDQogICAgICBsaW4kPW91dCQNCiAgICAgIGZsYWc9MQ0KICAgICAgZW5kaWYNCiAgICBlbmRpZg0KICAgIGlmIGFzYyhrJCk9OCBhbmQgbGVuKG91dCQpJmd0Oz0xIHRoZW4NCiAgICAgIG91dCQ9bGVmdCQob3V0JCxsZW4ob3V0JCktMSkNCiAgICBlbHNlDQogICAgb3V0JD1vdXQkICsgayQNCiAgICBlbmRpZg0KICAgIGlmIGxlbihvdXQkKT0xIHRoZW4gDQogICAgICBpZiBhc2Mob3V0JCk9OCB0aGVuIG91dCQ9IiINCiAgICBlbmRpZg0KICAgIGlmIGZsYWc9MSB0aGVuIA0KICAgICAgb3V0JD0iIg0KICAgICAgZ2lmbGFnPTANCiAgICAgIGV4aXQNCiAgICBlbmRpZg0KICBsb29wDQplbmQgc3ViDQoNCjwvcHJlPmRkCvWm9maeSgUyqCsgU3yMy4xGIvw=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">LINE INPUT with timeout</h1><small>Modified on 2016/12/23 23:33 by Administrator &mdash; Categorized as: Program Flow, Strings, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><br /><b>Getin.bas</b><br /><pre>
+'TIMER CONTROLLED LINE INPUT ROUTINE
+'By Grogster of TBS forums 2013, with cursor
+'contributions by TassyJim of TBS forums.
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;
+
+'This code can be called as a subroutine whenever you need
+'the equavalent of LINE INPUT, but with a timeout feature.
+'This routine will also ignore and exit with anything OTHER
+'then numbers and letters, so special charaters etc, will cause
+'the subroutine to end.  A flag is set during this process, so that
+'exit from illegal keypresses can be detected by the main program.
+
+'The code was originally developed for use in a menu-driven program
+'where it was necessary that if no key was pressed when in any
+'LINE INPUT type command, the routine could auto-exit back to the
+'main menu if the set time for entering the data had expired.
+
+'The routine also has the ability to show the output string as it
+'is being typed, or to suppress outputtting the keystrokes, which
+'is very handy if you are wanting the user to enter a password.
+
+'Backspace is fully processed, and any error in typing where that
+'is corrected using the backspace key, is allowed for, so that
+'only the wanted output is the result.
+
+'Several variables are passed to the routine when it is called, and
+'resulting flags etc are also set or reset during the routine.
+'There is no allowance for incorrect data in the variables passed
+'to the routine when it is called.
+
+'To call the routine, use the line 'GETIN (CX,CY,TP,SK)' in
+'your code(without quotes, naturally), where you want the
+'input from the user.  
+
+'CX - X screen position of cursor prompt
+'CY - Y screen position of cursor prompt
+'TP - Time Period in ms before the timeout occurs
+'SK - Show Keystrokes or not(1=show keystrokes, 0=don't show keystrokes) 
+
+'Any complying keypress will reset the timeout timer, so that if you have
+'TP set to 5000(5 seconds), then so long as you type one character after
+'another within 5 seconds, the timer will be reset for the next keypress.
+'If you don't press another key after 5 seconds(using example above), then
+'the routine will auto-exit.
+
+'To detect if the routine has sucessfully exited with normal and correct
+'input or not, you need to check GIFLAG after the routine has exited.
+'If GIFLAG=0, then the routine has returned with a valid input.
+'If GIFLAG=1, then the routine has exited with an invalid keypress.
+'This can be used to detect invalid inputs, and can loop to the relevant
+'error trapping routines, if that is required.
+
+'When the routine exits, if the input is invalid, then LIN$ will equal ""
+'If the routine exits with valid input, then that input will be held
+'in the LIN$ string variable, and this can be subjected to further
+'testing, depending on your application or requirements for the data
+'typed in by the user.
+
+'Probably not the most beautiful or efficient of code in the world,
+'but it works! ;)
+
+'Grogster - 4th February 2014, 8&#58;16PM
+'BUG FIX FOR ENTER ONLY - 26/02/2014
+
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+
+SUB GETIN (CX,CY,TP,SK)
+do 
+    timer=0
+    flag=0
+    giflag=0
+    if SK=1 then
+        print @(CX,CY) out$ + "_ "
+      else
+      print @(CX,CY) "_ "
+    endif
+    do 
+      k$=inkey$ 
+    loop until k$&lt;&gt;"" or timer&gt;TP
+    if timer&gt;=TP then
+      out$=""
+      giflag=1
+      exit sub
+    endif
+    if asc(k$)&gt;=0 and asc(k$)&lt;=7 or asc(k$)&gt;=9 and asc(k$)&lt;=12 then
+      out$=""
+      giflag=1
+      exit sub
+    endif
+    if asc(k$)&gt;=14 and asc(k$)&lt;=31 or asc(k$)&gt;=128 and asc(k$)&lt;=156 then
+      out$=""
+      giflag=1
+      exit sub
+    endif
+    if asc(k$)=13 then
+      If out$="" Then 
+        lin$=""
+        exit sub
+      else
+      lin$=out$
+      flag=1
+      endif
+    endif
+    if asc(k$)=8 and len(out$)&gt;=1 then
+      out$=left$(out$,len(out$)-1)
+    else
+    out$=out$ + k$
+    endif
+    if len(out$)=1 then 
+      if asc(out$)=8 then out$=""
+    endif
+    if flag=1 then 
+      out$=""
+      giflag=0
+      exit
+    endif
+  loop
+end sub
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.LINE-INPUT-with-timeout-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:19:20 GMT -->
+</html>

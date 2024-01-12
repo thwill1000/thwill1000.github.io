@@ -1,0 +1,423 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Sort-algorithms-A-comparison by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Sort algorithms - A comparison - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Sort-algorithms-A-comparison" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF04sBPGgxIGNsYXNzPSJwYWdldGl0bGUiPlNvcnQgYWxnb3JpdGhtcyAtIEEgY29tcGFyaXNvbjwvaDE+PHNtYWxsPk1vZGlmaWVkIG9uIDIwMTcvMDgvMTMgMjA6MzMgYnkgQ2FwdGFpbkJvaW5nICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEFycmF5cywgTWVtb3J5LCBTb3J0LCBTdHJpbmdzPC9zbWFsbD48YnIgLz48YnIgLz5Tb3J0IHJvdXRpbmVzIGFyZSB2YXJpZWQgYW5kIGhhdmUgZGlmZmVyZW50IHF1YWxpdGllcyAtIFByb2JhYmx5IHRoZSBtb3N0IGRlc2lyYWJsZSBhcmUgZWFzZS9jb21wYWN0bmVzcyBvZiBjb2RpbmcgYW5kIHNwZWVkLiA8YnIgLz48YnIgLz48Yj5Ob3RlPC9iPi4gVGhpcyBhcnRpY2xlIGFuZCB0aGUgcmVmZXJlbmNlZCBNTUJhc2ljIHNvcnQgcm91dGluZXMgYXJlIHJlYWxseSBhY2FkZW1pYyBvbiB0aGUgTWljcm9taXRlIE1rSUkuIDxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5Db21wYXRpYmlsaXR5LWJldHdlZW4tTWljcm9taXRlLU1rSUktTU1CYXNpYy1hbmQtTWljcm9NaXRlLUV4dHJlbWUtTU1YLU1NQmFzaWMuYXNoeCIgdGl0bGU9IkNvbXBhdGliaWxpdHkgYmV0d2VlbiBNaWNyb21pdGUgTWtJSSBNTUJhc2ljIGFuZCBNaWNyb01pdGUgRXh0cmVtZSAoTU1YKSBNTUJhc2ljIj5DU3ViczwvYT4gZm9yIHNvcnRpbmcgdGhlIHJlbGV2YW50IGRhdGEtdHlwZSBhcmUgaW5jbHVkZWQgaW4gdGhlIE1NQmFzaWMgZG93bmxvYWQgYW5kIGF0dGFjaGVkIHRvcCByaWdodCBhbmQgdGhlc2Ugc2hvdWxkIGJlIHVzZWQgZm9yIHNpbmdsZSBkaW1lbnNpb24gYXJyYXlzIG9uIHRoZSBNWCBwbGF0Zm9ybS4gQ291bnRlcnBhcnQgcm91dGluZXMgYXJlIG5vdCB5ZXQgYXZhaWxhYmxlIGZvciB0aGUgTU1YLjxiciAvPjxiciAvPkRpc2N1c3Npb25zIGhhdmUgcmFnZWQgZm9yIGRlY2FkZXMgb3ZlciB3aGljaCBpcyB0aGUgImJlc3QiIGFuZCB0aGUgcmVhc29ucyBmb3IgdGhlIGNhbXBzIGNhbiBiZSBhcyB2YXJpZWQgYXMgdGhlIHNvcnQgbWV0aG9kcy4gT25lIHRoaW5nIGlzIGFsbW9zdCB1bml2ZXJzYWxseSBhZ3JlZWQ6IFRoZSBCdWJibGUgc29ydCBpcyB0aGUgc2xvd2VzdCBhbmQgZ2VuZXJhbGx5IHRvIGJlIGF2b2lkZWQgdW5sZXNzIHRoZXJlIGlzIG5vIGFsdGVybmF0aXZlLjxiciAvPjxiciAvPkhlcmUgaXMgYSBjb21wYXJpc29uIG9mIGZvdXIgcm91dGluZXMgdGhhdCB5b3Ugd2lsbCBmaW5kIGluIHRoaXMgbGlicmFyeSAoaW4gb3JkZXIgb2Ygb3ZlcmFsbCBzcGVlZCwgc2xvd2VzdCBmaXJzdCk6PGJyIC8+ICAgICo8YSBjbGFzcz0icGFnZWxpbmsiIHRhcmdldD0iX2JsYW5rIiBocmVmPSJNTUJhc2ljLkJ1YmJsZS1Tb3J0LXBhcnQtb2YtdGhlLW9yaWdpbmFsLU1NQmFzaWMtbGlicmFyeS5hc2h4IiB0aXRsZT0iQnViYmxlIFNvcnQiPkJ1YmJsZSBTb3J0PC9hPjxiciAvPiAgICAqPGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5TaGVsbC1Tb3J0LmFzaHgiIHRpdGxlPSJTaGVsbCBTb3J0Ij5TaGVsbCBTb3J0PC9hPjxiciAvPiAgICAqPGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5DUjItU29ydC1UaGUtRmFzdGVzdC1TZWFyY2guYXNoeCIgdGl0bGU9IkN1YmUgUm9vdCBvZiBUd28gU29ydCAtIGZhc3Qgc29ydCI+Q3ViZSBSb290IG9mIFR3byBTb3J0PC9hPjxiciAvPiAgICAqPGEgY2xhc3M9InBhZ2VsaW5rIiB0YXJnZXQ9Il9ibGFuayIgaHJlZj0iTU1CYXNpYy5GYWN0dXMtQ29tYi1Tb3J0LWZvci1zdHJpbmdzLmFzaHgiIHRpdGxlPSJDb21iIFNvcnQgZm9yIHN0cmluZ3MiPkNvbWIgU29ydDwvYT48YnIgLz48YnIgLz5UaGUgZGF0YSB1c2VkIGluIHRoaXMgY29tcGFyaXNvbiBpcyBpbiB0aGUgcHJvZ3JhbSBEQVRBIHN0YXRlbWVudHMsIHRoZSByZXN1bHRzIGFyZSBpbiB0aGUgQXR0YWNoZWQgQ1NWIGZpbGUgYWxvbmcgd2l0aCBhbiBFeGNlbCBzcHJlYWRzaGVldCB3aXRoIHRoZSBncmFwaC4gVGhlIGdyYXBoIGlzIHJlcHJvZHVjZWQgYmVsb3cgYnV0IGl0IGlzIGxhcmdlIHRvIHByb3ZpZGUgYSB0cmFkZSBvZmYgd2l0aCBzY2FsZSBWcyByZXNvbHV0aW9uLiA8YnIgLz48YnIgLz5FbmpveS48YnIgLz48YnIgLz48Yj5Ob3RlPC9iPjogVGhlIGRyb3Atb2ZmIGluIEJ1YmJsZSBzb3J0IHRpbWluZ3MgaXMgZHVlIHRvIHRoZSBzb3J0IGJlaW5nIGFiYW5kb25lZCBvdmVyIDEwMCBpdGVtcy48YnIgLz48YSBjbGFzcz0idW5rbm93bmxpbmsiIGhyZWY9Ik1NQmFzaWMuLmFzaHgiIHRpdGxlPSJNTUJhc2ljLiI+PC9hPjxpbWcgc3JjPSJHZXRGaWxlLmFzcHg/RmlsZT0vTU1CYXNpYy9zb3J0b2ZmLnBuZyIgYWx0PSJJbWFnZSIgLz48YnIgLz48YnIgLz48YnIgLz48Yj5UaGUgY29kZTo8L2I+PGJyIC8+PHByZT4NCg0KICBPcHRpb24gYmFzZSAwDQogIA0KICBjcHUgNDgNCiAgDQogIERpbSB4eCx5eSx0IEFzIGludGVnZXINCg0KICB4eD0xMDAwDQogIA0KICBEaW0gU1AkKHh4KSBsZW5ndGggMjANCiAgDQogIHByaW50ICJUaW1lcyBpbiBtUyBmb3IgdGhlIGJlbG93IHNvcnRzIg0KICBQcmludCAiTm8uIiwiQkJMIiwiU2hlbGwiLCJDUjIiLCJDT01CIg0KICBwcmludCAiJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7Ig0KDQogIEZvciB5eSA9IDUgVG8geHgNCiAgDQogICAgcHJpbnQgeXk7IiwiOw0KCQ0KICAgIGlmIHl5Jmx0Oz0xMDAgdGhlbg0KCQlJbml0U1AgeXkmIzU4O1RpbWVyPTANCgkJQmJsU29ydCB5eQ0KCQl0PVRpbWVyJiM1ODtQcmludCB0OyIsIjsNCgllbHNlDQoJCVByaW50ICIwLCI7DQoJZW5kIGlmDQoJDQoJSW5pdFNQIHl5JiM1ODtUaW1lcj0wDQogICAgU2hlbGxTb3J0IHl5DQogICAgdD1UaW1lciYjNTg7UHJpbnQgdDsiLCI7DQoJDQogICAgSW5pdFNQIHl5JiM1ODtUaW1lcj0wDQogICAgQ1IyU29ydCB5eQ0KICAgIHQ9VGltZXImIzU4O1ByaW50IHQ7IiwiOw0KCQ0KCUluaXRTUCB5eSYjNTg7VGltZXI9MA0KICAgIENvbWJTb3J0IHl5DQogICAgdD1UaW1lciYjNTg7UHJpbnQgdDsiLCI7DQoNCiAgICBQcmludA0KICBOZXh0DQoNCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCicgY29tYiBzb3J0DQoNClN1YiBDb21iU29ydChTUFRvcCkNCkxvY2FsIHN0cmluZyBNJA0KTG9jYWwgaW50ZWdlciBpLCBoLCBUPTEsIEY9MCwgc3cNCkxvY2FsIGZsb2F0IEdhcD1TUFRvcCwgU2hyaW5rPTEuMw0KDQpEbyBXaGlsZSBHYXAmZ3Q7MSBPciBTdw0KICBHYXA9SW50KEdhcC9TaHJpbmspDQogIElmIEdhcCZsdDsxIFRoZW4gR2FwPTENCiAgaT0xJiM1ODtTdz1GDQogIEZvciBoPWkrR2FwIFRvIFNQVG9wDQogICAgSWYgU1AkKGkpJmd0O1NQJChoKSBUaGVuDQogICAgICAgTSQ9U1AkKGkpJiM1ODtTUCQoaSk9U1AkKGgpJiM1ODtTUCQoaCk9TSQmIzU4O1N3PVQNCiAgICBFbmRJZg0KICAgIGk9aSsxDQogIE5leHQNCkxvb3ANCkVuZCBTdWINCg0KDQonJiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTstDQonIEN1YmUgUm9vdCBvZiBUd28gU29ydA0KDQogIFN1YiBDUjJTT1JUKFNQdG9wKQ0KICAgIExvY2FsIElOVEVHRVIgaSx4LGINCiAgICBMb2NhbCBGTE9BVCBwLHkNCiAgICBMb2NhbCBTVFJJTkcgYSQNCiAgICBwPTEuMjU5OTIxMSYjNTg7IHg9MiYjNTg7IGI9MSYjNTg7IHk9U1B0b3BcMg0KDQogICAgV2hpbGUgeSZndDsyJiM1ODsgeT15L3AmIzU4OyBXZW5kDQoNCiAgICBXaGlsZSB4Jmd0OzENCiAgICAgIHk9eSYjNDI7cA0KICAgICAgeD1TUHRvcFx5DQogICAgICBGb3IgaT0wIFRvIFNQdG9wLXgNCiAgICAgICAgSWYgU1AkKGIraSkmZ3Q7U1AkKHgraSkgVGhlbiBhJD1TUCQoYitpKSYjNTg7U1AkKGIraSk9U1AkKHgraSkmIzU4O1NQJCh4K2kpPWEkICdTV0FQIFNQJChiK2kpLFNQJCh4K2kpDQogICAgICBOZXh0DQogICAgV2VuZA0KICBFbmQgU3ViDQoNCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCicgU2hlbGwgU29ydA0KDQogIHN1YiBTaGVsbFNvcnQoU1BUb3ApDQogICAgbG9jYWwgaW50ZWdlciBpLGoNCglsb2NhbCBmbG9hdCBrDQoJbG9jYWwgc3RyaW5nIGEkDQogICAgayA9IGludChTUFRvcCAvIDIpDQogICAgV0hJTEUgayAmZ3Q7IDANCiAgICAgICAgZm9yIGkgPSAxIHRvIFNQVG9wDQogICAgICAgICAgICBqID0gaQ0KICAgICAgICAgICAgYSQgPSBTUCQoaSkNCiAgICAgICAgICAgIFdISUxFIChqICZndDs9IGsrMSBhbmQgU1AkKGFicyhqLWspKSAmZ3Q7IGEkKQ0KCQkJCVNQJChqKSA9IFNQJChqLWspDQoJCQkJaiA9IGogLSBrDQogICAgICAgICAgICB3ZW5kDQogICAgICAgICAgICBTUCQoaikgPSBhJA0KICAgICAgICBuZXh0IA0KICAgICAgICBJRiBrID0gMiBUSEVODQogICAgICAgICAgayA9IDENCiAgICAgICAgRUxTRQ0KICAgICAgICAgIGsgPSBpbnQoayAmIzQyOyAwLjQ1NDU0NSkgICcgNS8xMQ0KICAgICAgICBlbmQgaWYNCiAgICBXRU5EDQogIGVuZCBzdWINCg0KJyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7LQ0KJyBCdWJibGUgU29ydA0KDQogIFN1YiBCYmxTb3J0KFNQVG9wKQ0KICAgICcgICBTUCQoKSBpcyB0aGUgYXJyYXkgdG8gYmUgc29ydGVkDQogICAgJyAgIFNQVG9wIGlzIHRoZSBudW1iZXIgb2YgZWxlbWVudHMgaW4gdGhlIGFycmF5DQogICAgTG9jYWwgaW50ZWdlciBGbGlwcyxuDQogICAgTG9jYWwgc3RyaW5nIGEkDQogICAgRmxpcHMgPSAxDQogICAgRG8NCiAgICAgIEZsaXBzID0gMA0KICAgICAgRm9yIG49MCBUbyBTUFRvcC0xDQogICAgICAgICcgdG9vayBvdXQgU1dBUCBBJChuKSxBJChuKzEpIGFzIGl0IGFkZGVkIDUwJSB0byB0aGUgdGltZQ0KICAgICAgICBJZiBTUCQobikgJmd0OyBTUCQobisxKSBUaGVuIGEkPVNQJChuKSYjNTg7U1AkKG4pPVNQJChuKzEpJiM1ODtTUCQobisxKT1hJCYjNTg7RmxpcHMgPSAxDQogICAgICBOZXh0DQogICAgTG9vcCBXaGlsZSBGbGlwcyA9IDENCiAgRW5kIFN1Yg0KICANCicmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1OyYjNDU7JiM0NTsmIzQ1Oy0NCicgSW5pdGlhbGlzZSB0aGUgZGF0YS1zZXQNCg0KICBTdWIgSW5pdFNQICh4KQ0KICAgIExvY2FsIGludGVnZXIgbg0KICAgIFJlc3RvcmUNCiAgICBGb3Igbj0wIFRvIHgmIzU4O1JlYWQgU1AkKG4pJiM1ODtOZXh0DQogIEVuZCBTdWINCg0KICBEYXRhICJ6YWsiLCJzaGVpbGEiLCJmcmVkIiwiYXJjaGllIg0KICBEYXRhICJqaW0iLCJiYXJyeSIsImFsYW4iLCJrZXZpbiINCiAgRGF0YSAiY2hhcmxlcyIsInN0ZXZlIiwic3RlcGhhbmllIiwiam9uIg0KICBEYXRhICJzb25pYSIsInhhdmllciIsIm1hcmsiLCJhZGkiDQogIERhdGEgImRhcnJlbiIsInBhdWwiLCJ0b2J5IiwianAiDQogIERhdGEgImpvc2llIiwia2luZ3NsZXkiLCJ2b2QiLCJvcmVnb24iDQogIERhdGEgImxvdSBhbm5lIiwiaWFuIiwic3llZCIsImNyYWlnIg0KICBEYXRhICJqYW1lcyIsICJqdWxlcyIsImp1ZGl0aCIsImp1bGllIg0KICBEYXRhICJmYXJnbyIsImRhdmlkIiwiaGFuc29uIiwiZGFrb3RhIg0KICBEYXRhICJwaWNhcmQiLCAicmlrZXIiLCAibW9ybiIsICJxdWFyayINCiAgRGF0YSAiY2lzY28iLCAibW9yZ2FuIiwiYmVubmV0dCIsIndoaXRlIg0KICBEYXRhICJibGFjayIsImJyb3duIiwicmVkIiwib3JhbmdlIg0KICBEYXRhICJncmVlbiIsImJsdWUiLCJncmV5IiwidmlvbGV0Ig0KICBEYXRhICJzbWl0aCIsImthZGl5YW0iLCJzaGFoIiwibW9vcmUiDQogIERhdGEgInNheHRvbiIsIm11cnJheSIsIm1pdGNoZWxsIiwiYWxhaWUiDQogIERhdGEgImFhIiwiYmIiLCJjYyIsImRkIg0KICBEYXRhICJlZSIsImZmIiwiZ2ciLCJnZyINCiAgRGF0YSAienoiLCJoaCIsImlpIiwiamoiDQogIERhdGEgImhnamhnIiwidWZ5ZiIsInNlcmciLCJpdXl5cnJlIg0KICBEYXRhICJoaXVoaXVoIiwiZmRyZXNwcG9rbSIsImtoZ3VnZnRyZHRyaHRmeWd1Z3VGIiwiZ2ZoZiINCiAgRGF0YSAicGljIiwibWljcm8iLCJtaWNyb2NoaXAiLCJhdG1lbCINCiAgRGF0YSAiaW50ZWwiLCJ6aWxvZyIsImFtZCIsIm52aWRpYSINCiAgRGF0YSAibWl0c3ViaXNoaSIsIm5pc3NhbiIsInZvbGtzd2FnZW4iLCJibXciDQogIERhdGEgInRlc2xhIiwiYXVkaSIsInRveW90YSIsImhvbmRhIg0KICBEYXRhICJzdXp1a2kiLCJ5YW1haGEiLCJ5YW1haGEiLCJrYXdhc2FraSINCiAgRGF0YSAibWlrZSINCiAgRGF0YSAiemFrIiwic2hlaWxhIiwiZnJlZCIsImFyY2hpZSINCiAgRGF0YSAiamltIiwiYmFycnkiLCJhbGFuIiwia2V2aW4iDQogIERhdGEgImNoYXJsZXMiLCJzdGV2ZSIsInN0ZXBoYW5pZSIsImpvbiINCiAgRGF0YSAic29uaWEiLCJ4YXZpZXIiLCJtYXJrIiwiYWRpIg0KICBEYXRhICJkYXJyZW4iLCJwYXVsIiwidG9ieSIsImpwIg0KICBEYXRhICJqb3NpZSIsImtpbmdzbGV5Iiwidm9kIiwib3JlZ29uIg0KICBEYXRhICJsb3UgYW5uZSIsImlhbiIsInN5ZWQiLCJjcmFpZyINCiAgRGF0YSAiamFtZXMiLCAianVsZXMiLCJqdWRpdGgiLCJqdWxpZSINCiAgRGF0YSAiZmFyZ28iLCJkYXZpZCIsImhhbnNvbiIsImRha290YSINCiAgRGF0YSAicGljYXJkIiwgInJpa2VyIiwgIm1vcm4iLCAicXVhcmsiDQogIERhdGEgImNpc2NvIiwgIm1vcmdhbiIsImJlbm5ldHQiLCJ3aGl0ZSINCiAgRGF0YSAiYmxhY2siLCJicm93biIsInJlZCIsIm9yYW5nZSINCiAgRGF0YSAiZ3JlZW4iLCJibHVlIiwiZ3JleSIsInZpb2xldCINCiAgRGF0YSAic21pdGgiLCJrYWRpeWFtIiwic2hhaCIsIm1vb3JlIg0KICBEYXRhICJzYXh0b24iLCJtdXJyYXkiLCJtaXRjaGVsbCIsImFsYWllIg0KICBEYXRhICJhYSIsImJiIiwiY2MiLCJkZCINCiAgRGF0YSAiZWUiLCJmZiIsImdnIiwiZ2ciDQogIERhdGEgInp6IiwiaGgiLCJpaSIsImpqIg0KICBEYXRhICJoZ2poZyIsInVmeWYiLCJzZXJnIiwiaXV5eXJyZSINCiAgRGF0YSAiaGl1aGl1aCIsImZkcmVzcHBva20iLCJraGd1Z2Z0cmR0cmh0ZnlndWd1RiIsImdmaGYiDQogIERhdGEgInBpYyIsIm1pY3JvIiwibWljcm9jaGlwIiwiYXRtZWwiDQogIERhdGEgImludGVsIiwiemlsb2ciLCJhbWQiLCJudmlkaWEiDQogIERhdGEgIm1pdHN1YmlzaGkiLCJuaXNzYW4iLCJ2b2xrc3dhZ2VuIiwiYm13Ig0KICBEYXRhICJ0ZXNsYSIsImF1ZGkiLCJ0b3lvdGEiLCJob25kYSINCiAgRGF0YSAic3V6dWtpIiwieWFtYWhhIiwieWFtYWhhIiwia2F3YXNha2kiDQogIERhdGEgIm1pa2UiDQogIERhdGEgInphayIsInNoZWlsYSIsImZyZWQiLCJhcmNoaWUiDQogIERhdGEgImppbSIsImJhcnJ5IiwiYWxhbiIsImtldmluIg0KICBEYXRhICJjaGFybGVzIiwic3RldmUiLCJzdGVwaGFuaWUiLCJqb24iDQogIERhdGEgInNvbmlhIiwieGF2aWVyIiwibWFyayIsImFkaSINCiAgRGF0YSAiZGFycmVuIiwicGF1bCIsInRvYnkiLCJqcCINCiAgRGF0YSAiam9zaWUiLCJraW5nc2xleSIsInZvZCIsIm9yZWdvbiINCiAgRGF0YSAibG91IGFubmUiLCJpYW4iLCJzeWVkIiwiY3JhaWciDQogIERhdGEgImphbWVzIiwgImp1bGVzIiwianVkaXRoIiwianVsaWUiDQogIERhdGEgImZhcmdvIiwiZGF2aWQiLCJoYW5zb24iLCJkYWtvdGEiDQogIERhdGEgInBpY2FyZCIsICJyaWtlciIsICJtb3JuIiwgInF1YXJrIg0KICBEYXRhICJjaXNjbyIsICJtb3JnYW4iLCJiZW5uZXR0Iiwid2hpdGUiDQogIERhdGEgImJsYWNrIiwiYnJvd24iLCJyZWQiLCJvcmFuZ2UiDQogIERhdGEgImdyZWVuIiwiYmx1ZSIsImdyZXkiLCJ2aW9sZXQiDQogIERhdGEgInNtaXRoIiwia2FkaXlhbSIsInNoYWgiLCJtb29yZSINCiAgRGF0YSAic2F4dG9uIiwibXVycmF5IiwibWl0Y2hlbGwiLCJhbGFpZSINCiAgRGF0YSAiYWEiLCJiYiIsImNjIiwiZGQiDQogIERhdGEgImVlIiwiZmYiLCJnZyIsImdnIg0KICBEYXRhICJ6eiIsImhoIiwiaWkiLCJqaiINCiAgRGF0YSAiaGdqaGciLCJ1ZnlmIiwic2VyZyIsIml1eXlycmUiDQogIERhdGEgImhpdWhpdWgiLCJmZHJlc3Bwb2ttIiwia2hndWdmdHJkdHJodGZ5Z3VndUYiLCJnZmhmIg0KICBEYXRhICJwaWMiLCJtaWNybyIsIm1pY3JvY2hpcCIsImF0bWVsIg0KICBEYXRhICJpbnRlbCIsInppbG9nIiwiYW1kIiwibnZpZGlhIg0KICBEYXRhICJtaXRzdWJpc2hpIiwibmlzc2FuIiwidm9sa3N3YWdlbiIsImJtdyINCiAgRGF0YSAidGVzbGEiLCJhdWRpIiwidG95b3RhIiwiaG9uZGEiDQogIERhdGEgInN1enVraSIsInlhbWFoYSIsInlhbWFoYSIsImthd2FzYWtpIg0KICBEYXRhICJtaWtlIg0KICBEYXRhICJ6YWsiLCJzaGVpbGEiLCJmcmVkIiwiYXJjaGllIg0KICBEYXRhICJqaW0iLCJiYXJyeSIsImFsYW4iLCJrZXZpbiINCiAgRGF0YSAiY2hhcmxlcyIsInN0ZXZlIiwic3RlcGhhbmllIiwiam9uIg0KICBEYXRhICJzb25pYSIsInhhdmllciIsIm1hcmsiLCJhZGkiDQogIERhdGEgImRhcnJlbiIsInBhdWwiLCJ0b2J5IiwianAiDQogIERhdGEgImpvc2llIiwia2luZ3NsZXkiLCJ2b2QiLCJvcmVnb24iDQogIERhdGEgImxvdSBhbm5lIiwiaWFuIiwic3llZCIsImNyYWlnIg0KICBEYXRhICJqYW1lcyIsICJqdWxlcyIsImp1ZGl0aCIsImp1bGllIg0KICBEYXRhICJmYXJnbyIsImRhdmlkIiwiaGFuc29uIiwiZGFrb3RhIg0KICBEYXRhICJwaWNhcmQiLCAicmlrZXIiLCAibW9ybiIsICJxdWFyayINCiAgRGF0YSAiY2lzY28iLCAibW9yZ2FuIiwiYmVubmV0dCIsIndoaXRlIg0KICBEYXRhICJibGFjayIsImJyb3duIiwicmVkIiwib3JhbmdlIg0KICBEYXRhICJncmVlbiIsImJsdWUiLCJncmV5IiwidmlvbGV0Ig0KICBEYXRhICJzbWl0aCIsImthZGl5YW0iLCJzaGFoIiwibW9vcmUiDQogIERhdGEgInNheHRvbiIsIm11cnJheSIsIm1pdGNoZWxsIiwiYWxhaWUiDQogIERhdGEgImFhIiwiYmIiLCJjYyIsImRkIg0KICBEYXRhICJlZSIsImZmIiwiZ2ciLCJnZyINCiAgRGF0YSAienoiLCJoaCIsImlpIiwiamoiDQogIERhdGEgImhnamhnIiwidWZ5ZiIsInNlcmciLCJpdXl5cnJlIg0KICBEYXRhICJoaXVoaXVoIiwiZmRyZXNwcG9rbSIsImtoZ3VnZnRyZHRyaHRmeWd1Z3VGIiwiZ2ZoZiINCiAgRGF0YSAicGljIiwibWljcm8iLCJtaWNyb2NoaXAiLCJhdG1lbCINCiAgRGF0YSAiaW50ZWwiLCJ6aWxvZyIsImFtZCIsIm52aWRpYSINCiAgRGF0YSAibWl0c3ViaXNoaSIsIm5pc3NhbiIsInZvbGtzd2FnZW4iLCJibXciDQogIERhdGEgInRlc2xhIiwiYXVkaSIsInRveW90YSIsImhvbmRhIg0KICBEYXRhICJzdXp1a2kiLCJ5YW1haGEiLCJ5YW1haGEiLCJrYXdhc2FraSINCiAgRGF0YSAibWlrZSJEYXRhICJ6YWsiLCJzaGVpbGEiLCJmcmVkIiwiYXJjaGllIg0KICBEYXRhICJqaW0iLCJiYXJyeSIsImFsYW4iLCJrZXZpbiINCiAgRGF0YSAiY2hhcmxlcyIsInN0ZXZlIiwic3RlcGhhbmllIiwiam9uIg0KICBEYXRhICJzb25pYSIsInhhdmllciIsIm1hcmsiLCJhZGkiDQogIERhdGEgImRhcnJlbiIsInBhdWwiLCJ0b2J5IiwianAiDQogIERhdGEgImpvc2llIiwia2luZ3NsZXkiLCJ2b2QiLCJvcmVnb24iDQogIERhdGEgImxvdSBhbm5lIiwiaWFuIiwic3llZCIsImNyYWlnIg0KICBEYXRhICJqYW1lcyIsICJqdWxlcyIsImp1ZGl0aCIsImp1bGllIg0KICBEYXRhICJmYXJnbyIsImRhdmlkIiwiaGFuc29uIiwiZGFrb3RhIg0KICBEYXRhICJwaWNhcmQiLCAicmlrZXIiLCAibW9ybiIsICJxdWFyayINCiAgRGF0YSAiY2lzY28iLCAibW9yZ2FuIiwiYmVubmV0dCIsIndoaXRlIg0KICBEYXRhICJibGFjayIsImJyb3duIiwicmVkIiwib3JhbmdlIg0KICBEYXRhICJncmVlbiIsImJsdWUiLCJncmV5IiwidmlvbGV0Ig0KICBEYXRhICJzbWl0aCIsImthZGl5YW0iLCJzaGFoIiwibW9vcmUiDQogIERhdGEgInNheHRvbiIsIm11cnJheSIsIm1pdGNoZWxsIiwiYWxhaWUiDQogIERhdGEgImFhIiwiYmIiLCJjYyIsImRkIg0KICBEYXRhICJlZSIsImZmIiwiZ2ciLCJnZyINCiAgRGF0YSAienoiLCJoaCIsImlpIiwiamoiDQogIERhdGEgImhnamhnIiwidWZ5ZiIsInNlcmciLCJpdXl5cnJlIg0KICBEYXRhICJoaXVoaXVoIiwiZmRyZXNwcG9rbSIsImtoZ3VnZnRyZHRyaHRmeWd1Z3VGIiwiZ2ZoZiINCiAgRGF0YSAicGljIiwibWljcm8iLCJtaWNyb2NoaXAiLCJhdG1lbCINCiAgRGF0YSAiaW50ZWwiLCJ6aWxvZyIsImFtZCIsIm52aWRpYSINCiAgRGF0YSAibWl0c3ViaXNoaSIsIm5pc3NhbiIsInZvbGtzd2FnZW4iLCJibXciDQogIERhdGEgInRlc2xhIiwiYXVkaSIsInRveW90YSIsImhvbmRhIg0KICBEYXRhICJzdXp1a2kiLCJ5YW1haGEiLCJ5YW1haGEiLCJrYXdhc2FraSINCiAgRGF0YSAibWlrZSINCiAgRGF0YSAiemFrIiwic2hlaWxhIiwiZnJlZCIsImFyY2hpZSINCiAgRGF0YSAiamltIiwiYmFycnkiLCJhbGFuIiwia2V2aW4iDQogIERhdGEgImNoYXJsZXMiLCJzdGV2ZSIsInN0ZXBoYW5pZSIsImpvbiINCiAgRGF0YSAic29uaWEiLCJ4YXZpZXIiLCJtYXJrIiwiYWRpIg0KICBEYXRhICJkYXJyZW4iLCJwYXVsIiwidG9ieSIsImpwIg0KICBEYXRhICJqb3NpZSIsImtpbmdzbGV5Iiwidm9kIiwib3JlZ29uIg0KICBEYXRhICJsb3UgYW5uZSIsImlhbiIsInN5ZWQiLCJjcmFpZyINCiAgRGF0YSAiamFtZXMiLCAianVsZXMiLCJqdWRpdGgiLCJqdWxpZSINCiAgRGF0YSAiZmFyZ28iLCJkYXZpZCIsImhhbnNvbiIsImRha290YSINCiAgRGF0YSAicGljYXJkIiwgInJpa2VyIiwgIm1vcm4iLCAicXVhcmsiDQogIERhdGEgImNpc2NvIiwgIm1vcmdhbiIsImJlbm5ldHQiLCJ3aGl0ZSINCiAgRGF0YSAiYmxhY2siLCJicm93biIsInJlZCIsIm9yYW5nZSINCiAgRGF0YSAiZ3JlZW4iLCJibHVlIiwiZ3JleSIsInZpb2xldCINCiAgRGF0YSAic21pdGgiLCJrYWRpeWFtIiwic2hhaCIsIm1vb3JlIg0KICBEYXRhICJzYXh0b24iLCJtdXJyYXkiLCJtaXRjaGVsbCIsImFsYWllIg0KICBEYXRhICJhYSIsImJiIiwiY2MiLCJkZCINCiAgRGF0YSAiZWUiLCJmZiIsImdnIiwiZ2ciDQogIERhdGEgInp6IiwiaGgiLCJpaSIsImpqIg0KICBEYXRhICJoZ2poZyIsInVmeWYiLCJzZXJnIiwiaXV5eXJyZSINCiAgRGF0YSAiaGl1aGl1aCIsImZkcmVzcHBva20iLCJraGd1Z2Z0cmR0cmh0ZnlndWd1RiIsImdmaGYiDQogIERhdGEgInBpYyIsIm1pY3JvIiwibWljcm9jaGlwIiwiYXRtZWwiDQogIERhdGEgImludGVsIiwiemlsb2ciLCJhbWQiLCJudmlkaWEiDQogIERhdGEgIm1pdHN1YmlzaGkiLCJuaXNzYW4iLCJ2b2xrc3dhZ2VuIiwiYm13Ig0KICBEYXRhICJ0ZXNsYSIsImF1ZGkiLCJ0b3lvdGEiLCJob25kYSINCiAgRGF0YSAic3V6dWtpIiwieWFtYWhhIiwieWFtYWhhIiwia2F3YXNha2kiDQogIERhdGEgIm1pa2UiDQogIERhdGEgInphayIsInNoZWlsYSIsImZyZWQiLCJhcmNoaWUiDQogIERhdGEgImppbSIsImJhcnJ5IiwiYWxhbiIsImtldmluIg0KICBEYXRhICJjaGFybGVzIiwic3RldmUiLCJzdGVwaGFuaWUiLCJqb24iDQogIERhdGEgInNvbmlhIiwieGF2aWVyIiwibWFyayIsImFkaSINCiAgRGF0YSAiZGFycmVuIiwicGF1bCIsInRvYnkiLCJqcCINCiAgRGF0YSAiam9zaWUiLCJraW5nc2xleSIsInZvZCIsIm9yZWdvbiINCiAgRGF0YSAibG91IGFubmUiLCJpYW4iLCJzeWVkIiwiY3JhaWciDQogIERhdGEgImphbWVzIiwgImp1bGVzIiwianVkaXRoIiwianVsaWUiDQogIERhdGEgImZhcmdvIiwiZGF2aWQiLCJoYW5zb24iLCJkYWtvdGEiDQogIERhdGEgInBpY2FyZCIsICJyaWtlciIsICJtb3JuIiwgInF1YXJrIg0KICBEYXRhICJjaXNjbyIsICJtb3JnYW4iLCJiZW5uZXR0Iiwid2hpdGUiDQogIERhdGEgImJsYWNrIiwiYnJvd24iLCJyZWQiLCJvcmFuZ2UiDQogIERhdGEgImdyZWVuIiwiYmx1ZSIsImdyZXkiLCJ2aW9sZXQiDQogIERhdGEgInNtaXRoIiwia2FkaXlhbSIsInNoYWgiLCJtb29yZSINCiAgRGF0YSAic2F4dG9uIiwibXVycmF5IiwibWl0Y2hlbGwiLCJhbGFpZSINCiAgRGF0YSAiYWEiLCJiYiIsImNjIiwiZGQiDQogIERhdGEgImVlIiwiZmYiLCJnZyIsImdnIg0KICBEYXRhICJ6eiIsImhoIiwiaWkiLCJqaiINCiAgRGF0YSAiaGdqaGciLCJ1ZnlmIiwic2VyZyIsIml1eXlycmUiDQogIERhdGEgImhpdWhpdWgiLCJmZHJlc3Bwb2ttIiwia2hndWdmdHJkdHJodGZ5Z3VndUYiLCJnZmhmIg0KICBEYXRhICJwaWMiLCJtaWNybyIsIm1pY3JvY2hpcCIsImF0bWVsIg0KICBEYXRhICJpbnRlbCIsInppbG9nIiwiYW1kIiwibnZpZGlhIg0KICBEYXRhICJtaXRzdWJpc2hpIiwibmlzc2FuIiwidm9sa3N3YWdlbiIsImJtdyINCiAgRGF0YSAidGVzbGEiLCJhdWRpIiwidG95b3RhIiwiaG9uZGEiDQogIERhdGEgInN1enVraSIsInlhbWFoYSIsInlhbWFoYSIsImthd2FzYWtpIg0KICBEYXRhICJtaWtlIkRhdGEgInphayIsInNoZWlsYSIsImZyZWQiLCJhcmNoaWUiDQogIERhdGEgImppbSIsImJhcnJ5IiwiYWxhbiIsImtldmluIg0KICBEYXRhICJjaGFybGVzIiwic3RldmUiLCJzdGVwaGFuaWUiLCJqb24iDQogIERhdGEgInNvbmlhIiwieGF2aWVyIiwibWFyayIsImFkaSINCiAgRGF0YSAiZGFycmVuIiwicGF1bCIsInRvYnkiLCJqcCINCiAgRGF0YSAiam9zaWUiLCJraW5nc2xleSIsInZvZCIsIm9yZWdvbiINCiAgRGF0YSAibG91IGFubmUiLCJpYW4iLCJzeWVkIiwiY3JhaWciDQogIERhdGEgImphbWVzIiwgImp1bGVzIiwianVkaXRoIiwianVsaWUiDQogIERhdGEgImZhcmdvIiwiZGF2aWQiLCJoYW5zb24iLCJkYWtvdGEiDQogIERhdGEgInBpY2FyZCIsICJyaWtlciIsICJtb3JuIiwgInF1YXJrIg0KICBEYXRhICJjaXNjbyIsICJtb3JnYW4iLCJiZW5uZXR0Iiwid2hpdGUiDQogIERhdGEgImJsYWNrIiwiYnJvd24iLCJyZWQiLCJvcmFuZ2UiDQogIERhdGEgImdyZWVuIiwiYmx1ZSIsImdyZXkiLCJ2aW9sZXQiDQogIERhdGEgInNtaXRoIiwia2FkaXlhbSIsInNoYWgiLCJtb29yZSINCiAgRGF0YSAic2F4dG9uIiwibXVycmF5IiwibWl0Y2hlbGwiLCJhbGFpZSINCiAgRGF0YSAiYWEiLCJiYiIsImNjIiwiZGQiDQogIERhdGEgImVlIiwiZmYiLCJnZyIsImdnIg0KICBEYXRhICJ6eiIsImhoIiwiaWkiLCJqaiINCiAgRGF0YSAiaGdqaGciLCJ1ZnlmIiwic2VyZyIsIml1eXlycmUiDQogIERhdGEgImhpdWhpdWgiLCJmZHJlc3Bwb2ttIiwia2hndWdmdHJkdHJodGZ5Z3VndUYiLCJnZmhmIg0KICBEYXRhICJwaWMiLCJtaWNybyIsIm1pY3JvY2hpcCIsImF0bWVsIg0KICBEYXRhICJpbnRlbCIsInppbG9nIiwiYW1kIiwibnZpZGlhIg0KICBEYXRhICJtaXRzdWJpc2hpIiwibmlzc2FuIiwidm9sa3N3YWdlbiIsImJtdyINCiAgRGF0YSAidGVzbGEiLCJhdWRpIiwidG95b3RhIiwiaG9uZGEiDQogIERhdGEgInN1enVraSIsInlhbWFoYSIsInlhbWFoYSIsImthd2FzYWtpIg0KICBEYXRhICJtaWtlIg0KICAgIERhdGEgInphayIsInNoZWlsYSIsImZyZWQiLCJhcmNoaWUiDQogIERhdGEgImppbSIsImJhcnJ5IiwiYWxhbiIsImtldmluIg0KICBEYXRhICJjaGFybGVzIiwic3RldmUiLCJzdGVwaGFuaWUiLCJqb24iDQogIERhdGEgInNvbmlhIiwieGF2aWVyIiwibWFyayIsImFkaSINCiAgRGF0YSAiZGFycmVuIiwicGF1bCIsInRvYnkiLCJqcCINCiAgRGF0YSAiam9zaWUiLCJraW5nc2xleSIsInZvZCIsIm9yZWdvbiINCiAgRGF0YSAibG91IGFubmUiLCJpYW4iLCJzeWVkIiwiY3JhaWciDQogIERhdGEgImphbWVzIiwgImp1bGVzIiwianVkaXRoIiwianVsaWUiDQogIERhdGEgImZhcmdvIiwiZGF2aWQiLCJoYW5zb24iLCJkYWtvdGEiDQogIERhdGEgInBpY2FyZCIsICJyaWtlciIsICJtb3JuIiwgInF1YXJrIg0KICBEYXRhICJjaXNjbyIsICJtb3JnYW4iLCJiZW5uZXR0Iiwid2hpdGUiDQogIERhdGEgImJsYWNrIiwiYnJvd24iLCJyZWQiLCJvcmFuZ2UiDQogIERhdGEgImdyZWVuIiwiYmx1ZSIsImdyZXkiLCJ2aW9sZXQiDQogIERhdGEgInNtaXRoIiwia2FkaXlhbSIsInNoYWgiLCJtb29yZSINCiAgRGF0YSAic2F4dG9uIiwibXVycmF5IiwibWl0Y2hlbGwiLCJhbGFpZSINCiAgRGF0YSAiYWEiLCJiYiIsImNjIiwiZGQiDQogIERhdGEgImVlIiwiZmYiLCJnZyIsImdnIg0KICBEYXRhICJ6eiIsImhoIiwiaWkiLCJqaiINCiAgRGF0YSAiaGdqaGciLCJ1ZnlmIiwic2VyZyIsIml1eXlycmUiDQogIERhdGEgImhpdWhpdWgiLCJmZHJlc3Bwb2ttIiwia2hndWdmdHJkdHJodGZ5Z3VndUYiLCJnZmhmIg0KICBEYXRhICJwaWMiLCJtaWNybyIsIm1pY3JvY2hpcCIsImF0bWVsIg0KICBEYXRhICJpbnRlbCIsInppbG9nIiwiYW1kIiwibnZpZGlhIg0KICBEYXRhICJtaXRzdWJpc2hpIiwibmlzc2FuIiwidm9sa3N3YWdlbiIsImJtdyINCiAgRGF0YSAidGVzbGEiLCJhdWRpIiwidG95b3RhIiwiaG9uZGEiDQogIERhdGEgInN1enVraSIsInlhbWFoYSIsInlhbWFoYSIsImthd2FzYWtpIg0KICBEYXRhICJtaWtlIg0KICBEYXRhICJ6YWsiLCJzaGVpbGEiLCJmcmVkIiwiYXJjaGllIg0KICBEYXRhICJqaW0iLCJiYXJyeSIsImFsYW4iLCJrZXZpbiINCiAgRGF0YSAiY2hhcmxlcyIsInN0ZXZlIiwic3RlcGhhbmllIiwiam9uIg0KICBEYXRhICJzb25pYSIsInhhdmllciIsIm1hcmsiLCJhZGkiDQogIERhdGEgImRhcnJlbiIsInBhdWwiLCJ0b2J5IiwianAiDQogIERhdGEgImpvc2llIiwia2luZ3NsZXkiLCJ2b2QiLCJvcmVnb24iDQogIERhdGEgImxvdSBhbm5lIiwiaWFuIiwic3llZCIsImNyYWlnIg0KICBEYXRhICJqYW1lcyIsICJqdWxlcyIsImp1ZGl0aCIsImp1bGllIg0KICBEYXRhICJmYXJnbyIsImRhdmlkIiwiaGFuc29uIiwiZGFrb3RhIg0KICBEYXRhICJwaWNhcmQiLCAicmlrZXIiLCAibW9ybiIsICJxdWFyayINCiAgRGF0YSAiY2lzY28iLCAibW9yZ2FuIiwiYmVubmV0dCIsIndoaXRlIg0KICBEYXRhICJibGFjayIsImJyb3duIiwicmVkIiwib3JhbmdlIg0KICBEYXRhICJncmVlbiIsImJsdWUiLCJncmV5IiwidmlvbGV0Ig0KICBEYXRhICJzbWl0aCIsImthZGl5YW0iLCJzaGFoIiwibW9vcmUiDQogIERhdGEgInNheHRvbiIsIm11cnJheSIsIm1pdGNoZWxsIiwiYWxhaWUiDQogIERhdGEgImFhIiwiYmIiLCJjYyIsImRkIg0KICBEYXRhICJlZSIsImZmIiwiZ2ciLCJnZyINCiAgRGF0YSAienoiLCJoaCIsImlpIiwiamoiDQogIERhdGEgImhnamhnIiwidWZ5ZiIsInNlcmciLCJpdXl5cnJlIg0KICBEYXRhICJoaXVoaXVoIiwiZmRyZXNwcG9rbSIsImtoZ3VnZnRyZHRyaHRmeWd1Z3VGIiwiZ2ZoZiINCiAgRGF0YSAicGljIiwibWljcm8iLCJtaWNyb2NoaXAiLCJhdG1lbCINCiAgRGF0YSAiaW50ZWwiLCJ6aWxvZyIsImFtZCIsIm52aWRpYSINCiAgRGF0YSAibWl0c3ViaXNoaSIsIm5pc3NhbiIsInZvbGtzd2FnZW4iLCJibXciDQogIERhdGEgInRlc2xhIiwiYXVkaSIsInRveW90YSIsImhvbmRhIg0KICBEYXRhICJzdXp1a2kiLCJ5YW1haGEiLCJ5YW1haGEiLCJrYXdhc2FraSINCiAgRGF0YSAibWlrZSINCjwvcHJlPjxiciAvPkhlcmUgaXMgIGNvbXBhcmlzb24gYmV0d2VlbiBqdXN0IHRoZSBDUjIgYW5kIENvbWIgc29ydHMgd2l0aCBhIGxhcmdlciBhcnJheSBvZiAyMjAwIGl0ZW1zIC0gd2l0aCB0cmVuZCBsaW5lcy48YnIgLz48YnIgLz48YSBjbGFzcz0idW5rbm93bmxpbmsiIGhyZWY9Ik1NQmFzaWMuLmFzaHgiIHRpdGxlPSJNTUJhc2ljLiI+PC9hPjxpbWcgc3JjPSJHZXRGaWxlLmFzcHg/RmlsZT0vbW9uc3RlcnQucG5nIiBhbHQ9IkltYWdlIiAvPjxiciAvPjxiciAvPi4uLiBhbmQgZmluYWxseSBhIGNvbXBhcmlzb24gb2YgUGV0ZXIgTWF0aGVyJ3MgQ1N1YiBTdHJpbmdTb3J0IChpbmNsdWRlZCBhcyBwYXJ0IG9mIHRoZSBNTUJhc2ljIGZvciBNWDE3MCBkb3dubG9hZCkgdmVyc3VzIHRoZSBDb21iIHdpdGggYSB0aG91c2FuZCBpdGVtcy4gVGhpcyBpbGx1c3RyYXRlcyB0aGUgc3BlZWQgYWR2YW50YWdlIG9mIE1hY2hpbmUgY29kZSBvdmVyIGludGVycHJldGVkIE1NQmFzaWMgZm9yIGNvbXBhcmFibGUgdGFza3MuIEV2ZW4gdGhvdWdoIHRoZSBDU3ViIGlzIGEgYnViYmxlIHNvcnQsIHRoZSBhZHZhbnRhZ2VzIG9mIHRoZSBtYWNoaW5lIGNvZGUgYXJlIG9idmlvdXMuIEludGVyZXN0aW5nbHksIG5vdGUgdGhlIGNoYXJhY3RlcmlzdGljICJzdXJnZXMiIGluIHRoZSBzb3J0IHRpbWVzIGR1ZSB0byB0aGUgYWxnb3JpdGhtIGFuZCB0aGUgInN3ZWV0LXNwb3QiIG9mIGl0ZW1zIHZlcnN1cyB0aW1lLjxiciAvPjxiciAvPjxhIGNsYXNzPSJ1bmtub3dubGluayIgaHJlZj0iTU1CYXNpYy4uYXNoeCIgdGl0bGU9Ik1NQmFzaWMuIj48L2E+PGltZyBzcmM9IkdldEZpbGUuYXNweD9GaWxlPS9NTUJhc2ljL3NvcnRTdWJWc0NvbWIucG5nIiBhbHQ9IkltYWdlIiAvPjxiciAvPmRk6QIY6n7Uu3KWrHAnZfgsko87lPQ=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Sort algorithms - A comparison</h1><small>Modified on 2017/08/13 20:33 by CaptainBoing &mdash; Categorized as: Arrays, Memory, Sort, Strings</small><br /><br />Sort routines are varied and have different qualities - Probably the most desirable are ease/compactness of coding and speed. <br /><br /><b>Note</b>. This article and the referenced MMBasic sort routines are really academic on the Micromite MkII. <a class="pagelink" href="MMBasic.Compatibility-between-Micromite-MkII-MMBasic-and-MicroMite-Extreme-MMX-MMBasic.html" title="Compatibility between Micromite MkII MMBasic and MicroMite Extreme (MMX) MMBasic">CSubs</a> for sorting the relevant data-type are included in the MMBasic download and attached top right and these should be used for single dimension arrays on the MX platform. Counterpart routines are not yet available for the MMX.<br /><br />Discussions have raged for decades over which is the "best" and the reasons for the camps can be as varied as the sort methods. One thing is almost universally agreed: The Bubble sort is the slowest and generally to be avoided unless there is no alternative.<br /><br />Here is a comparison of four routines that you will find in this library (in order of overall speed, slowest first):<br />    *<a class="pagelink" target="_blank" href="MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library.html" title="Bubble Sort">Bubble Sort</a><br />    *<a class="pagelink" target="_blank" href="MMBasic.Shell-Sort.html" title="Shell Sort">Shell Sort</a><br />    *<a class="pagelink" target="_blank" href="MMBasic.CR2-Sort-The-Fastest-Search.html" title="Cube Root of Two Sort - fast sort">Cube Root of Two Sort</a><br />    *<a class="pagelink" target="_blank" href="MMBasic.Factus-Comb-Sort-for-strings.html" title="Comb Sort for strings">Comb Sort</a><br /><br />The data used in this comparison is in the program DATA statements, the results are in the Attached CSV file along with an Excel spreadsheet with the graph. The graph is reproduced below but it is large to provide a trade off with scale Vs resolution. <br /><br />Enjoy.<br /><br /><b>Note</b>: The drop-off in Bubble sort timings is due to the sort being abandoned over 100 items.<br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="sortofff742.png?File=/MMBasic/sortoff.png" alt="Image" /><br /><br /><br /><b>The code:</b><br /><pre>
+
+  Option base 0
+  
+  cpu 48
+  
+  Dim xx,yy,t As integer
+
+  xx=1000
+  
+  Dim SP$(xx) length 20
+  
+  print "Times in mS for the below sorts"
+  Print "No.","BBL","Shell","CR2","COMB"
+  print "&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;"
+
+  For yy = 5 To xx
+  
+    print yy;",";
+	
+    if yy&lt;=100 then
+		InitSP yy&#58;Timer=0
+		BblSort yy
+		t=Timer&#58;Print t;",";
+	else
+		Print "0,";
+	end if
+	
+	InitSP yy&#58;Timer=0
+    ShellSort yy
+    t=Timer&#58;Print t;",";
+	
+    InitSP yy&#58;Timer=0
+    CR2Sort yy
+    t=Timer&#58;Print t;",";
+	
+	InitSP yy&#58;Timer=0
+    CombSort yy
+    t=Timer&#58;Print t;",";
+
+    Print
+  Next
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' comb sort
+
+Sub CombSort(SPTop)
+Local string M$
+Local integer i, h, T=1, F=0, sw
+Local float Gap=SPTop, Shrink=1.3
+
+Do While Gap&gt;1 Or Sw
+  Gap=Int(Gap/Shrink)
+  If Gap&lt;1 Then Gap=1
+  i=1&#58;Sw=F
+  For h=i+Gap To SPTop
+    If SP$(i)&gt;SP$(h) Then
+       M$=SP$(i)&#58;SP$(i)=SP$(h)&#58;SP$(h)=M$&#58;Sw=T
+    EndIf
+    i=i+1
+  Next
+Loop
+End Sub
+
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Cube Root of Two Sort
+
+  Sub CR2SORT(SPtop)
+    Local INTEGER i,x,b
+    Local FLOAT p,y
+    Local STRING a$
+    p=1.2599211&#58; x=2&#58; b=1&#58; y=SPtop\2
+
+    While y&gt;2&#58; y=y/p&#58; Wend
+
+    While x&gt;1
+      y=y&#42;p
+      x=SPtop\y
+      For i=0 To SPtop-x
+        If SP$(b+i)&gt;SP$(x+i) Then a$=SP$(b+i)&#58;SP$(b+i)=SP$(x+i)&#58;SP$(x+i)=a$ 'SWAP SP$(b+i),SP$(x+i)
+      Next
+    Wend
+  End Sub
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Shell Sort
+
+  sub ShellSort(SPTop)
+    local integer i,j
+	local float k
+	local string a$
+    k = int(SPTop / 2)
+    WHILE k &gt; 0
+        for i = 1 to SPTop
+            j = i
+            a$ = SP$(i)
+            WHILE (j &gt;= k+1 and SP$(abs(j-k)) &gt; a$)
+				SP$(j) = SP$(j-k)
+				j = j - k
+            wend
+            SP$(j) = a$
+        next 
+        IF k = 2 THEN
+          k = 1
+        ELSE
+          k = int(k &#42; 0.454545)  ' 5/11
+        end if
+    WEND
+  end sub
+
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Bubble Sort
+
+  Sub BblSort(SPTop)
+    '   SP$() is the array to be sorted
+    '   SPTop is the number of elements in the array
+    Local integer Flips,n
+    Local string a$
+    Flips = 1
+    Do
+      Flips = 0
+      For n=0 To SPTop-1
+        ' took out SWAP A$(n),A$(n+1) as it added 50% to the time
+        If SP$(n) &gt; SP$(n+1) Then a$=SP$(n)&#58;SP$(n)=SP$(n+1)&#58;SP$(n+1)=a$&#58;Flips = 1
+      Next
+    Loop While Flips = 1
+  End Sub
+  
+'&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;-
+' Initialise the data-set
+
+  Sub InitSP (x)
+    Local integer n
+    Restore
+    For n=0 To x&#58;Read SP$(n)&#58;Next
+  End Sub
+
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+    Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+  Data "zak","sheila","fred","archie"
+  Data "jim","barry","alan","kevin"
+  Data "charles","steve","stephanie","jon"
+  Data "sonia","xavier","mark","adi"
+  Data "darren","paul","toby","jp"
+  Data "josie","kingsley","vod","oregon"
+  Data "lou anne","ian","syed","craig"
+  Data "james", "jules","judith","julie"
+  Data "fargo","david","hanson","dakota"
+  Data "picard", "riker", "morn", "quark"
+  Data "cisco", "morgan","bennett","white"
+  Data "black","brown","red","orange"
+  Data "green","blue","grey","violet"
+  Data "smith","kadiyam","shah","moore"
+  Data "saxton","murray","mitchell","alaie"
+  Data "aa","bb","cc","dd"
+  Data "ee","ff","gg","gg"
+  Data "zz","hh","ii","jj"
+  Data "hgjhg","ufyf","serg","iuyyrre"
+  Data "hiuhiuh","fdresppokm","khgugftrdtrhtfyguguF","gfhf"
+  Data "pic","micro","microchip","atmel"
+  Data "intel","zilog","amd","nvidia"
+  Data "mitsubishi","nissan","volkswagen","bmw"
+  Data "tesla","audi","toyota","honda"
+  Data "suzuki","yamaha","yamaha","kawasaki"
+  Data "mike"
+</pre><br />Here is  comparison between just the CR2 and Comb sorts with a larger array of 2200 items - with trend lines.<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="monstertf7e9.png?File=/monstert.png" alt="Image" /><br /><br />... and finally a comparison of Peter Mather's CSub StringSort (included as part of the MMBasic for MX170 download) versus the Comb with a thousand items. This illustrates the speed advantage of Machine code over interpreted MMBasic for comparable tasks. Even though the CSub is a bubble sort, the advantages of the machine code are obvious. Interestingly, note the characteristic "surges" in the sort times due to the algorithm and the "sweet-spot" of items versus time.<br /><br /><a class="unknownlink" href="MMBasic..html" title="MMBasic."></a><img src="sortSubVsComb4517.png?File=/MMBasic/sortSubVsComb.png" alt="Image" /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Sort-algorithms-A-comparison by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:24:16 GMT -->
+</html>

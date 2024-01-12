@@ -1,0 +1,136 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Bubble Sort - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQF3CI8aDEgY2xhc3M9InBhZ2V0aXRsZSI+QnViYmxlIFNvcnQ8L2gxPjxzbWFsbD5Nb2RpZmllZCBvbiAyMDE3LzA4LzExIDIxOjM3IGJ5IENhcHRhaW5Cb2luZyAmbWRhc2g7IENhdGVnb3JpemVkIGFzOiBBcnJheXMsIFNvcnQsIFN0cmluZ3MsIF9MSUIgT3JpZ2luYWwgTU1CYXNpYzwvc21hbGw+PGJyIC8+PGJyIC8+PGgyIGNsYXNzPSJzZXBhcmF0b3IiPlRoaXMgbW9kdWxlIGlzIHBhcnQgb2YgdGhlIG9yaWdpbmFsIE1NQmFzaWMgbGlicmFyeS4gSXQgaXMgcmVwcm9kdWNlZCBoZXJlIHdpdGgga2luZCBwZXJtaXNzaW9uIG9mIEh1Z2ggQnVja2xlIGFuZCBHZW9mZiBHcmFoYW0uIEJlIGF3YXJlIGl0IG1heSByZWZlcmVuY2UgZnVuY3Rpb25hbGl0eSB3aGljaCBoYXMgY2hhbmdlZCBvciBpcyBkZXByZWNhdGVkIGluIHRoZSBsYXRlc3QgdmVyc2lvbnMgb2YgTU1CYXNpYy48YSBjbGFzcz0iaGVhZGVyYW5jaG9yIiBpZD0iVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiBocmVmPSIjVGhpc19tb2R1bGVfaXNfcGFydF9vZl90aGVfb3JpZ2luYWxfTU1CYXNpY19saWJyYXJ5X0l0X2lzX3JlcHJvZHVjZWRfaGVyZV93aXRoX2tpbmRfcGVybWlzc2lvbl9vZl9IdWdoX0J1Y2tsZV9hbmRfR2VvZmZfR3JhaGFtX0JlX2F3YXJlX2l0X21heV9yZWZlcmVuY2VfZnVuY3Rpb25hbGl0eV93aGljaF9oYXNfY2hhbmdlZF9vcl9pc19kZXByZWNhdGVkX2luX3RoZV9sYXRlc3RfdmVyc2lvbnNfb2ZfTU1CYXNpY18wIiB0aXRsZT0iTGluayB0byB0aGlzIFNlY3Rpb24iPiYjMDE4Mjs8L2E+PC9oMj48Yj5Ob3RlPC9iPjogQW55IHJlcXVpcmVkIGZpbGUocykgYXJlIGF2YWlsYWJsZSBpbiB0aGUgYXR0YWNobWVudHMgdGFiICh0b3AgcmlnaHQpLjxiciAvPjxiciAvPkJlZm9yZSBjaG9vc2luZyBhIHNvcnQgYWxnb3JpdGhtLCByZWFkIDxhIGNsYXNzPSJwYWdlbGluayIgaHJlZj0iTU1CYXNpYy5Tb3J0LWFsZ29yaXRobXMtQS1jb21wYXJpc29uLmFzaHgiIHRpdGxlPSJTb3J0IGFsZ29yaXRobXMgLSBBIGNvbXBhcmlzb24iPnRoaXMgYXJ0aWNsZTwvYT4uPGJyIC8+PGJyIC8+PGI+QkJMU09SVDEuQkFTIDwvYj48YnIgLz48cHJlPg0KICAgICcgQnViYmxlIFNvcnQgUm91dGluZSAgY29waWVkIGZyb20gR1ctQkFTSUMgb25saW5lIG1hbnVhbA0KICAgICcgYnkgSHVnaCBCdWNrbGUgLSBKYW4gMjAxMg0KICAgICcgUmVxdWlyZXMgTU1CYXNpYyAzLjEgb3IgbGF0ZXINCg0KDQpCYmxTb3J0JiM1ODsNCiAgICAnIEJ1YmJsZSBzb3J0IHJvdXRpbmUNCiAgICAnIFJ1bnMgc2VxdWVudGlhbGx5IHRocm91Z2ggYW4gYXJyYXkgdGVzdGluZyBlYWNoIGVsZW1lbnQgYWdhaW5zdCB0aGUNCiAgICAnIG5leHQuIElmIGl0IGlzIGdyZWF0ZXIgdGhhbiB0aGUgbmV4dCwgdGhlIHR3byB2YWx1ZXMgYXJlIHN3YXBwZWQuDQogICAgJyBUaGlzIHByb2Nlc3MgaXMgcmVwZWF0ZWQgdW50aWwgbm8gbW9yZSBzd2FwcyBhcmUgbWFkZS4NCiAgICAnICAgQSQoKSBpcyB0aGUgYXJyYXkgdG8gYmUgc29ydGVkDQogICAgJyAgIGogaXMgdGhlIG51bWJlciBvZiBlbGVtZW50cyBpbiB0aGUgYXJyYXkNCiAgICBGbGlwcyA9IDENCiAgICBEbw0KICAgICAgRmxpcHMgPSAwDQogICAgICBGb3Igbj0xIFRvIGotMQ0KICAgICAgSWYgQSQobikgJmd0OyBBJChuKzEpIFRoZW4NCiAgICAgICAgU1dBUCBBJChuKSxBJChuKzEpDQogICAgICAgIEZsaXBzID0gMQ0KICAgICAgRW5kSWYNCiAgICAgIE5leHQNCiAgICBMb29wIFdoaWxlIEZsaXBzID0gMQ0KICAgIFJldHVybg0KDQpTdWIgU1dBUCBYJCxZJA0KICAgICcgVGhpcyBmdW5jdGlvbiBtaW1pY3MgR1ctQmFzaWMgU1dBUCBYLFkgZnVuY3Rpb24NCiAgICBMb2NhbCBaJA0KICAgIFokID0gWCQNCiAgICBYJCA9IFkkDQogICAgWSQgPSBaJA0KRW5kIFN1Yg0KDQo8L3ByZT48YnIgLz48YnIgLz48YnIgLz48Yj5CQkxTT1JULkJBUyA8L2I+PGJyIC8+PHByZT4NCiAgICAnIEJ1YmJsZSBTb3J0IFJvdXRpbmUgIGNvcGllZCBmcm9tIEdXLUJBU0lDIG9ubGluZSBtYW51YWwNCiAgICAnIGJ5IEh1Z2ggQnVja2xlIC0gSmFuIDIwMTINCiAgICAnIEEgbW9kaWZpZWQgdmVyc2lvbiB0byBzaG93IHRoZSB1c2Ugb2YgYSBEZWZpbmVkIFN1YnJvdXRpbmUNCiAgICAnIFJlcXVpcmVzIE1NQmFzaWMgMy4xIG9yIGxhdGVyDQoNCiAgICAnIEl0IHNvcnRzIGEgdGV4dCBhcnJheSBpbnRvIGFzY2VuZGluZyBzZXF1ZW5jZSBhbmQgaXMgcmVhc29uYWJseQ0KICAgICcgZWZmaWNpZW50IGZvciBzbWFsbCBhbW91bnRzIG9mIGRhdGEuDQogICAgJyBUaGlzIHZlcnNpb24gc29ydHMgYSB0ZXh0IGFycmF5OyBpZiB5b3VycyBpcyBudW1lcmljIGp1c3QNCiAgICAnIHJlbW92ZSB0aGUgZG9sbGFyIHNpZ25zIGFuZCBMY2FzZSQoKS4NCg0KICAgICcgVGhpcyBzYW1wbGUgc29ydHMgdGhlIG5hbWVzIGluIHRoZSBEQVRBIHN0YXRlbWVudHMuDQoNCiAgICAnIE5vdGUgdGhhdCB0aGUgc29ydGVkIHNlcXVlbmNlIGlzIGFzIHlvdSB3b3VsZCBmaW5kIGluIGEgZGljdGlvbmFyeSwNCiAgICAnIHRlbGVwaG9uZSBkaXJlY3RvcnksIEV4Y2VsIG9yIFdvcmQuIFRoYXQgaXMsIHRoZSBzb3J0IGlzDQogICAgJyBjYXNlIGluc2Vuc2l0aXZlLiBJZiB5b3Ugb21pdCB0aGUgTGNhc2UoKSBmdW5jdGlvbiBpbiB0aGUNCiAgICAnIGJ1YmJsZSBzb3J0IHJvdXRpbmUgeW91IGdldCB0aGUgbm9ybWFsIEJBU0lDIHNvcnQgc2VxdWVuY2Ugd2hpY2gNCiAgICAnIElTIGNhc2Ugc2Vuc2l0aXZlLCBzbyBhbGwgdGhlIHdvcmRzIHN0YXJ0aW5nIHdpdGggYSBDYXBpdGFsIGxldHRlcg0KICAgICcgd291bGQgYXBwZWFyIGJlZm9yZSB0aG9zZSB3aGljaCBkb24ndC4NCiAgICAnIEl0J3MgdXAgdG8geW91IHdoaWNoIHlvdSBjaG9vc2UuDQoNCg0KICAgICcgVGhlIG5leHQgNSBsaW5lcyBqdXN0IHByb3ZpZGUgc29tZSBkYXRhIHRvIHNvcnQgaW4gYXJyYXkgQSQoKQ0KICAgIERhdGEgSHVnaCxBbmRyZXcsR2VvZmZyZXksVmljdG9yLEdlb3JnZSxJc2FhYyxKYW1lcw0KICAgIERhdGEgSm9obixBQkIsYWFiLEFDLEZyZWQsTGFuY2UsSm9lLFdpbGxpYW0sQWFyb24sYWFyZHZhcmsNCg0KICAgIGo9MTcNCiAgICBEaW0gQSQoaikNCiAgICBQcmludCAiVW5zb3J0ZWQmIzU4OyAiOw0KICAgIEZvciBpID0gMSBUbyBqDQogICAgICBSZWFkIEEkKGkpDQogICAgICBQcmludCBBJChpKTsiLCI7DQogICAgICBJZiBpPTkgVGhlbiBQcmludCYjNTg7IFByaW50ICIgICAgICAgICAgIjsNCiAgICBOZXh0DQogICAgUHJpbnQNCiAgICBQcmludA0KDQogICAnICBJbnZva2UgdGhlIGJ1YmJsZSBzb3J0IHJvdXRpbmUNCiAgICBHb1N1YiBCYmxTb3J0DQoNCiAgICAnIFNob3cgdGhlIHJlc3VsdA0KICAgIFByaW50ICJTb3J0ZWQmIzU4OyAgICI7DQogICAgRm9yIGkgPSAxIFRvIGoNCiAgICAgIFByaW50IEEkKGkpOyIsIjsNCiAgICAgIElmIGk9OSBUaGVuIFByaW50JiM1ODsgUHJpbnQgIiAgICAgICAgICAiOw0KICAgIE5leHQNCiAgICBFbmQNCg0KDQpCYmxTb3J0JiM1ODsNCiAgICAnIEJ1YmJsZSBzb3J0IHJvdXRpbmUNCiAgICAnIFJ1bnMgc2VxdWVudGlhbGx5IHRocm91Z2ggYW4gYXJyYXkgdGVzdGluZyBlYWNoIGVsZW1lbnQgYWdhaW5zdCB0aGUNCiAgICAnIG5leHQuIElmIGl0IGlzIGdyZWF0ZXIgdGhhbiB0aGUgbmV4dCwgdGhlIHR3byB2YWx1ZXMgYXJlIHN3YXBwZWQuDQogICAgJyBUaGlzIHByb2Nlc3MgaXMgcmVwZWF0ZWQgdW50aWwgbm8gbW9yZSBzd2FwcyBhcmUgbWFkZS4NCiAgICAnICAgQSQoKSBpcyB0aGUgYXJyYXkgdG8gYmUgc29ydGVkDQogICAgJyAgIGogaXMgdGhlIG51bWJlciBvZiBlbGVtZW50cyBpbiB0aGUgYXJyYXkNCiAgICBGbGlwcyA9IDENCiAgICBEbw0KICAgICAgRmxpcHMgPSAwDQogICAgICBGb3Igbj0xIFRvIGotMQ0KICAgICAgSWYgTENhc2UkKEEkKG4pKSAmZ3Q7IExDYXNlJChBJChuKzEpKSBUaGVuDQogICAgICAgIFNXQVAgQSQobiksQSQobisxKQ0KICAgICAgICBGbGlwcyA9IDENCiAgICAgIEVuZElmDQogICAgICBOZXh0DQogICAgTG9vcCBXaGlsZSBGbGlwcyA9IDENCiAgICBSZXR1cm4NCg0KU3ViIFNXQVAgWCQsWSQNCiAgICAnIFRoaXMgZnVuY3Rpb24gbWltaWNzIEdXLUJhc2ljIFNXQVAgWCxZIGZ1bmN0aW9uDQogICAgTG9jYWwgWiQNCiAgICBaJCA9IFgkDQogICAgWCQgPSBZJA0KICAgIFkkID0gWiQNCkVuZCBTdWINCg0KPC9wcmU+PGJyIC8+PGJyIC8+ZGT1Yp92d66mYbVC0klVAiGIMRgb8Q==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Bubble Sort</h1><small>Modified on 2017/08/11 21:37 by CaptainBoing &mdash; Categorized as: Arrays, Sort, Strings, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br />Before choosing a sort algorithm, read <a class="pagelink" href="MMBasic.Sort-algorithms-A-comparison.html" title="Sort algorithms - A comparison">this article</a>.<br /><br /><b>BBLSORT1.BAS </b><br /><pre>
+    ' Bubble Sort Routine  copied from GW-BASIC online manual
+    ' by Hugh Buckle - Jan 2012
+    ' Requires MMBasic 3.1 or later
+
+
+BblSort&#58;
+    ' Bubble sort routine
+    ' Runs sequentially through an array testing each element against the
+    ' next. If it is greater than the next, the two values are swapped.
+    ' This process is repeated until no more swaps are made.
+    '   A$() is the array to be sorted
+    '   j is the number of elements in the array
+    Flips = 1
+    Do
+      Flips = 0
+      For n=1 To j-1
+      If A$(n) &gt; A$(n+1) Then
+        SWAP A$(n),A$(n+1)
+        Flips = 1
+      EndIf
+      Next
+    Loop While Flips = 1
+    Return
+
+Sub SWAP X$,Y$
+    ' This function mimics GW-Basic SWAP X,Y function
+    Local Z$
+    Z$ = X$
+    X$ = Y$
+    Y$ = Z$
+End Sub
+
+</pre><br /><br /><br /><b>BBLSORT.BAS </b><br /><pre>
+    ' Bubble Sort Routine  copied from GW-BASIC online manual
+    ' by Hugh Buckle - Jan 2012
+    ' A modified version to show the use of a Defined Subroutine
+    ' Requires MMBasic 3.1 or later
+
+    ' It sorts a text array into ascending sequence and is reasonably
+    ' efficient for small amounts of data.
+    ' This version sorts a text array; if yours is numeric just
+    ' remove the dollar signs and Lcase$().
+
+    ' This sample sorts the names in the DATA statements.
+
+    ' Note that the sorted sequence is as you would find in a dictionary,
+    ' telephone directory, Excel or Word. That is, the sort is
+    ' case insensitive. If you omit the Lcase() function in the
+    ' bubble sort routine you get the normal BASIC sort sequence which
+    ' IS case sensitive, so all the words starting with a Capital letter
+    ' would appear before those which don't.
+    ' It's up to you which you choose.
+
+
+    ' The next 5 lines just provide some data to sort in array A$()
+    Data Hugh,Andrew,Geoffrey,Victor,George,Isaac,James
+    Data John,ABB,aab,AC,Fred,Lance,Joe,William,Aaron,aardvark
+
+    j=17
+    Dim A$(j)
+    Print "Unsorted&#58; ";
+    For i = 1 To j
+      Read A$(i)
+      Print A$(i);",";
+      If i=9 Then Print&#58; Print "          ";
+    Next
+    Print
+    Print
+
+   '  Invoke the bubble sort routine
+    GoSub BblSort
+
+    ' Show the result
+    Print "Sorted&#58;   ";
+    For i = 1 To j
+      Print A$(i);",";
+      If i=9 Then Print&#58; Print "          ";
+    Next
+    End
+
+
+BblSort&#58;
+    ' Bubble sort routine
+    ' Runs sequentially through an array testing each element against the
+    ' next. If it is greater than the next, the two values are swapped.
+    ' This process is repeated until no more swaps are made.
+    '   A$() is the array to be sorted
+    '   j is the number of elements in the array
+    Flips = 1
+    Do
+      Flips = 0
+      For n=1 To j-1
+      If LCase$(A$(n)) &gt; LCase$(A$(n+1)) Then
+        SWAP A$(n),A$(n+1)
+        Flips = 1
+      EndIf
+      Next
+    Loop While Flips = 1
+    Return
+
+Sub SWAP X$,Y$
+    ' This function mimics GW-Basic SWAP X,Y function
+    Local Z$
+    Z$ = X$
+    X$ = Y$
+    Y$ = Z$
+End Sub
+
+</pre><br /><br />
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Bubble-Sort-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:14:06 GMT -->
+</html>

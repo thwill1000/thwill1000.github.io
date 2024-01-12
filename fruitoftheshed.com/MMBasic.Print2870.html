@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" >
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Read-Temperature-from-Dallas-DS18B20-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><title>
+	Read Temperature from Dallas DS18B20 - Fruit Of The Shed
+</title><link rel="stylesheet" type="text/css" href="Themes/Print.css" /></head>
+<body>
+    <form name="frmPrint" method="post" action="http://fruitoftheshed.com/Print.aspx?NS=MMBasic&amp;Page=MMBasic.Read-Temperature-from-Dallas-DS18B20-part-of-the-original-MMBasic-library" id="frmPrint">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwULLTIwMDg4Njc4MjcPZBYCAgEPZBYCAgEPFgIeBFRleHQFshM8aDEgY2xhc3M9InBhZ2V0aXRsZSI+UmVhZCBUZW1wZXJhdHVyZSBmcm9tIERhbGxhcyBEUzE4QjIwPC9oMT48c21hbGw+TW9kaWZpZWQgb24gMjAxNi8xMi8yMyAyMzozNyBieSBBZG1pbmlzdHJhdG9yICZtZGFzaDsgQ2F0ZWdvcml6ZWQgYXM6IEVsZWN0cm9uaWNzLCBFbnZpcm9ubWVudCwgX0xJQiBPcmlnaW5hbCBNTUJhc2ljPC9zbWFsbD48YnIgLz48YnIgLz48aDIgY2xhc3M9InNlcGFyYXRvciI+VGhpcyBtb2R1bGUgaXMgcGFydCBvZiB0aGUgb3JpZ2luYWwgTU1CYXNpYyBsaWJyYXJ5LiBJdCBpcyByZXByb2R1Y2VkIGhlcmUgd2l0aCBraW5kIHBlcm1pc3Npb24gb2YgSHVnaCBCdWNrbGUgYW5kIEdlb2ZmIEdyYWhhbS4gQmUgYXdhcmUgaXQgbWF5IHJlZmVyZW5jZSBmdW5jdGlvbmFsaXR5IHdoaWNoIGhhcyBjaGFuZ2VkIG9yIGlzIGRlcHJlY2F0ZWQgaW4gdGhlIGxhdGVzdCB2ZXJzaW9ucyBvZiBNTUJhc2ljLjxhIGNsYXNzPSJoZWFkZXJhbmNob3IiIGlkPSJUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIGhyZWY9IiNUaGlzX21vZHVsZV9pc19wYXJ0X29mX3RoZV9vcmlnaW5hbF9NTUJhc2ljX2xpYnJhcnlfSXRfaXNfcmVwcm9kdWNlZF9oZXJlX3dpdGhfa2luZF9wZXJtaXNzaW9uX29mX0h1Z2hfQnVja2xlX2FuZF9HZW9mZl9HcmFoYW1fQmVfYXdhcmVfaXRfbWF5X3JlZmVyZW5jZV9mdW5jdGlvbmFsaXR5X3doaWNoX2hhc19jaGFuZ2VkX29yX2lzX2RlcHJlY2F0ZWRfaW5fdGhlX2xhdGVzdF92ZXJzaW9uc19vZl9NTUJhc2ljXzAiIHRpdGxlPSJMaW5rIHRvIHRoaXMgU2VjdGlvbiI+JiMwMTgyOzwvYT48L2gyPjxiPk5vdGU8L2I+OiBBbnkgcmVxdWlyZWQgZmlsZShzKSBhcmUgYXZhaWxhYmxlIGluIHRoZSBhdHRhY2htZW50cyB0YWIgKHRvcCByaWdodCkuPGJyIC8+PGJyIC8+PGI+RlVOMVdJUkUuQkFTPC9iPjxiciAvPjxwcmU+DQpQcmludCAiVGhlIHRlbXBlcmF0dXJlIGlzJiM1ODsgIiBGb3JtYXQkKEdldFRlbXAoMTgpLCAiJTIuMWYiKQ0KDQoNCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KJyBGdW5jdGlvbiB0byBnZXQgdGhlIHRlbXBlcmF0dXJlIGZyb20gYSBEYWxsYXMgRFMxOEIyMC4NCiYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5OyYjMzk7JiMzOTsmIzM5Ow0KRnVuIEdldFRlbXAoUGluTmJyKQ0KICBMb2NhbCBUMSwgVDIsIGIsIHQNCiAgT1dSZXNldCBQaW5OYnIgICAgICAgICAgICAgICAgICAgICAgICAnIHJlc2V0DQogIE9XV3JpdGUgUGluTmJyLCAxLCAyLCAmYW1wO2hjYywgJmFtcDtoNDQgICAgICAnIHN0YXJ0IGNvbnZlcnNpb24NCiAgUGF1c2UgMTAwDQogIHQgPSBUaW1lcg0KICBEbw0KICAgIElmIFRpbWVyIC0gdCAmZ3Q7IDEwMDAgVGhlbiBFcnJvciAiU2Vuc29yIG5vdCByZXNwb25kaW5nIg0KICAgIE9XUmVhZCBQaW5OYnIsIDQgLCAxICwgYiAgICAgICAgICAgICcgY29udmVyc2lvbiBkb25lPw0KICBMb29wIFVudGlsIGIgPSAxDQogIE9XV3JpdGUgUGluTmJyLCAxLCAyLCAmYW1wO2hjYywgJmFtcDtoYmUgICAgICAnIGNvbW1hbmQgcmVhZCBkYXRhDQogIE9XUmVhZCBQaW5OYnIsIDIsIDIsIFQxLCBUMiAgICAgICAgICAgJyBnZXQgdGhlIGRhdGENCiAgR2V0VGVtcCA9ICgoVDIgQW5kICZhbXA7YjExMSkgJiM0MjsgMjU2ICsgVDEpIC8gMTYNCiAgSWYgVDIgQW5kICZhbXA7YjEwMDAgVGhlbiBHZXRUZW1wID0gLUdldFRlbXAgJyBhZGp1c3QgaWYgJmx0OyAwDQpFbmQgRnVuDQoNCg0KPC9wcmU+ZGQG2PYxgsjbPk2ZOK5I3o491+LVvw==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="03CF0AB7" />
+</div>
+        <h1 class="pagetitle">Read Temperature from Dallas DS18B20</h1><small>Modified on 2016/12/23 23:37 by Administrator &mdash; Categorized as: Electronics, Environment, _LIB Original MMBasic</small><br /><br /><h2 class="separator">This module is part of the original MMBasic library. It is reproduced here with kind permission of Hugh Buckle and Geoff Graham. Be aware it may reference functionality which has changed or is deprecated in the latest versions of MMBasic.<a class="headeranchor" id="This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" href="#This_module_is_part_of_the_original_MMBasic_library_It_is_reproduced_here_with_kind_permission_of_Hugh_Buckle_and_Geoff_Graham_Be_aware_it_may_reference_functionality_which_has_changed_or_is_deprecated_in_the_latest_versions_of_MMBasic_0" title="Link to this Section">&#0182;</a></h2><b>Note</b>: Any required file(s) are available in the attachments tab (top right).<br /><br /><b>FUN1WIRE.BAS</b><br /><pre>
+Print "The temperature is&#58; " Format$(GetTemp(18), "%2.1f")
+
+
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+' Function to get the temperature from a Dallas DS18B20.
+&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;&#39;
+Fun GetTemp(PinNbr)
+  Local T1, T2, b, t
+  OWReset PinNbr                        ' reset
+  OWWrite PinNbr, 1, 2, &amp;hcc, &amp;h44      ' start conversion
+  Pause 100
+  t = Timer
+  Do
+    If Timer - t &gt; 1000 Then Error "Sensor not responding"
+    OWRead PinNbr, 4 , 1 , b            ' conversion done?
+  Loop Until b = 1
+  OWWrite PinNbr, 1, 2, &amp;hcc, &amp;hbe      ' command read data
+  OWRead PinNbr, 2, 2, T1, T2           ' get the data
+  GetTemp = ((T2 And &amp;b111) &#42; 256 + T1) / 16
+  If T2 And &amp;b1000 Then GetTemp = -GetTemp ' adjust if &lt; 0
+End Fun
+
+
+</pre>
+    </form>
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Print.aspx?Page=MMBasic.Read-Temperature-from-Dallas-DS18B20-part-of-the-original-MMBasic-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 12:23:02 GMT -->
+</html>

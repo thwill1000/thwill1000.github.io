@@ -1,0 +1,418 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.ashx?HL=mmbasic,opt by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:31:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=8" /><title>
+	Shape drawing for Complex Lines and Polygons - Fruit Of The Shed
+</title><meta name="keywords" content="Shape, polygon" /><script type="text/javascript" src="JS/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="JS/Scripts.js"></script>
+<script type="text/javascript" src="JS/SearchHighlight.js"></script>
+<link rel="stylesheet" media="print" href="Themes/Default/Print_Styles.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles%20-%20Copy.css" type="text/css" />
+<link rel="stylesheet" media="screen" href="Themes/Default/Screen_Styles.css" type="text/css" />
+<link rel="stylesheet" href="Themes/Editor.css" type="text/css" />
+<link rel="search" href="searchf7b1.xml?OpenSearch=1" type="application/opensearchdescription+xml" title="Fruit Of The Shed - Search" /><script src="Themes/Default/Scripts.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="Themes/Default/Icon.ico" type="image/x-icon" />
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="http://fruitoftheshed.com/Default.aspx?Page=Shape-drawing-for-Complex-Lines-and-Polygons&amp;NS=MMBasic&amp;HL=mmbasic%2copt" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTQ3NjA4MDI2D2QWAmYPZBYCAgEPZBYCAgkPZBYEAhsPDxYCHg1BbnRoZW1WaXNpYmxlaGRkAicPDxYCHgdWaXNpYmxlaGQWAmYPFgIeC18hSXRlbUNvdW50ZmRkL9X+pH8J+jB1IIJZx71WjgOrjyw=" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var Anthem_FormID = "aspnetForm";
+//]]>
+</script>
+<script src="WebResource3c0c.axd?d=wu8PDPV1hmKciPrhUAi9NEjQUBbOefrIXCaRPwGH8Q5jrvPZFuGbKmycL3GXDKGD1_JZ083oQl1Kpd_P7rg1V93MtYOS3Vb-0Eztmu5VDCWQxc7l0&amp;t=636158881040000000" type="text/javascript"></script>
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CA0B0334" />
+</div>
+		<script type="text/javascript">
+<!--
+__BaseName = "ctl00_CphMaster_";
+__ConfirmMessage = "Are you sure you want to proceed?";
+// -->
+</script>
+		<script type="text/javascript">
+		<!--
+			function __GetServerElementById(id) {
+				return document.getElementById(__BaseName + id);
+			}
+			function __RequestConfirm() {
+				return confirm(__ConfirmMessage);
+			}
+		// -->
+		</script>
+    
+        <div id="HeaderDiv">
+            <div style="float: right;">Welcome <a href="MMBasic.Language.html" class="systemlink" title="Select your language">Guest</a>, you are in: <select class="namespacedropdown" onchange="javascript:var sel = this.value; document.location = (sel != '' ? (sel + '.') : '') + 'Default.aspx';"><option value="">&lt;root&gt;</option><option value="Circuit Ideas">Circuit Ideas</option><option value="Colour MaxiMite 2 (CMM2)">Colour MaxiMite 2 (CMM2)</option><option value="GCB">GCB</option><option value="MicroMite ArmMite and MMX Hardware">MicroMite ArmMite and MMX Hardware</option><option selected="selected" value="MMBasic">MMBasic</option><option value="PIC ASM">PIC ASM</option><option value="Platform Agnostic">Platform Agnostic</option></select> &bull; <a href="MMBasic.Login0fc4.html?Redirect=http%3a%2f%2ffruitoftheshed.com%2fDefault.aspx%3fPage%3dShape-drawing-for-Complex-Lines-and-Polygons%26NS%3dMMBasic%26HL%3dmmbasic%2copt" class="systemlink" title="Login">Login</a></div><h1>Fruit Of The Shed</h1>
+        </div>
+                   
+        <div id="ContainerDiv">
+                 
+            <div id="SidebarDiv">
+                <div id="SidebarHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="SidebarContentDiv">
+                    <div style="float: right;"> </div><h3 class="separator">Navigation (MMBasic)<a class="headeranchor" id="Navigation_NAMESPACE_0" href="#Navigation_NAMESPACE_0" title="Link to this Section">&#0182;</a></h3><ul><li><b><a class="pagelink" href="MMBasic.MainPage.html" title="_MMBasic Code Library">Main Page</a></b></li><li><a class="pagelink" href="MainPage.html" title="Home Page">Main Page (root)</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.EggDrop-part-of-the-original-MMBasic-libraryc674.html" title="Random Page">Random Page</a></li><li><a class="systemlink" href="MMBasic.AllPages.html" title="All Pages">All Pages</a><br /> </li><li><a class="systemlink" href="Logina75d.html" title="Create a new Page">Create a new Page</a><br /></li></ul><br /><ul><li><a class="systemlink" href="Logine894.html" title="Administration">Administration</a></li><li><a class="systemlink" href="MMBasic.Upload.html" title="File Management">File Management</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="My Account">My Account</a><br /></li></ul><br /><ul><li><a class="systemlink" href="MMBasic.Register.html" title="Create Account">Create Account</a><br /></li></ul><br /><small><b>Search the wiki</b></small><br /><br /><script type="text/javascript"><!--
+function _DoSearch_SBa925f7376d16452eba58fcd259b58efc() { document.location = 'MMBasic.Search.aspx?AllNamespaces=1&FilesAndAttachments=1&Query=' + encodeURI(document.getElementById('SBa925f7376d16452eba58fcd259b58efc').value); }
+// -->
+</script><input class="txtsearchbox" type="text" id="SBa925f7376d16452eba58fcd259b58efc" onkeydown="javascript:var keycode; if(window.event) keycode = event.keyCode; else keycode = event.which; if(keycode == 10 || keycode == 13) { _DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false; }" /> <big><a href="#" onclick="javascript:_DoSearch_SBa925f7376d16452eba58fcd259b58efc(); return false;">&raquo;</a></big><br /><br /><br />
+                </div>
+                <div id="SidebarFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+            <div id="MainDiv">
+                <div id="MainHeaderDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+                <div id="PageInternalHeaderDiv"></div>
+                
+
+    <script type="text/javascript">
+    <!--
+        function __ShowAllTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "none";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "";
+                __SetStatus("1");
+            }
+            catch(ex) { }
+            return false;
+        }
+        function __HideTrail() {
+            try {
+                document.getElementById("BreadcrumbsDivMin").style["display"] = "";
+                document.getElementById("BreadcrumbsDivAll").style["display"] = "none";
+                __SetStatus("0");
+            }
+            catch(ex) { }
+            return false;
+        }
+        
+        function __SetStatus(open) {
+            __CreateCookie("ScrewTurnWikiBCT", open, 365);
+        }
+        function __GetStatus() {
+            var value = __ReadCookie("ScrewTurnWikiBCT");
+            if(value) return value;
+            else return "0";
+        }
+
+        function __InitBCT() {
+        	if(__GetStatus() == "1") {
+        		__ShowAllTrail();
+        	}
+        }
+
+        var __attachmentsMenuJustShown = false;
+        var __adminToolsMenuJustShown = false;
+        var __ie7Mode = false;
+
+        function __ToggleAttachmentsMenu(cx, cy) {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("PageAttachmentsLink"), element);
+        			}
+        			__attachmentsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAttachmentsMenu() {
+        	var element = document.getElementById("PageAttachmentsDiv");
+        	if(element && !__attachmentsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if (__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__attachmentsMenuJustShown = false;
+        	return true; // Needed to enabled next clicks' action (file download)
+        }
+
+        function __ToggleAdminToolsMenu(cx, cy) {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element) {
+        		if(element.style["display"] == "none") {
+        			element.style["display"] = "";
+        			var pos = __AbsolutePosition(element);
+        			if(pos.left - cx > 0) {
+        				__ie7Mode = true;
+        				element.style["position"] = "absolute";
+        				element.style["top"] = cy + "px";
+        				element.style["left"] = (cx - pos.width) + "px";
+        			}
+        			else {
+        				__RepositionDiv(document.getElementById("AdminToolsLink"), element);
+        			}
+        			__adminToolsMenuJustShown = true;
+        		}
+        	}
+        	return false;
+        }
+        function __HideAdminToolsMenu() {
+        	var element = document.getElementById("AdminToolsDiv");
+        	if(element && !__adminToolsMenuJustShown) {
+        		element.style["display"] = "none";
+        		if(__ie7Mode) element.style["left"] = "10000px";
+        	}
+        	__adminToolsMenuJustShown = false;
+        	return true; // Needed to enable next clicks' action (admin tools)
+        }
+
+        function __HideAllMenus() {
+        	__HideAttachmentsMenu();
+        	__HideAdminToolsMenu();
+        }
+
+        document.body.onclick = __HideAllMenus;
+
+        function __AbsolutePosition(obj) {
+        	var pos = null;
+        	if(obj != null) {
+        		pos = new Object();
+        		pos.top = obj.offsetTop;
+        		pos.left = obj.offsetLeft;
+        		pos.width = obj.offsetWidth;
+        		pos.height = obj.offsetHeight;
+
+        		obj = obj.offsetParent;
+        		while(obj != null) {
+        			pos.top += obj.offsetTop;
+        			pos.left += obj.offsetLeft;
+        			obj = obj.offsetParent;
+        		}
+        	}
+        	return pos;
+        }
+
+        var __showTimer = null;
+        var __hideTimer = null;
+
+        function __ShowDropDown(e, divId, parent) {
+           	// Set a timer
+        	// On mouse out, cancel the timer and start a 2nd timer that hides the menu
+        	// When the 1st timer elapses
+        	//   show the drop-down
+        	//   on menu mouseover, cancel the 2nd timer
+        	//   on menu mouse out, hide the menu
+        	__showTimer = setTimeout('__ShowDropDownForReal(' + e.clientX + ', ' + e.clientY + ', "' + divId + '", "' + parent.id + '");', 200);
+        }
+
+        function __ShowDropDownForReal(cx, cy, divId, parentId) {
+        	var pos = __AbsolutePosition(document.getElementById(parentId));
+        	var menu = document.getElementById(divId);
+
+			// This is needed to trick IE7 which, for some reason,
+			// does not position the drop-down correctly with the new Default theme
+        	if(pos.left - cx > 30) {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = cy + "px";
+        		menu.style["left"] = (cx - 10) + "px";
+        	}
+        	else {
+        		menu.style["display"] = "";
+        		menu.style["position"] = "absolute";
+        		menu.style["top"] = (pos.top + pos.height) + "px";
+        		menu.style["left"] = pos.left + "px";
+        	}
+        	__showTimer = null;
+        }
+
+        function __HideDropDown(divId) {
+        	if(__showTimer) clearTimeout(__showTimer);
+        	__hideTimer = setTimeout('__HideDropDownForReal("' + divId + '");', 200);
+        }
+
+        function __HideDropDownForReal(divId) {
+        	document.getElementById(divId).style["display"] = "none";
+        	__hideTimer = null;
+        }
+
+        function __CancelHideTimer() {
+        	if(__hideTimer) clearTimeout(__hideTimer);
+        }
+        
+    // -->
+    </script>
+
+	<a id="PageTop"></a>
+	
+	<div id="PageHeaderDiv">
+	
+		<!-- Change this to PageToolbarDiv -->
+		<div id="EditHistoryLinkDiv">
+			<a id="DiscussLink" title="Discuss" href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons266d.html?Discuss=1">Discuss (0)</a>
+			
+			
+			<a id="HistoryLink" title="View Page edit history" href="MMBasic.History1fec.html?Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons">History</a>
+			
+			
+			
+			
+			
+		</div>
+		
+		<h1 class="pagetitle">
+			
+			Shape drawing for Complex Lines and Polygons
+			
+		</h1>
+		
+		<div id="PrintLinkDiv">
+			<a id="PrintLink" href="MMBasic.Print1fec.html?Page=MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons" title="Printer friendly version" target="_blank">Print</a>
+		</div>
+		
+		<div id="RssLinkDiv">
+			
+		</div>
+		
+		<div id="EmailNotificationDiv">
+			<span id="Anthem_ctl00_CphMaster_btnEmailNotification__"></span>
+		</div>
+		
+		<div id="ctl00_CphMaster_pnlPageInfo">
+	
+			<div id="PageInfoDiv">
+				<span id="ModificationSpan">
+					Modified on 
+					2019/05/24 13:22
+				</span>
+				<span id="AuthorSpan">
+					 by 
+					<a href="MMBasic.Userb2ec.html?Username=hendy">CaptainBoing</a>
+				</span>
+				<span id="NavPathsSpan">
+					
+				</span>
+				<span id="CategoriesSpan">
+					Categorized as 
+					<a href="MMBasic.AllPagesb06f.html?Cat=MMBasic.Arrays" title="Arrays">Arrays</a>, <a href="MMBasic.AllPageseb16.html?Cat=MMBasic.Graphics" title="Graphics">Graphics</a>
+				</span>
+				
+				<span id="PageDiscussionSpan">
+					
+					
+				</span>
+			</div>
+		
+</div>
+		
+		<div id="f6cb4e11b-7cf4-4bac-b8c1-398777b6cbf7" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f6cb4e11b-7cf4-4bac-b8c1-398777b6cbf7');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="f820e0d94-62ac-4030-8f1f-e2e4dbd2d3b6" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f820e0d94-62ac-4030-8f1f-e2e4dbd2d3b6');"><a href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTrim Functions (VB work-a-like)</a><a href="MMBasic.Regular-Expression-Function.html" title="Regular Expression Function">Regular Expression Function</a><a href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a></div><div id="fe21c3d0d-5c3c-449d-817c-7d7c53c34177" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fe21c3d0d-5c3c-449d-817c-7d7c53c34177');"></div><div id="fd5ca24c9-1261-41ab-822c-9076d3640ebe" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('fd5ca24c9-1261-41ab-822c-9076d3640ebe');"><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime() Function to return a human readable date and time from a unixtime number</a><a href="MMBasic.VB%20Work-a-like%20SPLIT%20Function.html" title="SPLIT Function (VB work-a-like)">SPLIT Function (VB work-a-like)</a><a href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar</a><a href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a></div><div id="f9762912b-a927-4cb9-b15e-cdd5739cc133" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f9762912b-a927-4cb9-b15e-cdd5739cc133');"><a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time">UnixTime or Epoch Time</a><a href="MMBasic.IsLeapYear-Function-to-determine-if-the-given-year-is-a-Leap-Year-on-the-Gregorian-western-calendar.html" title="IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar">IsLeapYear Function to determine if the given year is a Leap Year on the Gregorian (western) calendar</a><a href="MMBasic.ZPad-pad-a-number-with-leading-zeroes.html" title="ZPad$() - pad a number with leading zeroes">ZPad$() - pad a number with leading zeroes</a><a href="MMBasic.HumanTime-Function-to-return-a-human-readable-date-and-time-from-a-unixtime-number.html" title="HumanTime() Function to return a human readable date and time from a unixtime number">HumanTime() Function to return a human readable date and time from a unixtime number</a><a href="MMBasic.DateDiff-Function-VB-work-a-like.html" title="DateDiff() Function (VB work-a-like)">DateDiff() Function (VB work-a-like)</a><a href="MMBasic.Now-Function-VB-work-a-like.html" title="Now() Function (VB work-a-like) ">Now() Function (VB work-a-like) </a><a href="MMBasic.DatePart-Function-VB-work-a-like.html" title="DatePart() Function (VB work-a-like)">DatePart() Function (VB work-a-like)</a></div><div id="f4ce19598-2d06-44f0-830d-9d28693de29c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('f4ce19598-2d06-44f0-830d-9d28693de29c');"></div><div id="sfcdb33fe-3226-421d-a636-9f7cf8602688" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('sfcdb33fe-3226-421d-a636-9f7cf8602688');"><a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a></div><div id="s38386bae-333d-4ab9-85c3-6129b7fbd36c" style="display: none;" class="pageoutgoinglinksmenu" onmouseover="javascript:return __CancelHideTimer();" onmouseout="javascript:return __HideDropDown('s38386bae-333d-4ab9-85c3-6129b7fbd36c');"><a href="MMBasic.VB-Work-a-like-LTrim-and-RTRIM-Functions.html" title="LTrim and RTrim Functions (VB work-a-like)">LTrim and RTrim Functions (VB work-a-like)</a><a href="MMBasic.Regular-Expression-Function.html" title="Regular Expression Function">Regular Expression Function</a><a href="MMBasic.IsDate-and-IsTime-functions-VB-Work-A-Like.html" title="IsDate and IsTime functions (VB Work-A-Like)">IsDate and IsTime functions (VB Work-A-Like)</a></div><div id="BreadcrumbsDiv"><div id="BreadcrumbsDivMin"><a href="#" onclick="javascript:return __ShowAllTrail();" title="Click here to view the complete Breadcrumbs Trail">(10)</a> &raquo; <a href="MMBasic.IsNumeric-Function-VB-Work-A-Like.html" title="IsNumeric Function (VB Work-A-Like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 's38386bae-333d-4ab9-85c3-6129b7fbd36c', this);" id="lnks38386bae-333d-4ab9-85c3-6129b7fbd36c" onmouseout="javascript:return __HideDropDown('s38386bae-333d-4ab9-85c3-6129b7fbd36c');">IsNumeric Function (VB Work-A-Like) (MMBasic)</a> &raquo; <a href="MMBasic.command-to-print-text-files-on-screen-part-of-the-original-MMBasic-library.html" title="command to print text files on screen (MMBasic)">command to print text files on screen (MMBasic)</a> &raquo; <b><a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'sfcdb33fe-3226-421d-a636-9f7cf8602688', this);" id="lnksfcdb33fe-3226-421d-a636-9f7cf8602688" onmouseout="javascript:return __HideDropDown('sfcdb33fe-3226-421d-a636-9f7cf8602688');">Shape drawing for Complex Lines and Polygons (MMBasic)</a></b> </div><div id="BreadcrumbsDivAll" style="display: none;"><a href="#" onclick="javascript:return __HideTrail();" title="Click here to hide the Breadcrumbs Trail">[X]</a> &raquo; <a href="MMBasic.BLITDEMO-BAS-part-of-the-original-MMBasic-library.html" title="BLITDEMO.BAS (MMBasic)">BLITDEMO.BAS (MMBasic)</a> &raquo; <a href="MMBasic.Fireball.html" title="Fireball (MMBasic)">Fireball (MMBasic)</a> &raquo; <a href="MMBasic.Eaten-Earth.html" title="Eaten Earth (MMBasic)">Eaten Earth (MMBasic)</a> &raquo; <a href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack (MMBasic)">Sensible Cartesian Co-ordinate graphics pack (MMBasic)</a> &raquo; <a href="MMBasic.DateAdd-Function-VB-work-a-like.html" title="DateAdd() Function (VB work-a-like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f9762912b-a927-4cb9-b15e-cdd5739cc133', this);" id="lnkf9762912b-a927-4cb9-b15e-cdd5739cc133" onmouseout="javascript:return __HideDropDown('f9762912b-a927-4cb9-b15e-cdd5739cc133');">DateAdd() Function (VB work-a-like) (MMBasic)</a> &raquo; <a href="MMBasic.UnixTime-or-Epoch-Time.html" title="UnixTime or Epoch Time (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'fd5ca24c9-1261-41ab-822c-9076d3640ebe', this);" id="lnkfd5ca24c9-1261-41ab-822c-9076d3640ebe" onmouseout="javascript:return __HideDropDown('fd5ca24c9-1261-41ab-822c-9076d3640ebe');">UnixTime or Epoch Time (MMBasic)</a> &raquo; <a href="MMBasic.Polar-and-Rectangular-Co-ordinate-Conversion-Functions.html" title="Polar and Rectangular Co-ordinate Conversion Functions (MMBasic)">Polar and Rectangular Co-ordinate Conversion Functions (MMBasic)</a> &raquo; <a href="MMBasic.IsNumeric-Function-VB-Work-A-Like.html" title="IsNumeric Function (VB Work-A-Like) (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f820e0d94-62ac-4030-8f1f-e2e4dbd2d3b6', this);" id="lnkf820e0d94-62ac-4030-8f1f-e2e4dbd2d3b6" onmouseout="javascript:return __HideDropDown('f820e0d94-62ac-4030-8f1f-e2e4dbd2d3b6');">IsNumeric Function (VB Work-A-Like) (MMBasic)</a> &raquo; <a href="MMBasic.command-to-print-text-files-on-screen-part-of-the-original-MMBasic-library.html" title="command to print text files on screen (MMBasic)">command to print text files on screen (MMBasic)</a> &raquo; <b><a href="MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.html" title="Shape drawing for Complex Lines and Polygons (MMBasic)" onmouseover="javascript:return __ShowDropDown(event, 'f6cb4e11b-7cf4-4bac-b8c1-398777b6cbf7', this);" id="lnkf6cb4e11b-7cf4-4bac-b8c1-398777b6cbf7" onmouseout="javascript:return __HideDropDown('f6cb4e11b-7cf4-4bac-b8c1-398777b6cbf7');">Shape drawing for Complex Lines and Polygons (MMBasic)</a></b> </div></div>
+		
+		
+	
+	</div>
+	
+	<div id="PageContentDiv">
+		The MMX and ST variants of MMBasic implement a Polygon command that takes a set of points in two integer arrays and draws an outline of the area with the option to fill the interior.<br /><br />The following is inspired by this command but includes an option to draw the data as either a line or a polygon. There is no option to fill the enclosed area.<br /><br />As written below, the routines use the Cartesian drawing commands (see dependencies) to provide co-ordinate 0,0 in the bottom left of the display. It is an easy enough job to replace the relevant drawing commands with the native ones of MMBasic.<br /><br />An offset can be specified for the Draw command thus allowing the Shape data to be placed using relative coordinates. Scaling could easily be added but I have avoided it for now because it would slow things down with a (probably largely) un-necessary calculation.<br /><br />This is a pure MMBasic set of routines and thus will work on any MMBasic platform.<br /><br /><b>Dependencies</b><br /><a class="pagelink" target="_blank" href="MMBasic.Sensible-Cartesian-Co-ordinate-graphics-pack.html" title="Sensible Cartesian Co-ordinate graphics pack">Sensible Cartesian Co-ordinate graphics pack</a><br /><br /><b>Preamble</b><br />The  commands assume that arrays are dimensioned from zero (not 1)<br /><pre>
+	Option Base 0
+</pre><br /><br /><b>Example</b><br /><code>'preamble<br /> Option Base 0<br /><br /> CLS<br /><br /> Const Gxm=MM.HRes-1,Gym=MM.VRes-1 'screen dimensions follow LCDPANEL settings<br /> Dim Integer tx,ty,otx,oty,Gx,Gy,n,p 'Gx and Gy are the current native co-ordinates<br />Do<br /><br /> For p=0 To 320<br /> Colour 0<br /> Move p,0:DrawR 0,240<br /><br /> Shape.New(10)<br /> For n=1 To 10<br />  Shape.Vertex(Rnd*Gxm,Rnd*Gym) ' some random scribble<br /> Next<br /><br /> Colour RGB(White)<br /> <br /> Shape.Draw(n,n,0) ' 0= the last point isn't connected to the first -  a complex line<br /><br /> Shape.New(4) ' a 50 pixel square<br /> Shape.Vertex(0,0)<br /> Shape.Vertex(0,50)<br /> Shape.Vertex(50,50)<br /> Shape.Vertex(50,0)<br /><br /> Colour RGB(Red)<br /> For n=1 To 20 ' 20 random squares<br />  Shape.Draw(Rnd*(Gxm-50),Rnd*(Gym-50),1) ' 1= the last point is connected to the first, enclosing the area (polygon)<br /> Next<br /><br />Next<br />Loop<br /></code><br /><br /><br /><b>The Code</b><br /><pre>
+'Clear the shape stack and pointers in readiness for a new shape.
+ Sub Shape.New(Points As Integer)
+  On Error Skip 2
+  Erase Sh
+  Dim Integer ShPtr
+  Dim Integer Sh(1,Points-1) '0,n is X, 1,n is Y
+  ShPtr=0
+ End Sub
+
+'Add a new vertex (corner) to the shape stack
+'Care must be taken not to add more vertices than were specified in Shape.New
+ Sub Shape.Vertex(x As Integer,y As Integer)
+  Sh(0,ShPtr)=x&#58;Sh(1,ShPtr)=y
+  ShPtr=ShPtr+1
+ End Sub
+
+'Draw the shape. If opt is non-zero, the shape is closed by drawing between the first and last vertices to produce a polygon
+'The shape stack is preserved and so can be re-used.
+'X/Y offset is added to the shape vertices allowing the shape to be drawn in multiple locations with the same data.
+ Sub Shape.Draw(xOffset As Integer,yOffset As Integer,Opt As Integer)
+  Local n As Integer
+  Move xOffset+Sh(0,0),yOffset+Sh(1,0)
+  For n=1 To ShPtr-1
+   Draw xOffset+Sh(0,n),yOffset+Sh(1,n)
+  Next
+  If Opt Then Draw xOffset+Sh(0,0),yOffset+Sh(1,0)
+ End Sub
+</pre><br />
+	</div>
+	
+	
+	
+	<div id="PageAttachmentsDiv" style="position: absolute; left: 10000px;">
+		
+    </div>
+    
+    <div id="AdminToolsDiv" style="position: absolute; left: 10000px;">
+		
+		
+		
+    </div>
+    
+    <script type="text/javascript">
+    <!--
+    	function __RepositionDiv(link, element) {
+    		var absPos = __AbsolutePosition(link);
+    		var elemAbsPos = __AbsolutePosition(element);
+
+    		element.style["top"] = (absPos.top + absPos.height) + "px";
+    		element.style["left"] = (absPos.left - (elemAbsPos.width - absPos.width)) + "px";
+    		element.style["position"] = "absolute";
+    	}
+
+		// Hide attachments and admin tools divs
+    	// This is needed because __RepositionDiv cannot calculate the width of the element when it's hidden
+    	var __elem = document.getElementById("PageAttachmentsDiv");
+    	if(document.getElementById("PageAttachmentsLink")) {
+    		__RepositionDiv(document.getElementById("PageAttachmentsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__elem = document.getElementById("AdminToolsDiv");
+    	if(document.getElementById("AdminToolsLink")) {
+    		__RepositionDiv(document.getElementById("AdminToolsLink"), __elem);
+    	}
+    	__elem.style["display"] = "none";
+
+    	__InitBCT();
+    // -->
+    </script>
+
+
+                <div id="PageInternalFooterDiv"></div>
+                <div id="MainFooterDiv">
+                    <!-- Used for layout purposes only -->
+                </div>
+            </div>
+
+        </div>
+            
+        <div id="FooterDiv">
+             
+        </div>
+
+    </form>  
+</body>
+
+<!-- Mirrored from fruitoftheshed.com/MMBasic.Shape-drawing-for-Complex-Lines-and-Polygons.ashx?HL=mmbasic,opt by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 09 Feb 2022 14:31:27 GMT -->
+</html>
